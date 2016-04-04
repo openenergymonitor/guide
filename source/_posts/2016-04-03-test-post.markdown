@@ -1,0 +1,77 @@
+---
+layout: post
+title: "Testing Markdown Blog Post"
+description: "This is a description for testing blog post"
+date: 2016-04-03 17:00                                          # This is the indexed published time and date
+date_formatted: "March 3rd 2016"                                # This is the public facing date on the post
+author: Glyn Hudson
+author_twitter: glynhudson
+comments: true
+categories: Test
+---
+
+Testing markdown blog post. Will this replace our [old blog](http://openenergymonitor.blogspot.com)?
+
+Here is a markdown post: *italic*, **bold**, `inline code`
+
+ - Bullet points
+ - Another bulllet
+ 
+Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.
+
+> The overriding design goal for Markdown's
+> formatting syntax is to make it as readable
+
+# Code syntax highlight blocks
+
+[See here](http://coapp.org/reference/garrett-flavored-markdown.html#code) for a full list of code syntax markdown tags
+
+## Python code syntax:
+
+```python
+# Initialize logging
+self._log = logging.getLogger("EmonHub")
+
+```
+## PHP code syntax:
+
+```php
+public function get_npoints($feedid) {
+    $feedid = (int) $feedid;
+
+```
+
+## c++ code syntax:
+
+```cpp
+int get_temperature(byte sensor)
+{
+  float temp=(sensors.getTempC(allAddress[sensor]));
+  if ((temp<125.0) && (temp>-55.0)) return(temp*10);            //if reading is within range for the sensor convert
+```
+
+## Bash code syntax markdown:
+
+```console
+$ echo "hello world"
+```
+# Table:
+
+| Column1      | Column2            |
+| :----------- |:-------------------|
+| test1        | xyz                |
+
+
+
+[Redcloth Ruby Gem](https://github.com/vmg/redcarpet) is used to render markdown in Jekyll.
+
+# Warning boxes
+
+<p class='note warning'>
+Testing warning note
+</p>
+
+<p class='note'>
+testing info node
+</p>
+
