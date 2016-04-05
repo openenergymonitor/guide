@@ -39,6 +39,19 @@ git@github.com:openenergymonitor/guide.git
 After `rake deploy` site snapshot will be deployed to `gh-pages` branch where GitHub integrated Jekyll will perform some magic and website will appear:
 [http://openenergymonitor.github.io/guide](http://openenergymonitor.github.io/guide)
 
+### Auto deploy
+
+[Travis CI](https://travis-ci.org) can be used to automate a deployment if the website succesfully builds afer a git push or pull reqest merge
+
+**To Setup**
+
+ - add `.travis.yaml` to repo
+ - Create account & turn on Travis CI for the repo in the travis dashboard
+ - Generate Github [personal token](https://github.com/settings/tokens)
+ - Install Travis command line `gem install travis -v 1.8.2 --no-rdoc --no-ri`
+ - Encypt token with `travis encrypt GH_TOKEN=XXXXXX`
+ - Add encrypted token to `.travis.yaml`
+
 ## Use custom URLs
 
 Add `CNAME` file with custom domain and point CNAME DNS to `openenergymonitor.github.io`
