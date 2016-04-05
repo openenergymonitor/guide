@@ -3,7 +3,7 @@ layout: page
 title: "Add Energy Node"
 description: "Add additional energy monitoring nodes"
 date: 2015-03-08 21:36
-sidebar: false
+sidebar: true
 comments: false
 sharing: true
 footer: true

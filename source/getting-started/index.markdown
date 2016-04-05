@@ -3,9 +3,9 @@ layout: page
 title: "Required Hardware"
 description: "Getting started with OpenEnergyMonitor"
 date: 2014-12-18 22:57
-sidebar: false
+sidebar: true
 comments: false
-sharing: true
+sharing: false
 footer: true
 ---
 

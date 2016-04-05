@@ -3,7 +3,7 @@ layout: page
 title: "Dashboards"
 description: "Setup Emoncms dashboards"
 date: 2015-03-08 21:36
-sidebar: false
+sidebar: true
 comments: false
 sharing: true
 footer: true

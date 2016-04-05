@@ -1,42 +1,44 @@
-# Website
+# OpenEnergyMonitor Guide Website
 
+A clean responsive user guide website for OpenEnergyMonitor
+
+Using all the shiny new toys: powered by Jekyll and the Oscalite theme. Hosted by GitHub and served over SSL/TSL by CloudFlare.
 
 ## Preview Jekyll website locally
 
 | Command | Action |
 |---|---|
-| `rake preview` | Preview site on [http://127.0.0.1:4000](http://127.0.0.1:4000)
+| `rake preview` | Generate & Preview site on [http://localhost:4001](http://127.0.0.1:4001)
+| `rake generate` | Generates static html in `/public`
+| `rake deploy` | Deploys site to `gh-pages` branch
+| `rake deploy rsync` | Deploys site via rsync over SSH
+
+
 
 ## Setup
 
-_You need to have Ruby installed._
+_You need to have Ruby 2.x and bundler installed._
 
 - [Ruby installation instructions](https://www.ruby-lang.org/en/documentation/installation/)
-- For Fedora and CentOS check the last section of this file.
-
-```bash
-$ git clone --recursivehttps://github.com/openenergymonitor/guide.git
-$ cd home-assistant.io
-$ bundle
-```
-
-### Setup on Fedora and CentOS
-On Fedora > 22 or CentOS 7.1.1503 Ruby is not available by default. Please take the notes here as a little guide for the Ruby installation process.
-
-```bash
-$ curl -sSL https://rvm.io/mpapis.asc | gpg2 --import -
-$ curl -L get.rvm.io | bash -s stable
-$ source ~/.profile
-$ rvm requirements
-$ rvm install ruby-2.2.3
-$ rvm use ruby-2.2.3 --default
-$ ruby -v
-```
-
-The last command will give you something like this `ruby 2.2.3p173 (2015-08-18 revision 51636) [x86_64-linux]`. Then install `bundler`.
 
 ```bash
 $ gem install bundler
 ```
 
-Now please follow the Setup instructions above.
+```bash
+$ git clone --recursive https://github.com/openenergymonitor/guide.git
+$ cd guide
+$ bundle
+```
+## Setup deploy to github pages
+
+```
+$ rake setup_github_pages
+git@github.com:openenergymonitor/guide.git
+```
+After `rake deploy` site snapshot will be deployed to `gh-pages` branch where GitHub integrated Jekyll will perform some magic and website will appear:
+[http://openenergymonitor.github.io/guide](http://openenergymonitor.github.io/guide)
+
+## Use custom URLs
+
+Add `CNAME` file with custom domain and point CNAME DNS to `openenergymonitor.github.io`

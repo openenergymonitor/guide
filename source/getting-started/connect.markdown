@@ -3,7 +3,7 @@ layout: page
 title: "Connect"
 description: "Connect to network & create account"
 date: 2015-03-08 21:36
-sidebar: false
+sidebar: true
 comments: false
 sharing: true
 footer: true
