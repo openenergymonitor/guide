@@ -3,8 +3,8 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: https://lab.megni.co.uk/guide
-title: Guide
+url: https://guide.openenergymonitor.org
+title: OpenEnergyMonitor Guide
 subtitle: OpenEnergyMonitor User Guide
 author: Glyn Hudson
 simple_search: https://www.google.com/search
@@ -127,6 +127,6 @@ social:
   visible: false
   facebook:
     app_id: xxxxxxxxxxxxxxx
-            
+
   twitter:
     account: openenergymon
