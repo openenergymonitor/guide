@@ -51,7 +51,27 @@ After `rake deploy` site snapshot will be deployed to `gh-pages` branch where Gi
  - Install Travis command line `gem install travis -v 1.8.2 --no-rdoc --no-ri`
  - Encypt token with `travis encrypt GH_TOKEN=XXXXXX`
  - Add encrypted token to `.travis.yaml`
+ 
+Example to generate the site using `rake generate` then if generation is succesful deploy to `gh pages` branch with `rake deploy`:
+
+```yaml
+language: ruby
+sudo: false
+cache: bundler
+script: rake generate
+after_success:
+- '[ "${TRAVIS_BRANCH}" = "master" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ] && rake deploy || true'
+env:
+  global:
+  - GH_REF: github.com/username/repo.git
+  - secure: <encrypted GH token>
+
+```
 
 ## Use custom URLs
 
 Add `CNAME` file with custom domain and point CNAME DNS to `openenergymonitor.github.io`
+
+## Credits
+
+Thanks to @balloob from [home-assistant.io](http://home-assistant.io) for providing Octopress example. Home-assistant is an awesome open-sopurce Python3 home automation platform. See [blog post](http://openenergymonitor.blogspot.co.uk/2016/04/home-assistant-and-emonpi.html) for how to integrate with OpenEnergyMonitor emonPi
