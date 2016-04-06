@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://guide.openenergymonitor.org/sitemap.xml 
