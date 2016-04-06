@@ -142,6 +142,165 @@
 
   <h1>Solar PV</h1>
 
+<p>The OpenEnergyMonitor Solar Photovoltaic (PV) monitor is a tool to help you make the most of your solar generation, providing real-time and historic information on your solar generation compared to home consumption, helping you increase home use of your available solar power.</p>
+
+<p><img src="/images/applications/solar-pv/my-solar-pv.jpg" alt="SolarPV" /></p>
+
+<h2>Explore, visualise:</h2>
+
+<ul>
+  <li>Solar PV generation</li>
+  <li>Home consumption</li>
+  <li>Solar PV generation used on-site (self-consumption)</li>
+  <li>Solar PV generation exported</li>
+  <li>Electricity imported from the grid</li>
+  <li>Real-time &amp; historic daily, monthly and annual totals</li>
+</ul>
+
+<h3>Contents</h3>
+
+<ol>
+  <li>Required Hardware</li>
+  <li>Type 1 or Type 2 setup</li>
+  <li>Input and feed setup</li>
+  <li>Using the MySolarPV app</li>
+</ol>
+
+<h3>Required Hardware</h3>
+
+<p>Solar PV monitoring can be achieved with either an emonPi or an emonPi + emonTx energy monitor.</p>
+
+<h1>NEED TO ADD SHOP LINKS + PHOTO / ILLUSTRATION (maybe this section should go into getting-started hardware?</h1>
+
+<p>The emonPi combines the monitoring functionality of the emonTx and base-station in one unit and is the recommended route in most installations where either</p>
+
+<p>emonPi can be used if both the generation and consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accesible at this location.</p>
+
+<p>An emonTx can be added if the emonPi is required to be located at a different location e.g to access Etherent/WiFi or if solar PV gen / consumption feeds are in seperate locations. The emonTx communicates with the emonPi via low-power 433Mhz. Range is approximately similar to home WiFi (around 50-100m)</p>
+
+<p>base-station can alternatively be used if ethernet is prefered and the meter cabinet does not have ethernet close by. The emoncms setup instructions below are applicable to both the emonPi and the emonTx where CT1 is solar generation and CT2 is either consumption <code>(type1)</code> or import/export <code>(type2)</code>.</p>
+
+<h3><a class="title-link" name="install-hardware" href="#install-hardware"></a> Install Hardware</h3>
+
+<p><img src="/images/applications/solar-pv/solar-pv-install.png" alt="Solar PV CT Install" /></p>
+
+<p class="note">
+the clip-on CT sensors must be clipped round either the live (red/brown in the UK), or neutral (blue in the UK) wire. Not both.
+</p>
+
+<p class="note warning">
+Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off, prior to installing your sensors, and proceeding slowly with care. If you have any doubts, seek professional assistance.
+</p>
+
+<p><img src="/images/applications/solar-pv/solar-pv-ct1.jpg" alt="Solar PV CT Sensor Install 1" /></p>
+
+<p><img src="/images/applications/solar-pv/solar-pv-ct2.jpg" alt="Solar PV CT Sensor Install 2" /></p>
+
+<p><em>Above: CT installation on the live wire AC output from the PV inverter. Generation meter can be seen at the top right.</em></p>
+
+<h4><a class="title-link" name="type-1-system" href="#type-1-system"></a> Type 1 System</h4>
+
+<p>Use this when the generation and consumption can be monitored separately. The amount exported/imported to or from the grid is the difference between generation and consumption. Knowledge of the direction of the current is not required, therefore a plug-in AC-AC voltage sensor adapter is not essential but <strong>highly recommended</strong> for accurate readings.</p>
+
+<h5>Type 1 Emoncms input setup</h5>
+
+<p class="note">
+For automatic MySolarPV app setup use the suggested feed names in bold below:
+</p>
+
+<p><strong>Setup Solar PV Generation Feed</strong></p>
+
+<p><em>Assuming CT1 (power 1) = Solar Gen</em></p>
+
+<ol>
+  <li>Click on spanner icon to configure <code>emonPi/power1</code>.</li>
+  <li>Select log to feed and create a feed called <strong>solar</strong> with the feed engine set to <code>PHPFin</code>a and feed <code>interval=10s</code></li>
+  <li>Select power to kWh, create a feed called <strong>solar_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code>.</li>
+</ol>
+
+<p><strong>Calculated export:</strong></p>
+
+<ol>
+  <li>Use subtract input <code>- input</code> to subtract home consumption from solar generation in order to calculate export as positive (import will be negative).</li>
+  <li>Use allow positive in order to isolate the export component</li>
+  <li>Select log to feed and create a feed called <strong>export</strong> with the feed engine set to PHPFina and feed interval set to 10 seconds.</li>
+  <li>Select <code>power to kWh</code>, create a feed called <strong>export_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code>.</li>
+</ol>
+
+<p><strong>Setup Consumption Feed</strong></p>
+
+<p><em>Assuming CT2 (power 2) = Consumption</em></p>
+
+<ol>
+  <li>Click on spanner icon to configure <code>emonPi/power2</code>.</li>
+  <li>Select log to feed and create a feed called <strong>use</strong> with the feed engine set to PHPFina and feed interval set to 10 seconds.</li>
+  <li>Select <code>power to kWh</code>, create a feed called <strong>use_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code>.</li>
+</ol>
+
+<p>Once complete click on <code>Apps &gt; MySolarPV</code> in order to launch the MySolarPV emoncms app, If you decide to use custom feed names the app will give you the option to select your solar, use and export feeds.</p>
+
+<h4><a class="title-link" name="type-2-system" href="#type-2-system"></a> Type 2 System</h4>
+
+<p>Use this when the generation and consumption cannot be monitored separately, i.e the PV inverter output is fed into a spare MCB (circuit breaker) in the fuse box. Other household loads are connected to other circuits in the same fuse box. If this is the case, the output from the PV inverter and the grid import/export connection will need to be monitored instead. Knowledge of the direction of the current is required to determine the difference between power import and export, therefore an AC-AC voltage sensor adapter is required.</p>
+
+<p>When the AC-AC voltage sensor is used, (see below) the sign of the grid import/export power reading will depend on the orientation of the CT. To be compatible with the software examples included with this documentation, it is desirable to orient the CT on the grid import/export cable so the power reading is positive when importing, and negative when exporting. The correct orientation can be determined by trial and error.</p>
+
+<h5>Type 2 Emoncms input setup</h5>
+
+<p class="note">
+For automatic MySolarPV app setup use the suggested feed names in bold below:
+</p>
+
+<p><strong>Setup Solar Gen Feed</strong></p>
+
+<p><em>Assuming CT1 (power 1) = Solar Generation</em></p>
+
+<ol>
+  <li>Click on spanner icon to configure <code>emonPi/power1</code>.</li>
+  <li>Select log to feed and create a feed called <strong>solar</strong> with the feed engine set to <code>PHPFina</code> and feed <code>interval=10s</code>.</li>
+  <li>Select <code>power to kWh</code>, create a feed called <strong>solar_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code>.</li>
+</ol>
+
+<p><strong>Calculated consumption:</strong></p>
+
+<p>Use subtract input (+ input) to add CT2 grid import/export to solar generation in order to calculate consumption.<br />
+Select log to feed and create a feed called use with the feed engine set to PHPFina and feed interval set to 10 seconds.<br />
+Select power to kWh, create a feed called use_kwh with feed engine PHPFina and feed interval set to 10 seconds.</p>
+
+<p><strong>Setup Grid Import / Export Feed</strong></p>
+
+<p><em>Assuming CT2 (power 2) = Grid import/export</em></p>
+
+<ol>
+  <li>Click on spanner icon to configure emonPi/power2.</li>
+  <li>Multiply by <code>-1</code> to make export positive</li>
+  <li>Select allow positive to isolate export component</li>
+  <li>Select log to feed and create a feed called export with the feed engine set to <code>PHPFina</code> and feed <code>interval=10s</code>.<br />
+Select <code>power to kWh</code>, create a feed called <strong>export_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code>.</li>
+</ol>
+
+<h3><a class="title-link" name="configure-mysolarpv-app" href="#configure-mysolarpv-app"></a> Configure MySolarPV App</h3>
+
+<p>With your emonPi or emonTx inputs configured as above and with use of the suggested feed names the MySolarPV app will launch and work out of the box without further configuration required.</p>
+
+<p>Alternatively the mysolar app will automatically show the configuration screen if it cant detect the expected feeds. Its then possible to select feeds from the drop down feed selector menus:</p>
+
+<p>Once the required feeds are selected the Launch App button will appear.</p>
+
+<p><img src="/images/applications/solar-pv/my-solarpv-config.png" alt="My Solar PV app config" /></p>
+
+<h3><a class="title-link" name="configure-my-solar-app-power-view" href="#configure-my-solar-app-power-view"></a> Configure My Solar app power view</h3>
+
+<p>The main view shows a moving window power view of solar generation vs consumption which can be used to explore matching at any given moment of the day. Consumption is shown in blue and solar generation in yellow. The totals at the bottom of the page relate to the current window selected and show at a glance how much of consumption was supplied directly from solar and how much of the solar generation was exported to the grid.</p>
+
+<p><img src="/images/applications/solar-pv/my-solar-pv2.png" alt="My Solar PV app 2" /></p>
+
+<h3><a class="title-link" name="my-solar-history-view" href="#my-solar-history-view"></a> My Solar history view</h3>
+
+<p>Clicking on view history brings up a bargraph showing solar generation and consumption on a daily basis. Including how much of the solar generation is used directly on site and how much is exported.</p>
+
+<p><img src="/images/applications/solar-pv/my-solar-pv2.png" alt="My Solar PV app 1" /></p>
+
 
 </article>
 
