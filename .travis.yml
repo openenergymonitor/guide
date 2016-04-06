@@ -1,6 +1,9 @@
 language: ruby
 sudo: false
 cache: bundler
+before_script:
+  - git config --global user.name "Glyn Huddson"
+  - git config --global user.email "glyn.hudson@gmail.com"
 script: rake generate
 after_success:
 - '[ "${TRAVIS_BRANCH}" = "master" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ] && rake deploy || true'
