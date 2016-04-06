@@ -254,7 +254,7 @@ multitask :push do
   puts "## Deploying branch to Github Pages "
   puts "## Pulling any updates from Github Pages "
   cd "#{deploy_dir}" do
-    system "git checkout gh-pages"
+    Bundler.with_clean_env { system "git pull" }
   end
   (Dir["#{deploy_dir}/*"]).each { |f| rm_rf(f) }
   Rake::Task[:copydot].invoke(public_dir, deploy_dir)
@@ -262,8 +262,8 @@ multitask :push do
   cp_r "#{public_dir}/.", deploy_dir
   cd "#{deploy_dir}" do
     if ENV["TRAVIS"] == 'true'
-      system 'git config user.name "Travis CI"'
-      system 'git config user.email "balloob+bot@gmail.com"'
+      system 'git config user.name "Glyn Hudson"'
+      system 'git config user.email "glyn.hudson@gmail.com"'
     end
 
     system "git add -A"

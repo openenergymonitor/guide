@@ -2,14 +2,10 @@ language: ruby
 sudo: false
 cache: bundler
 before_script:
- - git config --global user.name "Glyn Huddson"
- - git config --global user.email "glyn.hudson@gmail.com"
- - rake setup_github_pages "git@github.com:openenergymonitor/guide.git"
 script:
  - rake generate
 -after_success:
  -- '[ "${TRAVIS_BRANCH}" = "master" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ] && rake deploy || true'
 env:
   global:
-  - GH_REPO = "openenergymonitor.github.io/guide"
   - secure: "ebdDIoAlLPsnnuMmf39NF0O2Rt5RbkuRizRO8JTfxNlICOYDLgUy4yS2ApQrOJVkHQpINFNWD+434wvahZqFDr/u9ET2pqWrGN2FNh7jRypTSGKikN1VSvWTeZYoewOr7YIqpMykvUrRbS//mob35+wccTn+10QrmyU5PMdqFy10OWxEUjMQEs78DwVtA2FCFDfLIaAe9P5mPzQAoEWs85aVVcmI39usSalMIaaGXOdc90qMm9EUj45jTF5bfpzdPmlm5+28edffD11pw+QfJLJiODx9VcQdF8ArXUIi+nPH44dCDfCWIsA16aXeyYIjsGdwFjQAxcZZbuaN5FTzA58Fzfo/As/fXqN+mDzJi9p1y19odyS25eloKb0FYeY2zAe90wEZRCs0/W2ILTdA5jD8m6wBMG1S0gOn6lyfQjhpVUdv11iBXPxAWPOp4oTe5InxJuG2JGws4T0DAd3Nnk8I2Pom0tLj/XiQWWyQ6PlTdkyaSj6hYPe3weR2SsPorpa7AVfQsrOtagZJh0R/uoPIAt9Sxlq5k1uwvf07b3MCrVWhSaDcNXbewU+ANgnByBFZA51q09jBGCafFpqgQcCh/fHUdpdR3WrFX6t+n/XBn4HUBZj5OPzSdrIj6tNqYpz/qR7tC4VwLwppfuFka8+rtspuDlsKQrgU0WKhlJU="
