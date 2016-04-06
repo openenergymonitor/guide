@@ -49,9 +49,10 @@ After `rake deploy` site snapshot will be deployed to `gh-pages` branch where Gi
 
  - add `.travis.yaml` to repo
  - Create account & turn on Travis CI for the repo in the travis dashboard
- - Generate Github [personal token](https://github.com/settings/tokens)
- - Install Travis command line `gem install travis -v 1.8.2 --no-rdoc --no-ri`
- - Encypt token with `travis encrypt GH_TOKEN=XXXXXX`
+ - Generate Github [personal token](https://github.com/settings/tokens) or use
+  - `curl -u 'your_github_name' -d '{ "scopes": [ "public_repo"], "note": "Travis access"}' https://api.github.com/authorizations `
+ - Install Travis command line `gem install travis`
+ - Encypt token by running the following in website dir: `$ travis encrypt GH_TOKEN=XXXXXX`
  - Add encrypted token to `.travis.yaml`
  
 Example to generate the site using `rake generate` then if generation is succesful deploy to `gh pages` branch with `rake deploy`:

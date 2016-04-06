@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://guide.openenergymonitor.org/guide/sitemap.xml 
+Sitemap: https://guide.openenergymonitor.org/guide/sitemap.xml 
