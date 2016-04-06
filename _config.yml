@@ -75,11 +75,7 @@ titlecase: true       # Converts page and post titles to titlecase
 # page_asides:
 
 collections:
-  components:
-    output: true
-  cookbook:
-    output: true
-  topics:
+  advanced:
     output: true
 
 # ----------------------- #

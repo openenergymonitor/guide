@@ -4,6 +4,7 @@ cache: bundler
 before_script:
   - git config --global user.name "Glyn Huddson"
   - git config --global user.email "glyn.hudson@gmail.com"
+  - git remote set-url origin \"https://openenergymonitor@github.com/guide/guide.github.io.git
 script:
  - rake generate
  - rake deploy
