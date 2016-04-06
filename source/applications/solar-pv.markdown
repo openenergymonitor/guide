@@ -37,14 +37,11 @@ Solar PV monitoring can be achieved with either an emonPi or an emonPi + emonTx 
 
 # NEED TO ADD SHOP LINKS + PHOTO / ILLUSTRATION (maybe this section should go into getting-started hardware?
 
-The emonPi combines the monitoring functionality of the emonTx and base-station in one unit and is the recommended route in most installations where either
-
-emonPi can be used if both the generation and consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accesible at this location.
-
+An emonPi can be used on it's own if both the generation and consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accesible at this location.
 
 An emonTx can be added if the emonPi is required to be located at a different location e.g to access Etherent/WiFi or if solar PV gen / consumption feeds are in seperate locations. The emonTx communicates with the emonPi via low-power 433Mhz. Range is approximately similar to home WiFi (around 50-100m)
 
-base-station can alternatively be used if ethernet is prefered and the meter cabinet does not have ethernet close by. The emoncms setup instructions below are applicable to both the emonPi and the emonTx where CT1 is solar generation and CT2 is either consumption `(type1)` or import/export `(type2)`.
+The Emoncms setup instructions below are applicable to both the emonPi and the emonTx where CT1 is solar generation and CT2 is either consumption `(type1)` or import/export `(type2)`. If using an emonTx to monitor generation or consumption simply substitute the 'log to feed' instructions to use an input from the emonTx instead of emonPi.  
 
 ### {% linkable_title Install Hardware %}
 
