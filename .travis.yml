@@ -2,10 +2,10 @@ language: ruby
 sudo: false
 cache: bundler
 before_script:
- - Git config --global user.name "Glyn Hudson"
- - Git config --global user.email "glyn.hudson@gmail.com"
- - Export REPO_URL = "https: //$GH_TOKEN@github.com/$GH_REPO.git "
- - Rake setup_github_pages [$ REPO_URL]
+ - git config --global user.name "Glyn Huddson"
+ - git config --global user.email "glyn.hudson@gmail.com"
+ - export REPO_URL = "https: //$GH_TOKEN@github.com/$GH_REPO.git "
+ - rake setup_github_pages [$ REPO_URL]
 script:
  - rake generate
 -after_success:
