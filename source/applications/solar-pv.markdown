@@ -84,9 +84,9 @@ For automatic MySolarPV app setup use the suggested feed names in bold below:
  
 **Calculated export:**
 
- 1. Use subtract input `- input` to subtract home consumption from solar generation in order to calculate export as positive (import will be negative).
+ 1. Use subtract input (`- input`) input processor to subtract home consumption from solar generation in order to calculate export as positive (import will be negative).
  2. Use allow positive in order to isolate the export component
- 3. Select log to feed and create a feed called **export** with the feed engine set to PHPFina and feed interval set to 10 seconds.
+ 3. Select log to feed and create a feed called **export** with the feed engine set to `PHPFina` and feed `interval=10s`.
  4. Select `power to kWh`, create a feed called **export_kwh** with feed engine `PHPFina` and feed `interval=10s`.
  
 **Setup Consumption Feed**
