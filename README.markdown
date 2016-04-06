@@ -32,16 +32,33 @@ $ git clone --recursive https://github.com/openenergymonitor/guide.git
 $ cd guide
 $ bundle
 ```
-## Setup deploy to github pages
 
-```
-$ rake setup_github_pages
-git@github.com:openenergymonitor/guide.git
-```
-After `rake deploy` site snapshot will be deployed to `gh-pages` branch where GitHub integrated Jekyll will perform some magic and website will appear:
+
+### Deploy to GitHub Pages
+
+This website is hosted using [GitHub Project pages](https://help.github.com/categories/github-pages-basics/). Github will serve the site from the `gh-pages` branch.
+
+If this is the first time we publishing this site we neeed to create the `gh-pages` branch:
+
+`git checkout --orphan gh-pages`
+
+Once Octopress and rake Jekyll as been setup as described to generate the html and deploy site to `gh-pages` run
+
+`$ rake generate`
+`$ rake deploy`
+
+In a few moments site will be live:
+
 [http://openenergymonitor.github.io/guide](http://openenergymonitor.github.io/guide)
 
-### Auto deploy
+We then use [CloudFlare](https://www.cloudflare.com) as the DNS which serves the pages via secure HTTPS. On our domain (see custom domain below)
+
+[https://guide.openenergymonitor.org](https://guide.openenergymonitor.org)
+
+
+### Auto deploy on commit trigger
+
+In the deploy example above the site is generated locally then pushed to github pages. It's possible to automate this build to make everything happen (by magic!) in the cloud:
 
 [Travis CI](https://travis-ci.org) with [rake-jekyll](https://github.com/jirutka/rake-jekyll) can be used to automate a deployment of the website (build + push commit to `gh-pages`) afer a git push or pull reqest merge to `master`
 
