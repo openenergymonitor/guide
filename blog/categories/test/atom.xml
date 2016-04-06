@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Test | Guide | OpenEnergyMonitor]]></title>
+  <link href="http://guide.openenergymonitor.org/guide/blog/categories/test/atom.xml" rel="self"/>
+  <link href="http://guide.openenergymonitor.org/guide/"/>
+  <updated>2016-04-06T00:17:18+00:00</updated>
+  <id>http://guide.openenergymonitor.org/guide/</id>
+  <author>
+    <name><![CDATA[Glyn Hudson]]></name>
+    <email><![CDATA[support@openenergymonitor.zendesk.com]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Testing Markdown Blog Post]]></title>
+    <link href="http://guide.openenergymonitor.org/guide/blog/2016/04/03/test-post/"/>
+    <updated>2016-04-03T17:00:00+00:00</updated>
+    <id>http://guide.openenergymonitor.org/guide/blog/2016/04/03/test-post</id>
+    <content type="html"><![CDATA[<p>Testing markdown blog post. Will this replace our <a href="http://openenergymonitor.blogspot.com">old blog</a>?</p>
+
+<p>Here is a markdown post: <em>italic</em>, <strong>bold</strong>, <code>inline code</code></p>
+
+<ul>
+  <li>Bullet points</li>
+  <li>Another bulllet</li>
+</ul>
+
+<p>Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.</p>
+
+<blockquote>
+  <p>The overriding design goal for Markdown’s<br />
+formatting syntax is to make it as readable</p>
+</blockquote>
+
+<h1>Code syntax highlight blocks</h1>
+
+<p><a href="http://coapp.org/reference/garrett-flavored-markdown.html#code">See here</a> for a full list of code syntax markdown tags</p>
+
+<h2>Python code syntax:</h2>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Initialize logging</span>
+<span class="predefined-constant">self</span>._log = logging.getLogger(<span class="string"><span class="delimiter">&quot;</span><span class="content">EmonHub</span><span class="delimiter">&quot;</span></span>)
+
+</pre></div>
+</div>
+</div>
+<p>## PHP code syntax:</p>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="keyword">public</span> <span class="keyword">function</span> <span class="function">get_npoints</span>(<span class="local-variable">$feedid</span>) {
+    <span class="local-variable">$feedid</span> = (<span class="predefined-type">int</span>) <span class="local-variable">$feedid</span>;
+
+</pre></div>
+</div>
+</div>
+
+<h2>c++ code syntax:</h2>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="predefined-type">int</span> get_temperature(byte sensor)
+{
+  <span class="predefined-type">float</span> temp=(sensors.getTempC(allAddress[sensor]));
+  <span class="keyword">if</span> ((temp&lt;<span class="integer">12</span><span class="float">5</span><span class="float">.0</span>) &amp;&amp; (temp&gt;-<span class="integer">5</span><span class="float">5</span><span class="float">.0</span>)) <span class="keyword">return</span>(temp*<span class="integer">10</span>);            <span class="comment">//if reading is within range for the sensor convert</span>
+</pre></div>
+</div>
+</div>
+
+<h2>Bash code syntax markdown:</h2>
+
+<div class="highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre>$ echo &quot;hello world&quot;
+</pre></div>
+</div>
+</div>
+<p># Table:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Column1</th>
+      <th style="text-align: left">Column2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">test1</td>
+      <td style="text-align: left">xyz</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://github.com/vmg/redcarpet">Redcloth Ruby Gem</a> is used to render markdown in Jekyll.</p>
+
+<h1>Warning boxes</h1>
+
+<p class="note warning">
+Testing warning note
+</p>
+
+<p class="note">
+testing info node
+</p>
+
+]]></content>
+  </entry>
+  
+</feed>
