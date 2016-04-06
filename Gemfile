@@ -15,6 +15,7 @@ group :development do
   gem 'execjs'
   gem 'therubyracer', :platforms => :ruby
   gem 'coderay'
+  gem 'rake-jekyll'
 end
 
 group :jekyll_plugins do
