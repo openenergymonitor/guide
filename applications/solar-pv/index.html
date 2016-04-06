@@ -170,7 +170,7 @@
 
 <p>Solar PV monitoring can be achieved with either an emonPi or an emonPi + emonTx energy monitor.</p>
 
-<h1>NEED TO ADD SHOP LINKS + PHOTO / ILLUSTRATION (maybe this section should go into getting-started hardware???</h1>
+<h1>NEED TO ADD SHOP LINKS + PHOTO / ILLUSTRATION (maybe this section should go into getting-started hardware?</h1>
 
 <p>The emonPi combines the monitoring functionality of the emonTx and base-station in one unit and is the recommended route in most installations where either</p>
 
@@ -221,9 +221,9 @@ For automatic MySolarPV app setup use the suggested feed names in bold below:
 <p><strong>Calculated export:</strong></p>
 
 <ol>
-  <li>Use subtract input <code>- input</code> to subtract home consumption from solar generation in order to calculate export as positive (import will be negative).</li>
+  <li>Use subtract input (<code>- input</code>) input processor to subtract home consumption from solar generation in order to calculate export as positive (import will be negative).</li>
   <li>Use allow positive in order to isolate the export component</li>
-  <li>Select log to feed and create a feed called <strong>export</strong> with the feed engine set to PHPFina and feed interval set to 10 seconds.</li>
+  <li>Select log to feed and create a feed called <strong>export</strong> with the feed engine set to <code>PHPFina</code> and feed <code>interval=10s</code>.</li>
   <li>Select <code>power to kWh</code>, create a feed called <strong>export_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code>.</li>
 </ol>
 
