@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Guide | OpenEnergyMonitor]]></title>
-  <link href="https://guide.openenergymonitor.org/guide/atom.xml" rel="self"/>
-  <link href="https://guide.openenergymonitor.org/guide/"/>
-  <updated>2016-04-06T13:29:18+00:00</updated>
-  <id>https://guide.openenergymonitor.org/guide/</id>
+  <link href="http://guide.openenergymonitor.org/atom.xml" rel="self"/>
+  <link href="http://guide.openenergymonitor.org/"/>
+  <updated>2016-04-06T13:38:32+00:00</updated>
+  <id>http://guide.openenergymonitor.org/</id>
   <author>
     <name><![CDATA[Glyn Hudson]]></name>
     <email><![CDATA[support@openenergymonitor.zendesk.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Testing Markdown Blog Post]]></title>
-    <link href="https://guide.openenergymonitor.org/guide/blog/2016/04/03/test-post/"/>
+    <link href="http://guide.openenergymonitor.org/blog/2016/04/03/test-post/"/>
     <updated>2016-04-03T17:00:00+00:00</updated>
-    <id>https://guide.openenergymonitor.org/guide/blog/2016/04/03/test-post</id>
+    <id>http://guide.openenergymonitor.org/blog/2016/04/03/test-post</id>
     <content type="html"><![CDATA[<p>Testing markdown blog post. Will this replace our <a href="http://openenergymonitor.blogspot.com">old blog</a>?</p>
 
 <p>Here is a markdown post: <em>italic</em>, <strong>bold</strong>, <code>inline code</code></p>

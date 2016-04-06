@@ -1,113 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/blog/2016/04/03/test-post/</loc>
+    <loc>http://guide.openenergymonitor.org/blog/2016/04/03/test-post/</loc>
     <lastmod>2016-04-03T17:00:00+00:00</lastmod>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/getting-started/connect/</loc>
+    <loc>http://guide.openenergymonitor.org/getting-started/connect/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/getting-started/dashboards/</loc>
+    <loc>http://guide.openenergymonitor.org/getting-started/dashboards/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/technical/dev2/</loc>
+    <loc>http://guide.openenergymonitor.org/technical/dev2/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/getting-started/emonth/</loc>
+    <loc>http://guide.openenergymonitor.org/getting-started/emonth/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/getting-started/emontx/</loc>
+    <loc>http://guide.openenergymonitor.org/getting-started/emontx/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/applications/home-energy/</loc>
+    <loc>http://guide.openenergymonitor.org/applications/home-energy/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/blog/archives/</loc>
+    <loc>http://guide.openenergymonitor.org/blog/archives/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/blog/</loc>
+    <loc>http://guide.openenergymonitor.org/blog/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/</loc>
+    <loc>http://guide.openenergymonitor.org/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/technical/</loc>
+    <loc>http://guide.openenergymonitor.org/technical/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/topics/</loc>
+    <loc>http://guide.openenergymonitor.org/topics/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/help/</loc>
+    <loc>http://guide.openenergymonitor.org/help/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/getting-started/</loc>
+    <loc>http://guide.openenergymonitor.org/getting-started/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/advanced/</loc>
+    <loc>http://guide.openenergymonitor.org/advanced/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/applications/local/</loc>
+    <loc>http://guide.openenergymonitor.org/applications/local/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/getting-started/local/</loc>
+    <loc>http://guide.openenergymonitor.org/getting-started/local/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/getting-started/remote/</loc>
+    <loc>http://guide.openenergymonitor.org/getting-started/remote/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/applications/solar-pv/</loc>
+    <loc>http://guide.openenergymonitor.org/applications/solar-pv/</loc>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/blog/categories/test/</loc>
+    <loc>http://guide.openenergymonitor.org/blog/categories/test/</loc>
   </url>
     <url>
-      <loc>https://guide.openenergymonitor.org/guide/advanced/node-red/</loc>
+      <loc>http://guide.openenergymonitor.org/advanced/node-red/</loc>
     </url>
     <url>
-      <loc>https://guide.openenergymonitor.org/guide/advanced/open-hab/</loc>
+      <loc>http://guide.openenergymonitor.org/advanced/open-hab/</loc>
     </url>
     <url>
-      <loc>https://guide.openenergymonitor.org/guide/blog/2016/04/03/test-post/</loc>
+      <loc>http://guide.openenergymonitor.org/blog/2016/04/03/test-post/</loc>
     </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/applications/home-energy.html</loc>
-    <lastmod>2016-04-06T01:56:07+00:00</lastmod>
+    <loc>http://guide.openenergymonitor.org/applications/home-energy.html</loc>
+    <lastmod>2016-04-06T13:37:43+00:00</lastmod>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/applications/solar-pv.html</loc>
-    <lastmod>2016-04-06T01:55:58+00:00</lastmod>
+    <loc>http://guide.openenergymonitor.org/applications/solar-pv.html</loc>
+    <lastmod>2016-04-06T13:37:43+00:00</lastmod>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/getting-started/connect.html</loc>
-    <lastmod>2016-04-06T00:16:38+00:00</lastmod>
+    <loc>http://guide.openenergymonitor.org/getting-started/connect.html</loc>
+    <lastmod>2016-04-06T13:37:43+00:00</lastmod>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/getting-started/dashboards.html</loc>
-    <lastmod>2016-04-06T00:16:38+00:00</lastmod>
+    <loc>http://guide.openenergymonitor.org/getting-started/dashboards.html</loc>
+    <lastmod>2016-04-06T13:37:43+00:00</lastmod>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/getting-started/emonth.html</loc>
-    <lastmod>2016-04-06T00:16:38+00:00</lastmod>
+    <loc>http://guide.openenergymonitor.org/getting-started/emonth.html</loc>
+    <lastmod>2016-04-06T13:37:43+00:00</lastmod>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/getting-started/emontx.html</loc>
-    <lastmod>2016-04-06T00:16:38+00:00</lastmod>
+    <loc>http://guide.openenergymonitor.org/getting-started/emontx.html</loc>
+    <lastmod>2016-04-06T13:37:43+00:00</lastmod>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/getting-started/local.html</loc>
-    <lastmod>2016-04-06T00:16:38+00:00</lastmod>
+    <loc>http://guide.openenergymonitor.org/getting-started/local.html</loc>
+    <lastmod>2016-04-06T13:37:43+00:00</lastmod>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/getting-started/remote.html</loc>
-    <lastmod>2016-04-06T00:16:38+00:00</lastmod>
+    <loc>http://guide.openenergymonitor.org/getting-started/remote.html</loc>
+    <lastmod>2016-04-06T13:37:43+00:00</lastmod>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/static/mdi-demo.html</loc>
-    <lastmod>2016-04-06T00:16:38+00:00</lastmod>
+    <loc>http://guide.openenergymonitor.org/static/mdi-demo.html</loc>
+    <lastmod>2016-04-06T13:37:44+00:00</lastmod>
   </url>
   <url>
-    <loc>https://guide.openenergymonitor.org/guide/technical/dev2.html</loc>
-    <lastmod>2016-04-06T00:16:38+00:00</lastmod>
+    <loc>http://guide.openenergymonitor.org/technical/dev2.html</loc>
+    <lastmod>2016-04-06T13:37:44+00:00</lastmod>
   </url>
 </urlset>
