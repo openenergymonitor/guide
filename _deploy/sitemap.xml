@@ -29,19 +29,19 @@
     <loc>http://guide.openenergymonitor.org/guide/</loc>
   </url>
   <url>
-    <loc>http://guide.openenergymonitor.org/guide/topics/</loc>
-  </url>
-  <url>
-    <loc>http://guide.openenergymonitor.org/guide/getting-started/</loc>
-  </url>
-  <url>
-    <loc>http://guide.openenergymonitor.org/guide/help/</loc>
+    <loc>http://guide.openenergymonitor.org/guide/technical/</loc>
   </url>
   <url>
     <loc>http://guide.openenergymonitor.org/guide/applications/</loc>
   </url>
   <url>
-    <loc>http://guide.openenergymonitor.org/guide/technical/</loc>
+    <loc>http://guide.openenergymonitor.org/guide/topics/</loc>
+  </url>
+  <url>
+    <loc>http://guide.openenergymonitor.org/guide/help/</loc>
+  </url>
+  <url>
+    <loc>http://guide.openenergymonitor.org/guide/getting-started/</loc>
   </url>
   <url>
     <loc>http://guide.openenergymonitor.org/guide/getting-started/local/</loc>
@@ -57,34 +57,34 @@
     </url>
   <url>
     <loc>http://guide.openenergymonitor.org/guide/getting-started/connect.html</loc>
-    <lastmod>2016-04-05T17:05:26+00:00</lastmod>
+    <lastmod>2016-04-06T00:16:38+00:00</lastmod>
   </url>
   <url>
     <loc>http://guide.openenergymonitor.org/guide/getting-started/dashboards.html</loc>
-    <lastmod>2016-04-05T17:05:26+00:00</lastmod>
+    <lastmod>2016-04-06T00:16:38+00:00</lastmod>
   </url>
   <url>
     <loc>http://guide.openenergymonitor.org/guide/getting-started/emonth.html</loc>
-    <lastmod>2016-04-05T17:05:26+00:00</lastmod>
+    <lastmod>2016-04-06T00:16:38+00:00</lastmod>
   </url>
   <url>
     <loc>http://guide.openenergymonitor.org/guide/getting-started/emontx.html</loc>
-    <lastmod>2016-04-05T17:05:26+00:00</lastmod>
+    <lastmod>2016-04-06T00:16:38+00:00</lastmod>
   </url>
   <url>
     <loc>http://guide.openenergymonitor.org/guide/getting-started/local.html</loc>
-    <lastmod>2016-04-05T17:05:26+00:00</lastmod>
+    <lastmod>2016-04-06T00:16:38+00:00</lastmod>
   </url>
   <url>
     <loc>http://guide.openenergymonitor.org/guide/getting-started/remote.html</loc>
-    <lastmod>2016-04-05T17:05:26+00:00</lastmod>
+    <lastmod>2016-04-06T00:16:38+00:00</lastmod>
   </url>
   <url>
     <loc>http://guide.openenergymonitor.org/guide/static/mdi-demo.html</loc>
-    <lastmod>2016-04-05T17:05:26+00:00</lastmod>
+    <lastmod>2016-04-06T00:16:38+00:00</lastmod>
   </url>
   <url>
     <loc>http://guide.openenergymonitor.org/guide/technical/dev2.html</loc>
-    <lastmod>2016-04-05T17:05:26+00:00</lastmod>
+    <lastmod>2016-04-06T00:16:38+00:00</lastmod>
   </url>
 </urlset>
