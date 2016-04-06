@@ -43,11 +43,10 @@ After `rake deploy` site snapshot will be deployed to `gh-pages` branch where Gi
 
 ### Auto deploy
 
-[Travis CI](https://travis-ci.org) can be used to automate a deployment if the website succesfully builds afer a git push or pull reqest merge
+[Travis CI](https://travis-ci.org) with [rake-jekyll](https://github.com/jirutka/rake-jekyll) can be used to automate a deployment of the website (build + push commit to `gh-pages`) afer a git push or pull reqest merge to `master`
 
 **To Setup**
 
- - add `.travis.yaml` to repo
  - Create account & turn on Travis CI for the repo in the travis dashboard
  - Generate Github [personal token](https://github.com/settings/tokens) or use
   - `curl -u 'your_github_name' -d '{ "scopes": [ "public_repo"], "note": "Travis access"}' https://api.github.com/authorizations `

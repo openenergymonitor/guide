@@ -35,7 +35,7 @@ The OpenEnergyMonitor Solar Photovoltaic (PV) monitor is a tool to help you make
 
 Solar PV monitoring can be achieved with either an emonPi or an emonPi + emonTx energy monitor.
 
-# NEED TO ADD SHOP LINKS + PHOTO / ILLUSTRATION (maybe this section should go into getting-started hardware??
+# NEED TO ADD SHOP LINKS + PHOTO / ILLUSTRATION (maybe this section should go into getting-started hardware???
 
 The emonPi combines the monitoring functionality of the emonTx and base-station in one unit and is the recommended route in most installations where either
 
