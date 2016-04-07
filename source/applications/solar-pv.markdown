@@ -14,11 +14,7 @@ published: true
 
 # Solar PV
 
-The OpenEnergyMonitor Solar Photovoltaic (PV) monitor is a tool to help you make the most of your solar generation.  
-
-Providing real-time and historic information on your solar generation and demand matching, helping you increase increase utilisation of your available solar power.
-
-MySolar PV is a dashboard app which runs on [Emoncms](https://emoncms.org). 
+The OpenEnergyMonitor Solar Photovoltaic (PV) monitor is a tool to help you make the most of your solar generation, providing real-time and historic information on your solar generation compared to home consumption, helping you increase home use of your available solar power.
 
 ![SolarPV](/images/applications/solar-pv/my-solar-pv.jpg)
 
@@ -29,7 +25,7 @@ MySolar PV is a dashboard app which runs on [Emoncms](https://emoncms.org).
  - Solar PV generation used on-site (self-consumption)
  - Solar PV generation exported
  - Electricity imported from the grid
- - Real-time & historic daily, monthly and annual totals
+ - Real-time & historic daily totals
  
 ### Contents
 
@@ -42,13 +38,13 @@ MySolar PV is a dashboard app which runs on [Emoncms](https://emoncms.org).
 
 Solar PV monitoring can be achieved with either an emonPi or an emonPi + emonTx energy monitor.
 
-# NEED TO ADD SHOP LINKS + PHOTO / ILLUSTRATION (maybe this section should go into getting-started hardware?
+### NEED TO ADD SHOP LINKS + PHOTO / ILLUSTRATION (maybe this section should go into getting-started hardware?
 
-An emonPi can be used on it's own if both the generation and consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accesible at this location. The emonPi is a Raspberry Pi based energy monitor, Emoncms web-app runs on the emonPi allowing data to be logged locally to the  emonPi's SD card as well as logging to [Emoncms.org](http://emoncms.org) cloud server. 
+An emonPi can be used on it's own if both the generation and consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accesible at this location. The emonPi is a Raspberry Pi based energy monitor, Emoncms web-app runs on the emonPi allowing data to be logged locally to the emonPi's SD card as an alternative or in addition to logging to [Emoncms.org](http://emoncms.org) cloud server.
 
-An emonTx can be added if the emonPi is required to be located at a different location e.g to access Etherent/WiFi or if solar PV gen / consumption feeds are in seperate locations. The emonTx communicates with the emonPi via low-power 433Mhz. Range is approximately similar to home WiFi and can be effected by obstacles e.g. thick stone walls.  
+An emonTx can be added if Etherent or WiFi is not available at the meter location or if solar PV gen / consumption feeds are in seperate locations. The emonTx communicates with the emonPi via low-power 433Mhz. Range is approximately similar to home WiFi and can be effected by obstacles e.g. thick stone walls.
 
-The Emoncms setup instructions below are applicable to both the emonPi and the emonTx where CT1 is solar generation and CT2 is either consumption `(type1)` or import/export `(type2)`. If using an emonTx to monitor generation or consumption simply substitute the 'log to feed' instructions to use an input from the emonTx instead of emonPi.  
+The Emoncms setup instructions below are applicable to both the emonPi and the emonTx where CT1 is solar generation and CT2 is either consumption `type1` or import/export `type2`.  
 
 ### {% linkable_title Install Hardware %}
 
@@ -68,7 +64,7 @@ Your safety is your responsibility. Clip-on current sensors are non-invasive and
 
 #### {% linkable_title Type 1 System %}
 
-Use this when the generation and consumption can be monitored separately. The amount exported/imported to or from the grid is the difference between generation and consumption. Knowledge of the direction of the current is not required, therefore a plug-in AC-AC voltage sensor adapter is not essential but **highly recommended** for accurate readings.
+Use this when the generation and consumption can be monitored separately. The amount exported/imported to or from the grid is the difference between generation and consumption. Knowledge of the direction of the current is not required, therefore a plug-in AC-AC voltage sensor adapter is not essential but **highly recommended** for higher accuracy readings.
 
 ##### Type 1 Emoncms input setup
 
@@ -151,11 +147,10 @@ Once the required feeds are selected the Launch App button will appear.
 
 The main view shows a moving window power view of solar generation vs consumption which can be used to explore matching at any given moment of the day. Consumption is shown in blue and solar generation in yellow. The totals at the bottom of the page relate to the current window selected and show at a glance how much of consumption was supplied directly from solar and how much of the solar generation was exported to the grid.
 
-![My Solar PV app 2](/images/applications/solar-pv/my-solar-pv2.png)
+![My Solar PV app 2](/images/applications/solar-pv/my-solar-pv1.png)
 
 ### {% linkable_title My Solar history view %}
 
 Clicking on view history brings up a bargraph showing solar generation and consumption on a daily basis. Including how much of the solar generation is used directly on site and how much is exported.
-
 
 ![My Solar PV app 1](/images/applications/solar-pv/my-solar-pv2.png)
