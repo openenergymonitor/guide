@@ -22,7 +22,7 @@ MySolar PV is a dashboard app which runs on [Emoncms](https://emoncms.org).
 ## Explore, visualise:
 
  - Solar PV generation
- - Site site-consumption
+ - Site-consumption
  - Solar PV generation used on-site (self-site-consumption)
  - Solar PV generation exported
  - Electricity imported from the grid
@@ -31,7 +31,7 @@ MySolar PV is a dashboard app which runs on [Emoncms](https://emoncms.org).
 ### Contents
 
  1. Required Hardware
- 2. Type 1 or Type 2 setup?
+ 2. Sensor Installation
  3. Emoncms Feed setup
  4. Emoncms MySolarPV app
  
@@ -47,7 +47,7 @@ The Emoncms setup instructions below are applicable to both the emonPi and the e
 
 As standard the emonPi and emonTx are designed to monitor single phase AC up to 100A. Users in North America should consult the Building Blocks guide ["EmonTx - Use in North America"](http://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) and forum thread discussions [1](http://openenergymonitor.org/emon/node/711) and [2](http://openenergymonitor.org/emon/node/3265).
 
-### {% linkable_title Install Hardware %}
+### {% linkable_title Sensor Installation %}
 
 ![Solar PV CT Install](/images/applications/solar-pv/solar-pv-install.png)
 
@@ -55,38 +55,34 @@ As standard the emonPi and emonTx are designed to monitor single phase AC up to 
 [Please read CT installation guide before installing](https://openenergymonitor.org/emon/Current_Transformer_Installation). Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off, prior to installing your sensors, and proceeding slowly with care. If you have any doubts, seek professional assistance.
 </p>
 
+![CT sensor installation ](/images/applications/solar-pv/ct-install.jpg)
+
 <p class='note'>
 the clip-on CT sensors must be clipped round either the live or Neutral AC wire. Not both.
 </p>
 
-![CT sensor installation ](/images/applications/solar-pv/CT-on-cable.jpg)
-
-![Solar PV CT Sensor Install 2](/images/applications/solar-pv/solar-pv-ct2.jpg)
-
-*Above: CT installation on the live wire AC output from the PV inverter. Generation meter can be seen at the top right.*
-
-#### {% linkable_title Type 1 System %}
+# **NEED INSTALLATION IMAGE HERE**
 
 **Type 1 solar PV System:** When the generation and site-consumption **can** be monitored separately. The amount exported/imported to or from the grid is the difference between generation and site-consumption.
 
-<p class='note'>
-Type 1 system:  Grid (import/export) = site-consumption – Generation
-</p>
+**Type 1 system:  Grid (import/export) = site-consumption – Generation**
 
-**Type 2 solar PV System:** When the generation and site-consumption **cannot** be monitored separately e.g. the PV inverter output is fed into the fuse box and ther household loads are connected to other circuits in the same fuse box. If this is the case, the output from the PV inverter and the grid import/export connection will need to be monitored and site site-consumption calculated by subtracting.
 
-<p class='note'>
-Type 2 system:  Site site-consumption = Generation + Grid import (negative when exporting)
-</p>
+**Type 2 solar PV System:** When the generation and site-consumption **cannot** be monitored separately e.g. the PV inverter output is fed into the fuse box and ther household loads are connected to other circuits in the same fuse box. If this is the case, the output from the PV inverter and the grid import/export connection will need to be monitored and site-consumption calculated by subtracting.
+
+**Type 2 system:  Site-consumption = Generation + Grid import (negative when exporting)**
+
 
 <p class='note'>
 The polarity of the power readings depends on the orientation of the clip-on CT sensor. Orient the CTs so that generation and site-consumption is positive and grid import/export is **positive when importing and negative when exporting**. The correct orientation can be determined by trial and error.
 </p>
 
+#### {% linkable_title Type 1 System Setup %}
+
 ##### Type 1 Emoncms input setup
 
 <p class='note'>
-For automatic MySolarPV app setup use the suggested feed names in **bold** below, the names are case sensitive:
+For automatic MySolarPV app setup use the suggested feed names in **bold**. The names are case sensitive.
 </p>
 
 **Setup Solar PV Generation Feed**
@@ -114,16 +110,12 @@ For automatic MySolarPV app setup use the suggested feed names in **bold** below
 
 Once complete click on `Apps > MySolarPV` in order to launch the MySolarPV emoncms app, If you decide to use custom feed names the app will give you the option to select your solar, use and export feeds.
 
-#### {% linkable_title Type 2 System %}
-
-Use this when the generation and site-consumption cannot be monitored separately, i.e the PV inverter output is fed into a spare MCB (circuit breaker) in the fuse box. Other household loads are connected to other circuits in the same fuse box. If this is the case, the output from the PV inverter and the grid import/export connection will need to be monitored instead. Knowledge of the direction of the current is required to determine the difference between power import and export, therefore an AC-AC voltage sensor adapter is required.
-
-When the AC-AC voltage sensor is used the polarity of the grid import/export power reading will depend on the orientation of the CT. Orient the CT on the grid import/export cable so the power reading is positive when importing, and negative when exporting. The correct orientation can be determined by trial and error.
+#### {% linkable_title Type 2 System Setup %}
 
 ##### Type 2 Emoncms input setup
 
 <p class='note'>
-For automatic MySolarPV app setup use the suggested feed names in **bold** below, the names are case sensitive:
+For automatic MySolarPV app setup use the suggested feed names in **bold**. The names are case sensitive:
 </p>
 
 **Setup Solar Generation Feed**
