@@ -6,6 +6,8 @@ A clean responsive user guide website for OpenEnergyMonitor
 
 Using all the shiny new toys: powered by Jekyll and the Oscalite theme. Hosted by GitHub and served over SSL/TSL by CloudFlare.
 
+**[Edit site using Prose editor](http://prose.io/#openenergymonitor/guide/edit/master/source)**
+
 ## Preview Jekyll website locally
 
 | Command | Action |
