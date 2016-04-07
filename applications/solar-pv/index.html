@@ -205,7 +205,7 @@ Your safety is your responsibility. Clip-on current sensors are non-invasive and
 <h5>Type 1 Emoncms input setup</h5>
 
 <p class="note">
-For automatic MySolarPV app setup use the suggested feed names in bold below:
+For automatic MySolarPV app setup use the suggested feed names in <strong>bold</strong> below, the names are case sensitive:
 </p>
 
 <p><strong>Setup Solar PV Generation Feed</strong></p>
@@ -222,7 +222,7 @@ For automatic MySolarPV app setup use the suggested feed names in bold below:
 
 <ol>
   <li>Use the <code>- input</code> input processor to subtract home consumption from solar generation in order to calculate export as positive (import will be negative).</li>
-  <li>Use allow positive in order to isolate the export component</li>
+  <li>Use <code>allow positive</code> in order to isolate the export component</li>
   <li>Select log to feed and create a feed called <strong>export</strong> with the feed engine set to <code>PHPFina</code> and feed <code>interval=10s</code></li>
   <li>Select <code>power to kWh</code>, create a feed called <strong>export_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code></li>
 </ol>
@@ -233,7 +233,7 @@ For automatic MySolarPV app setup use the suggested feed names in bold below:
 
 <ol>
   <li>Click on spanner icon to configure <code>emonPi/power2</code>.</li>
-  <li>Select log to feed and create a feed called <strong>use</strong> with the feed engine set to PHPFina and feed interval set to 10 seconds.</li>
+  <li>Select log to feed and create a feed called <strong>use</strong> with the feed engine set to PHPFina and feed <code>interval=10s</code>.</li>
   <li>Select <code>power to kWh</code>, create a feed called <strong>use_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code>.</li>
 </ol>
 
@@ -248,35 +248,37 @@ For automatic MySolarPV app setup use the suggested feed names in bold below:
 <h5>Type 2 Emoncms input setup</h5>
 
 <p class="note">
-For automatic MySolarPV app setup use the suggested feed names in bold below:
+For automatic MySolarPV app setup use the suggested feed names in <strong>bold</strong> below, the names are case sensitive:
 </p>
 
-<p><strong>Setup Solar Gen Feed</strong></p>
+<p><strong>Setup Solar Generation Feed</strong></p>
 
 <p><em>Assuming CT1 (power 1) = Solar Generation</em></p>
 
 <ol>
-  <li>Click on spanner icon to configure <code>emonPi/power1</code>.</li>
-  <li>Select log to feed and create a feed called <strong>solar</strong> with the feed engine set to <code>PHPFina</code> and feed <code>interval=10s</code>.</li>
-  <li>Select <code>power to kWh</code>, create a feed called <strong>solar_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code>.</li>
+  <li>Click on spanner icon to configure <code>emonPi/power1</code></li>
+  <li>Select log to feed and create a feed called <strong>solar</strong> with the feed engine set to <code>PHPFina</code> and feed <code>interval=10s</code></li>
+  <li>Select <code>power to kWh</code>, create a feed called <strong>solar_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code></li>
 </ol>
 
 <p><strong>Calculated consumption:</strong></p>
 
-<p>Use subtract input (+ input) to add CT2 grid import/export to solar generation in order to calculate consumption.<br />
-Select log to feed and create a feed called use with the feed engine set to PHPFina and feed interval set to 10 seconds.<br />
-Select power to kWh, create a feed called use_kwh with feed engine PHPFina and feed interval set to 10 seconds.</p>
+<ol>
+  <li>Use <code>+ input</code> input processor to add CT2 grid import/export to solar generation in order to calculate consumption</li>
+  <li>Select <code>log to feed</code> and create a feed called use with the feed engine set to PHPFina and feed <code>interval=10s</code></li>
+  <li>Select <code>power to kWh</code>, create a feed called use_kwh with feed engine PHPFina and feed <code>interval=10s</code></li>
+</ol>
 
 <p><strong>Setup Grid Import / Export Feed</strong></p>
 
 <p><em>Assuming CT2 (power 2) = Grid import/export</em></p>
 
 <ol>
-  <li>Click on spanner icon to configure emonPi/power2.</li>
-  <li>Multiply by <code>-1</code> to make export positive</li>
-  <li>Select allow positive to isolate export component</li>
-  <li>Select log to feed and create a feed called export with the feed engine set to <code>PHPFina</code> and feed <code>interval=10s</code>.<br />
-Select <code>power to kWh</code>, create a feed called <strong>export_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code>.</li>
+  <li>Click on spanner icon to configure <code>emonPi/power2</code></li>
+  <li>Multiply <code>x</code> by <code>-1</code> to make export positive</li>
+  <li>Select <code>allow positive</code> to isolate export component</li>
+  <li>Select <code>log to feed</code> and create a feed called <strong>export</strong> with the feed engine set to <code>PHPFina</code> and feed <code>interval=10s</code></li>
+  <li>Select <code>power to kWh</code>, create a feed called <strong>export_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code></li>
 </ol>
 
 <h3><a class="title-link" name="configure-mysolarpv-app" href="#configure-mysolarpv-app"></a> Configure MySolarPV App</h3>
