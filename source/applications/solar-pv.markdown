@@ -1,24 +1,30 @@
 ---
 layout: page
-title: "Solar PV"
-description: "Solar PV Monitor"
-date: 2015-10-08 19:05
+title: Solar PV
+description: Solar PV Monitor
+date: "2015-10-08 19:05"
 sidebar: true
 comments: false
 sharing: true
 footer: true
+published: true
 ---
+
 
 # Solar PV
 
-The OpenEnergyMonitor Solar Photovoltaic (PV) monitor is a tool to help you make the most of your solar generation, providing real-time and historic information on your solar generation compared to home consumption, helping you increase home use of your available solar power.
+The OpenEnergyMonitor Solar Photovoltaic (PV) monitor is a tool to help you make the most of your solar generation.  
+
+Providing real-time and historic information on your solar generation and demand matching, helping you increase increase utilisation of your available solar power.
+
+MySolar PV is a dashboard app which runs on [Emoncms](https://emoncms.org). 
 
 ![SolarPV](/images/applications/solar-pv/my-solar-pv.jpg)
 
 ## Explore, visualise:
 
  - Solar PV generation
- - Home consumption
+ - Site consumption
  - Solar PV generation used on-site (self-consumption)
  - Solar PV generation exported
  - Electricity imported from the grid
@@ -27,9 +33,9 @@ The OpenEnergyMonitor Solar Photovoltaic (PV) monitor is a tool to help you make
 ### Contents
 
  1. Required Hardware
- 2. Type 1 or Type 2 setup
- 3. Input and feed setup
- 4. Using the MySolarPV app
+ 2. Type 1 or Type 2 setup? 
+ 3. Emoncms Feed setup
+ 4. Emoncms MySolarPV app
  
 ### Required Hardware
 
@@ -54,8 +60,6 @@ the clip-on CT sensors must be clipped round either the live (red/brown in the U
 <p class='note warning'>
 Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off, prior to installing your sensors, and proceeding slowly with care. If you have any doubts, seek professional assistance.
 </p>
-
-![Solar PV CT Sensor Install 1](/images/applications/solar-pv/solar-pv-ct1.jpg)
 
 ![Solar PV CT Sensor Install 2](/images/applications/solar-pv/solar-pv-ct2.jpg)
 
