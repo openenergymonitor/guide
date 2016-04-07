@@ -14,7 +14,9 @@ description: OpenEnergyMonitor User Guide
     <div class="grid__item one-third lap-one-whole palm-one-whole usp">
       <div class="grid">
         <div class="grid__item one-whole lap-one-third">
-            <img src="{{ root_url }}/images/left.png" alt="Home Energy">
+            <div class='supported-brands clearfix'>
+                <img src="{{ root_url }}/images/left.png" />
+             </div>
         </div>
         <div class="grid__item one-whole lap-two-thirds">
           {% include custom/grid_item_left.html %}
@@ -25,9 +27,10 @@ description: OpenEnergyMonitor User Guide
     <div class="grid__item one-third lap-one-whole palm-one-whole usp">
       <div class="grid">
         <div class="grid__item one-whole lap-one-third">
-            <img src="{{ root_url }}/images/middle.png" alt="Solar PV">
+            <div class='supported-brands clearfix'>
+                <img src="{{ root_url }}/images/middle.png" alt="Solar PV">
+            </div>
         </div>
-
         <div class="grid__item one-whole lap-two-thirds">
           {% include custom/grid_item_middle.html %}
         </div>

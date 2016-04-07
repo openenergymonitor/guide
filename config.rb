@@ -17,3 +17,6 @@ fonts_dir = "source/fonts"
 
 line_comments = false
 output_style = :compressed
+
+# enable source maps sass >< CSS inspect browser debugging
+sass_options = {:sourcemap => true}
