@@ -214,17 +214,17 @@ For automatic MySolarPV app setup use the suggested feed names in bold below:
 
 <ol>
   <li>Click on spanner icon to configure <code>emonPi/power1</code>.</li>
-  <li>Select log to feed and create a feed called <strong>solar</strong> with the feed engine set to <code>PHPFin</code>a and feed <code>interval=10s</code></li>
-  <li>Select power to kWh, create a feed called <strong>solar_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code>.</li>
+  <li>Select log to feed and create a feed called <strong>solar</strong> with the feed engine set to <code>PHPFina</code> and feed <code>interval=10s</code></li>
+  <li>Select power to kWh, create a feed called <strong>solar_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code></li>
 </ol>
 
 <p><strong>Calculated export:</strong></p>
 
 <ol>
-  <li>Use subtract input (<code>- input</code>) input processor to subtract home consumption from solar generation in order to calculate export as positive (import will be negative).</li>
+  <li>Use the <code>- input</code> input processor to subtract home consumption from solar generation in order to calculate export as positive (import will be negative).</li>
   <li>Use allow positive in order to isolate the export component</li>
-  <li>Select log to feed and create a feed called <strong>export</strong> with the feed engine set to <code>PHPFina</code> and feed <code>interval=10s</code>.</li>
-  <li>Select <code>power to kWh</code>, create a feed called <strong>export_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code>.</li>
+  <li>Select log to feed and create a feed called <strong>export</strong> with the feed engine set to <code>PHPFina</code> and feed <code>interval=10s</code></li>
+  <li>Select <code>power to kWh</code>, create a feed called <strong>export_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code></li>
 </ol>
 
 <p><strong>Setup Consumption Feed</strong></p>
