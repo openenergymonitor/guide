@@ -55,7 +55,7 @@ As standard the emonPi and emonTx are designed to monitor single phase AC up to 
 [Please read CT installation guide before installing](https://openenergymonitor.org/emon/Current_Transformer_Installation). Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off, prior to installing your sensors, and proceeding slowly with care. If you have any doubts, seek professional assistance.
 </p>
 
-![CT sensor installation ](/images/applications/solar-pv/ct-install.jpg)
+![CT sensor installation ](/images/applications/solar-pv/ctinstall.jpg)
 
 <p class='note'>
 the clip-on CT sensors must be clipped round either the live or Neutral AC wire. Not both.
@@ -65,12 +65,12 @@ the clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 **Type 1 solar PV System:** When the generation and site-consumption **can** be monitored separately. The amount exported/imported to or from the grid is the difference between generation and site-consumption.
 
-**Type 1 system:  Grid (import/export) = site-consumption – Generation**
+*Type 1 system:  Grid (import/export) = site-consumption – Generation*
 
 
 **Type 2 solar PV System:** When the generation and site-consumption **cannot** be monitored separately e.g. the PV inverter output is fed into the fuse box and ther household loads are connected to other circuits in the same fuse box. If this is the case, the output from the PV inverter and the grid import/export connection will need to be monitored and site-consumption calculated by subtracting.
 
-**Type 2 system:  Site-consumption = Generation + Grid import (negative when exporting)**
+*Type 2 system:  Site-consumption = Generation + Grid import (negative when exporting)*
 
 
 <p class='note'>
