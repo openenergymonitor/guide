@@ -11,6 +11,7 @@ published: true
 ---
 
 
+
 # Solar PV
 
 The OpenEnergyMonitor Solar Photovoltaic (PV) monitor is a tool to help you make the most of your solar generation.  
@@ -43,9 +44,9 @@ Solar PV monitoring can be achieved with either an emonPi or an emonPi + emonTx 
 
 # NEED TO ADD SHOP LINKS + PHOTO / ILLUSTRATION (maybe this section should go into getting-started hardware?
 
-An emonPi can be used on it's own if both the generation and consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accesible at this location.
+An emonPi can be used on it's own if both the generation and consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accesible at this location. The emonPi is a Raspberry Pi based energy monitor, Emoncms web-app runs on the emonPi allowing data to be logged locally to the  emonPi's SD card as well as logging to [Emoncms.org](http://emoncms.org) cloud server. 
 
-An emonTx can be added if the emonPi is required to be located at a different location e.g to access Etherent/WiFi or if solar PV gen / consumption feeds are in seperate locations. The emonTx communicates with the emonPi via low-power 433Mhz. Range is approximately similar to home WiFi (around 50-100m)
+An emonTx can be added if the emonPi is required to be located at a different location e.g to access Etherent/WiFi or if solar PV gen / consumption feeds are in seperate locations. The emonTx communicates with the emonPi via low-power 433Mhz. Range is approximately similar to home WiFi and can be effected by obstacles e.g. thick stone walls.  
 
 The Emoncms setup instructions below are applicable to both the emonPi and the emonTx where CT1 is solar generation and CT2 is either consumption `(type1)` or import/export `(type2)`. If using an emonTx to monitor generation or consumption simply substitute the 'log to feed' instructions to use an input from the emonTx instead of emonPi.  
 
