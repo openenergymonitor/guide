@@ -147,7 +147,7 @@ Once the required feeds are selected the Launch App button will appear.
 
 The main view shows a moving window power view of solar generation vs consumption which can be used to explore matching at any given moment of the day. Consumption is shown in blue and solar generation in yellow. The totals at the bottom of the page relate to the current window selected and show at a glance how much of consumption was supplied directly from solar and how much of the solar generation was exported to the grid.
 
-![My Solar PV app 2](/images/applications/solar-pv/my-solar-pv1.png)
+![My Solar PV app 2](/images/applications/solar-pv/my-solarpv1.png)
 
 ### {% linkable_title My Solar history view %}
 
