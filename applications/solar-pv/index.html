@@ -154,7 +154,7 @@
 
 <ul>
   <li>Solar PV generation</li>
-  <li>Site site-consumption</li>
+  <li>Site-consumption</li>
   <li>Solar PV generation used on-site (self-site-consumption)</li>
   <li>Solar PV generation exported</li>
   <li>Electricity imported from the grid</li>
@@ -165,7 +165,7 @@
 
 <ol>
   <li>Required Hardware</li>
-  <li>Type 1 or Type 2 setup?</li>
+  <li>Sensor Installation</li>
   <li>Emoncms Feed setup</li>
   <li>Emoncms MySolarPV app</li>
 </ol>
@@ -182,7 +182,7 @@
 
 <p>As standard the emonPi and emonTx are designed to monitor single phase AC up to 100A. Users in North America should consult the Building Blocks guide <a href="http://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America">“EmonTx - Use in North America”</a> and forum thread discussions <a href="http://openenergymonitor.org/emon/node/711">1</a> and <a href="http://openenergymonitor.org/emon/node/3265">2</a>.</p>
 
-<h3><a class="title-link" name="install-hardware" href="#install-hardware"></a> Install Hardware</h3>
+<h3><a class="title-link" name="sensor-installation" href="#sensor-installation"></a> Sensor Installation</h3>
 
 <p><img src="/images/applications/solar-pv/solar-pv-install.png" alt="Solar PV CT Install" /></p>
 
@@ -190,38 +190,32 @@
 <a href="https://openenergymonitor.org/emon/Current_Transformer_Installation">Please read CT installation guide before installing</a>. Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off, prior to installing your sensors, and proceeding slowly with care. If you have any doubts, seek professional assistance.
 </p>
 
+<p><img src="/images/applications/solar-pv/ct-install.jpg" alt="CT sensor installation " /></p>
+
 <p class="note">
 the clip-on CT sensors must be clipped round either the live or Neutral AC wire. Not both.
 </p>
 
-<p><img src="/images/applications/solar-pv/CT-on-cable.jpg" alt="CT sensor installation " /></p>
-
-<p><img src="/images/applications/solar-pv/solar-pv-ct2.jpg" alt="Solar PV CT Sensor Install 2" /></p>
-
-<p><em>Above: CT installation on the live wire AC output from the PV inverter. Generation meter can be seen at the top right.</em></p>
-
-<h4><a class="title-link" name="type-1-system" href="#type-1-system"></a> Type 1 System</h4>
+<h1><strong>NEED INSTALLATION IMAGE HERE</strong></h1>
 
 <p><strong>Type 1 solar PV System:</strong> When the generation and site-consumption <strong>can</strong> be monitored separately. The amount exported/imported to or from the grid is the difference between generation and site-consumption.</p>
 
-<p class="note">
-Type 1 system:  Grid (import/export) = site-consumption – Generation
-</p>
+<p><strong>Type 1 system:  Grid (import/export) = site-consumption – Generation</strong></p>
 
-<p><strong>Type 2 solar PV System:</strong> When the generation and site-consumption <strong>cannot</strong> be monitored separately e.g. the PV inverter output is fed into the fuse box and ther household loads are connected to other circuits in the same fuse box. If this is the case, the output from the PV inverter and the grid import/export connection will need to be monitored and site site-consumption calculated by subtracting.</p>
+<p><strong>Type 2 solar PV System:</strong> When the generation and site-consumption <strong>cannot</strong> be monitored separately e.g. the PV inverter output is fed into the fuse box and ther household loads are connected to other circuits in the same fuse box. If this is the case, the output from the PV inverter and the grid import/export connection will need to be monitored and site-consumption calculated by subtracting.</p>
 
-<p class="note">
-Type 2 system:  Site site-consumption = Generation + Grid import (negative when exporting)
-</p>
+<p><strong>Type 2 system:  Site-consumption = Generation + Grid import (negative when exporting)</strong></p>
 
 <p class="note">
 The polarity of the power readings depends on the orientation of the clip-on CT sensor. Orient the CTs so that generation and site-consumption is positive and grid import/export is <strong>positive when importing and negative when exporting</strong>. The correct orientation can be determined by trial and error.
 </p>
 
+<h4><a class="title-link" name="type-1-system-setup" href="#type-1-system-setup"></a> Type 1 System Setup</h4>
+
 <h5>Type 1 Emoncms input setup</h5>
 
 <p class="note">
-For automatic MySolarPV app setup use the suggested feed names in <strong>bold</strong> below, the names are case sensitive:
+For automatic MySolarPV app setup use the suggested feed names in <strong>bold</strong>. The names are case sensitive.
 </p>
 
 <p><strong>Setup Solar PV Generation Feed</strong></p>
@@ -255,16 +249,12 @@ For automatic MySolarPV app setup use the suggested feed names in <strong>bold</
 
 <p>Once complete click on <code>Apps &gt; MySolarPV</code> in order to launch the MySolarPV emoncms app, If you decide to use custom feed names the app will give you the option to select your solar, use and export feeds.</p>
 
-<h4><a class="title-link" name="type-2-system" href="#type-2-system"></a> Type 2 System</h4>
-
-<p>Use this when the generation and site-consumption cannot be monitored separately, i.e the PV inverter output is fed into a spare MCB (circuit breaker) in the fuse box. Other household loads are connected to other circuits in the same fuse box. If this is the case, the output from the PV inverter and the grid import/export connection will need to be monitored instead. Knowledge of the direction of the current is required to determine the difference between power import and export, therefore an AC-AC voltage sensor adapter is required.</p>
-
-<p>When the AC-AC voltage sensor is used the polarity of the grid import/export power reading will depend on the orientation of the CT. Orient the CT on the grid import/export cable so the power reading is positive when importing, and negative when exporting. The correct orientation can be determined by trial and error.</p>
+<h4><a class="title-link" name="type-2-system-setup" href="#type-2-system-setup"></a> Type 2 System Setup</h4>
 
 <h5>Type 2 Emoncms input setup</h5>
 
 <p class="note">
-For automatic MySolarPV app setup use the suggested feed names in <strong>bold</strong> below, the names are case sensitive:
+For automatic MySolarPV app setup use the suggested feed names in <strong>bold</strong>. The names are case sensitive:
 </p>
 
 <p><strong>Setup Solar Generation Feed</strong></p>
@@ -331,16 +321,17 @@ For automatic MySolarPV app setup use the suggested feed names in <strong>bold</
           <div class="grid">
   
     <section class="aside-module grid__item one-whole lap-one-half">
-  <h1 class="title delta">OpenEnergyMonitor</h1>
+  <h1 class="title delta">About OpenEnergyMonitor</h1>
   <ul class="divided">
     <li>
       A project to develop open-source energy monitoring tools to help us relate to our use of energy, our energy systems and the challenge of sustainable energy.
     </li>
+    <li><a href='https://openenergymonitor.org'>OpenEnergyMonitor.org</a></li>
     <li><a href='https://openenergymonitor.org/emon/opensustech'>Open-Source Tools</a></li>
     <li><a href='https://openenergymonitor.org/emon/sustainable-energy'>Sustainable Energy</a> </li>
   </ul>
   <p>
-  <h1 class="title delta">Emoncms</h1>
+  <h1 class="title delta">About Emoncms</h1>
   <ul class="divided">
     <li>
       Emoncms is a powerful open-source web-app for processing, logging and visualising energy, temperature and other environmental data.
