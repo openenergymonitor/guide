@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 group :development do
-  gem 'rake', '~> 10.0'
+  gem 'rake', '~> 10.5.0'
   gem 'jekyll', '~> 3.0'
   gem 'pygments.rb', '~> 0.6.3'
   gem 'rdiscount', '~> 2.0'
@@ -14,8 +14,8 @@ group :development do
   gem 'stringex', '~> 1.4.0'
   gem 'execjs'
   gem 'therubyracer', :platforms => :ruby
-  gem 'coderay'
-  gem 'rake-jekyll'
+  gem 'coderay', '~> 1.1.0'
+  gem 'rake-jekyll' , '~> 1.1.0'
 end
 
 group :jekyll_plugins do
@@ -27,4 +27,4 @@ group :jekyll_plugins do
   gem 'octopress-include-tag'
 end
 
-gem 'sinatra', '~> 1.4.2'
+gem 'sinatra', '~> 1.4.7'

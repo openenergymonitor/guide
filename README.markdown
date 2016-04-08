@@ -47,6 +47,7 @@ If this is the first time we publishing this site we neeed to create the `gh-pag
 Once Octopress and rake Jekyll as been setup as described to generate the html and deploy site to `gh-pages` run
 
 `$ rake generate`
+
 `$ rake deploy`
 
 In a few moments site will be live:
@@ -72,19 +73,17 @@ In the deploy example above the site is generated locally then pushed to github 
   - Install Travis command line `gem install travis`
   - Encypt token and add to `travis.yaml` by running the following in website dir: `$ travis encrypt GH_TOKEN=XXXXXX --add env.global`
  
-Example to generate the site using `rake generate` then if generation is succesful deploy to `gh pages` branch with `rake deploy`:
+Example `travis.yaml` to generate the site using `rake generate` then if generation is succesful deploy to `gh pages` branch with `rake deploy`:
 
 ```yaml
 language: ruby
 sudo: false
 cache: bundler
-script: rake generate
-after_success:
-- '[ "${TRAVIS_BRANCH}" = "master" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ] && rake deploy || true'
+script: bundle exec rake generate
+after_success: bundle exec rake deploy
 env:
   global:
-  - GH_REF: github.com/username/repo.git
-  - secure: <encrypted GH token>
+    secure:  <encrypted GH token>
 
 ```
 
