@@ -161,7 +161,7 @@
 
   <p>Testing markdown blog post. Will this replace our <a href="http://openenergymonitor.blogspot.com">old blog</a>?</p>
 
-<p>Here is a markdown post: <em>italic</em>, <strong>bold</strong>, <code>inline code</code></p>
+<p>Here is a markdown post: <em>italic</em>, <strong>bold</strong>, <code class="highlighter-rouge">inline code</code></p>
 
 <ul>
   <li>Bullet points</li>
@@ -171,51 +171,42 @@
 <p>Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.</p>
 
 <blockquote>
-  <p>The overriding design goal for Markdown’s<br />
+  <p>The overriding design goal for Markdown’s
 formatting syntax is to make it as readable</p>
 </blockquote>
 
-<h1>Code syntax highlight blocks</h1>
+<h1 id="code-syntax-highlight-blocks">Code syntax highlight blocks</h1>
 
 <p><a href="http://coapp.org/reference/garrett-flavored-markdown.html#code">See here</a> for a full list of code syntax markdown tags</p>
 
-<h2>Python code syntax:</h2>
+<h2 id="python-code-syntax">Python code syntax:</h2>
 
-<div class="highlighter-coderay"><div class="CodeRay">
-  <div class="code"><pre><span class="comment"># Initialize logging</span>
-<span class="predefined-constant">self</span>._log = logging.getLogger(<span class="string"><span class="delimiter">&quot;</span><span class="content">EmonHub</span><span class="delimiter">&quot;</span></span>)
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="c"># Initialize logging</span>
+<span class="bp">self</span><span class="o">.</span><span class="n">_log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">"EmonHub"</span><span class="p">)</span>
 
-</pre></div>
-</div>
+</code></pre>
 </div>
 <p>## PHP code syntax:</p>
 
-<div class="highlighter-coderay"><div class="CodeRay">
-  <div class="code"><pre><span class="keyword">public</span> <span class="keyword">function</span> <span class="function">get_npoints</span>(<span class="local-variable">$feedid</span>) {
-    <span class="local-variable">$feedid</span> = (<span class="predefined-type">int</span>) <span class="local-variable">$feedid</span>;
+<div class="highlighter-rouge"><pre class="highlight"><code>public function get_npoints($feedid) {
+    $feedid = (int) $feedid;
 
-</pre></div>
-</div>
+</code></pre>
 </div>
 
-<h2>c++ code syntax:</h2>
+<h2 id="c-code-syntax">c++ code syntax:</h2>
 
-<div class="highlighter-coderay"><div class="CodeRay">
-  <div class="code"><pre><span class="predefined-type">int</span> get_temperature(byte sensor)
-{
-  <span class="predefined-type">float</span> temp=(sensors.getTempC(allAddress[sensor]));
-  <span class="keyword">if</span> ((temp&lt;<span class="integer">12</span><span class="float">5</span><span class="float">.0</span>) &amp;&amp; (temp&gt;-<span class="integer">5</span><span class="float">5</span><span class="float">.0</span>)) <span class="keyword">return</span>(temp*<span class="integer">10</span>);            <span class="comment">//if reading is within range for the sensor convert</span>
-</pre></div>
-</div>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">get_temperature</span><span class="p">(</span><span class="n">byte</span> <span class="n">sensor</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="kt">float</span> <span class="n">temp</span><span class="o">=</span><span class="p">(</span><span class="n">sensors</span><span class="p">.</span><span class="n">getTempC</span><span class="p">(</span><span class="n">allAddress</span><span class="p">[</span><span class="n">sensor</span><span class="p">]));</span>
+  <span class="k">if</span> <span class="p">((</span><span class="n">temp</span><span class="o">&lt;</span><span class="mf">125.0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">temp</span><span class="o">&gt;-</span><span class="mf">55.0</span><span class="p">))</span> <span class="k">return</span><span class="p">(</span><span class="n">temp</span><span class="o">*</span><span class="mi">10</span><span class="p">);</span>            <span class="c1">//if reading is within range for the sensor convert
+</span></code></pre>
 </div>
 
-<h2>Bash code syntax markdown:</h2>
+<h2 id="bash-code-syntax-markdown">Bash code syntax markdown:</h2>
 
-<div class="highlighter-coderay"><div class="CodeRay">
-  <div class="code"><pre>$ echo &quot;hello world&quot;
-</pre></div>
-</div>
-</div>
+<pre><code class="language-console">$ echo "hello world"
+</code></pre>
 <p># Table:</p>
 
 <table>
@@ -235,7 +226,7 @@ formatting syntax is to make it as readable</p>
 
 <p><a href="https://github.com/vmg/redcarpet">Redcloth Ruby Gem</a> is used to render markdown in Jekyll.</p>
 
-<h1>Warning boxes</h1>
+<h1 id="warning-boxes">Warning boxes</h1>
 
 <p class="note warning">
 Testing warning note

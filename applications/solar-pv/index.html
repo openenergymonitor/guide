@@ -140,7 +140,7 @@
   <hr class="divider">
   
 
-  <h1>Solar PV</h1>
+  <h1 id="solar-pv">Solar PV</h1>
 
 <p>The OpenEnergyMonitor Solar Photovoltaic (PV) monitor is a tool to help you make the most of your solar generation.</p>
 
@@ -150,7 +150,7 @@
 
 <p><img src="/images/applications/solar-pv/my-solar-pv.jpg" alt="SolarPV" /></p>
 
-<h2>Explore, visualise:</h2>
+<h2 id="explore-visualise">Explore, visualise:</h2>
 
 <ul>
   <li>Solar PV generation</li>
@@ -161,7 +161,7 @@
   <li>Real-time &amp; historic daily, monthly and annual totals</li>
 </ul>
 
-<h3>Contents</h3>
+<h3 id="contents">Contents</h3>
 
 <ol>
   <li>Required Hardware</li>
@@ -170,7 +170,7 @@
   <li>Emoncms MySolarPV app</li>
 </ol>
 
-<h3>Required Hardware</h3>
+<h3 id="required-hardware">Required Hardware</h3>
 
 <p>Solar PV monitoring can be achieved with either an emonPi or an emonPi + emonTx energy monitor.</p>
 
@@ -182,12 +182,12 @@
 
 <p>As standard the emonPi and emonTx are designed to monitor single phase AC up to 100A. Users in North America should consult the Building Blocks guide <a href="http://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America">“EmonTx - Use in North America”</a> and forum thread discussions <a href="http://openenergymonitor.org/emon/node/711">1</a> and <a href="http://openenergymonitor.org/emon/node/3265">2</a>.</p>
 
-<h3><a class="title-link" name="sensor-installation" href="#sensor-installation"></a> Sensor Installation</h3>
+<h3 id="a-classtitle-link-namesensor-installation-hrefsensor-installationa-sensor-installation"><a class="title-link" name="sensor-installation" href="#sensor-installation"></a> Sensor Installation</h3>
 
 <p><img src="/images/applications/solar-pv/solar-pv-install.png" alt="Solar PV CT Install" /></p>
 
 <p class="note warning">
-<a href="https://openenergymonitor.org/emon/Current_Transformer_Installation">Please read CT installation guide before installing</a>. Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off, prior to installing your sensors, and proceeding slowly with care. If you have any doubts, seek professional assistance.
+[Please read CT installation guide before installing](https://openenergymonitor.org/emon/Current_Transformer_Installation). Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off, prior to installing your sensors, and proceeding slowly with care. If you have any doubts, seek professional assistance.
 </p>
 
 <p><img src="/images/applications/solar-pv/ctinstall.jpg" alt="CT sensor installation " /></p>
@@ -196,7 +196,7 @@
 the clip-on CT sensors must be clipped round either the live or Neutral AC wire. Not both.
 </p>
 
-<h1><strong>NEED INSTALLATION IMAGE HERE</strong></h1>
+<h1 id="need-installation-image-here"><strong>NEED INSTALLATION IMAGE HERE</strong></h1>
 
 <p><strong>Type 1 solar PV System:</strong> When the generation and site-consumption <strong>can</strong> be monitored separately. The amount exported/imported to or from the grid is the difference between generation and site-consumption.</p>
 
@@ -207,15 +207,15 @@ the clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 <p><em>Type 2 system:  Site-consumption = Generation + Grid import (negative when exporting)</em></p>
 
 <p class="note">
-The polarity of the power readings depends on the orientation of the clip-on CT sensor. Orient the CTs so that generation and site-consumption is positive and grid import/export is <strong>positive when importing and negative when exporting</strong>. The correct orientation can be determined by trial and error.
+The polarity of the power readings depends on the orientation of the clip-on CT sensor. Orient the CTs so that generation and site-consumption is positive and grid import/export is **positive when importing and negative when exporting**. The correct orientation can be determined by trial and error.
 </p>
 
-<h4><a class="title-link" name="type-1-system-setup" href="#type-1-system-setup"></a> Type 1 System Setup</h4>
+<h4 id="a-classtitle-link-nametype-1-system-setup-hreftype-1-system-setupa-type-1-system-setup"><a class="title-link" name="type-1-system-setup" href="#type-1-system-setup"></a> Type 1 System Setup</h4>
 
-<h5>Type 1 Emoncms input setup</h5>
+<h5 id="type-1-emoncms-input-setup">Type 1 Emoncms input setup</h5>
 
 <p class="note">
-For automatic MySolarPV app setup use the suggested feed names in <strong>bold</strong>. The names are case sensitive.
+For automatic MySolarPV app setup use the suggested feed names in **bold**. The names are case sensitive.
 </p>
 
 <p><strong>Setup Solar PV Generation Feed</strong></p>
@@ -223,18 +223,18 @@ For automatic MySolarPV app setup use the suggested feed names in <strong>bold</
 <p><em>Assuming CT1 (power 1) = Solar Gen</em></p>
 
 <ol>
-  <li>Click on spanner icon to configure <code>emonPi/power1</code>.</li>
-  <li>Select <code>log to feed</code> and create a feed called <strong>solar</strong> with the feed engine set to <code>PHPFina</code> and feed <code>interval=10s</code></li>
-  <li>Select power to kWh, create a feed called <strong>solar_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code></li>
+  <li>Click on spanner icon to configure <code class="highlighter-rouge">emonPi/power1</code>.</li>
+  <li>Select <code class="highlighter-rouge">log to feed</code> and create a feed called <strong>solar</strong> with the feed engine set to <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
+  <li>Select power to kWh, create a feed called <strong>solar_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
 </ol>
 
 <p><strong>Calculated export:</strong></p>
 
 <ol>
-  <li>Use the <code>- input</code> input processor to subtract site-consumption from solar generation in order to calculate export as positive (import will be negative).</li>
-  <li>Use <code>allow positive</code> in order to isolate the export component</li>
-  <li>Select <code>log to feed</code> and create a feed called <strong>export</strong> with the feed engine set to <code>PHPFina</code> and feed <code>interval=10s</code></li>
-  <li>Select <code>power to kWh</code>, create a feed called <strong>export_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code></li>
+  <li>Use the <code class="highlighter-rouge">- input</code> input processor to subtract site-consumption from solar generation in order to calculate export as positive (import will be negative).</li>
+  <li>Use <code class="highlighter-rouge">allow positive</code> in order to isolate the export component</li>
+  <li>Select <code class="highlighter-rouge">log to feed</code> and create a feed called <strong>export</strong> with the feed engine set to <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
+  <li>Select <code class="highlighter-rouge">power to kWh</code>, create a feed called <strong>export_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
 </ol>
 
 <p><strong>Setup site-consumption Feed</strong></p>
@@ -242,19 +242,19 @@ For automatic MySolarPV app setup use the suggested feed names in <strong>bold</
 <p><em>Assuming CT2 (power 2) = site-consumption</em></p>
 
 <ol>
-  <li>Click on spanner icon to configure <code>emonPi/power2</code>.</li>
-  <li>Select <code>log to feed</code> and create a feed called <strong>use</strong> with the feed engine set to PHPFina and feed <code>interval=10s</code>.</li>
-  <li>Select <code>power to kWh</code>, create a feed called <strong>use_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code>.</li>
+  <li>Click on spanner icon to configure <code class="highlighter-rouge">emonPi/power2</code>.</li>
+  <li>Select <code class="highlighter-rouge">log to feed</code> and create a feed called <strong>use</strong> with the feed engine set to PHPFina and feed <code class="highlighter-rouge">interval=10s</code>.</li>
+  <li>Select <code class="highlighter-rouge">power to kWh</code>, create a feed called <strong>use_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code>.</li>
 </ol>
 
-<p>Once complete click on <code>Apps &gt; MySolarPV</code> in order to launch the MySolarPV emoncms app, If you decide to use custom feed names the app will give you the option to select your solar, use and export feeds.</p>
+<p>Once complete click on <code class="highlighter-rouge">Apps &gt; MySolarPV</code> in order to launch the MySolarPV emoncms app, If you decide to use custom feed names the app will give you the option to select your solar, use and export feeds.</p>
 
-<h4><a class="title-link" name="type-2-system-setup" href="#type-2-system-setup"></a> Type 2 System Setup</h4>
+<h4 id="a-classtitle-link-nametype-2-system-setup-hreftype-2-system-setupa-type-2-system-setup"><a class="title-link" name="type-2-system-setup" href="#type-2-system-setup"></a> Type 2 System Setup</h4>
 
-<h5>Type 2 Emoncms input setup</h5>
+<h5 id="type-2-emoncms-input-setup">Type 2 Emoncms input setup</h5>
 
 <p class="note">
-For automatic MySolarPV app setup use the suggested feed names in <strong>bold</strong>. The names are case sensitive:
+For automatic MySolarPV app setup use the suggested feed names in **bold**. The names are case sensitive:
 </p>
 
 <p><strong>Setup Solar Generation Feed</strong></p>
@@ -262,17 +262,17 @@ For automatic MySolarPV app setup use the suggested feed names in <strong>bold</
 <p><em>Assuming CT1 (power 1) = Solar Generation</em></p>
 
 <ol>
-  <li>Click on spanner icon to configure <code>emonPi/power1</code></li>
-  <li>Select <code>log to feed</code> and create a feed called <strong>solar</strong> with the feed engine set to <code>PHPFina</code> and feed <code>interval=10s</code></li>
-  <li>Select <code>power to kWh</code>, create a feed called <strong>solar_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code></li>
+  <li>Click on spanner icon to configure <code class="highlighter-rouge">emonPi/power1</code></li>
+  <li>Select <code class="highlighter-rouge">log to feed</code> and create a feed called <strong>solar</strong> with the feed engine set to <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
+  <li>Select <code class="highlighter-rouge">power to kWh</code>, create a feed called <strong>solar_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
 </ol>
 
 <p><strong>Calculated site-consumption:</strong></p>
 
 <ol>
-  <li>Use <code>+ input</code> input processor to add CT2 grid import/export to solar generation in order to calculate site-consumption</li>
-  <li>Select <code>log to feed</code> and create a feed called use with the feed engine set to PHPFina and feed <code>interval=10s</code></li>
-  <li>Select <code>power to kWh</code>, create a feed called use_kwh with feed engine PHPFina and feed <code>interval=10s</code></li>
+  <li>Use <code class="highlighter-rouge">+ input</code> input processor to add CT2 grid import/export to solar generation in order to calculate site-consumption</li>
+  <li>Select <code class="highlighter-rouge">log to feed</code> and create a feed called use with the feed engine set to PHPFina and feed <code class="highlighter-rouge">interval=10s</code></li>
+  <li>Select <code class="highlighter-rouge">power to kWh</code>, create a feed called use_kwh with feed engine PHPFina and feed <code class="highlighter-rouge">interval=10s</code></li>
 </ol>
 
 <p><strong>Setup Grid Import / Export Feed</strong></p>
@@ -280,14 +280,14 @@ For automatic MySolarPV app setup use the suggested feed names in <strong>bold</
 <p><em>Assuming CT2 (power 2) = Grid import/export</em></p>
 
 <ol>
-  <li>Click on spanner icon to configure <code>emonPi/power2</code></li>
-  <li>Multiply <code>x</code> by <code>-1</code> to make export positive</li>
-  <li>Select <code>allow positive</code> to isolate export component</li>
-  <li>Select <code>log to feed</code> and create a feed called <strong>export</strong> with the feed engine set to <code>PHPFina</code> and feed <code>interval=10s</code></li>
-  <li>Select <code>power to kWh</code>, create a feed called <strong>export_kwh</strong> with feed engine <code>PHPFina</code> and feed <code>interval=10s</code></li>
+  <li>Click on spanner icon to configure <code class="highlighter-rouge">emonPi/power2</code></li>
+  <li>Multiply <code class="highlighter-rouge">x</code> by <code class="highlighter-rouge">-1</code> to make export positive</li>
+  <li>Select <code class="highlighter-rouge">allow positive</code> to isolate export component</li>
+  <li>Select <code class="highlighter-rouge">log to feed</code> and create a feed called <strong>export</strong> with the feed engine set to <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
+  <li>Select <code class="highlighter-rouge">power to kWh</code>, create a feed called <strong>export_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
 </ol>
 
-<h3><a class="title-link" name="configure-mysolarpv-app" href="#configure-mysolarpv-app"></a> Configure MySolarPV App</h3>
+<h3 id="a-classtitle-link-nameconfigure-mysolarpv-app-hrefconfigure-mysolarpv-appa-configure-mysolarpv-app"><a class="title-link" name="configure-mysolarpv-app" href="#configure-mysolarpv-app"></a> Configure MySolarPV App</h3>
 
 <p>With your emonPi or emonTx inputs configured as above and with use of the suggested feed names the MySolarPV app will launch with no further configuration required.</p>
 
@@ -297,13 +297,13 @@ For automatic MySolarPV app setup use the suggested feed names in <strong>bold</
 
 <p><img src="/images/applications/solar-pv/my-solarpv-config.png" alt="My Solar PV app config" /></p>
 
-<h3><a class="title-link" name="configure-my-solar-app-power-view" href="#configure-my-solar-app-power-view"></a> Configure My Solar app power view</h3>
+<h3 id="a-classtitle-link-nameconfigure-my-solar-app-power-view-hrefconfigure-my-solar-app-power-viewa-configure-my-solar-app-power-view"><a class="title-link" name="configure-my-solar-app-power-view" href="#configure-my-solar-app-power-view"></a> Configure My Solar app power view</h3>
 
 <p>The main view shows a moving window power view of solar generation Vs site-consumption which, can be used to explore matching at any given moment of the day. site-consumption is shown in blue and solar generation in yellow. The totals at the bottom of the page relate to the current window selected and show at a glance how much of site-consumption was supplied directly from solar and how much of the solar generation was exported to the grid.</p>
 
 <p><img src="/images/applications/solar-pv/my-solar-pv2.png" alt="My Solar PV app 2" /></p>
 
-<h3><a class="title-link" name="my-solar-history-view" href="#my-solar-history-view"></a> My Solar history view</h3>
+<h3 id="a-classtitle-link-namemy-solar-history-view-hrefmy-solar-history-viewa-my-solar-history-view"><a class="title-link" name="my-solar-history-view" href="#my-solar-history-view"></a> My Solar history view</h3>
 
 <p>Clicking on view history brings up a bargraph showing solar generation and site-consumption on a daily basis. Including how much of the solar generation is used directly on site and how much is exported.</p>
 
