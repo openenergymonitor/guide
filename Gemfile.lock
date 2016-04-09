@@ -102,7 +102,7 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth (~> 4.2.9)
-  coderay
+  coderay (~> 1.1.0)
   compass (~> 0.12.2)
   execjs
   haml (~> 4.0)
@@ -114,13 +114,13 @@ DEPENDENCIES
   octopress-filters
   octopress-include-tag
   pygments.rb (~> 0.6.3)
-  rake (~> 10.0)
+  rake (~> 10.5.0)
   rake-jekyll (~> 1.1.0)
   rb-fsevent (~> 0.9)
   rdiscount (~> 2.0)
   rubypants (~> 0.2.0)
   sass-globbing (~> 1.0.0)
-  sinatra (~> 1.4.2)
+  sinatra (~> 1.4.7)
   stringex (~> 1.4.0)
   therubyracer
 

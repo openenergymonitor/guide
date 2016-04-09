@@ -2,10 +2,10 @@
 
 .hero {
   background-color: #038FC7;
-  padding-bottom: 0;
+  padding-bottom: 20px;
 
   .lead {
-    margin-bottom: 16px;
+    margin-bottom: 36px;
   }
 
   .hero-buttons a {
@@ -39,9 +39,9 @@
   img {
     border: none !important;
     box-shadow: none !important;
-    max-height: 160px;
+    max-height: 225px;
     //max-width: 140px;
-    margin: 10px;
+    margin: 0px;
     vertical-align: middle;
   }
 }
