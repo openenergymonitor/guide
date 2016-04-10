@@ -9,7 +9,6 @@ sharing: true
 footer: true
 published: true
 ---
-# Solar PV
 
 The OpenEnergyMonitor Solar Photovoltaic (PV) monitor is a tool to help you make the most of your solar generation.
 
@@ -37,15 +36,9 @@ MySolar PV is a dashboard app which runs on [Emoncms](https://Emoncms.org).
  
 ### Required Hardware
 
-Solar PV monitoring can be achieved with either an emonPi or an emonPi + emonTx energy monitor.
-
-An emonPi can be used on its own if both the generation and site-consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accesible at this location. The emonPi is a Raspberry Pi based energy monitor, Emoncms web-app runs on the emonPi allowing data to be logged locally to the  emonPi's SD card as well as (optionally) logging to [Emoncms.org](http://Emoncms.org) cloud server.
-
-An emonTx can be added if the emonPi is required to be located at a different location e.g to access Etherent/WiFi or if solar PV generation and site-consumption feeds are in separate locations. The emonTx communicates with the emonPi via low-power 433Mhz. Range is approximately similar to home WiFi and can be affected by obstacles e.g. thick stone walls.
+See Solar PV tab of [Setup > Required Hardware](/setup/)
 
 The Emoncms setup instructions below are applicable to both the emonPi and the emonTx where CT1 is solar generation and CT2 is either site-consumption (Type 1 system) or import/export (Type 2 system). If using an emonTx to monitor generation or site-consumption substitute the 'log to feed' instructions to use an input from the emonTx instead of emonPi.
-
-As standard the emonPi and emonTx are designed to monitor single phase AC up to 100A. Users in North America should consult the Building Blocks guide ["emonTx - Use in North America"](http://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) and forum thread discussions [1](http://openenergymonitor.org/emon/node/711) and [2](http://openenergymonitor.org/emon/node/3265).
 
 ### {% linkable_title Sensor Installation %}
 
