@@ -9,7 +9,7 @@ sharing: true
 footer: true
 ---
 
-### [&laquo; Previous step: Log Locally](/getting-started/local/)
+### [&laquo; Previous step: Log Locally](/setup/local/)
 
 Log remotly to [Emoncms.org](http://emoncms.org)
 
@@ -18,4 +18,4 @@ Log remotly to [Emoncms.org](http://emoncms.org)
 
 
 
-### [Next step: Dashboards &raquo;](/getting-started/dashboards/)
+### [Next step: Dashboards &raquo;](/setup/dashboards/)

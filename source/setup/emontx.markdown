@@ -9,7 +9,7 @@ sharing: true
 footer: true
 ---
 
-### [&laquo; Previous step: Dashboards](/getting-started/dashboards/)
+### [&laquo; Previous step: Dashboards](/setup/dashboards/)
 
 ## Add additional energy monitoring nodes
 
@@ -18,4 +18,4 @@ footer: true
   1. Step 1
   2. Step 2
 
-### [Next step: Add Temperature Nodes &raquo;](/getting-started/emonth/)
+### [Next step: Add Temperature Nodes &raquo;](/setup/emonth/)

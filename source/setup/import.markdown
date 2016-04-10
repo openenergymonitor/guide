@@ -9,6 +9,6 @@ sharing: true
 footer: true
 ---
 
-### [&laquo; Previous step: Add Temperature Nodes](/getting-started/emonth/)
+### [&laquo; Previous step: Add Temperature Nodes](/setup/emonth/)
 
 

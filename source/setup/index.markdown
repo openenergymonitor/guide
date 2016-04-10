@@ -62,4 +62,4 @@ Important Info
 Warnings
 </p>
 
-### [Next step: Connect &raquo;](/getting-started/connect/)
+### [Next step: Connect &raquo;](/setup/connect/)

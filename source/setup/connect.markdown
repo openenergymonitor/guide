@@ -9,7 +9,7 @@ sharing: true
 footer: true
 ---
 
-### [&laquo; Previous step: Required Hardware](/getting-started/)
+### [&laquo; Previous step: Required Hardware](/setup/)
 
 ##  First Boot
 
@@ -27,10 +27,10 @@ Emoncms remote: Emoncms.org cloud server.
 
 1. **Connect the Ethernet and 5V USB power**
   - [1.2A USB power adapter recommended](http://shop.openenergymonitor.com/power-supplies/)
-  - ![emonPi First Boot Etherent](/images/getting-started/emonpi-ethernet_first_boot.png)
+  - ![emonPi First Boot Etherent](/images/setup/emonpi-ethernet_first_boot.png)
   - <p class='note warning'> Take care to connect Ethernet to the socket on the same side as the USB sockets, NOT the RJ45 connecter on the opposite side.</p>
   - The emonPi LCD display will start by cycling through information about what is connected to it. Once the Raspberry Pi has booted up, the LCD will display the IP address of the emonPi on your local network.
- - ![Etherent Connected](/images/getting-started/etherent_Connected.jpg)
+ - ![Etherent Connected](/images/setup/etherent_Connected.jpg)
 
 
 2. **Enter emonPi IP Address in your web browser address bar**
@@ -39,7 +39,7 @@ Emoncms remote: Emoncms.org cloud server.
 
 
 3. **Create Emoncms local user account**
-  - ![Emoncms create account](/images/getting-started/Emoncms_reg.png)
+  - ![Emoncms create account](/images/setup/Emoncms_reg.png)
   - <p class='note'> By default only a single (admin) account can be created on local emonPi Emoncms. To enable multiple accounts edit Emoncms settings in `/var/www/emoncms/settings.php` </p>
 
 ### Connect to WiFi (optional)
@@ -47,7 +47,7 @@ Emoncms remote: Emoncms.org cloud server.
 WiFi is optional and requires either a RaspberryPi3 (integrated WiFi) or a USB WiFi dongle ([Edimax EW7811UN](http://shop.openenergymonitor.com/edimax-usb-wifi-adapter-ew-7811un/)).
 
 1. Wifi config in *local Emoncms* : `Setup > Wi-Fi`
- - ![Connect to Wifi](/images/getting-started/wifi9_0.png)
+ - ![Connect to Wifi](/images/setup/wifi9_0.png)
  - Network scan should happen automatically.
 
 2.) Check the box to select the network(s) you want to connect to
@@ -66,7 +66,7 @@ After a few seconds info should refresh automatically to report `Status: Connect
 
 Shutdown emonPi by press-and-holding the shutdown button on the side, with a paper clip for 5 seconds then waiting 30s for unit to fully shutdown.
 
-![emonPi Shutdown](/images/getting-started/emonPi_shutdown.png)
+![emonPi Shutdown](/images/setup/emonPi_shutdown.png)
 
 <p class='note warning'>
 Unplugging power from the emonPi without properly shutting down can result in a corrupted SD card.
@@ -77,4 +77,4 @@ Unplugging power from the emonPi without properly shutting down can result in a 
 </div>
 
 
-### [Next step: Log Locally &raquo;](/getting-started/local/)
+### [Next step: Log Locally &raquo;](/setup/local/)

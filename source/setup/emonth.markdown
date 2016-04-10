@@ -9,7 +9,7 @@ sharing: true
 footer: true
 ---
 
-### [&laquo; Previous step: Add Energy Nodes](/getting-started/emontx/)
+### [&laquo; Previous step: Add Energy Nodes](/setup/emontx/)
 
 ## Add additional temperature monitoring nodes
 
@@ -20,4 +20,4 @@ footer: true
   3.
   
 
-### [Nexr step: Import / Backup &raquo;](/getting-started/import/)
+### [Nexr step: Import / Backup &raquo;](/setup/import/)

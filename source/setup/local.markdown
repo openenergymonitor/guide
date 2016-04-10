@@ -9,11 +9,11 @@ sharing: true
 footer: true
 ---
 
-### [&laquo; Previous step: Connect](/getting-started/connect/)
+### [&laquo; Previous step: Connect](/setup/connect/)
 
 Log data locally to Emoncms running on emonPi web-server (internal SD card)
 
   1. Step 1
   2. Step 2
 
-### [Next step: Log Remotely &raquo;](/getting-started/remote/)
+### [Next step: Log Remotely &raquo;](/setup/remote/)
