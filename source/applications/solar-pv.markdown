@@ -122,8 +122,8 @@ For automatic MySolarPV App setup use the suggested feed names in **bold**. The 
 **Calculated site-consumption:**
 
  1. Use `+ input` input processor to add CT2 grid import/export to solar generation in order to calculate site-consumption
- 2. Select `log to feed` and create a feed called use with the feed engine set to PHPFina and feed `interval=10s`
- 3. Select `power to KWh`, create a feed called use_KWh with feed engine PHPFina and feed `interval=10s`
+ 2. Select `log to feed` and create a feed called use with the feed engine set to `PHPFina` and feed `interval=10s`
+ 3. Select `power to KWh`, create a feed called use_KWh with feed engine `PHPFina` and feed `interval=10s`
 
 **Setup Grid Import / Export Feed**
 
@@ -133,7 +133,7 @@ For automatic MySolarPV App setup use the suggested feed names in **bold**. The 
  2. Multiply `x` by `-1` to make export positive
  3. Select `allow positive` to isolate export component
  4. Select `power to feed` and create a feed called **export** with the feed engine set to `PHPFina` and feed `interval=10s`
- 5. Select `ower to KWh`, create a feed called **export_KWh** with feed engine `PHPFina` and feed `interval=10s`
+ 5. Select `power to KWh`, create a feed called **export_KWh** with feed engine `PHPFina` and feed `interval=10s`
 
 ### {% linkable_title Configure MySolarPV App %}
 
@@ -153,8 +153,7 @@ The main view shows a moving window power view of solar generation Vs site-consu
 
 ### {% linkable_title My Solar history view %}
 
-Clicking on view history brings up a bargraph showing solar generation and site-consumption on a daily basis. Including how much of the solar generation is used directly on site and how much is exported.
+Clicking on view history brings up a bar graph showing solar generation and site-consumption on a daily basis. Including how much of the solar generation is used directly on site and how much is exported.
 
 
 ![My Solar PV app 1](/images/applications/solar-pv/my-solar-pv2.png)
-
