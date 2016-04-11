@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Add Energy Node - Guide | OpenEnergyMonitor</title>
+    <title>Connect - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="Add additional energy monitoring nodes">
+    <meta name="description" content="Connect to network & create account">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/getting-started/emontx/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/connect/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Add Energy Node">
+    <meta property="og:title" content="Connect">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/getting-started/emontx/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/connect/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Add additional energy monitoring nodes">
+    <meta property="og:description" content="Connect to network & create account">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Add Energy Node">
-    <meta name="twitter:description" content="Add additional energy monitoring nodes">
+    <meta name="twitter:title" content="Connect">
+    <meta name="twitter:description" content="Connect to network & create account">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -68,7 +68,8 @@
     <div class="grid__item three-tenths lap-two-sixths palm-one-whole ha-title">
   <a href="/" class="site-title">
     <!--<img width='40' src='/images/favicon-192x192.png'> -->
-    <span>Guide | OpenEnergyMonitor</span>
+    <!--<span>Guide | OpenEnergyMonitor</span>-->
+    <span>OpenEnergyMonitor Guide</span>
   </a>
 </div>
 
@@ -78,20 +79,6 @@
 <label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu"></label>
 <ul class="menu pull-right">
   <li>
-    <a>Getting started <i class="icon icon-caret-down"></i></a>
-    <ul>
-      <li><a href='/getting-started/'>Required Hardware</a></li>
-      <li><a href='/getting-started/connect/'>Connect</a></li>
-      <li><a href='/getting-started/local/'>Log Locally</a></li>
-      <li><a href='/getting-started/remote/'>Log Remotely</a></li>
-      <li><a href='/getting-started/dashboards/'>Dashboards</a></li>
-      <li><a href='/getting-started/emontx'>Add Energy Nodes</a></li>
-      <li><a href='/getting-started/emonth'>Add Temperature Nodes</a></li>
-      <li><a href='/getting-started/import'>Import / Backup</a></li>
-    </ul>
-  </li>
-  
-  <li>
     <a>Applications <i class="icon icon-caret-down"></i></a>
     <ul>
       <li><a href='/applications/home-energy'>Home Energy</a></li>
@@ -99,19 +86,38 @@
       <li><a href='/advanced/'>Advanced</a></li>
     </ul>
   </li>
+  
+  
+  
+  <li>
+    <a>Setup <i class="icon icon-caret-down"></i></a>
+    <ul>
+      <li><a href='/setup/'>Required Hardware</a></li>
+      <li><a href='/setup/connect/'>Connect</a></li>
+      <li><a href='/setup/local/'>Log Locally</a></li>
+      <li><a href='/setup/remote/'>Log Remotely</a></li>
+      <li><a href='/setup/dashboards/'>Dashboards</a></li>
+      <li><a href='/setup/emontx'>Add Energy Nodes</a></li>
+      <li><a href='/setup/emonth'>Add Temperature Nodes</a></li>
+      <li><a href='/setup/import'>Import / Backup</a></li>
+    </ul>
+  </li>
+  
 
   <li>
     <a>Technical <i class="icon icon-caret-down"></i></a>
     <ul>
       <li><a href="/technical/">Overview</a></li>
+      <li><a href="/technical/specifications">Specifications</a></li>
       <li><a href="/technical/api/">API</a></li>
+      <li><a href="/technical/mqtt">MQTT</a></li>
       <li><a href="/technical/software/">Software</a></li>
       <li><a href="/technical/hardware/">Hardware</a></li>
-      <li><a href="/technical/website/">Website</a></li>
     </ul>
   </li>
   <li><a href="http://openenergymonitor.blogspot.com">Blog</a></li>
   <li><a href="/help/">Need help?</a></li>
+  <li><a href="/about/">About</a></li>
 </ul>
   </nav>
 </div>
@@ -130,29 +136,101 @@
 
           <article class="page">
   
-  <div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/blob/master/source/getting-started/emontx.markdown'>Edit on GitHub Prose</a></div>
+  <div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/blob/master/source/setup/connect.markdown'>Edit on GitHub Prose</a></div>
 
   
   <header>
     <h1 class="title indent">
-      Add Energy Node
+      Connect
     </h1>
   </header>
   <hr class="divider">
   
 
-  <h3 id="laquo-previous-step-dashboardsgetting-starteddashboards"><a href="/getting-started/dashboards/">« Previous step: Dashboards</a></h3>
+  <h3 id="laquo-previous-step-required-hardwaresetup"><a href="/setup/">« Previous step: Required Hardware</a></h3>
 
-<h2 id="add-additional-energy-monitoring-nodes">Add additional energy monitoring nodes</h2>
+<h2 id="first-boot">First Boot</h2>
 
-<h3 id="emontx">emonTx</h3>
+<h3 id="create-local-emoncms-account">Create Local Emoncms account</h3>
+
+<p>By default Emoncms data logging app runs locally on the emonPi’s web sever. Data can be logged locally to the emonPi’s SD card and (optionally) posted remotly to Emoncms.org cloud server.</p>
+
+<p>The first step is to create an account with <strong>local Emoncms</strong>.</p>
+
+<p class="note">
+Emoncms local: Emoncms instance running locally on the emonPi
+<br />
+Emoncms remote: Emoncms.org cloud server.
+</p>
 
 <ol>
-  <li>Step 1</li>
-  <li>Step 2</li>
+  <li><strong>Connect the Ethernet and 5V USB power</strong>
+    <ul>
+      <li><a href="http://shop.openenergymonitor.com/power-supplies/">1.2A USB power adapter recommended</a></li>
+      <li><img src="/images/setup/emonpi-ethernet_first_boot.png" alt="emonPi First Boot Etherent" /></li>
+      <li>
+        <p class="note warning"> Take care to connect Ethernet to the socket on the same side as the USB sockets, NOT the RJ45 connecter on the opposite side.</p>
+      </li>
+      <li>The emonPi LCD display will start by cycling through information about what is connected to it. Once the Raspberry Pi has booted up, the LCD will display the IP address of the emonPi on your local network.</li>
+      <li><img src="/images/setup/etherent_Connected.jpg" alt="Etherent Connected" /></li>
+    </ul>
+  </li>
+  <li><strong>Enter emonPi IP Address in your web browser address bar</strong>
+    <ul>
+      <li>(Browsing the hostname will work on some networks: <a href="http://emonpi">http://emonpi</a>)</li>
+      <li><em>If using an emonBase, you will need to look at your router’s IP address table or use a tool such as Fing Network Discovery to find the emonBase IP address, if browsing to the hostname does not work.</em></li>
+    </ul>
+  </li>
+  <li><strong>Create Emoncms local user account</strong>
+    <ul>
+      <li><img src="/images/setup/Emoncms_reg.png" alt="Emoncms create account" /></li>
+      <li>
+        <p class="note"> By default only a single (admin) account can be created on local emonPi Emoncms. To enable multiple accounts edit Emoncms settings in `/var/www/emoncms/settings.php` </p>
+      </li>
+    </ul>
+  </li>
 </ol>
 
-<h3 id="next-step-add-temperature-nodes-raquogetting-startedemonth"><a href="/getting-started/emonth/">Next step: Add Temperature Nodes »</a></h3>
+<h3 id="connect-to-wifi-optional">Connect to WiFi (optional)</h3>
+
+<p>WiFi is optional and requires either a RaspberryPi3 (integrated WiFi) or a USB WiFi dongle (<a href="http://shop.openenergymonitor.com/edimax-usb-wifi-adapter-ew-7811un/">Edimax EW7811UN</a>).</p>
+
+<ol>
+  <li>Wifi config in <em>local Emoncms</em> : <code class="highlighter-rouge">Setup &gt; Wi-Fi</code>
+    <ul>
+      <li><img src="/images/setup/wifi9_0.png" alt="Connect to Wifi" /></li>
+      <li>Network scan should happen automatically.</li>
+    </ul>
+  </li>
+</ol>
+
+<p>2.) Check the box to select the network(s) you want to connect to</p>
+
+<p>3.) Enter PSK password</p>
+
+<p>4.) Hit <code class="highlighter-rouge">Save and Connect</code></p>
+
+<p>After a few seconds info should refresh automatically to report <code class="highlighter-rouge">Status: Connected</code> and after a few more seconds IP address should appear.</p>
+
+<h3 id="update">Update</h3>
+
+<p><strong>UPDATE HIGHLY RECOMMENDED:</strong> Now your emonPi is connected to a network this would be a good time to pull in any new updates: <code class="highlighter-rouge">Setup &gt; Admin &gt; Update</code></p>
+
+<h3 id="shutdown">Shutdown</h3>
+
+<p>Shutdown emonPi by press-and-holding the shutdown button on the side, with a paper clip for 5 seconds then waiting 30s for unit to fully shutdown.</p>
+
+<p><img src="/images/setup/emonPi_shutdown.png" alt="emonPi Shutdown" /></p>
+
+<p class="note warning">
+Unplugging power from the emonPi without properly shutting down can result in a corrupted SD card.
+</p>
+
+<div class="videoWrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/77WEj9Q6JEE" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="next-step-log-locally-raquosetuplocal"><a href="/setup/local/">Next step: Log Locally »</a></h3>
 
 
 </article>
@@ -198,7 +276,7 @@
     <div class="grid__item">
       <div class="copyright">
   <a rel="me" href='https://twitter.com/openenergymon'><i class="icon-twitter"></i></a>
-  <a rel="me" href='https://github.com/openenergymonitor'><i class="icon-github"></i></a>
+  <a rel="me" href='https://github.com/openenergymonitor/guide'><i class="icon-github"></i></a>
 
   <div class="credit">
     Website powered by <a href='http://jekyllrb.com/'>Jekyll</a> and the <a href='https://github.com/coogie/oscailte'>Oscalite theme</a>.<br />
