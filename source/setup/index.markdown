@@ -18,12 +18,9 @@ footer: true
 <label class='menu-selector solarpv' for='solar-pv-hardware'>Solar PV</label>
 <label class='menu-selector temperature' for='temperature-hardware'>Temperature</label>
 
-
 <div class='install-instructions energy' markdown='1'>
+### {% linkable_title Home energy hardware %}
 
-### {% linkable_title Home Energy Hardware %}
-
-</div> <!-- Home energy hardware -->
 
 Home energy monitoring requires:
 
@@ -74,14 +71,14 @@ An emonTx can be powered by 3 x AA batteries, however it's recomend if possible 
 
 
 
+
+
+</div> <!-- END HOME ENERGY -->
 <div class='install-instructions solarpv' markdown='1'>
+### {% linkable_title Solar PV hardware %}
 
 
-### {% linkable_title Solar PV Hardware %}
 
-</div><!-- Solar PV hardware -->
-
-# NEED ILLUSTRATION
 
 Solar PV monitoring requires:
 
@@ -130,15 +127,17 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
  -  More involved than emonPi since there is no LCD screen to display local IP address or shut-down button
  -  Knowledge of SSH is essential
 
-</div>
 
+
+
+
+</div> <!-- END SOLAR PV -->
 <div class='install-instructions temperature' markdown='1'>
-
-
-
 ### {% linkable_title Temperature Hardware %}
 
-</div> <!-- temperature hardware-->
+
+
+
 
 Temperature monitoring is using digital DS18B20 temperature sensors connected to emonPi, emonTx or emonTH.
 
@@ -152,8 +151,16 @@ The emonTH is a dedicated wireless temperature & humidity monitoring room node.
 
 
 
-### {% linkable_title Comparison Table %}
 
+
+</div> <!-- END TEMP -->
+
+
+</div>
+
+
+
+### {% linkable_title Comparison Table%}
 
 |                                    | emonPi  | emonBase  | emonTx  | emonTH |
 |---|---|---|---|---|
@@ -178,4 +185,4 @@ The emonTH is a dedicated wireless temperature & humidity monitoring room node.
 The emonPi and emonTx are designed to monitor single phase AC up to 100A. The system can work for some set-ups in USA with slightly different config. Users in North America should consult the Building Blocks guide ['emonTx - Use in North America'](http://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) and forum thread discussions [[1]](http://openenergymonitor.org/emon/node/711) [[2]](http://openenergymonitor.org/emon/node/3265).
 
 
-### [Next step: Connect &raquo;](/setup/connect/)
+### [Next step: Connect &raquo;](/getting-started/connect/)
