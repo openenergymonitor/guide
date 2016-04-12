@@ -227,15 +227,6 @@ For automatic MySolarPV App setup use the suggested feed names in **bold**. The 
   <li>Select power to KWh, create a feed called <strong>solar_KWh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
 </ol>
 
-<p><strong>Calculated export:</strong></p>
-
-<ol>
-  <li>Use the <code class="highlighter-rouge">- input</code> input processor to subtract site-consumption from solar generation in order to calculate export as positive (import will be negative).</li>
-  <li>Use <code class="highlighter-rouge">allow positive</code> in order to isolate the export component</li>
-  <li>Select <code class="highlighter-rouge">log to feed</code> and create a feed called <strong>export</strong> with the feed engine set to <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
-  <li>Select <code class="highlighter-rouge">power to KWh</code>, create a feed called <strong>export_KWh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
-</ol>
-
 <p><strong>Setup site-consumption Feed</strong></p>
 
 <p><em>Assuming CT2 (power 2) = site-consumption</em></p>
@@ -246,7 +237,16 @@ For automatic MySolarPV App setup use the suggested feed names in **bold**. The 
   <li>Select <code class="highlighter-rouge">power to KWh</code>, create a feed called <strong>use_KWh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code>.</li>
 </ol>
 
-<p>Once complete click on <code class="highlighter-rouge">Apps &gt; MySolarPV</code> in order to launch the MySolarPV Emoncms app, If you decide to use custom feed names the app will give you the option to select your solar, use and export feeds.</p>
+<p><strong>Calculated grid import:</strong></p>
+
+<ol>
+  <li>Use the <code class="highlighter-rouge">- input</code> input processor to subtract solar generation from site consumption in order to calculate import as positive (export will be negative).</li>
+  <li>Use <code class="highlighter-rouge">allow positive</code> in order to isolate the import component</li>
+  <li>Select <code class="highlighter-rouge">log to feed</code> and create a feed called <strong>import</strong> with the feed engine set to <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
+  <li>Select <code class="highlighter-rouge">power to KWh</code>, create a feed called <strong>import_KWh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
+</ol>
+
+<p>Once complete click on <code class="highlighter-rouge">Apps &gt; MySolarPV</code> in order to launch the MySolarPV Emoncms app, If you decide to use custom feed names the app will give you the option to select your solar, use and import feeds.</p>
 
 <h4 id="a-classtitle-link-nametype-2-system-setup-hreftype-2-system-setupa-type-2-system-setup"><a class="title-link" name="type-2-system-setup" href="#type-2-system-setup"></a> Type 2 System Setup</h4>
 
@@ -280,10 +280,9 @@ For automatic MySolarPV App setup use the suggested feed names in **bold**. The 
 
 <ol>
   <li>Click on spanner icon to configure <code class="highlighter-rouge">emonPi/power2</code></li>
-  <li>Multiply <code class="highlighter-rouge">x</code> by <code class="highlighter-rouge">-1</code> to make export positive</li>
-  <li>Select <code class="highlighter-rouge">allow positive</code> to isolate export component</li>
-  <li>Select <code class="highlighter-rouge">power to feed</code> and create a feed called <strong>export</strong> with the feed engine set to <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
-  <li>Select <code class="highlighter-rouge">power to KWh</code>, create a feed called <strong>export_KWh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
+  <li>Select <code class="highlighter-rouge">allow positive</code> to isolate import component</li>
+  <li>Select <code class="highlighter-rouge">power to feed</code> and create a feed called <strong>import</strong> with the feed engine set to <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
+  <li>Select <code class="highlighter-rouge">power to KWh</code>, create a feed called <strong>import_KWh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
 </ol>
 
 <h3 id="a-classtitle-link-nameconfigure-mysolarpv-app-hrefconfigure-mysolarpv-appa-configure-mysolarpv-app"><a class="title-link" name="configure-mysolarpv-app" href="#configure-mysolarpv-app"></a> Configure MySolarPV App</h3>
