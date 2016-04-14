@@ -36,7 +36,7 @@ footer: true
 - Optional add-on if more then two circuits need to be monitored or if WiFi / Ethernet connectivity is not available at utility meter.
 - RF Range is approximately similar to home WiFi and can be affected by obstacles e.g. thick stone walls
 - Up to 4 x emonTx can be connected to a single emonPi
-- To connect an emonTx see: [Setup > Adding Energy Monitoring Node](/setup/emontx
+- To connect an emonTx see: [Setup > Adding Energy Monitoring Node](/setup/emontx)
 
 <p class='note'>
 An emonTx can be powered by 3 x AA batteries, however it's recomend if possible to power via AC-AC adapter to provide AC voltage reference for more accurate Real Power and VRMS calculations.
@@ -89,7 +89,7 @@ An emonTx can be powered by 3 x AA batteries, however it's recomend if possible 
 - Required if solar PV generation and site-consumption feeds are located in separate locations or if WiFi / Ethernet connectivity is not available at utility meter
 - RF range is approximately similar to home WiFi and can be affected by obstacles e.g. thick stone walls
 - Up to 4 x emonTx can be connected to a single emonPi
-- To connect an emonTx see: [Setup > Adding Energy Monitoring Node](/setup/emontx
+- To connect an emonTx see: [Setup > Adding Energy Monitoring Node](/setup/emontx)
 
 <p class='note'>
 An emonTx can be powered by 3 x AA batteries, however this is not recommended for solar PV monitoring application since sensor adapter is require to determine direction of current flow and accurate VRMS & Real Power calculations.
