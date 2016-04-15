@@ -50,11 +50,11 @@ The Emoncms setup instructions below are applicable to both the emonPi and the e
 Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off, prior to installing your sensors, and proceeding slowly with care. If you have any doubts, seek professional assistance.
 </p>
 
-![CT sensor installation ](/images/applications/solar-pv/ctinstall.jpg)
-
 <p class='note'>
 The clip-on CT sensors must be clipped round either the live or Neutral AC wire. Not both.
 </p>
+
+![CT sensor installation ](/images/applications/solar-pv/ctinstall.jpg)
 
 # **NEED INSTALLATION IMAGE HERE**
 
