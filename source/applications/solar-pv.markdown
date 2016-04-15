@@ -11,9 +11,9 @@ published: true
 ---
 
 
-The OpenEnergyMonitor Solar Photovoltaic (PV) monitor is a tool to help you make the most of your solar generation.
+The OpenEnergyMonitor Solar PV monitor is a tool to help you make the most of your solar generation.
 
-Providing real-time and historic information on your solar generation and demand matching, helping you increase utilisation of your available solar power.
+Providing real-time and historic information on your solar generation and demand matching, it will help you better utilise your available solar power.
 
 MySolar PV is a dashboard app which runs on [Emoncms](https://Emoncms.org).
 
@@ -24,7 +24,7 @@ MySolar PV is a dashboard app which runs on [Emoncms](https://Emoncms.org).
  - Solar PV generation
  - Site-consumption
  - Solar PV generation used on-site (self-site-consumption)
- - Solar PV generation exported
+ - Solar PV generation exported to the grid
  - Electricity imported from the grid
  - Real-time & historic daily, monthly and annual totals
  
@@ -32,7 +32,7 @@ MySolar PV is a dashboard app which runs on [Emoncms](https://Emoncms.org).
 
  1. Required Hardware
  2. Sensor Installation
- 3. Emoncms Feed setup
+ 3. Emoncms Feed Setup
  4. Emoncms MySolarPV App
  
 ### Required Hardware
