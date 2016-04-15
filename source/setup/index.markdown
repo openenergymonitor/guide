@@ -1,12 +1,13 @@
 ---
 layout: page
-title: "Required Hardware"
-description: "Getting started with OpenEnergyMonitor"
-date: 2014-12-18 22:57
+title: Required Hardware
+description: Getting started with OpenEnergyMonitor
+date: "2014-12-18 22:57"
 sidebar: true
 comments: false
 sharing: false
 footer: true
+published: true
 ---
 
 <div class='install-instructions-container' markdown='0'>
@@ -177,4 +178,4 @@ The emonTH is a dedicated wireless temperature & humidity monitoring room node.
 The emonPi and emonTx are designed to monitor single phase AC up to 100A. The system can work for some set-ups in USA with slightly different config. Users in North America should consult the Building Blocks guide ['emonTx - Use in North America'](http://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) and forum thread discussions [[1]](http://openenergymonitor.org/emon/node/711) [[2]](http://openenergymonitor.org/emon/node/3265).
 
 
-### [Next step: Connect &raquo;](/getting-started/connect/)
+### [Next step: Connect &raquo;](/setup/connect/)
