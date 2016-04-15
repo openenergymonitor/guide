@@ -31,12 +31,11 @@ Emoncms remote: Emoncms.org cloud server.
   - ![emonPi First Boot Etherent](/images/setup/emonpi_ethernet_first_boot.png)
   - <p class='note warning'> Take care to connect Ethernet to the socket on the same side as the USB sockets, NOT the RJ45 connecter on the opposite side.</p>
   - The emonPi LCD display will start by cycling through information about what is connected to it. Once the Raspberry Pi has booted up, the LCD will display the IP address of the emonPi on your local network.
- - ![Etherent Connected](/images/setup/etherent_Connected.jpg)
+ - ![Etherent Connected](/images/setup/Etherent_Connected.jpg)
 
 
 2. **Enter emonPi IP Address in your web browser address bar**
 - (Browsing the hostname will work on some networks: [http://emonpi](http://emonpi))
-- ![emonPi IP](/images/setup/Etherent_Connected.jpg)
  - *If using an emonBase, you will need to look at your router's IP address table or use a tool such as Fing Network Discovery to find the emonBase IP address, if browsing to the hostname does not work.*
 
 
@@ -49,7 +48,7 @@ Emoncms remote: Emoncms.org cloud server.
 WiFi is optional and requires either a RaspberryPi3 (integrated WiFi) or a USB WiFi dongle ([Edimax EW7811UN](http://shop.openenergymonitor.com/edimax-usb-wifi-adapter-ew-7811un/)).
 
 1. Wifi config in *local Emoncms* : `Setup > Wi-Fi`
- - ![Connect to Wifi](/images/setup/wifi-config.png)
+ - ![Connect to Wifi](/images/setup/wifi9_0.png)
  - Network scan should happen automatically.
 
 2.) Check the box to select the network(s) you want to connect to
