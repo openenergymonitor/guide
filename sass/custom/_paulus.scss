@@ -2,10 +2,10 @@
 
 .hero {
   background-color: #038FC7;
-  padding-bottom: 0;
+  padding-bottom: 20px;
 
   .lead {
-    margin-bottom: 16px;
+    margin-bottom: 36px;
   }
 
   .hero-buttons a {
@@ -38,9 +38,9 @@
   img {
     border: none !important;
     box-shadow: none !important;
-    max-height: 50px;
-    max-width: 140px;
-    margin: 10px;
+    max-height: 178px;
+    //max-width: 140px;
+    margin: 0px;
     vertical-align: middle;
   }
 }
@@ -183,7 +183,7 @@ p.note {
     background-color: #F7F9E1;
 
     &::before {
-      background-color: rgb(288, 87, 53);
+      background-color: rgb(288, 87, 53);;
       content: "\f071" " Warning " attr(data-title);
     }
   }
