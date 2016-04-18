@@ -158,7 +158,7 @@ The emonTH is a dedicated wireless temperature & humidity monitoring room node.
 |                                    | emonPi  | emonBase  | emonTx  | emonTH |
 |---|---|---|---|---|
 | Main purpose                      | All-in-one energy monitor & gateway| Web-connected gateway | Energy monitor add-on | Temperature & Humidity room node |
-| No. CT sensor inputs               |  1  |    0      |    4    |    0   |
+| No. CT sensor inputs               |  2  |    0      |    4    |    0   |
 | No. of voltage sensor inputs       |  1  |    0      |    1    |    0   |
 | No. of pulse counting inputs       |  1 - via RJ45 |    0      |    1 - via RJ45   |    1 -  via terminal block*  |
 | No. of temperature sensor inputs   |  6 - via RJ45** |    0      |    6 - via RJ45**   |    2 - internal + external  |
