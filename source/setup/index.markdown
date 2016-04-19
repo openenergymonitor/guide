@@ -22,7 +22,6 @@ published: true
 <div class='install-instructions energy' markdown='1'>
 
 <br>
-<br>
 
 ### {% linkable_title Home Energy Hardware %}
 
