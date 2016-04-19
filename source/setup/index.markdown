@@ -23,6 +23,7 @@ published: true
 ### {% linkable_title Home Energy Hardware %}
 
 ___
+___
 
 #### **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
@@ -42,6 +43,8 @@ ___
 
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
  - *1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/power-supplies/) (if using emonTx, optional but highly recommended)*
+ 
+___
 
 #### Advanced
 
@@ -80,6 +83,7 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 ## {% linkable_title Solar PV Hardware %}
 
 ___
+___
 
 ### **[emonPi](https://shop.openenergymonitor.com/emonpi-solar-pv/)**
 
@@ -113,6 +117,8 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 
  - 1 x USB 5V DC PSU
  - *1 x AC-AC voltage sensor adapter (if using emonTx)*
+ 
+___
 
 #### Advanced
 
