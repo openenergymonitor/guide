@@ -27,14 +27,14 @@ MySolar PV is a dashboard app which runs on [Emoncms](https://Emoncms.org).
  - Solar PV generation exported to the grid
  - Electricity imported from the grid
  - Real-time & historic daily, monthly and annual totals
- 
+
 ### Contents
 
  1. Required Hardware
  2. Sensor Installation
  3. Emoncms Feed Setup
  4. Emoncms MySolarPV App
- 
+
 ### Required Hardware
 
 See Solar PV tab of [Setup > Required Hardware](/setup/)
@@ -87,7 +87,7 @@ For automatic MySolarPV App setup use the suggested feed names in **bold**. The 
  1. Click on spanner icon to configure `emonPi/power1`.
  2. Select `log to feed` and create a feed called **solar** with the feed engine set to `PHPFina` and feed `interval=10s`
  3. Select `power to kwh`, create a feed called **solar_kwh** with feed engine `PHPFina` and feed `interval=10s`
- 
+
 **Setup site-consumption Feed**
 
 *Assuming CT2 (power 2) = site-consumption*
@@ -95,7 +95,7 @@ For automatic MySolarPV App setup use the suggested feed names in **bold**. The 
  1. Click on spanner icon to configure `emonPi/power2`.
  2. Select `log to feed` and create a feed called **use** with the feed engine set to PHPFina and feed `interval=10s`.
  3. Select `power to kwh`, create a feed called **use_kwh** with feed engine `PHPFina` and feed `interval=10s`.
- 
+
 **Calculated grid import:**
 
  1. Use the `- input` input processor to subtract solar generation from site consumption in order to calculate import as positive (export will be negative).
@@ -144,17 +144,16 @@ Alternatively the MySolar app will automatically show the configuration screen i
 
 Once the required feeds are selected, the Launch App button will appear.
 
-![My Solar PV app config](/images/applications/solar-pv/my-solarpv-config.png)
+{% img /images/applications/solar-pv/my-solarpv-config.png 800 %}
 
 ### {% linkable_title Configure My Solar App power view %}
 
 The main view shows a moving window power view of solar generation Vs site-consumption which, can be used to explore matching at any given moment of the day. Site-consumption is shown in blue and solar generation in yellow. The totals at the bottom of the page relate to the current window selected and show at a glance how much of site-consumption was supplied directly from solar and how much of the solar generation was exported to the grid.
 
-![My Solar PV app 2](/images/applications/solar-pv/my-solar-pv2.png)
+{% img /images/applications/solar-pv//my-solarpv1.png 500 %}
 
 ### {% linkable_title My Solar history view %}
 
 Clicking on view history brings up a bar graph showing solar generation and site-consumption on a daily basis. Including how much of the solar generation is used directly on site and how much is exported.
 
-
-![My Solar PV app 1](/images/applications/solar-pv/my-solar-pv2.png)
+{% img /images/applications/solar-pv//my-solar-pv2.png 500 %}
