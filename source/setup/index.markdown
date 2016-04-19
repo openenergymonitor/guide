@@ -26,12 +26,10 @@ ___
 
 **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
-- Raspberry Pi&trade;-based energy monitor
+- Raspberry Pi-based energy monitor
 - Install next to utility meter
 - Local & Remote Emoncms data logging
 - Requires WiFi / Ethernet and 2 x power outlets
-
-  *Raspberry Pi is a trademark of the [Raspberry Pi Foundation](https://www.raspberrypi.org/about/)*
 
 ### Sensors
 
