@@ -114,8 +114,7 @@
       <li><a href="/technical/hardware/">Hardware</a></li>
     </ul>
   </li>
-  <li><a href="http://openenergymonitor.blogspot.com">Blog</a></li>
-  <li><a href="/help/">Need help?</a></li>
+  <li><a href="/help/">Help</a></li>
   <li><a href="/about/">About</a></li>
 </ul>
   </nav>
@@ -186,13 +185,13 @@ Emoncms remote&gt; Emoncms.org cloud server.
   </li>
   <li><strong>Enter emonPi IP Address in your web browser address bar</strong>
     <ul>
-      <li>(Browsing the hostname will work on some networks: <a href="http://emonpi">http://emonpi</a>)</li>
-      <li><em>If using an emonBase, you will need to look at your router’s IP address table or use a tool such as Fing Network Discovery to find the emonBase IP address, if browsing to the hostname does not work.</em></li>
+      <li>Browsing the hostname will work on some networks: <a href="http://emonpi">http://emonpi</a></li>
+      <li><em>If using an emonBase and hostname does not work, lookup it’s IP address from your router or use Fing Network Discovery tool on <a href="https://play.google.com/store/apps/details?id=com.overlook.android.fing&amp;hl=en_GB">Android</a> and <a href="https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8">iOS</a></em>.</li>
     </ul>
   </li>
   <li><strong>Create Emoncms local user account</strong>
     <ul>
-      <li><img src="/images/setup/Emoncms_reg.png" alt="Emoncms create account" /></li>
+      <li><img src="/images/setup/Emoncms_reg.png" width="300" /></li>
       <li>Note: By default only a single (admin) account can be created on local emonPi Emoncms. To enable multiple accounts edit Emoncms settings in <code class="highlighter-rouge">/var/www/emoncms/settings.php</code></li>
     </ul>
   </li>
@@ -227,17 +226,20 @@ Emoncms remote&gt; Emoncms.org cloud server.
 
 <p>Shutdown emonPi by press-and-holding the shutdown button on the side, with a paper clip for 5 seconds then waiting 30s for unit to fully shutdown.</p>
 
-<p><img src="/images/setup/emonPi_shutdown.png" alt="emonPi Shutdown" /></p>
+<p><img src="/images/setup/emonPi_shutdown.png" width="400" /></p>
 
 <p class="note warning">
 Unplugging power from the emonPi without properly shutting down can result in a corrupted SD card.
 </p>
 
+<p>The emonPi is now ready to be physically installed.</p>
+
+<h3 id="next-step-install-raquosetupinstall"><a href="/setup/install/">Next step: Install »</a></h3>
+
+<h3 id="video-guide">Video Guide</h3>
 <div class="videoWrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/77WEj9Q6JEE" frameborder="0" allowfullscreen=""></iframe>
 </div>
-
-<h3 id="next-step-log-locally-raquosetuplocal"><a href="/setup/local/">Next step: Log Locally »</a></h3>
 
 
 </article>
