@@ -31,8 +31,7 @@ ___
 - Local & Remote Emoncms data logging
 - Requires WiFi / Ethernet plus 2 x power outlets
 
-<p><small>*Raspberry Pi is a trademark of the [Raspberry Pi Foundation](https://www.raspberrypi.org/about/)*</small></p>
-
+<p><small>Raspberry Pi&reg; is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
 ### Sensors
 
