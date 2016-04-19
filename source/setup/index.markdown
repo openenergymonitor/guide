@@ -20,9 +20,13 @@ published: true
 <label class='menu-selector temperature' for='temperature-hardware'>Temperature</label>
 
 <div class='install-instructions energy' markdown='1'>
+
+<br>
+<br>
+
 ### {% linkable_title Home Energy Hardware %}
 
-<hr>
+___
 
 #### **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
@@ -43,10 +47,12 @@ published: true
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
  - *1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/power-supplies/) (if using emonTx, optional but highly recommended)*
  
-___
+<br>
+<br>
 
 #### Advanced
 
+___
 
 #### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
 
@@ -79,12 +85,12 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 </div> <!-- END HOME ENERGY -->
 <div class='install-instructions solarpv' markdown='1'>
-## {% linkable_title Solar PV Hardware %}
+### {% linkable_title Solar PV Hardware %}
 
 ___
 ___
 
-### **[emonPi](https://shop.openenergymonitor.com/emonpi-solar-pv/)**
+#### **[emonPi](https://shop.openenergymonitor.com/emonpi-solar-pv/)**
 
 - Raspberry Pi-based energy monitor
 - Install next to utility meter
