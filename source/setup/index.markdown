@@ -20,13 +20,13 @@ published: true
 <label class='menu-selector temperature' for='temperature-hardware'>Temperature</label>
 
 <div class='install-instructions energy' markdown='1'>
-## {% linkable_title Home Energy Hardware %}
+### {% linkable_title Home Energy Hardware %}
 
 ___
 
 #### **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
-- Raspberry Pi based energy monitor
+- Raspberry Pi-based energy monitor
 - Install next to utility meter
 - Local & Remote Emoncms data logging
 - Requires WiFi / Ethernet plus 2 x power outlets
@@ -61,7 +61,7 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 #### **emonBase**
 
- -  Web connected gateway: Raspberry Pi&reg; + RFM69Pi RF receiver board
+ -  Web connected gateway: Raspberry Pi + RFM69Pi RF receiver board
  -  Lower cost option if using an emonTx is to use an emonBase instead of an emonPi
  -  No on-board energy monitoring functions
  -  Receive data via low power RF (433Mhz) from emonTx or emonTH
@@ -70,7 +70,7 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
  -  More involved than emonPi since there is no LCD screen to display local IP address or shut-down button
  -  Knowledge of SSH is essential
 
-<p><small>Raspberry Pi&reg; is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
+<p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
 
 
@@ -81,15 +81,15 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 ___
 
-## **[emonPi](https://shop.openenergymonitor.com/emonpi-solar-pv/)**
+### **[emonPi](https://shop.openenergymonitor.com/emonpi-solar-pv/)**
 
-- Raspberry Pi&reg; based energy monitor
+- Raspberry Pi-based energy monitor
 - Install next to utility meter
 - Local & Remote Emoncms data logging
 - Requires WiFi / Ethernet plus 2 x power outlets
 - Single unit required to monitor solar PV, provided the generation and site-consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accessible at this location
 
-<p><small>Raspberry Pi&reg; is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
+<p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
 #### **emonTx (optional)**
 
@@ -118,7 +118,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 
 ####**emonBase**
 
- -  Web connected gateway: Raspberry Pi&reg; + RFM69Pi RF receiver board
+ -  Web connected gateway: Raspberry Pi + RFM69Pi RF receiver board
  -  Lower cost option if using an emonTx is to use an emonBase instead of an emonPi
  -  No on-board energy monitoring functions
  -  Receive data via low power RF (433Mhz) from emonTx or emonTH
@@ -127,7 +127,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
  -  More involved than emonPi since there is no LCD screen to display local IP address or shut-down button
  -  Knowledge of SSH is essential
 
-<p><small>Raspberry Pi&reg; is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
+<p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
 
 
