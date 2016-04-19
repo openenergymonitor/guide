@@ -8,9 +8,12 @@ comments: false
 sharing: true
 footer: true
 ---
-See links below to Emoncms API docs.
+## Emoncms API docs
 
-These APIs will work for both remote Emoncms [(Emoncms.org)](https://emoncms.org) and local Emoncms. Just replace 'emoncms.org' with '<EMONPI_LOCAL_IP_ADDDRESS>/emoncms':
+The  API is the same for remote [Emoncms.org](https://emoncms.org) and local Emoncms (running on emonPi).
 
-[Emoncms Input API](https://emoncms.org/site/api#input)
-[Emoncms Input API](https://emoncms.org/site/api#feed)
+Just replace `emoncms.org` with `<EMONPI_LOCAL_IP_ADDDRESS>/emoncms`.
+
+## [Emoncms Input API](https://emoncms.org/site/api#input)
+
+## [Emoncms Feed API](https://emoncms.org/site/api#feed)

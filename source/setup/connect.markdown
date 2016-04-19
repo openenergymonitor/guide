@@ -14,24 +14,31 @@ published: true
 
 ##  First Boot
 
+**This guide assumes using emonPi / emonBase pre-built SD card.**
+
+This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/pre-loaded-emonsd-microsd-card-for-raspberry-pi/) or downloaded:
+
+- [Pre-build SD card download & Change Log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log)
+- [Instructions to flash image to SD card (RaspberryPi)](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
+
 ### Create Local Emoncms account
 
-By default Emoncms data logging app runs locally on the emonPi's web sever. Data can be logged locally to the emonPi's SD card and (optionally) posted remotly to Emoncms.org cloud server.
+By default Emoncms data logging app runs locally on the emonPi's web sever. Data can be logged locally to the emonPi's SD card and (optionally) posted remotely to [Emoncms.org](https://emoncms.org) cloud server.
 
 The first step is to create an account with **local Emoncms**.
 
 <p class="note">
-Emoncms local: Emoncms instance running locally on the emonPi
+Emoncms local> Emoncms instance running locally on the emonPi
 <br>
-Emoncms remote: Emoncms.org cloud server.
+Emoncms remote> Emoncms.org cloud server.
 </p>
 
 1. **Connect the Ethernet and 5V USB power**
   - [1.2A USB power adapter recommended](http://shop.openenergymonitor.com/power-supplies/)
   - ![emonPi First Boot Etherent](/images/setup/emonpi_ethernet_first_boot.png)
-  - <p class='note warning'> Take care to connect Ethernet to the socket on the same side as the USB sockets, NOT the RJ45 connecter on the opposite side.</p>
+  - <p class='note warning'> Take care to connect Ethernet to the socket on the same side as the USB sockets, NOT the RJ45 connector on the opposite side.</p>
   - The emonPi LCD display will start by cycling through information about what is connected to it. Once the Raspberry Pi has booted up, the LCD will display the IP address of the emonPi on your local network.
- - ![Etherent Connected](/images/setup/Etherent_Connected.jpg)
+ - ![Ethernet Connected](/images/setup/Etherent_Connected.jpg)
 
 
 2. **Enter emonPi IP Address in your web browser address bar**
