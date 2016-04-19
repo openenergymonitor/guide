@@ -22,7 +22,7 @@ published: true
 <div class='install-instructions energy' markdown='1'>
 ### {% linkable_title Home energy hardware %}
 
-**emonPi**
+**[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
 - Raspberry Pi based energy monitor
 - Install next to utility meter
@@ -31,13 +31,13 @@ published: true
 
 ### Sensors
 
- - 1 X Clip-on CT sensors
- - 1 x AC-AC voltage sensor adapter (optional but highly recommended)
+ - 1 X [Clip-on CT sensors](https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/)
+ - 1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/components/) (optional but highly recommended)
 
 ### Power Adapters
 
- - 1 x USB 5V DC PSU
- - *1 x AC-AC voltage sensor adapter (if using emonTx, optional but highly recommended)*
+ - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
+ - *1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/power-supplies/) (if using emonTx, optional but highly recommended)*
 
 ### Advanced
 
