@@ -22,8 +22,7 @@ published: true
 <div class='install-instructions energy' markdown='1'>
 ### {% linkable_title Home Energy Hardware %}
 
-___
-___
+<hr>
 
 #### **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
