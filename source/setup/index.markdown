@@ -20,7 +20,7 @@ published: true
 <label class='menu-selector temperature' for='temperature-hardware'>Temperature</label>
 
 <div class='install-instructions energy' markdown='1'>
-### {% linkable_title Home Energy Hardware %}
+## {% linkable_title Home Energy Hardware %}
 
 ___
 
@@ -77,7 +77,7 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 </div> <!-- END HOME ENERGY -->
 <div class='install-instructions solarpv' markdown='1'>
-### {% linkable_title Solar PV Hardware %}
+## {% linkable_title Solar PV Hardware %}
 
 ___
 
