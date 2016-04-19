@@ -22,6 +22,8 @@ published: true
 <div class='install-instructions energy' markdown='1'>
 ### {% linkable_title Home energy hardware %}
 
+___
+
 **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
 - Raspberry Pi-based energy monitor
@@ -73,6 +75,8 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 </div> <!-- END HOME ENERGY -->
 <div class='install-instructions solarpv' markdown='1'>
 ### {% linkable_title Solar PV hardware %}
+
+___
 
 **emonPi**
 
