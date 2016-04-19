@@ -24,7 +24,7 @@ published: true
 
 ___
 
-### **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
+#### **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
 - Raspberry Pi&reg; based energy monitor
 - Install next to utility meter
@@ -33,20 +33,20 @@ ___
 
 <p><small>Raspberry Pi&reg; is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
-### Sensors
+#### Sensors
 
  - 1 X [Clip-on CT sensors](https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/)
  - 1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/components/) (optional but highly recommended)
 
-### Power Adapters
+#### Power Adapters
 
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
  - *1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/power-supplies/) (if using emonTx, optional but highly recommended)*
 
-### Advanced
+#### Advanced
 
 
-**[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
+#### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
 
 - Energy monitoring add-on node
 - Optional add-on if more then two circuits need to be monitored or if WiFi / Ethernet connectivity is not available at utility meter.
@@ -59,7 +59,7 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 </p>
 
 
-**emonBase**
+#### **emonBase**
 
  -  Web connected gateway: Raspberry Pi&reg; + RFM69Pi RF receiver board
  -  Lower cost option if using an emonTx is to use an emonBase instead of an emonPi
@@ -81,7 +81,7 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 ___
 
-### **[emonPi](https://shop.openenergymonitor.com/emonpi-solar-pv/)**
+## **[emonPi](https://shop.openenergymonitor.com/emonpi-solar-pv/)**
 
 - Raspberry Pi&reg; based energy monitor
 - Install next to utility meter
@@ -91,7 +91,7 @@ ___
 
 <p><small>Raspberry Pi&reg; is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
-### **emonTx (optional)**
+#### **emonTx (optional)**
 
 - Energy monitoring add-on node
 - Required if solar PV generation and site-consumption feeds are located in separate locations or if WiFi / Ethernet connectivity is not available at utility meter
@@ -104,19 +104,19 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 </p>
 
 
-### Sensors
+#### Sensors
 
  - 2 X Clip-on CT sensors
  - 1 x AC-AC voltage sensor adapter
 
-### Power Adapters
+#### Power Adapters
 
  - 1 x USB 5V DC PSU
  - *1 x AC-AC voltage sensor adapter (if using emonTx)*
 
-### Advanced
+#### Advanced
 
-**emonBase**
+####**emonBase**
 
  -  Web connected gateway: Raspberry Pi&reg; + RFM69Pi RF receiver board
  -  Lower cost option if using an emonTx is to use an emonBase instead of an emonPi
