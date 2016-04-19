@@ -26,10 +26,13 @@ ___
 
 **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
-- Raspberry Pi-based energy monitor
+- Raspberry Pi&reg; based energy monitor
 - Install next to utility meter
 - Local & Remote Emoncms data logging
-- Requires WiFi / Ethernet and 2 x power outlets
+- Requires WiFi / Ethernet plus 2 x power outlets
+
+<p><small>*Raspberry Pi is a trademark of the [Raspberry Pi Foundation](https://www.raspberrypi.org/about/)*</small></p>
+
 
 ### Sensors
 
@@ -78,14 +81,15 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 ___
 
-**emonPi**
+**[emonPi](https://shop.openenergymonitor.com/emonpi-solar-pv/)**
 
-- Raspberry Pi-based energy monitor
+- Raspberry Pi&reg; based energy monitor
 - Install next to utility meter
 - Local & Remote Emoncms data logging
 - Requires WiFi / Ethernet plus 2 x power outlets
 - Single unit required to monitor solar PV, provided the generation and site-consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accessible at this location
 
+<p><small>*Raspberry Pi is a trademark of the [Raspberry Pi Foundation](https://www.raspberrypi.org/about/)*</small></p>
 
 **emonTx (optional)**
 
