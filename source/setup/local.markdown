@@ -11,16 +11,23 @@ footer: true
 
 ### [&laquo; Previous step: Connect](/setup/connect/)
 
+
 {% img /images/setup/local-log1.png 700 %}
+
 {% img /images/setup/local-log2.png 700 %}
+
 {% img /images/setup/local-log3.png 700 %}
+
 {% img /images/setup/local-log4.png 700 %}
+
 {% img /images/setup/local-log5.png 700 %}
+
 {% img /images/setup/local-log6.png 700 %}
 
-Log data locally to Emoncms running on emonPi web-server (internal SD card)
-
-  1. Step 1
-  2. Step 2
 
 ### [Next step: Log Remotely &raquo;](/setup/remote/)
+
+### Video Guide
+<div class='videoWrapper'>
+<iframe width="300" height="315" src="https://www.youtube.com/embed/8nVP0Hgkuuc" frameborder="0" allowfullscreen></iframe>
+</div>
