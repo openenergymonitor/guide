@@ -12,7 +12,7 @@ footer: true
 ### [&laquo; Previous step: Add Temperature Nodes](/setup/emonth/)
 
 <div class='videoWrapper'>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/77WEj9Q6JEE" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5U_tOlsWjXM" frameborder="0" allowfullscreen></iframe>
 
 
 ### &laquo; Next step: See Applications >
