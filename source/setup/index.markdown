@@ -26,12 +26,12 @@ ___
 
 #### **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
-- Raspberry Pi&reg; based energy monitor
+- Raspberry Pi based energy monitor
 - Install next to utility meter
 - Local & Remote Emoncms data logging
 - Requires WiFi / Ethernet plus 2 x power outlets
 
-<p><small>Raspberry Pi&reg; is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
+<p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
 #### Sensors
 
@@ -126,7 +126,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
  -  Runs same software stack as emonPi
  -  More involved than emonPi since there is no LCD screen to display local IP address or shut-down button
  -  Knowledge of SSH is essential
- 
+
 <p><small>Raspberry Pi&reg; is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
 
@@ -187,4 +187,4 @@ The emonTH is a dedicated wireless temperature & humidity monitoring room node.
 The emonPi and emonTx are designed to monitor single phase AC up to 100A. The system can work for some set-ups in USA with slightly different config. Users in North America should consult the Building Blocks guide ['emonTx - Use in North America'](http://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) and forum thread discussions [[1]](http://openenergymonitor.org/emon/node/711) [[2]](http://openenergymonitor.org/emon/node/3265).
 
 
-### [Next step: Connect &raquo;](/setup/connect/)
+### [Next step: Connect &raquo;](/setup/install/)

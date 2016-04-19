@@ -48,7 +48,7 @@ Emoncms remote> Emoncms.org cloud server.
 
 3. **Create Emoncms local user account**
   - ![Emoncms create account](/images/setup/Emoncms_reg.png)
-  - <p class='note'> By default only a single (admin) account can be created on local emonPi Emoncms. To enable multiple accounts edit Emoncms settings in `/var/www/emoncms/settings.php` </p>
+  - Note: By default only a single (admin) account can be created on local emonPi Emoncms. To enable multiple accounts edit Emoncms settings in `/var/www/emoncms/settings.php`
 
 ### Connect to WiFi (optional)
 
