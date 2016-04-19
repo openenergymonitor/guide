@@ -24,10 +24,10 @@ published: true
 
 **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
-- Raspberry Pi based energy monitor
+- Raspberry Pi-based energy monitor
 - Install next to utility meter
-- Local & Remote Emoncms logging
-- Requires WiFi / Ethernet plus 2 x power sockets
+- Local & Remote Emoncms data logging
+- Requires WiFi / Ethernet and 2 x power outlets
 
 ### Sensors
 
@@ -42,7 +42,7 @@ published: true
 ### Advanced
 
 
-**[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/) (optional)**
+**[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
 
 - Energy monitoring add-on node
 - Optional add-on if more then two circuits need to be monitored or if WiFi / Ethernet connectivity is not available at utility meter.
@@ -51,7 +51,7 @@ published: true
 - To connect an emonTx see: [Setup > Adding Energy Monitoring Node](/setup/emontx)
 
 <p class='note'>
-An emonTx can be powered by 3 x AA batteries, however it's recomend if possible to power via AC-AC adapter to provide AC voltage reference for more accurate Real Power and VRMS calculations.
+An emonTx can be powered by 3 x AA batteries; however, if possible, it is recommended to power the unit with an AC-AC adapter to provide an AC voltage reference for more accurate Real Power and VRMS calculations.
 </p>
 
 
@@ -76,11 +76,11 @@ An emonTx can be powered by 3 x AA batteries, however it's recomend if possible 
 
 **emonPi**
 
-- Raspberry Pi based energy monitor
+- Raspberry Pi-based energy monitor
 - Install next to utility meter
-- Local & Remote Emoncms logging
-- Requires WiFi / Ethernet plus 2 x power sockets
-- Single unit required to monitor solar PV if the generation and site-consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accessible at this location
+- Local & Remote Emoncms data logging
+- Requires WiFi / Ethernet plus 2 x power outlets
+- Single unit required to monitor solar PV, provided the generation and site-consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accessible at this location
 
 
 **emonTx (optional)**
