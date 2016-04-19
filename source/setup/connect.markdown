@@ -42,12 +42,12 @@ Emoncms remote> Emoncms.org cloud server.
 
 
 2. **Enter emonPi IP Address in your web browser address bar**
-- (Browsing the hostname will work on some networks: [http://emonpi](http://emonpi))
- - *If using an emonBase, you will need to look at your router's IP address table or use a tool such as Fing Network Discovery to find the emonBase IP address, if browsing to the hostname does not work.*
+- Browsing the hostname will work on some networks: [http://emonpi](http://emonpi)
+- *If using an emonBase and hostname does not work, lookup it's IP address from your router or use Fing Network Discovery tool on [Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en_GB) and [iOS](https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8)*.
 
 
 3. **Create Emoncms local user account**
-  - ![Emoncms create account](/images/setup/Emoncms_reg.png)
+  - {% img /images/setup/Emoncms_reg.png 300 %}
   - Note: By default only a single (admin) account can be created on local emonPi Emoncms. To enable multiple accounts edit Emoncms settings in `/var/www/emoncms/settings.php`
 
 ### Connect to WiFi (optional)
@@ -74,15 +74,17 @@ After a few seconds info should refresh automatically to report `Status: Connect
 
 Shutdown emonPi by press-and-holding the shutdown button on the side, with a paper clip for 5 seconds then waiting 30s for unit to fully shutdown.
 
-![emonPi Shutdown](/images/setup/emonPi_shutdown.png)
+{% img /images/setup/emonPi_shutdown.png 400 %}
 
 <p class='note warning'>
 Unplugging power from the emonPi without properly shutting down can result in a corrupted SD card.
 </p>
 
+The emonPi is now ready to be physically installed.
+
+### [Next step: Install &raquo;](/setup/install/)
+
+### Video Guide
 <div class='videoWrapper'>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/77WEj9Q6JEE" frameborder="0" allowfullscreen></iframe>
 </div>
-
-
-### [Next step: Log Locally &raquo;](/setup/local/)
