@@ -158,8 +158,6 @@
 
 <div class="install-instructions energy">
 
-    <p><br /></p>
-
     <h3 id="a-classtitle-link-namehome-energy-hardware-hrefhome-energy-hardwarea-home-energy-hardware"><a class="title-link" name="home-energy-hardware" href="#home-energy-hardware"></a> Home Energy Hardware</h3>
 
     <hr />
@@ -178,7 +176,7 @@
     <h4 id="sensors">Sensors:</h4>
 
     <ul>
-      <li>1 X <a href="https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/">Clip-on CT sensors</a></li>
+      <li>1 X <a href="https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/">Clip-on CT sensors</a> (emonPi can accept up to two CT sensrs, one is included as standard with emonPi)</li>
       <li>1 x <a href="https://shop.openenergymonitor.com/components/">AC-AC voltage sensor adapter</a> (optional but highly recommended)</li>
     </ul>
 
@@ -187,11 +185,6 @@
     <ul>
       <li>1 x <a href="https://shop.openenergymonitor.com/power-supplies/">USB 5V DC PSU</a></li>
     </ul>
-
-    <p><br />
-<br /></p>
-
-    <h4 id="advanced">Advanced</h4>
 
     <hr />
 
@@ -209,24 +202,35 @@
 An emonTx can be powered by 3 x AA batteries; however, if possible, it is recommended to power the unit with an AC-AC adapter to provide an AC voltage reference for more accurate Real Power and VRMS calculations.
 </p>
 
-    <h4 id="emonbasehttpsshopopenenergymonitorcomemonbase-web-connected-base-station"><strong><a href="https://shop.openenergymonitor.com/emonbase-web-connected-base-station/">emonBase</a></strong></h4>
+    <hr />
+
+    <h4 id="emonbasehttpsshopopenenergymonitorcomemonbase-web-connected-base-station-emonpi-alternative"><a href="https://shop.openenergymonitor.com/emonbase-web-connected-base-station/">emonBase</a> (emonPi Alternative)</h4>
 
     <ul>
       <li>Web connected gateway: <a href="https://shop.openenergymonitor.com/raspberry-pi-2-web-connected-base-station/">Raspberry Pi</a> + <a href="https://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/">RFM69Pi RF receiver board</a></li>
       <li>No on-board energy monitoring functions</li>
       <li>Receive data via low power RF (433Mhz) from emonTx or emonTH</li>
-      <li>Local &amp; Remote Emoncms logging</li>
-      <li>Runs same software stack as emonPi</li>
+      <li>Local &amp; Remote Emoncms data logging</li>
+      <li>Runs the same software stack as the emonPi</li>
       <li>No LCD screen to display local IP address or shut-down button</li>
       <li>Knowledge of SSH is essential</li>
     </ul>
 
-    <p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
+    <hr />
+
+    <h4 id="optical-utility-meter-led-pulse-sensorhttpsshopopenenergymonitorcomoptical-utility-meter-led-pulse-sensor-optional"><a href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">Optical Utility Meter LED Pulse Sensor</a> (Optional)</h4>
+
+    <ul>
+      <li>Optional add-on sensor for interfacing directly with utility meter</li>
+      <li>Compatible with emonPi &amp; emonTx (one per unit)</li>
+      <li>Requires utility meter with LED pulse output</li>
+      <li>Reports exact amount of energy (Wh) reported by utility meter</li>
+      <li>Does not report instantaneous power</li>
+      <li>Best used in conjunction with clip-on CT sensor(s)</li>
+    </ul>
 
   </div> <!-- END HOME ENERGY -->
 <div class="install-instructions solarpv">
-
-    <p><br /></p>
 
     <h3 id="a-classtitle-link-namesolar-pv-hardware-hrefsolar-pv-hardwarea-solar-pv-hardware"><a class="title-link" name="solar-pv-hardware" href="#solar-pv-hardware"></a> Solar PV Hardware</h3>
 
@@ -261,8 +265,8 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
     <h4 id="sensors-1">Sensors:</h4>
 
     <ul>
-      <li>2 X Clip-on CT sensors</li>
-      <li>1 x AC-AC voltage sensor adapter</li>
+      <li>2 X <a href="https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/">Clip-on CT sensors</a> (included in emonPi solar PV bundle)</li>
+      <li>1 x <a href="https://shop.openenergymonitor.com/components/">AC-AC voltage sensor adapter</a> (included in emonPi solar PV bundle)</li>
     </ul>
 
     <h4 id="power-adapters-1">Power Adapters:</h4>
@@ -274,9 +278,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 
     <hr />
 
-    <h4 id="advanced-1">Advanced</h4>
-
-    <h4 id="emonbasehttpsshopopenenergymonitorcomemonbase-web-connected-base-station-1"><strong><a href="https://shop.openenergymonitor.com/emonbase-web-connected-base-station/">emonBase</a></strong></h4>
+    <h4 id="emonbasehttpsshopopenenergymonitorcomemonbase-web-connected-base-station-emonpi-alternative-1"><a href="https://shop.openenergymonitor.com/emonbase-web-connected-base-station/">emonBase</a> (emonPi Alternative)</h4>
 
     <ul>
       <li>Web connected gateway: <a href="https://shop.openenergymonitor.com/raspberry-pi-2-web-connected-base-station/">Raspberry Pi</a> + <a href="https://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/">RFM69Pi RF receiver board</a></li>
@@ -288,24 +290,69 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
       <li>Knowledge of SSH is essential</li>
     </ul>
 
-    <p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
+    <hr />
+
+    <h4 id="optical-utility-meter-led-pulse-sensorhttpsshopopenenergymonitorcomoptical-utility-meter-led-pulse-sensor-optional-1"><a href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">Optical Utility Meter LED Pulse Sensor</a> (Optional)</h4>
+
+    <ul>
+      <li>Optional add-on sensor for interfacing directly with utility meter</li>
+      <li>Compatible with emonPi &amp; emonTx (one per unit)</li>
+      <li>Requires utility meter with LED pulse output</li>
+      <li>Reports exact amount of energy (Wh) reported by utility meter</li>
+      <li>Does not report instantaneous power</li>
+      <li>Best used in conjunction with clip-on CT sensor(s)</li>
+    </ul>
 
   </div> <!-- END SOLAR PV -->
 <div class="install-instructions temperature">
-    <h3 id="a-classtitle-link-nametemperature-hardware-hreftemperature-hardwarea-temperature-hardware"><a class="title-link" name="temperature-hardware" href="#temperature-hardware"></a> Temperature Hardware</h3>
 
-    <p>Temperature monitoring is using digital DS18B20 temperature sensors connected to emonPi, emonTx or emonTH.</p>
+    <h3 id="a-classtitle-link-namewireless-temperature-hardware-hrefwireless-temperature-hardwarea-wireless-temperature-hardware"><a class="title-link" name="wireless-temperature-hardware" href="#wireless-temperature-hardware"></a> Wireless Temperature Hardware</h3>
+    <hr />
 
-    <p><strong>emonTH</strong></p>
+    <h4 id="emonthhttpshopopenenergymonitorcomemonth-433mhz-temperature-humidity-node"><a href="http://shop.openenergymonitor.com/emonth-433mhz-temperature-humidity-node/">emonTH</a></h4>
+    <ul>
+      <li>Wireless temperature &amp; humidity monitoring node</li>
+      <li>Compatible with emonPi &amp; emonBase</li>
+      <li>6 month battery life (2 x AA not included)</li>
+      <li>Up to four emonTH can communicate to a single emonPi</li>
+      <li>Internal temperature &amp; humidity + optional external probe</li>
+      <li>Optional pulse sensor input</li>
+    </ul>
 
-    <p>The emonTH is a dedicated wireless temperature &amp; humidity monitoring room node.</p>
+    <p><img src="/images/setup/emonth-plant.png" width="400" /></p>
 
-    <h1 id="photo-of-rj45-temperature-sensor-breakout">Photo of RJ45 temperature sensor breakout</h1>
+    <hr />
+
+    <h3 id="a-classtitle-link-namewired-temperature-hardware-hrefwired-temperature-hardwarea-wired-temperature-hardware"><a class="title-link" name="wired-temperature-hardware" href="#wired-temperature-hardware"></a> Wired Temperature Hardware</h3>
+
+    <h4 id="ds18b20-sensor-on-rj45httpsshopopenenergymonitorcomrj45-encapsulated-ds18b20-temperature-sensor"><a href="https://shop.openenergymonitor.com/rj45-encapsulated-ds18b20-temperature-sensor/">DS18B20 sensor on RJ45</a></h4>
+    <p><img src="https://cdn2.bigcommerce.com/server4400/98a75/products/144/images/633/IMG_5193__36054.1424864401.1280.1280.JPG?c=2" width="300" /></p>
+
+    <ul>
+      <li>Compatible with emonPi &amp; emonTx</li>
+      <li>Up to x6 sensors can be connected to a single emonPi / emonTx using <a href="http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/">RJ45 Breakout</a></li>
+      <li>Sensor wire can be extended using RJ45 cable and <a href="http://shop.openenergymonitor.com/rj45-extender/">RJ45 Extender</a></li>
+    </ul>
+
+    <h4 id="ds18b20-sensor-on-wirehttpshopopenenergymonitorcomencapsulated-ds18b20-temperature-sensor"><a href="http://shop.openenergymonitor.com/encapsulated-ds18b20-temperature-sensor/">DS18B20 sensor on wire</a></h4>
+    <p><img src="https://cdn2.bigcommerce.com/server4400/98a75/products/173/images/668/SWE2btesting__95144.1429694876.1280.1280.jpg?c=2" width="300" /></p>
+
+    <ul>
+      <li>Compatible with emonTx terminal block</li>
+      <li>Compatible with emonPi using <a href="http://shop.openenergymonitor.com/rj45-to-terminal-block-breakout-for-ds18b20/">RJ45 Breakout</a></li>
+      <li>Up to 6x sensors can be connected to emonPi / emonTx using <a href="http://shop.openenergymonitor.com/rj45-to-terminal-block-breakout-for-ds18b20/">RJ45 Breakout</a></li>
+    </ul>
 
   </div> <!-- END TEMP -->
 
 
 </div>
+
+<hr />
+
+<h3 id="a-classtitle-link-nameoverview-hrefoverviewa-overview"><a class="title-link" name="overview" href="#overview"></a> Overview</h3>
+
+<p><img src="/images/setup/oemfpsystemdiagram.png" width="800" /></p>
 
 <h3 id="a-classtitle-link-namecomparison-table-hrefcomparison-tablea-comparison-table"><a class="title-link" name="comparison-table" href="#comparison-table"></a> Comparison Table</h3>
 
@@ -397,7 +444,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 
 <p>* Requires RJ45 breakout board</p>
 
-<p><strong>Use in USA</strong></p>
+<h4 id="a-classtitle-link-nameuse-in-usa-hrefuse-in-usaa-use-in-usa"><a class="title-link" name="use-in-usa" href="#use-in-usa"></a> Use in USA</h4>
 
 <p>The emonPi and emonTx are designed to monitor single phase AC up to 100A. The system can work for some set-ups in USA with some changes to the configuration. Users in North America should consult the Building Blocks guide <a href="http://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America">‘emonTx - Use in North America’</a> and forum thread discussions <a href="http://openenergymonitor.org/emon/node/711">[1]</a> <a href="http://openenergymonitor.org/emon/node/3265">[2]</a>.</p>
 
