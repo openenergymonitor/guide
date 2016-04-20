@@ -43,7 +43,6 @@ ___
 #### Power Adapters:
 
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
- - *1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/power-supplies/) (optional if using an emonTx but highly recommended)*
  
 <br>
 <br>
@@ -55,7 +54,7 @@ ___
 #### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
 
 - Energy monitoring add-on node
-- Optional add-on if more then two circuits need to be monitored or if WiFi / Ethernet connectivity is not available at utility meter.
+- Optional add-on if more then two circuits need to be monitored or if WiFi / Ethernet connectivity is not available at utility meter
 - RF Range is approximately similar to home WiFi and can be affected by obstacles e.g. thick stone walls
 - Up to 4 x emonTx can be connected to a single emonPi
 - To connect an emonTx see: [Setup > Adding Energy Monitoring Node](/setup/emontx)
@@ -72,7 +71,7 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
  -  Receive data via low power RF (433Mhz) from emonTx or emonTH
  -  Local & Remote Emoncms logging
  -  Runs same software stack as emonPi
- -  More involved than emonPi since there is no LCD screen to display local IP address or shut-down button
+ -  No LCD screen to display local IP address or shut-down button
  -  Knowledge of SSH is essential
 
 <p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
@@ -82,9 +81,11 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 </div> <!-- END HOME ENERGY -->
 <div class='install-instructions solarpv' markdown='1'>
+
+<br>
+
 ### {% linkable_title Solar PV Hardware %}
 
-___
 ___
 
 #### **[emonPi](https://shop.openenergymonitor.com/emonpi-solar-pv/)**
@@ -192,7 +193,7 @@ The emonTH is a dedicated wireless temperature & humidity monitoring room node.
 
 **Use in USA**
 
-The emonPi and emonTx are designed to monitor single phase AC up to 100A. The system can work for some set-ups in USA with slightly different config. Users in North America should consult the Building Blocks guide ['emonTx - Use in North America'](http://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) and forum thread discussions [[1]](http://openenergymonitor.org/emon/node/711) [[2]](http://openenergymonitor.org/emon/node/3265).
+The emonPi and emonTx are designed to monitor single phase AC up to 100A. The system can work for some set-ups in USA with some changes to the configuration. Users in North America should consult the Building Blocks guide ['emonTx - Use in North America'](http://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) and forum thread discussions [[1]](http://openenergymonitor.org/emon/node/711) [[2]](http://openenergymonitor.org/emon/node/3265).
 
 
 ### [Next step: Connect &raquo;](/setup/connect/)
