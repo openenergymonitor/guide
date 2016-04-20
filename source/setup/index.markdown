@@ -218,7 +218,8 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 
 ### {% linkable_title Overview%}
 
-{% img /images/setup/oemfpsystemdiagram.png 800 %}
+![image](/images/setup/oemfpsystemdiagram.png)
+
 
 ### {% linkable_title Comparison Table%}
 

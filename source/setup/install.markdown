@@ -13,7 +13,7 @@ published: true
 
 ## Installation
 
-{% img /images/setup/emonPi_install_diagram.png 500 %}
+![emonpi install](/images/setup/emonPi_install_diagram.png)
 
 <p class='note warning'>
 <a href="https://openenergymonitor.org/emon/Current_Transformer_Installation">Please read the CT installation guide before installing.</a>
@@ -37,9 +37,7 @@ Your safety is your responsibility. Clip-on current sensors are non-invasive and
 
 3. **USB 5V Adapter**
 
-{% img /images/applications/home-energy/home-energy-emonpi-install.jpg 400 %}
-
-
+![home energy](/images/applications/home-energy/home-energy-emonpi-install.jpg)
 
 
 <p class='note'>
