@@ -36,6 +36,7 @@ Emoncms remote> Emoncms.org cloud server.
 1. **Connect the Ethernet and 5V USB power**
   - [1.2A USB power adapter recommended](http://shop.openenergymonitor.com/power-supplies/)
   - ![emonPi First Boot Etherent](/images/setup/emonpi_ethernet_first_boot.png)
+
   - <p class='note warning'> Take care to connect Ethernet to the socket on the same side as the USB sockets, NOT the RJ45 connector on the opposite side.</p>
   - The emonPi LCD display will start by cycling through information about what is connected to it. Once the Raspberry Pi has booted up, the LCD will display the IP address of the emonPi on your local network.
  - ![Ethernet Connected](/images/setup/Etherent_Connected.jpg)
@@ -47,22 +48,24 @@ Emoncms remote> Emoncms.org cloud server.
 
 
 3. **Create Emoncms local user account**
+
   - {% img /images/setup/Emoncms_reg.png 300 %}
+
   - Note: By default only a single (admin) account can be created on local emonPi Emoncms. To enable multiple accounts edit Emoncms settings in `/var/www/emoncms/settings.php`
 
 ### Connect to WiFi (optional)
 
 WiFi is optional and requires either a RaspberryPi3 (integrated WiFi) or a USB WiFi dongle ([Edimax EW7811UN](http://shop.openenergymonitor.com/edimax-usb-wifi-adapter-ew-7811un/)).
 
-1. Wifi config in *local Emoncms* : `Setup > Wi-Fi`
+1. **Wifi config in *local Emoncms* : `Setup > Wi-Fi`**
  - ![Connect to Wifi](/images/setup/wifi9_0.png)
  - Network scan should happen automatically.
 
-2.) Check the box to select the network(s) you want to connect to
+2. **Check the box to select the network(s) you want to connect to**
 
-3.) Enter PSK password
+3. **Enter PSK password**
 
-4.) Hit `Save and Connect`
+4. **Hit `Save and Connect`**
 
 After a few seconds info should refresh automatically to report `Status: Connected` and after a few more seconds IP address should appear.
 
