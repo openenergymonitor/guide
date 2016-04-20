@@ -34,3 +34,8 @@ If the power reading is negative invert the CT sensor clip-on orientation
 ![CT sensor installation ](/images/applications/solar-pv/ctinstall.jpg)
 
 ### [Next step: Log Locally &raquo;](/setup/local/)
+
+### Video Guide
+<div class='videoWrapper'>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6SB4fRYQjno" frameborder="0" allowfullscreen></iframe>
+</div>
