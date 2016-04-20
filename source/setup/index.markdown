@@ -9,7 +9,6 @@ sharing: false
 footer: true
 published: true
 ---
-
 <div class='install-instructions-container' markdown='0'>
 <input name='install-instructions' type='radio' id='home-energy-hardware' checked>
 <input name='install-instructions' type='radio' id='solar-pv-hardware'>
@@ -36,15 +35,15 @@ ___
 
 <p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
-#### Sensors
+#### Sensors:
 
  - 1 X [Clip-on CT sensors](https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/)
  - 1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/components/) (optional but highly recommended)
 
-#### Power Adapters
+#### Power Adapters:
 
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
- - *1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/power-supplies/) (if using emonTx, optional but highly recommended)*
+ - *1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/power-supplies/) (optional if using an emonTx but highly recommended)*
  
 <br>
 <br>
@@ -66,11 +65,10 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 </p>
 
 
-#### **emonBase**
+#### **[emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/)**
 
- -  Web connected gateway: Raspberry Pi + RFM69Pi RF receiver board
- -  Lower cost option if using an emonTx is to use an emonBase instead of an emonPi
- -  No on-board energy monitoring functions
+ -  Web connected gateway: [Raspberry Pi](https://shop.openenergymonitor.com/raspberry-pi-2-web-connected-base-station/) + [RFM69Pi RF receiver board](https://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/)
+ -  No on-board energy monitoring functions 
  -  Receive data via low power RF (433Mhz) from emonTx or emonTH
  -  Local & Remote Emoncms logging
  -  Runs same software stack as emonPi
@@ -99,7 +97,7 @@ ___
 
 <p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
-#### **emonTx (optional)**
+#### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
 
 - Energy monitoring add-on node
 - Required if solar PV generation and site-consumption feeds are located in separate locations or if WiFi / Ethernet connectivity is not available at utility meter
@@ -112,29 +110,29 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 </p>
 
 
-#### Sensors
+#### Sensors:
 
  - 2 X Clip-on CT sensors
  - 1 x AC-AC voltage sensor adapter
 
-#### Power Adapters
+#### Power Adapters:
 
- - 1 x USB 5V DC PSU
- - *1 x AC-AC voltage sensor adapter (if using emonTx)*
+ - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
+ - *1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/power-supplies/) (optional if using an emonTx but highly recommended)*
+ 
  
 ___
 
 #### Advanced
 
-####**emonBase**
+#### **[emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/)**
 
- -  Web connected gateway: Raspberry Pi + RFM69Pi RF receiver board
- -  Lower cost option if using an emonTx is to use an emonBase instead of an emonPi
+ -  Web connected gateway: [Raspberry Pi](https://shop.openenergymonitor.com/raspberry-pi-2-web-connected-base-station/) + [RFM69Pi RF receiver board](https://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/)
  -  No on-board energy monitoring functions
  -  Receive data via low power RF (433Mhz) from emonTx or emonTH
- -  Local & Remote Emoncms logging
- -  Runs same software stack as emonPi
- -  More involved than emonPi since there is no LCD screen to display local IP address or shut-down button
+ -  Local & Remote Emoncms data logging
+ -  Runs the same software stack as the emonPi
+ -  No LCD screen to display local IP address or shut-down button
  -  Knowledge of SSH is essential
 
 <p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
