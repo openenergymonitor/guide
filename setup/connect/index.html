@@ -177,45 +177,56 @@ Emoncms remote&gt; Emoncms.org cloud server.
     <ul>
       <li><a href="http://shop.openenergymonitor.com/power-supplies/">1.2A USB power adapter recommended</a></li>
       <li><img src="/images/setup/emonpi_ethernet_first_boot.png" alt="emonPi First Boot Etherent" /></li>
-      <li>
-        <p class="note warning"> Take care to connect Ethernet to the socket on the same side as the USB sockets, NOT the RJ45 connector on the opposite side.</p>
-      </li>
-      <li>The emonPi LCD display will start by cycling through information about what is connected to it. Once the Raspberry Pi has booted up, the LCD will display the IP address of the emonPi on your local network.</li>
-      <li><img src="/images/setup/Etherent_Connected.jpg" alt="Ethernet Connected" /></li>
     </ul>
   </li>
+</ol>
+
+<ul>
+  <li>
+    <p class="note warning"> Take care to connect Ethernet to the socket on the same side as the USB sockets, NOT the RJ45 connector on the opposite side.</p>
+  </li>
+  <li>The emonPi LCD display will start by cycling through information about what is connected to it. Once the Raspberry Pi has booted up, the LCD will display the IP address of the emonPi on your local network.</li>
+  <li><img src="/images/setup/Etherent_Connected.jpg" alt="Ethernet Connected" /></li>
+</ul>
+
+<ol>
   <li><strong>Enter emonPi IP Address in your web browser address bar</strong>
     <ul>
       <li>Browsing the hostname will work on some networks: <a href="http://emonpi">http://emonpi</a></li>
       <li><em>If using an emonBase and hostname does not work, lookup it’s IP address from your router or use Fing Network Discovery tool on <a href="https://play.google.com/store/apps/details?id=com.overlook.android.fing&amp;hl=en_GB">Android</a> and <a href="https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8">iOS</a></em>.</li>
     </ul>
   </li>
-  <li><strong>Create Emoncms local user account</strong>
-    <ul>
-      <li><img src="/images/setup/Emoncms_reg.png" width="300" /></li>
-      <li>Note: By default only a single (admin) account can be created on local emonPi Emoncms. To enable multiple accounts edit Emoncms settings in <code class="highlighter-rouge">/var/www/emoncms/settings.php</code></li>
-    </ul>
-  </li>
+  <li><strong>Create Emoncms local user account</strong></li>
 </ol>
+
+<ul>
+  <li>
+    <p><img src="/images/setup/Emoncms_reg.png" width="300" /></p>
+  </li>
+  <li>
+    <p>Note: By default only a single (admin) account can be created on local emonPi Emoncms. To enable multiple accounts edit Emoncms settings in <code class="highlighter-rouge">/var/www/emoncms/settings.php</code></p>
+  </li>
+</ul>
 
 <h3 id="connect-to-wifi-optional">Connect to WiFi (optional)</h3>
 
 <p>WiFi is optional and requires either a RaspberryPi3 (integrated WiFi) or a USB WiFi dongle (<a href="http://shop.openenergymonitor.com/edimax-usb-wifi-adapter-ew-7811un/">Edimax EW7811UN</a>).</p>
 
 <ol>
-  <li>Wifi config in <em>local Emoncms</em> : <code class="highlighter-rouge">Setup &gt; Wi-Fi</code>
+  <li><strong>Wifi config in <em>local Emoncms</em> : <code class="highlighter-rouge">Setup &gt; Wi-Fi</code></strong>
     <ul>
       <li><img src="/images/setup/wifi9_0.png" alt="Connect to Wifi" /></li>
       <li>Network scan should happen automatically.</li>
     </ul>
   </li>
+  <li>
+    <p><strong>Check the box to select the network(s) you want to connect to</strong></p>
+  </li>
+  <li>
+    <p><strong>Enter PSK password</strong></p>
+  </li>
+  <li><strong>Hit <code class="highlighter-rouge">Save and Connect</code></strong></li>
 </ol>
-
-<p>2.) Check the box to select the network(s) you want to connect to</p>
-
-<p>3.) Enter PSK password</p>
-
-<p>4.) Hit <code class="highlighter-rouge">Save and Connect</code></p>
 
 <p>After a few seconds info should refresh automatically to report <code class="highlighter-rouge">Status: Connected</code> and after a few more seconds IP address should appear.</p>
 
