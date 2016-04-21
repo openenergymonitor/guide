@@ -196,29 +196,31 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 <p><img src="/images/applications/solar-pv/ctinstall.jpg" alt="CT sensor installation " /></p>
 
-<h1 id="need-installation-image-here"><strong>NEED INSTALLATION IMAGE HERE</strong></h1>
+<p><img src="/images/applications/solar-pv/emonpi-type1-solarpv.png" alt="emonPi Type 1 Solar PV" /></p>
 
 <p><strong>Type 1 solar PV System:</strong> When the generation and site-consumption <strong>can</strong> be monitored separately. The amount exported/imported to or from the grid is the difference between generation and site-consumption.</p>
 
-<p><em>Type 1 system:  Grid (import/export) = site-consumption – Generation</em></p>
+<blockquote>
+  <p><em>Type 1 system:  Grid (import/export) = site-consumption – Generation</em></p>
+</blockquote>
 
 <p><strong>Type 2 solar PV System:</strong> When the generation and site-consumption <strong>cannot</strong> be monitored separately e.g. the PV inverter output is fed into the fuse box and the household loads are connected to other circuits in the same fuse box. If this is the case, the output from the PV inverter and the grid import/export connection will need to be monitored and site-consumption calculated by subtracting.</p>
 
-<p><em>Type 2 system:  Site-consumption = Generation + Grid import (negative when exporting)</em></p>
+<blockquote>
+  <p><em>Type 2 system:  Site-consumption = Generation + Grid import (negative when exporting)</em></p>
+</blockquote>
 
 <p class="note">
-The polarity of the power readings depends on the orientation of the clip-on CT sensor. Orientate the CTs so that generation and site-consumption is positive and grid import/export is **positive when importing and negative when exporting**. The correct orientation can be determined by trial and error.
+The polarity of the power readings depends on the orientation of the clip-on CT sensor. Orientate the CTs so that generation and site-consumption is positive and grid import/export is <b>positive when importing and negative when exporting</b>. The correct orientation can be determined by trial and error.
 </p>
 
 <h4 id="a-classtitle-link-nametype-1-system-setup-hreftype-1-system-setupa-type-1-system-setup"><a class="title-link" name="type-1-system-setup" href="#type-1-system-setup"></a> Type 1 System Setup</h4>
 
-<h5 id="type-1-emoncms-input-setup">Type 1 Emoncms input setup</h5>
-
 <p class="note">
-For automatic MySolarPV App setup use the suggested feed names in **bold**. The names are case sensitive.
+For automatic MySolarPV App setup use the suggested feed names in <b>bold</b>. The names are case sensitive.
 </p>
 
-<p><strong>Setup Solar PV Generation Feed</strong></p>
+<p><strong>1. Setup Solar PV Generation Feed</strong></p>
 
 <p><em>Assuming CT1 (power 1) = Solar Gen</em></p>
 
@@ -228,7 +230,7 @@ For automatic MySolarPV App setup use the suggested feed names in **bold**. The 
   <li>Select <code class="highlighter-rouge">power to kwh</code>, create a feed called <strong>solar_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
 </ol>
 
-<p><strong>Setup site-consumption Feed</strong></p>
+<p><strong>2. Setup site-consumption Feed</strong></p>
 
 <p><em>Assuming CT2 (power 2) = site-consumption</em></p>
 
@@ -238,7 +240,7 @@ For automatic MySolarPV App setup use the suggested feed names in **bold**. The 
   <li>Select <code class="highlighter-rouge">power to kwh</code>, create a feed called <strong>use_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code>.</li>
 </ol>
 
-<p><strong>Calculated grid import:</strong></p>
+<p><strong>3. Calculated grid import:</strong></p>
 
 <ol>
   <li>Use the <code class="highlighter-rouge">- input</code> input processor to subtract solar generation from site consumption in order to calculate import as positive (export will be negative).</li>
@@ -251,13 +253,11 @@ For automatic MySolarPV App setup use the suggested feed names in **bold**. The 
 
 <h4 id="a-classtitle-link-nametype-2-system-setup-hreftype-2-system-setupa-type-2-system-setup"><a class="title-link" name="type-2-system-setup" href="#type-2-system-setup"></a> Type 2 System Setup</h4>
 
-<h5 id="type-2-emoncms-input-setup">Type 2 Emoncms input setup</h5>
-
 <p class="note">
-For automatic MySolarPV App setup use the suggested feed names in **bold**. The names are case sensitive:
+For automatic MySolarPV App setup use the suggested feed names in <b>bold</b>. The names are case sensitive:
 </p>
 
-<p><strong>Setup Solar Generation Feed</strong></p>
+<p><strong>1. Setup Solar Generation Feed</strong></p>
 
 <p><em>Assuming CT1 (power 1) = Solar Generation</em></p>
 
@@ -267,7 +267,7 @@ For automatic MySolarPV App setup use the suggested feed names in **bold**. The 
   <li>Select <code class="highlighter-rouge">power to kwh</code>, create a feed called <strong>solar_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
 </ol>
 
-<p><strong>Calculated site-consumption:</strong></p>
+<p><strong>2. Calculated site-consumption:</strong></p>
 
 <ol>
   <li>Use <code class="highlighter-rouge">+ input</code> input processor to add CT2 grid import/export to solar generation in order to calculate site-consumption</li>
@@ -275,7 +275,7 @@ For automatic MySolarPV App setup use the suggested feed names in **bold**. The 
   <li>Select <code class="highlighter-rouge">power to kwh</code>, create a feed called <strong>use_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
 </ol>
 
-<p><strong>Setup Grid Import Feed</strong></p>
+<p><strong>3. Setup Grid Import Feed</strong></p>
 
 <p><em>Assuming CT2 (power 2) = Grid import/export</em></p>
 

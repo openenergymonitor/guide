@@ -149,14 +149,43 @@
 
   <h3 id="laquo-previous-step-log-locallysetuplocal"><a href="/setup/local/">« Previous step: Log Locally</a></h3>
 
-<p>Log remotly to <a href="http://emoncms.org">Emoncms.org</a></p>
-
-<ol>
-  <li>Step 1</li>
-  <li>Step 2</li>
-</ol>
-
 <h3 id="next-step-dashboards-raquosetupdashboards"><a href="/setup/dashboards/">Next step: Dashboards »</a></h3>
+
+<h2 id="create-emoncmsorg-account">1. Create Emoncms.org account</h2>
+
+<p><img src="/images/setup/remote-log0.png" alt="remote log1" /></p>
+
+<ul>
+  <li>Browse to <a href="https://emoncms.org">Emoncms.org</a></li>
+  <li>Create account or log-in with existing account</li>
+  <li>Select <code class="highlighter-rouge">Inputs &gt; Input API helper</code> <a href="https://emoncms.org/input/api">(https://emoncms.org/input/api)</a></li>
+  <li>Copy Read-Write API key</li>
+</ul>
+
+<p><img src="/images/setup/remote-log01.png" alt="remote log1" /></p>
+
+<h2 id="enter-api-key-into-local-emoncms">2. Enter API key into local Emoncms</h2>
+
+<p><img src="/images/setup/remote-log1.png" alt="remote log1" /></p>
+
+<ul>
+  <li>Log-in to local Emoncms on your local network e.g. <a href="http://emonpi">http://emonpi</a> or http://192.168.X.X</li>
+  <li>Navigate to <code class="highlighter-rouge">Setup &gt; emonHub</code></li>
+  <li>Scroll down the emonHub config in the <code class="highlighter-rouge">[[emoncmsorg]]</code> section pate in your Emoncms.org R/W API key overwriting the <code class="highlighter-rouge">xxxxxxxxxxxxxxx</code> value.</li>
+  <li>Hit <code class="highlighter-rouge">Save</code></li>
+</ul>
+
+<h2 id="setup-emoncmsorg-input-processing">3. Setup Emoncms.org Input Processing</h2>
+
+<ul>
+  <li>Log back in to <a href="htts://emoncms.org">Emoncms.org</a></li>
+  <li>Inputs from emonPi should be visible on the Inputs page</li>
+  <li>Log Inputs to Feeds in the same way as <a href="/setup/local">Local Emoncms Logging</a></li>
+</ul>
+
+<p><em>If no appear in Emoncms.org emonHub.log on <code class="highlighter-rouge">emonHub</code> page of Local Emoncms for debugging</em></p>
+
+<h3 id="next-step-dashboards-raquosetupdashboards-1"><a href="/setup/dashboards/">Next step: Dashboards »</a></h3>
 
 
 </article>
