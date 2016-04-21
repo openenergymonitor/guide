@@ -88,7 +88,7 @@ Shutdown emonPi by press-and-holding the shutdown button on the side, with a pap
 Unplugging power from the emonPi without properly shutting down can result in a corrupted SD card.
 </p>
 
-The emonPi is now ready to be physically installed and sensor connected.
+The emonPi is now ready to be physically installed and sensors connected.
 
 ### [Next step: Install &raquo;](/setup/install/)
 

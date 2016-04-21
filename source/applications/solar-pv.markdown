@@ -56,31 +56,30 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 ![CT sensor installation ](/images/applications/solar-pv/ctinstall.jpg)
 
-# **NEED INSTALLATION IMAGE HERE**
+![emonPi Type 1 Solar PV](/images/applications/solar-pv/emonpi-type1-solarpv.png)
 
 **Type 1 solar PV System:** When the generation and site-consumption **can** be monitored separately. The amount exported/imported to or from the grid is the difference between generation and site-consumption.
 
-*Type 1 system:  Grid (import/export) = site-consumption – Generation*
+> *Type 1 system:  Grid (import/export) = site-consumption – Generation*
 
 
 **Type 2 solar PV System:** When the generation and site-consumption **cannot** be monitored separately e.g. the PV inverter output is fed into the fuse box and the household loads are connected to other circuits in the same fuse box. If this is the case, the output from the PV inverter and the grid import/export connection will need to be monitored and site-consumption calculated by subtracting.
 
-*Type 2 system:  Site-consumption = Generation + Grid import (negative when exporting)*
+> *Type 2 system:  Site-consumption = Generation + Grid import (negative when exporting)*
 
 
 <p class='note'>
-The polarity of the power readings depends on the orientation of the clip-on CT sensor. Orientate the CTs so that generation and site-consumption is positive and grid import/export is **positive when importing and negative when exporting**. The correct orientation can be determined by trial and error.
+The polarity of the power readings depends on the orientation of the clip-on CT sensor. Orientate the CTs so that generation and site-consumption is positive and grid import/export is <b>positive when importing and negative when exporting</b>. The correct orientation can be determined by trial and error.
 </p>
 
 #### {% linkable_title Type 1 System Setup %}
 
-##### Type 1 Emoncms input setup
 
 <p class='note'>
-For automatic MySolarPV App setup use the suggested feed names in **bold**. The names are case sensitive.
+For automatic MySolarPV App setup use the suggested feed names in <b>bold</b>. The names are case sensitive.
 </p>
 
-**Setup Solar PV Generation Feed**
+**1. Setup Solar PV Generation Feed**
 
 *Assuming CT1 (power 1) = Solar Gen*
 
@@ -88,7 +87,7 @@ For automatic MySolarPV App setup use the suggested feed names in **bold**. The 
  2. Select `log to feed` and create a feed called **solar** with the feed engine set to `PHPFina` and feed `interval=10s`
  3. Select `power to kwh`, create a feed called **solar_kwh** with feed engine `PHPFina` and feed `interval=10s`
 
-**Setup site-consumption Feed**
+**2. Setup site-consumption Feed**
 
 *Assuming CT2 (power 2) = site-consumption*
 
@@ -96,7 +95,7 @@ For automatic MySolarPV App setup use the suggested feed names in **bold**. The 
  2. Select `log to feed` and create a feed called **use** with the feed engine set to PHPFina and feed `interval=10s`.
  3. Select `power to kwh`, create a feed called **use_kwh** with feed engine `PHPFina` and feed `interval=10s`.
 
-**Calculated grid import:**
+**3. Calculated grid import:**
 
  1. Use the `- input` input processor to subtract solar generation from site consumption in order to calculate import as positive (export will be negative).
  2. Use `allow positive` in order to isolate the import component
@@ -107,13 +106,12 @@ Once complete click on `Apps > MySolarPV` in order to launch the MySolarPV Emonc
 
 #### {% linkable_title Type 2 System Setup %}
 
-##### Type 2 Emoncms input setup
 
 <p class='note'>
-For automatic MySolarPV App setup use the suggested feed names in **bold**. The names are case sensitive:
+For automatic MySolarPV App setup use the suggested feed names in <b>bold</b>. The names are case sensitive:
 </p>
 
-**Setup Solar Generation Feed**
+**1. Setup Solar Generation Feed**
 
 *Assuming CT1 (power 1) = Solar Generation*
 
@@ -121,13 +119,13 @@ For automatic MySolarPV App setup use the suggested feed names in **bold**. The 
  2. Select `log to feed` and create a feed called **solar** with the feed engine set to `PHPFina` and feed `interval=10s`
  3. Select `power to kwh`, create a feed called **solar_kwh** with feed engine `PHPFina` and feed `interval=10s`
 
-**Calculated site-consumption:**
+**2. Calculated site-consumption:**
 
  1. Use `+ input` input processor to add CT2 grid import/export to solar generation in order to calculate site-consumption
  2. Select `log to feed` and create a feed called **use** with the feed engine set to `PHPFina` and feed `interval=10s`
  3. Select `power to kwh`, create a feed called **use_kwh** with feed engine `PHPFina` and feed `interval=10s`
 
-**Setup Grid Import Feed**
+**3. Setup Grid Import Feed**
 
 *Assuming CT2 (power 2) = Grid import/export*
 
