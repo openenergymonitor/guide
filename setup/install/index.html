@@ -149,7 +149,11 @@
 
   <h3 id="laquo-previous-step-connectsetupconnect"><a href="/setup/connect/">« Previous step: Connect</a></h3>
 
+<h3 id="next-step-log-locally-raquosetuplocal"><a href="/setup/local/">Next step: Log Locally »</a></h3>
+
 <h2 id="installation">Installation</h2>
+
+<p><img src="/images/setup/emonpilabel.png" alt="emonpi install digram" /></p>
 
 <p><img src="/images/setup/emonPi_install_diagram.png" alt="emonpi install" /></p>
 
@@ -158,28 +162,50 @@
 Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off, prior to installing your sensors, and proceeding slowly with care. If you have any doubts, seek professional assistance.
 </p>
 
-<ol>
-  <li><strong>CT sensor</strong>
-    <ul>
-      <li>Clip the CT sensor round either the Live or Neutral Cable</li>
-      <li>If the power reading is negative reverse CT sensor orientation</li>
-      <li>Plug jack-plug socket into either CT1 or CT2 in emonPi</li>
-      <li>CT sensor cable should not be extended to avoid induced noise</li>
-      <li>For Solar PV install see <a href="/applications/solar-pv/#sensor-installation">Solar PV Application page</a>.</li>
-    </ul>
-  </li>
-  <li><strong>AC-AC Adpater</strong>
-    <ul>
-      <li>Plug the AC-AC apter into a power outlet</li>
-      <li>This may require installation of a new outlet or extending existing</li>
-      <li>AC-AC adapter cable can be extended if required</li>
-      <li>Plug barrel-socket into AC socket in emonPi</li>
-      <li>Essential for <a href="/applications/solar-pv/#sensor-installation">Solar PV monitoring</a></li>
-      <li>Provides AC waveform reference for accurate Real Power measurements <a href="http://openenergymonitor.org/emon/applications/homeenergy">[1]</a> , <a href="http://openenergymonitor.org/emon/buildingblocks">[2]</a></li>
-    </ul>
-  </li>
-  <li><strong>USB 5V Adapter</strong></li>
-</ol>
+<h2 id="ct-sensor">1. <strong>CT sensor</strong></h2>
+
+<ul>
+  <li>Clip the CT sensor round either the Live or Neutral Cable</li>
+  <li>If the power reading is negative reverse CT sensor orientation</li>
+  <li>Plug jack-plug socket into either CT1 or CT2 in emonPi</li>
+  <li>CT sensor cable should not be extended to avoid induced noise</li>
+  <li>For Solar PV install see <a href="/applications/solar-pv/#sensor-installation">Solar PV Application page</a></li>
+</ul>
+
+<h2 id="ac-ac-adpater">2. <strong>AC-AC Adpater</strong></h2>
+<ul>
+  <li>Plug the AC-AC apter into a power outlet</li>
+  <li>This may require installation of a new outlet or extending existing</li>
+  <li>AC-AC adapter cable can be extended if required</li>
+  <li>Plug barrel-socket into AC socket in emonPi</li>
+  <li>Essential for <a href="/applications/solar-pv/#sensor-installation">Solar PV monitoring</a></li>
+  <li>Provides AC waveform reference for accurate Real Power measurements. <a href="http://openenergymonitor.org/emon/applications/homeenergy">[1]</a> , <a href="http://openenergymonitor.org/emon/buildingblocks">[2]</a></li>
+</ul>
+
+<h2 id="dc-5v-usb-adapter">3. <strong>DC 5V USB Adapter</strong></h2>
+<ul>
+  <li>Plug the DC 5V USB adapter into a power outlet</li>
+  <li>Plug mini-B USB connector into emonPi</li>
+  <li>High quality min <a href="https://shop.openenergymonitor.com/power-supplies/">1.2A power supply recommend</a></li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="optical-utility-meter-led-pulse-sensor-optional">4. <em>Optical Utility Meter LED Pulse Sensor (optional)</em></h3>
+<ul>
+  <li>See <a href="http://openenergymonitor.org/emon/opticalpulsesensor">Optical Pulse Sensor setup page</a></li>
+  <li>Connects to emonPi / emonTx via RJ45 connector</li>
+  <li>Self-adisive velcro attachment to utility meter</li>
+  <li>One optical pulse sensor per emonPi/emonTx</li>
+  <li>Can be used in conjunction with temperature sensors using <a href="http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/">RJ45 Breakout</a></li>
+</ul>
+
+<h3 id="temperature-sensors-optional">5. <em>Temperature Sensors (optional)</em></h3>
+<ul>
+  <li>Connect to emonPi / emonTx via RJ45 connector</li>
+  <li>Up to 6x sensors can be connected using <a href="http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/">RJ45 Breakout</a></li>
+  <li>Sensor wire can be extended using RJ45 cable and <a href="http://shop.openenergymonitor.com/rj45-extender/">RJ45 Extender</a></li>
+</ul>
 
 <p><img src="/images/applications/home-energy/home-energy-emonpi-install.jpg" alt="home energy" /></p>
 
@@ -212,7 +238,7 @@ Ensure all sensors are connected before power up
 
 <p><img src="/images/setup/wifi_connected.JPG" /></p>
 
-<h3 id="next-step-log-locally-raquosetuplocal"><a href="/setup/local/">Next step: Log Locally »</a></h3>
+<h3 id="next-step-log-locally-raquosetuplocal-1"><a href="/setup/local/">Next step: Log Locally »</a></h3>
 
 <h3 id="video-guide">Video Guide</h3>
 <div class="videoWrapper">

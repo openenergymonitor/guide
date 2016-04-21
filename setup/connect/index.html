@@ -149,9 +149,13 @@
 
   <h3 id="laquo-previous-step-required-hardwaresetup"><a href="/setup/">« Previous step: Required Hardware</a></h3>
 
-<h2 id="first-boot">First Boot</h2>
+<h3 id="next-step-install-raquosetupinstall"><a href="/setup/install/">Next step: Install »</a></h3>
 
-<p><strong>This guide assumes using emonPi / emonBase pre-built SD card.</strong></p>
+<h1 id="first-boot">First Boot</h1>
+
+<p class="note">
+<b>This guide assumes using emonPi / emonBase pre-built SD card.</b>
+</p>
 
 <p>This SD card can be <a href="http://shop.openenergymonitor.com/pre-loaded-emonsd-microsd-card-for-raspberry-pi/">purchased from the shop</a> or downloaded:</p>
 
@@ -160,21 +164,15 @@
   <li><a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">Instructions to flash image to SD card (RaspberryPi)</a></li>
 </ul>
 
-<h3 id="create-local-emoncms-account">Create Local Emoncms account</h3>
-
-<p>By default Emoncms data logging app runs locally on the emonPi’s web sever. Data can be logged locally to the emonPi’s SD card and (optionally) posted remotely to <a href="https://emoncms.org">Emoncms.org</a> cloud server.</p>
-
-<p>The first step is to create an account with <strong>local Emoncms</strong>.</p>
+<p><em>The emonPi runs Emoncms data logging web-app locally from emonPi’s internal web sever.        Using Emoncms data can be logged locally to the emonPi’s SD card and (optionally) posted remotely to <a href="https://emoncms.org">Emoncms.org</a> cloud server.</em></p>
 
 <p class="note">
-Emoncms local&gt; Emoncms instance running locally on the emonPi
+<b>Emoncms local:</b> Emoncms instance running locally on the emonPi
 <br />
-Emoncms remote&gt; Emoncms.org cloud server.
+<b>Emoncms remote:</b> Emoncms.org cloud server.
 </p>
 
-<ol>
-  <li><strong>Connect the Ethernet and 5V USB power</strong></li>
-</ol>
+<h2 id="connect-the-ethernet-and-5v-usb-power">1. <strong>Connect the Ethernet and 5V USB power</strong></h2>
 
 <p><img src="/images/setup/emonpi_ethernet_first_boot.png" alt="emonPi First Boot Etherent" /></p>
 
@@ -189,15 +187,14 @@ Emoncms remote&gt; Emoncms.org cloud server.
   <li><img src="/images/setup/Etherent_Connected.jpg" alt="Ethernet Connected" /></li>
 </ul>
 
-<ol>
-  <li><strong>Enter emonPi IP Address in your web browser address bar</strong>
-    <ul>
-      <li>Browsing the hostname will work on some networks: <a href="http://emonpi">http://emonpi</a></li>
-      <li><em>If using an emonBase and hostname does not work, lookup it’s IP address from your router or use Fing Network Discovery tool on <a href="https://play.google.com/store/apps/details?id=com.overlook.android.fing&amp;hl=en_GB">Android</a> and <a href="https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8">iOS</a></em>.</li>
-    </ul>
-  </li>
-  <li><strong>Create Emoncms local user account</strong></li>
-</ol>
+<h2 id="enter-emonpi-ip-address-in-your-web-browser-address-bar">2. <strong>Enter emonPi IP Address in your web browser address bar</strong></h2>
+
+<ul>
+  <li>Browsing the hostname will work on some networks: <a href="http://emonpi">http://emonpi</a></li>
+  <li><em>If using an emonBase and hostname does not work, lookup it’s IP address from your router or use Fing Network Discovery tool on <a href="https://play.google.com/store/apps/details?id=com.overlook.android.fing&amp;hl=en_GB">Android</a> and <a href="https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8">iOS</a></em>.</li>
+</ul>
+
+<h2 id="create-local-emoncms-user-account">3. <strong>Create local Emoncms user account</strong></h2>
 
 <p><img src="/images/setup/Emoncms_reg.png" width="250" /></p>
 
@@ -205,7 +202,7 @@ Emoncms remote&gt; Emoncms.org cloud server.
   <li>By default only a single (admin) account can be created on local emonPi Emoncms. To enable multiple accounts edit Emoncms settings in <code class="highlighter-rouge">/var/www/emoncms/settings.php</code></li>
 </ul>
 
-<h3 id="connect-to-wifi-optional">Connect to WiFi (optional)</h3>
+<h2 id="connect-to-wifi-optional">4. Connect to WiFi (optional)</h2>
 
 <p>WiFi is optional and requires either a RaspberryPi3 (integrated WiFi) or a USB WiFi dongle (<a href="http://shop.openenergymonitor.com/edimax-usb-wifi-adapter-ew-7811un/">Edimax EW7811UN</a>).</p>
 
@@ -228,11 +225,11 @@ Emoncms remote&gt; Emoncms.org cloud server.
 
 <p>After a few seconds info should refresh automatically to report <code class="highlighter-rouge">Status: Connected</code> and after a few more seconds IP address should appear.</p>
 
-<h3 id="update">Update</h3>
+<h2 id="update">5. Update</h2>
 
 <p><strong>UPDATE HIGHLY RECOMMENDED:</strong> Now your emonPi is connected to a network this would be a good time to pull in any new updates: <code class="highlighter-rouge">Setup &gt; Admin &gt; Update</code></p>
 
-<h3 id="shutdown">Shutdown</h3>
+<h2 id="shutdown">6. Shutdown</h2>
 
 <p>Shutdown emonPi by press-and-holding the shutdown button on the side, with a paper clip for 5 seconds then waiting 30s for unit to fully shutdown.</p>
 
@@ -242,9 +239,9 @@ Emoncms remote&gt; Emoncms.org cloud server.
 Unplugging power from the emonPi without properly shutting down can result in a corrupted SD card.
 </p>
 
-<p>The emonPi is now ready to be physically installed.</p>
+<p>The emonPi is now ready to be physically installed and sensor connected.</p>
 
-<h3 id="next-step-install-raquosetupinstall"><a href="/setup/install/">Next step: Install »</a></h3>
+<h3 id="next-step-install-raquosetupinstall-1"><a href="/setup/install/">Next step: Install »</a></h3>
 
 <h3 id="video-guide">Video Guide</h3>
 <div class="videoWrapper">
