@@ -9,3 +9,4 @@ sharing: true
 footer: true
 ---
 
+![emonPi overview](https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png)

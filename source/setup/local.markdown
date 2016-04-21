@@ -11,6 +11,8 @@ footer: true
 
 ### [&laquo; Previous step: Connect](/setup/connect/)
 
+### [Next step: Log Remotely &raquo;](/setup/remote/)
+
 
 {% img /images/setup/local-log1.png 700 %}
 

@@ -33,8 +33,10 @@ footer: true
 
 - Log-in to local Emoncms on your local network e.g. [http://emonpi](http://emonpi) or http://192.168.X.X
 - Navigate to `Setup > emonHub`
-- Scroll down the emonHub config in the `[[emoncmsorg]]` section pate in your Emoncms.org R/W API key overwriting the `xxxxxxxxxxxxxxx` value.
+- Scroll down the emonHub config, in the `[[emoncmsorg]]` section pate in your Emoncms.org R/W API key overwriting the `xxxxxxxxxxxxxxx` value.
 - Hit `Save`
+
+[*Advanced emonhub.conf configuration guide*](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md)
 
 ## 3. Setup Emoncms.org Input Processing
 
