@@ -38,7 +38,7 @@ Your safety is your responsibility. Clip-on current sensors are non-invasive and
 - Plug the AC-AC adapter into a power outlet
 - This may require installation of a new outlet or extending an existing one
 - AC-AC adapter cable can be extended if required
-- Plug power connector to the AC socket on the emonPi
+- Plug power connector into the AC socket on the emonPi
 - Essential for [Solar PV monitoring](/applications/solar-pv/#sensor-installation)
 - Provides AC waveform reference for accurate Real Power measurements. [[1]](http://openenergymonitor.org/emon/applications/homeenergy) , [[2]](http://openenergymonitor.org/emon/buildingblocks)
 
