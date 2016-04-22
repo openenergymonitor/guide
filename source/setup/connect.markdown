@@ -17,7 +17,7 @@ published: true
 #  First Boot
 
 <p class="note">
-<b>This guide assumes using emonPi / emonBase pre-built SD card.</b>
+<b>This guide assumes that an emonPi / emonBase pre-built SD card is being used.</b>
 </p>
 
 This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/pre-loaded-emonsd-microsd-card-for-raspberry-pi/) or downloaded:
@@ -73,6 +73,27 @@ WiFi is optional and requires either a RaspberryPi3 (integrated WiFi) or a USB W
 4. **Hit `Save and Connect`**
 
 After a few seconds info should refresh automatically to report `Status: Connected` and after a few more seconds IP address should appear.
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
+<div class="container">
+  <h3>Static IP Setup (Advanced)</h3>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Show Advanced</button>
+  <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+</div>
+
+
+
 
 ## 5. Update
 
