@@ -179,7 +179,7 @@
 
 <p>See Solar PV tab of <a href="/setup/">Setup &gt; Required Hardware</a></p>
 
-<p>The Emoncms setup instructions below are applicable to both the emonPi and the emonTx where CT1 is solar generation and CT2 is either site-consumption (Type 1 system) or import/export (Type 2 system). If using an emonTx to monitor generation or site-consumption substitute the ‘log to feed’ instructions to use an input from the emonTx instead of emonPi.</p>
+<p>The Emoncms setup instructions below are applicable to both the emonPi and the emonTx where CT1 is either site-consumption (Type 1 system) or import/export (Type 2 system) and CT2 is solar generation. If using an emonTx to monitor generation or site-consumption substitute the ‘log to feed’ instructions to use an input from the emonTx instead of emonPi (CT4 on the emontx a 0-4kW channel providing higher accuracy for this range and may be suitable for the solar CT if system capacity is less than 4kW).</p>
 
 <h3 id="a-classtitle-link-namesensor-installation-hrefsensor-installationa-sensor-installation"><a class="title-link" name="sensor-installation" href="#sensor-installation"></a> Sensor Installation</h3>
 
@@ -220,33 +220,33 @@ The polarity of the power readings depends on the orientation of the clip-on CT 
 For automatic MySolarPV App setup use the suggested feed names in <b>bold</b>. The names are case sensitive.
 </p>
 
-<p><strong>1. Setup Solar PV Generation Feed</strong></p>
+<p><strong>1. Setup site-consumption Feed</strong></p>
 
-<p><em>Assuming CT1 (power 1) = Solar Gen</em></p>
+<p><em>Assuming CT1 (power 1) = site-consumption</em></p>
 
 <ol>
   <li>Click on spanner icon to configure <code class="highlighter-rouge">emonPi/power1</code>.</li>
-  <li>Select <code class="highlighter-rouge">log to feed</code> and create a feed called <strong>solar</strong> with the feed engine set to <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
-  <li>Select <code class="highlighter-rouge">power to kwh</code>, create a feed called <strong>solar_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
-</ol>
-
-<p><strong>2. Setup site-consumption Feed</strong></p>
-
-<p><em>Assuming CT2 (power 2) = site-consumption</em></p>
-
-<ol>
-  <li>Click on spanner icon to configure <code class="highlighter-rouge">emonPi/power2</code>.</li>
   <li>Select <code class="highlighter-rouge">log to feed</code> and create a feed called <strong>use</strong> with the feed engine set to PHPFina and feed <code class="highlighter-rouge">interval=10s</code>.</li>
   <li>Select <code class="highlighter-rouge">power to kwh</code>, create a feed called <strong>use_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code>.</li>
 </ol>
 
-<p><strong>3. Calculated grid import:</strong></p>
+<p><strong>2. Calculated grid import:</strong></p>
 
 <ol>
   <li>Use the <code class="highlighter-rouge">- input</code> input processor to subtract solar generation from site consumption in order to calculate import as positive (export will be negative).</li>
   <li>Use <code class="highlighter-rouge">allow positive</code> in order to isolate the import component</li>
   <li>Select <code class="highlighter-rouge">log to feed</code> and create a feed called <strong>import</strong> with the feed engine set to <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
   <li>Select <code class="highlighter-rouge">power to kwh</code>, create a feed called <strong>import_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
+</ol>
+
+<p><strong>3. Setup Solar PV Generation Feed</strong></p>
+
+<p><em>Assuming CT2 (power 2) = Solar Gen</em></p>
+
+<ol>
+  <li>Click on spanner icon to configure <code class="highlighter-rouge">emonPi/power2</code>.</li>
+  <li>Select <code class="highlighter-rouge">log to feed</code> and create a feed called <strong>solar</strong> with the feed engine set to <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
+  <li>Select <code class="highlighter-rouge">power to kwh</code>, create a feed called <strong>solar_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
 </ol>
 
 <p>Once complete click on <code class="highlighter-rouge">Apps &gt; MySolarPV</code> in order to launch the MySolarPV Emoncms app, If you decide to use custom feed names the app will give you the option to select your solar, use and import feeds.</p>
@@ -257,33 +257,33 @@ For automatic MySolarPV App setup use the suggested feed names in <b>bold</b>. T
 For automatic MySolarPV App setup use the suggested feed names in <b>bold</b>. The names are case sensitive:
 </p>
 
-<p><strong>1. Setup Solar Generation Feed</strong></p>
+<p><strong>1. Setup Grid Import Feed</strong></p>
 
-<p><em>Assuming CT1 (power 1) = Solar Generation</em></p>
+<p><em>Assuming CT1 (power 1) = Grid import/export</em></p>
 
 <ol>
   <li>Click on spanner icon to configure <code class="highlighter-rouge">emonPi/power1</code></li>
+  <li>Select <code class="highlighter-rouge">allow positive</code> to isolate import component</li>
+  <li>Select <code class="highlighter-rouge">power to feed</code> and create a feed called <strong>import</strong> with the feed engine set to <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
+  <li>Select <code class="highlighter-rouge">power to kwh</code>, create a feed called <strong>import_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
+</ol>
+
+<p><strong>2. Setup Solar Generation Feed</strong></p>
+
+<p><em>Assuming CT2 (power 2) = Solar Generation</em></p>
+
+<ol>
+  <li>Click on spanner icon to configure <code class="highlighter-rouge">emonPi/power2</code></li>
   <li>Select <code class="highlighter-rouge">log to feed</code> and create a feed called <strong>solar</strong> with the feed engine set to <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
   <li>Select <code class="highlighter-rouge">power to kwh</code>, create a feed called <strong>solar_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
 </ol>
 
-<p><strong>2. Calculated site-consumption:</strong></p>
+<p><strong>3. Calculated site-consumption:</strong></p>
 
 <ol>
-  <li>Use <code class="highlighter-rouge">+ input</code> input processor to add CT2 grid import/export to solar generation in order to calculate site-consumption</li>
+  <li>Use <code class="highlighter-rouge">+ input</code> input processor to add CT1 grid import/export to solar generation in order to calculate site-consumption</li>
   <li>Select <code class="highlighter-rouge">log to feed</code> and create a feed called <strong>use</strong> with the feed engine set to <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
   <li>Select <code class="highlighter-rouge">power to kwh</code>, create a feed called <strong>use_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
-</ol>
-
-<p><strong>3. Setup Grid Import Feed</strong></p>
-
-<p><em>Assuming CT2 (power 2) = Grid import/export</em></p>
-
-<ol>
-  <li>Click on spanner icon to configure <code class="highlighter-rouge">emonPi/power2</code></li>
-  <li>Select <code class="highlighter-rouge">allow positive</code> to isolate import component</li>
-  <li>Select <code class="highlighter-rouge">power to feed</code> and create a feed called <strong>import</strong> with the feed engine set to <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
-  <li>Select <code class="highlighter-rouge">power to kwh</code>, create a feed called <strong>import_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code></li>
 </ol>
 
 <h3 id="a-classtitle-link-nameconfigure-mysolarpv-app-hrefconfigure-mysolarpv-appa-configure-mysolarpv-app"><a class="title-link" name="configure-mysolarpv-app" href="#configure-mysolarpv-app"></a> Configure MySolarPV App</h3>
