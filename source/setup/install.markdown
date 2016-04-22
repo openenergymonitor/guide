@@ -90,8 +90,11 @@ Ensure all sensors are connected before power up
 
 {% img /images/setup/wifi_connected.JPG %}
 
+<br>
 
 ### [Next step: Log Locally &raquo;](/setup/local/)
+
+<br>
 
 ### Video Guide
 <div class='videoWrapper'>

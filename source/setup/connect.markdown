@@ -25,7 +25,7 @@ This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/
 - [Pre-build SD card download & Change Log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log)
 - [Instructions to flash image to SD card (RaspberryPi)](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
 
-*The emonPi runs Emoncms data logging web-app locally from emonPi's internal web sever.        Using Emoncms data can be logged locally to the emonPi's SD card and (optionally) posted remotely to [Emoncms.org](https://emoncms.org) cloud server.*
+*The emonPi runs Emoncms data logging web-app locally from emonPi's internal web sever. Using Emoncms data can be logged locally to the emonPi's SD card and (optionally) posted remotely to [Emoncms.org](https://emoncms.org) cloud server.*
 
 
 <p class="note">
@@ -133,7 +133,11 @@ Unplugging power from the emonPi without properly shutting down can result in a 
 
 The emonPi is now ready to be physically installed and sensors connected.
 
+<br>
+
 ### [Next step: Install &raquo;](/setup/install/)
+
+<br>
 
 ### Video Guide
 <div class='videoWrapper'>

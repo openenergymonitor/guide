@@ -56,7 +56,7 @@ ___
 - Energy monitoring add-on node
 - Optional add-on if more then two circuits need to be monitored or if WiFi / Ethernet connectivity is not available at utility meter
 - RF Range is approximately similar to home WiFi and can be affected by obstacles e.g. thick stone walls
-- Up to 4 x emonTx can be connected to a single emonPi
+- Up to 2x emonTx can be connected to a single emonPi
 - To connect an emonTx see: [Setup > Adding Energy Monitoring Node](/setup/emontx)
 
 <p class='note'>
@@ -112,7 +112,7 @@ ___
 - Energy monitoring add-on node
 - Required if solar PV generation and site-consumption feeds are located in separate locations or if WiFi / Ethernet connectivity is not available at utility meter
 - RF range is approximately similar to home WiFi and can be affected by obstacles e.g. thick stone walls
-- Up to 4 x emonTx can be connected to a single emonPi
+- Up to 2x emonTx can be connected to a single emonPi
 - To connect an emonTx see: [Setup > Adding Energy Monitoring Node](/setup/emontx)
 
 <p class='note'>
@@ -256,8 +256,11 @@ The emonPi and emonTx are designed to monitor single phase AC up to 100A. The sy
 
 The emonPi / emonTx have been designed for single-phase AC monitoring. The emonTx can monitor 'approximate' three-phase (assuming balanced phases) using [modified firmware](https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV3/RFM/emonTxV3.4/emonTxV3_4_3Phase_Voltage) and 3x CT sensors + 1 x AC-AC adapter. [Further reading](https://openenergymonitor.org/emon/buildingblocks/3-phase-power)
 
+<br>
 
 ### [Next step: Connect &raquo;](/setup/connect/)
+
+<br>
 
 ### Video Guide
 <div class='videoWrapper'>

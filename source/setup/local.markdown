@@ -26,8 +26,11 @@ footer: true
 
 {% img /images/setup/local-log6.png 700 %}
 
+<br>
 
 ### [Next step: Log Remotely &raquo;](/setup/remote/)
+
+<br>
 
 ### Video Guide
 <div class='videoWrapper'>
