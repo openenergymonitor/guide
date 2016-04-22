@@ -148,18 +148,18 @@
   <hr class="divider">
   
 
-  <p>The OpenEnergyMonitor system can be used as a simple home energy monitoring system for understanding energy consumption. 
+  <p>The OpenEnergyMonitor system can be used as a simple home energy monitoring system for understanding energy consumption.
 View and explore real-time power and daily energy consumption in kWh.</p>
 
-<p>MyElectric is a web app which runs on <a href="https://Emoncms.org">Emoncms</a>. MyElectric is also available as a native android app.</p>
+<p>MyElectric is a web app which runs on <a href="https://Emoncms.org">Emoncms</a>. MyElectric is also available as a native <a href="https://play.google.com/store/apps/details?id=org.emoncms.myapps&amp;utm_source=global_co&amp;utm_medium=prtnr&amp;utm_content=Mar2515&amp;utm_campaign=PartBadge&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">Android app</a></p>
 
 <p><img src="/images/applications/home-energy/home-energy-front.jpg" alt="MyElectric" /></p>
 
-<h2 id="explore-visualise">Explore, visualise:</h2>
+<h2 id="explore-visualize">Explore, visualize:</h2>
 
 <ul>
-  <li>Site-consumption, power in watts.</li>
-  <li>Daily energy consumption in kWh</li>
+  <li>Site-consumption, power in Watts.</li>
+  <li>Daily energy consumption in KWh</li>
   <li>Indication of electricity cost (unit price and currency options)</li>
 </ul>
 
@@ -172,13 +172,15 @@ View and explore real-time power and daily energy consumption in kWh.</p>
   <li>Emoncms MyElectric App</li>
 </ol>
 
-<h3 id="required-hardware">Required Hardware</h3>
+<h3 id="required-hardware">1. Required Hardware</h3>
 
 <p>See Home Energy Monitor tab of <a href="/setup/">Setup &gt; Required Hardware</a></p>
 
-<p>The Emoncms setup instructions below are applicable to both the emonPi and the emonTx where CT1 is site consumption. If using an emonTx substitute the ‘log to feed’ instructions to use an input from the emonTx instead of emonPi.</p>
+<p><em>The Emoncms setup instructions below are applicable to both the emonPi and the emonTx where CT1 is site consumption. If using an emonTx substitute the ‘log to feed’ instructions to use an input from the emonTx instead of emonPi.</em></p>
 
-<h3 id="a-classtitle-link-namesensor-installation-hrefsensor-installationa-sensor-installation"><a class="title-link" name="sensor-installation" href="#sensor-installation"></a> Sensor Installation</h3>
+<h3 id="a-classtitle-link-name2-sensor-installation-href2-sensor-installationa-2-sensor-installation"><a class="title-link" name="2-sensor-installation" href="#2-sensor-installation"></a> 2. Sensor Installation</h3>
+
+<p>See <a href="/setup/install">Setup &gt; Install</a> section of the setup guide.</p>
 
 <p class="note warning">
 <a href="https://openenergymonitor.org/emon/Current_Transformer_Installation">Please read the CT installation guide before installing.</a>
@@ -195,13 +197,15 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 The polarity of the power readings depends on the orientation of the clip-on CT sensor. Orientate the CTs so that site-consumption is positive. The correct orientation can be determined by trial and error.
 </p>
 
-<p class="note">
-For automatic MyElectric App setup use the suggested feed names in <b>bold</b>. The names are case sensitive.
-</p>
+<h3 id="a-classtitle-link-name3-emoncms-feed-setup-href3-emoncms-feed-setupa-3-emoncms-feed-setup"><a class="title-link" name="3-emoncms-feed-setup" href="#3-emoncms-feed-setup"></a> 3. Emoncms Feed Setup</h3>
 
-<p><strong>Setup site-consumption Feed</strong></p>
+<p>See <a href="/setup/local">Setup &gt; Log Local</a> section of the setup guide.</p>
 
-<p><em>Assuming CT1 (power 1) = site-consumption</em></p>
+<p>For automatic MyElectric App setup use the suggested feed names in <strong>bold</strong>. The names are case sensitive.</p>
+
+<blockquote>
+  <p>Assuming CT1 (power 1) = site-consumption*</p>
+</blockquote>
 
 <ol>
   <li>Click on spanner icon to configure <code class="highlighter-rouge">emonPi/power1</code>.</li>
@@ -209,7 +213,7 @@ For automatic MyElectric App setup use the suggested feed names in <b>bold</b>. 
   <li>Select <code class="highlighter-rouge">power to kwh</code>, create a feed called <strong>use_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code>.</li>
 </ol>
 
-<h3 id="a-classtitle-link-nameconfigure-myelectric-app-hrefconfigure-myelectric-appa-configure-myelectric-app"><a class="title-link" name="configure-myelectric-app" href="#configure-myelectric-app"></a> Configure MyElectric App</h3>
+<h3 id="a-classtitle-link-name4-configure-myelectric-app-href4-configure-myelectric-appa-4-configure-myelectric-app"><a class="title-link" name="4-configure-myelectric-app" href="#4-configure-myelectric-app"></a> 4. Configure MyElectric App</h3>
 
 <p>With your emonPi or emonTx inputs configured as above and with use of the suggested feed names the MyElectric app will launch with no further configuration required.</p>
 
