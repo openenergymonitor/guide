@@ -18,7 +18,7 @@ footer: true
 2. Emoncms Android App
 3. Custom using dashboard Builder drag'n-drop editor
 
-*Dashboard configuration setup is identical on local Emoncms and [Emoncms.org](http://emoncms.org).*
+*Note: Dashboard configuration setup is identical on local Emoncms and [Emoncms.org](http://emoncms.org).*
 
 
 ## 1. Application Specific Dashboards
