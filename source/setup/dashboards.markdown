@@ -23,7 +23,6 @@ footer: true
 
 ## 1. Application Specific Dashboards
 
-See application specific pages:
 
 #### [My Home Energy](/applicatins/home-energy)
 

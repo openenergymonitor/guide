@@ -40,8 +40,8 @@ Additional energy monitoring nodes can be added if more AC circuits require moni
 
 - Install clip on CT(s) on circuit to be monitored Follow [CT installation instructions](/setup/install). and plug into emonTx jack plug sockets
   - *CT 1-3 are standard 100A / 24KW max CT inputs (@240V)*
-  - *CT 4 is a special *high sensitivity* input for 19A / 4.6KW* (@240V)
-  - *The same [100A SCT-013-00 CT sensors should be used](http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/)*
+  - *CT 4 is a special high sensitivity input for 19A / 4.6KW (@240V)*
+  - *Recomended [100A SCT-013-00 CT sensors should be used](http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/)*
 - (Optional) Plug in temperature sensor(s) and [optical pulse count sensor](http://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/)
 
 
