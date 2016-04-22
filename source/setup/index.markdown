@@ -41,7 +41,7 @@ ___
 
 #### Sensors:
 
- - 1 X [Clip-on CT sensors](https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) (emonPi can accept up to two CT sensrs, one is included as standard with emonPi)
+ - 1 X [Clip-on CT sensors](https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) (the emonPi can accept up to two CT sensors; one is included as standard with the emonPi)
  - 1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/components/) (optional but highly recommended)
 
 #### Power Adapters:
