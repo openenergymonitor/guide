@@ -34,7 +34,7 @@ ___
 
 - Raspberry Pi-based energy monitor
 - Install next to utility meter
-- Local & Remote Emoncms data logging
+- Local & remote data logging with [Emoncms](https://emoncms.org/), our open-source web-app for processing, logging and visualising energy and other environmental data, such as humidity and temperature.
 - Requires WiFi / Ethernet plus 2 x power outlets
 
 <p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>

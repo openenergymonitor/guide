@@ -28,7 +28,9 @@ MYSQL: `root` user password is `emonpimysql2016` and mysql `emoncms` user passwo
 
 Mosquitto MQTT: port:1883 user,pass:`emonpi`,`emonpimqtt2016`
 
-change it here: `/etc/mosquitto/mosquitto.conf` if Mosquitto password is change it will also need to changed in:
+Generate a new password using `sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>`. Then restart mosquitto `sudo service mosquitto restart`.
+
+If Mosquitto password is change it will also need to changed in:
 
 ```
 ~/emonpi/lcd/emonPiLCD.py
