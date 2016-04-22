@@ -32,6 +32,12 @@ Your safety is your responsibility. Clip-on current sensors are non-invasive and
 - CT sensor cable should not be extended to avoid induced noise
 - For Solar PV install see [Solar PV Application page](/applications/solar-pv/#sensor-installation)
 
+<p class='note'>
+The clip-on CT sensors must be clipped round either the live or Neutral AC wire. <strong>NOT BOTH</strong>.
+</p>
+
+![CT sensor installation ](/images/applications/solar-pv/ctinstall.jpg)
+
 
 
 ## 2. **AC-AC Adpater**
@@ -65,13 +71,6 @@ Your safety is your responsibility. Clip-on current sensors are non-invasive and
 - Sensor wire can be extended using RJ45 cable and [RJ45 Extender](http://shop.openenergymonitor.com/rj45-extender/)
 
 ![home energy](/images/applications/home-energy/home-energy-emonpi-install.jpg)
-
-
-<p class='note'>
-The clip-on CT sensors must be clipped round either the live or Neutral AC wire. NOT BOTH:
-</p>
-
-![CT sensor installation ](/images/applications/solar-pv/ctinstall.jpg)
 
 ## Power Up
 
