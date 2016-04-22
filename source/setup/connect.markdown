@@ -48,7 +48,7 @@ This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/
 ## 2. **Enter emonPi IP-address in your web browser address bar**
 
 - Browsing the hostname will work on some networks: [http://emonpi](http://emonpi)
-- *If using an emonBase and the hostname does not work, you can look up its IP address from your router or use third party software such as the Fing-Network Discovery Tool on [Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en_GB) and [iOS](https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8)*.
+- *If using an emonBase and hostname does not work, lookup it's IP address from your router or use Fing Network Discovery tool on [Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en_GB) and [iOS](https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8)*.
 
 
 ## 3. **Create local Emoncms user account**
@@ -88,8 +88,14 @@ After a few seconds info should refresh automatically to report `Status: Connect
   <div id="demo" class="collapse">
     <p>If local static IP address is required the easiest way is to allow IP address to be given via DHCP then fix the IP address on the router. Not all routes support this.</p>
 
-    <p>Alternatively to set a static IP address on the emonPi itself we need to connect via SSH and edit /etc/network/interfaces. E.g the following will setup a static IP on Etherent. For WiFi change eth0 to wlan0.</p>
-    ```
+    <p>Alternatively to set a static IP address on the emonPi itself connect via SSH and edit /etc/network/interfaces. E.g the following commands will SSH into emonPi, create backup of the interfaces file then setup a static IP on Ethernet. For WiFi change eth0 to wlan0.</p>
+    <pre>
+    $ shh pi@192.168.X.X
+    User: "pi" | Password: "emonpi2016"
+    $ sudo cp /etc/network/interfaces /etc/network/backup_interfaces
+    $ sudo nano /etc/network/interfaces
+    <br>
+    > Edit the file to be the following changing to suit your network: <br>
     auto lo
     iface lo inet loopback
     iface eth0 inet static
@@ -99,15 +105,13 @@ After a few seconds info should refresh automatically to report `Status: Connect
     network 10.0.1.0
     broadcast 10.0.1.255
     gateway 10.0.1.254
-    ```
+    </pre>
     <a href="http://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address">Tutorial - How to give your Raspberry Pi a Static IP Address</a>
 
 
   </div>
 </div>
 <br>
-
-
 
 ## 5. Update
 
