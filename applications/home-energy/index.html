@@ -147,7 +147,78 @@
   <hr class="divider">
   
 
-  
+  <p>The OpenEnergyMonitor system can be used as a simple home energy monitoring system for understanding energy consumption. 
+View and explore real-time power and daily energy consumption in kWh.</p>
+
+<p>MyElectric is a dashboard app which runs on <a href="https://Emoncms.org">Emoncms</a>.</p>
+
+<p><img src="/images/applications/solar-pv/my-solar-pv.jpg" alt="MyElectric" /></p>
+
+<h2 id="explore-visualise">Explore, visualise:</h2>
+
+<ul>
+  <li>Site-consumption, power in watts.</li>
+  <li>Daily energy consumption in kWh</li>
+  <li>Indication of electricity cost (unit price and currency options)</li>
+</ul>
+
+<h3 id="contents">Contents</h3>
+
+<ol>
+  <li>Required Hardware</li>
+  <li>Sensor Installation</li>
+  <li>Emoncms Feed Setup</li>
+  <li>Emoncms MyElectric App</li>
+</ol>
+
+<h3 id="required-hardware">Required Hardware</h3>
+
+<p>See Home Energy Monitor tab of <a href="/setup/">Setup &gt; Required Hardware</a></p>
+
+<p>The Emoncms setup instructions below are applicable to both the emonPi and the emonTx where CT1 is site consumption. If using an emonTx substitute the ‘log to feed’ instructions to use an input from the emonTx instead of emonPi.</p>
+
+<h3 id="a-classtitle-link-namesensor-installation-hrefsensor-installationa-sensor-installation"><a class="title-link" name="sensor-installation" href="#sensor-installation"></a> Sensor Installation</h3>
+
+<p class="note warning">
+<a href="https://openenergymonitor.org/emon/Current_Transformer_Installation">Please read the CT installation guide before installing.</a>
+Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off, prior to installing your sensors, and proceeding slowly with care. If you have any doubts, seek professional assistance.
+</p>
+
+<p class="note">
+The clip-on CT sensors must be clipped round either the live or Neutral AC wire. Not both.
+</p>
+
+<p><img src="/images/applications/solar-pv/ctinstall.jpg" alt="CT sensor installation " /></p>
+
+<p class="note">
+The polarity of the power readings depends on the orientation of the clip-on CT sensor. Orientate the CTs so that site-consumption is positive. The correct orientation can be determined by trial and error.
+</p>
+
+<p class="note">
+For automatic MyElectric App setup use the suggested feed names in <b>bold</b>. The names are case sensitive.
+</p>
+
+<p><strong>Setup site-consumption Feed</strong></p>
+
+<p><em>Assuming CT1 (power 1) = site-consumption</em></p>
+
+<ol>
+  <li>Click on spanner icon to configure <code class="highlighter-rouge">emonPi/power1</code>.</li>
+  <li>Select <code class="highlighter-rouge">log to feed</code> and create a feed called <strong>use</strong> with the feed engine set to PHPFina and feed <code class="highlighter-rouge">interval=10s</code>.</li>
+  <li>Select <code class="highlighter-rouge">power to kwh</code>, create a feed called <strong>use_kwh</strong> with feed engine <code class="highlighter-rouge">PHPFina</code> and feed <code class="highlighter-rouge">interval=10s</code>.</li>
+</ol>
+
+<h3 id="a-classtitle-link-nameconfigure-myelectric-app-hrefconfigure-myelectric-appa-configure-myelectric-app"><a class="title-link" name="configure-myelectric-app" href="#configure-myelectric-app"></a> Configure MyElectric App</h3>
+
+<p>With your emonPi or emonTx inputs configured as above and with use of the suggested feed names the MyElectric app will launch with no further configuration required.</p>
+
+<p>Alternatively the MyElectric app will automatically show the configuration screen if it can’t detect the expected feeds. It’s then possible to select feeds from the drop down feed selector menus:</p>
+
+<p>Once the required feeds are selected, the Launch App button will appear.</p>
+
+<h3 id="a-classtitle-link-namemy-electric-app-hrefmy-electric-appa-my-electric-app"><a class="title-link" name="my-electric-app" href="#my-electric-app"></a> My Electric App</h3>
+
+<p>The main view shows a moving window power view of site-consumption in the top half and historic daily energy consumption in kWh in the bottom half.</p>
 
 
 </article>
