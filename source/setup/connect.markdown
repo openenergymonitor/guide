@@ -92,6 +92,7 @@ After a few seconds info should refresh automatically to report `Status: Connect
     <pre>
     $ shh pi@192.168.X.X
     User: "pi" | Password: "emonpi2016"
+    $ rpi-rw
     $ sudo cp /etc/network/interfaces /etc/network/backup_interfaces
     $ sudo nano /etc/network/interfaces
     <br>
@@ -105,6 +106,9 @@ After a few seconds info should refresh automatically to report `Status: Connect
     network 10.0.1.0
     broadcast 10.0.1.255
     gateway 10.0.1.254
+    <br>
+    [CTRL + X] then Y to save and exit nano
+    $rpi-ro
     </pre>
     <a href="http://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address">Tutorial - How to give your Raspberry Pi a Static IP Address</a>
 
