@@ -13,15 +13,21 @@ footer: true
 
 ### [Next step: Add Energy Nodes &raquo;](/setup/emontx/)
 
-#### Dashboards can be created using:
-1. Dashboard Builder drag'n-drop editor
+#### Emoncms dashboards can be
+1. Custom using dashboard Builder drag'n-drop editor
 2. Pre-build application specific dashboard Apps
-3. MyElectric Android App
+3. Emoncms Android App
 
 Dashboard configuration is the same on local Emoncms and [Emoncms.org](http://emoncms.org).
 
 
 ## 1. Dashboard Editor
+
+Custom dashboards can be created by drag and dropping widgets and graphs onto a canvas. Here is an example of what's possible created by a community member, see [forum thread](https://openenergymonitor.org/emon/node/11593):
+
+![Example dashboard](https://openenergymonitor.org/emon/sites/default/files/Dashboards%20v7.0.JPG)
+
+### Dashboard builder video guide
 
 <div class='videoWrapper'>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eqN9rc9VnqI" frameborder="0" allowfullscreen></iframe>
