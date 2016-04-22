@@ -14,7 +14,7 @@ View and explore real-time power and daily energy consumption in kWh.
 
 MyElectric is a dashboard app which runs on [Emoncms](https://Emoncms.org).
 
-![MyElectric](/images/applications/solar-pv/my-solar-pv.jpg)
+![MyElectric](/images/applications/home-energy/home-energy-front.jpg)
 
 ## Explore, visualise:
 
