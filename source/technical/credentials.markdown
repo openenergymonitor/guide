@@ -1,12 +1,13 @@
 ---
 layout: page
-title: "Log in credentials"
-description: "dev2"
-date: 2014-12-18 21:49
+title: Service Credentials
+description: dev2
+date: "2014-12-18 21:49"
 sidebar: false
 comments: false
 sharing: true
 footer: true
+published: true
 ---
 
 Default log-in credentials for [pre-built emonPi/emonBase ready-to-go SD card](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log).
