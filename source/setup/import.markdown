@@ -14,6 +14,8 @@ footer: true
 
 ![backup old data](/images/setup/low-write-17june15-backup.png)
 
+![Import](/images/setup/import1.png)
+
 <div class='videoWrapper'>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5U_tOlsWjXM" frameborder="0" allowfullscreen></iframe>
 
