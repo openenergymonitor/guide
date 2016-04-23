@@ -37,7 +37,7 @@ If Mosquitto password is change it will also need to changed in:
 ~/emonpi/lcd/emonPiLCD.py
 ~/data/emonhub.conf
 /var/www/emoncms/settings.php
-/etc/openhab/configurations/openhab.cfg
+~/oem_openHab/openHab.cfg (symlined to /etc/openhab/configurations/openhab.cfg)
 and node red using flows editor
 ```
 

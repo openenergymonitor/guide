@@ -28,14 +28,13 @@ published: true
 
 ___
 
-
-
 #### **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
 - Raspberry Pi-based energy monitor
 - Install next to utility meter
-- Local & remote data logging with [Emoncms](https://emoncms.org/), our open-source web-app for processing, logging and visualising energy and other environmental data, such as humidity and temperature.
+- Local & remote data logging with [Emoncms](https://emoncms.org/), our open-source web-app for processing, logging and visualising energy and other environmental data, such as humidity and temperature
 - Requires WiFi / Ethernet plus 2 x power outlets
+- Requires [pre-built SD card image](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log) (included)
 
 <p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
@@ -67,13 +66,14 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 #### [emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/) (emonPi Alternative)
 
- -  Web connected gateway: [Raspberry Pi](https://shop.openenergymonitor.com/raspberry-pi-2-web-connected-base-station/) + [RFM69Pi RF receiver board](https://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/)
- -  No on-board energy monitoring functions
- -  Receive data via low power RF (433Mhz) from emonTx or emonTH
- -  Local & Remote Emoncms data logging
- -  Runs the same software stack as the emonPi
- -  No LCD screen to display local IP address or shut-down button
- -  Knowledge of SSH is essential
+   -  Web connected gateway: [Raspberry Pi](https://shop.openenergymonitor.com/raspberry-pi-2-web-connected-base-station/) + [RFM69Pi RF receiver board](https://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/)
+  -  No on-board energy monitoring functions
+  -  Receive data via low power RF (433Mhz) from emonTx or emonTH
+  -  Local & Remote Emoncms data logging
+  -  Runs the same [software stack](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log) as the emonPi
+  -  No LCD screen to display local IP address or shut-down button
+  -  Knowledge of SSH highly desirable
+  -  Requires [pre-built SD card image](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log) (optional extra)
 
 ***
 
@@ -104,6 +104,7 @@ ___
 - Local & Remote Emoncms data logging
 - Requires WiFi / Ethernet plus 2 x power outlets
 - Single unit required to monitor solar PV, provided the generation and site-consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accessible at this location
+- Requires [pre-built SD card image](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log) (included)
 
 <p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
@@ -138,9 +139,10 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
   -  No on-board energy monitoring functions
   -  Receive data via low power RF (433Mhz) from emonTx or emonTH
   -  Local & Remote Emoncms data logging
-  -  Runs the same software stack as the emonPi
+  -  Runs the same [software stack](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log) as the emonPi
   -  No LCD screen to display local IP address or shut-down button
-  -  Knowledge of SSH is essential
+  -  Knowledge of SSH highly desirable
+  -  Requires [pre-built SD card image](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log) (optional extra)
 
  ***
 
