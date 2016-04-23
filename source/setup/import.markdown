@@ -12,9 +12,15 @@ footer: true
 ### [&laquo; Previous step: Add Temperature Nodes](/setup/emonth/)
 
 
+## Export
+
 ![backup old data](/images/setup/low-write-17june15-backup.png)
 
+## Import
+
 ![Import](/images/setup/import1.png)
+
+## Video Guide
 
 <div class='videoWrapper'>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5U_tOlsWjXM" frameborder="0" allowfullscreen></iframe>
