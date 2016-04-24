@@ -142,16 +142,16 @@ Alternatively the MySolar app will automatically show the configuration screen i
 
 Once the required feeds are selected, the Launch App button will appear.
 
-{% img /images/applications/solar-pv/my-solarpv-config.png 800 %}
+![my-solarpv-config](/images/applications/solar-pv/my-solarpv-config.png)
 
 ### {% linkable_title Configure My Solar App power view %}
 
 The main view shows a moving window power view of solar generation Vs site-consumption which, can be used to explore matching at any given moment of the day. Site-consumption is shown in blue and solar generation in yellow. The totals at the bottom of the page relate to the current window selected and show at a glance how much of site-consumption was supplied directly from solar and how much of the solar generation was exported to the grid.
 
-{% img /images/applications/solar-pv//my-solarpv1.png 500 %}
+![my-solarpv-config2](/images/applications/solar-pv//my-solarpv1.png)
 
 ### {% linkable_title My Solar history view %}
 
 Clicking on view history brings up a bar graph showing solar generation and site-consumption on a daily basis. Including how much of the solar generation is used directly on site and how much is exported.
 
-{% img /images/applications/solar-pv//my-solar-pv2.png 500 %}
+![my-solarpv-config3](/images/applications/solar-pv//my-solar-pv2.png)
