@@ -150,11 +150,42 @@
 
   <h3 id="laquo-previous-step-add-temperature-nodessetupemonth"><a href="/setup/emonth/">« Previous step: Add Temperature Nodes</a></h3>
 
-<h2 id="export">Export</h2>
+<p>The <a href="https://github.com/emoncms/backup">Emoncms backup module</a> can be used to backup Emoncms account data and import for another Emoncms account. This process can be used to migrate from an older emonPi / emonBase image to the latest image.</p>
+
+<h4 id="included-in-backup">Included in backup</h4>
+
+<ul>
+  <li>Feed data</li>
+  <li>Input processing settings</li>
+  <li>Dashboards</li>
+  <li>MyElectric / MySolarPV app settings</li>
+  <li>EmonHub <code class="highlighter-rouge">emonhub.conf</code>*</li>
+  <li>Emocms <code class="highlighter-rouge">settings.php</code>*</li>
+</ul>
+
+<p>* <em>Inluded in backup but not restored due to potential version confilcts: saved as <code class="highlighter-rouge">old.xxxx.xxx</code> in <code class="highlighter-rouge">~/data</code> for manual restore if required</em></p>
+
+<h4 id="not-included-in-backup">Not included in backup</h4>
+
+<ul>
+  <li>WiFi settings &amp; passwrod</li>
+  <li>nodeRED flows</li>
+  <li>Custom openHAB settings</li>
+</ul>
+
+<h2 id="backup--export">Backup / Export</h2>
 
 <p><img src="/images/setup/low-write-17june15-backup.png" alt="backup old data" /></p>
 
-<h2 id="import">Import</h2>
+<h3 id="backing-up-items-not-automaticlly-included">Backing up items not automaticlly included</h3>
+
+<ul>
+  <li>Wifi settings &amp; password: backup <code class="highlighter-rouge">~/data/wpa_supplicant.conf</code></li>
+  <li>nodeRED flows: select all flows then hit <code class="highlighter-rouge">menu &gt; export &gt; clipboard</code> then copy the JSON text and save to a file</li>
+  <li>openHAB custom config: backup <code class="highlighter-rouge">~/data/open_openHab</code> folder</li>
+</ul>
+
+<h2 id="import--restore">Import / Restore</h2>
 
 <p><img src="/images/setup/import1.png" alt="Import" /></p>
 
@@ -162,39 +193,46 @@
 Backup <b>tar.gz</b> filename cannot contain any spaces e.g if same backup has been downloaded twice <b>'emoncms-backup-2016-04-23 (1).tar'</b> &gt; rename to <b>'emoncms-backup-2016-04-23.tar'</b> before uploading.
 </p>
 
-<p>Succesfull import log example</p>
+<div class="container">
+  <h3>Succesfull import log</h3>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">View example</button>
+  <div id="demo" class="collapse">
 
-<pre><code class="language-console">=== Emoncms import start ===
-Sat 23 Apr 00:42:28 UTC 2016
-Reading ~/backup/config.cfg....
-Location of mysql database: /home/pi/data
-Location of emonhub.conf: /home/pi/data
-Location of emoncms.conf: /home/pi/data
-Location of Emoncms: /var/www/emoncms
-Backup destination: /home/pi/data
-Backup source path: /home/pi/data/uploads
-Starting import from /home/pi/data/uploads to /home/pi/data...
-Image version: emonSD-29Mar16
-new image
-Backup found: emoncms-backup-2016-04-23.tar.gz starting import..
-Decompressing backup..
-Removing compressed backup to save disk space..
-Wipe any current data from account..
-Restore phpfina and phptimeseries data folders...
-Emoncms MYSQL database import...
-Import emonhub.conf &gt; /home/pi/data/old.emohub.conf
-Import emoncms.conf &gt; /home/pi/data/old.emoncms.conf
-Start with fresh config: copy NEW default emonpi.emonhub.conf:
-cp /home/pi/emonhub/conf/emonpi.default.emonhub.conf /home/pi/data/emonhub.conf
-OK
-Update Emoncms Database
-["ALTER TABLE dashboard MODIFY `height` int(11) Default '600'","ALTER TABLE dashboard MODIFY `main` tinyint(1) Default '0'","ALTER TABLE dashboard MODIFY `public` tinyint(1) Default '0'","ALTER TABLE dashboard MODIFY `published` tinyint(1) Default '0'","ALTER TABLE dashboard MODIFY `showdescription` tinyint(1) Default '0'","ALTER TABLE `dashboard` ADD `backgroundcolor` varchar(6) NOT NULL DEFAULT 'EDF7FC'","ALTER TABLE feeds MODIFY `time` int(10);","ALTER TABLE feeds MODIFY `value` double;","ALTER TABLE `feeds` ADD `processList` text NOT NULL","ALTER TABLE input MODIFY `time` int(10);","ALTER TABLE users MODIFY `salt` varchar(32);","ALTER TABLE users MODIFY `timezone` varchar(64) Default 'UTC';"]
-Restarting emonhub...
-Restarting feedwriter...
-Sat 23 Apr 00:42:39 UTC 2016
-</code></pre>
 
-<p>=== Emoncms import complete! ===
+    === Emoncms import start ===
+    Sat 23 Apr 00:42:28 UTC 2016
+    Reading ~/backup/config.cfg....
+    Location of mysql database: /home/pi/data
+    Location of emonhub.conf: /home/pi/data
+    Location of emoncms.conf: /home/pi/data
+    Location of Emoncms: /var/www/emoncms
+    Backup destination: /home/pi/data
+    Backup source path: /home/pi/data/uploads
+    Starting import from /home/pi/data/uploads to /home/pi/data...
+    Image version: emonSD-29Mar16
+    new image
+    Backup found: emoncms-backup-2016-04-23.tar.gz starting import..
+    Decompressing backup..
+    Removing compressed backup to save disk space..
+    Wipe any current data from account..
+    Restore phpfina and phptimeseries data folders...
+    Emoncms MYSQL database import...
+    Import emonhub.conf &gt; /home/pi/data/old.emohub.conf
+    Import emoncms.conf &gt; /home/pi/data/old.emoncms.conf
+    Start with fresh config: copy NEW default emonpi.emonhub.conf:
+    cp /home/pi/emonhub/conf/emonpi.default.emonhub.conf /home/pi/data/emonhub.conf
+    OK
+    Update Emoncms Database
+    ["ALTER TABLE dashboard MODIFY `height` int(11) Default '600'","ALTER TABLE dashboard MODIFY `main` tinyint(1) Default '0'","ALTER TABLE dashboard MODIFY `public` tinyint(1) Default '0'","ALTER TABLE dashboard MODIFY `published` tinyint(1) Default '0'","ALTER TABLE dashboard MODIFY `showdescription` tinyint(1) Default '0'","ALTER TABLE `dashboard` ADD `backgroundcolor` varchar(6) NOT NULL DEFAULT 'EDF7FC'","ALTER TABLE feeds MODIFY `time` int(10);","ALTER TABLE feeds MODIFY `value` double;","ALTER TABLE `feeds` ADD `processList` text NOT NULL","ALTER TABLE input MODIFY `time` int(10);","ALTER TABLE users MODIFY `salt` varchar(32);","ALTER TABLE users MODIFY `timezone` varchar(64) Default 'UTC';"]
+    Restarting emonhub...
+    Restarting feedwriter...
+    Sat 23 Apr 00:42:39 UTC 2016
+
+
+  </div>
+</div>
+<p><br />
+=== Emoncms import complete! ===
 ## Video Guide</p>
 
 <div class="videoWrapper">
