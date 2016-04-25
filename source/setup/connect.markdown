@@ -82,7 +82,7 @@ After a few seconds info should refresh automatically to report `Status: Connect
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 
-<div class="container">
+<div class="container" style="margin: left;">
   <h3>Static IP Setup (Advanced)</h3>
   <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Show Advanced</button>
   <div id="demo" class="collapse">
