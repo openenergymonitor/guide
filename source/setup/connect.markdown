@@ -14,7 +14,7 @@ published: true
 
 ### [Next step: Install &raquo;](/setup/install/)
 
-#  First Boot
+### **First Boot**
 
 <p class="note">
 <b>This guide assumes using emonPi / emonBase pre-built SD card.</b>
@@ -34,7 +34,7 @@ This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/
 <b>Emoncms remote:</b> Emoncms.org cloud server.
 </p>
 
-## 1. Connect Ethernet and USB power
+### 1. **Connect Ethernet and USB power**
 
 ![emonPi First Boot Etherent](/images/setup/emonpi_ethernet_first_boot.png)
 
@@ -45,19 +45,19 @@ This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/
  - ![Ethernet Connected](/images/setup/Etherent_Connected.jpg)
 
 
-## 2. **Enter emonPi IP-address in your web browser address bar**
+### 2. **Enter emonPi IP-address in your web browser address bar**
 
 - Browsing the hostname will work on some networks: [http://emonpi](http://emonpi)
 - *If using an emonBase and hostname does not work, lookup it's IP address from your router or use Fing Network Discovery tool on [Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en_GB) and [iOS](https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8)*.
 
 
-## 3. **Create local Emoncms user account**
+### 3. **Create local Emoncms user account**
 
  {% img /images/setup/Emoncms_reg.png 250 %}
 
   - By default only a single (admin) account can be created on local emonPi Emoncms. To enable multiple accounts edit Emoncms settings in `/var/www/emoncms/settings.php`
 
-## 4. Connect to WiFi (optional)
+### 4. Connect to WiFi (optional)
 
 WiFi is optional and requires either a RaspberryPi3 (integrated WiFi) or a USB WiFi dongle ([Edimax EW7811UN](http://shop.openenergymonitor.com/edimax-usb-wifi-adapter-ew-7811un/)).
 
@@ -117,11 +117,11 @@ After a few seconds info should refresh automatically to report `Status: Connect
 </div>
 <br>
 
-## 5. Update
+### 5. Update
 
 **UPDATE HIGHLY RECOMMENDED:** Now your emonPi is connected to a network this would be a good time to pull in any new updates: `Setup > Admin > Update`
 
-## 6. Shutdown
+### 6. Shutdown
 
 Shutdown emonPi by press-and-holding the shutdown button on the side, with a paper clip for 5 seconds then waiting 30s for unit to fully shutdown.
 
