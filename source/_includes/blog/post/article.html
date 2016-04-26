@@ -14,9 +14,8 @@
     {% include post/time_to_read.html %}
     {% include blog/post/tags.html %}
     {% if site.disqus_short_name and page.comments != false and post.comments != false and site.disqus_show_comment_count == true %}
-      <a class='comments'
-         href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread"
-         >Comments</a>
+        | <a href="{{ root_url }}{{ post.url }}{% endif %}#disqus_thread"
+        data-disqus-identifier="{% if post.meta.disqus_id %}{{ post.meta.disqus_id }}{% else %}{{ site.url }}{{ post.url }}">Comments</a>
     {% endif %}
   </div>
   {% endunless %}
