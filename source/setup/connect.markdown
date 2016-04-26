@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Connect
-description: "Connect to network & create account"
+description: Connect to network & create account
 date: "2015-03-08 21:36"
 sidebar: true
 comments: false
@@ -9,7 +9,6 @@ sharing: true
 footer: true
 published: true
 ---
-
 ### [&laquo; Previous step: Required Hardware](/setup/)
 
 ### [Next step: Install &raquo;](/setup/install/)
@@ -82,6 +81,12 @@ After a few seconds info should refresh automatically to report `Status: Connect
 
 $(document).ready(function(){
 
+<<<<<<< HEAD
+<div class="container">
+  <h3>Static IP Setup (Advanced)</h3>
+  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Show Advanced</button>
+  <div id="demo" class="collapse">
+=======
 
    $('.show_hide').showHide({
 		speed: 100,  // speed you want the toggle to happen
@@ -100,6 +105,7 @@ $(document).ready(function(){
 
 <button type="button" class="show_hide" href="#" rel="#slidingDiv">View</button>
 <div id="slidingDiv" class="toggleDiv" style="display: none;">
+>>>>>>> d75afd93f484a1d9c158cf20cc379ce622c2d872
     <p>If local static IP address is required the easiest way is to allow IP address to be given via DHCP then fix the IP address on the router. Not all routes support this.</p>
 
     <p>Alternatively to set a static IP address on the emonPi itself connect via SSH and edit /etc/network/interfaces. E.g the following commands will SSH into emonPi, create backup of the interfaces file then setup a static IP on Ethernet. For WiFi change eth0 to wlan0.</p>
@@ -130,6 +136,7 @@ $(document).ready(function(){
 </div>
 
 <br>
+
 
 ### 5. Update
 

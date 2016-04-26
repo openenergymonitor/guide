@@ -26,6 +26,12 @@ published: true
 
 ### {% linkable_title Home Energy Hardware %}
 
+The OpenEnergyMonitor system can be used as a simple home energy monitoring system for analyzing real-time power use and daily energy consumption.
+
+*All of our hardware units are based on the [Arduino](http://www.arduino.cc/) platform and are fully open-source.*
+
+
+
 ___
 
 #### **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
