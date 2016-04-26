@@ -60,7 +60,7 @@ gems:
   - octopress-filters
   - octopress-include-tag
 
-paginate: 10          # Posts per page on the blog index
+paginate: 5          # Posts per page on the blog index
 paginate_path: "blog/posts/:num"  # Directory base for pagination URLs eg. /posts/2/
 recent_posts: 5       # Posts in the sidebar Recent Posts section
 excerpt_link: "Read on &rarr;"  # "Continue reading" link text at the bottom of excerpted articles
@@ -114,7 +114,7 @@ disqus_short_name: openenergymonitor
 disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id: UA-10321170-3
+google_analytics_tracking_id: UA-10321170-5
 
 # Facebook Like
 facebook_like: true

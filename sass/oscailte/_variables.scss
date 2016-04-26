@@ -10,8 +10,12 @@ $sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 // Grays
 // -------------------------
 $black:             #000 !default;
-$grayDarker:        #222 !default;
-$grayDark:          #333 !default;
+
+//$grayDarker:        #222 !default;
+//$grayDark:          #333 !default;
+$grayDarker:        #555 !default;
+$grayDark:          #555 !default;
+
 $gray:              #555 !default;
 $grayLight:         #999 !default;
 $grayLighter:       #eee !default;
@@ -19,7 +23,7 @@ $white:             #fff !default;
 
 // Accent colors
 // -------------------------
-$blue:              #049cdb !default;
+$blue:              #0699fa !default;
 $blueDark:          #0064cd !default;
 $green:             #46a546 !default;
 $red:               #9d261d !default;
