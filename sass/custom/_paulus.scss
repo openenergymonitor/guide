@@ -372,6 +372,21 @@ p.note {
   font-size: .8em;
 }
 
+ul.sidebar-menu {
+  a.active {
+    color: #000;
+    font-weight: bold;
+  }
+
+  ul {
+    margin-left: 30px;
+  }
+}
+
+a code {
+  color: #049cdb;
+}
+
 #slidingDiv, #slidingDiv_2{
 	//height:1500px;
 	background-color: #99CCFF;
