@@ -11,13 +11,13 @@ footer: true
 
 ### [&laquo; Previous step: Add Energy Nodes](/setup/emontx/)
 
+### [Nexr step: Import / Backup &raquo;](/setup/import/)
+
 ## Add additional temperature monitoring nodes
 
 ### emonTH
 
-  1. Step 1
-  2. Step 2
-  3.
+UNDER CONSTRUCTION
 
 <br>
 

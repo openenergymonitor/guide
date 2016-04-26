@@ -49,12 +49,44 @@ Backup <b>tar.gz</b> filename cannot contain any spaces e.g if same backup has b
 </p>
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script src="/javascripts/showHide.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+
+   $('.show_hide').showHide({
+		speed: 1000,  // speed you want the toggle to happen
+		easing: '',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
+		changeText: 1, // if you dont want the button text to change, set this to 0
+		showText: 'View',// the button text to show when a div is closed
+		hideText: 'Close' // the button text to show when a div is open
+					 
+	});
+
+
+});
+
+</script>
+
+<a class="show_hide" href="#" rel="#slidingDiv">View</a></pre>
+<div id="slidingDiv" class="toggleDiv" style="display: none;">Fill this space with really interesting content.</div>
+
+
+
+
+    
+
+
+  
 <div class="container">
   <h3>Succesfull import log</h3>
   <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">View example</button>
+  
   <div id="demo" class="collapse">
-
-
+<br>
+    <pre>
     === Emoncms import start ===
     Sat 23 Apr 00:42:28 UTC 2016
     Reading ~/backup/config.cfg....
@@ -83,12 +115,14 @@ Backup <b>tar.gz</b> filename cannot contain any spaces e.g if same backup has b
     Restarting emonhub...
     Restarting feedwriter...
     Sat 23 Apr 00:42:39 UTC 2016
-
-
+    === Emoncms import complete! ===
+    </pre>
   </div>
 </div>
 <br>
-=== Emoncms import complete! ===
+
+
+
 ## Video Guide
 
 <div class='videoWrapper'>
