@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Connect
-description: "Connect to network & create account"
+description: Connect to network & create account
 date: "2015-03-08 21:36"
 sidebar: true
 comments: false
@@ -9,7 +9,6 @@ sharing: true
 footer: true
 published: true
 ---
-
 ### [&laquo; Previous step: Required Hardware](/setup/)
 
 ### [Next step: Install &raquo;](/setup/install/)
@@ -81,7 +80,6 @@ After a few seconds info should refresh automatically to report `Status: Connect
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-
 <div class="container">
   <h3>Static IP Setup (Advanced)</h3>
   <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Show Advanced</button>
@@ -116,6 +114,7 @@ After a few seconds info should refresh automatically to report `Status: Connect
   </div>
 </div>
 <br>
+
 
 ### 5. Update
 

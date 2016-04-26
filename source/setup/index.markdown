@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Recommended Hardware
+title: Required Hardware
 description: Getting started with OpenEnergyMonitor
 date: "2014-12-18 22:57"
 sidebar: true
@@ -25,6 +25,12 @@ published: true
 
 
 ### {% linkable_title Home Energy Hardware %}
+
+The OpenEnergyMonitor system can be used as a simple home energy monitoring system for analyzing real-time power use and daily energy consumption.
+
+*All of our hardware units are based on the [Arduino](http://www.arduino.cc/) platform and are fully open-source. Please help support the OpenEnergyMonitor project by buying hardware through our official [Online Store](https://shop.openenergymonitor.com/).*
+
+
 
 ___
 
