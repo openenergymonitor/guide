@@ -11,7 +11,7 @@ footer: true
 
 ### [&laquo; Previous step: Add Temperature Nodes](/setup/emonth/)
 
-The [Emoncms backup module](https://github.com/emoncms/backup) can be used to backup Emoncms account data and import for another Emoncms account. This process can be used to migrate from an older emonPi / emonBase image to the latest image.
+The [Emoncms backup module](https://github.com/emoncms/backup) can be used to backup Emoncms account data and import data from another Emoncms account. This process can also be used to migrate from an older emonPi / emonBase image to the latest image.
 
 #### Included in backup
 
@@ -20,13 +20,13 @@ The [Emoncms backup module](https://github.com/emoncms/backup) can be used to ba
 - Dashboards
 - MyElectric / MySolarPV app settings
 - EmonHub `emonhub.conf`*
-- Emocms `settings.php`*
+- Emoncms `settings.php`*
 
-\* *Inluded in backup but not restored due to potential version confilcts: saved as `old.xxxx.xxx` in `~/data` for manual restore if required*
+\* *Included in backup but not restored due to potential version conflicts: saved as `old.xxxx.xxx` in `~/data` for manual restore if required*
 
 #### Not included in backup
 
-- WiFi settings & passwrod
+- WiFi settings & password
 - nodeRED flows
 - Custom openHAB settings
  
@@ -34,9 +34,9 @@ The [Emoncms backup module](https://github.com/emoncms/backup) can be used to ba
 
 ![backup old data](/images/setup/low-write-17june15-backup.png)
 
-### Backing up items not automaticlly included
+### Backing up items not automatically included
 
-- Wifi settings & password: backup `~/data/wpa_supplicant.conf`
+- WiFi settings & password: backup `~/data/wpa_supplicant.conf`
 - nodeRED flows: select all flows then hit `menu > export > clipboard` then copy the JSON text and save to a file
 - openHAB custom config: backup `~/data/open_openHab` folder
 
