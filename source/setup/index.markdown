@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Recommended Hardware
+title: Hardware
 description: Getting started with OpenEnergyMonitor
 date: "2014-12-18 22:57"
 sidebar: true
