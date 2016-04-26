@@ -49,6 +49,8 @@ Backup <b>tar.gz</b> filename cannot contain any spaces e.g if same backup has b
 </p>
 
 
+### Successful import log example
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
 <script src="/javascripts/showHide.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -57,9 +59,9 @@ $(document).ready(function(){
 
 
    $('.show_hide').showHide({
-		speed: 1000,  // speed you want the toggle to happen
+		speed: 100,  // speed you want the toggle to happen
 		easing: '',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
-		changeText: 1, // if you dont want the button text to change, set this to 0
+		changeText: 0, // if you dont want the button text to change, set this to 0
 		showText: 'View',// the button text to show when a div is closed
 		hideText: 'Close' // the button text to show when a div is open
 					 
@@ -70,24 +72,11 @@ $(document).ready(function(){
 
 </script>
 
-<a class="show_hide" href="#" rel="#slidingDiv">View</a></pre>
-<div id="slidingDiv" class="toggleDiv" style="display: none;">Fill this space with really interesting content.</div>
 
+<button type="button" class="show_hide" href="#" rel="#slidingDiv">View</button>
+<div id="slidingDiv" class="toggleDiv" style="display: none;">
 
-
-
-    
-
-
-  
-<div class="container">
-  <h3>Succesfull import log</h3>
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">View example</button>
-  
-  <div id="demo" class="collapse">
-<br>
-    <pre>
-    === Emoncms import start ===
+<pre>
     Sat 23 Apr 00:42:28 UTC 2016
     Reading ~/backup/config.cfg....
     Location of mysql database: /home/pi/data
@@ -116,10 +105,10 @@ $(document).ready(function(){
     Restarting feedwriter...
     Sat 23 Apr 00:42:39 UTC 2016
     === Emoncms import complete! ===
-    </pre>
-  </div>
+</pre>
 </div>
-<br>
+
+
 
 
 
@@ -127,11 +116,16 @@ $(document).ready(function(){
 
 <div class='videoWrapper'>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5U_tOlsWjXM" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<br>
+
+### Next step: See Applications:
 
 
-### &laquo; Next step: See Applications >
 
-**For application specific configuration:**
-[Home Energy Monitor](/applications/home-energy/)
-[Solar PV Monitor](/applications/solar-pv/)
-[Advanced]((/applications/advanced) e.g openHAB, nodeRED etc
+#### [Home Energy Monitor](/applications/home-energy/)
+
+#### [Solar PV Monitor](/applications/solar-pv/)
+
+#### [Advanced](/applications/advanced) e.g openHAB, nodeRED etc

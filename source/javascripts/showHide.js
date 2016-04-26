@@ -1,8 +1,8 @@
 ///////////////////////////////////////////////////
-// ShowHide plugin                               
+// ShowHide plugin
 // Author: Ashley Ford - http://papermashup.com
 // Demo: Tutorial - http://papermashup.com/jquery-show-hide-plugin
-// Built: 19th August 2011                                     
+// Built: 19th August 2011
 ///////////////////////////////////////////////////
 
 (function ($) {
@@ -10,18 +10,18 @@
 
 		//default vars for the plugin
         var defaults = {
-            speed: 1000,
+            speed: 100,
 			easing: '',
-			changeText: 0,
+			changeText: 1,
 			showText: 'Show',
 			hideText: 'Hide'
 			
         };
         var options = $.extend(defaults, options);
 
-        $(this).click(function () {	
+        $(this).click(function () {
            
-             $('.toggleDiv').slideUp(options.speed, options.easing);	
+             $('.toggleDiv').slideUp(options.speed, options.easing);
 			 // this var stores which button you've clicked
              var toggleClick = $(this);
 		     // this reads the rel attribute of the button to determine which div id to toggle
