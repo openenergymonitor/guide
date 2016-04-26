@@ -74,18 +74,32 @@ WiFi is optional and requires either a RaspberryPi3 (integrated WiFi) or a USB W
 
 After a few seconds info should refresh automatically to report `Status: Connected` and after a few more seconds IP address should appear.
 
+### Assign static IP (Optional & Advanced)
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+<script src="/javascripts/showHide.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
 
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   $('.show_hide').showHide({
+		speed: 100,  // speed you want the toggle to happen
+		easing: '',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
+		changeText: 0, // if you dont want the button text to change, set this to 0
+		showText: 'View',// the button text to show when a div is closed
+		hideText: 'Close' // the button text to show when a div is open
+					 
+	});
 
 
-<div class="container">
-  <h3>Static IP Setup (Advanced)</h3>
-  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Show Advanced</button>
-  <div id="demo" class="collapse">
+});
+
+</script>
+
+
+<button type="button" class="show_hide" href="#" rel="#slidingDiv">View</button>
+<div id="slidingDiv" class="toggleDiv" style="display: none;">
     <p>If local static IP address is required the easiest way is to allow IP address to be given via DHCP then fix the IP address on the router. Not all routes support this.</p>
 
     <p>Alternatively to set a static IP address on the emonPi itself connect via SSH and edit /etc/network/interfaces. E.g the following commands will SSH into emonPi, create backup of the interfaces file then setup a static IP on Ethernet. For WiFi change eth0 to wlan0.</p>
@@ -113,8 +127,8 @@ After a few seconds info should refresh automatically to report `Status: Connect
     <a href="http://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address">Tutorial - How to give your Raspberry Pi a Static IP Address</a>
 
 
-  </div>
 </div>
+
 <br>
 
 ### 5. Update
