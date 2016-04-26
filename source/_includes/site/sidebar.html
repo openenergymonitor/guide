@@ -1,5 +1,6 @@
 <div class="grid">
   {% assign url_parts = page.url | split: '/' %}
+    {% include asides/navigation_side.html %}
     {% include asides/about.html %}
 
     {% if page.blog_index %}
