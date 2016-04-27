@@ -1,12 +1,13 @@
 ---
 layout: page
-title: "Import / Backup"
-description: "Import data from existing emonPi Emoncms accounts"
-date: 2015-03-08 21:36
+title: Import / Backup
+description: Import data from existing emonPi Emoncms accounts
+date: "2015-03-08 21:36"
 sidebar: true
 comments: false
 sharing: true
 footer: true
+published: true
 ---
 
 ### [&laquo; Previous step: Add Temperature Nodes](/setup/emonth/)
@@ -22,7 +23,7 @@ Currently the Backup Module can only be used with Local Emoncms not Emoncms.org 
 
 ### Export from older emonPi / emonBase
 
-If the Backup module is not visible in Local Emoncms menu then emonPi / emonBase is running an old version e.g Emoncms V8.x.
+If the Backup module is not visible in Local Emoncms menu then the emonPi / emonBase is running an old version e.g Emoncms V8.x.
 
 <p class="note">
 To check what software stack (emonSD pre-built SD card) version an emonPi is running see instructions on emonPi <a href="https:github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log">emonSD repository and changelog</a>

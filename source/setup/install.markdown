@@ -52,15 +52,15 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 ## 3. **DC 5V USB Adapter**
 - Plug the DC 5V USB adapter into a power outlet
-- Plug mini-B USB connector into emonPi
-- High quality min [1.2A power supply recommend](https://shop.openenergymonitor.com/power-supplies/)
+- Plug the mini-B USB connector into the emonPi
+- High quality minimum [1.2A power supply recommend](https://shop.openenergymonitor.com/power-supplies/)
 
 <br>
 
 ### 4. *Optical Utility Meter LED Pulse Sensor (optional)*
 - See [Optical Pulse Sensor setup page](http://openenergymonitor.org/emon/opticalpulsesensor)
 - Connects to emonPi / emonTx via RJ45 connector
-- Self-adisive velcro attachment to utility meter
+- Self-adhesive velcro attachment to utility meter
 - One optical pulse sensor per emonPi/emonTx
 - Can be used in conjunction with temperature sensors using [RJ45 Breakout](http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/)
 
@@ -76,7 +76,7 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 
 <p class='note'>
-Ensure all sensors are connected before power up
+Ensure all sensors are connected before powering up.
 </p>
 
 
