@@ -58,7 +58,7 @@ ___
 #### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
 
 - Energy monitoring add-on node
-- Optional add-on if more then two circuits need to be monitored or if WiFi / Ethernet connectivity is not available at utility meter
+- Optional add-on if more then two circuits need to be monitored or if WiFi / Ethernet connectivity is not available at the location of the utility meter
 - RF Range is approximately similar to home WiFi and can be affected by obstacles e.g. thick stone walls
 - Up to 2x emonTx can be connected to a single emonPi
 - To connect an emonTx see: [Setup > Adding Energy Monitoring Node](/setup/emontx)
