@@ -250,13 +250,13 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 \* Requires RJ45 breakout board
 
 
-#### {% linkable_title Use in USA%}
+#### {% linkable_title Use in the USA%}
 
-The emonPi and emonTx are designed to monitor single phase AC up to 100A. The system can work for some set-ups in USA with some changes to the configuration. Users in North America should consult the Building Blocks guide ['emonTx - Use in North America'](http://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) and forum thread discussions [[1]](http://openenergymonitor.org/emon/node/711) [[2]](http://openenergymonitor.org/emon/node/3265).
+The emonPi and emonTx are designed to monitor single phase AC up to 100A. The system can work for some set-ups in the USA with some changes to the configuration. Users in North America should consult the Building Blocks guide ['emonTx - Use in North America'](http://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) and forum thread discussions [[1]](http://openenergymonitor.org/emon/node/711) [[2]](http://openenergymonitor.org/emon/node/3265).
 
-#### {% linkable_title Use with three-phase%}
+#### {% linkable_title Use with 3 phase%}
 
-The emonPi / emonTx have been designed for single-phase AC monitoring. The emonTx can monitor 'approximate' three-phase (assuming balanced phases) using [modified firmware](https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV3/RFM/emonTxV3.4/emonTxV3_4_3Phase_Voltage) and 3x CT sensors + 1 x AC-AC adapter. [Further reading](https://openenergymonitor.org/emon/buildingblocks/3-phase-power)
+The emonPi / emonTx have been designed for single-phase AC monitoring. The emonTx can monitor 'approximate' 3 phase (assuming balanced phases) using [modified firmware](https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV3/RFM/emonTxV3.4/emonTxV3_4_3Phase_Voltage) and 3x CT sensors + 1 x AC-AC adapter. [Further reading](https://openenergymonitor.org/emon/buildingblocks/3-phase-power)
 
 <br>
 
