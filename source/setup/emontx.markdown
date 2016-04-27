@@ -13,6 +13,8 @@ footer: true
 
 ### [Next step: Add Temperature Nodes &raquo;](/setup/emonth/)
 
+***
+
 ## Additional energy monitoring nodes
 
 Additional energy monitoring nodes can be added if more AC circuits require monitoring or the monitoring location of the circuits is inconvenient to access power outlet and network connectivity.
@@ -33,7 +35,7 @@ Additional energy monitoring nodes can be added if more AC circuits require moni
 
 #### 1. DIP Switch Config
 
-- If more than one emonTx is to be used with the same base-station set the node ID using the [on-board DIP switchs](https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4#DIP_Switch_Config).
+- If more than one emonTx is to be used with the same base-station set the node ID using the [on-board DIP switches](https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4#DIP_Switch_Config).
  - *USA mode can also be toggled using DIP switches*
 
 #### 2. Install Sensors
@@ -71,5 +73,7 @@ The emonTx is compatible with emonPi / emonBase. RF transmission from the emonTx
 **Note: if using more than two emonTx units (with custom RF node ID or modified firmware) [`emonhub.conf` node decoders will need to be setup](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md).**
 
 <br>
+
+***
 
 ### [Next step: Add Temperature Nodes &raquo;](/setup/emonth/)

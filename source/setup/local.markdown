@@ -28,11 +28,16 @@ footer: true
 
 <br>
 
-### [Next step: Log Remotely &raquo;](/setup/remote/)
-
-<br>
-
 ### Video Guide
 <div class='videoWrapper'>
 <iframe width="300" height="315" src="https://www.youtube.com/embed/8nVP0Hgkuuc" frameborder="0" allowfullscreen></iframe>
 </div>
+
+<br>
+
+***
+
+### [Next step: Log Remotely &raquo;](/setup/remote/)
+
+
+

@@ -265,11 +265,16 @@ The emonPi / emonTx have been designed for single-phase AC monitoring. The emonT
 
 <br>
 
-### [Next step: Connect &raquo;](/setup/connect/)
-
-<br>
-
 ### Video Guide
 <div class='videoWrapper'>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZEa7neZesko" frameborder="0" allowfullscreen></iframe>
 </div>
+
+<br>
+
+***
+
+### [Next step: Connect &raquo;](/setup/connect/)
+
+
+

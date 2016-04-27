@@ -11,6 +11,8 @@ footer: true
 
 ### [&laquo; Previous step: Add Temperature Nodes](/setup/emonth/)
 
+***
+
 The [Emoncms backup module](https://github.com/emoncms/backup) can be used to backup Emoncms account data and import data from another Emoncms account. This process can also be used to migrate from an older emonPi / emonBase image to the latest image.
 
 <p class="note">
