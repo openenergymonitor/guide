@@ -128,15 +128,50 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <h3 id="next-step-import--backup-raquosetupimport"><a href="/setup/import/">Next step: Import / Backup »</a></h3>
 
+<hr />
+
 <h2 id="add-additional-temperature-monitoring-nodes">Add additional temperature monitoring nodes</h2>
 
-<h3 id="emonth">emonTH</h3>
+<p>Multiple temperature sensors can be connected directly to an emonPi, see Temperature tab of <a href="/setup/hardware">Setup &gt; Hardware</a>.</p>
 
-<p>UNDER CONSTRUCTION</p>
+<h3 id="emonthhttpshopopenenergymonitorcomemonth-433mhz-temperature-humidity-node"><a href="http://shop.openenergymonitor.com/emonth-433mhz-temperature-humidity-node/">emonTH</a></h3>
+
+<ul>
+  <li>Wireless temperature &amp; humidity monitoring node</li>
+  <li>Compatible with emonPi &amp; emonBase</li>
+  <li>6 month battery life (2 x AA not included)</li>
+  <li>Up to 4x emonTH can communicate to a single emonPi*</li>
+  <li>Internal temperature &amp; humidity + optional external probe</li>
+  <li>Optional pulse sensor input</li>
+</ul>
+
+<p>* <em>More than 4x emonTH units can be connected to a single emonPi / emonBase with manual change of RF nodeID. This can be done in the factory, please leave note with your online store order.</em></p>
+
+<p><img src="/images/setup/emonth-plant.png" width="400" /></p>
+
+<h3 id="hardware-setup">Hardware Setup</h3>
+
+<h4 id="dip-switch-config">1. DIP Switch Config</h4>
+
+<ul>
+  <li>If more than one emonTH is to be used with the same base-station set the node ID using the <a href="https://wiki.openenergymonitor.org/index.php/EmonTH_V1.5#DIP_Switch_node_ID">on-board DIP switches</a>.</li>
+</ul>
+
+<h4 id="install-sensors">2. Install Sensors</h4>
+
+<p>Sensors should be pre-installed in the emonTH, if required:</p>
+
+<ul>
+  <li>Install DHT22 sensor into 4-pin socket facing outwards, <a href="http://shop.openenergymonitor.com/emonth-433mhz-temperature-humidity-node/">see photo</a>.</li>
+  <li>External DS18B20 can be wired into terminal block see Hardware Wiki Section</li>
+  <li>Optical Pulse Counting Sensor can be wired into terminal block see <a href="https://wiki.openenergymonitor.org/index.php/EmonTH_V1.5#Pulse_Sensor_Connection">Hardware Wiki Section</a></li>
+</ul>
 
 <p><br /></p>
 
-<h3 id="nexr-step-import--backup-raquosetupimport"><a href="/setup/import/">Nexr step: Import / Backup »</a></h3>
+<hr />
+
+<h3 id="next-step-import--backup-raquosetupimport-1"><a href="/setup/import/">Next step: Import / Backup »</a></h3>
 
 
 </article>

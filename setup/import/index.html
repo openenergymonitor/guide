@@ -126,9 +126,12 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
   <h3 id="laquo-previous-step-add-temperature-nodessetupemonth"><a href="/setup/emonth/">« Previous step: Add Temperature Nodes</a></h3>
 
-<p>The <a href="https://github.com/emoncms/backup">Emoncms backup module</a> can be used to back-up Emoncms account data and import data from another Emoncms account. This process can also be used to migrate from an older emonPi / emonBase image to the latest image.</p>
+<hr />
 
-<p><strong>Currently the Backup Module can only be used with Local Emoncms not Emoncms.org</strong></p>
+<p>The <a href="https://github.com/emoncms/backup">Emoncms backup module</a> can be used to backup Emoncms account data and import data from another Emoncms account. This process can also be used to migrate from an older emonPi / emonBase image to the latest image.</p>
+
+<p class="note">
+Currently the Backup Module can only be used with Local Emoncms not Emoncms.org </p>
 
 <h2 id="backup--export">Backup / Export</h2>
 
@@ -136,28 +139,57 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <p>If the Backup module is not visible in Local Emoncms menu then the emonPi / emonBase is running an old version e.g Emoncms V8.x.</p>
 
-<p><em>To check what software stack (emonSD pre-built SD card) version an emonPi is running see instructions on emonPi <a href="github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&amp;-Change-Log">emonSD repository and changelog</a></em></p>
+<p class="note">
+To check what software stack (emonSD pre-built SD card) version an emonPi is running see instructions on emonPi <a href="https:github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&amp;-Change-Log">emonSD repository and changelog</a>
+</p>
 
-<p>To export data from an older emonPi / emonBase:</p>
+<p>To export data from an older emonPi:</p>
 
 <ol>
   <li>Install the backup module by running <code class="highlighter-rouge">Admin &gt; emonPi update</code> in Local Emoncms</li>
-  <li>Wait (up to) 60s for the update to begin and then another couple of minutes for the update to complete; the update log page can be refreshed to view progress</li>
-  <li>Log-out of, then back in, to Local Emoncms</li>
-  <li>Backup module should now be visible under <code class="highlighter-rouge">Extras &gt; Backup</code></li>
-  <li>Click <code class="highlighter-rouge">Create Backup</code></li>
-  <li>Wait for backup to be created, then refresh the page to view <code class="highlighter-rouge">Download Backup</code> link</li>
+  <li>Wait (up to) 60s for update to begin then another couple of min for update to complete, the update log page can be refreshed to view progress</li>
+  <li>Log-out then back into Local Emoncms</li>
+  <li>Backup module show now be visible under <code class="highlighter-rouge">Extras &gt; Backup</code></li>
+  <li>Follow Backup instructions below</li>
+</ol>
+
+<h3 id="backup">Backup</h3>
+
+<ol>
+  <li>Click <code class="highlighter-rouge">Create Backup</code> (see screenshot below)</li>
+  <li>Wait for backup to be created, then refrersh the page to view <code class="highlighter-rouge">Download Backup</code> link</li>
+  <li>Download <code class="highlighter-rouge">.tar.gz</code> compressed backup</li>
 </ol>
 
 <p><img src="/images/setup/low-write-17june15-backup.png" alt="backup old data" /></p>
 
+<hr />
+
 <h2 id="import--restore">Import / Restore</h2>
 
-<p><img src="/images/setup/import1.png" alt="Import" /></p>
+<p class="note warning">
+Importing / restoring a backup will overwrite ALL data in the current Emoncms account.
+</p>
+
+<p>To import a backup:</p>
+
+<ol>
+  <li>Choose <code class="highlighter-rouge">.tar.gz</code> backup file</li>
+  <li>Wait for upload to complete</li>
+  <li>Click <code class="highlighter-rouge">Import Backup</code></li>
+  <li>Check restore log (see below)</li>
+  <li>Log out then log back into Local Emocms using the imported account login Credentials</li>
+</ol>
 
 <p class="note warning">
-Backup <b>tar.gz</b> filename cannot contain any spaces e.g if same backup has been downloaded twice <b>'emoncms-backup-2016-04-23 (1).tar'</b> &gt; rename to <b>'emoncms-backup-2016-04-23.tar'</b> before uploading.
+Backup <b>tar.gz</b> filename cannot contain any spaces e.g if same backup has been downloaded more than once: <b>'emoncms-backup-2016-04-23 (1).tar'</b> rename to <b>'emoncms-backup-2016-04-23.tar'</b> before uploading.
 </p>
+
+<p><em>Note: If new emonSD pre-built-SDcard image has been written to a SD card &gt; 4GB the read-write <code class="highlighter-rouge">~/data</code> partition should be extended to fill the SD card to create sufficiant space to import a backup. <strong>Do not use Raspbian raspi-config</strong>, instead <a href="technical/credentials/">connect via SSH</a> and run <code class="highlighter-rouge">$ sudo emonSDexpand</code> and follow prompts.</em></p>
+
+<p><em><code class="highlighter-rouge">emonSDexpand</code> will run <code class="highlighter-rouge">~/usefulscripts/sdpart/./sdpart_imagefile</code> script, for more info see <a href="https://github.com/emoncms/usefulscripts#sdpart_imagefile">Useful Scripts Readme</a></em></p>
+
+<p><img src="/images/setup/import1.png" alt="Import" /></p>
 
 <h3 id="successful-import-log-example">Successful import log example</h3>
 
@@ -219,9 +251,12 @@ $(document).ready(function(){
 </pre>
 </div>
 
-<h4 id="included-in-backup">Included in backup</h4>
+<hr />
+
+<h3 id="included-in-backup">Included in backup</h3>
 
 <ul>
+  <li>Emoncms credentials (username, password)</li>
   <li>Feed data</li>
   <li>Input Processing config</li>
   <li>Dashboards</li>
@@ -232,7 +267,7 @@ $(document).ready(function(){
 
 <p>* <em>Included in backup but not restored due to potential version conflicts: saved as <code class="highlighter-rouge">old.xxxx.xxx</code> in <code class="highlighter-rouge">~/data</code> for manual restore if required.</em></p>
 
-<h4 id="not-included-in-backup">Not included in backup</h4>
+<h3 id="not-included-in-backup">Not included in backup</h3>
 
 <ul>
   <li>WiFi settings &amp; passcode</li>
@@ -240,7 +275,7 @@ $(document).ready(function(){
   <li>Custom openHAB settings</li>
 </ul>
 
-<h4 id="how-to-backup-items-not-automatically-included">How-to backup items not automatically included</h4>
+<h3 id="how-to-backup-items-not-automatically-included">How-to backup items not automatically included</h3>
 
 <ul>
   <li>nodeRED custom flows: select all flows then <code class="highlighter-rouge">menu &gt; export &gt; clipboard</code> copy the JSON text</li>
@@ -253,6 +288,8 @@ $(document).ready(function(){
   </li>
 </ul>
 
+<hr />
+
 <h2 id="video-guide">Video Guide</h2>
 
 <div class="videoWrapper">
@@ -261,13 +298,27 @@ $(document).ready(function(){
 
 <p><br /></p>
 
-<h3 id="next-step-see-applications">Next step: See Applications:</h3>
+<h2 id="troubleshooting">Troubleshooting</h2>
 
-<h4 id="home-energy-monitorapplicationshome-energy"><a href="/applications/home-energy/">Home Energy Monitor</a></h4>
+<p>If you have any questions or if an error occures during the backup or import process please post in the <a href="http://community.openenergymonitor.org/c/hardware/emonpi"><code class="highlighter-rouge">Hardware &gt; emonPi</code> category of the Community Forums</a>. Please provide as much infomation as possible e.g. backup / import logs and <a href="https:github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&amp;-Change-Log">emonSD version</a>.</p>
 
-<h4 id="solar-pv-monitorapplicationssolar-pv"><a href="/applications/solar-pv/">Solar PV Monitor</a></h4>
+<p>Alternatively try and perform a manual import, see <a href="https://github.com/emoncms/backup">Backup Module Readme</a>.</p>
 
-<h4 id="advancedapplicationsadvanced-eg-openhab-nodered-etc"><a href="/applications/advanced">Advanced</a> e.g openHAB, nodeRED etc</h4>
+<hr />
+
+<h3 id="next-step-applications">Next step: Applications:</h3>
+
+<ul>
+  <li>
+    <h4 id="home-energy-monitorapplicationshome-energy"><a href="/applications/home-energy/">Home Energy Monitor</a></h4>
+  </li>
+  <li>
+    <h4 id="solar-pv-monitorapplicationssolar-pv"><a href="/applications/solar-pv/">Solar PV Monitor</a></h4>
+  </li>
+  <li>
+    <h4 id="integrationsintegrations-eg-openhab-nodered-etc"><a href="/integrations">Integrations</a> e.g openHAB, nodeRED etc</h4>
+  </li>
+</ul>
 
 
 </article>
