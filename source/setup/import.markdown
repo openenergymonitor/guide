@@ -1,12 +1,13 @@
 ---
 layout: page
-title: "Import / Backup"
-description: "Import data from existing emonPi Emoncms accounts"
-date: 2015-03-08 21:36
+title: Import / Backup
+description: Import data from existing emonPi Emoncms accounts
+date: "2015-03-08 21:36"
 sidebar: true
 comments: false
 sharing: true
 footer: true
+published: true
 ---
 
 ### [&laquo; Previous step: Add Temperature Nodes](/setup/emonth/)
@@ -20,18 +21,18 @@ The [Emoncms backup module](https://github.com/emoncms/backup) can be used to ba
 
 ### Export from older emonPi / emonBase
 
-If the Backup module is not visible in Local Emoncms menu then emonPi / emonBase is running an old version e.g Emoncms V8.x.
+If the Backup module is not visible in Local Emoncms menu then the emonPi / emonBase is running an old version e.g Emoncms V8.x.
 
 *To check what software stack (emonSD pre-built SD card) version an emonPi is running see instructions on emonPi [emonSD repository and changelog](github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log)*
 
 To export data from an older emonPi / emonBase:
 
 1. Install the backup module by running `Admin > emonPi update` in Local Emoncms
-2. Wait (up to) 60s for update to begin then another couple of min for update to complete, the update log page can be refreshed to view progress
-3. Log-out then back into Local Emoncms
-4. Backup module show now be visible under `Extras > Backup`
+2. Wait (up to) 60s for the update to begin and then another couple of minutes for the update to complete; the update log page can be refreshed to view progress
+3. Log-out of, then back in, to Local Emoncms
+4. Backup module should now be visible under `Extras > Backup`
 5. Click `Create Backup`
-6. Wait for backup to be created, then refersh the page to view `Download Backup` link
+6. Wait for backup to be created, then refresh the page to view `Download Backup` link
 
 
 
