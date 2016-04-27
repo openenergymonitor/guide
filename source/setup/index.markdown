@@ -52,7 +52,6 @@ The hardware options to set up a home energy monitor are as follows:
 
 ___
 
-![emontxv3withct.JPG]({{site.baseurl}}/source/setup/emontxv3withct.JPG)
 
 #### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
 
@@ -90,7 +89,7 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
  - Does not report instantaneous power
  - Best used in conjunction with clip-on CT sensor(s)
 
-
+<p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
 </div> <!-- END HOME ENERGY -->
 <div class='install-instructions solarpv' markdown='1'>
@@ -113,8 +112,6 @@ The hardware options to set up a solar PV monitor are as follows:
 - Single unit required to monitor solar PV, provided the generation and site-consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accessible at this location
 - Requires [pre-built SD card image](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log) (included)
 
-<p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
-
 #### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
 
 - Energy monitoring add-on node
@@ -128,12 +125,12 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 </p>
 
 
-#### Sensors:
+#### Required Sensors:
 
  - 2 X [Clip-on CT sensors](https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) (included in emonPi solar PV bundle)
  - 1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/components/) (included in emonPi solar PV bundle)
 
-#### Power Adapters:
+#### Required Power Adapters:
 
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
  - *1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/power-supplies/) (optional if using an emonTx but highly recommended)*
