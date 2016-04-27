@@ -41,8 +41,6 @@ ___
 - Requires WiFi / Ethernet plus 2 x power outlets
 - Requires [pre-built SD card image](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log) (included)
 
-<p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
-
 #### Sensors Required:
 
  - 1 X [Clip-on CT sensors](https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) (the emonPi can accept up to two CT sensors; one is included as standard with the emonPi)
@@ -159,12 +157,8 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
   - Reports exact amount of energy (Wh) reported by utility meter
   - Does not report instantaneous power
   - Best used in conjunction with clip-on CT sensor(s)
-
-
-
-
-
-
+  
+<p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
 
 
