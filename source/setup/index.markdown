@@ -43,12 +43,12 @@ ___
 
 <p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
-#### Sensors:
+#### Sensors Required:
 
  - 1 X [Clip-on CT sensors](https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) (the emonPi can accept up to two CT sensors; one is included as standard with the emonPi)
  - 1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/components/) (optional but highly recommended)
 
-#### Power Adapters:
+#### Power Adapters Required:
 
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
 
