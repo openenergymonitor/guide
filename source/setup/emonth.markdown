@@ -48,7 +48,7 @@ Sensors should be pre-installed in the emonTH, if required:
 - Optical Pulse Counting Sensor can be wired into terminal block see [Hardware Wiki Section](https://wiki.openenergymonitor.org/index.php/EmonTH_V1.5#Pulse_Sensor_Connection)
 
 <p class="note">
-Only one DS18B20 sensor can be conected to an emonTH, if a DHT22 sensor is detected it's assumed the DS18B20 is external. If more than one DS18B20 is required see <a href="https://github.com/openenergymonitor/emonth">emonTH alternative firmware.</a></p>
+Only one DS18B20 sensor can be connected to an emonTH, if a DHT22 sensor is detected it's assumed the DS18B20 is external. If more than one DS18B20 is required see <a href="https://github.com/openenergymonitor/emonth">emonTH alternative firmware.</a></p>
 
 #### 3. Power Up
 - Power emonTH from 2 x AA batteries
