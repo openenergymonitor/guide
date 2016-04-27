@@ -44,12 +44,31 @@ Multiple temperature sensors can be connected directly to an emonPi, see Tempera
 Sensors should be pre-installed in the emonTH, if required:
 
 - Install DHT22 sensor into 4-pin socket facing outwards, [see photo](http://shop.openenergymonitor.com/emonth-433mhz-temperature-humidity-node/).
-- External DS18B20 can be wired into terminal block see Hardware Wiki Section
+- External DS18B20 can be wired into terminal block see [Hardware Wiki Section](https://wiki.openenergymonitor.org/index.php/EmonTH_V1.5#External_DS18B20_Temperature_Sensor_Connections)
 - Optical Pulse Counting Sensor can be wired into terminal block see [Hardware Wiki Section](https://wiki.openenergymonitor.org/index.php/EmonTH_V1.5#Pulse_Sensor_Connection)
 
+<p class="note">
+Only one DS18B20 sensor can be conected to an emonTH, if a DHT22 sensor is detected it's assumed the DS18B20 is external. If more than one DS18B20 is required see <a href="https://github.com/openenergymonitor/emonth">emonTH alternative firmware.</a></p>
 
+#### 3. Power Up
+- Power emonTH from 2 x AA batteries
+- Alternatively 5V DC can be wired into terminal block if required
 
+#### 4. Indicator LED
+  - Illuminates solid for a few seconds at first power up
+  - LED should then extinguish to indicate succesful sensor detection
+  - Flashing LED indicates sensor detection failure
+  - To preserve battery LED does NOT flash reguarly during opperation
 
+### Base-station Emoncms Setup
+
+The emonTH is compatible with emonPi / emonBase. RF transmission from the emonTH should be picked up automatically and data should appear in local Emonms `Inputs` page.
+
+*If [Remote logging](/setup/remote) has been setup, data will also be posted to Emoncms.org.*
+
+#### 1. [Log inputs to feeds](/setup/local/)
+
+**Note: if using more than four emonTH units (with custom RF node ID or modified firmware) [`emonhub.conf` node decoders will need to be setup](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md).**
   
 <br>
 

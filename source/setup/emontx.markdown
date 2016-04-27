@@ -47,14 +47,14 @@ Additional energy monitoring nodes can be added if more AC circuits require moni
 - (Optional) Plug in temperature sensor(s) and [optical pulse count sensor](http://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/)
 
 
-#### 3.Power Up
+#### 3. Power Up
 - Power emonTx directly from an AC-AC adapter (additional DC adapter not required)
 - Or alternatively power via 3 x AA batteries.
 - **All sensors should be connected before power up**
 
 
 #### 4. Indicator LED
-  - Illuminate solid for a 10 seconds on first power up
+  - Illuminates solid for a 10 seconds on first power up
   - Flash multiple times to indicate an AC-AC waveform has been detected (if powering via AC-AC adapter)
   - Flash once every 10s to indicate sampling and RF transmission interval
 
