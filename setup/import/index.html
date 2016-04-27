@@ -126,7 +126,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
   <h3 id="laquo-previous-step-add-temperature-nodessetupemonth"><a href="/setup/emonth/">« Previous step: Add Temperature Nodes</a></h3>
 
-<p>The <a href="https://github.com/emoncms/backup">Emoncms backup module</a> can be used to backup Emoncms account data and import for another Emoncms account. This process can be used to migrate from an older emonPi / emonBase image to the latest image.</p>
+<p>The <a href="https://github.com/emoncms/backup">Emoncms backup module</a> can be used to backup Emoncms account data and import data from another Emoncms account. This process can also be used to migrate from an older emonPi / emonBase image to the latest image.</p>
 
 <h4 id="included-in-backup">Included in backup</h4>
 
@@ -136,15 +136,15 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   <li>Dashboards</li>
   <li>MyElectric / MySolarPV app settings</li>
   <li>EmonHub <code class="highlighter-rouge">emonhub.conf</code>*</li>
-  <li>Emocms <code class="highlighter-rouge">settings.php</code>*</li>
+  <li>Emoncms <code class="highlighter-rouge">settings.php</code>*</li>
 </ul>
 
-<p>* <em>Inluded in backup but not restored due to potential version confilcts: saved as <code class="highlighter-rouge">old.xxxx.xxx</code> in <code class="highlighter-rouge">~/data</code> for manual restore if required</em></p>
+<p>* <em>Included in backup but not restored due to potential version conflicts: saved as <code class="highlighter-rouge">old.xxxx.xxx</code> in <code class="highlighter-rouge">~/data</code> for manual restore if required</em></p>
 
 <h4 id="not-included-in-backup">Not included in backup</h4>
 
 <ul>
-  <li>WiFi settings &amp; passwrod</li>
+  <li>WiFi settings &amp; password</li>
   <li>nodeRED flows</li>
   <li>Custom openHAB settings</li>
 </ul>
@@ -153,10 +153,10 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <p><img src="/images/setup/low-write-17june15-backup.png" alt="backup old data" /></p>
 
-<h3 id="backing-up-items-not-automaticlly-included">Backing up items not automaticlly included</h3>
+<h3 id="backing-up-items-not-automatically-included">Backing up items not automatically included</h3>
 
 <ul>
-  <li>Wifi settings &amp; password: backup <code class="highlighter-rouge">~/data/wpa_supplicant.conf</code></li>
+  <li>WiFi settings &amp; password: backup <code class="highlighter-rouge">~/data/wpa_supplicant.conf</code></li>
   <li>nodeRED flows: select all flows then hit <code class="highlighter-rouge">menu &gt; export &gt; clipboard</code> then copy the JSON text and save to a file</li>
   <li>openHAB custom config: backup <code class="highlighter-rouge">~/data/open_openHab</code> folder</li>
 </ul>
@@ -266,15 +266,15 @@ $(document).ready(function(){
       <li>
           <b>Setup</b>
         <ul>
-          <li><a href='/setup/'>Hardware</a></li>
-          <li><a href='/setup/connect/'>Connect</a></li>
-          <li><a href='/setup/install/'>Install</a></li>
-          <li><a href='/setup/local/'>Log Locally</a></li>
-          <li><a href='/setup/remote/'>Log Remotely</a></li>
-          <li><a href='/setup/dashboards/'>Dashboards</a></li>
-          <li><a href='/setup/emontx'>Add Energy Nodes</a></li>
-          <li><a href='/setup/emonth'>Add Temperature Nodes</a></li>
-          <li><a href='/setup/import'>Import / Backup</a></li>
+          <li><a  href='/setup/'>Hardware </a></li>
+          <li><a  href='/setup/connect/'>Connect </a></li>
+          <li><a  href='/setup/install/'>Install </a></li>
+          <li><a  href='/setup/local/'>Log Locally </a></li>
+          <li><a  href='/setup/remote/'>Log Remotely </a></li>
+          <li><a  href='/setup/dashboards/'>Dashboards </a></li>
+          <li><a  href='/setup/emontx'>Add Energy Nodes </a></li>
+          <li><a  href='/setup/emonth'>Add Temperature Nodes </a></li>
+          <li><a  href='/setup/import'>Import / Backup </a></li>
 
         </ul>
       </li>
@@ -282,29 +282,29 @@ $(document).ready(function(){
       <li>
          <b>Applications</b>
         <ul>
-         <li><a href='/applications/home-energy'>Home Energy</a></li>
-         <li><a href='/applications/solar-pv'>Solar PV</a></li>
-         <li><a href='/advanced/'>Advanced</a></li>
+         <li><a  href='/applications/home-energy'>Home Energy </a></li>
+         <li><a  href='/applications/solar-pv'>Solar PV </a></li>
+         <li><a  href='http://heatpumpmonitor.org'>Heatpump </a></li>
         </ul>
       </li>
       
       <li>
          <b>Integrations</b>
         <ul>
-         <li><a href='/integrations/nodered'>node-RED</a></li>
-         <li><a href='/integrations/openhab'>openHAB</a></li>
+         <li><a  href='/integrations/nodered'>node-RED </a></li>
+         <li><a  href='/integrations/openhab'>openHAB </a></li>
         </ul>
 
       <li>
         <b>Technical</b>
        <ul>
-        <li><a href="/technical/">Overview</a></li>
-        <li><a href="/technical/specifications">Specifications</a></li>
-        <li><a href="/technical/credentials">Login Credentials</a></li>
-        <li><a href="/technical/api/">API</a></li>
-        <li><a href="/technical/mqtt">MQTT</a></li>
-        <li><a href="/technical/software/">Software</a></li>
-        <li><a href="/technical/hardware/">Hardware</a></li>
+        <li><a  href='/technical/'>Overview </a></li>
+        <li><a  href='/technical/specifications'>Specifications </a></li>
+        <li><a  href='/technical/credentials'>Login Credentials </a></li>
+        <li><a  href='/technical/api/'>API </a></li>
+        <li><a  href='/technical/mqtt'>MQTT </a></li>
+        <li><a  href='/technical/software/'>Software </a></li>
+        <li><a  href='/technical/hardware/'>Hardware </a></li>
        </ul>
       </li>
     </div>
