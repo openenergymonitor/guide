@@ -31,7 +31,7 @@ The OpenEnergyMonitor system can be used as a simple home energy monitoring syst
 ___
 
 
-*All hardware is based on [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms and fully open-source.*
+*All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms and is fully open-source.*
 
 #### **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
