@@ -13,7 +13,7 @@ published: true
 
 The OpenEnergyMonitor Solar PV monitor is a tool to help you make the most of your solar generation.
 
-Providing real-time and historic information on your solar generation and demand matching, it will help you better utilise your available solar power.
+Providing real-time and historic information on your solar generation and demand matching, it will help you make better use of available solar power.
 
 MySolar PV is a dashboard app which runs on [Emoncms](https://Emoncms.org).
 
@@ -51,7 +51,7 @@ Your safety is your responsibility. Clip-on current sensors are non-invasive and
 </p>
 
 <p class='note'>
-The clip-on CT sensors must be clipped round either the live or Neutral AC wire. Not both.
+The clip-on CT sensors must be clipped round either the live or Neutral AC wire. <strong>Not both</strong>.
 </p>
 
 ![CT sensor installation ](/images/applications/solar-pv/ctinstall.jpg)
