@@ -163,9 +163,36 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <ul>
   <li>Install DHT22 sensor into 4-pin socket facing outwards, <a href="http://shop.openenergymonitor.com/emonth-433mhz-temperature-humidity-node/">see photo</a>.</li>
-  <li>External DS18B20 can be wired into terminal block see Hardware Wiki Section</li>
+  <li>External DS18B20 can be wired into terminal block see <a href="https://wiki.openenergymonitor.org/index.php/EmonTH_V1.5#External_DS18B20_Temperature_Sensor_Connections">Hardware Wiki Section</a></li>
   <li>Optical Pulse Counting Sensor can be wired into terminal block see <a href="https://wiki.openenergymonitor.org/index.php/EmonTH_V1.5#Pulse_Sensor_Connection">Hardware Wiki Section</a></li>
 </ul>
+
+<p class="note">
+Only one DS18B20 sensor can be conected to an emonTH, if a DHT22 sensor is detected it's assumed the DS18B20 is external. If more than one DS18B20 is required see <a href="https://github.com/openenergymonitor/emonth">emonTH alternative firmware.</a></p>
+
+<h4 id="power-up">3. Power Up</h4>
+<ul>
+  <li>Power emonTH from 2 x AA batteries</li>
+  <li>Alternatively 5V DC can be wired into terminal block if required</li>
+</ul>
+
+<h4 id="indicator-led">4. Indicator LED</h4>
+<ul>
+  <li>Illuminates solid for a few seconds at first power up</li>
+  <li>LED should then extinguish to indicate succesful sensor detection</li>
+  <li>Flashing LED indicates sensor detection failure</li>
+  <li>To preserve battery LED does NOT flash reguarly during opperation</li>
+</ul>
+
+<h3 id="base-station-emoncms-setup">Base-station Emoncms Setup</h3>
+
+<p>The emonTH is compatible with emonPi / emonBase. RF transmission from the emonTH should be picked up automatically and data should appear in local Emonms <code class="highlighter-rouge">Inputs</code> page.</p>
+
+<p><em>If <a href="/setup/remote">Remote logging</a> has been setup, data will also be posted to Emoncms.org.</em></p>
+
+<h4 id="log-inputs-to-feedssetuplocal">1. <a href="/setup/local/">Log inputs to feeds</a></h4>
+
+<p><strong>Note: if using more than four emonTH units (with custom RF node ID or modified firmware) <a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md"><code class="highlighter-rouge">emonhub.conf</code> node decoders will need to be setup</a>.</strong></p>
 
 <p><br /></p>
 
@@ -212,7 +239,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
         <ul>
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
-         <li><a  href='http://heatpumpmonitor.org/'>Heatpump </a></li>
+         <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
         </ul>
       </li>
       
