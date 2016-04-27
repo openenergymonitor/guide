@@ -62,6 +62,12 @@
 <loc>http://guide.openenergymonitor.org/technical/mqtt/</loc>
 </url>
 <url>
+<loc>http://guide.openenergymonitor.org/integrations/nodered/</loc>
+</url>
+<url>
+<loc>http://guide.openenergymonitor.org/integrations/openhab/</loc>
+</url>
+<url>
 <loc>http://guide.openenergymonitor.org/setup/remote/</loc>
 </url>
 <url>
@@ -84,6 +90,6 @@
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/static/mdi-demo.html</loc>
-<lastmod>2016-04-27T13:59:13+00:00</lastmod>
+<lastmod>2016-04-27T14:50:24+00:00</lastmod>
 </url>
 </urlset>
