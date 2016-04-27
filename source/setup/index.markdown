@@ -26,7 +26,7 @@ published: true
 
 ### {% linkable_title Home Energy Hardware %}
 
-> The OpenEnergyMonitor system can be used as a simple home energy monitoring system for analyzing real-time power use and > daily energy consumption.
+> The OpenEnergyMonitor system can be used as a simple home energy monitoring system for analyzing real-time power use and daily energy consumption.
 
 ___
 
