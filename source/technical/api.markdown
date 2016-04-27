@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "API"
-description: "dev2"
+title: "Emoncms API"
+description: "Emoncms API"
 date: 2014-12-18 21:49
 sidebar: true
 comments: false

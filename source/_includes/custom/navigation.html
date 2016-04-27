@@ -1,17 +1,17 @@
 <ul class="menu pull-right">
-  <li><a href="http://shop.openenergymonitor.com">Online Store</a></li>
+  <li>{% active_link http://shop.openenergymonitor.com Online Store %}</li>
 
   <li><a href='/setup/'>Setup</a></li>
 
   <li>
     <a>Applications <i class="icon icon-caret-down"></i></a>
     <ul>
-      <li><a href='/applications/home-energy'>Home Energy</a></li>
-      <li><a href='/applications/solar-pv'>Solar PV</a></li>
+      <li>{% active_link /applications/home-energy/ Home Energy %}</li>
+      <li>{% active_link /applications/solar-pv/ Solar PV %}</li>
     </ul>
   </li>
-  <li><a href="/integrations/">Integrations</a></li>
-  <li><a href="/technical/">Technical</a></li>
+  <li>{% active_link /integrations/ Integrations %}</li>
+  <li>{% active_link /technical/ Technical %}</li>
 
-  <li><a href="/help/">Help</a></li>
+  <li>{% active_link /help/ Help %}</li>
 </ul>
