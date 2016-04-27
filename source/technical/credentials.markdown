@@ -10,15 +10,23 @@ footer: true
 published: true
 ---
 
-Default log-in credentials for [pre-built emonPi/emonBase ready-to-go SD card](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log).
+Default log-in credentials for latest [pre-built emonPi/emonBase ready-to-go SD card](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log).
 
 **Note: Before changing any password the root file-system will need to be put into Read Write mode with command `$rpi-rw`. When finished but file-sysem back to Read Only with `$rpi-ro`.**
 
 # SSH
 
-SSH: port 22 user,pass:`pi`,`emonpi2016`
+To connect to emonPi / emonBase via ssh:
 
-Change with: `$ passwd`
+ - Linux / Mac : open terminal window `$ ssh pit@emonpi` or `$ ssh pi@<IP ADDRESS>`
+ - Windows: use [Putty application](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
+ - Google search `Raspberry Pi SSH` for many tutorials
+
+**SSH: port 22 user,pass:`pi`,`emonpi2016`**
+
+*On older emonSD images ssh password is `raspberry`, see emonSD [repository & changelog](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log)*
+
+Once logged in change password with: `$ passwd`
 
 ## MYSQL
 
@@ -31,7 +39,7 @@ Mosquitto MQTT: port:1883 user,pass:`emonpi`,`emonpimqtt2016`
 
 Generate a new password using `sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>`. Then restart mosquitto `sudo service mosquitto restart`.
 
-If Mosquitto password is change it will also need to changed in:
+If Mosquitto MQTT authenticaion details are changed they will also need to changed in:
 
 ```bash
 ~/emonpi/lcd/emonPiLCD.py
