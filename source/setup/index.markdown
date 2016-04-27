@@ -19,7 +19,7 @@ published: true
 
 <label class='menu-selector energy' for='home-energy-hardware'>Home Energy</label>
 <label class='menu-selector solarpv' for='solar-pv-hardware'>Solar PV</label>
-<label class='menu-selector temperature' for='temperature-hardware'>Temperature</label>
+<label class='menu-selector temperature' for='temperature-hardware'>Temperature<br> and Humidity</label>
 
 <div class='install-instructions energy' markdown='1'>
 
