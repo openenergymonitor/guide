@@ -128,38 +128,28 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <p>The <a href="https://github.com/emoncms/backup">Emoncms backup module</a> can be used to backup Emoncms account data and import data from another Emoncms account. This process can also be used to migrate from an older emonPi / emonBase image to the latest image.</p>
 
-<h4 id="included-in-backup">Included in backup</h4>
-
-<ul>
-  <li>Feed data</li>
-  <li>Input processing settings</li>
-  <li>Dashboards</li>
-  <li>MyElectric / MySolarPV app settings</li>
-  <li>EmonHub <code class="highlighter-rouge">emonhub.conf</code>*</li>
-  <li>Emoncms <code class="highlighter-rouge">settings.php</code>*</li>
-</ul>
-
-<p>* <em>Included in backup but not restored due to potential version conflicts: saved as <code class="highlighter-rouge">old.xxxx.xxx</code> in <code class="highlighter-rouge">~/data</code> for manual restore if required</em></p>
-
-<h4 id="not-included-in-backup">Not included in backup</h4>
-
-<ul>
-  <li>WiFi settings &amp; password</li>
-  <li>nodeRED flows</li>
-  <li>Custom openHAB settings</li>
-</ul>
+<p><strong>Currently the Backup Module can only be used with Local Emoncms not Emoncms.org</strong></p>
 
 <h2 id="backup--export">Backup / Export</h2>
 
+<h3 id="export-from-older-emonpi--emonbase">Export from older emonPi / emonBase</h3>
+
+<p>If the Backup module is not visible in Local Emoncms menu then emonPi / emonBase is running an old version e.g Emoncms V8.x.</p>
+
+<p><em>To check what software stack (emonSD pre-built SD card) version an emonPi is running see instructions on emonPi <a href="github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&amp;-Change-Log">emonSD repository and changelog</a></em></p>
+
+<p>To export data from an older emonPi / emonBase:</p>
+
+<ol>
+  <li>Install the backup module by running <code class="highlighter-rouge">Admin &gt; emonPi update</code> in Local Emoncms</li>
+  <li>Wait (up to) 60s for update to begin then another couple of min for update to complete, the update log page can be refreshed to view progress</li>
+  <li>Log-out then back into Local Emoncms</li>
+  <li>Backup module show now be visible under <code class="highlighter-rouge">Extras &gt; Backup</code></li>
+  <li>Click <code class="highlighter-rouge">Create Backup</code></li>
+  <li>Wait for backup to be created, then refersh the page to view <code class="highlighter-rouge">Download Backup</code> link</li>
+</ol>
+
 <p><img src="/images/setup/low-write-17june15-backup.png" alt="backup old data" /></p>
-
-<h3 id="backing-up-items-not-automatically-included">Backing up items not automatically included</h3>
-
-<ul>
-  <li>WiFi settings &amp; password: backup <code class="highlighter-rouge">~/data/wpa_supplicant.conf</code></li>
-  <li>nodeRED flows: select all flows then hit <code class="highlighter-rouge">menu &gt; export &gt; clipboard</code> then copy the JSON text and save to a file</li>
-  <li>openHAB custom config: backup <code class="highlighter-rouge">~/data/open_openHab</code> folder</li>
-</ul>
 
 <h2 id="import--restore">Import / Restore</h2>
 
@@ -228,6 +218,40 @@ $(document).ready(function(){
     === Emoncms import complete! ===
 </pre>
 </div>
+
+<h4 id="included-in-backup">Included in backup</h4>
+
+<ul>
+  <li>Feed data</li>
+  <li>Input Processing config</li>
+  <li>Dashboards</li>
+  <li>MyElectric / MySolarPV app settings</li>
+  <li>EmonHub config: <code class="highlighter-rouge">emonhub.conf</code>*</li>
+  <li>Emoncms config: <code class="highlighter-rouge">settings.php</code>*</li>
+</ul>
+
+<p>* <em>Included in backup but not restored due to potential version conflicts: saved as <code class="highlighter-rouge">old.xxxx.xxx</code> in <code class="highlighter-rouge">~/data</code> for manual restore if required.</em></p>
+
+<h4 id="not-included-in-backup">Not included in backup</h4>
+
+<ul>
+  <li>WiFi settings &amp; passcode</li>
+  <li>Custom NodeRED flows</li>
+  <li>Custom openHAB settings</li>
+</ul>
+
+<h4 id="how-to-backup-items-not-automatically-included">How-to backup items not automatically included</h4>
+
+<ul>
+  <li>nodeRED custom flows: select all flows then <code class="highlighter-rouge">menu &gt; export &gt; clipboard</code> copy the JSON text</li>
+  <li>Connect via SSH:
+    <ul>
+      <li>See <a href="/technical/credentials/">Technical &gt; Service Credentials</a></li>
+      <li>WiFi settings &amp; password: backup copy: <code class="highlighter-rouge">~/data/wpa_supplicant.conf</code></li>
+      <li>openHAB custom config: copy <code class="highlighter-rouge">~/data/open_openHab</code> folder</li>
+    </ul>
+  </li>
+</ul>
 
 <h2 id="video-guide">Video Guide</h2>
 
