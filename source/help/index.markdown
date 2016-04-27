@@ -1,19 +1,20 @@
 ---
 layout: page
-title: "Help"
-description: "If you need help or have a question..."
-date: 2015-06-25 12:30
+title: Help
+description: If you need help or have a question...
+date: "2015-06-25 12:30"
 sidebar: true
 comments: false
 sharing: true
 footer: true
+published: true
 ---
 
-There are various ways to get in touch with us; either to get support, share your experiance or just say 'hi'
+There are various ways to get in touch with us: either to get support, share your experience, or just to say "Hi!".
 
-## Communication Channels
+## Hello, World...
 
-Ask for support and join in the discussion on our livley community forums:
+Ask for support and join in the discussion on our lively community forums:
 
 - #### [Community Forum](http://community.openenergymonitor.org)
 
@@ -24,7 +25,7 @@ Tweet us a message:
 - #### [Twitter @openenergymon](http://twitter.com/openenergymon)
 
 
-Contact store support if your query relates directly to a hardware item purchased from us e.g. report a fault:
+Contact store support if your query relates directly to hardware items purchased from us (e.g. report a fault):
 
 - #### [Online Store Support](https://shop.openenergymonitor.com/support/)
 
@@ -43,11 +44,3 @@ If you have found a specific bug in our software, please open a GitHub issue on 
 - [Emoncms Android app](https://github.com/emoncms/AndroidApp)
 - [emonTx](https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV3)
 - [emonTH](https://github.com/openenergymonitor/emonth)
-
-
-
-
-
-
- 
- 
