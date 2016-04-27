@@ -52,6 +52,8 @@ The hardware options to set up a home energy monitor are as follows:
 
 ___
 
+![emontxv3withct.JPG]({{site.baseurl}}/source/setup/emontxv3withct.JPG)
+
 #### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
 
 - Energy monitoring add-on node
