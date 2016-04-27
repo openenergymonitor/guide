@@ -28,10 +28,9 @@ published: true
 
 > The OpenEnergyMonitor system can be used as a simple home energy monitoring system for analyzing real-time power use and daily energy consumption.
 
-___
+All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms and is fully open-source.
 
-
-*All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms and is fully open-source.*
+The hardware options to set up a home energy monitor are as follows:
 
 #### **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
@@ -67,7 +66,7 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 ***
 
-#### [emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/) (emonPi Alternative)
+#### [emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/) (Alternative to emonPi)
 
    -  Web connected gateway: [Raspberry Pi](https://shop.openenergymonitor.com/raspberry-pi-2-web-connected-base-station/) + [RFM69Pi RF receiver board](https://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/)
   -  No on-board energy monitoring functions
