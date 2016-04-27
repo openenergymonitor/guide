@@ -33,7 +33,7 @@ Generate a new password using `sudo mosquitto_passwd -c /etc/mosquitto/passwd <u
 
 If Mosquitto password is change it will also need to changed in:
 
-```
+```bash
 ~/emonpi/lcd/emonPiLCD.py
 ~/data/emonhub.conf
 /var/www/emoncms/settings.php
