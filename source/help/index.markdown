@@ -29,7 +29,7 @@ Contact store support if your query relates directly to hardware items purchased
 
 - #### [Online Store Support](https://shop.openenergymonitor.com/support/)
 
-## Report a specific bug
+## Report a Specific Bug
 
 If you have found a specific bug in our software, please open a GitHub issue on the relevant repository:
 
