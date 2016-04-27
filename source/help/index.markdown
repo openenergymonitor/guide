@@ -9,20 +9,45 @@ sharing: true
 footer: true
 ---
 
+There are various ways to get in touch with us; either to get support, share your experiance or just say 'hi'
+
+## Communication Channels
+
+Ask for support and join in the discussion on our livley community forums:
+
+- #### [Community Forum](http://community.openenergymonitor.org)
 
 
-## [Community Forum](http://community.openenergymonitor.org)
-
-Ask for support and join in the discussion on our community forums
-
-## Online Store Support
-
-**support@openenergymonitor.zendesk.com**
-
-Contact store support via email your query relates directly to a hardware item purchased from our online store e.g. report a fault.
+Tweet us a message:
 
 
-## [Twitter](http://twitter.com/openenergymon)
+- #### [Twitter @openenergymon](http://twitter.com/openenergymon)
+
+
+Contact store support if your query relates directly to a hardware item purchased from us e.g. report a fault:
+
+- #### [Online Store Support](https://shop.openenergymonitor.com/support/)
+
+## Report a specific bug
+
+If you have found a specific bug in our software, please open a GitHub issue on the relevant repository:
+
+- [emonPi](https://github.com/openenergymonitor/emonpi/)
+- [Emoncms Core](http://github.com/emoncms/emoncms)
+- Emoncms Modules
+  - [Dashboard](http://github.com/emoncms/dashboard)
+  - [WiFi](http://github.com/emoncms/wifi)
+  - [Backup](http://github.com/emoncms/backup)
+  - [Graph](http://github.com/emoncms/graph)
+  - [App (MyElectric, MySolar)](http://github.com/emoncms/app)
+- [Emoncms Android app](https://github.com/emoncms/AndroidApp)
+- [emonTx](https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV3)
+- [emonTH](https://github.com/openenergymonitor/emonth)
+
+
+
+
+
 
  
  

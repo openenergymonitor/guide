@@ -13,34 +13,38 @@ footer: true
 
 The [Emoncms backup module](https://github.com/emoncms/backup) can be used to backup Emoncms account data and import data from another Emoncms account. This process can also be used to migrate from an older emonPi / emonBase image to the latest image.
 
-#### Included in backup
+**Currently the Backup Module can only be used with Local Emoncms not Emoncms.org**
 
-- Feed data
-- Input processing settings
-- Dashboards
-- MyElectric / MySolarPV app settings
-- EmonHub `emonhub.conf`*
-- Emoncms `settings.php`*
-
-\* *Included in backup but not restored due to potential version conflicts: saved as `old.xxxx.xxx` in `~/data` for manual restore if required*
-
-#### Not included in backup
-
-- WiFi settings & password
-- nodeRED flows
-- Custom openHAB settings
  
 ## Backup / Export
 
+### Export from older emonPi / emonBase
+
+If the Backup module is not visible in Local Emoncms menu then emonPi / emonBase is running an old version e.g Emoncms V8.x.
+
+*To check what software stack (emonSD pre-built SD card) version an emonPi is running see instructions on emonPi [emonSD repository and changelog](github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log)*
+
+To export data from an older emonPi / emonBase:
+
+1. Install the backup module by running `Admin > emonPi update` in Local Emoncms
+2. Wait (up to) 60s for update to begin then another couple of min for update to complete, the update log page can be refreshed to view progress
+3. Log-out then back into Local Emoncms
+4. Backup module show now be visible under `Extras > Backup`
+5. Click `Create Backup`
+6. Wait for backup to be created, then refersh the page to view `Download Backup` link
+
+
+
 ![backup old data](/images/setup/low-write-17june15-backup.png)
 
-### Backing up items not automatically included
 
-- WiFi settings & password: backup `~/data/wpa_supplicant.conf`
-- nodeRED flows: select all flows then hit `menu > export > clipboard` then copy the JSON text and save to a file
-- openHAB custom config: backup `~/data/open_openHab` folder
+
+
+
 
 ## Import / Restore
+
+
 
 ![Import](/images/setup/import1.png)
 
@@ -109,8 +113,30 @@ $(document).ready(function(){
 </div>
 
 
+#### Included in backup
 
+- Feed data
+- Input Processing config
+- Dashboards
+- MyElectric / MySolarPV app settings
+- EmonHub config: `emonhub.conf`*
+- Emoncms config: `settings.php`*
 
+\* *Included in backup but not restored due to potential version conflicts: saved as `old.xxxx.xxx` in `~/data` for manual restore if required.*
+
+#### Not included in backup
+
+- WiFi settings & passcode
+- Custom NodeRED flows
+- Custom openHAB settings
+
+#### How-to backup items not automatically included
+
+- nodeRED custom flows: select all flows then `menu > export > clipboard` copy the JSON text
+- Connect via SSH:
+  - See [Technical > Service Credentials](/technical/credentials/)
+  - WiFi settings & password: backup copy: `~/data/wpa_supplicant.conf`
+  - openHAB custom config: copy `~/data/open_openHab` folder
 
 ## Video Guide
 
