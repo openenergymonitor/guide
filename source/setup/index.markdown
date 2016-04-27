@@ -98,8 +98,11 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 ### {% linkable_title Solar PV Hardware %}
 
-___
+> Providing real-time and historic information on your solar generation and demand matching, it will help you make better use of available solar power.
 
+All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms and is fully open-source.
+
+The hardware options to set up a solar PV monitor are as follows:
 
 #### **[emonPi](https://shop.openenergymonitor.com/emonpi-solar-pv/)**
 
