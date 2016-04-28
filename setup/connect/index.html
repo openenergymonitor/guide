@@ -181,7 +181,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <h3 id="connect-to-wifi-optional">4. Connect to WiFi (optional)</h3>
 
-<p>WiFi is optional and requires either a RaspberryPi3 (integrated WiFi) or a USB WiFi dongle (<a href="http://shop.openenergymonitor.com/edimax-usb-wifi-adapter-ew-7811un/">Edimax EW7811UN</a>).</p>
+<p>WiFi is optional and requires either a RaspberryPi 3 (integrated WiFi) or a USB WiFi dongle (<a href="http://shop.openenergymonitor.com/edimax-usb-wifi-adapter-ew-7811un/">Edimax EW7811UN</a>).</p>
 
 <p><img src="/images/setup/wifi9_0.png" alt="Connect to Wifi" /></p>
 
@@ -224,7 +224,7 @@ $(document).ready(function(){
 
 <p><button type="button" class="show_hide" href="#" rel="#slidingDiv">View</button></p>
 <div id="slidingDiv" class="toggleDiv" style="display: none;">
-    <p>If local static IP address is required the easiest way is to allow IP address to be given via DHCP then fix the IP address on the router. Not all routes support this.</p>
+    <p>If local static IP address is required the easiest way is to allow IP address to be given via DHCP then fix the IP address on the router. Not all routers support this.</p>
 
     <p>Alternatively to set a static IP address on the emonPi itself connect via SSH and edit /etc/network/interfaces. E.g the following commands will SSH into emonPi, create backup of the interfaces file then setup a static IP on Ethernet. For WiFi change eth0 to wlan0.</p>
     <pre>
@@ -261,15 +261,15 @@ $(document).ready(function(){
 
 <h3 id="shutdown">6. Shutdown</h3>
 
-<p>Shutdown emonPi by press-and-holding the shutdown button on the side, with a paper clip for 5 seconds then waiting 30s for unit to fully shutdown.</p>
+<p>Shut down the emonPi by holding down the shutdown button for 5 seconds, then wait 30 seconds for unit to fully shut down.</p>
 
 <p><img src="/images/setup/emonPi_shutdown.png" width="200" /></p>
 
 <p class="note warning">
-Unplugging power from the emonPi without properly shutting down can result in a corrupted SD card.
+Unplugging power from the emonPi without following the correct shutdown procedure can result in a corrupted SD card.
 </p>
 
-<p>The emonPi is now ready to be physically installed and sensors connected.</p>
+<p>The emonPi is now ready to be physically installed and the sensors connected.</p>
 
 <p><br /></p>
 
@@ -281,7 +281,6 @@ Unplugging power from the emonPi without properly shutting down can result in a 
 <hr />
 
 <h3 id="next-step-install-raquosetupinstall-1"><a href="/setup/install/">Next step: Install »</a></h3>
-
 
 
 </article>
