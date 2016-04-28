@@ -73,7 +73,7 @@ WiFi is optional and requires either a RaspberryPi 3 (integrated WiFi) or a USB 
 
 4. **Hit `Save and Connect`**
 
-After a few seconds info should refresh automatically to report `Status: Connected` and after a few more seconds IP address should appear.
+After a few seconds information should refresh automatically to report `Status: Connected` and after a few more seconds the IP address should appear.
 
 ### Assign static IP (Optional & Advanced)
 
