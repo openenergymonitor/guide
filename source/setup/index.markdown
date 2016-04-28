@@ -34,7 +34,7 @@ The hardware options to set up a home energy monitor are as follows:
 
 #### **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](images/hardwareimages/emonPi_shop_photo.jpg)
 
 
 - Raspberry Pi-based energy monitor
@@ -275,6 +275,3 @@ The emonPi / emonTx have been designed for single-phase AC monitoring. The emonT
 ***
 
 ### [Next step: Connect &raquo;](/setup/connect/)
-
-
-
