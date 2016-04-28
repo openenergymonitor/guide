@@ -1,10 +1,9 @@
 <ul class="menu pull-right">
   <li>{% active_link http://shop.openenergymonitor.com Online Store %}</li>
-
-  <li><a href='/setup/'>Setup</a></li>
-
+  <li>{% active_link /setup/ Setup %}</li>
   <li>
-    <a>Applications <i class="icon icon-caret-down"></i></a>
+    <a href="/applications/">Applications</a>
+    <!--<a>Applications <i class="icon icon-caret-down"></i></a>-->
     <ul>
       <li>{% active_link /applications/home-energy/ Home Energy %}</li>
       <li>{% active_link /applications/solar-pv/ Solar PV %}</li>
@@ -12,6 +11,5 @@
   </li>
   <li>{% active_link /integrations/ Integrations %}</li>
   <li>{% active_link /technical/ Technical %}</li>
-
   <li>{% active_link /help/ Help %}</li>
 </ul>
