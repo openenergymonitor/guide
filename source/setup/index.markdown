@@ -32,7 +32,9 @@ All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi
 
 The hardware options to set up a home energy monitor are as follows:
 
-#### **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
+___
+
+## **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
 ![emonPi](/images/hardwareimages/emonPi_shop_photo.jpg)
 
