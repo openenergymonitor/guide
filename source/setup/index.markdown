@@ -232,6 +232,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 
 ### {% linkable_title Comparison Table%}
 
+
 |                                    | emonPi  | emonBase  | emonTx  | emonTH |
 |---|---|---|---|---|
 | Main purpose                      | All-in-one energy monitor & gateway| Web-connected gateway | Energy monitor add-on | Temperature & Humidity room node |
@@ -244,6 +245,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 | Local data storage (Emoncms)      |  Yes | Yes | No | No |
 | Requires additional base-station | No | No | Yes | Yes
 | LCD Display | Yes | No | No | No
+
 
 \* Requires manual wiring into terminal block
 
