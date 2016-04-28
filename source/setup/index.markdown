@@ -34,12 +34,8 @@ The hardware options to set up a home energy monitor are as follows:
 
 #### **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
-<<<<<<< HEAD
-![alt text](/images/hardwareimages/emonPi_shop_photo.jpg)
-=======
-![alt text](images/hardwareimages/emonPi_shop_photo.jpg)
->>>>>>> c7057ff9e4d3dfac94ff943f6e5a1ffc4e0b9634
-
+![emonPi](/images/hardwareimages/emonPi_shop_photo.jpg)
+>>>>>>> 5e394c96dfb02ba6e589ef14372b6671f53b0297
 
 - Raspberry Pi-based energy monitor
 - Install next to utility meter
