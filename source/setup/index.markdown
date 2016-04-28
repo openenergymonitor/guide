@@ -26,12 +26,11 @@ published: true
 
 ### {% linkable_title Home Energy Hardware %}
 
-The OpenEnergyMonitor system can be used as a simple home energy monitoring system for analyzing real-time power use and daily energy consumption.
+> The OpenEnergyMonitor system can be used as a simple home energy monitoring system for analyzing real-time power use and daily energy consumption.
 
-___
+All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms and is fully open-source.
 
-
-*All hardware is based on [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms and fully open-source.*
+The hardware options to set up a home energy monitor are as follows:
 
 #### **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
@@ -41,24 +40,23 @@ ___
 - Requires WiFi / Ethernet plus 2 x power outlets
 - Requires [pre-built SD card image](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log) (included)
 
-<p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
-
-#### Sensors:
+#### Sensors Required:
 
  - 1 X [Clip-on CT sensors](https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) (the emonPi can accept up to two CT sensors; one is included as standard with the emonPi)
  - 1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/components/) (optional but highly recommended)
 
-#### Power Adapters:
+#### Power Adapters Required:
 
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
 
 
 ___
 
+
 #### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
 
 - Energy monitoring add-on node
-- Optional add-on if more then two circuits need to be monitored or if WiFi / Ethernet connectivity is not available at utility meter
+- Optional add-on if more then two circuits need to be monitored or if WiFi / Ethernet connectivity is not available at the location of the utility meter
 - RF Range is approximately similar to home WiFi and can be affected by obstacles e.g. thick stone walls
 - Up to 2x emonTx can be connected to a single emonPi
 - To connect an emonTx see: [Setup > Adding Energy Monitoring Node](/setup/emontx)
@@ -69,7 +67,7 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 ***
 
-#### [emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/) (emonPi Alternative)
+#### [emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/) (Alternative to emonPi)
 
    -  Web connected gateway: [Raspberry Pi](https://shop.openenergymonitor.com/raspberry-pi-2-web-connected-base-station/) + [RFM69Pi RF receiver board](https://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/)
   -  No on-board energy monitoring functions
@@ -91,7 +89,7 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
  - Does not report instantaneous power
  - Best used in conjunction with clip-on CT sensor(s)
 
-
+<p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
 </div> <!-- END HOME ENERGY -->
 <div class='install-instructions solarpv' markdown='1'>
@@ -99,8 +97,11 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 ### {% linkable_title Solar PV Hardware %}
 
-___
+> Providing real-time and historic information on your solar generation and demand matching, it will help you make better use of available solar power.
 
+All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms and is fully open-source.
+
+The hardware options to set up a solar PV monitor are as follows:
 
 #### **[emonPi](https://shop.openenergymonitor.com/emonpi-solar-pv/)**
 
@@ -110,8 +111,6 @@ ___
 - Requires WiFi / Ethernet plus 2 x power outlets
 - Single unit required to monitor solar PV, provided the generation and site-consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accessible at this location
 - Requires [pre-built SD card image](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log) (included)
-
-<p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
 #### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
 
@@ -126,12 +125,12 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 </p>
 
 
-#### Sensors:
+#### Required Sensors:
 
  - 2 X [Clip-on CT sensors](https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) (included in emonPi solar PV bundle)
  - 1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/components/) (included in emonPi solar PV bundle)
 
-#### Power Adapters:
+#### Required Power Adapters:
 
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
  - *1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/power-supplies/) (optional if using an emonTx but highly recommended)*
@@ -159,12 +158,8 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
   - Reports exact amount of energy (Wh) reported by utility meter
   - Does not report instantaneous power
   - Best used in conjunction with clip-on CT sensor(s)
-
-
-
-
-
-
+  
+<p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
 
 
@@ -255,17 +250,13 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 \* Requires RJ45 breakout board
 
 
-#### {% linkable_title Use in USA%}
+#### {% linkable_title Use in the USA%}
 
-The emonPi and emonTx are designed to monitor single phase AC up to 100A. The system can work for some set-ups in USA with some changes to the configuration. Users in North America should consult the Building Blocks guide ['emonTx - Use in North America'](http://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) and forum thread discussions [[1]](http://openenergymonitor.org/emon/node/711) [[2]](http://openenergymonitor.org/emon/node/3265).
+The emonPi and emonTx are designed to monitor single phase AC up to 100A. The system can work for some set-ups in the USA with some changes to the configuration. Users in North America should consult the Building Blocks guide ['emonTx - Use in North America'](http://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) and forum thread discussions [[1]](http://openenergymonitor.org/emon/node/711) [[2]](http://openenergymonitor.org/emon/node/3265).
 
-#### {% linkable_title Use with three-phase%}
+#### {% linkable_title Use with 3 phase%}
 
-The emonPi / emonTx have been designed for single-phase AC monitoring. The emonTx can monitor 'approximate' three-phase (assuming balanced phases) using [modified firmware](https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV3/RFM/emonTxV3.4/emonTxV3_4_3Phase_Voltage) and 3x CT sensors + 1 x AC-AC adapter. [Further reading](https://openenergymonitor.org/emon/buildingblocks/3-phase-power)
-
-<br>
-
-### [Next step: Connect &raquo;](/setup/connect/)
+The emonPi / emonTx have been designed for single-phase AC monitoring. The emonTx can monitor 'approximate' 3 phase (assuming balanced phases) using [modified firmware](https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxV3/RFM/emonTxV3.4/emonTxV3_4_3Phase_Voltage) and 3x CT sensors + 1 x AC-AC adapter. [Further reading](https://openenergymonitor.org/emon/buildingblocks/3-phase-power)
 
 <br>
 
@@ -273,3 +264,12 @@ The emonPi / emonTx have been designed for single-phase AC monitoring. The emonT
 <div class='videoWrapper'>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ZEa7neZesko" frameborder="0" allowfullscreen></iframe>
 </div>
+
+<br>
+
+***
+
+### [Next step: Connect &raquo;](/setup/connect/)
+
+
+

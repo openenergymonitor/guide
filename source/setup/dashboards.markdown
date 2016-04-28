@@ -13,6 +13,8 @@ footer: true
 
 ### [Next step: Add Energy Nodes &raquo;](/setup/emontx/)
 
+***
+
 ## Emoncms dashboards:
 1. Application specific dashboard Apps
 2. Emoncms Android App
@@ -47,12 +49,14 @@ Custom dashboards can be created by drag and dropping widgets and graphs onto a 
 
 ![Example dashboard](https://openenergymonitor.org/emon/sites/default/files/Dashboards%20v7.0.JPG)
 
-### Dashboard builder video guide
+### Dashboard Editor Video Guide
 
 <div class='videoWrapper'>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eqN9rc9VnqI" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <br>
+
+***
 
 ### [Next step: Add Energy Nodes &raquo;](/setup/emontx/)

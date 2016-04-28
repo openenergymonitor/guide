@@ -13,6 +13,8 @@ published: true
 
 ### [Next step: Install &raquo;](/setup/install/)
 
+***
+
 ### **First Boot**
 
 <p class="note">
@@ -143,11 +145,14 @@ The emonPi is now ready to be physically installed and sensors connected.
 
 <br>
 
-### [Next step: Install &raquo;](/setup/install/)
-
-<br>
-
 ### Video Guide
 <div class='videoWrapper'>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/77WEj9Q6JEE" frameborder="0" allowfullscreen></iframe>
 </div>
+
+***
+
+### [Next step: Install &raquo;](/setup/install/)
+
+
+

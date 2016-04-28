@@ -13,7 +13,7 @@ footer: true
 
 ### [Next step: Dashboards &raquo;](/setup/dashboards/)
 
-
+***
 
 ## 1. Create Emoncms.org account
 
@@ -49,5 +49,6 @@ footer: true
 
 <br>
 
+***
 
 ### [Next step: Dashboards &raquo;](/setup/dashboards/)
