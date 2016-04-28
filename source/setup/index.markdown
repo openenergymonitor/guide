@@ -112,7 +112,11 @@ All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi
 
 The hardware options to set up a solar PV monitor are as follows:
 
+***
+
 #### **[emonPi](https://shop.openenergymonitor.com/emonpi-solar-pv/)**
+
+![emonPi](/images/hardwareimages/emonPi_shop_photo.jpg)
 
 - Raspberry Pi-based energy monitor
 - Install next to utility meter
@@ -122,6 +126,8 @@ The hardware options to set up a solar PV monitor are as follows:
 - Requires [pre-built SD card image](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log) (included)
 
 #### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
+
+![emonTxV3](/images/hardwareimages/emontxv3photo.jpg)
 
 - Energy monitoring add-on node
 - Required if solar PV generation and site-consumption feeds are located in separate locations or if WiFi / Ethernet connectivity is not available at utility meter
@@ -167,7 +173,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
   - Reports exact amount of energy (Wh) reported by utility meter
   - Does not report instantaneous power
   - Best used in conjunction with clip-on CT sensor(s)
-  
+
 <p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
 
@@ -176,7 +182,9 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 </div> <!-- END SOLAR PV -->
 <div class='install-instructions temperature' markdown='1'>
 
-### {% linkable_title Wireless Temperature Hardware %}
+Temperature sensors can either be wireless or wired:
+
+### {% linkable_title 1. Wireless Temperature Hardware %}
 ***
 
 
@@ -192,7 +200,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 
 ***
 
-### {% linkable_title Wired Temperature Hardware %}
+### {% linkable_title 2. Wired Temperature Hardware %}
 
 
 
