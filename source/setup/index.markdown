@@ -182,11 +182,11 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 </div> <!-- END SOLAR PV -->
 <div class='install-instructions temperature' markdown='1'>
 
-Temperature sensors can either be wireless or wired:
+###Temperature sensors can either be wireless or wired:
 
-### {% linkable_title 1. Wireless Temperature Hardware %}
 ***
 
+### {% linkable_title 1. Wireless Temperature Hardware %}
 
 #### [emonTH](http://shop.openenergymonitor.com/emonth-433mhz-temperature-humidity-node/)
 - Wireless temperature & humidity monitoring node
