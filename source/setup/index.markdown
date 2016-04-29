@@ -97,9 +97,9 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
  - Reports exact amount of energy (Wh) reported by utility meter
  - Does not report instantaneous power
  - Best used in conjunction with clip-on CT sensor(s)
-
-<p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
-
+ 
+ <p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
+ 
 </div> <!-- END HOME ENERGY -->
 <div class='install-instructions solarpv' markdown='1'>
 
