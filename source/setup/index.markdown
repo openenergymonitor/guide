@@ -18,7 +18,7 @@ published: true
 <input name='install-instructions' type='radio' id='temperature-hardware'>
 
 <label class='menu-selector energy' for='home-energy-hardware'>Home Energy</label>
-<label class='menu-selector solarpv' for='solar-pv-hardware'>&nbsp;Solar PV&nbsp;&nbsp;</label>
+<label class='menu-selector solarpv' for='solar-pv-hardware'>Solar PV</label>
 <label class='menu-selector temperature' for='temperature-hardware'>Temperature</label>
 
 <div class='install-instructions energy' markdown='1'>
