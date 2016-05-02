@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Service Credentials - Guide | OpenEnergyMonitor</title>
+    <title>WiFi MQTT Control Relay - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="dev2">
+    <meta name="description" content="MQTT heating control relay">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/technical/credentials/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/integrations/mqtt-relay/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Service Credentials">
+    <meta property="og:title" content="WiFi MQTT Control Relay">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/technical/credentials/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/integrations/mqtt-relay/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="dev2">
+    <meta property="og:description" content="MQTT heating control relay">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Service Credentials">
-    <meta name="twitter:description" content="dev2">
+    <meta name="twitter:title" content="WiFi MQTT Control Relay">
+    <meta name="twitter:description" content="MQTT heating control relay">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -116,65 +116,16 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   
   <header>
     <h1 class="title indent">
-      Service Credentials
+      WiFi MQTT Control Relay
     </h1>
   </header>
   <hr class="divider">
   
 
-  <p>Default log-in credentials for latest <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&amp;-Change-Log">pre-built emonPi/emonBase ready-to-go SD card</a>.</p>
+  <h1 id="under-construction">Under construction</h1>
 
-<p><strong>Note: Before changing any password the root file-system will need to be put into Read Write mode with command <code class="highlighter-rouge">$rpi-rw</code>. When finished but file-sysem back to Read Only with <code class="highlighter-rouge">$rpi-ro</code>.</strong></p>
+<h2 id="httpsopenenergymonitororgemonmoduleswifirelay">https://openenergymonitor.org/emon/modules/wifirelay</h2>
 
-<h1 id="ssh">SSH</h1>
-
-<p>To connect to emonPi / emonBase via ssh:</p>
-
-<ul>
-  <li>Linux / Mac : open terminal window <code class="highlighter-rouge">$ ssh pit@emonpi</code> or <code class="highlighter-rouge">$ ssh pi@&lt;IP ADDRESS&gt;</code></li>
-  <li>Windows: use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">Putty application</a></li>
-  <li>Google search <a href="http://lmgtfy.com/?q=raspberry+pi+ssh">‘Raspberry Pi SSH’</a> for many tutorials, <a href="https://learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-6-using-ssh.pdf">Adafruit has a good guie</a></li>
-</ul>
-
-<p><strong>SSH: port 22 user,pass:<code class="highlighter-rouge">pi</code>,<code class="highlighter-rouge">emonpi2016</code></strong></p>
-
-<p><em>On older emonSD images ssh password is <code class="highlighter-rouge">raspberry</code>, see emonSD <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">repository &amp; changelog</a></em></p>
-
-<p>Once logged in change password with: <code class="highlighter-rouge">$ passwd</code></p>
-
-<h2 id="mysql">MYSQL</h2>
-
-<p>MYSQL: <code class="highlighter-rouge">root</code> user password is <code class="highlighter-rouge">emonpimysql2016</code> and mysql <code class="highlighter-rouge">emoncms</code> user password is <code class="highlighter-rouge">emonpiemoncmsmysql2016</code></p>
-
-<h2 id="mosquitto-mqtt">Mosquitto MQTT</h2>
-
-<p>Mosquitto MQTT: port:1883 user,pass:<code class="highlighter-rouge">emonpi</code>,<code class="highlighter-rouge">emonpimqtt2016</code></p>
-
-<p>Generate a new password using <code class="highlighter-rouge">sudo mosquitto_passwd -c /etc/mosquitto/passwd &lt;username&gt;</code>. Then restart mosquitto <code class="highlighter-rouge">sudo service mosquitto restart</code>.</p>
-
-<p>If Mosquitto MQTT authenticaion details are changed they will also need to changed in:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>~/emonpi/lcd/emonPiLCD.py
-~/data/emonhub.conf
-/var/www/emoncms/settings.php
-~/oem_openHab/openHab.cfg <span class="o">(</span>symlined to /etc/openhab/configurations/openhab.cfg<span class="o">)</span>
-and node red using flows editor
-</code></pre>
-</div>
-
-<p><strong>Caution changes to <code class="highlighter-rouge">emonPiLCD.py</code> and <code class="highlighter-rouge">settings.php</code> will be overwritten by emonPi update. Recommended to undertake manual <em>git pull(s)</em> to update instead.</strong></p>
-
-<h2 id="nodered">NodeRED</h2>
-
-<p>NodeRED: port:1880 user,pass:<code class="highlighter-rouge">emonpi</code>,<code class="highlighter-rouge">emonpi2016</code></p>
-
-<p>change it here:  <code class="highlighter-rouge">~/data/node-red/settings.js</code></p>
-
-<h2 id="openhab">OpenHab</h2>
-
-<p>OpenHab port:8080 user,pass:<code class="highlighter-rouge">pi</code>,<code class="highlighter-rouge">emonpi2016</code></p>
-
-<p>change it here: <code class="highlighter-rouge">/etc/openhab/configurations/users.cfg</code></p>
 
 
 </article>
@@ -187,8 +138,8 @@ and node red using flows editor
           <div class="grid">
   
     <section class="aside-module grid__item one-whole lap-one-half">
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/technical/credentials.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/technical/credentials.markdown'>Edit on GitHub Prose</a></div>
+  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/integrations/mqtt-relay.markdown'>Edit on GitHub</a></div>
+<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/integrations/mqtt-relay.markdown'>Edit on GitHub Prose</a></div>
 
 
   <div class='section'>
@@ -224,7 +175,7 @@ and node red using flows editor
         <ul>
          <li><a  href='/integrations/nodered/'>Node-RED </a></li>
          <li><a  href='/integrations/openhab/'>OpenHAB </a></li>
-         <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
+         <li><a class='active' href='/integrations/mqtt-relay/'>Control Relay </a></li>
          <li><a  href='/integrations/lightwaverf/'>LightWave RF Control </a></li>
         </ul>
 
@@ -233,7 +184,7 @@ and node red using flows editor
        <ul>
         <li><a  href='/technical/'>Overview </a></li>
         <li><a  href='/technical/specifications/'>Specifications </a></li>
-        <li><a class='active' href='/technical/credentials/'>Service Credentials </a></li>
+        <li><a  href='/technical/credentials/'>Service Credentials </a></li>
         <li><a  href='/technical/api/'>Emoncms API </a></li>
         <li><a  href='/technical/mqtt/'>MQTT </a></li>
         <li><a  href='/technical/software/'>Software </a></li>
