@@ -133,11 +133,11 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
   <p>Emoncms supports the creation of daily, weekly, monthly kWh data and graph’s from several different emoncms input types.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>- Power in Watts (i.e emontx, emonpi CT channels)
-- Cumulative Wh (i.e pulse counter, 3rd party meter)
-- Cumulative kWh (i.e pulse counter, 3rd party meter)
-</code></pre>
-</div>
+<ul>
+  <li>Power in Watts (i.e emontx, emonpi CT channels)</li>
+  <li>Cumulative Wh (i.e pulse counter, 3rd party meter)</li>
+  <li>Cumulative kWh (i.e pulse counter, 3rd party meter)</li>
+</ul>
 
 <h3 id="creating-daily-kwh-data-from-power-inputs-emontx-emonpi">1) Creating daily kWh data from power inputs (emontx, emonpi)</h3>
 
@@ -145,10 +145,10 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <p>Note: use the “CREATE NEW” option and add something like _kwh to the feed name in order to help distinguish it from your power feed.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>1. In the inputs interface select the power input for which you wish to generate kWh data. Click on the spanner icon to bring up the input processing configuration interface.
-2. Select the **power to kWh** input processor and create a feed, select a feed interval that either matches your post rate i.e 10s on the emontx and emonpi or for reduced disk use; intervals of up to 3600s can be used.
-</code></pre>
-</div>
+<ol>
+  <li>In the inputs interface select the power input for which you wish to generate kWh data. Click on the spanner icon to bring up the input processing configuration interface.</li>
+  <li>Select the <strong>power to kWh</strong> input processor and create a feed, select a feed interval that either matches your post rate i.e 10s on the emontx and emonpi or for reduced disk use; intervals of up to 3600s can be used.</li>
+</ol>
 
 <p><img src="https://emoncms.org/Modules/site/inputprocessing.png" /><br /><br /></p>
 
