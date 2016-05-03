@@ -23,6 +23,7 @@ The standard emonTx and emonPi firmware transmit real power values for each CT c
 Note: use the "CREATE NEW" option and add something like _kwh to the feed name in order to help distinguish it from your power feed.
 
 1. In the inputs interface select the power input for which you wish to generate kWh data. Click on the spanner icon to bring up the input processing configuration interface.
+
 2. Select the **power to kWh** input processor and create a feed, select a feed interval that either matches your post rate i.e 10s on the emontx and emonpi or for reduced disk use; intervals of up to 3600s can be used.
 
 <img src="https://emoncms.org/Modules/site/inputprocessing.png" /><br><br>
@@ -32,6 +33,7 @@ Note: use the "CREATE NEW" option and add something like _kwh to the feed name i
 Some energy meters provide kWh output via Modbus, RS485, MBus, IEC1107, etc. For those meters, the log to feed input processor could be used. However, if the data is irregular, missing data will be recorded as null values. If a null value happens to coincide with midnight, the bar graph produced will show spikes or gaps. At present the process to use is the Wh Accumulator input process. It will fill any missing data. The Wh accumulator has a 23 kW limit equivalent power limit for inputs that are cumulative Wh.
 
 1. In the inputs interface select the input for which you wish to generate kWh data. Click on the spanner icon to bring up the input processing configuration interface.
+
 2. Select the **wh accumulator** input processor (note: this process can also be used for accumulating kWh inputs) and create a feed, select a feed interval that either matches your post rate i.e 10s on the emontx and emonpi or for reduced disk use; intervals of up to 3600s can be used.
 
 ### 2. Creating a kWh per day bar graph
