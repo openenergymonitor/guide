@@ -12,9 +12,9 @@ published: true
 
 Emoncms supports the creation of daily, weekly, monthly kWh data and graph's from several different emoncms input types.
 
-    - Power in Watts (i.e emontx, emonpi CT channels)
-    - Cumulative Wh (i.e pulse counter, 3rd party meter)
-    - Cumulative kWh (i.e pulse counter, 3rd party meter)
+- Power in Watts (i.e emontx, emonpi CT channels)
+- Cumulative Wh (i.e pulse counter, 3rd party meter)
+- Cumulative kWh (i.e pulse counter, 3rd party meter)
 
 ### 1) Creating daily kWh data from power inputs (emontx, emonpi)
 
