@@ -38,7 +38,7 @@ footer: true
 
 ### [2. Emoncms Android App](https://play.google.com/store/apps/details?id=org.emoncms.myapps)
 
-{% img https://lh3.googleusercontent.com/R8gHNdVjdMPz5SBYBgEWZ83KSzprX37V7Ze5QCdOFTz0Vv5xs-i9iWVwBPnvItWW-Yk=h900-rw 250 %}
+{% img https://github.com/emoncms/AndroidApp/raw/master/app.png 250 %}
 <a href="https://play.google.com/store/apps/details?id=org.emoncms.myapps&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" rel="Get it on Google Play">![Get it on Google Play](http://steverichey.github.io/google-play-badge-svg/img/en_get.svg)</a>
 
 
