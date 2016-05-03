@@ -247,12 +247,11 @@ $(document).ready(function(){
     auto lo
     iface lo inet loopback
     iface eth0 inet static
-
-    address 10.0.1.96
+    address 10.0.1.96        # Static IP address
     netmask 255.255.255.0
     network 10.0.1.0
     broadcast 10.0.1.255
-    gateway 10.0.1.254
+    gateway 10.0.1.254       # IP address gateway (router)
     <br />
     [CTRL + X] then Y to save and exit nano
     $rpi-ro
@@ -321,6 +320,9 @@ Unplugging power from the emonPi without following the correct shutdown procedur
           <li><a  href='/setup/emontx/'>Add Energy Nodes </a></li>
           <li><a  href='/setup/emonth/'>Add Temperature Nodes </a></li>
           <li><a  href='/setup/import/'>Import / Backup </a></li>
+<<<<<<< HEAD
+          <li><a  href='/setup/troubleshooting/'>Troubleshooting </a></li>
+=======
         </ul>
         <li>
           <b>Emoncms</b>
@@ -329,6 +331,7 @@ Unplugging power from the emonPi without following the correct shutdown procedur
           <li><a  href='/setup/daily-averages'>Daily Averages </a></li>
           <li><a  href='/setup/export-csv'>Exporting CSV </a></li>
           <li><a  href='/setup/histograms'>Histograms </a></li>
+>>>>>>> 0075011f2f76551ab76b3efe82e122eda4965915
 
         </ul>
 
