@@ -9,6 +9,10 @@ sharing: true
 footer: true
 ---
 
-# nodeRED
+# [Node-RED](/integrations/nodered)
 
-# openHAB
+# [OpenHAB](//integrations/openhab)
+
+# [Control Realy](/integrations/mqtt-relay/)
+
+# [LightWaveRF Control](/integrations/lightwaverf)
