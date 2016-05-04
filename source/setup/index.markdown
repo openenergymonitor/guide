@@ -53,14 +53,15 @@ ___
 
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
 
-<button type="button"><a href="https://shop.openenergymonitor.com/home-energy-monitor">View in Store</a></button>
+<a class="btn pull-right" href="https://shop.openenergymonitor.com/home-energy-monitor">View in Store &rarr; </a>
+
+<br>
 
 ***
 
 ## **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
 
 ![emonTxV3](/images/hardwareimages/emontxv3photo.jpg)
-
 
 - Energy monitoring add-on node
 - Optional add-on if more then two circuits need to be monitored or if WiFi / Ethernet connectivity is not available at the location of the utility meter
@@ -72,7 +73,9 @@ ___
 An emonTx can be powered by 3 x AA batteries; however, if possible, it is recommended to power the unit with an AC-AC adapter to provide an AC voltage reference for more accurate Real Power and VRMS calculations.
 </p>
 
-<button type="button"><a href="https://shop.openenergymonitor.com/home-energy-monitor">View in Store</a></button>
+<a class="btn pull-right" href="https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz">View in Store &rarr; </a>
+
+<br>
 
 ***
 
