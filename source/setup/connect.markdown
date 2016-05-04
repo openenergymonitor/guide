@@ -109,12 +109,11 @@ $(document).ready(function(){
     auto lo
     iface lo inet loopback
     iface eth0 inet static
-
-    address 10.0.1.96
+    address 10.0.1.96        # Static IP address
     netmask 255.255.255.0
     network 10.0.1.0
     broadcast 10.0.1.255
-    gateway 10.0.1.254
+    gateway 10.0.1.254       # IP address gateway (router)
     <br>
     [CTRL + X] then Y to save and exit nano
     $rpi-ro
