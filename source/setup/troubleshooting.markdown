@@ -9,16 +9,11 @@ sharing: true
 footer: true
 ---
 
-### [&laquo; Previous step: Connect](/setup/connect/)
-
-### [Next step: Log Remotely &raquo;](/setup/remote/)
-
-
 # Under Consutruction
 
 ## Incorrect time on LCD display
 
-It's important that the emonPi has the correct time. If required timezone should be set in Emoncms and on the Raspberry Pi (see below). The emonPi requires an active interent connection at bootup to obtain current time from NTP. After correct time has been obtained the soft-ntp function *should* be able to keep valid time even if interent connection is lost. See [NTP Time Fix](https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/read-only.md#ntp-time-fix) for more info.
+It's important that the emonPi has the correct time. If required timezone should be set in Emoncms Account page and on the Raspberry Pi (see below). The emonPi requires an active interent connection at bootup to obtain current time from NTP. After correct time has been obtained the soft-ntp function *should* be able to keep valid time even if interent connection is lost. See [NTP Time Fix](https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/read-only.md#ntp-time-fix) for more info.
 
 Press LCD push-button until `uptime` page is displayed. If time is not correct:
 
@@ -38,7 +33,6 @@ Press LCD push-button until `uptime` page is displayed. If time is not correct:
 
 ***
 
-### [Next step: Log Remotely &raquo;](/setup/remote/)
 
 
 
