@@ -139,7 +139,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <ol>
   <li>Open the feed for which you wish to generate averages for in the default data viewer called graph.</li>
-  <li>Click on the Average tickbox below the graph.</li>
+  <li>Click on the Average tickbox for the feed, below the graph.</li>
   <li>Select ‘fixed interval’ for type and then enter 3600 in the box next to it (i.e: 3600 seconds in an hour)</li>
   <li>To view the output as a bar graph select ‘Bars’ from the dropdown graph type selector next to the feed</li>
   <li>To complete hit <strong>Reload</strong>.</li>
@@ -151,7 +151,23 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <p><img src="/images/setup/hourlyaverage.png" alt="hourlyaverage.png" /></p>
 
-<p><strong>CSV Export:</strong> The returned averages can be exported as CSV for use in external programs by clicking on the <strong>Show CSV Output</strong> button available at the bottom of the graph viewer page. See Exporting CSV for more on this.</p>
+<p><strong>CSV Export:</strong> The returned averages can be exported as CSV for use in external programs by clicking on the ‘Show CSV Output’ button available at the bottom of the graph viewer page. See Exporting CSV for more on this.</p>
+
+<h3 id="daily-averages">Daily averages</h3>
+
+<p>To calculate timezone correct daily averages:</p>
+
+<ol>
+  <li>Open the feed in the default data viewer (graph) as above.</li>
+  <li>Click on the Average tickbox for the feed, below the graph.</li>
+  <li>select <strong>daily</strong> for type from the dropdown menu.</li>
+  <li>To view the output as a bar graph select ‘Bars’ from the dropdown graph type selector next to the feed</li>
+  <li>To complete hit <strong>Reload</strong>.</li>
+</ol>
+
+<p><img src="/images/setup/dailyaverage.png" alt="dailyaverage.png" /></p>
+
+<p><strong>CSV Export:</strong> The returned averages can be exported as CSV for use in external programs by clicking on the ‘Show CSV Output’ button available at the bottom of the graph viewer page. See Exporting CSV for more on this.</p>
 
 <p>Note: At present this feature can provide averages over the entire feed length on emoncms.org but is limited to the last 7 days on emonpi or self-hosted emoncms installs. This is due only to a need to implement the background processes required on emonpi/local installs which has not been completed yet.</p>
 
