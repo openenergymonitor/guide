@@ -17,13 +17,13 @@ published: true
 The [Emoncms backup module](https://github.com/emoncms/backup) can be used to backup Emoncms account data and import data from another Emoncms account. This process can also be used to migrate from an older emonPi / emonBase image to the latest image.
 
 <p class="note">
-Currently the Backup Module can only be used with Local Emoncms not Emoncms.org </p>
+Currently the Backup Module can only be used with Local Emoncms <strong>not</strong> Emoncms.org </p>
  
 ## Backup / Export
 
-### Export from older emonPi / emonBase
+### Export from an older emonPi / emonBase
 
-If the Backup module is not visible in Local Emoncms menu then the emonPi / emonBase is running an old version e.g Emoncms V8.x.
+If the Backup module is not visible in the Local Emoncms menu then the emonPi / emonBase is running an older version e.g Emoncms V8.x.
 
 <p class="note">
 To check what software stack (emonSD pre-built SD card) version an emonPi is running see instructions on emonPi <a href="https:github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log">emonSD repository and changelog</a>
@@ -32,15 +32,15 @@ To check what software stack (emonSD pre-built SD card) version an emonPi is run
 To export data from an older emonPi:
 
 1. Install the backup module by running `Admin > emonPi update` in Local Emoncms
-2. Wait (up to) 60s for update to begin then another couple of min for update to complete, the update log page can be refreshed to view progress
+2. Wait (up to) 60s for the update to begin and then another couple of minutes for it to complete; the update log page can be refreshed to view progress
 3. Log-out then back into Local Emoncms
-4. Backup module show now be visible under `Extras > Backup`
+4. Backup module should now be visible under `Extras > Backup`
 5. Follow Backup instructions below
 
 ### Backup
 
 1. Click `Create Backup` (see screenshot below)
-2. Wait for backup to be created, then refrersh the page to view `Download Backup` link
+2. Wait for backup to be created, then refresh the page to view `Download Backup` link
 3. Download `.tar.gz` compressed backup
 
 ![backup old data](/images/setup/low-write-17june15-backup.png)
@@ -50,7 +50,7 @@ To export data from an older emonPi:
 ## Import / Restore
 
 <p class='note warning'>
-Importing / restoring a backup will overwrite ALL data in the current Emoncms account.
+Importing / restoring a backup will overwrite <strong>ALL</strong> data in the current Emoncms account.
 </p>
 
 To import a backup:
@@ -59,13 +59,13 @@ To import a backup:
 2. Wait for upload to complete
 3. Click `Import Backup`
 4. Check restore log (see below)
-5. Log out then log back into Local Emocms using the imported account login Credentials
+5. Log out then log back into Local Emocms using the imported account login credentials
 
 <p class='note warning'>
-Backup <b>tar.gz</b> filename cannot contain any spaces e.g if same backup has been downloaded more than once: <b>'emoncms-backup-2016-04-23 (1).tar'</b> rename to <b>'emoncms-backup-2016-04-23.tar'</b> before uploading.
+Backup <b>tar.gz</b> filename cannot contain any spaces; e.g., if the same backup has been downloaded more than once: rename <b>'emoncms-backup-2016-04-23 (1).tar'</b> to <b>'emoncms-backup-2016-04-23.tar'</b> before uploading.
 </p>
 
-*Note: If new emonSD pre-built-SDcard image has been written to a SD card > 4GB the read-write `~/data` partition should be extended to fill the SD card to create sufficiant space to import a backup. **Do not use Raspbian raspi-config**, instead [connect via SSH](technical/credentials/) and run `$ sudo emonSDexpand` and follow prompts.*
+*Note: If a new emonSD pre-built-SDcard image has been written to an SD card larger than 4GB the read-write `~/data` partition should be expanded to fill the SD card to create sufficient space to import a backup. **Do not use Raspbian raspi-config**, instead [connect via SSH](technical/credentials/) and run `$ sudo emonSDexpand` and follow prompts.*
 
 *`emonSDexpand` will run `~/usefulscripts/sdpart/./sdpart_imagefile` script, for more info see [Useful Scripts Readme](https://github.com/emoncms/usefulscripts#sdpart_imagefile)*
 

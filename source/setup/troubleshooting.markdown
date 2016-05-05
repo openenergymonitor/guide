@@ -9,11 +9,11 @@ sharing: true
 footer: true
 ---
 
-# Under Consutruction
+# Under Construction
 
 ## Incorrect time on LCD display
 
-It's important that the emonPi has the correct time. If required timezone should be set in Emoncms Account page and on the Raspberry Pi (see below). The emonPi requires an active interent connection at bootup to obtain current time from NTP. After correct time has been obtained the soft-ntp function *should* be able to keep valid time even if interent connection is lost. See [NTP Time Fix](https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/read-only.md#ntp-time-fix) for more info.
+It's important that the emonPi has the correct time. If required timezone should be set in Emoncms Account page and on the Raspberry Pi (see below). The emonPi requires an active Internet connection at bootup to obtain current time from NTP. After correct time has been obtained the soft-ntp function *should* be able to keep valid time even if Internet connection is lost. See [NTP Time Fix](https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/read-only.md#ntp-time-fix) for more info.
 
 Press LCD push-button until `uptime` page is displayed. If time is not correct:
 
@@ -24,15 +24,11 @@ Press LCD push-button until `uptime` page is displayed. If time is not correct:
  - Run `$ sudo rapi-config` select `Internationalisation Options` and set local timezone
  - Check time is correct by running `$ date`
  - If time is STILL not correct try:
- - Check emonpi has an active internet connection `$ wget google.com` should connect succesfully
+ - Check emonpi has an active Internet connection `$ wget google.com` should connect succesfully
  - `$ sudo service ntp restart`
  - Check time with `$ date`
- - If time is sitll not correct please post on our [Community Forums](http://community.openenergymonitor.org)
+ - If time is sill not correct please post on our [Community Forums](http://community.openenergymonitor.org)
 
 <br>
 
 ***
-
-
-
-
