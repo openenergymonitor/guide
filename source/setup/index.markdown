@@ -12,6 +12,14 @@ published: true
 
 ### [Next step: Connect &raquo;](/setup/connect/)
 
+The OpenEnergyMonitor system  has the capability to monitor electrical energy use / generation, temperature and humidity.
+
+The system is made up of five main units. These can be assembled and configured to work for a variety of [applications](/applications). The system is fully open-source, both hardware and software. All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms.
+
+Documentation on everything from AC theory to sensor circuit design and application programming is available in the [Resources](https://openenergymonitor.org/emon/buildingblocks) section.
+
+***
+
 <div class='install-instructions-container' markdown='0'>
 <input name='install-instructions' type='radio' id='home-energy-hardware' checked>
 <input name='install-instructions' type='radio' id='solar-pv-hardware'>
@@ -28,13 +36,16 @@ published: true
 
 > The OpenEnergyMonitor system can be used as a simple home energy monitoring system for analyzing real-time power use and daily energy consumption.
 
-All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms and is fully open-source.
 
 The hardware options to set up a home energy monitor are as follows:
 
 ___
 
 ## **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
+
+The emonPi is an all-in-one Raspberry Pi based energy monitoring unit making for a simple installation where Ethernet or WiFi is available at the meter location.
+
+The emonPi can monitor two single-phase AC circuits using clip-on CT sensors. The emonPi can also monitor temperature, and interface directly with utility meters via an optical pulse sensor.
 
 ![emonPi](/images/hardwareimages/emonPi_shop_photo.jpg)
 
@@ -60,6 +71,10 @@ ___
 ***
 
 ## **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
+
+The emonTx is a remote sensor node. Data is transmitted to an emonPi or an emonBase via a low power 433MHz radio.
+
+The emonTx can monitor up to four single-phase AC circuits using clip-on CT sensors. A plug-in AC-AC adapter can be used to power the unit and provide an AC voltage sample for real-power calculations. Four AA batteries can be used to power the emonTx if AC power is not available.
 
 ![emonTxV3](/images/hardwareimages/emontxv3photo.jpg)
 
@@ -90,6 +105,10 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
   -  Knowledge of SSH highly desirable
   -  Requires [pre-built SD card image](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log) (optional extra)
 
+<a class="btn pull-right" href="https://shop.openenergymonitor.com/emonbase-web-connected-base-station">View in Store &rarr; </a>
+
+<br>
+
 ***
 
 #### [Optical Utility Meter LED Pulse Sensor](https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/) (Optional)
@@ -101,6 +120,10 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
  - Does not report instantaneous power
  - Best used in conjunction with clip-on CT sensor(s)
 
+<a class="btn pull-right" href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor">View in Store &rarr; </a>
+
+<br>
+
 </div> <!-- END HOME ENERGY -->
 <div class='install-instructions solarpv' markdown='1'>
 
@@ -108,8 +131,6 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 ### {% linkable_title Solar PV Hardware %}
 
 > Providing real-time and historic information on your solar generation and demand matching, it will help you make better use of available solar power.
-
-All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms and is fully open-source.
 
 The hardware options to set up a solar PV monitor are as follows:
 
@@ -125,6 +146,12 @@ The hardware options to set up a solar PV monitor are as follows:
 - Requires WiFi / Ethernet plus 2 x power outlets
 - Single unit required to monitor solar PV, provided the generation and site-consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accessible at this location
 - Requires [pre-built SD card image](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log) (included)
+
+<a class="btn pull-right" href="https://shop.openenergymonitor.com/emonPi-3">View in Store &rarr; </a>
+
+<br>
+
+***
 
 #### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
 
@@ -151,7 +178,11 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
  - *1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/power-supplies/) (optional if using an emonTx but highly recommended)*
 
- ***
+<a class="btn pull-right" href="https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz">View in Store &rarr; </a>
+
+<br>
+
+***
 
 #### [emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/) (emonPi Alternative)
 
@@ -164,7 +195,11 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
   -  Knowledge of SSH highly desirable
   -  Requires [pre-built SD card image](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log) (optional extra)
 
- ***
+<a class="btn pull-right" href="https://shop.openenergymonitor.com/emonbase-web-connected-base-station">View in Store &rarr; </a>
+
+<br>
+
+***
 
 #### [Optical Utility Meter LED Pulse Sensor](https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/) (Optional)
 
@@ -174,6 +209,10 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
   - Reports exact amount of energy (Wh) reported by utility meter
   - Does not report instantaneous power
   - Best used in conjunction with clip-on CT sensor(s)
+
+<a class="btn pull-right" href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor">View in Store &rarr; </a>
+
+<br>
  
 </div> <!-- END SOLAR PV -->
 <div class='install-instructions temperature' markdown='1'>
@@ -193,6 +232,10 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 - Optional pulse sensor input
 
 {% img /images/setup/emonth-plant.png 400 %}
+
+<a class="btn pull-right" href="https://shop.openenergymonitor.com/emonth-433mhz-temperature-humidity-node">View in Store &rarr; </a>
+
+<br>
 
 ***
 
