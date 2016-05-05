@@ -28,6 +28,8 @@ The result should look like this:
 
 ![hourlyaverage.png](/images/setup/hourlyaverage.png)
 
+**CSV Export:** The returned averages can be exported as CSV for use in external programs by clicking on the **Show CSV Output** button available at the bottom of the graph viewer page. See Exporting CSV for more on this.
+
 Note: At present this feature can provide averages over the entire feed length on emoncms.org but is limited to the last 7 days on emonpi or self-hosted emoncms installs. This is due only to a need to implement the background processes required on emonpi/local installs which has not been completed yet.
 
 
