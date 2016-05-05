@@ -12,10 +12,12 @@ published: true
 
 This guide details how to generate interval based averages i.e hourly, or timezone correct: daily, weekly and monthly averages from emoncms feeds. Designed for determining power, temperature and humidity averages.
 
+Averages are returned for the time period given by the returned timestamp up to the next timestamp. The timestamp is for the start of the average period.
+
 ### Hourly averages
 
 1. Open the feed for which you wish to generate averages for in the default data viewer called graph.
-2. Click on the Average tickbox below the graph - this changes the request type to fetch the average rather than the value at every interval.
+2. Click on the Average tickbox below the graph.
 3. Select 'fixed interval' for type and then enter 3600 in the box next to it (i.e: 3600 seconds in an hour)
 4. To view the output as a bar graph select 'Bars' from the dropdown graph type selector next to the feed
 5. To complete hit **Reload**.
