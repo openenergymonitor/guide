@@ -45,7 +45,7 @@ Your safety is your responsibility. Clip-on current sensors are non-invasive and
 </p>
 
 <p class='note'>
-The clip-on CT sensors must be clipped round either the live or Neutral AC wire. Not both.
+The clip-on CT sensors must be clipped round either the live or Neutral AC wire. <strong>Not both</strong>.
 </p>
 
 ![CT sensor installation ](/images/applications/solar-pv/ctinstall.jpg)

@@ -53,7 +53,7 @@ ___
 
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
 
-<a class="btn pull-right" href="https://shop.openenergymonitor.com/home-energy-monitor">View in Store &rarr; </a>
+<a class="btn pull-right" href="https://shop.openenergymonitor.com/emonPi-3">View in Store &rarr; </a>
 
 <br>
 
@@ -100,9 +100,7 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
  - Reports exact amount of energy (Wh) reported by utility meter
  - Does not report instantaneous power
  - Best used in conjunction with clip-on CT sensor(s)
- 
- <p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
- 
+
 </div> <!-- END HOME ENERGY -->
 <div class='install-instructions solarpv' markdown='1'>
 
@@ -176,12 +174,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
   - Reports exact amount of energy (Wh) reported by utility meter
   - Does not report instantaneous power
   - Best used in conjunction with clip-on CT sensor(s)
-
-<p><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
-
-
-
-
+ 
 </div> <!-- END SOLAR PV -->
 <div class='install-instructions temperature' markdown='1'>
 
@@ -288,6 +281,7 @@ The emonPi / emonTx have been designed for single-phase AC monitoring. The emonT
 </div>
 
 <br>
+<p style="text-align: right;"><small>Raspberry Pi is a registered trademark of the <a href="https://www.raspberrypi.org/about/">Raspberry Pi Foundation</a></small></p>
 
 ***
 
