@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Creating Daily Averages
-description: Creating Daily Averages
+title: Calculating Averages
+description: Calculating Averages
 date: "2015-03-08 21:36"
 sidebar: true
 comments: false
@@ -10,11 +10,19 @@ footer: true
 published: true
 ---
 
-# Creating Daily Averages
-
 This guide details how to generate interval based averages i.e hourly, or timezone correct: daily, weekly and monthly averages from emoncms feeds. Designed for determining power, temperature and humidity averages.
 
-To generate average data first click on the eye icon for the feed you wish to use from the emoncms feed list to bring up the feed in the default data viewer called graph.
+### Hourly averages
+
+1. Open the feed for which you wish to generate averages for in the default data viewer called graph.
+2. Click on the Average tickbox below the graph
+3. Select 'fixed interval' for type and then enter 3600 in the box next to it (i.e: 3600s in an hour)
+4. To view the output as a bar graph select 'Bars' from the dropdown graph type selector next to the feed
+5. To complete hit **Reload**.
+ 
+**Note:** If its your first time you may need to click on **Reload a second time** as the averages are computed in the background when the request is first made.
+
+The result should look like this:
 
 ![hourlyaverage.png](/images/setup/hourlyaverage.png)
 
