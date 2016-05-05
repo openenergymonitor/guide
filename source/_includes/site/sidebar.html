@@ -1,7 +1,13 @@
 <div class="grid">
+
   {% assign url_parts = page.url | split: '/' %}
+
+  {% if page.is_homepage %}
+    {% include asides/navigation_side.html %}
+  {% else %}
     {% include asides/navigation_side.html %}
     {% include asides/about.html %}
+  {% endif %}
 
     {% if page.blog_index %}
       {% include asides/categories.html %}
