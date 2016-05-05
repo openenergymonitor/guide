@@ -131,11 +131,11 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   <hr class="divider">
   
 
-  <h1 id="under-consutruction">Under Consutruction</h1>
+  <h1 id="under-construction">Under Construction</h1>
 
 <h2 id="incorrect-time-on-lcd-display">Incorrect time on LCD display</h2>
 
-<p>It’s important that the emonPi has the correct time. If required timezone should be set in Emoncms Account page and on the Raspberry Pi (see below). The emonPi requires an active interent connection at bootup to obtain current time from NTP. After correct time has been obtained the soft-ntp function <em>should</em> be able to keep valid time even if interent connection is lost. See <a href="https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/read-only.md#ntp-time-fix">NTP Time Fix</a> for more info.</p>
+<p>It’s important that the emonPi has the correct time. If required timezone should be set in Emoncms Account page and on the Raspberry Pi (see below). The emonPi requires an active Internet connection at bootup to obtain current time from NTP. After correct time has been obtained the soft-ntp function <em>should</em> be able to keep valid time even if Internet connection is lost. See <a href="https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/read-only.md#ntp-time-fix">NTP Time Fix</a> for more info.</p>
 
 <p>Press LCD push-button until <code class="highlighter-rouge">uptime</code> page is displayed. If time is not correct:</p>
 
@@ -147,16 +147,15 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   <li>Run <code class="highlighter-rouge">$ sudo rapi-config</code> select <code class="highlighter-rouge">Internationalisation Options</code> and set local timezone</li>
   <li>Check time is correct by running <code class="highlighter-rouge">$ date</code></li>
   <li>If time is STILL not correct try:</li>
-  <li>Check emonpi has an active internet connection <code class="highlighter-rouge">$ wget google.com</code> should connect succesfully</li>
+  <li>Check emonpi has an active Internet connection <code class="highlighter-rouge">$ wget google.com</code> should connect succesfully</li>
   <li><code class="highlighter-rouge">$ sudo service ntp restart</code></li>
   <li>Check time with <code class="highlighter-rouge">$ date</code></li>
-  <li>If time is sitll not correct please post on our <a href="http://community.openenergymonitor.org">Community Forums</a></li>
+  <li>If time is sill not correct please post on our <a href="http://community.openenergymonitor.org">Community Forums</a></li>
 </ul>
 
 <p><br /></p>
 
 <hr />
-
 
 
 </article>
