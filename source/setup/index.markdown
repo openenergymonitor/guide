@@ -259,25 +259,10 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 - Compatible with emonPi using [RJ45 Breakout](http://shop.openenergymonitor.com/rj45-to-terminal-block-breakout-for-ds18b20/)
 - Up to 6x sensors can be connected to emonPi / emonTx using [RJ45 Breakout](http://shop.openenergymonitor.com/rj45-to-terminal-block-breakout-for-ds18b20/)
 
-
-
-
-
-
-
-
-
-
-
-
-
 </div> <!-- END TEMP -->
 
 
 </div>
-
-
-
 
 ***
 
