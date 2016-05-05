@@ -22,9 +22,11 @@ There are 3 timestamp formats available:
 ![csv_export_1.png](/images/setup/csv_export_1.png)
 
 **Date time string**
-![csv_export_3.png](/images/setup/csv_export_2.png)
+![csv_export_2.png](/images/setup/csv_export_2.png)
 
 **Seconds since the start of the export**
-![csv_export_2.png](/images/setup/csv_export_3.png)
+![csv_export_3.png](/images/setup/csv_export_3.png)
+
+![csv_export_4.png](/images/setup/csv_export_4.png)
 
 
