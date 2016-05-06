@@ -11,9 +11,9 @@ footer: true
 
 Node-RED is a tool for wiring together hardware devices, APIs and online services in new and interesting ways. Using NodeRED the emonPi can become a central hub for home automation, control and notification.
 
-At the heart of Node-RED is a visual editor allowing complex data flows to be wired together with only a little coding skills.
+At the heart of Node-RED is a visual editor allowing complex data flows to be wired together with little coding.
 
-**Node-RED is pre-installed and setup on the latest emonSD Raspberry Pi images, see [emonSD repository and change log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log).If your running an emonSD image that includes Node-RED browse to:**
+**Node-RED is pre-installed and setup on the latest emonSD Raspberry Pi images, see [emonSD repository and change log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log). If you are running an emonSD image that includes Node-RED browse to:**
 
 ## [http://emonpi:1880](http://emonpi:1880)
 
@@ -22,17 +22,17 @@ Username: "emonpi"
 Password: "emonpi2016"
 ```
 
-*Or substitite `emonpi` for your local emonpi's IP address if hostname lookup does not work*
+*Or substitute `emonpi` for your local emonpi's IP address if hostname lookup does not work*
 
 ![default node red](/images/integrations/nodered.png)
 
-Node-RED visual editor should load in the web browser with an example flow. The example flow suscribes to the emonPi MQTT (see [MQTT docs](/technical/mqtt/)) and extracts real-time values.
+The Node-RED visual editor should load in the web browser with an example flow. The example flow subscribes to the emonPi MQTT (see [MQTT docs](/technical/mqtt/)) and extracts real-time values.
 
-Make changes to the Node-RED flow by drag-dropping nodes and connectiong flows then hit deploy to save and execute the config.
+Make changes to the Node-RED flow by dragging-and-dropping nodes and connecting flows. Hit deploy to save and execute the configuration.
 
 **On the emonPi the node-RED data folder /home/pi/.node-red is soft-linked to the read-write folder `/home/pi/data/node-red` so modifications to the flows can be saved.**
 
-For inspiration on what can be acheived with nodeRED and MQTT [check out Martin Harizanov's IoT Google hangout](http://www.youtube.com/watch?v=KPnwyTgZaS0&t=29m18s).
+*For inspiration on what can be achieved with nodeRED and MQTT [check out Martin Harizanov's IoT Google hangout](http://www.youtube.com/watch?v=KPnwyTgZaS0&t=29m18s).*
 
 ### Documentation
 
