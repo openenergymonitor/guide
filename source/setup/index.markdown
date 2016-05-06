@@ -94,7 +94,7 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 ***
 
-#### [emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/) (Alternative to emonPi)
+#### [emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/) (alternative to emonPi)
 
    -  Web connected gateway: [Raspberry Pi](https://shop.openenergymonitor.com/raspberry-pi-2-web-connected-base-station/) + [RFM69Pi RF receiver board](https://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/)
   -  No on-board energy monitoring functions
@@ -111,7 +111,7 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 ***
 
-#### [Optical Utility Meter LED Pulse Sensor](https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/) (Optional)
+#### [Optical Utility Meter LED Pulse Sensor](https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/) (optional)
 
  - Optional add-on sensor for interfacing directly with utility meter
  - Compatible with emonPi & emonTx (one per unit)
@@ -172,12 +172,12 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 </p>
 
 
-#### Required sensors:
+#### Sensors required:
 
  - 2 X [Clip-on CT sensors](https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) (included in emonPi solar PV bundle)
  - 1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/components/) (included in emonPi solar PV bundle)
 
-#### Required power adapters:
+#### Power adapters required:
 
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
  - *1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/power-supplies/) (optional if using an emonTx but highly recommended)*
@@ -188,7 +188,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 
 ***
 
-#### [emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/) (emonPi Alternative)
+#### [emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/) (emonPi alternative)
 
   -  Web connected gateway: [Raspberry Pi](https://shop.openenergymonitor.com/raspberry-pi-2-web-connected-base-station/) + [RFM69Pi RF receiver board](https://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/)
   -  No on-board energy monitoring functions
@@ -205,7 +205,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 
 ***
 
-#### [Optical Utility Meter LED Pulse Sensor](https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/) (Optional)
+#### [Optical Utility Meter LED Pulse Sensor](https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/) (optional)
 
   - Optional add-on sensor for interfacing directly with utility meter
   - Compatible with emonPi & emonTx (one per unit)
