@@ -11,7 +11,7 @@ footer: true
 
 # [Node-RED](/integrations/nodered)
 
-# [OpenHAB](//integrations/openhab)
+# [OpenHAB](/integrations/openhab)
 
 # [Control Realy](/integrations/mqtt-relay/)
 

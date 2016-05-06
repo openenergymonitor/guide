@@ -13,20 +13,24 @@ Node-RED is a tool for wiring together hardware devices, APIs and online service
 
 At the heart of Node-RED is a visual editor allowing complex data flows to be wired together with only a little coding skills.
 
-Node-RED is pre-installed and setup on the latest emonSD Raspberry Pi images, see [emonSD repository and change log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log).
+**Node-RED is pre-installed and setup on the latest emonSD Raspberry Pi images, see [emonSD repository and change log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log).If your running an emonSD image that includes Node-RED browse to:**
 
-If your running a newer image to use Node-RED just browse to:
+## [http://emonpi:1880](http://emonpi:1880)
 
-`http://emonpi:1880`
-
-`Username: "emonpi"`
-`Password: "emonpi2016`
+```
+Username: "emonpi"
+Password: "emonpi2016"
+```
 
 *Or substitite `emonpi` for your local emonpi's IP address if hostname lookup does not work*
 
 ![default node red](/images/integrations/nodered.png)
 
 Node-RED visual editor should load in the web browser with an example flow. The example flow suscribes to the emonPi MQTT (see [MQTT docs](/technical/mqtt/)) and extracts real-time values.
+
+Make changes to the Node-RED flow by drag-dropping nodes and connectiong flows then hit deploy to save and execute the config.
+
+**On the emonPi the node-RED data folder /home/pi/.node-red is soft-linked to the read-write folder `/home/pi/data/node-red` so modifications to the flows can be saved.**
 
 For inspiration on what can be acheived with nodeRED and MQTT [check out Martin Harizanov's IoT Google hangout](http://www.youtube.com/watch?v=KPnwyTgZaS0&t=29m18s).
 
