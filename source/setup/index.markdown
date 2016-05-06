@@ -25,9 +25,9 @@ Documentation on everything from AC theory to sensor circuit design and applicat
 <input name='install-instructions' type='radio' id='solar-pv-hardware'>
 <input name='install-instructions' type='radio' id='temperature-hardware'>
 
-<label class='menu-selector energy' for='home-energy-hardware'>Home Energy</label>
-<label class='menu-selector solarpv' for='solar-pv-hardware'>Solar PV</label>
-<label class='menu-selector temperature' for='temperature-hardware'>Temperature</label>
+<label class='menu-selector energy' for='home-energy-hardware'><strong>Home Energy<br> Monitoring</strong></label>
+<label class='menu-selector solarpv' for='solar-pv-hardware'><strong>Solar PV<br> Monitoring</strong></label>
+<label class='menu-selector temperature' for='temperature-hardware'><strong>Temperature<br>& Humidity</strong></label>
 
 <div class='install-instructions energy' markdown='1'>
 
