@@ -131,9 +131,92 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   <hr class="divider">
   
 
-  <h1 id="under-construction">Under construction</h1>
+  <p>Open Home Automation Bus (OpenHAB) is <em>“a vendor and technology agnostic open source automation software for your home”</em>. OpenHAB can run on an emonPi (Raspberry Pi) and is very flexible and can be configured for just about any home automation task. This high level of configurability can also make it seem quite hard to understand to start with.</p>
 
-<h3 id="httpsgithubcomopenenergymonitoroemopenhabhttpsgithubcomopenenergymonitoroemnode-red"><a href="https://github.com/openenergymonitor/oem_node-red">https://github.com/openenergymonitor/oem_openhab</a></h3>
+<p><strong>OpenHAB is pre-installed and setup on the latest emonSD Raspberry Pi images, see <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">emonSD repository and change log</a>. If your running an emonSD image that includes OpenHAB browse to:</strong></p>
+
+<h2 id="httpemonpi8080httpemonpi8080"><a href="http://emonpi:8080">http://emonpi:8080</a></h2>
+
+<p><em>Substitite <code class="highlighter-rouge">emonpi</code> for your local emonpi’s IP address if hostname lookup does not work</em></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="s">Username</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pi"</span>
+<span class="s">Password</span><span class="pi">:</span> <span class="s2">"</span><span class="s">emonpi2016"</span>
+</code></pre>
+</div>
+
+<p><img src="https://raw.githubusercontent.com/openenergymonitor/oem_openHab/master/images/web.png" alt="OpenHAB OpenEnergyMonitor" /></p>
+
+<p>Pre installed on the emonPi is a skeleton config setup openHAB with to subscribe to data from the emonPi’s MQTT server (see <a href="/technical/mqtt/">MQTT docs</a>). For a full OpenHAB demo see the <a href="http://demo.openhab.org:8080/openhab.app?sitemap=demo">OpenHAB Demo House</a>.</p>
+
+<h3 id="configuring-openhab">Configuring OpenHAB</h3>
+
+<p>OpenHAB is configured from three main files:</p>
+
+<ul>
+  <li><strong><code class="highlighter-rouge">openhab.cfg</code></strong></li>
+  <li><strong><code class="highlighter-rouge">&lt;sitemap-name&gt;.items</code></strong></li>
+  <li><strong><code class="highlighter-rouge">&lt;sitemap-name&gt;.sitemap</code></strong></li>
+</ul>
+
+<p><em>In the openHAB emonPi install instructions (see docs link below) we recommend cloning the oem_openHAB to the /home directory then soft linking the <code class="highlighter-rouge">items</code> and <code class="highlighter-rouge">sitemap</code> files to the relevant config locations in <code class="highlighter-rouge">/etc/openhab/configurations/</code>. This makes the files easier to edit</em></p>
+
+<p>It’s possible to have multiple user interfaces defined by multiple sitemaps e.g oem.sitemap, kids.sitemap or admin.sitemap etc. The default sitemap is default e.g. <code class="highlighter-rouge">default.items</code> and <code class="highlighter-rouge">default.sitemap</code>.</p>
+
+<h4 id="openhabcfg">openhab.cfg</h4>
+
+<p>This is the overall config file located in <code class="highlighter-rouge">/etc/openhab/configurations/</code>. In this file global config is set such as security authentication and MQTT server setting. E.g. to connect to emonPi local MQTT server the following is added:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>mqtt:mosquitto.url=tcp://localhost:1883
+mqtt:mosquitto.user=emonpi
+mqtt:mosquitto.pwd=emonpimqtt2016
+mqtt:mosquitto.qos=2
+mqtt:mosquitto.retain=true
+</code></pre>
+</div>
+
+<p>See the full openhab.cfg file used for this example on the open_openhab GitHub repo (see docs link below).</p>
+
+<h4 id="items">Items</h4>
+
+<p>The items file defines all the ‘things’ you might want to view or control in openHAB. Items can be bound to ‘bindings’ which are optional packages that used to extend functionality of openHAB. This example makes use of the MQTT and HTTP bindings. The items file is located in <code class="highlighter-rouge">/etc/openhab/configurations/items</code>.</p>
+
+<p>For example the line in the items file to subscribe to <em>emonPi Power 1</em> from emonhub MQTT is as follows:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Number emonpi_ct1 "Power 1 [%d W]" { mqtt="&lt;[mosquitto:emon/emonpi/power1:state:default]" }
+</code></pre>
+</div>
+
+<p>The items file entry to <a href="/integrations/lightwaverf/">control LightWaveRF plug</a> (publish “1 1” to /lwrf mqtt topic) is as follows:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Switch lwrf1 "LWRF Socket 1" {mqtt="&gt;[mosquitto:lwrf:command:ON:1 1],&gt;[mosquitto:lwrf:command:OFF:1 0]"}
+</code></pre>
+</div>
+
+<p>See the full items file used for this example on the open_openhab GitHub repo (see docs link below).</p>
+
+<h4 id="sitemap">Sitemap</h4>
+
+<p>The second openHAB config file of interest is ‘sitemap’. Sitemaps are used to create elements of a user interface for making openHAB items accessible to the frontend interface.</p>
+
+<p>For example the sitemap config line to produce the emonPi Power1 in the interface is as follows:</p>
+
+<p><code class="highlighter-rouge">Text item=emonpi_ct1 icon="firstfloor"</code></p>
+
+<p>And to produce the LightWaveRF control swithches:</p>
+
+<p><code class="highlighter-rouge">Switch item=lwrf1 label="LWRF Plug 1"</code></p>
+
+<p>See the full sitemap file used for this example on the open_openhab GitHub repo (see docs link below).</p>
+
+<p>I have intentionally kept this ‘skeleton’ example as simple as possible. To view the full capabilities of openHAB including using groups checkout the openHAB demo and corresponding demo items and sitemap files.</p>
+
+<h3 id="documentation--source-code">Documentation &amp; Source Code</h3>
+
+<p><strong><a href="https://github.com/openenergymonitor/oem_openhab">emonPi OpenHAB</a></strong></p>
+
+<h3 id="related-blog-posts">Related Blog Posts</h3>
+
+<p><a href="https://blog.openenergymonitor.org/2015/12/openenergymonitor-emonpi-and-openhab/">OpenEnergyMonitor, emonPi and openHAB</a></p>
 
 
 </article>

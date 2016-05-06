@@ -135,20 +135,24 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <p>At the heart of Node-RED is a visual editor allowing complex data flows to be wired together with only a little coding skills.</p>
 
-<p>Node-RED is pre-installed and setup on the latest emonSD Raspberry Pi images, see <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">emonSD repository and change log</a>.</p>
+<p><strong>Node-RED is pre-installed and setup on the latest emonSD Raspberry Pi images, see <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">emonSD repository and change log</a>.If your running an emonSD image that includes Node-RED browse to:</strong></p>
 
-<p>If your running a newer image to use Node-RED just browse to:</p>
+<h2 id="httpemonpi1880httpemonpi1880"><a href="http://emonpi:1880">http://emonpi:1880</a></h2>
 
-<p><code class="highlighter-rouge">http://emonpi:1880</code></p>
-
-<p><code class="highlighter-rouge">Username: "emonpi"</code>
-<code class="highlighter-rouge">Password: "emonpi2016</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>Username: "emonpi"
+Password: "emonpi2016"
+</code></pre>
+</div>
 
 <p><em>Or substitite <code class="highlighter-rouge">emonpi</code> for your local emonpi’s IP address if hostname lookup does not work</em></p>
 
 <p><img src="/images/integrations/nodered.png" alt="default node red" /></p>
 
 <p>Node-RED visual editor should load in the web browser with an example flow. The example flow suscribes to the emonPi MQTT (see <a href="/technical/mqtt/">MQTT docs</a>) and extracts real-time values.</p>
+
+<p>Make changes to the Node-RED flow by drag-dropping nodes and connectiong flows then hit deploy to save and execute the config.</p>
+
+<p><strong>On the emonPi the node-RED data folder /home/pi/.node-red is soft-linked to the read-write folder <code class="highlighter-rouge">/home/pi/data/node-red</code> so modifications to the flows can be saved.</strong></p>
 
 <p>For inspiration on what can be acheived with nodeRED and MQTT <a href="http://www.youtube.com/watch?v=KPnwyTgZaS0&amp;t=29m18s">check out Martin Harizanov’s IoT Google hangout</a>.</p>
 
