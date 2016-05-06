@@ -223,11 +223,11 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 
 ### Temperature & Humidity Sensors
 
-These sensors can either be wired or wireless:
+These sensors can either be wireless or wired:
 
 ***
 
-### {% linkable_title 1. Wireless Temperature Hardware %}
+#### 1. Wireless Temperature Hardware
 
 #### [emonTH](http://shop.openenergymonitor.com/emonth-433mhz-temperature-humidity-node/)
 
@@ -250,7 +250,7 @@ The emonTH is powered by two AA batteries and is available with a choice of eith
 
 ***
 
-### {% linkable_title 2. Wired Temperature Hardware %}
+#### 2. Wired Temperature Hardware
 
 
 
