@@ -216,6 +216,7 @@ p.note {
     white-space: nowrap;
     border-bottom: 5px solid $grayLight;
     transition: border-bottom-color .5s;
+    width: 150px;
   }
 
   label.menu-selector + label.menu-selector {

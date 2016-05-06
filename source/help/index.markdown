@@ -16,18 +16,18 @@ There are various ways to get in touch with us: either to get support, share you
 
 Ask for support and join in the discussion on our lively community forums:
 
-- #### [Community Forum](http://community.openenergymonitor.org)
+#### [<i class="icon-comments"></i> Community Forum](http://community.openenergymonitor.org)
 
 
 Tweet us a message:
 
 
-- #### [Twitter @openenergymon](http://twitter.com/openenergymon)
+#### [<i class="icon-twitter"></i> Twitter @openenergymon](http://twitter.com/openenergymon)
 
 
 Contact store support if your query relates directly to hardware items purchased from us (e.g. report a fault):
 
-- #### [Online Store Support](https://shop.openenergymonitor.com/support/)
+#### [<i class="icon-shopping-cart"></i> Online Store Support](https://shop.openenergymonitor.com/support/)
 
 ## Report a Specific Bug
 

@@ -25,9 +25,9 @@ Documentation on everything from AC theory to sensor circuit design and applicat
 <input name='install-instructions' type='radio' id='solar-pv-hardware'>
 <input name='install-instructions' type='radio' id='temperature-hardware'>
 
-<label class='menu-selector energy' for='home-energy-hardware'>Home Energy</label>
-<label class='menu-selector solarpv' for='solar-pv-hardware'>Solar PV</label>
-<label class='menu-selector temperature' for='temperature-hardware'>Temperature</label>
+<label class='menu-selector energy' for='home-energy-hardware'><strong>Home Energy<br> Monitoring</strong></label>
+<label class='menu-selector solarpv' for='solar-pv-hardware'><strong>Solar PV<br> Monitoring</strong></label>
+<label class='menu-selector temperature' for='temperature-hardware'><strong>Temperature<br>& Humidity</strong></label>
 
 <div class='install-instructions energy' markdown='1'>
 
@@ -39,9 +39,9 @@ Documentation on everything from AC theory to sensor circuit design and applicat
 
 The hardware options to set up a home energy monitor are as follows:
 
-___
+***
 
-## **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
+#### **[emonPi](https://shop.openenergymonitor.com/emonpi-3/)**
 
 The emonPi is an all-in-one Raspberry Pi based energy monitoring unit making for a simple installation where Ethernet or WiFi is available at the meter location.
 
@@ -55,12 +55,12 @@ The emonPi can monitor two single-phase AC circuits using clip-on CT sensors. Th
 - Requires WiFi / Ethernet plus 2 x power outlets
 - Requires [pre-built SD card image](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log) (included)
 
-#### Sensors Required:
+#### Sensors required:
 
  - 1 X [Clip-on CT sensors](https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) (the emonPi can accept up to two CT sensors; one is included as standard with the emonPi)
  - 1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/components/) (optional but highly recommended)
 
-#### Power Adapters Required:
+#### Power adapters required:
 
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
 
@@ -70,7 +70,7 @@ The emonPi can monitor two single-phase AC circuits using clip-on CT sensors. Th
 
 ***
 
-## **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
+#### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
 
 The emonTx is a remote sensor node. Data is transmitted to an emonPi or an emonBase via a low power 433MHz radio.
 
@@ -94,7 +94,7 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 ***
 
-#### [emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/) (Alternative to emonPi)
+#### [emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/) (alternative to emonPi)
 
    -  Web connected gateway: [Raspberry Pi](https://shop.openenergymonitor.com/raspberry-pi-2-web-connected-base-station/) + [RFM69Pi RF receiver board](https://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/)
   -  No on-board energy monitoring functions
@@ -111,7 +111,7 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 ***
 
-#### [Optical Utility Meter LED Pulse Sensor](https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/) (Optional)
+#### [Optical Utility Meter LED Pulse Sensor](https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/) (optional)
 
  - Optional add-on sensor for interfacing directly with utility meter
  - Compatible with emonPi & emonTx (one per unit)
@@ -137,6 +137,10 @@ The hardware options to set up a solar PV monitor are as follows:
 ***
 
 #### **[emonPi](https://shop.openenergymonitor.com/emonpi-solar-pv/)**
+
+The emonPi is an all-in-one Raspberry Pi based energy monitoring unit making for a simple installation where Ethernet or WiFi is available at the meter location.
+
+The emonPi can monitor two single-phase AC circuits using clip-on CT sensors. The emonPi can also monitor temperature, and interface directly with utility meters via an optical pulse sensor.
 
 ![emonPi](/images/hardwareimages/emonPi_shop_photo.jpg)
 
@@ -168,12 +172,12 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 </p>
 
 
-#### Required Sensors:
+#### Sensors required:
 
  - 2 X [Clip-on CT sensors](https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) (included in emonPi solar PV bundle)
  - 1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/components/) (included in emonPi solar PV bundle)
 
-#### Required Power Adapters:
+#### Power adapters required:
 
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
  - *1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/power-supplies/) (optional if using an emonTx but highly recommended)*
@@ -184,7 +188,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 
 ***
 
-#### [emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/) (emonPi Alternative)
+#### [emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/) (emonPi alternative)
 
   -  Web connected gateway: [Raspberry Pi](https://shop.openenergymonitor.com/raspberry-pi-2-web-connected-base-station/) + [RFM69Pi RF receiver board](https://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/)
   -  No on-board energy monitoring functions
@@ -201,7 +205,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 
 ***
 
-#### [Optical Utility Meter LED Pulse Sensor](https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/) (Optional)
+#### [Optical Utility Meter LED Pulse Sensor](https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/) (optional)
 
   - Optional add-on sensor for interfacing directly with utility meter
   - Compatible with emonPi & emonTx (one per unit)
@@ -217,21 +221,28 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 </div> <!-- END SOLAR PV -->
 <div class='install-instructions temperature' markdown='1'>
 
-### Temperature sensors can either be wireless or wired:
+### Temperature & Humidity Sensors
+
+These sensors can either be wireless or wired:
 
 ***
 
-### {% linkable_title 1. Wireless Temperature Hardware %}
+#### 1. Wireless Temperature Hardware
 
 #### [emonTH](http://shop.openenergymonitor.com/emonth-433mhz-temperature-humidity-node/)
+
+The emonTH is a long battery-life, easy to deploy, wireless room temperature and humidity sensor node designed for monitoring a building's thermal performance.
+
+The emonTH is powered by two AA batteries and is available with a choice of either DS18B20 temperature sensors or DHT22 based Temperature and Humidity sensors. An external DS18B20 temperature sensor can easily be connected to a screw terminal block to provide external temperature readings.
+
+![emonTH](/images/setup/emonth-plant.png "emonTH")
+
 - Wireless temperature & humidity monitoring node
 - Compatible with emonPi & emonBase
-- 6 month battery life (2 x AA not included)
-- Up to four emonTH can communicate to a single emonPi
+- 6 month battery life (2 x AA batteries not included)
+- Up to 4 emonTH nodes can communicate with a single emonPi
 - Internal temperature & humidity + optional external probe
 - Optional pulse sensor input
-
-{% img /images/setup/emonth-plant.png 400 %}
 
 <a class="btn pull-right" href="https://shop.openenergymonitor.com/emonth-433mhz-temperature-humidity-node">View in Store &rarr; </a>
 
@@ -239,7 +250,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 
 ***
 
-### {% linkable_title 2. Wired Temperature Hardware %}
+#### 2. Wired Temperature Hardware
 
 
 
@@ -247,7 +258,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
   {% img https://cdn2.bigcommerce.com/server4400/98a75/products/144/images/633/IMG_5193__36054.1424864401.1280.1280.JPG?c=2 300 %}
 
  - Compatible with emonPi & emonTx
- - Up to x6 sensors can be connected to a single emonPi / emonTx using [RJ45 Breakout](http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/)
+ - Up to 6 sensors can be connected to a single emonPi / emonTx using [RJ45 Breakout](http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/)
  - Sensor wire can be extended using RJ45 cable and [RJ45 Extender](http://shop.openenergymonitor.com/rj45-extender/)
 
 
@@ -257,7 +268,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 
 - Compatible with emonTx terminal block
 - Compatible with emonPi using [RJ45 Breakout](http://shop.openenergymonitor.com/rj45-to-terminal-block-breakout-for-ds18b20/)
-- Up to 6x sensors can be connected to emonPi / emonTx using [RJ45 Breakout](http://shop.openenergymonitor.com/rj45-to-terminal-block-breakout-for-ds18b20/)
+- Up to 6 sensors can be connected to emonPi / emonTx using [RJ45 Breakout](http://shop.openenergymonitor.com/rj45-to-terminal-block-breakout-for-ds18b20/)
 
 </div> <!-- END TEMP -->
 
