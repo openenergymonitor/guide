@@ -15,6 +15,48 @@
     display: inline-block;
     font-weight: bold;
   }
+  
+  .buttongets { //Get Started button
+  outline: none;
+  display: inline-block;
+  border-radius: 30px;
+  background-color: white;
+  border: none;
+  color: #0699fa;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  }
+
+  .buttongets span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  }
+
+  .buttongets span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  }
+
+  .buttongets:hover span {
+  padding-right: 25px;
+  }
+
+  .buttongets:hover span:after {
+  opacity: 1;
+  right: 0;
+  }
 
   .front-install {
     border: none;
