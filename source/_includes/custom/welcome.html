@@ -1,9 +1,54 @@
- <h1>User Guide</h1>
- <p class="lead">
-Setup, install and configure your OpenEnergyMonitor system.
-</p>
+<style>
 
-<p class='hero-buttons'>
-  <a href='{{ root_url }}/setup/'>Get Started</a>
+.buttongets {
+  display: inline-block;
+  border-radius: 30px;
+  background-color: white;
+  border: none;
+  color: #0699fa;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.buttongets span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttongets span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttongets:hover span {
+  padding-right: 25px;
+}
+
+.buttongets:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+</style>
+
+<h1>User Guide</h1>
+ <p class="lead">
+Setup, install and configure an OpenEnergyMonitor system.
+</p><a href='{{ root_url }}/setup/'><button class="buttongets" style="vertical-align:middle"><span>Get Started</span></button>
+
+<!--<p class='hero-buttons'>
+  <a href='{{ root_url }}/setup/'>Get Started</a>-->
 </p>
-<div style="width:150px; float:left"><a href="https://play.google.com/store/apps/details?id=org.emoncms.myapps&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" /></a></div>
+<!--<div style="width:150px; float:left"><a href="https://play.google.com/store/apps/details?id=org.emoncms.myapps&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"><img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" /></a></div>-->
