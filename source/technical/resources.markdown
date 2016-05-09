@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Software"
-description: "dev2"
+title: "Resources"
+description: "Hardware and software resouces"
 date: 2014-12-18 21:49
 sidebar: true
 comments: false
@@ -9,53 +9,64 @@ sharing: true
 footer: true
 ---
 
-# Under construction
+## {% linkable_title Hardware & Firmware Resources %}
 
-# Hardware & Firmware Resources
+***Firmware:* code that runs on an embeded microcontroller e.g. ATmega328**
 
-**Firmware: code that runs on an embeded microcontroller e.g. ATmega328**
+### {% linkable_title emonPi %}
+  - [User Guide](https://guide.openenergymonitor.org/setup/)
+  - [emonPi Firmware](https://github.com/openenergymonitor/emonpi)
+  - [emonPi Hardware Docs](https://Docs.openenergymonitor.org/index.php?title=EmonPi)
+  - [emonPi Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/emonPi)
+  - [emonPi Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
 
-- **emonPi**
-  - emonPi Firmware
-  - emonPi Hardware Wiki
-  - emonPi Hardware Design
-  - emonPi Forum Category
-
-- **RFM69Pi**
-  - RFM69Pi Firmware
-  - RFM69Pi Hardware Wiki
-  - RFM69Pi Hardware Design
+### {% linkable_title RFM69Pi %}
+  - [RFM69Pi Firmware](https://github.com/openenergymonitor/rfm2pi)
+  - [RFM69Pi Hardware Docs](https://Docs.openenergymonitor.org/index.php/RFM69Pi_V3)
+  - [RFM69Pi Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/RFM2Pi)
   - [RFM69Pi Forum Category](https://community.openenergymonitor.org/c/hardware/rfm69pi)
 
-- **emonTx**
-  - emonTx Firmware
-  - emonTx Hardware Wiki
-  - emonTx Hardware Design
-  - emonTx Forum Category
+### {% linkable_title emonTx %}
+  - [User Guide](https://guide.openenergymonitor.org/setup/emontx/)
+  - [emonTx Firmware](https://github.com/openenergymonitor/emonTxFirmware)
+  - [emonTx Hardware Docs](https://Docs.openenergymonitor.org/index.php?title=EmonTx_V3.4)
+  - [emonTx Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/emonTxV3)
+  - [emonTx Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
 
-- **emonTH**
-  - emonTH Firmware
-  - emonTH Hardware Wiki
-  - emonTH Hardware Design
-  - emonTH Forum Category
+### {% linkable_title emonTH %}
+  - [User Guide](https://guide.openenergymonitor.org/setup/emonth/)
+  - [emonTH Firmware](https://github.com/openenergymonitor/emonth)
+  - [emonTH Hardware Docs](https://Docs.openenergymonitor.org/index.php/EmonTH_V1.5)
+  - [emonTH Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/emonTH)
+  - [emonTH Forum Category](https://community.openenergymonitor.org/c/hardware/emonth)
+
+### {% linkable_title WiFi Relay %}
+  - [User Guide](https://openenergymonitor.org/emon/modules/wifirelay)
+  - [WiFi Relay Firmware](https://github.com/openenergymonitor/emonth)
+  - [WiFi Relay Hardware](https://github.com/mharizanov/ESP8266_Relay_Board)
+  - [WiFi Relay Forum Category](https://community.openenergymonitor.org/c/hardware/wifi-relay)
 
 
-# Software Resources
+## {% linkable_title  Hardware & Firmware Resources %}
 
-**Software: code that runs on the RaspberryPi**
+***Software:* code that runs on a RaspberryPi or Linux, Windows server/PC**
 
-- Emoncms GitHub
-- Emoncms forum category
+### {% linkable_title Emoncms %}
+- [Emoncms GitHub](https://github.com/emoncms/emoncms)
+- [Emoncms forum category](https://community.openenergymonitor.org/c/emoncms)
 
-- emonPi GitHub
-- EmonSD Download repository & changelog
-- EmonSD forum category
+### {% linkable_title emonSD %}
+- [EmonSD Download repository & changelog](https://github.com/openenergymonitor/emonpi/Docs/emonSD-pre-built-SD-card-Download-&-Change-Log)
+- [emonSD Build Guide](https://github.com/openenergymonitor/emonpi/blob/master/docs/SD-card-build.md)
+- [EmonSD forum category](https://community.openenergymonitor.org/c/emonsd)
 
-- emonHub GitHub
-  - Configuring emonHub
+### {% linkable_title emonHub %}
+- [emonHub GitHub](https://github.com/openenergymonitor/emonhub)
+  - [Configuring emonHub](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md)
 
-# Fundementals
 
-General info on topics such as AC theory, how CT's work, calibration etc.
+## {% linkable_title  Fundementals %}
 
-- Building Block Resouces
+*General info on topics such as AC theory, CT sensors, calibration etc.*
+
+- [Building Block Resouces](https://openenergymonitor.org/emon/buildingblocks)
