@@ -1,5 +1,5 @@
 .hero {
-  background-color: rgb(11, 107, 148);
+  background-color: $blue;
   background-position: 0 50%;
   -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -9,7 +9,7 @@
   color: $white;
   margin-top: -2em;
   margin-bottom: 1.5em;
-  padding: 50px 0;
+  padding: 20px 0;
   position: relative;
 
   // &::before {
@@ -55,6 +55,7 @@
   }
 
   h1 {
+    padding-top: 15px;
     font-size: 3.5em;
     line-height: 1em;
     //text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.75);

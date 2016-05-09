@@ -2,10 +2,11 @@
 
 .hero {
   background-color: #0699fa;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
+  padding-top: 30px;
 
   .lead {
-    margin-bottom: 36px;
+    margin-bottom: 2em;
   }
 
   .hero-buttons a {
@@ -21,6 +22,7 @@
   display: inline-block;
   border-radius: 30px;
   background-color: white;
+  //box-shadow: 3px 6px 20px 1px #034C7D;
   border: none;
   color: #0699fa;
   text-align: center;
