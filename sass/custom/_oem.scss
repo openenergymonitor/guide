@@ -254,15 +254,15 @@ p.note {
   label.menu-selector {
     display: inline-block;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     white-space: nowrap;
     border-bottom: 5px solid $grayLight;
     transition: border-bottom-color .5s;
-    width: 150px;
+    width: 120px;
   }
 
   label.menu-selector + label.menu-selector {
-    margin-left: 10px;
+    margin-left: 0px;
   }
 
   #home-energy-hardware:checked ~ .menu-selector.energy,
