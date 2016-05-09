@@ -75,6 +75,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   </a>
 </div>
 
+
 <div class="grid__item seven-tenths lap-four-sixths palm-one-whole">
   <nav>
     <input type="checkbox" id="toggle">
@@ -143,13 +144,15 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <h3 id="rf">RF</h3>
 
-<p>The emonPi / RFM69Pi uses the HopeRF RFM69CW RF module to recieve data from other wireless nodes (emonTx, emonTH etc) using 433Mhz. Each RF node is required to be on the same network group (default 210) and have an unique node ID. Data is transmitted over serial using the <a href="http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/">JeeLib packet format</a>. EmonHub python service on the Raspberry Pi requires a corresponding node decoder entry in <code class="highlighter-rouge">emonhub.conf</code> for each RF node. See emonHub section below.</p>
+<p>The emonPi / RFM69Pi uses the HopeRF RFM69CW RF module to recieve data from other wireless nodes (emonTx, emonTH etc) using 433Mhz. Each RF node is required to be on the same network group (default 210) and have an unique node ID. Data is transmitted over serial using the <a href="http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/">JeeLib packet format</a>. EmonHub python service on the Raspberry Pi requires a corresponding node decoder entry in <code class="highlighter-rouge">emonhub.conf</code> for each RF node. See emonHub in software section below. For more info on RF see <a href="/technical/resources">Resources &gt; Building blocks</a>.</p>
 
 <h3 id="energy-monitoring">Energy Monitoring</h3>
 
-<p>Energy monitoring on the emonPi and emonTx is acheved using <a href="https://github.com/openenergymonitor/emonlib">emonLib</a> discrete sampling and the ATmega328’s 10-bit ADC. See emonPi / emonTx te</p>
+<p>Energy monitoring on the emonPi and emonTx is acheved using <a href="https://github.com/openenergymonitor/emonlib">emonLib</a> discrete sampling and the ATmega328’s 10-bit ADC. See <a href="/technical/resources">Resources &gt; Building blocks</a>.</p>
 
 <h3 id="pulse-counting">Pulse Counting</h3>
+
+<p>Pulse couting on the emonPi and emonTx uses ATmega328’s 2nd hardware interrupt IRQ1. The first hardware interrupt IRQ0 is used by the RFM69CW. Only one pulse couter input is possible per emonTx/emonPi. See <a href="https://openenergymonitor.org/emon/opticalpulsesensor">optical pulse counter documentaion</a>.</p>
 
 <h2 id="software-overview">Software Overview</h2>
 
@@ -233,6 +236,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
        </ul>
       </li>
     </div>
+<gcse:search></gcse:search>
 </section>
     <section class="aside-module grid__item one-whole lap-one-half">
   <h1 class="title delta"<li><a href='https://openenergymonitor.org' target="_blank">OpenEnergyMonitor <i class="icon-external-link"></i></h1>
@@ -264,6 +268,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   <div class="grid">
     <div class="grid__item">
       <div class="copyright">
+    
   <a rel="me" href='https://twitter.com/openenergymon'><i class="icon-twitter"></i></a>
   <a rel="me" href='https://github.com/openenergymonitor/guide'><i class="icon-github"></i></a>
   <a rel="me" href='http://blog.openenergymonitor.org'><i class="icon-rss"></i></a>
