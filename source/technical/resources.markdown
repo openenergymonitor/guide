@@ -11,7 +11,7 @@ footer: true
 
 ## {% linkable_title Hardware & Firmware Resources %}
 
-***Firmware:* code that runs on an embeded microcontroller e.g. ATmega328**
+> **Firmware:** code that runs on an embeded microcontroller
 
 ### {% linkable_title emonPi %}
   - [User Guide](https://guide.openenergymonitor.org/setup/)
@@ -49,9 +49,11 @@ footer: true
 ### {% linkable_title Optical Pulse Sensor %}
   - [Optical Pulse Sensor Docs](https://openenergymonitor.org/emon/opticalpulsesensor)
 
-## {% linkable_title  Hardware & Firmware Resources %}
+***
 
-***Software:* code that runs on a RaspberryPi or Linux, Windows server/PC**
+## {% linkable_title  Software Resources %}
+
+> **Software:** code that runs on a Raspberry Pi / computer
 
 ### {% linkable_title Emoncms %}
 - [Emoncms GitHub](https://github.com/emoncms/emoncms)
@@ -72,3 +74,7 @@ footer: true
 *General info on topics such as AC theory, CT sensors, calibration etc.*
 
 - [Building Block Resouces](https://openenergymonitor.org/emon/buildingblocks)
+
+***
+
+![Documentation Cartoon](http://www.datamation.com/imagesvr_ce/3913/system-documentation.jpg)
