@@ -132,9 +132,16 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   <hr class="divider">
   
 
-  <h1 id="under-construction">Under construction</h1>
+  <blockquote>
+  <p><a href="http://mqtt.org/">MQTT</a> is a very lightweight machine-to-machine (M2M)/”Internet of Things” connectivity protocol.</p>
+</blockquote>
+
+<p>The latest version of emonHub as setup on the emonPi (and emonHub from July 15) uses MQTT as a link to Emoncms and also to provide data to the emonPi LCD script. Since MQTT is already running all we need to do is to point Node-RED MQTT input block to subscribe to the ‘emonhub/rx/#’ MQTT topic on port 1883. The ‘#’ topic includes data received from all nodes. To subscribe to just one node use e.g. emonPi use: ‘emonhub/5/values’ or ‘emonhub/10/values’ for emonTx.</p>
 
 <h3 id="mqtt-docshttpsgithubcomemoncmsemoncmsblobmasterdocsraspberrypimqttmd"><a href="https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/MQTT.md">MQTT Docs</a></h3>
+
+<p>https://blog.openenergymonitor.org/2015/10/emonpi-nodered-and-mqtt/
+https://blog.openenergymonitor.org/categories/mqtt/</p>
 
 
 </article>
