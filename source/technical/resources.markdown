@@ -46,8 +46,8 @@ footer: true
   - [WiFi Relay Hardware](https://github.com/mharizanov/ESP8266_Relay_Board)
   - [WiFi Relay Forum Category](https://community.openenergymonitor.org/c/hardware/wifi-relay)
 
-### {% linkable_title Optical Pulse Counter %}
-  - [Optical Pulse Counter Docs](https://openenergymonitor.org/emon/opticalpulsesensor)
+### {% linkable_title Optical Pulse Sensor %}
+  - [Optical Pulse Sensor Docs](https://openenergymonitor.org/emon/opticalpulsesensor)
 
 ## {% linkable_title  Hardware & Firmware Resources %}
 
