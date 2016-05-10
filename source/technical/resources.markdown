@@ -67,7 +67,7 @@ footer: true
   - [Configuring emonHub](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md)
 
 
-## {% linkable_title  Fundementals %}
+## {% linkable_title  Fundamentals %}
 
 *General info on topics such as AC theory, CT sensors, calibration etc.*
 
