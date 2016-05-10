@@ -14,6 +14,8 @@ published: true
 
 The OpenEnergyMonitor system  has the capability to monitor electrical energy use / generation, temperature and humidity.
 
+This is an example to demo how users can edit the guide
+
 The system is made up of five main units. These can be assembled and configured to work for a variety of [applications](/applications). The system is fully open-source, both hardware and software. All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms.
 
 Documentation on everything from AC theory to sensor circuit design and application programming is available in the [Resources](https://openenergymonitor.org/emon/buildingblocks) section.
