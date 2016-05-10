@@ -14,7 +14,7 @@ Default log-in credentials for latest [pre-built emonPi/emonBase ready-to-go SD 
 
 **Note: Before changing any password the root file-system will need to be put into Read Write mode with command `$rpi-rw`. When finished but file-sysem back to Read Only with `$rpi-ro`.**
 
-# SSH
+## {% linkable_title SSH %}
 
 To connect to emonPi / emonBase via ssh:
 
@@ -28,14 +28,14 @@ To connect to emonPi / emonBase via ssh:
 
 Once logged in change password with: `$ passwd`
 
-## MYSQL
+## {% linkable_title MYSQL %}
 
 MYSQL: `root` user password is `emonpimysql2016` and mysql `emoncms` user password is `emonpiemoncmsmysql2016`
 
 
-## Mosquitto MQTT
+## {% linkable_title MQTT %}
 
-Mosquitto MQTT: port:1883 user,pass:`emonpi`,`emonpimqtt2016`
+Mosquitto MQTT server: port:1883 user,pass:`emonpi`,`emonpimqtt2016`
 
 Generate a new password using `sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>`. Then restart mosquitto `sudo service mosquitto restart`.
 
@@ -51,14 +51,14 @@ and node red using flows editor
 
 **Caution changes to `emonPiLCD.py` and `settings.php` will be overwritten by emonPi update. Recommended to undertake manual *git pull(s)* to update instead.**
 
-## NodeRED
+## {% linkable_title NodeRED %}
 
 NodeRED: port:1880 user,pass:`emonpi`,`emonpi2016`
 
 change it here:  `~/data/node-red/settings.js`
 
 
-## OpenHab
+## {% linkable_title OpenHab %}
 
 OpenHab port:8080 user,pass:`pi`,`emonpi2016`
 
