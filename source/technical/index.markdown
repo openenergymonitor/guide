@@ -35,8 +35,10 @@ Pulse couting on the emonPi and emonTx uses ATmega328's 2nd hardware interrupt I
 
 ## Software Overview
 
-
-EmonHub python service
+**To Do**
+- Read only FS, RW partition
+- Raspbian
+- emonHub
 
 
 
