@@ -133,15 +133,91 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   
 
   <blockquote>
-  <p><a href="http://mqtt.org/">MQTT</a> is a very lightweight machine-to-machine (M2M)/”Internet of Things” connectivity protocol.</p>
+  <p><a href="http://mqtt.org/">MQTT</a> is a machine-to-machine (M2M)/”Internet of Things” connectivity protocol. It was designed as an extremely lightweight publish/subscribe messaging transport.</p>
 </blockquote>
 
-<p>The latest version of emonHub as setup on the emonPi (and emonHub from July 15) uses MQTT as a link to Emoncms and also to provide data to the emonPi LCD script. Since MQTT is already running all we need to do is to point Node-RED MQTT input block to subscribe to the ‘emonhub/rx/#’ MQTT topic on port 1883. The ‘#’ topic includes data received from all nodes. To subscribe to just one node use e.g. emonPi use: ‘emonhub/5/values’ or ‘emonhub/10/values’ for emonTx.</p>
+<p>The emonPi with <a href="/technical/#emonsd-features">emonSD pre-built SD card</a> by default runs a local <a href="http://mosquitto.org/">Mosquitto MQTT</a> server. This server is accesiable (<a href="/technical/credentials#mqtt">via authentication</a> on port 1880. See <a href="/technical/credentials#mqtt">MQTT Service Credentials</a>.</p>
 
-<h3 id="mqtt-docshttpsgithubcomemoncmsemoncmsblobmasterdocsraspberrypimqttmd"><a href="https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/MQTT.md">MQTT Docs</a></h3>
+<h2 id="mqtt-publishers">MQTT Publishers</h2>
 
-<p>https://blog.openenergymonitor.org/2015/10/emonpi-nodered-and-mqtt/
-https://blog.openenergymonitor.org/categories/mqtt/</p>
+<h3 id="emonhub">emonHub</h3>
+
+<p><a href="/technical/#emonhub">EmonHub</a> python service decodes the data received from the emonPi + RF nodes and publishes to the emonPi’s Mosquitto MQTT server using the following two topic formats (both formats are published to parallel) :</p>
+
+<h4 id="new-mqtt-topic-format">1. New MQTT Topic Format</h4>
+
+<p>Each data key (power) has it’s own MQTT topic as a sub-topic of the NodeID or NodeName. This MQTT topic structure makes it far easier to subscribe to a particular node key of interest e.g. <code class="highlighter-rouge">emontx/power1</code> using another service e.g. <a href="/integrations/openhab">OpenHAB</a>.</p>
+
+<p><code class="highlighter-rouge">[basetopic]/[node]/[keyname]</code></p>
+
+<p><em>Note: the default base topic is <code class="highlighter-rouge">emon/</code> this is set in <code class="highlighter-rouge">~/data/emonhub.conf</code> and <code class="highlighter-rouge">/var/www/emoncms/settings.php</code>.</em></p>
+
+<p>Example:</p>
+
+<p><code class="highlighter-rouge">emon/emonpi/power1</code></p>
+
+<h4 id="legacy-csv-mqtt-topic-format">2. Legacy CSV MQTT Topic Format</h4>
+
+<p>Used by older version of emonPi and emonPiLCD service. All data from a single node is published in CSV format to a single topic. More compact but does not allow naming of keys and difficult to subscibe to a single key.</p>
+
+<p><code class="highlighter-rouge">emonhub/rx/[nodeID]/values format</code></p>
+
+<p>Example:</p>
+
+<p><code class="highlighter-rouge">emonhub/rx/10/values format</code></p>
+
+<p>emonHub servie can be restarted with <code class="highlighter-rouge">$ sudo service emonhub restart</code>.
+Latest log file entries can be viewed via the Emoncms web interface admion or with: <code class="highlighter-rouge">$ tail /var/log/emonhub/emonhub.log</code>. All the data currently being published to MQTT topic can be viewed in real-time in the EmonHub log.</p>
+
+<h3 id="emoncms-publisher">Emoncms Publisher</h3>
+
+<p>Data can be published to an MQTT topic using the <code class="highlighter-rouge">Publish to MQTT</code> Emoncms Input Process. In the Input process ‘Text’ box add the topic, for example: <code class="highlighter-rouge">house/power/solar</code>.</p>
+
+<hr />
+
+<h2 id="mqtt-subscribers">MQTT Subscribers</h2>
+
+<h3 id="emoncms-mqtt-service">Emoncms MQTT Service</h3>
+
+<p>Emoncms MQTT Input service subscribes to the MQTT base topic (default <code class="highlighter-rouge">emon/#</code>) and posts any data on this topic to Emoncms Inputs with the NodeName and KeyName taken from the MQTT topic and sub-topic name.</p>
+
+<p>Example:</p>
+
+<p>A power value published to <code class="highlighter-rouge">emon/emonpi/power1</code> would result in an Emoncms Input from <code class="highlighter-rouge">Node: emonpi</code> with <code class="highlighter-rouge">power1=XX</code>.</p>
+
+<p>Data from any service (internal or external) that connect to the MQTT server (assuming authentication) and publishes to the base topic <code class="highlighter-rouge">emon/</code> will appear in Emoncms. See related blog posts below for example posting temperature data to Emoncms from Weather Underground using <a href="/integrations/nodered">NodeRED running locally on the emonPi</a>.</p>
+
+<p><em>Emoncms MQTT Service is running by default on the emonSD software stack</em></p>
+
+<p>The MQTT input service can be restarted using <code class="highlighter-rouge">$ sudo service mqtt_input restart</code>.The MQTT input service runs a <a href="https://github.com/emoncms/emoncms/blob/master/scripts/phpmqtt_input.php"><code class="highlighter-rouge">phpmqtt_input.php</code> script</a>.
+Latest log file entries can be viewed via Emoncms web inerface admin or with: <code class="highlighter-rouge">$ tail /var/log/emoncms.log</code></p>
+
+<h3 id="emonpilcd-service">EmonPiLCD Service</h3>
+
+<p>The <a href="https://github.com/openenergymonitor/emonpi/blob/master/lcd/emonPiLCD.py">emonPi’s python LCD Service Script</a> subscribes to the ‘Legacy MQTT Topic’ structure to obtain the real-time data to display on the emonPi LCD.</p>
+
+<p>The emonPiLCD service can be restarted with: <code class="highlighter-rouge">$ sudo service emonPiLCD restart</code>.
+Latest log file entries can be viewed with: <code class="highlighter-rouge">$ tail /var/log/emonpilcd/emonpilcd.log</code>.</p>
+
+<hr />
+
+<h1 id="related-blog-posts">Related Blog Posts</h1>
+
+<ul>
+  <li><a href="https://blog.openenergymonitor.org/2015/10/emonpi-nodered-and-mqtt/">EmonPi, Node-RED and MQTT</a></li>
+  <li><a href="https://blog.openenergymonitor.org/2016/02/outdoor-temperature-data-from-weather/">Temperature data from Weather Underground</a></li>
+  <li><a href="https://blog.openenergymonitor.org/categories/mqtt/">MQTT blog category</a></li>
+</ul>
+
+<h1 id="resources">Resources</h1>
+
+<ul>
+  <li><a href="/technical/credentials#mqtt">MQTT Service Credentials</a>.</li>
+  <li><a href="https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/MQTT.md">MQTT Installation Docs</a></li>
+  <li><a href="https://github.com/openenergymonitor/emonpi/blob/master/docs/SD-card-build.md">emonSD Buid Guide</a></li>
+  <li><a href="https://github.com/emoncms/emoncms/blob/master/scripts/phpmqtt_input.php">Emoncms PHP MQTT Input Script</a></li>
+</ul>
+
 
 
 </article>
