@@ -13,13 +13,13 @@ footer: true
 
 The emonPi with [emonSD pre-built SD card](/technical/#emonsd-features) by default runs a local [Mosquitto MQTT](http://mosquitto.org/) server. This server is accesiable ([via authentication](/technical/credentials#mqtt) on port 1880. See [MQTT Service Credentials](/technical/credentials#mqtt).
 
-## MQTT Publishers
+## {% linkable_title MQTT Publishers %}
 
-### emonHub
+### {% linkable_title emonHub %}
 
 [EmonHub](/technical/#emonhub) python service decodes the data received from the emonPi + RF nodes and publishes to the emonPi's Mosquitto MQTT server using the following two topic formats (both formats are published to parallel) :
 
-#### 1. New MQTT Topic Format
+#### {% linkable_title 1. New MQTT Topic Format %}
 
 Each data key (power) has it's own MQTT topic as a sub-topic of the NodeID or NodeName. This MQTT topic structure makes it far easier to subscribe to a particular node key of interest e.g. `emontx/power1` using another service e.g. [OpenHAB](/integrations/openhab).
 
@@ -31,7 +31,7 @@ Example:
 
 `emon/emonpi/power1`
 
-#### 2. Legacy CSV MQTT Topic Format
+#### {% linkable_title 2. Legacy CSV MQTT Topic Format %}
 
 Used by older version of emonPi and emonPiLCD service. All data from a single node is published in CSV format to a single topic. More compact but does not allow naming of keys and difficult to subscibe to a single key.
 
@@ -44,15 +44,15 @@ Example:
 emonHub servie can be restarted with `$ sudo service emonhub restart`.
 Latest log file entries can be viewed via the Emoncms web interface admion or with: `$ tail /var/log/emonhub/emonhub.log`. All the data currently being published to MQTT topic can be viewed in real-time in the EmonHub log.
 
-### Emoncms Publisher
+### {% linkable_title Emoncms Publisher %}
 
 Data can be published to an MQTT topic using the `Publish to MQTT` Emoncms Input Process. In the Input process 'Text' box add the topic, for example: `house/power/solar`.
 
 ***
 
-## MQTT Subscribers
+## {% linkable_title MQTT Subscribers %}
 
-### Emoncms MQTT Service
+### {% linkable_title Emoncms MQTT Service %}
 
 Emoncms MQTT Input service subscribes to the MQTT base topic (default `emon/#`) and posts any data on this topic to Emoncms Inputs with the NodeName and KeyName taken from the MQTT topic and sub-topic name.
 
@@ -68,8 +68,8 @@ The MQTT input service can be restarted using `$ sudo service mqtt_input restart
 Latest log file entries can be viewed via Emoncms web inerface admin or with: `$ tail /var/log/emoncms.log`
 
 
-
-### EmonPiLCD Service
+ 
+### {% linkable_title EmonPiLCD Service %}
 
 The [emonPi's python LCD Service Script](https://github.com/openenergymonitor/emonpi/blob/master/lcd/emonPiLCD.py) subscribes to the 'Legacy MQTT Topic' structure to obtain the real-time data to display on the emonPi LCD.
 
@@ -78,13 +78,13 @@ Latest log file entries can be viewed with: `$ tail /var/log/emonpilcd/emonpilcd
 
 ***
 
-# Related Blog Posts
+# {% linkable_title Related Blog Posts %}
 
 - [EmonPi, Node-RED and MQTT](https://blog.openenergymonitor.org/2015/10/emonpi-nodered-and-mqtt/)
 - [Temperature data from Weather Underground](https://blog.openenergymonitor.org/2016/02/outdoor-temperature-data-from-weather/)
 - [MQTT blog category](https://blog.openenergymonitor.org/categories/mqtt/)
 
-# Resources
+# {% linkable_title Resources %}
 
 - [MQTT Service Credentials](/technical/credentials#mqtt).
 - [MQTT Installation Docs](https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/MQTT.md)
