@@ -11,14 +11,14 @@ footer: true
 
 ## {% linkable_title Hardware & Firmware Resources %}
 
-***Firmware:* code that runs on an embeded microcontroller e.g. ATmega328**
+> **Firmware:** code that runs on an embeded microcontroller
 
 ### {% linkable_title emonPi %}
   - [User Guide](https://guide.openenergymonitor.org/setup/)
   - [emonPi Firmware](https://github.com/openenergymonitor/emonpi)
   - [emonPi Hardware Docs](https://Docs.openenergymonitor.org/index.php?title=EmonPi)
   - [emonPi Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/emonPi)
-  - [emonPi Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
+  - [emonPi Forum Category](https://community.openenergymonitor.org/c/hardware/emonpi)
 
 ### {% linkable_title RFM69Pi %}
   - [RFM69Pi Firmware](https://github.com/openenergymonitor/rfm2pi)
@@ -46,12 +46,14 @@ footer: true
   - [WiFi Relay Hardware](https://github.com/mharizanov/ESP8266_Relay_Board)
   - [WiFi Relay Forum Category](https://community.openenergymonitor.org/c/hardware/wifi-relay)
 
-### {% linkable_title Optical Pulse Counter %}
-  - [Optical Pulse Counter Docs](https://openenergymonitor.org/emon/opticalpulsesensor)
+### {% linkable_title Optical Pulse Sensor %}
+  - [Optical Pulse Sensor Docs](https://openenergymonitor.org/emon/opticalpulsesensor)
 
-## {% linkable_title  Hardware & Firmware Resources %}
+***
 
-***Software:* code that runs on a RaspberryPi or Linux, Windows server/PC**
+## {% linkable_title  Software Resources %}
+
+> **Software:** code that runs on a Raspberry Pi / computer
 
 ### {% linkable_title Emoncms %}
 - [Emoncms GitHub](https://github.com/emoncms/emoncms)
@@ -72,3 +74,7 @@ footer: true
 *General info on topics such as AC theory, CT sensors, calibration etc.*
 
 - [Building Block Resouces](https://openenergymonitor.org/emon/buildingblocks)
+
+***
+
+![Documentation Cartoon](http://www.datamation.com/imagesvr_ce/3913/system-documentation.jpg)
