@@ -10,17 +10,25 @@ footer: true
 ---
 
 ![emonPi overview](https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png)
-<figcaption>Fig1 emonPi Artitecture Overview</figcaption><br>
+<figcaption style="float:left;"><i> Fig.1 - emonPi Architecture Overview <i class="icon-arrow-up"></i></i></figcaption>
 
-The emonPi is based on a RaspberryPi + [emonPi Shield PCB](https://wiki.openenergymonitor.org/index.php/EmonPi). The emonPi features a ATmega328p 8-bit microcontroller which is which Arduino sketch compatiable.
+<br>
+
+The emonPi is based on a RaspberryPi + [emonPi Shield PCB](https://wiki.openenergymonitor.org/index.php/EmonPi). The emonPi features a ATmega328p 8-bit microcontroller which is Arduino compatible.
 
 ![emonPi PCB](https://github.com/openenergymonitor/Hardware/raw/master/emonPi/emonPi_V1_6/photo.png)
-<figcaption>emonPi RaspberryPi Shield PCB</figcaption><br>
+<figcaption style="float:left;"><i>emonPi RaspberryPi Shield PCB <i class="icon-arrow-up"></i> </i></figcaption>
 
-An [emonBase](http://shop.openenergymonitor.com/emonbase-web-connected-base-station/) works in the same way as the emonPi, just instead of an emonPi shield PCB the emonBase uses an [RFM69Pi PCB](http://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/) which works the same as the emonPi Shield PCB just without the local energy monitoring capability. The Raspberry Pi on the emonBase runs exactly the same [emonSD](#emonsd-features) software as the emonPi.
+<br>
+
+An [emonBase](http://shop.openenergymonitor.com/emonbase-web-connected-base-station/) functions in much the same way as an emonPi but instead of an emonPi shield PCB it uses an [RFM69Pi PCB](http://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/) and has no local energy monitoring capability. The Raspberry Pi on the emonBase runs the same [emonSD](#emonsd-features) software as the emonPi.
 
 ![emonBase RFM69Pi](https://wiki.openenergymonitor.org/images/thumb/RFM69Pi_RasPi.JPG/1500px-RFM69Pi_RasPi.JPG)
-<figcaption>emonBase: Raspberry Pi + RFM69Pi</figcaption><br>
+<figcaption style="float:left;"><i>emonBase: Raspberry Pi + RFM69Pi <i class="icon-arrow-up"></i> </i></figcaption>
+
+<br>
+
+<hr>
 
 ## {% linkable_title Hardware Overview %}
 
