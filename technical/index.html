@@ -155,7 +155,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <h2 id="a-classtitle-link-namehardware-overview-hrefhardware-overviewa-hardware-overview"><a class="title-link" name="hardware-overview" href="#hardware-overview"></a> Hardware Overview</h2>
 
-<p>As the diagram (fig 1) shows the Atmega328 microprocessor communicates with the RaspberyPi via the internal UART <code class="highlighter-rouge">(/dev/ttyAMA0</code> serial port. Data is transmitted over serial using the <a href="http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/">JeeLib packet format</a>. The ATmega328 on the emonPi / RFM69Pi run a modifed version of <a href="http://jeelabs.net/projects/jeelib/wiki/RF12demo">JeeLabs RFM12Demo Sketch</a>.</p>
+<p>As the diagram (fig.1) shows the Atmega328 microprocessor communicates with the RaspberyPi via the internal UART <code class="highlighter-rouge">(/dev/ttyAMA0</code> serial port. Data is transmitted over serial using the <a href="http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/">JeeLib packet format</a>. The ATmega328 on the emonPi / RFM69Pi run a modifed version of <a href="http://jeelabs.net/projects/jeelib/wiki/RF12demo">JeeLabs RFM12Demo Sketch</a>.</p>
 
 <p><strong>See <a href="/technical/resources#emonpi">emonPi Resources</a></strong></p>
 
@@ -167,19 +167,19 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <h3 id="a-classtitle-link-nameenergy-monitoring-hrefenergy-monitoringa-energy-monitoring"><a class="title-link" name="energy-monitoring" href="#energy-monitoring"></a> Energy Monitoring</h3>
 
-<p>Energy monitoring on the emonPi and emonTx is acheved using <a href="https://github.com/openenergymonitor/emonlib">emonLib</a> discrete sampling and the ATmega328’s 10-bit ADC. By default samples are taken once every 5s.</p>
+<p>Energy monitoring on the emonPi and emonTx is acheved using <a href="https://github.com/openenergymonitor/emonlib">emonLib</a> discrete sampling and the ATmega328’s 10-bit ADC. By default samples are taken once every 5 seconds.</p>
 
 <p><strong>See <a href="/technical/resources#fundamentals">Fundamental Building block Resources</a></strong></p>
 
 <h3 id="a-classtitle-link-namepulse-counting-hrefpulse-countinga-pulse-counting"><a class="title-link" name="pulse-counting" href="#pulse-counting"></a> Pulse Counting</h3>
 
-<p>Pulse couting on the emonPi and emonTx uses ATmega328’s 2nd hardware interrupt IRQ1. The first hardware interrupt IRQ0 is used by the RFM69CW. Only one pulse couter input is possible per emonTx/emonPi.</p>
+<p>Pulse couting on the emonPi and emonTx uses ATmega328’s second hardware interrupt IRQ1. The first hardware interrupt IRQ0 is used by the RFM69CW. Only one pulse couter input is possible per emonTx/emonPi.</p>
 
 <p><strong>See <a href="/technical/resources#optical-pulse-counter">Optical Pulse Sensor Resources</a></strong></p>
 
 <h2 id="a-classtitle-link-namesoftware-overview-hrefsoftware-overviewa-software-overview"><a class="title-link" name="software-overview" href="#software-overview"></a> Software Overview</h2>
 
-<p>By default the Raspberry Pi runs a modifed version of Debain <a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian Jessie Lite</a>. A pre-build SD card image (<strong>emonSD</strong>) is available to <a href="https://github.com/openenergymonitor/emonpi/Docs/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">purchase or download</a>) which includes everything setup.</p>
+<p>By default the Raspberry Pi runs a modifed version of Debian <a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian Jessie Lite</a>. A pre-build SD card image (<strong>emonSD</strong>) is available to <a href="https://github.com/openenergymonitor/emonpi/Docs/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">purchase or download</a>) which has everything already set up.</p>
 
 <h3 id="a-classtitle-link-nameemonsd-features-hrefemonsd-featuresa-emonsd-features"><a class="title-link" name="emonsd-features" href="#emonsd-features"></a> emonSD features</h3>
 
@@ -198,16 +198,15 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <h3 id="a-classtitle-link-nameemonhub-hrefemonhuba-emonhub"><a class="title-link" name="emonhub" href="#emonhub"></a> emonHub</h3>
 
-<p>emonHub (emon-pi variant) is pre-installed on emonSD. EmonHub is a pythion service wich receives the data from the emonPi via serial (in JeeLabs packet) format. emonHub decodes the data and publishes to the emonPi’s localhost Mosquitto MQTT server and (<a href="/setup/remote">if configured</a>) remotely to <a href="https://emoncms.org">Emoncms.org</a>.</p>
+<p>emonHub (emonpi variant) is pre-installed on emonSD. EmonHub is a pythion service wich receives the data from the emonPi via serial (in JeeLabs packet) format. emonHub decodes the data and publishes it to the emonPi’s localhost Mosquitto MQTT server and (<a href="/setup/remote">if configured</a>) remotely to <a href="https://emoncms.org">Emoncms.org</a>.</p>
 
-<p>Corresponding EmonHub nodedecoder entrys must be present in emonhub config for each wireless RF node e.g. emonTx, emonTH. See confguring emonhub in the resources:</p>
+<p>Corresponding EmonHub node-decoder entriess must be present in emonhub config for each wireless RF node e.g. emonTx, emonTH. See confguring emonhub in the resources:</p>
 
 <p><strong>See <a href="/technical/resources#emonhub">emonHub Resources</a></strong></p>
 
 <hr />
 
 <h3 id="see-technical--resourcestechnicalresources-for-further-info-and-support-">See <a href="/technical/resources">Technical &gt; Resources</a> for further info and support &gt;</h3>
-
 
 
 </article>
