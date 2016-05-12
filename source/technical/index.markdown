@@ -1,12 +1,13 @@
 ---
 layout: page
-title: "Overview"
-description: "dev1"
-date: 2015-05-11 12:00
+title: Overview
+description: dev1
+date: "2015-05-11 12:00"
 sidebar: true
 comments: false
 sharing: true
 footer: true
+published: true
 ---
 
 ![emonPi overview](https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png)
@@ -32,7 +33,7 @@ An [emonBase](http://shop.openenergymonitor.com/emonbase-web-connected-base-stat
 
 ## {% linkable_title Hardware Overview %}
 
-As the diagram (fig 1) shows the Atmega328 microprocessor communicates with the RaspberyPi via the internal UART `(/dev/ttyAMA0` serial port. Data is transmitted over serial using the [JeeLib packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/). The ATmega328 on the emonPi / RFM69Pi run a modifed version of [JeeLabs RFM12Demo Sketch](http://jeelabs.net/projects/jeelib/wiki/RF12demo).
+As the diagram (fig.1) shows the Atmega328 microprocessor communicates with the RaspberyPi via the internal UART `(/dev/ttyAMA0` serial port. Data is transmitted over serial using the [JeeLib packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/). The ATmega328 on the emonPi / RFM69Pi run a modifed version of [JeeLabs RFM12Demo Sketch](http://jeelabs.net/projects/jeelib/wiki/RF12demo).
 
 **See [emonPi Resources](/technical/resources#emonpi)**
 
@@ -45,19 +46,19 @@ The emonPi / RFM69Pi uses the HopeRF RFM69CW RF module to recieve data from othe
 
 ### {% linkable_title Energy Monitoring %}
 
-Energy monitoring on the emonPi and emonTx is acheved using [emonLib](https://github.com/openenergymonitor/emonlib) discrete sampling and the ATmega328's 10-bit ADC. By default samples are taken once every 5s.
+Energy monitoring on the emonPi and emonTx is acheved using [emonLib](https://github.com/openenergymonitor/emonlib) discrete sampling and the ATmega328's 10-bit ADC. By default samples are taken once every 5 seconds.
 
 **See [Fundamental Building block Resources](/technical/resources#fundamentals)**
 
 ### {% linkable_title Pulse Counting %}
 
-Pulse couting on the emonPi and emonTx uses ATmega328's 2nd hardware interrupt IRQ1. The first hardware interrupt IRQ0 is used by the RFM69CW. Only one pulse couter input is possible per emonTx/emonPi.
+Pulse couting on the emonPi and emonTx uses ATmega328's second hardware interrupt IRQ1. The first hardware interrupt IRQ0 is used by the RFM69CW. Only one pulse couter input is possible per emonTx/emonPi.
 
 **See [Optical Pulse Sensor Resources](/technical/resources#optical-pulse-counter)**
 
 ## {% linkable_title Software Overview %}
 
-By default the Raspberry Pi runs a modifed version of Debain [Raspbian Jessie Lite](https://www.raspberrypi.org/downloads/raspbian/). A pre-build SD card image (**emonSD**) is available to [purchase or download](https://github.com/openenergymonitor/emonpi/Docs/emonSD-pre-built-SD-card-Download-&-Change-Log)) which includes everything setup.
+By default the Raspberry Pi runs a modifed version of Debian [Raspbian Jessie Lite](https://www.raspberrypi.org/downloads/raspbian/). A pre-build SD card image (**emonSD**) is available to [purchase or download](https://github.com/openenergymonitor/emonpi/Docs/emonSD-pre-built-SD-card-Download-&-Change-Log)) which has everything already set up.
 
 ### {% linkable_title emonSD features %}
 
@@ -74,7 +75,7 @@ By default the Raspberry Pi runs a modifed version of Debain [Raspbian Jessie Li
 
 ### {% linkable_title emonHub %}
 
-emonHub (emon-pi variant) is pre-installed on emonSD. EmonHub is a pythion service wich receives the data from the emonPi via serial (in JeeLabs packet) format. emonHub decodes the data and publishes to the emonPi's localhost Mosquitto MQTT server and ([if configured](/setup/remote)) remotely to [Emoncms.org](https://emoncms.org).
+emonHub (emonpi variant) is pre-installed on emonSD. EmonHub is a pythion service wich receives the data from the emonPi via serial (in JeeLabs packet) format. emonHub decodes the data and publishes it to the emonPi's localhost Mosquitto MQTT server and ([if configured](/setup/remote)) remotely to [Emoncms.org](https://emoncms.org).
 
 Corresponding EmonHub nodedecoder entrys must be present in emonhub config for each wireless RF node e.g. emonTx, emonTH. See confguring emonhub in the resources:
 
@@ -83,7 +84,3 @@ Corresponding EmonHub nodedecoder entrys must be present in emonhub config for e
 ***
 
 ### See [Technical > Resources](/technical/resources) for further info and support >
-
-
-
-
