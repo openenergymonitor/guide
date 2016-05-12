@@ -77,7 +77,7 @@ By default the Raspberry Pi runs a modifed version of Debian [Raspbian Jessie Li
 
 emonHub (emonpi variant) is pre-installed on emonSD. EmonHub is a pythion service wich receives the data from the emonPi via serial (in JeeLabs packet) format. emonHub decodes the data and publishes it to the emonPi's localhost Mosquitto MQTT server and ([if configured](/setup/remote)) remotely to [Emoncms.org](https://emoncms.org).
 
-Corresponding EmonHub nodedecoder entrys must be present in emonhub config for each wireless RF node e.g. emonTx, emonTH. See confguring emonhub in the resources:
+Corresponding EmonHub node-decoder entriess must be present in emonhub config for each wireless RF node e.g. emonTx, emonTH. See confguring emonhub in the resources:
 
 **See [emonHub Resources](/technical/resources#emonhub)**
 
