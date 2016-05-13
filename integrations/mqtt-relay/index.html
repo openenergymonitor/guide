@@ -132,10 +132,284 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   <hr class="divider">
   
 
-  <h1 id="under-construction">Under construction</h1>
+  <blockquote>
+  <p><strong>Multi-purpose Wifi connected relay control board. Applications include: remote heating an A/C systems control via nodeRED, openHAB and Android Tasker etc. </strong></p>
+</blockquote>
 
-<h3 id="httpsopenenergymonitororgemonmoduleswifirelayhttpsopenenergymonitororgemonmoduleswifirelay"><a href="https://openenergymonitor.org/emon/modules/wifirelay">https://openenergymonitor.org/emon/modules/wifirelay</a></h3>
+<h2 id="a-idoverview-nameoverviewaoverview"><a id="overview" name="overview"></a>Overview</h2>
 
+<ul>
+  <li>1 x High quality 16A Relay  (tested 100 switches @ 3x rated current)</li>
+  <li>Powered by the popular <a href="https://espressif.com/en/products/esp8266/">ESP8266 </a>WiFi SoC</li>
+  <li>OTA Firmware upload function</li>
+  <li>Powered direct from 110-240V AC via isolated on-board PSU</li>
+  <li>Built-in web server with mobile device friendly UI and</li>
+  <li>HTTP API to control</li>
+  <li>Thermostat function with weekly scheduling</li>
+  <li>Manual relay control via web interface</li>
+  <li><a href="http://en.wikipedia.org/wiki/MQTT">MQTT </a>support (control &amp; status)</li>
+  <li><a href="http://en.wikipedia.org/wiki/Network_Time_Protocol">NTP</a> for network time and scheduling functionality</li>
+  <li>Web server settings: including HTTP port &amp; authentication setup</li>
+  <li>Temperature sensor support - 1 x sensor included</li>
+</ul>
+
+<p><a href="https://openenergymonitor.org/emon/sites/default/files/IMG_20160303_200359.jpg"><img src="https://openenergymonitor.org/emon/sites/default/files/IMG_20160303_200359.jpg" alt="" /></a></p>
+
+<h2 id="httpsopenenergymonitororgemonsitesdefaultfilestrolleypnghttpshopopenenergymonitorcomwifi-mqtt-relay-thermostatspan-styleline-height-12-font-size-13pxspanstorehttpshopopenenergymonitorcomwifi-mqtt-relay-thermostat"><a href="http://shop.openenergymonitor.com/wifi-mqtt-relay-thermostat/"><img src="https://openenergymonitor.org/emon/sites/default/files/Trolley.png" alt="" /></a><span style="line-height: 1.2; font-size: 13px;"> </span><a href="http://shop.openenergymonitor.com/wifi-mqtt-relay-thermostat/"><strong>Store</strong></a></h2>
+
+<h2 id="contents">Contents</h2>
+
+<ol>
+  <li><a href="##physical connections">Physical Connections </a></li>
+  <li><a href="##network_setup">Network Setup </a></li>
+  <li><a href="##">Turn on Wifi AP / Restore default settings</a></li>
+  <li><a href="##Reset">Web UI Control </a></li>
+  <li><a href="##Thermostat">Thermostat Scheduler </a></li>
+  <li><a href="##HTTP">HTTP API</a></li>
+  <li><a href="##MQTT">MQTT API</a></li>
+  <li><a href="##other_settings">Other Settings</a></li>
+  <li><a href="##firmware">Firmware Update</a></li>
+  <li><a href="##Programming">Programming</a></li>
+  <li><a href="##schematic">Schematic</a></li>
+</ol>
+
+<h2 id="hardware-connections">Hardware connections</h2>
+
+<p class="note warning">
+<b>The board connects to and controls high voltage, knowledge and attention is required when installing to prevent electrical shock</b>
+</p>
+
+<p>1. Connect 110V-240V AC into the 2 x terminal block to power the unit (polarity does not matter) . There is a 0.25A fuse (MST250 slow blow) on the board, however an external fuse is also recommended.</p>
+
+<p>2. The relay contacts are isolated from the main supply. The 3 x relay terminals are connected as follows:</p>
+
+<p><img src="https://openenergymonitor.org/emon/sites/default/files/IMG_20160303_195806.jpg" alt="" /><img src="https://openenergymonitor.org/emon/sites/default/files/Selection_020_0.png" alt="" /></p>
+
+<h2 id="a-idnetworksetup-namenetworksetupanetworksetup"><a id="network_setup" name="network_setup"></a>Network Setup</h2>
+
+<p>On first power the unit will enter WiFi Access Point (AP) mode serving it’s own WiFi hotspot called ‘ESP_XXX’, where XXX is the units MAC address. The unit can be used in AP mode, however most users will probably want to connect the unit to an existing WiFi network:</p>
+
+<p>1. Connect to the ‘<strong>OEM_XXX</strong>’ WiFi network and browse to <strong><a href="http://192.168.10.1">http://192.168.10.1</a>.</strong></p>
+
+<p><img src="https://openenergymonitor.org/emon/sites/default/files/Selection_009_0.png" alt="" /></p>
+
+<p>2. Select <strong>WiFi Settings</strong>, wait for auto scan to populate then select the network to connect to and enter password. If required enter static IP settings or choose DHCP (default).</p>
+
+<p>3. Click <strong>Connect!</strong></p>
+
+<p>Unit will now reboot and turn off AP mode. Unit should not be connected to the choose WiFi network. Fing <a href="https://play.google.com/store/apps/details?id=com.overlook.android.fing&amp;hl=en_GB">Android</a> / <a href="https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8">iOS</a> app can be used to find it’s IP or run terminal command to scan for IP addresses of all connected ESP8266 modules:</p>
+
+<p><code class="highlighter-rouge">sudo arp-scan –retry 7 –quiet –localnet –interface=wlan0 | grep -s -i 18:fe:34</code></p>
+
+<p><img src="https://openenergymonitor.org/emon/sites/default/files/Selection_010_0.png" alt="" /></p>
+
+<h2 id="turn-on-wifi-ap--restore-default-settingsa-idreset-namereseta">Turn on WiFi AP / Restore Default Settings <a id="Reset" name="Reset"></a></h2>
+
+<p>Once the unit is connected to your local Wifi network for security the Wifi AP will automatically be turned off.</p>
+
+<p><strong>To turn the Wifi AP back on (e.g to scan and connect to a different network) press and hold the rest button for 3 seconds</strong></p>
+
+<p><strong>When in Wifi AP mode a further 3 second press of the rest button will <u>clear all setting and restore to default.</u></strong></p>
+
+<h2 id="control">Control</h2>
+
+<p>Relay can now be in four ways:</p>
+
+<h4 id="a-idwebui-namewebuia1-web-ui-simple-interface"><a id="web_UI" name="web_UI"></a>1. Web UI Simple interface</h4>
+
+<p>Select <strong>Relay Control</strong> via web interface. Or browse to http://<ip-address>/control/relay.html</ip-address></p>
+
+<p><img src="https://openenergymonitor.org/emon/sites/default/files/Selection_014_0.png" alt="" /></p>
+
+<h4 id="a-idthermostat-namethermostata2-thermostat-scheduler"><a id="Thermostat" name="Thermostat"></a>2. Thermostat Scheduler</h4>
+
+<p>Heating or A/C schedule and desired set point (from connected internal DS18B20 temperature sensor) can be set using the Thermostat Scheduler interface</p>
+
+<p><img src="https://openenergymonitor.org/emon/sites/default/files/Selection_023.png" alt="" /></p>
+
+<p>The <strong>Thermostate Settings </strong>page allow setting of Thermostat Input (currently only DS18B20 sensor is implemented)</p>
+
+<p><strong>Hysteresis</strong> is a nice function that prevents the relay from switching on/off frequently around the setpoint. It is defined in 100ths of a gedree, i.e. 500 means 5 degrees C. See fig below:</p>
+
+<p>The “high” defines how much higher than the desired temperature the temperature reading has to be in order for the relay to switch off</p>
+
+<p>The “low” defines how much lower than the desired temperature the temperature reading has to be in order for the relay to switch on</p>
+
+<p><img src="https://openenergymonitor.org/emon/sites/default/files/Selection_015_2.png" alt="" />    <img src="https://openenergymonitor.org/emon/sites/default/files/image.png" alt="" /></p>
+
+<h4 id="a-idhttp-namehttpa3-http-api"><a id="HTTP" name="HTTP"></a>3. HTTP API</h4>
+
+<p><strong>Return Status</strong></p>
+
+<p><code class="highlighter-rouge">http://&lt;IP-ADDRESS&gt;/control/relay.cgi</code></p>
+
+<p>Returns JSON:</p>
+
+<p><code class="highlighter-rouge">"relay1": 0,"relay1name":"Heating"}</code></p>
+
+<p><strong>Turn Relay on: </strong></p>
+
+<p><code class="highlighter-rouge">http://&lt;IP-ADDRESS&gt;/control/relay.cgi?relay1=1</code></p>
+
+<p>Returns:</p>
+
+<p><code class="highlighter-rouge">'OK'</code></p>
+
+<p><strong>HTTPD Settings</strong> allow the HTTP port to be set</p>
+
+<p><strong>Disable HTTPD in normal working mode -</strong> Turns off the HTTP service if not in “setup” mode, useful when you want to only use the MQTT interface and not worry about exposing the HTTP configuration UI to the wild</p>
+
+<p><strong>HTTP Auth</strong> allows for setting separate Admin and User password. Non-admin user cannot make any changes to the config.</p>
+
+<p><img src="https://openenergymonitor.org/emon/sites/default/files/Selection_012_0.png" alt="" /></p>
+
+<h4 id="a-idmqtt-namemqtta4mqttapi"><a id="MQTT" name="MQTT"></a>4. MQTT API</h4>
+
+<p>The best (secure and lightweight) way IMHO to control the unit is via MQTT.</p>
+
+<p>Using MQTT the relay can easily be controlled from applications such as nodeRED openHAB and Android Tasker. <a href="http://youtu.be/nDaiUxO4Lt8">See this informative video</a> by Paul explaining how to control the relay via MQTT using nodeRED. The video was made using the older 3CH version of the relay but much of the info is still the same.</p>
+
+<p><strong>Status:</strong></p>
+
+<p>Unit periodically publishes DS18B20 temperature sensor value to the following topic:</p>
+
+<p><code class="highlighter-rouge">heating/status/ds18b20/1</code></p>
+
+<p>Relay Status after state is changed is published to:</p>
+
+<p><code class="highlighter-rouge">heating/status/relay/1 </code></p>
+
+<p><strong>Control </strong></p>
+
+<p>Relay can be controlled by publishing 1 or 0 to the MQTT control topic, default:</p>
+
+<p><code class="highlighter-rouge">heating/control/relay/1</code></p>
+
+<p>After a control message has been received (either via MQTT or HTTP) relay will respond with a status MQTT message posted to the status topic (see above).</p>
+
+<p>Note: The emonPi has a Mosquitto MQTT server running by default. Older 1st gen emonPi’s have an unauthenticated MQTT server running on localhost with port 1883 closed. Port can be opened and make persistently open with:</p>
+
+<p><code class="highlighter-rouge">sudo iptables -A INPUT -p tcp -m tcp --dport 1883 -j ACCEPT</code></p>
+
+<p><code class="highlighter-rouge">sudo apt-get install iptables-persistent</code></p>
+
+<p>Newer emonPi’s have the MQTT port open by default and authentication turned on with default _user: <code class="highlighter-rouge">emonpi</code>, password: <code class="highlighter-rouge">emonpimqtt2016</code>. _Port 1883 is closed by default on all home network routers therefor this port is not exposed to the web.</p>
+
+<p>MQTT topic names are fully configurable, see <strong>MQTT Setttings:</strong></p>
+
+<p><img src="https://openenergymonitor.org/emon/sites/default/files/Selection_011_0.png" alt="" /></p>
+
+<h4 id="a-idothersettings-nameothersettingsaother-settings"><a id="other_settings" name="other_settings"></a>Other Settings</h4>
+
+<p><strong>NTP Settings </strong>- unit obtain current time from NTP for use with thermostat scheduler, set GMT offset based on your time zone.</p>
+
+<p><img src="https://openenergymonitor.org/emon/sites/default/files/Selection_021.png" alt="" /></p>
+
+<p><strong>Relay latching</strong>  - Restores relay state after reset (not recommended)</p>
+
+<p><strong>Relay name</strong> - Sets name of Relay to be used in web UI</p>
+
+<p><strong>Relay Pulse time:</strong> max ”on” time in milliseconds. 0 means disabled (the default setting), setting it to 500 for example will result in the relay auto-switching off after 500ms of on-time. Useful when you want to pulse-contact something, say simulate a button press or make temporary make contact of the relay. Also useful when you want to ensure that the relay will be forced off after certain time, regardless of connectivity loss. I’d say if you control some heater, it would make sense to have the pulse time to 3hrs (1000<em>60</em>60*3) for just in case.</p>
+
+<p><img src="https://openenergymonitor.org/emon/sites/default/files/Selection_013_0.png" alt="" /></p>
+
+<p><strong>DS18B20 Setting - </strong>A DS18B20 is used to inform the on-board thermostat. Changing these setting should not be required</p>
+
+<p><img src="https://openenergymonitor.org/emon/sites/default/files/Selection_016_0.png" alt="" /></p>
+
+<p><strong>ADC Poll</strong> - defaults to 0, it is the ADC polling interval. The two-wire connector is connected to the ADC, you can use it to measure temperature, light etc and take action accordingly. <strong>3.3V Max</strong></p>
+
+<p><img src="https://openenergymonitor.org/emon/sites/default/files/Selection_017_0.png" alt="" /></p>
+
+<h2 id="a-idfirmware-namefirmwareafirmware-upgrade-recommended-way"><a id="firmware" name="firmware"></a>Firmware Upgrade (recommended way)</h2>
+
+<p>The unit has the ability to <strong>update firmware over WiFi network via the web interface</strong>. Firmware updates will be posted here. There are two branches of the relay board firmware the first is Martin’s more advanced firmware based on his recent developments, Martin has not made source code available for this but has given us a compiled binary, available here:</p>
+
+<p><strong><a href="https://openenergymonitor.org/emon/sites/default/files/oem.v2088.zip">Current latest firmware: V2088</a> (Mar 3 2016 20:24:14 )</strong></p>
+
+<p><strong>​Unzip then select the .bin into units interface then hit upload</strong></p>
+
+<p><img src="https://openenergymonitor.org/emon/sites/default/files/Selection_018_0.png" alt="" /></p>
+
+<h2 id="a-idprogramming-nameprogrammingaprogramming-advanced"><a id="Programming" name="Programming"></a>Programming (advanced)</h2>
+
+<p>The ESP8266 can be programmed manually using 3.3V USB to UART / FTDI cable. Jumper 5 should be between 2 and 3 (closer to the LED side). <strong>Hold down the push button for the duration of the upload.</strong></p>
+
+<p>Pre compiled binary can be flashed using <a href="https://github.com/themadinventor/esptool">esptool</a> :</p>
+
+<p><strong>Note: the recommended way to update firmware is via the web uploader (see above)</strong></p>
+
+<p><code class="highlighter-rouge">esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_freq 80m --flash_mode qio --flash_size 16m-c1 0x1000 oem_v2088.bin</code></p>
+
+<p>The FTDI connection has additional jumper so second UART can be used as debug when the first one is used by the extension port (e.g. RFM69Pi - yet to be implemented).</p>
+
+<h6 id="alternative-firmware"><strong>Alternative Firmware</strong></h6>
+
+<p>The second option is our adaptation of Martin’s original 3 channel relay firmware, with relay 2 and 3 removed. <strong><a href="https://github.com/openenergymonitor/ESP8266_Relay_Board/tree/master/1ch_relay">This is open source and available here</a>:</strong></p>
+
+<p>To upload this code, in the 1ch_relay directory run:</p>
+
+<p><code class="highlighter-rouge">"line-height: 20.8px;"&gt;$ sudo make</code></p>
+
+<p>and then to upload with a USB to UART cable:</p>
+
+<p><code class="highlighter-rouge">$ sudo sh burn.sh</code></p>
+
+<p>Hold down the push button for the duration of the upload, note there are 4 stages to the upload.</p>
+
+<p><strong>Further development</strong>: It is our intention to further develop this open source version of the firmware, if your interested in helping please get in touch.</p>
+
+<h6 id="bootloaderre-load"><strong>Bootloader re-load </strong></h6>
+
+<p>You can re-flash the bootloader (<a href="https://openenergymonitor.org/emon/sites/default/files/bootloader.zip">download.zip</a>) like this:</p>
+
+<p><code class="highlighter-rouge">esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_freq 80m --flash_mode qio --flash_size 16m-c1 0x00000 "boot_v1.5.bin" </code></p>
+
+<p>flashing the firmware itself:</p>
+
+<p><code class="highlighter-rouge">esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_freq 80m --flash_mode qio --flash_size 16m-c1 0x1000 oem.v2088.bin </code></p>
+
+<p>If you have modified other system areas of the flash, this may also cause trouble.. try resetting them and then re-eating the bootloader-firmware update again:</p>
+
+<p><code class="highlighter-rouge">esptool.py  --port /dev/ttyUSB0 --baud 460800 write_flash --flash_freq 80m --flash_mode qio --flash_size 16m-c1 \
+    0x00000 blank.bin  \
+    0x01000 blank.bin  \
+    0x7C000 esp_init_data_default.bin \
+    0x7D000 blank.bin  \
+    0x7E000 blank.bin  \
+    0x7F000 blank.bin  \
+    0x80000 blank.bin  \
+    0xFE000 blank.bin  \
+    0x100000 blank.bin \
+    0x101000 blank.bin \
+    0x1FC000 esp_init_data_default.bin \
+    0x1FD000 blank.bin \
+    0x1FE000 blank.bin \
+    0x1FF000 blank.bin \
+    0x3FC000 esp_init_data_default.bin \
+    0x3FD000 blank.bin \
+    0x3FE000 blank.bin \</code></p>
+
+<p>Note: flash address  0xFC000 contains board identification information. do not erase or modify it. Check debug serial output.</p>
+
+<h2 id="a-idschematic-nameschematicaschematic"><a id="schematic" name="schematic"></a>Schematic</h2>
+
+<p><a href="https://openenergymonitor.org/emon/sites/default/files/Selection_019_0.png"><img src="https://openenergymonitor.org/emon/sites/default/files/Selection_019_0.png" alt="" /></a></p>
+
+<h4 id="credits">Credits</h4>
+
+<p>This unit has been designed by Martin Harizanov.</p>
+
+<p>Code from the following sources has been used in this project:</p>
+
+<ul>
+  <li>The ESP-HTTPD project by Jeroen, beerware license</li>
+  <li>The ESP-MQTT project by Tuan PM, MIT license</li>
+  <li>JSON jsmn library, Z Serge, MIT license</li>
+  <li>Open heating controller/thermostat scheduler by Trystan Lea</li>
+</ul>
+
+<p><a href="https://openenergymonitor.org/emon/sites/default/files/IMG_20160303_195742.jpg"><img src="https://openenergymonitor.org/emon/sites/default/files/IMG_20160303_195742.jpg" alt="" /></a></p>
 
 
 </article>
