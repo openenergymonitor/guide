@@ -132,13 +132,45 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   <hr class="divider">
   
 
-  <h1 id="under-construction">Under construction</h1>
+  <p>LightWaveRF produce a <a href="http://www.megamanuk.com/lightwaverf/products/power-control/">variety of RF plugs</a> and <a href="http://www.megamanuk.com/lightwaverf/products/inline-switching/jsjslw830/">relays</a> which can be controlled via OOK (<a href="https://en.wikipedia.org/wiki/On-off_keying">on-off-keying</a> RF. The LightWaveRF OOK protocol is also compatible with some <a href="http://www.ebay.co.uk/itm/321887470042?_trksid=p2057872.m2749.l2649&amp;var=510834121070&amp;ssPageName=STRK%3AMEBIDX%3AIT">lower cost un-branded OOK learning receivers relays</a>.</p>
 
-<h5 id="httpsgithubcomopenenergymonitorlightwaverf-pihttpsgithubcomopenenergymonitorlightwaverf-pi"><a href="https://github.com/openenergymonitor/lightwaverf-pi">https://github.com/openenergymonitor/lightwaverf-pi</a></h5>
+<p>While maybe not strictly open-source the LightWaveRF OOK protocol and been reverse engineered allowing plugs to be easily controlled from Arduino / Raspberry Pi. There is an active <a href="http://lightwaverfcommunity.org.uk/forum/">LightWaveRF</a> online community. Using off-the shelf hardware like this is a ‘safe’ way to control lights, heaters and appliances  around a home without getting our hands dirty dealing with with high voltages. These plugs and relays can be used to control anything from lights to immersion heaters, most LightWaveRF plugs/relays will switch up to 13A / 3kW.</p>
 
-<h5 id="httpsblogopenenergymonitororg201511remote-control-of-lightwave-rf-plugshttpsblogopenenergymonitororg201511remote-control-of-lightwave-rf-plugs"><a href="https://blog.openenergymonitor.org/2015/11/remote-control-of-lightwave-rf-plugs/">https://blog.openenergymonitor.org/2015/11/remote-control-of-lightwave-rf-plugs/</a></h5>
+<p><strong>The latest emonSD emonPi / emonBase image includes a LightWaveRF MQTT service running by default. To use the feature you will need to add an OOK transmitter to the emonPi.</strong></p>
 
-<h5 id="httpswikiopenenergymonitororgindexphpemonpilightwaverfookhttpswikiopenenergymonitororgindexphpemonpilightwaverfook"><a href="https://wiki.openenergymonitor.org/index.php/EmonPi#LightWaveRF_OOK">https://wiki.openenergymonitor.org/index.php/EmonPi#LightWaveRF_OOK</a></h5>
+<h2 id="hardware">Hardware</h2>
+
+<p>An OOK transmitter can easily be added to the emonPi.  We stock <a href="http://shop.openenergymonitor.com/ook-on-off-keying-transmitter-433mhz/">OOK transmitter modules in the OpenEnergyMonitor store</a>. See <a href="http://wiki.openenergymonitor.org/index.php?title=EmonPi#OOK">emonPi Technical Hardware Wiki</a> for details how to retrofit OOK TX module to existing emonPi’s.</p>
+
+<p><img src="/images/integrations/lwrf.png" alt="emonPi LightWaveRF" /></p>
+
+<h2 id="software">Software</h2>
+
+<p>The latest emonSD emonPi / emonBase image includes a LightWaveRF MQTT service running by default, a plug can be controlled by publishing to the <code class="highlighter-rouge">lwrf/</code> MQTT topic:</p>
+
+<p><strong>E.g Publishing <code class="highlighter-rouge">1 1</code> to <code class="highlighter-rouge">lwrf/</code> topic switches on plug 1 while publishing <code class="highlighter-rouge">1 0</code> switches off plug 1.</strong></p>
+
+<p>Plugs can be paired with the emonPi in the usual LightwaveRF way: Either press and hold pairing button (if button exists) or turn on the plug from main power and send ‘on’ command. Most LightWaveRF plugs allow multiple (up to 6) control devices to be paired.</p>
+
+<p>To reset the plug and delete all pairing press and hold the pairing button to enter pairing mode then press and hold again to erase memory then press (don’t hold) once to confirm. For plugs without a pairing button turn on the plug from the mains power then in the first few seconds press the ‘all off’ button on the RF remote.</p>
+
+<h3 id="lightwaverf-pi---mqtt-service-githubhttpsgithubcomopenenergymonitorlightwaverf-pi"><a href="https://github.com/openenergymonitor/lightwaverf-pi">LightWaveRF Pi - MQTT Service GitHub</a></h3>
+
+<p><em>Note: The OOK RF protocol by it’s simplistic nature is not particularly secure, we would not recommend controlling anything you don’t mind getting accidently switched. For critical switching applications and when more control (e.g. state feedback) is required we recomend using <a href="http://shop.openenergymonitor.com/wifi-mqtt-relay-thermostat/">MQTT WiFi Relay Thermostat</a>.</em></p>
+
+<h3 id="documenttion">Documenttion</h3>
+
+<ul>
+  <li><a href="https://github.com/openenergymonitor/lightwaverf-pi">LightWaveRF Pi - MQTT Service GitHub</a></li>
+  <li><a href="https://wiki.openenergymonitor.org/index.php/EmonPi#LightWaveRF_OOK">Adding OOK RF Transmitter to emonPi</a></li>
+</ul>
+
+<h3 id="related-blog-posts">Related blog posts</h3>
+
+<ul>
+  <li><a href="https://blog.openenergymonitor.org/2015/11/remote-control-of-lightwave-rf-plugs/">Controling LightWaveRF plugs using emonPi</a></li>
+</ul>
+
 
 
 </article>
