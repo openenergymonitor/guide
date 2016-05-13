@@ -22,23 +22,29 @@ footer: true
 
 ### {% linkable_title RFM69Pi %}
   - [RFM69Pi Firmware](https://github.com/openenergymonitor/rfm2pi)
-  - [RFM69Pi Hardware Docs](https://Docs.openenergymonitor.org/index.php/RFM69Pi_V3)
+  - [RFM69Pi Hardware Docs](https://wiki.openenergymonitor.org/index.php/RFM69Pi_V3)
   - [RFM69Pi Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/RFM2Pi)
   - [RFM69Pi Forum Category](https://community.openenergymonitor.org/c/hardware/rfm69pi)
 
 ### {% linkable_title emonTx %}
   - [User Guide](https://guide.openenergymonitor.org/setup/emontx/)
   - [emonTx Firmware](https://github.com/openenergymonitor/emonTxFirmware)
-  - [emonTx Hardware Docs](https://Docs.openenergymonitor.org/index.php?title=EmonTx_V3.4)
+  - [emonTx Hardware Docs](https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3.4)
   - [emonTx Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/emonTxV3)
   - [emonTx Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
 
 ### {% linkable_title emonTH %}
   - [User Guide](https://guide.openenergymonitor.org/setup/emonth/)
   - [emonTH Firmware](https://github.com/openenergymonitor/emonth)
-  - [emonTH Hardware Docs](https://Docs.openenergymonitor.org/index.php/EmonTH_V1.5)
+  - [emonTH Hardware Docs](https://wiki.openenergymonitor.org/index.php/EmonTH_V1.5)
   - [emonTH Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/emonTH)
   - [emonTH Forum Category](https://community.openenergymonitor.org/c/hardware/emonth)
+
+### {% linkable_title emonGLCD %}
+  - [User Guide](https://openenergymonitor.org/emon/emonglcd/)
+  - [emonGLCD Firmware](https://github.com/openenergymonitor/emonglcd)
+  - [emonGLCD Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/emonGLCD)
+  - [Display Forum Category](https://community.openenergymonitor.org/c/hardware/display)
 
 ### {% linkable_title WiFi Relay %}
   - [User Guide](https://openenergymonitor.org/emon/modules/wifirelay)
