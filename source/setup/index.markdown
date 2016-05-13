@@ -225,7 +225,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 
 ### Temperature & Humidity Sensors
 
-These sensors can either be wireless or wired:
+![Temperature monitoring example](/images/setup/temp-dash.png)
 
 ***
 
