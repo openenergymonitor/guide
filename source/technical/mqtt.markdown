@@ -11,7 +11,7 @@ footer: true
 
 > [MQTT](http://mqtt.org/) is a machine-to-machine (M2M)/"Internet of Things" connectivity protocol. It was designed as an extremely lightweight publish/subscribe messaging transport.
 
-The emonPi with [emonSD pre-built SD card](/technical/#emonsd-features) by default runs a local [Mosquitto MQTT](http://mosquitto.org/) server. This server is accesiable ([via authentication](/technical/credentials#mqtt) on port 1880. See [MQTT Service Credentials](/technical/credentials#mqtt).
+The emonPi with [emonSD pre-built SD card](/technical/#emonsd-features) by default runs a local [Mosquitto MQTT](http://mosquitto.org/) server. This server is accesiable ([via authentication](/technical/credentials#mqtt) on port 1883. See [MQTT Service Credentials](/technical/credentials#mqtt).
 
 ## {% linkable_title MQTT Publishers %}
 
