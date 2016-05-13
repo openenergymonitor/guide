@@ -9,6 +9,12 @@ sharing: true
 footer: true
 ---
 
+<figure><a href="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png">
+<img src="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png" alt="emonPi Architecture Overview">
+<figcaption style="text-align:center;"><i>Fig.1 - emonPi Architecture Overview</i></figcaption>
+</a>
+</figure>
+
 > [MQTT](http://mqtt.org/) is a machine-to-machine (M2M)/"Internet of Things" connectivity protocol. It was designed as an extremely lightweight publish/subscribe messaging transport.
 
 The emonPi with [emonSD pre-built SD card](/technical/#emonsd-features) by default runs a local [Mosquitto MQTT](http://mosquitto.org/) server. This server is accesiable ([via authentication](/technical/credentials#mqtt) on port 1883. See [MQTT Service Credentials](/technical/credentials#mqtt).
@@ -68,7 +74,7 @@ The MQTT input service can be restarted using `$ sudo service mqtt_input restart
 Latest log file entries can be viewed via Emoncms web inerface admin or with: `$ tail /var/log/emoncms.log`
 
 
- 
+
 ### {% linkable_title EmonPiLCD Service %}
 
 The [emonPi's python LCD Service Script](https://github.com/openenergymonitor/emonpi/blob/master/lcd/emonPiLCD.py) subscribes to the 'Legacy MQTT Topic' structure to obtain the real-time data to display on the emonPi LCD.
@@ -90,4 +96,3 @@ Latest log file entries can be viewed with: `$ tail /var/log/emonpilcd/emonpilcd
 - [MQTT Installation Docs](https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/MQTT.md)
 - [emonSD Buid Guide](https://github.com/openenergymonitor/emonpi/blob/master/docs/SD-card-build.md)
 - [Emoncms PHP MQTT Input Script](https://github.com/emoncms/emoncms/blob/master/scripts/phpmqtt_input.php)
-

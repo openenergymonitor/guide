@@ -9,9 +9,10 @@ sharing: true
 footer: true
 published: true
 ---
-<figure>
+<figure><a href="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png">
 <img src="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png" alt="emonPi Architecture Overview">
 <figcaption style="text-align:center;"><i>Fig.1 - emonPi Architecture Overview</i></figcaption>
+</a>
 </figure>
 <br>
 

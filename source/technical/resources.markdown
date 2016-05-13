@@ -16,14 +16,14 @@ footer: true
 ### {% linkable_title emonPi %}
   - [User Guide](https://guide.openenergymonitor.org/setup/)
   - [emonPi Firmware](https://github.com/openenergymonitor/emonpi)
-  - [emonPi Hardware Docs](https://Docs.openenergymonitor.org/index.php?title=EmonPi)
-  - [emonPi Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/emonPi)
+  - [emonPi Hardware Docs](https://wiki.openenergymonitor.org/index.php?title=EmonPi)
+  - [emonPi Hardware CAD Design](https://github.com/openenergymonitor/Hardware/tree/master/emonPi)
   - [emonPi Forum Category](https://community.openenergymonitor.org/c/hardware/emonpi)
 
 ### {% linkable_title RFM69Pi %}
   - [RFM69Pi Firmware](https://github.com/openenergymonitor/rfm2pi)
   - [RFM69Pi Hardware Docs](https://wiki.openenergymonitor.org/index.php/RFM69Pi_V3)
-  - [RFM69Pi Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/RFM2Pi)
+  - [RFM69Pi Hardware CAD Design](https://github.com/openenergymonitor/Hardware/tree/master/RFM2Pi)
   - [RFM69Pi Forum Category](https://community.openenergymonitor.org/c/hardware/rfm69pi)
 
 ### {% linkable_title emonTx %}
@@ -37,19 +37,19 @@ footer: true
   - [User Guide](https://guide.openenergymonitor.org/setup/emonth/)
   - [emonTH Firmware](https://github.com/openenergymonitor/emonth)
   - [emonTH Hardware Docs](https://wiki.openenergymonitor.org/index.php/EmonTH_V1.5)
-  - [emonTH Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/emonTH)
+  - [emonTH Hardware CAD Design](https://github.com/openenergymonitor/Hardware/tree/master/emonTH)
   - [emonTH Forum Category](https://community.openenergymonitor.org/c/hardware/emonth)
 
 ### {% linkable_title emonGLCD %}
   - [User Guide](https://openenergymonitor.org/emon/emonglcd/)
   - [emonGLCD Firmware](https://github.com/openenergymonitor/emonglcd)
-  - [emonGLCD Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/emonGLCD)
+  - [emonGLCD Hardware CAD Design](https://github.com/openenergymonitor/Hardware/tree/master/emonGLCD)
   - [Display Forum Category](https://community.openenergymonitor.org/c/hardware/display)
 
 ### {% linkable_title WiFi Relay %}
   - [User Guide](https://openenergymonitor.org/emon/modules/wifirelay)
   - [WiFi Relay Firmware](https://github.com/openenergymonitor/emonth)
-  - [WiFi Relay Hardware](https://github.com/mharizanov/ESP8266_Relay_Board)
+  - [WiFi Relay Hardware CAD Design](https://github.com/mharizanov/ESP8266_Relay_Board)
   - [WiFi Relay Forum Category](https://community.openenergymonitor.org/c/hardware/wifi-relay)
 
 ### {% linkable_title Optical Pulse Sensor %}
