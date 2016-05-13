@@ -37,7 +37,7 @@ To reset the plug and delete all pairing press and hold the pairing button to en
 
 
 
-*Note: The OOK RF protocol by it's simplistic nature is not particularly secure, we would not recommend controlling anything you don't mind getting accidently switched. For critical switching applications and when more control (e.g. state feedback) is required we recomend using [MQTT WiFi Relay Thermostat](http://shop.openenergymonitor.com/wifi-mqtt-relay-thermostat/).*
+*Note: The OOK RF protocol by it's simplistic nature is not particularly secure, we would not recommend controlling anything you don't mind getting accidently switched. For critical switching applications and when more control (e.g. state feedback) is required we recomend using [MQTT WiFi Relay Thermostat](https://guide.openenergymonitor.org/integrations/mqtt-relay/).*
 
 
 
