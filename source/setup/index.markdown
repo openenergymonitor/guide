@@ -20,17 +20,19 @@ Documentation on everything from AC theory to sensor circuit design and applicat
 
 ***
 
+
+
 <div class='install-instructions-container' markdown='0'>
 <input name='install-instructions' type='radio' id='home-energy-hardware' checked>
 <input name='install-instructions' type='radio' id='solar-pv-hardware'>
 <input name='install-instructions' type='radio' id='temperature-hardware'>
 
 <label class='menu-selector energy' for='home-energy-hardware'><strong>Home Energy<br> Monitoring</strong></label>
-&nbsp;&nbsp;
+&nbsp;&nbsp;<i class="icon-arrow-down"></i>
 <label class='menu-selector solarpv' for='solar-pv-hardware'><strong>Solar PV<br> Monitoring</strong></label>
-&nbsp;&nbsp;
+&nbsp;&nbsp;<i class="icon-arrow-down"></i>
 <label class='menu-selector temperature' for='temperature-hardware'><strong>Temperature<br>& Humidity</strong></label>
-
+<i class="icon-arrow-down"></i>
 <div class='install-instructions energy' markdown='1'>
 
 
@@ -225,7 +227,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 
 ### Temperature & Humidity Sensors
 
-These sensors can either be wireless or wired:
+![Temperature monitoring example](/images/setup/temp-dash.png)
 
 ***
 
