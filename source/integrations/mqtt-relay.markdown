@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "WiFi MQTT Control Relay"
+title: "WiFi MQTT Control Relay Thermostat"
 description: "MQTT heating control relay"
 date: 2014-12-18 21:49
 sidebar: true

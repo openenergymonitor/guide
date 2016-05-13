@@ -13,6 +13,6 @@ footer: true
 
 # [OpenHAB](/integrations/openhab)
 
-# [Control Relay](/integrations/mqtt-relay/)
+# [WiFi MQTT Control Relay Thermostat](/integrations/mqtt-relay/)
 
 # [LightWaveRF Control](/integrations/lightwaverf)
