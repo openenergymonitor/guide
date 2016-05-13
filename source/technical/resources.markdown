@@ -18,7 +18,7 @@ footer: true
   - [emonPi Firmware](https://github.com/openenergymonitor/emonpi)
   - [emonPi Hardware Docs](https://Docs.openenergymonitor.org/index.php?title=EmonPi)
   - [emonPi Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/emonPi)
-  - [emonPi Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
+  - [emonPi Forum Category](https://community.openenergymonitor.org/c/hardware/emonpi)
 
 ### {% linkable_title RFM69Pi %}
   - [RFM69Pi Firmware](https://github.com/openenergymonitor/rfm2pi)
