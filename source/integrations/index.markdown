@@ -13,6 +13,6 @@ footer: true
 
 # [OpenHAB](/integrations/openhab)
 
-# [Control Realy](/integrations/mqtt-relay/)
+# [Control Relay](/integrations/mqtt-relay/)
 
 # [LightWaveRF Control](/integrations/lightwaverf)

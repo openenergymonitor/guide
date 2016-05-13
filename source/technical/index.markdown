@@ -9,24 +9,26 @@ sharing: true
 footer: true
 published: true
 ---
-
-![emonPi overview](https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png)
-<figcaption style="float:left;"><i> Fig.1 - emonPi Architecture Overview <i class="icon-arrow-up"></i></i></figcaption>
-
+<figure>
+<img src="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png" alt="emonPi Architecture Overview">
+<figcaption style="text-align:center;"><i>Fig.1 - emonPi Architecture Overview</i></figcaption>
+</figure>
 <br>
 
 The emonPi is based on a RaspberryPi + [emonPi Shield PCB](https://wiki.openenergymonitor.org/index.php/EmonPi). The emonPi features a ATmega328p 8-bit microcontroller which is Arduino compatible.
 
-![emonPi PCB](https://github.com/openenergymonitor/Hardware/raw/master/emonPi/emonPi_V1_6/photo.png)
-<figcaption style="float:left;"><i>emonPi RaspberryPi Shield PCB <i class="icon-arrow-up"></i> </i></figcaption>
-
+<figure>
+<img src="https://github.com/openenergymonitor/Hardware/raw/master/emonPi/emonPi_V1_6/photo.png" alt="emonPi RaspberryPi Shield PCB">
+<figcaption style="text-align:center;"><i>emonPi RaspberryPi Shield PCB</i></figcaption>
+</figure>
 <br>
 
 An [emonBase](http://shop.openenergymonitor.com/emonbase-web-connected-base-station/) functions in much the same way as an emonPi but instead of an emonPi shield PCB it uses an [RFM69Pi PCB](http://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/) and has no local energy monitoring capability. The Raspberry Pi on the emonBase runs the same [emonSD](#emonsd-features) software as the emonPi.
 
-![emonBase RFM69Pi](https://wiki.openenergymonitor.org/images/thumb/RFM69Pi_RasPi.JPG/1500px-RFM69Pi_RasPi.JPG)
-<figcaption style="float:left;"><i>emonBase: Raspberry Pi + RFM69Pi <i class="icon-arrow-up"></i> </i></figcaption>
-
+<figure>
+<img src="https://wiki.openenergymonitor.org/images/thumb/RFM69Pi_RasPi.JPG/1500px-RFM69Pi_RasPi.JPG" alt="emonBase: Raspberry Pi + RFM69Pi">
+<figcaption style="text-align:center;"><i>emonBase: Raspberry Pi + RFM69Pi</i></figcaption>
+</figure>
 <br>
 
 <hr>
