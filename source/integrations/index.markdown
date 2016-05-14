@@ -9,10 +9,10 @@ sharing: true
 footer: true
 ---
 
-# [Node-RED](/integrations/nodered)
+## [Node-RED](/integrations/nodered)
 
-# [OpenHAB](/integrations/openhab)
+## [OpenHAB](/integrations/openhab)
 
-# [WiFi MQTT Control Relay Thermostat](/integrations/mqtt-relay/)
+## [WiFi MQTT Control Relay Thermostat](/integrations/mqtt-relay/)
 
-# [LightWaveRF Control](/integrations/lightwaverf)
+## [LightWaveRF Control](/integrations/lightwaverf)
