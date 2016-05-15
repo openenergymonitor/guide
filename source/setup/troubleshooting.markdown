@@ -169,6 +169,11 @@ To set timezone:
    - `$ sudo service ntp restart`
    - Check time with `$ date
 
+### {% linkable_title 4. Disk space %}
+
+Check avilable disk space in the data paritition (`/home/pi/data`) by looking at the graph at the bottom of:
+`Local Emoncms > Setup > Administration`
+
 <br>
 
 ***
