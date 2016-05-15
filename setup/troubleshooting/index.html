@@ -132,26 +132,38 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   <hr class="divider">
   
 
-  <h1 id="under-construction">Under Construction</h1>
+  <figure><a href="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png">
+<img src="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png" alt="emonPi Architecture Overview" />
+<figcaption style="text-align:center;"><i>Fig.1 - emonPi Architecture Overview</i></figcaption>
+</a>
+</figure>
 
-<p>If you are experiancing issues please contact us, see <a href="/help">Help page</a></p>
+<hr />
+
+<p>If you are experiancing issues please post on our community form, see <a href="/help">Help page</a>.</p>
+
+<p>Debugging issues often involves connecting via SSH to restart services and view log files see:</p>
+
+<h3 id="technical--credentials--connect-via-sshtechnicalcredentialsssh"><a href="/technical/credentials/#ssh">Technical &gt; Credentials &gt; Connect Via SSH</a></h3>
 
 <h2 id="a-classtitle-link-namefeeds--inputs-not-updating-hreffeeds--inputs-not-updatinga-feeds--inputs-not-updating"><a class="title-link" name="feeds--inputs-not-updating" href="#feeds--inputs-not-updating"></a> Feeds / Inputs not Updating</h2>
 
 <p>There are a number of things to check if feeds are not updating:</p>
 
-<h3 id="a-classtitle-link-nameemonhub-hrefemonhuba-emonhub"><a class="title-link" name="emonhub" href="#emonhub"></a> emonHub</h3>
+<h3 id="a-classtitle-link-name1-emonhub-href1-emonhuba-1-emonhub"><a class="title-link" name="1-emonhub" href="#1-emonhub"></a> 1. emonHub</h3>
 
 <ul>
   <li>Is emonhub running?
     <ul>
-      <li>$ sudo service emonhub status</li>
-      <li>$ sudo service emonhub restart</li>
+      <li><code class="highlighter-rouge">$ sudo service emonhub status</code></li>
+      <li><code class="highlighter-rouge">$ sudo service emonhub restart</code></li>
     </ul>
   </li>
   <li>Is emonHub posting to MQTT?
     <ul>
-      <li>See example emonhub log (In Local Emoncms: Setup &gt; EmonHub &gt; emonHub log View):</li>
+      <li>Check log file</li>
+      <li>Local Emoncms &gt; emonHub &gt; Emonhub logger</li>
+      <li><code class="highlighter-rouge">$ tail /var/log/emonhub/emonhub.log</code></li>
     </ul>
   </li>
 </ul>
@@ -176,79 +188,136 @@ $(document).ready(function(){
 
 <p><button type="button" class="show_hide" href="#" rel="#slidingDiv">View Example Log</button></p>
 <div id="slidingDiv" class="toggleDiv" style="display: none;">
-    <p>Example emonhub log file /var/log/emonhub/emonhub.log</p>
+    <p>Example emonhub log file at startup </p>
   
 <pre>
-2016-05-14 10:25:48,454 INFO     MainThread EmonHub emonHub 'emon-pi' variant v1.1
-2016-05-14 10:25:48,455 INFO     MainThread Opening hub...
-2016-05-14 10:25:48,455 INFO     MainThread Logging level set to DEBUG
-2016-05-14 10:25:48,456 INFO     MainThread Creating EmonHubJeeInterfacer 'RFM2Pi'
-2016-05-14 10:25:48,458 DEBUG    MainThread Opening serial port: /dev/ttyAMA0 @ 38400 bits/s
-2016-05-14 10:25:50,463 INFO     MainThread RFM2Pi device firmware version &amp; configuration: not available
-2016-05-14 10:25:50,464 INFO     MainThread Setting RFM2Pi frequency: 433 (4b)
-2016-05-14 10:25:51,466 INFO     MainThread Setting RFM2Pi group: 210 (210g)
-2016-05-14 10:25:52,468 INFO     MainThread Setting RFM2Pi quiet: 0 (0q)
-2016-05-14 10:25:53,470 INFO     MainThread Setting RFM2Pi baseid: 5 (5i)
-2016-05-14 10:25:54,472 INFO     MainThread Setting RFM2Pi calibration: 230V (1p)
-2016-05-14 10:25:55,475 DEBUG    MainThread Setting RFM2Pi subchannels: ['ToRFM12']
-2016-05-14 10:25:55,476 DEBUG    MainThread Interfacer: Subscribed to channel' : ToRFM12
-2016-05-14 10:25:55,476 DEBUG    MainThread Setting RFM2Pi pubchannels: ['ToEmonCMS']
-2016-05-14 10:25:55,477 DEBUG    MainThread Interfacer: Subscribed to channel' : ToRFM12
-2016-05-14 10:25:55,478 INFO     MainThread Creating EmonHubMqttInterfacer 'MQTT'
-2016-05-14 10:25:55,480 INFO     MainThread MQTT Init mqtt_host=127.0.0.1 mqtt_port=1883 mqtt_user=emonpi
-2016-05-14 10:25:55,483 DEBUG    MainThread MQTT Subscribed to channel' : ToEmonCMS
-2016-05-14 10:25:55,486 INFO     MainThread Creating EmonHubEmoncmsHTTPInterfacer 'emoncmsorg'
-2016-05-14 10:25:55,488 DEBUG    MainThread emoncmsorg Subscribed to channel' : ToEmonCMS
-2016-05-14 10:25:55,489 DEBUG    RFM2Pi     device settings updated: E i5 g210 @ 433 MHz USA 0
-2016-05-14 10:25:55,585 INFO     MQTT       Connecting to MQTT Server
-2016-05-14 10:25:55,588 INFO     MQTT       connection status: Connection successful
-2016-05-14 10:25:55,589 DEBUG    MQTT       CONACK =&gt; Return code: 0
-2016-05-14 10:25:55,593 DEBUG    RFM2Pi     1 NEW FRAME : OK 5 39 0 0 0 39 0 139 90 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 (-0)
-2016-05-14 10:25:55,597 DEBUG    RFM2Pi     1 Timestamp : 1463221555.59
-2016-05-14 10:25:55,597 DEBUG    RFM2Pi     1 From Node : 5
-2016-05-14 10:25:55,598 DEBUG    RFM2Pi     1    Values : [39, 0, 39, 231.79, 0, 0, 0, 0, 0, 0, 0]
-2016-05-14 10:25:55,599 INFO     RFM2Pi     Publishing: emon/emonpi/power1 39
-2016-05-14 10:25:55,600 INFO     RFM2Pi     Publishing: emon/emonpi/power2 0
-2016-05-14 10:25:55,601 INFO     RFM2Pi     Publishing: emon/emonpi/power1pluspower2 39
-2016-05-14 10:25:55,602 INFO     RFM2Pi     Publishing: emon/emonpi/vrms 231.79
-2016-05-14 10:25:55,604 INFO     RFM2Pi     Publishing: emon/emonpi/t1 0
-2016-05-14 10:25:55,605 INFO     RFM2Pi     Publishing: emon/emonpi/t2 0
-2016-05-14 10:25:55,606 INFO     RFM2Pi     Publishing: emon/emonpi/t3 0
-2016-05-14 10:25:55,607 INFO     RFM2Pi     Publishing: emon/emonpi/t4 0
-2016-05-14 10:25:55,608 INFO     RFM2Pi     Publishing: emon/emonpi/t5 0
-2016-05-14 10:25:55,609 INFO     RFM2Pi     Publishing: emon/emonpi/t6 0
-2016-05-14 10:25:55,610 INFO     RFM2Pi     Publishing: emon/emonpi/pulsecount 0
-2016-05-14 10:25:55,611 INFO     RFM2Pi     Publishing: emon/emonpi/rssi 0
-2016-05-14 10:25:55,613 INFO     RFM2Pi     Publishing: emonhub/rx/5/values 39,0,39,231.79,0,0,0,0,0,0,0
-2016-05-14 10:25:55,614 INFO     RFM2Pi     Publishing: emonhub/rx/5/rssi 0
-2016-05-14 10:25:55,615 DEBUG    RFM2Pi     1 adding frame to buffer =&gt; [1463221555, 5, 39, 0, 39, 231.79, 0, 0, 0, 0, 0, 0, 0]
-2016-05-14 10:25:55,616 DEBUG    RFM2Pi     1 Sent to channel' : ToEmonCMS
-2016-05-14 10:25:55,691 INFO     MQTT       on_subscribe
+ INFO     MainThread EmonHub emonHub 'emon-pi' variant v1.1
+ INFO     MainThread Opening hub...
+ INFO     MainThread Logging level set to DEBUG
+ <br />
+ <b>Connecting to emonPi / RFM69Pi and setting frequency &amp; network group:</b>
+ INFO     MainThread Creating EmonHubJeeInterfacer 'RFM2Pi'
+ DEBUG    MainThread Opening serial port: /dev/ttyAMA0 @ 38400 bits/s
+ INFO     MainThread RFM2Pi device firmware version &amp; configuration: not available
+ INFO     MainThread Setting RFM2Pi frequency: 433 (4b)
+ INFO     MainThread Setting RFM2Pi group: 210 (210g)
+ INFO     MainThread Setting RFM2Pi quiet: 0 (0q)
+ INFO     MainThread Setting RFM2Pi baseid: 5 (5i)
+ INFO     MainThread Setting RFM2Pi calibration: 230V (1p)
+ DEBUG    MainThread Setting RFM2Pi subchannels: ['ToRFM12']
+ DEBUG    MainThread Interfacer: Subscribed to channel' : ToRFM12
+ DEBUG    MainThread Setting RFM2Pi pubchannels: ['ToEmonCMS']
+ DEBUG    MainThread Interfacer: Subscribed to channel' : ToRFM12
+ <br />
+ <b>Connecting to localhost Mosquitto MQTT server:</b>
+ INFO     MainThread Creating EmonHubMqttInterfacer 'MQTT'
+ INFO     MainThread MQTT Init mqtt_host=127.0.0.1 mqtt_port=1883 mqtt_user=emonpi
+ DEBUG    MainThread MQTT Subscribed to channel' : ToEmonCMS
+ INFO     MainThread Creating EmonHubEmoncmsHTTPInterfacer 'emoncmsorg'
+ DEBUG    MainThread emoncmsorg Subscribed to channel' : ToEmonCMS
+ DEBUG    RFM2Pi     device settings updated: E i5 g210 @ 433 MHz USA 0
+ INFO     MQTT       Connecting to MQTT Server
+ INFO     MQTT       connection status: Connection successful
+ DEBUG    MQTT       CONACK =&gt; Return code: 0
+ <br />
+ <b>Example Receiving Data from emonPi (Node 5 Default) and posting to emon/ MQTT topics:</b>
+ DEBUG    RFM2Pi     1 NEW FRAME : OK 5 39 0 0 0 39 0 139 90 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 (-0)
+ DEBUG    RFM2Pi     1 Timestamp : 1463221555.59
+ DEBUG    RFM2Pi     1 From Node : 5
+ DEBUG    RFM2Pi     1    Values : [39, 0, 39, 231.79, 0, 0, 0, 0, 0, 0, 0]
+ INFO     RFM2Pi     Publishing: emon/emonpi/power1 39
+ INFO     RFM2Pi     Publishing: emon/emonpi/power2 0
+ INFO     RFM2Pi     Publishing: emon/emonpi/power1pluspower2 39
+ INFO     RFM2Pi     Publishing: emon/emonpi/vrms 231.79
+ INFO     RFM2Pi     Publishing: emon/emonpi/t1 0
+ INFO     RFM2Pi     Publishing: emon/emonpi/t2 0
+ INFO     RFM2Pi     Publishing: emon/emonpi/t3 0
+ INFO     RFM2Pi     Publishing: emon/emonpi/t4 0
+ INFO     RFM2Pi     Publishing: emon/emonpi/t5 0
+ INFO     RFM2Pi     Publishing: emon/emonpi/t6 0
+ INFO     RFM2Pi     Publishing: emon/emonpi/pulsecount 0
+ INFO     RFM2Pi     Publishing: emon/emonpi/rssi 0
+ INFO     RFM2Pi     Publishing: emonhub/rx/5/values 39,0,39,231.79,0,0,0,0,0,0,0
+ INFO     RFM2Pi     Publishing: emonhub/rx/5/rssi 0
+ DEBUG    RFM2Pi     1 adding frame to buffer =&gt; [1463221555, 5, 39, 0, 39, 231.79, 0, 0, 0, 0, 0, 0, 0]
+ DEBUG    RFM2Pi     1 Sent to channel' : ToEmonCMS
+<br />
+<b>Example Receiving Data from emonTH (Node 20) and posting to emon/ MQTT topics:</b>
+ DEBUG    RFM2Pi     27138 NEW FRAME : OK 20 170 0 0 0 106 2 26 0 (-59)
+ DEBUG    RFM2Pi     27138 Timestamp : 1463330495.4
+ DEBUG    RFM2Pi     27138 From Node : 20
+ DEBUG    RFM2Pi     27138    Values : [17, 0, 61.800000000000004, 2.6]
+ DEBUG    RFM2Pi     27138      RSSI : -59
+ INFO     RFM2Pi     Publishing: emon/emonth2/temperature 17
+ INFO     RFM2Pi     Publishing: emon/emonth2/external temperature 0
+ INFO     RFM2Pi     Publishing: emon/emonth2/humidity 61.8
+ INFO     RFM2Pi     Publishing: emon/emonth2/battery 2.6
+ INFO     RFM2Pi     Publishing: emon/emonth2/rssi -59
+ INFO     RFM2Pi     Publishing: emonhub/rx/20/values 17,0,61.8,2.6
+ INFO     RFM2Pi     Publishing: emonhub/rx/20/rssi -59
+ DEBUG    RFM2Pi     27138 adding frame to buffer =&gt; [1463330495, 20, 17, 0, 61.800000000000004, 2.6, -59]
+ DEBUG    RFM2Pi     27138 Sent to channel' : ToEmonCMS
+
+<br />
+<b>Example posting data to remote https://emoncms.org:</b>
+INFO     emoncmsorg sending: https://emoncms.org/input/bulk.json?apikey=E-M-O-N-C-M-S-A-P-I-K-E-Y&amp;data=[[1463330761,5,40,0,40,228.20000000000002,0,0,0,0,0,0,0],[1463330766,5,38,0,38,229,0,0,0,0,0,0,0],[1463330771,5,41,0,41,229.03,0,0,0,0,0,0,0],[1463330776,5,38,0,38,228.18,0,0,0,0,0,0,0],[1463330781,5,38,0,38,228.21,0,0,0,0,0,0,0],[1463330786,5,36,0,36,229.16,0,0,0,0,0,0,0]]&amp;sentat=1463330789
+ DEBUG    emoncmsorg acknowledged receipt with 'ok' from https://emoncms.org
+ INFO     emoncmsorg sending: https://emoncms.org/myip/set.json?apikey=E-M-O-N-C-M-S-A-P-I-K-E-Y
+
+
 </pre>
 </div>
 
-<h3 id="a-classtitle-link-nameemoncms-mqtt-input-service-hrefemoncms-mqtt-input-servicea-emoncms-mqtt-input-service"><a class="title-link" name="emoncms-mqtt-input-service" href="#emoncms-mqtt-input-service"></a> Emoncms MQTT Input Service</h3>
-
-<h3 id="a-classtitle-link-nameincorrect-system-time-hrefincorrect-system-timea-incorrect-system-time"><a class="title-link" name="incorrect-system-time" href="#incorrect-system-time"></a> Incorrect system time</h3>
-
-<p><strong>Check time on emonPi LCD display</strong></p>
-
-<p>It’s important that the emonPi has the correct time. If required timezone should be set in Emoncms Account page and on the Raspberry Pi (see below). The emonPi requires an active Internet connection at bootup to obtain current time from NTP. After correct time has been obtained the soft-ntp function <em>should</em> be able to keep valid time even if Internet connection is lost. See <a href="https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/read-only.md#ntp-time-fix">NTP Time Fix</a> for more info. If using an emonPi for a long period with no web connection it’s recomended to <a href="https://wiki.openenergymonitor.org/index.php/EmonPi#Adding_a_Real_Time_Clock_.28RTC.29">add a hardware Real-Time-Clock</a>.</p>
-
-<p>Press LCD push-button until <code class="highlighter-rouge">uptime</code> page is displayed. If time is not correct:</p>
+<h3 id="a-classtitle-link-name2-emoncms-mqtt-input-service-href2-emoncms-mqtt-input-servicea-2-emoncms-mqtt-input-service"><a class="title-link" name="2-emoncms-mqtt-input-service" href="#2-emoncms-mqtt-input-service"></a> 2. Emoncms MQTT Input Service</h3>
 
 <ul>
-  <li>Check emonPi has a connection to the internet</li>
-  <li>Try a reboot</li>
-  <li>If time is still incorrect:</li>
-  <li><a href="/technical/credentials/#ssh">Connect Via SSH</a></li>
-  <li>Run <code class="highlighter-rouge">$ sudo rapi-config</code> select <code class="highlighter-rouge">Internationalisation Options</code> and set local timezone</li>
-  <li>Check time is correct by running <code class="highlighter-rouge">$ date</code></li>
-  <li>If time is STILL not correct try:</li>
-  <li>Check emonpi has an active Internet connection <code class="highlighter-rouge">$ wget google.com</code> should connect succesfully</li>
-  <li><code class="highlighter-rouge">$ sudo service ntp restart</code></li>
-  <li>Check time with <code class="highlighter-rouge">$ date</code></li>
-  <li>If time is sill not correct please post on our <a href="http://community.openenergymonitor.org">Community Forums</a></li>
+  <li>Is Emoncms MQTT Input Service running?
+    <ul>
+      <li><code class="highlighter-rouge">$ sudo service mqtt_input status</code></li>
+      <li><code class="highlighter-rouge">$ sudo service mqtt_input restart</code></li>
+    </ul>
+  </li>
+  <li>Check Emoncms logfile
+    <ul>
+      <li>Local Emoncms &gt; Setup &gt; Administration &gt; Emoncms log</li>
+      <li><code class="highlighter-rouge">$ tail /var/log/emoncms.log</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="a-classtitle-link-name3-incorrect-system-time-href3-incorrect-system-timea-3-incorrect-system-time"><a class="title-link" name="3-incorrect-system-time" href="#3-incorrect-system-time"></a> 3. Incorrect system time</h3>
+
+<p>It’s important that the emonPi has the correct time. If required timezone should be set in Emoncms Account page and on the Raspberry Pi (see below). The emonPi requires an active Internet connection at bootup to obtain current time from NTP. After correct time has been obtained the soft-ntp function <em>should</em> be able to keep valid time even if Internet connection is lost. See <a href="https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/read-only.md#ntp-time-fix">NTP Time Fix</a> for more info. If using an emonPi for a long period with no web connection it’s recomended to <a href="https://wiki.openenergymonitor.org/index.php/EmonPi#Adding_a_Real_Time_Clock_.28RTC.29">add a hardware Real-Time-Clock (RTC)</a>.</p>
+
+<ul>
+  <li>Check time on emonPi LCD disply, press LCD push-button until <code class="highlighter-rouge">uptime</code> page is displayed
+    <ul>
+      <li><code class="highlighter-rouge">$ date</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>To set timezone:</p>
+
+<ul>
+  <li>
+    <p>In Emoncms: <code class="highlighter-rouge">Local Emoncms &gt; Setup &gt; My Account &gt; Timezone</code></p>
+  </li>
+  <li>
+    <p>On Raspberry Pi (Linux system time):</p>
+    <ul>
+      <li>Check emonPi has a connection to the internet</li>
+      <li>Try a reboot</li>
+      <li>If time is still incorrect, then force manual NTP update:</li>
+      <li><a href="/technical/credentials/#ssh">Connect Via SSH</a></li>
+      <li>Run <code class="highlighter-rouge">$ sudo rapi-config</code> select <code class="highlighter-rouge">Internationalisation Options</code> and set local timezone</li>
+      <li>Check time is correct by running <code class="highlighter-rouge">$ date</code></li>
+      <li>If time is STILL not correct try:</li>
+      <li>Check emonpi has an active Internet connection <code class="highlighter-rouge">$ wget google.com</code> should connect succesfully</li>
+      <li><code class="highlighter-rouge">$ sudo service ntp restart</code></li>
+      <li>Check time with `$ date</li>
+    </ul>
+  </li>
 </ul>
 
 <p><br /></p>
