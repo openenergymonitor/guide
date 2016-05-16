@@ -110,6 +110,9 @@ Open *another shell window* to publish to the test topic :
 	
 If all is working we should see `helloWord` :-) 
 
+
+To avoid connecting via SSH alternately you could use [MQTTlens Chrome Extension](https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en) or any other MQTT client connected to the emonPi IP address on port 1883 with user name: `emonpi` and password: `emonpimqtt2016`.
+
 ***
 
 # {% linkable_title Related Blog Posts %}
