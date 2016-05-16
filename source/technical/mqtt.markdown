@@ -86,6 +86,32 @@ Latest log file entries can be viewed with: `$ tail /var/log/emonpilcd/emonpilcd
 
 ***
 
+## {% linkable_title Testing MQTT %}
+
+To view all MQTT messages subscribe to  `emon/#` base topic :
+
+  `$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t ' emon/#'`
+  
+To view all MQTT messages for a particular node subscribe to sub-topic:
+
+`$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t ' emon/emonpi/#'`
+
+*Note: `#` denotes a wild-card*
+  
+**Test publishing and subscribing on a test topic:**
+
+Subscribe to test topic:
+
+	`$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t 'test'`
+
+Open *another shell window* to publish to the test topic :
+ 
+	`$mosquitto_pub -u 'emonpi' -P 'emonpimqtt2016' -t 'test' -m 'helloWorld'`
+	
+If all is working we should see `helloWord` :-) 
+
+***
+
 # {% linkable_title Related Blog Posts %}
 
 - [EmonPi, Node-RED and MQTT](https://blog.openenergymonitor.org/2015/10/emonpi-nodered-and-mqtt/)
