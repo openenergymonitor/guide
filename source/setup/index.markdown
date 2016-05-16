@@ -220,7 +220,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 <a class="btn pull-right" href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor">View in Store &rarr; </a>
 
 <br>
- 
+
 </div> <!-- END SOLAR PV -->
 <div class='install-instructions temperature' markdown='1'>
 
@@ -290,7 +290,7 @@ The emonTH is powered by two AA batteries and is available with a choice of eith
 
 |                                    | emonPi  | emonBase  | emonTx  | emonTH |
 |---|---|---|---|---|
-| Main purpose                      | All-in-one energy monitor & gateway| Web-connected gateway | Energy monitor add-on | Temperature & Humidity room node |
+| Main purpose                      | All-in-one monitor & gateway| Web-connected gateway | Energy monitor add-on | Sensor Node |
 | No. CT sensor inputs               |  2  |    0      |    4    |    0   |
 | No. of voltage sensor inputs       |  1  |    0      |    1    |    0   |
 | No. of pulse counting inputs       |  1 - via RJ45 |    0      |    1 - via RJ45   |    1 -  via terminal block*  |
