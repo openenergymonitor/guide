@@ -90,8 +90,8 @@ header .grid {
   padding: 40px 12px 24px;
 }
 
-.toggle{ 
-  z-index: 20; 
+.toggle{
+  z-index: 20;
 }
 
 @media only screen and (max-width: $menu-collapse){
@@ -142,7 +142,7 @@ header .grid {
   }
   
   #toggle:checked + .toggle::after{
-    content: attr(data-close);
+    content: "\f00d";
   }
 
   /* submenus */
