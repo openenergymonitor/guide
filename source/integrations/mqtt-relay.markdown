@@ -33,17 +33,16 @@ footer: true
 
 ## Contents
 
-2.  [Physical Connections ](##physical connections)
-3.  [Network Setup ](##network_setup)
-4.  [Turn on Wifi AP / Restore default settings](##)
-5.  [Web UI Control ](##Reset)
-6.  [Thermostat Scheduler ](##Thermostat)
-7.  [HTTP API](##HTTP)
-8.  [MQTT API](##MQTT)
-9.  [Other Settings](##other_settings)
-10.  [Firmware Update](##firmware)
-11.  [Programming](##Programming)
-12.  [Schematic](##schematic)
+2.  [Physical Connections ](#physical connections)
+3.  [Network Setup ](#network_setup)
+5.  [Web UI Control ](#Reset)
+6.  [Thermostat Scheduler ](#Thermostat)
+7.  [HTTP API](#HTTP)
+8.  [MQTT API](#MQTT)
+9.  [Other Settings](#other_settings)
+10.  [Firmware Update](#firmware)
+11.  [Programming](#Programming)
+12.  [Schematic](#schematic)
 
 ## Hardware connections
 
