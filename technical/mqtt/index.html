@@ -209,6 +209,36 @@ Latest log file entries can be viewed with: <code class="highlighter-rouge">$ ta
 
 <hr />
 
+<h2 id="a-classtitle-link-nametesting-mqtt-hreftesting-mqtta-testing-mqtt"><a class="title-link" name="testing-mqtt" href="#testing-mqtt"></a> Testing MQTT</h2>
+
+<p>To view all MQTT messages subscribe to  <code class="highlighter-rouge">emon/#</code> base topic :</p>
+
+<p><code class="highlighter-rouge">$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t ' emon/#'</code></p>
+
+<p>To view all MQTT messages for a particular node subscribe to sub-topic:</p>
+
+<p><code class="highlighter-rouge">$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t ' emon/emonpi/#'</code></p>
+
+<p><em>Note: <code class="highlighter-rouge">#</code> denotes a wild-card</em></p>
+
+<p><strong>Test publishing and subscribing on a test topic:</strong></p>
+
+<p>Subscribe to test topic:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>`$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t 'test'`
+</code></pre>
+</div>
+
+<p>Open <em>another shell window</em> to publish to the test topic :</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>`$mosquitto_pub -u 'emonpi' -P 'emonpimqtt2016' -t 'test' -m 'helloWorld'`
+</code></pre>
+</div>
+
+<p>If all is working we should see <code class="highlighter-rouge">helloWord</code> :-)</p>
+
+<hr />
+
 <h1 id="a-classtitle-link-namerelated-blog-posts-hrefrelated-blog-postsa-related-blog-posts"><a class="title-link" name="related-blog-posts" href="#related-blog-posts"></a> Related Blog Posts</h1>
 
 <ul>
