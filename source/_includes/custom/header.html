@@ -1,11 +1,134 @@
+
+<style>
+
+.dropbtn {
+	position: relative;
+    background-color: #ffffff;
+    color: white;
+    padding: 16px;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:active {
+	//box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown {
+    position: fixed;
+    left: 0;
+	top: 0;
+	z-index: 22;		
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    text-align:center;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+	font-weight: bold;
+}
+
+.dropdown a:hover {
+	background-color: #0699fa;
+}
+
+.show {
+	display:block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+  .dropdown span.go {
+  cursor: pointer;
+  display: block;
+  position: relative;
+  transition: 0.5s;
+  }
+
+  .dropdown span.go:after {
+  content: '+';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+  }
+
+  .dropdown:hover span.go {
+  padding-right: 25px;
+  }
+
+  .dropdown:hover span.go:after {
+  opacity: 1;
+  right: 0;
+  }
+  
+
+
+</style>
+
 <div class="grid__item three-tenths lap-two-sixths palm-one-whole ha-title">
-  <a href="{{ root_url }}/" class="site-title">
+  
+  <div class="dropdown">
     <!--<img width='40' src='{{ root_url }}/images/favicon-192x192.png'> -->
     <!--<span>{{ site.title }}</span>-->
-    <span style="color:#777;font-weight:bold;font-family:Arial;font-size:20"'>
-Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-size:20"'>EnergyMonitor</span>
-  </a>
+   
+
+<button onclick="buttonFunction();toggFunction(this)" class="dropbtn"><span class="go" style="color:#777;font-weight:bold;font-family:Arial;font-size:20"'>
+Open<span style="color:#0699fa;font-weight:bold;font-family:Arial;font-size:20"'>EnergyMonitor</span></span></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="/index">Home</a>
+    <a href="https://openenergymonitor.org/">Main Site</a>
+    <a href="https://shop.openenergymonitor.org/">Online Store</a>
+    <a href="https://community.openenergymonitor.org/">Forums</a>
+    <a href="https://openenergymonitor.org/emon/buildingblocks">Resources</a>
+    <a href="https://blog.openenergymonitor.org/">Blog</a>
+  </div>
 </div>
+</div>
+
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function buttonFunction() {
+	document.getElementById("myDropdown").classList.toggle("show");
+
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
+
+
 
 
 <div class="grid__item seven-tenths lap-four-sixths palm-one-whole">
@@ -13,3 +136,5 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
     {% include site/navigation.html %}
   </nav>
 </div>
+
+
