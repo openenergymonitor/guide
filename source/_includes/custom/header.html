@@ -2,13 +2,15 @@
 <style>
 
 .dropbtn {
-	position: relative;
+	  position: relative;
     background-color: #ffffff;
-    color: white;
     padding: 16px;
-    font-size: 30px;
+    color: #0699fa;
+    font-size: 28px;
     border: none;
     cursor: pointer;
+    outline: 0;
+    left: 20px;
 }
 
 .dropbtn:active {
@@ -16,96 +18,64 @@
 }
 
 .dropdown {
-    position: fixed;
-    left: 0;
-	top: 0;
-	z-index: 22;		
+    position: relative;
+    z-index: 22;
 }
 
 .dropdown-content {
     display: none;
-    position: absolute;
+    position: fixed;
+    bottom: 0;
+    left: 0;
     background-color: #000000;
-    min-width: 160px;
+    width: 9em;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .dropdown-content a {
-    text-align:center;
+    text-align: left;
     color: white;
     text-decoration: none;
+    padding: 15px;
     display: block;
-    padding: 10px;
-	font-weight: bold;
+    font-weight: bold;
 }
 
 .dropdown a:hover {
 	background-color: #0699fa;
+	color: #000000;
 }
 
 .show {
-	display:block;
+	display: block;
 }
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
-  .dropdown span.go {
-  cursor: pointer;
-  display: block;
-  position: relative;
-  transition: 0.5s;
-  }
-
-  .dropdown span.go:after {
-  content: '+';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-  }
-
-  .dropdown:hover span.go {
-  padding-right: 25px;
-  }
-
-  .dropdown:hover span.go:after {
-  opacity: 1;
-  right: 0;
-  }
-  
-
 
 </style>
 
 <div class="grid__item three-tenths lap-two-sixths palm-one-whole ha-title">
   
   <div class="dropdown">
-    <!--<img width='40' src='{{ root_url }}/images/favicon-192x192.png'> -->
-    <!--<span>{{ site.title }}</span>-->
    
-
-<button onclick="buttonFunction();toggFunction(this)" class="dropbtn"><span class="go" style="color:#777;font-weight:bold;font-family:Arial;font-size:20"'>
-Open<span style="color:#0699fa;font-weight:bold;font-family:Arial;font-size:20"'>EnergyMonitor</span></span></button>
+<button onclick="myFunction()" class="dropbtn"><span style="color:#777;font-weight:bold;font-family:Arial;font-size:20">
+     Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-size:20">EnergyMonitor</span>
+</button>
   <div id="myDropdown" class="dropdown-content">
-    <a href="/index">Home</a>
-    <a href="https://openenergymonitor.org/">Main Site</a>
-    <a href="https://shop.openenergymonitor.org/">Online Store</a>
-    <a href="https://community.openenergymonitor.org/">Forums</a>
-    <a href="https://openenergymonitor.org/emon/buildingblocks">Resources</a>
-    <a href="https://blog.openenergymonitor.org/">Blog</a>
+    <a onclick="myFunction()" style="cursor:pointer;text-align:center">&#10006;</a>
+    <a href="https://openenergymonitor.org/"><i class="icon-globe" style="color:#FFA500"></i>&nbsp;&nbsp;Main Site</a>
+    <a href="https://shop.openenergymonitor.org/"><i class="icon-shopping-cart"  style="color:#FFA500"></i>&nbsp;&nbsp;Online Store</a>
+    <a href="https://community.openenergymonitor.org/"><i class="icon-comment" style="color:#FFA500"></i>&nbsp;&nbsp;Forum</a>
+    <a href="https://openenergymonitor.org/emon/buildingblocks"><i class="icon-book"  style="color:#FFA500"></i>&nbsp;&nbsp;Resources</a>
+    <a href="https://blog.openenergymonitor.org/"><i class="icon-bullhorn"  style="color:#FFA500"></i>&nbsp;&nbsp;Blog</a>
   </div>
 </div>
 </div>
 
 <script>
-/* When the user clicks on the button, 
+
+/* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
-function buttonFunction() {
+function myFunction() {
 	document.getElementById("myDropdown").classList.toggle("show");
 
 }
