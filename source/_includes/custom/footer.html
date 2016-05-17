@@ -1,13 +1,23 @@
+<style>
+
+
+div.searchtool {
+  position: relative;
+  display: inline-block;
+  top: -6px;
+}
+
+input[type=text] {
+  border: 3px solid #0699fa;
+}
+
+fieldset {
+  border: 0;
+}
+
+</style>
 <div class="copyright">
-    
-  {% if site.simple_search %}
-<form action="{{ site.simple_search }}" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:guide.openenergymonitor.org" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-{% endif %}
+
   <a rel="me" href='https://twitter.com/openenergymon'><i class="icon-twitter"></i></a>
   <a rel="me" href='https://github.com/openenergymonitor/guide'><i class="icon-github"></i></a>
   <a rel="me" href='http://blog.openenergymonitor.org'><i class="icon-rss"></i></a>
@@ -16,5 +26,17 @@
     Website powered by <a href='http://jekyllrb.com/'>Jekyll</a> and <a href='https://github.com/coogie/oscailte'>Oscalite</a>.<br />
     Hosted by <a href='https://pages.github.com/'>GitHub</a> and served by <a href='https://cloudflare.com'>CloudFlare</a>.
   </div>
-</div>
 
+<div class="searchtool">
+
+{% if site.simple_search %}
+<form action="{{ site.simple_search }}" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:guide.openenergymonitor.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search..." />
+  </fieldset>
+</form>
+{% endif %}
+
+</div>
+</div>
