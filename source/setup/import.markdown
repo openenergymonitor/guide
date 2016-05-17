@@ -53,9 +53,12 @@ To export data from an older emonPi:
 Importing / restoring a backup will overwrite <strong>ALL</strong> data in the current Emoncms account.
 </p>
 
+*Note: If a new emonSD pre-built-SDcard image has been written to an SD card larger than 4GB the read-write `~/data` partition should be expanded to fill the SD card to create sufficient space to import a backup. **Do not use Raspbian raspi-config**, instead [connect via SSH](/technical/credentials/#ssh)) and run `$ sudo emonSDexpand` and follow prompts.*
+
 To import a backup:
 
-1. Choose `.tar.gz` backup file
+1. Check available disk space in the data partition (`/home/pi/data`), see `Local Emoncms > Setup > Administration`
+1. Select `.tar.gz` backup file
 2. Wait for upload to complete
 3. Click `Import Backup`
 4. Check restore log (see below)
@@ -65,7 +68,6 @@ To import a backup:
 Backup <b>tar.gz</b> filename cannot contain any spaces; e.g., if the same backup has been downloaded more than once: rename <b>'emoncms-backup-2016-04-23 (1).tar'</b> to <b>'emoncms-backup-2016-04-23.tar'</b> before uploading.
 </p>
 
-*Note: If a new emonSD pre-built-SDcard image has been written to an SD card larger than 4GB the read-write `~/data` partition should be expanded to fill the SD card to create sufficient space to import a backup. **Do not use Raspbian raspi-config**, instead [connect via SSH](technical/credentials/) and run `$ sudo emonSDexpand` and follow prompts.*
 
 *`emonSDexpand` will run `~/usefulscripts/sdpart/./sdpart_imagefile` script, for more info see [Useful Scripts Readme](https://github.com/emoncms/usefulscripts#sdpart_imagefile)*
 
@@ -156,7 +158,7 @@ $(document).ready(function(){
 
 - nodeRED custom flows: select all flows then `menu > export > clipboard` copy the JSON text
 - Connect via SSH:
-  - See [Technical > Service Credentials](/technical/credentials/)
+  - See [Technical > Service Credentials](technical/credentials/#ssh)
   - WiFi settings & password: backup copy: `~/data/wpa_supplicant.conf`
   - openHAB custom config: copy `~/data/open_openHab` folder
 

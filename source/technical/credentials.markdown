@@ -10,6 +10,14 @@ footer: true
 published: true
 ---
 
+<figure><a href="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png">
+<img src="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png" alt="emonPi Architecture Overview">
+<figcaption style="text-align:center;"><i>Fig.1 - emonPi Architecture Overview</i></figcaption>
+</a>
+</figure>
+
+***
+
 Default log-in credentials for latest [pre-built emonPi/emonBase ready-to-go SD card](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log).
 
 **Note: Before changing any password the root file-system will need to be put into Read Write mode with command `$rpi-rw`. When finished but file-sysem back to Read Only with `$rpi-ro`.**
