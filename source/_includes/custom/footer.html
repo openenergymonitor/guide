@@ -2,8 +2,9 @@
 
 
 div.searchtool {
+  position: relative;
   display: inline-block;
-  margin-right: 40px;
+  top: -6px;
 }
 
 input[type=text] {
@@ -13,7 +14,6 @@ input[type=text] {
 fieldset {
   border: 0;
 }
-
 
 </style>
 <div class="copyright">
@@ -28,7 +28,7 @@ fieldset {
   </div>
 
 <div class="searchtool">
-   
+
 {% if site.simple_search %}
 <form action="{{ site.simple_search }}" method="get">
   <fieldset role="search">
@@ -37,7 +37,6 @@ fieldset {
   </fieldset>
 </form>
 {% endif %}
-
 
 </div>
 </div>
