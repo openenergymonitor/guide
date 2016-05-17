@@ -55,6 +55,17 @@
     <meta name="msapplication-TileImage" content="/images/favicon-144.png">
     <meta name="msapplication-config" content="/images/browserconfig.xml">
     
+    <script>
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").toggle();
+    });
+});
+</script>
+
+    
    
      <!--<link href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,700' rel='stylesheet' type='text/css' -->
 
@@ -70,8 +81,8 @@
   <a href="/" class="site-title">
     <!--<img width='40' src='/images/favicon-192x192.png'> -->
     <!--<span>Guide | OpenEnergyMonitor</span>-->
-    <span style="color:#777;font-weight:bold;font-family:Arial;font-size:20"'>
-Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-size:20"'>EnergyMonitor</span>
+    <span style="color:#777;font-weight:bold;font-family:Arial;font-size:20">
+Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-size:20">EnergyMonitor</span>
   </a>
 </div>
 
@@ -351,15 +362,25 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
       <div class="grid-wrapper">
   <div class="grid">
     <div class="grid__item">
-      <div class="copyright">
-    
-  
-<form action="https://encrypted.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:guide.openenergymonitor.org" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
+      <style>
+
+
+div.searchtool {
+  position: relative;
+  display: inline-block;
+  top: -6px;
+}
+
+input[type=text] {
+  border: 3px solid #0699fa;
+}
+
+fieldset {
+  border: 0;
+}
+
+</style>
+<div class="copyright">
 
   <a rel="me" href='https://twitter.com/openenergymon'><i class="icon-twitter"></i></a>
   <a rel="me" href='https://github.com/openenergymonitor/guide'><i class="icon-github"></i></a>
@@ -369,6 +390,19 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
     Website powered by <a href='http://jekyllrb.com/'>Jekyll</a> and <a href='https://github.com/coogie/oscailte'>Oscalite</a>.<br />
     Hosted by <a href='https://pages.github.com/'>GitHub</a> and served by <a href='https://cloudflare.com'>CloudFlare</a>.
   </div>
+
+<div class="searchtool">
+
+
+<form action="https://encrypted.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:guide.openenergymonitor.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search..." />
+  </fieldset>
+</form>
+
+
+</div>
 </div>
     </div>
   </div>

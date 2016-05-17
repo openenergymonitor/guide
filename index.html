@@ -55,6 +55,17 @@
     <meta name="msapplication-TileImage" content="/images/favicon-144.png">
     <meta name="msapplication-config" content="/images/browserconfig.xml">
     
+    <script>
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").toggle();
+    });
+});
+</script>
+
+    
    
      <!--<link href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,700' rel='stylesheet' type='text/css' -->
 
@@ -70,8 +81,8 @@
   <a href="/" class="site-title">
     <!--<img width='40' src='/images/favicon-192x192.png'> -->
     <!--<span>Guide | OpenEnergyMonitor</span>-->
-    <span style="color:#777;font-weight:bold;font-family:Arial;font-size:20"'>
-Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-size:20"'>EnergyMonitor</span>
+    <span style="color:#777;font-weight:bold;font-family:Arial;font-size:20">
+Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-size:20">EnergyMonitor</span>
   </a>
 </div>
 
@@ -146,99 +157,104 @@ Set up, install and configure an OpenEnergyMonitor system
 
   
 
-  <!--
+  <style>
 
-<style>
+.dropbtn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: #ffffff;
+  background-color: #FFA500;
+  cursor: pointer;
+  height: 70px;
+  width: 70px;
+  border-top-right-radius: 10%;
+  text-align: center;
+  padding-top: 8px;
+  font-size: 40px;
+  color: #000000;
+  font-weight: bold;
 
-.sitenavdropdownbtn {
-    outline: none;
+}
+
+.dropdown {
     position: relative;
-    border-top-right-radius: 50%;
-    background-color: #FFA500;
-    color: black;
-    padding: 16px;
-    font-size: 24px;
-    border: none;
-    cursor: pointer;
-    z-index: 21;
+    z-index: 22;
 }
 
-.sitenavdropdown {
-    position: fixed;
-    display: inline-block;
-    bottom: 0;
-    left: 0;
-    z-index: 21;
-}
-
-.sitenavdropdown-content {
+.dropdown-content {
     display: none;
     position: fixed;
     bottom: 0;
     left: 0;
     background-color: #000000;
-    min-width: 160px;
+    width: 9em;
+    overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 20;
 }
 
-.sitenavdropdown-content a {
-    text-align:center;
+.dropdown-content a {
+    text-align: left;
     color: white;
     text-decoration: none;
+    padding: 15px;
     display: block;
-    padding: 10px;
-}
-
-.sitenavdropdown-content a:hover {
-    background-color: #0699fa;
     font-weight: bold;
 }
 
-.sitenavdropdown:hover .sitenavdropdown-content {
-    display: block;
+.dropdown a:hover {
+	background-color: #0699fa;
+	color: #000000;
+
 }
 
-  .sitenavdropdown span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-  }
+.show {
+	display: block;
+}
 
-  .sitenavdropdown span:after {
-  content: '»';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-  }
-
-  .sitenavdropdown:hover span {
-  padding-right: 25px;
-  }
-
-  .sitenavdropdown:hover span:after {
-  opacity: 1;
-  right: 0;
-  }
-  
 </style>
-
-<div class="sitenavdropdown">
-  <button class="sitenavdropdownbtn"><span><i class="icon-globe"></i></span>
-</button>
-  <div class="sitenavdropdown-content">
-    <a href="https://openenergymonitor.org/">Main Site</a>
-    <a href="https://shop.openenergymonitor.org/">Online Store</a>
-    <a href="https://community.openenergymonitor.org/">Forums</a>
-    <a href="https://openenergymonitor.org/emon/buildingblocks">Resources</a>
-    <a href="https://blog.openenergymonitor.org/">Blog</a><br><br><br>
+  
+<div class="dropdown">
+   
+<div onclick="myFunction()" class="dropbtn">+</i>
+</div>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="https://openenergymonitor.org/"><i class="icon-globe" style="color:#FFA500"></i>&nbsp;&nbsp;Main Site</a>
+    <a href="https://shop.openenergymonitor.org/"><i class="icon-shopping-cart"  style="color:#FFA500"></i>&nbsp;&nbsp;Store</a>
+    <a href="https://community.openenergymonitor.org/"><i class="icon-comment" style="color:#FFA500"></i>&nbsp;&nbsp;Forum</a>
+    <a href="https://openenergymonitor.org/emon/buildingblocks"><i class="icon-book"  style="color:#FFA500"></i>&nbsp;&nbsp;Resources</a>
+    <a href="https://blog.openenergymonitor.org/"><i class="icon-bullhorn"  style="color:#FFA500"></i>&nbsp;&nbsp;Blog</a>
+    <a onclick="myFunction()" style="cursor:pointer;text-align:center;background-color:#000000;">&#10006;</a>
   </div>
 </div>
 
--->
+<script>
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+	document.getElementById("myDropdown").classList.toggle("show");
+
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
+<!--End of Site Nav-->
 
 <div class="grid-wrapper">
   <div class="grid">
@@ -446,15 +462,25 @@ Set up, install and configure an OpenEnergyMonitor system
       <div class="grid-wrapper">
   <div class="grid">
     <div class="grid__item">
-      <div class="copyright">
-    
-  
-<form action="https://encrypted.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:guide.openenergymonitor.org" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
+      <style>
+
+
+div.searchtool {
+  position: relative;
+  display: inline-block;
+  top: -6px;
+}
+
+input[type=text] {
+  border: 3px solid #0699fa;
+}
+
+fieldset {
+  border: 0;
+}
+
+</style>
+<div class="copyright">
 
   <a rel="me" href='https://twitter.com/openenergymon'><i class="icon-twitter"></i></a>
   <a rel="me" href='https://github.com/openenergymonitor/guide'><i class="icon-github"></i></a>
@@ -464,6 +490,19 @@ Set up, install and configure an OpenEnergyMonitor system
     Website powered by <a href='http://jekyllrb.com/'>Jekyll</a> and <a href='https://github.com/coogie/oscailte'>Oscalite</a>.<br />
     Hosted by <a href='https://pages.github.com/'>GitHub</a> and served by <a href='https://cloudflare.com'>CloudFlare</a>.
   </div>
+
+<div class="searchtool">
+
+
+<form action="https://encrypted.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:guide.openenergymonitor.org" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search..." />
+  </fieldset>
+</form>
+
+
+</div>
 </div>
     </div>
   </div>
