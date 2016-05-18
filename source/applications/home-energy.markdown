@@ -59,13 +59,13 @@ The polarity of the power readings depends on the orientation of the clip-on CT 
 
 See [Setup > Log Local](/setup/local) section of the setup guide.
 
-For automatic MyElectric App setup use the suggested feed names in **bold**. The names are case sensitive.
+For automatic MyElectric App setup use the suggested feed names below. **The names are case sensitive.**
 
 > Assuming CT1 (power 1) = site-consumption*
 
  1. Click on spanner icon to configure `emonPi/power1`.
- 2. Select `log to feed` and create a feed called **use** with the feed engine set to PHPFina and feed `interval=10s`.
- 3. Select `power to kwh`, create a feed called **use_kwh** with feed engine `PHPFina` and feed `interval=10s`.
+ 2. Select `log to feed` and create a feed called `use` with the feed engine set to PHPFina and feed `interval=10s`.
+ 3. Select `power to kwh`, create a feed called `use_kwh` with feed engine `PHPFina` and feed `interval=10s`.
 
 ### {% linkable_title 4. Configure MyElectric App %}
 

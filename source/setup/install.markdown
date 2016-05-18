@@ -24,7 +24,7 @@ published: true
 Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off, prior to installing your sensors, and proceeding slowly with care. If you have any doubts, seek professional assistance.
 </p>
 
-## 1. **CT sensor**
+## {% linkable_title 1. **CT sensor** %}
 
 - Clip the CT sensor around either the Live or Neutral Cable
 - Connect jack plug into either CT1 or CT2 socket on the emonPi
@@ -40,7 +40,7 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 
 
-## 2. **AC-AC Adpater**
+## {% linkable_title 2. **AC-AC Adpater** %}
 - Plug the AC-AC adapter into a power outlet
 - This may require installation of a new outlet or extending an existing one
 - AC-AC adapter cable can be extended if required
@@ -50,14 +50,14 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 
 
-## 3. **DC 5V USB Adapter**
+## {% linkable_title 3. **DC 5V USB Adapter** %}
 - Plug the DC 5V USB adapter into a power outlet
 - Plug the mini-B USB connector into the emonPi
 - High quality minimum [1.2A power supply recommend](https://shop.openenergymonitor.com/power-supplies/)
 
 <br>
 
-### 4. *Optical Utility Meter LED Pulse Sensor (optional)*
+### {% linkable_title 4. *Optical Utility Meter LED Pulse Sensor (optional)* %}
 - See [Optical Pulse Sensor setup page](http://openenergymonitor.org/emon/opticalpulsesensor)
 - Connects to emonPi / emonTx via RJ45 connector
 - Self-adhesive velcro attachment to utility meter
@@ -65,14 +65,14 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 - Can be used in conjunction with temperature sensors using [RJ45 Breakout](http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/)
 
 
-### 5. *Temperature Sensors (optional)*
+### {% linkable_title 5. *Temperature Sensors (optional)* %}
 - Connect to emonPi / emonTx via RJ45 connector
 - Up to 6x sensors can be connected using [RJ45 Breakout](http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/)
 - Sensor wire can be extended using RJ45 cable and [RJ45 Extender](http://shop.openenergymonitor.com/rj45-extender/)
 
 ![home energy](/images/applications/home-energy/home-energy-emonpi-install.jpg)
 
-## Power Up
+## {% linkable_title Power Up %}
 
 
 <p class='note'>
@@ -90,13 +90,12 @@ Ensure all sensors are connected before powering up.
 
 {% img /images/setup/wifi_connected.JPG %}
 
-<br>
-
-### [Next step: Log Locally &raquo;](/setup/local/)
-
-<br>
 
 ### Video Guide
 <div class='videoWrapper'>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6SB4fRYQjno" frameborder="0" allowfullscreen></iframe>
 </div>
+
+***
+
+### [Next step: Log Locally &raquo;](/setup/local/)

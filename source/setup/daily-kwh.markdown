@@ -10,6 +10,17 @@ footer: true
 published: true
 ---
 
+
+## Using Emoncms
+        
+- {% active_link /setup/daily-kwh Daily kWh%}
+- {% active_link /setup/daily-averages Daily Averages %}
+- {% active_link /setup/export-csv Exporting CSV %}
+- {% active_link /setup/histograms Histograms %}
+   
+        
+***
+
 Emoncms supports the creation of daily, weekly, monthly kWh data and graph's from several different emoncms input types.
 
 - Power in Watts (i.e emontx, emonpi CT channels)

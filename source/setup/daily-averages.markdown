@@ -10,6 +10,16 @@ footer: true
 published: true
 ---
 
+## Using Emoncms
+        
+- {% active_link /setup/daily-kwh Daily kWh%}
+- {% active_link /setup/daily-averages Daily Averages %}
+- {% active_link /setup/export-csv Exporting CSV %}
+- {% active_link /setup/histograms Histograms %}
+   
+        
+***
+
 This guide details how to generate interval based averages i.e hourly, or timezone correct: daily, weekly and monthly averages from emoncms feeds. Designed for determining power, temperature and humidity averages.
 
 Averages are returned for the time period given by the returned timestamp up to the next timestamp. The timestamp is for the start of the average period.

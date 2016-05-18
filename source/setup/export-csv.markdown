@@ -10,6 +10,17 @@ footer: true
 published: true
 ---
 
+
+## Using Emoncms
+        
+- {% active_link /setup/daily-kwh Daily kWh%}
+- {% active_link /setup/daily-averages Daily Averages %}
+- {% active_link /setup/export-csv Exporting CSV %}
+- {% active_link /setup/histograms Histograms %}
+   
+        
+***
+
 Its possible to easily export data selected using the emoncms data viewer by clicking on the **Show CSV Output** button at the bottom of the page. Multiple feeds can be selected with datapoints aligned to the same timestamps.
 
 The data viewer CSV export tool is limited to 3000 datapoints. For larger exports the export tool that is part of the feed interface can be used, see below.

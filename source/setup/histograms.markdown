@@ -10,7 +10,18 @@ footer: true
 published: true
 ---
 
-The emoncms data viewer features a histogram tool for determining the time spent at different values or energy used at different power levels.
+
+## Using Emoncms
+        
+- {% active_link /setup/daily-kwh Daily kWh%}
+- {% active_link /setup/daily-averages Daily Averages %}
+- {% active_link /setup/export-csv Exporting CSV %}
+- {% active_link /setup/histograms Histograms %}
+   
+        
+***
+
+The Emoncms Data Viewer features a histogram tool for determining the time spent at different values or energy used at different power levels.
 
 The following is an example of using this feature for determining the amount of time a heat pump spends on standby and the power level at which most of its energy demand is consumed.
 
@@ -22,7 +33,7 @@ Here we select the heat pump power feed and data range to view. For higher resol
 
 ### Time at value
 
-The first histogram mode shows the amount of time spent at a given range. 
+The first histogram mode shows the amount of time spent at a given range.
 
 This could be useful for determining the amount of time a heat pump spends at standby as an example. Here we see that the heat pump spent ~1480000 seconds between 0-50 Watts out of a total time of 2498400 seconds selected in the data viewer. This tells us that the heat pump is on standby for 60% of the time in this period.
 

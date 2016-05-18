@@ -15,6 +15,8 @@ footer: true
 
 ***
 
+Data can also (optionally) be posted remotly to [Emoncms.org](https://emoncms.org). Posting data remotly has the advantage of being able to easily access your data from anywhere on the web without having to open access to your local emonPi:
+
 ## 1. Create Emoncms.org account
 
 ![remote log1](/images/setup/remote-log0.png)
