@@ -7,7 +7,7 @@
   width: 100%;
   height: 70px;
   background-color: #ffffff;
-  z-index: 500;
+  z-index: 1001;
 }
 
 .headisdropping {
@@ -17,20 +17,26 @@
   width: 100%;
   height: 70px;
   background-color: #ffffff;
-  z-index: 500;
+  z-index: 1002;
+}
+
+.holderoftitles {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .monitormytitle {
   
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 20px;
+  position: relative;
+  margin-left: 15px;
+  margin-top: 16px;
   font-size: 30px;
   font-weight: bold;
   font-family: Arial,"sans-serif";
   color: #0699fa;
-  z-index: 501;
+  z-index: 1003;
 }
 
 .monitormytitle span {
@@ -38,15 +44,124 @@
   color: #777;
 }
 
+.dropbtn {
+  
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  margin-top: 16px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Arial,"sans-serif";
+  color: #ffffff;
+  background-color: #ffa500;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  z-index: 1003;
+  text-align: center;
+  border: none;
+  text-shadow: 1px 2px #A06700;
+  outline: none;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    
+  background-color: #E59400;
+}
+
+.dropdown {
+    
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+    
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  background-color: #000000;
+  width: 9em;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    
+  text-align: left;
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+	  
+	background-color: #0699fa;
+	color: #000000;
+
+}
+
+.show {
+  
+  display: block;
+}
+
 </style>
 
 <div class="dontloseyourhead">
- <div class="headisdropping">
+  
+  <div class="headisdropping">
+    
+     <div class="holderoftitles">
+      <div class="monitormytitle">
+        <span>Open</span>EnergyMonitor
+      </div>
+     </div>
+  
+    <button onclick="myFunction()" class="dropbtn">&#9776;</button>
+  
+    <div id="myDropdown" class="dropdown-content">
+      <a href="https://openenergymonitor.org/">Main Site</a>
+      <a href="https://shop.openenergymonitor.org/">Store</a>
+      <a href="https://community.openenergymonitor.org/">Forum</a>
+      <a href="https://guide.openenergymonitor.org/technical/resources/">Resources</a>
+      <a href="https://blog.openenergymonitor.org/">Blog</a>
+    </div>
 
-  <div class="monitormytitle">
-   <span>Open</span>EnergyMonitor
+<script>
+
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+</script>
+
   </div>
- </div>
+  
 </div>
-
 
