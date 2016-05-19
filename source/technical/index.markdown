@@ -18,6 +18,12 @@ published: true
 
 The emonPi is based on a RaspberryPi + [emonPi Shield PCB](https://wiki.openenergymonitor.org/index.php/EmonPi). The emonPi features a ATmega328p 8-bit microcontroller which is Arduino compatible.
 
+## Inside the emonPi 
+
+<div class='videoWrapper'>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lc2LzCZnySo" frameborder="0" allowfullscreen></iframe>
+</div>
+
 <figure>
 <img src="https://github.com/openenergymonitor/Hardware/raw/master/emonPi/emonPi_V1_6/photo.png" alt="emonPi RaspberryPi Shield PCB">
 <figcaption style="text-align:center;"><i>emonPi RaspberryPi Shield PCB</i></figcaption>
