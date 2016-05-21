@@ -146,7 +146,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <hr />
 
-<h3 id="first-boot"><strong>First Boot</strong></h3>
+<h3 id="a-classtitle-link-namefirst-boot-hreffirst-boota-first-boot"><a class="title-link" name="first-boot" href="#first-boot"></a> First Boot</h3>
 
 <p class="note">
 <b>This guide assumes you are using an emonPi / emonBase pre-built SD card.</b>
@@ -167,7 +167,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 <b>Emoncms remote:</b> Emoncms.org cloud server.
 </p>
 
-<h3 id="connect-ethernet-and-usb-power">1. <strong>Connect Ethernet and USB power</strong></h3>
+<h3 id="a-classtitle-link-name1-connect-ethernet-and-usb-power-href1-connect-ethernet-and-usb-powera-1-connect-ethernet-and-usb-power"><a class="title-link" name="1-connect-ethernet-and-usb-power" href="#1-connect-ethernet-and-usb-power"></a> 1. Connect Ethernet and USB power</h3>
 
 <p><img src="/images/setup/emonpi_ethernet_first_boot.png" alt="emonPi First Boot Etherent" /></p>
 
@@ -182,14 +182,14 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   <li><img src="/images/setup/Etherent_Connected.jpg" alt="Ethernet Connected" /></li>
 </ul>
 
-<h3 id="enter-the-emonpis-ip-address-into-your-web-browsers-address-bar">2. <strong>Enter the emonPi’s IP address into your web browser’s address bar</strong></h3>
+<h3 id="a-classtitle-link-name2-enter-the-emonpis-ip-address-into-your-web-browsers-address-bar-href2-enter-the-emonpis-ip-address-into-your-web-browsers-address-bara-2-enter-the-emonpis-ip-address-into-your-web-browsers-address-bar"><a class="title-link" name="2-enter-the-emonpis-ip-address-into-your-web-browsers-address-bar" href="#2-enter-the-emonpis-ip-address-into-your-web-browsers-address-bar"></a> 2. Enter the emonPi’s IP address into your web browser’s address bar</h3>
 
 <ul>
   <li>Browsing the hostname will work on some networks: <a href="http://emonpi">http://emonpi</a></li>
   <li><em>If using an emonBase and hostname does not work, lookup it’s IP address from your router or use Fing Network Discovery tool on <a href="https://play.google.com/store/apps/details?id=com.overlook.android.fing&amp;hl=en_GB">Android</a> and <a href="https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8">iOS</a></em>.</li>
 </ul>
 
-<h3 id="create-local-emoncms-user-account">3. <strong>Create local Emoncms user account</strong></h3>
+<h3 id="a-classtitle-link-name3-create-local-emoncms-user-account-href3-create-local-emoncms-user-accounta-3-create-local-emoncms-user-account"><a class="title-link" name="3-create-local-emoncms-user-account" href="#3-create-local-emoncms-user-account"></a> 3. Create local Emoncms user account</h3>
 
 <p><img src="/images/setup/Emoncms_reg.png" width="250" /></p>
 
@@ -197,9 +197,11 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   <li>By default only a single (admin) account can be created on local emonPi Emoncms. To enable multiple accounts edit Emoncms settings in <code class="highlighter-rouge">/var/www/emoncms/settings.php</code></li>
 </ul>
 
-<h3 id="connect-to-wifi-optional">4. Connect to WiFi (optional)</h3>
+<h3 id="a-classtitle-link-name4-connect-to-wifi-optional-href4-connect-to-wifi-optionala-4-connect-to-wifi-optional"><a class="title-link" name="4-connect-to-wifi-optional" href="#4-connect-to-wifi-optional"></a> 4. Connect to WiFi (optional)</h3>
 
 <p>WiFi is optional and requires either a RaspberryPi 3 (integrated WiFi) or a USB WiFi dongle (<a href="http://shop.openenergymonitor.com/edimax-usb-wifi-adapter-ew-7811un/">Edimax EW7811UN</a>).</p>
+
+<p><em>Note: All emonPi’s shipped June 2016 onwards will have a Raspberry Pi 3 as standard, emonPi’s with a Pi3 can be identified by a plastic end-plate(s). <a href="https://blog.openenergymonitor.org/2016/05/emonpi-raspberrypi3/">See blog post</a>.</em></p>
 
 <p><img src="/images/setup/wifi9_0.png" alt="Connect to Wifi" /></p>
 
@@ -220,7 +222,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <p>After a few seconds information should refresh automatically to report <code class="highlighter-rouge">Status: Connected</code> and after a few more seconds the IP address should appear.</p>
 
-<h3 id="assign-static-ip-optional--advanced">Assign static IP (Optional &amp; Advanced)</h3>
+<h3 id="a-classtitle-link-nameassign-static-ip-optional--advanced-hrefassign-static-ip-optional--advanceda-assign-static-ip-optional--advanced"><a class="title-link" name="assign-static-ip-optional--advanced" href="#assign-static-ip-optional--advanced"></a> Assign static IP (Optional &amp; Advanced)</h3>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
 
@@ -272,11 +274,19 @@ $(document).ready(function(){
 
 <p><br /></p>
 
-<h3 id="update">5. Update</h3>
+<h3 id="a-classtitle-link-name5-connect-via-3g-gsm-optional-href5-connect-via-3g-gsm-optionala-5-connect-via-3g-gsm-optional"><a class="title-link" name="5-connect-via-3g-gsm-optional" href="#5-connect-via-3g-gsm-optional"></a> 5. Connect via 3G GSM (optional)</h3>
+
+<p>Huawei HiLink 3G USB GSM/3G dongle modems are supported. Connection should be automatic and LCD will display connection status. (<em>Tested with Huawei E3231 and E3131</em>).</p>
+
+<p><img src="/images/setup/3g.jpg" width="200" /></p>
+
+<p><a href="https://github.com/openenergymonitor/huawei-hilink-status">GSM Documentation</a> | <a href="https://github.com/openenergymonitor/emonpi/tree/master/wifiAP">WiFi Access -point setup (dev)</a></p>
+
+<h3 id="a-classtitle-link-name6-update-href6-updatea-6-update"><a class="title-link" name="6-update" href="#6-update"></a> 6. Update</h3>
 
 <p><strong>UPDATE HIGHLY RECOMMENDED:</strong> Now your emonPi is connected to a network this would be a good time to pull in any new updates: <code class="highlighter-rouge">Setup &gt; Admin &gt; Update</code></p>
 
-<h3 id="shutdown">6. Shutdown</h3>
+<h3 id="a-classtitle-link-name6-shutdown-href6-shutdowna-6-shutdown"><a class="title-link" name="6-shutdown" href="#6-shutdown"></a> 6. Shutdown</h3>
 
 <p>Shut down the emonPi by holding down the shutdown button for 5 seconds, then wait 30 seconds for unit to fully shut down.</p>
 
