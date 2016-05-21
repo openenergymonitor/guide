@@ -15,7 +15,7 @@ published: true
 
 ***
 
-### **First Boot**
+### {% linkable_title First Boot %}
 
 <p class="note">
 <b>This guide assumes you are using an emonPi / emonBase pre-built SD card.</b>
@@ -35,7 +35,7 @@ This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/
 <b>Emoncms remote:</b> Emoncms.org cloud server.
 </p>
 
-### 1. **Connect Ethernet and USB power**
+### {% linkable_title 1. Connect Ethernet and USB power %}
 
 ![emonPi First Boot Etherent](/images/setup/emonpi_ethernet_first_boot.png)
 
@@ -46,21 +46,23 @@ This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/
  - ![Ethernet Connected](/images/setup/Etherent_Connected.jpg)
 
 
-### 2. **Enter the emonPi's IP address into your web browser's address bar**
+### {% linkable_title 2. Enter the emonPi's IP address into your web browser's address bar %}
 
 - Browsing the hostname will work on some networks: [http://emonpi](http://emonpi)
 - *If using an emonBase and hostname does not work, lookup it's IP address from your router or use Fing Network Discovery tool on [Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en_GB) and [iOS](https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8)*.
 
 
-### 3. **Create local Emoncms user account**
+### {% linkable_title  3. Create local Emoncms user account %}
 
  {% img /images/setup/Emoncms_reg.png 250 %}
 
   - By default only a single (admin) account can be created on local emonPi Emoncms. To enable multiple accounts edit Emoncms settings in `/var/www/emoncms/settings.php`
 
-### 4. Connect to WiFi (optional)
+### {% linkable_title  4. Connect to WiFi (optional) %}
 
 WiFi is optional and requires either a RaspberryPi 3 (integrated WiFi) or a USB WiFi dongle ([Edimax EW7811UN](http://shop.openenergymonitor.com/edimax-usb-wifi-adapter-ew-7811un/)).
+
+*Note: All emonPi's shipped June 2016 onwards will have a Raspberry Pi 3 as standard, emonPi's with a Pi3 can be identified by a plastic end-plate(s). [See blog post](https://blog.openenergymonitor.org/2016/05/emonpi-raspberrypi3/).*
 
 ![Connect to Wifi](/images/setup/wifi9_0.png)
 
@@ -75,7 +77,7 @@ WiFi is optional and requires either a RaspberryPi 3 (integrated WiFi) or a USB 
 
 After a few seconds information should refresh automatically to report `Status: Connected` and after a few more seconds the IP address should appear.
 
-### Assign static IP (Optional & Advanced)
+### {% linkable_title  Assign static IP (Optional & Advanced) %}
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
 <script src="/javascripts/showHide.js" type="text/javascript"></script>
@@ -126,11 +128,20 @@ $(document).ready(function(){
 <br>
 
 
-### 5. Update
+### {% linkable_title 5. Connect via 3G GSM (optional) %}
+
+Huawei HiLink 3G USB GSM/3G dongle modems are supported. Connection should be automatic and LCD will display connection status. (*Tested with Huawei E3231 and E3131*).
+
+{% img /images/setup/3g.jpg 200 %}
+
+
+[GSM Documentation](https://github.com/openenergymonitor/huawei-hilink-status) \| [WiFi Access -point setup (dev)](https://github.com/openenergymonitor/emonpi/tree/master/wifiAP)
+
+### {% linkable_title 6. Update %}
 
 **UPDATE HIGHLY RECOMMENDED:** Now your emonPi is connected to a network this would be a good time to pull in any new updates: `Setup > Admin > Update`
 
-### 6. Shutdown
+### {% linkable_title  6. Shutdown %}
 
 Shut down the emonPi by holding down the shutdown button for 5 seconds, then wait 30 seconds for unit to fully shut down.
 
