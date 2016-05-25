@@ -49,7 +49,7 @@ $(document).ready(function(){
 		changeText: 0, // if you dont want the button text to change, set this to 0
 		showText: 'View',// the button text to show when a div is closed
 		hideText: 'Close' // the button text to show when a div is open
-					 
+
 	});
 });
 </script>
@@ -57,7 +57,7 @@ $(document).ready(function(){
 <button type="button" class="show_hide" href="#" rel="#slidingDiv">View Example Log</button>
 <div id="slidingDiv" class="toggleDiv" style="display: none;">
     <p>Example emonhub log file at startup </pre></p>
-  
+
 <pre>
  INFO     MainThread EmonHub emonHub 'emon-pi' variant v1.1
  INFO     MainThread Opening hub...
@@ -177,3 +177,12 @@ Check avilable disk space in the data paritition (`/home/pi/data`) by looking at
 <br>
 
 ***
+
+## {% linkable_title Factory Reset %}
+
+**Caution: this will delete ALL Emoncms data**
+
+```shell
+$ sudo su
+$ ~/emonpi/./factoryreset
+```
