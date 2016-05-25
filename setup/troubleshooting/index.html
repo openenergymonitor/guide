@@ -189,7 +189,7 @@ $(document).ready(function(){
 		changeText: 0, // if you dont want the button text to change, set this to 0
 		showText: 'View',// the button text to show when a div is closed
 		hideText: 'Close' // the button text to show when a div is open
-					 
+
 	});
 });
 </script>
@@ -197,7 +197,7 @@ $(document).ready(function(){
 <p><button type="button" class="show_hide" href="#" rel="#slidingDiv">View Example Log</button></p>
 <div id="slidingDiv" class="toggleDiv" style="display: none;">
     <p>Example emonhub log file at startup </p>
-  
+
 <pre>
  INFO     MainThread EmonHub emonHub 'emon-pi' variant v1.1
  INFO     MainThread Opening hub...
@@ -336,6 +336,15 @@ INFO     emoncmsorg sending: https://emoncms.org/input/bulk.json?apikey=E-M-O-N-
 <p><br /></p>
 
 <hr />
+
+<h2 id="a-classtitle-link-namefactory-reset-hreffactory-reseta-factory-reset"><a class="title-link" name="factory-reset" href="#factory-reset"></a> Factory Reset</h2>
+
+<p><strong>Caution: this will delete ALL Emoncms data</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo su
+<span class="gp">$ </span>~/emonpi/./factoryreset
+</code></pre>
+</div>
 
 
 </article>
