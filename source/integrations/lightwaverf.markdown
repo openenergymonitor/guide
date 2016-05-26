@@ -18,7 +18,11 @@ While maybe not strictly open-source the LightWaveRF OOK protocol and been rever
 
 ## Hardware
 
-An OOK transmitter can easily be added to the emonPi.  We stock [OOK transmitter modules in the OpenEnergyMonitor store](http://shop.openenergymonitor.com/ook-on-off-keying-transmitter-433mhz/). See [emonPi Technical Hardware Wiki](http://wiki.openenergymonitor.org/index.php?title=EmonPi#OOK) for details how to retrofit OOK TX module to existing emonPi's.
+An OOK transmitter can easily be added to the emonPi.  We stock [OOK transmitter modules in the OpenEnergyMonitor store](http://shop.openenergymonitor.com/ook-on-off-keying-transmitter-433mhz/).
+
+See [emonPi Technical Hardware Wiki](http://wiki.openenergymonitor.org/index.php?title=EmonPi#OOK) for details how to retrofit OOK TX module to existing emonPi's.
+
+{% img /images/integrations/ook.jpg 200 %}
 
 ![emonPi LightWaveRF](/images/integrations/lwrf.png)
 
