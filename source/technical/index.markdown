@@ -18,6 +18,7 @@ published: true
 
 The emonPi is based on a RaspberryPi + [emonPi Shield PCB](https://wiki.openenergymonitor.org/index.php/EmonPi). The emonPi features a ATmega328p 8-bit microcontroller which is Arduino compatible.
 
+
 <figure>
 <img src="https://github.com/openenergymonitor/Hardware/raw/master/emonPi/emonPi_V1_6/photo.png" alt="emonPi RaspberryPi Shield PCB">
 <figcaption style="text-align:center;"><i>emonPi RaspberryPi Shield PCB</i></figcaption>
@@ -38,7 +39,13 @@ An [emonBase](http://shop.openenergymonitor.com/emonbase-web-connected-base-stat
 
 As the diagram (fig.1) shows the Atmega328 microprocessor communicates with the RaspberyPi via the internal UART `(/dev/ttyAMA0` serial port. Data is transmitted over serial using the [JeeLib packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/). The ATmega328 on the emonPi / RFM69Pi run a modifed version of [JeeLabs RFM12Demo Sketch](http://jeelabs.net/projects/jeelib/wiki/RF12demo).
 
-**See [emonPi Resources](/technical/resources#emonpi)**
+### Inside the emonPi 
+
+<div class='videoWrapper'>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lc2LzCZnySo" frameborder="0" allowfullscreen></iframe>
+</div>
+
+**More technical info See [emonPi Resources](/technical/resources#emonpi)**
 
 ### {% linkable_title RF %}
 
