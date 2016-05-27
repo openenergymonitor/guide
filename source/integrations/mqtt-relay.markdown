@@ -43,6 +43,7 @@ footer: true
 10.  [Firmware Update](#firmware)
 11.  [Programming](#Programming)
 12.  [Schematic](#schematic)
+13.  [Dimentions](#dimentions)
 
 ## Hardware connections
 
@@ -269,6 +270,12 @@ Note: flash address  0xFC000 contains board identification information. do not 
 ## <a id="schematic" name="schematic"></a>Schematic
 
 [![](https://openenergymonitor.org/emon/sites/default/files/Selection_019_0.png)](https://openenergymonitor.org/emon/sites/default/files/Selection_019_0.png)
+
+
+## <a id="dimentions" name="dimentions"></a>Physical Dimentions
+
+PCB: 87mm x 50mm
+
 
 #### Credits
 
