@@ -27,9 +27,12 @@ Additional energy monitoring nodes can be added if more AC circuits require moni
 - RF Range is approximately similar to home WiFi and can be affected by obstacles e.g. thick stone walls
 - Up to 2x emonTx can be connected to a single emonPi *
 
+
 \* *More than 2x emonTx units can be connected to a single emonPi / emonBase with manual change of RF nodeID. This can be done in the factory, please leave note with your online store order*
 
 ![emontx](/images/setup/emontx.jpg)
+
+<a class="btn pull-right" href="http://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/">View in Shop &rarr; </a>
 
 ### Hardware Setup
 

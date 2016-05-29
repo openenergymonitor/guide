@@ -18,7 +18,7 @@ published: true
 
 ***
 
-Default log-in credentials for latest [pre-built emonPi/emonBase ready-to-go SD card](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log).
+Default log-in credentials for latest [pre-built emonPi/emonBase ready-to-go SD card](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log).
 
 **Note: Before changing any password the root file-system will need to be put into Read Write mode with command `$rpi-rw`. When finished but file-sysem back to Read Only with `$rpi-ro`.**
 

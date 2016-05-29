@@ -23,7 +23,7 @@ published: true
 
 This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/pre-loaded-emonsd-microsd-card-for-raspberry-pi/) or downloaded:
 
-- [Pre-build SD card download & Change Log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log)
+- [Pre-build SD card download & Change Log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log)
 - [Instructions to flash image to SD card (RaspberryPi)](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
 
 *The emonPi runs Emoncms data logging web-app locally from emonPi's internal web sever. Using Emoncms data can be logged locally to the emonPi's SD card and (optionally) posted remotely to the [Emoncms.org](https://emoncms.org) cloud server.*

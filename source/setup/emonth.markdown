@@ -28,10 +28,13 @@ Multiple temperature sensors can be connected directly to an emonPi, see Tempera
 - Internal temperature & humidity + optional external probe
 - Optional pulse sensor input
 
+
+
 \* *More than 4x emonTH units can be connected to a single emonPi / emonBase with manual change of RF nodeID. This can be done in the factory, please leave note with your online store order.*
 
 {% img /images/setup/emonth-plant.png 400 %}
 
+<a class="btn pull-right" href="http://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/">View in Shop &rarr; </a>
 
 ### Hardware Setup
 

@@ -26,9 +26,9 @@ Tweet us a message:
 #### [<i class="icon-twitter"></i> Twitter @openenergymon](http://twitter.com/openenergymon)
 
 
-Contact store support if your query relates directly to hardware items purchased from us (e.g. report a fault):
+Contact OpenEnergyMonitor shop support if your query relates directly to hardware items purchased from us (e.g. report a fault):
 
-#### [<i class="icon-shopping-cart"></i> Online Store Support](https://shop.openenergymonitor.com/support/)
+#### [<i class="icon-shopping-cart"></i> Online Shop Support](https://shop.openenergymonitor.com/support/)
 
 If contacting us for support please include as much infomation as possible e.g:
 
