@@ -2,25 +2,102 @@
 
 .glinksholder {
    
-   position: absolute;
-   top: 60px;
-   height: 60px;
-   width: 100%;
-   background-color: #0699fa;
-   z-index: 30000000;
-   box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+    position: absolute;
+    top: 60px;
+    height: 60px;
+    width: 100%;
+    background-color: #0699fa;
+    z-index: 40;
+    
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+    
+    overflow: hidden;
 }
 
 .guidetitle {
   
-   position: absolute;
-   line-height: 60px;
-   font-size: 22px;
-   color: #ffffff;
-   font-weight: bold;
-   left: 50%;
-   margin-left: -555px;
+    position: absolute;
+    line-height: 60px;
+    font-size: 22px;
+    color: #ffffff;
+    font-weight: bold;
+    left: 50%;
+    margin-left: -555px;
 }
+
+.guidelinkbar {
+  
+    float: right;
+    height: 60px;
+    
+    color: #ffffff;
+    z-index: 41;
+    cursor: pointer;
+}
+
+.guidelinkbaritems {
+    
+    display: none;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.guidelinkbaritems i {
+  
+    padding: 10px;
+}
+
+.guideoptions {
+  
+    display: inline-block;
+    line-height: 60px;
+    text-align: center;
+}
+
+.guideoptions ul {
+    
+    list-style-type: none;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.guideoptions li {
+
+    float: left;
+    
+}
+
+.guideoptions a {
+    
+    display: block;
+    line-height: 60px;
+    font-size: 16px;
+    text-align: center;
+    -webkit-transition: all 100ms ease-out;
+    -moz-transition: all 100ms ease-out;
+    -o-transition: all 100ms ease-out;
+    transition: all 100ms ease-out;
+    z-index: 62;
+    color: #ffffff;
+    min-width: 130px;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+
+}
+
+.guideoptions a:hover {
+    
+    background-color: #058de8;
+}
+
+.guideoptions a:hover span:after{
+    
+    font-family: "FontAwesome";
+    content:" \f0d7";
+}
+
 
 .titleholder {
   
@@ -230,7 +307,7 @@
                     <li><a href="https://community.openenergymonitor.org">Forum</a></li>
                     <li><a href="https://guide.openenergymonitor.org/technical/resources/">Resources</a></li>
                     <li><a href="https://blog.openenergymonitor.org">Blog</a></li>
-                    <li><a href="https://shop.openenergymonitor.com">Store
+                    <li><a href="https://shop.openenergymonitor.com">Shop
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
@@ -243,7 +320,7 @@
             <li><a href="https://community. openenergymonitor.org">Forum</a></li>
             <li><a href="https://guide.openenergymonitor.org/technical/resources/">Resources</a></li>
             <li><a href="https://blog.openenergymonitor.org">Blog</a></li>
-            <li><a href="https://shop.openenergymonitor.com">Store
+            <li><a href="https://shop.openenergymonitor.com">Shop
             <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
         </ul>
     </div>
@@ -253,9 +330,37 @@
         <div class="guidetitle">
         
             User Guide
-        
+            
         </div>
-  
+        
+        <div class="guidelinkbar">
+          
+            
+            
+              <div class="guideoptions">
+    <ul>
+    <li><a>Set Up<span></span></a></li>
+    <li><a>Emoncms<span></span></a></li>
+    <li><a>Applications<span></span></a></li>
+    <li><a>Integrations<span></span></a></li>
+    <li><a>Technical<span></span></a></li>
+    <li><a>Support<span></span></a></li>
+    </ul>
+    
+    </div>
+              
+            <div class="guidelinkbaritems">
+            
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            
+          
+            
+            
+            </div>
+          
+        </div>
+        
     </div>
     
 </div>
