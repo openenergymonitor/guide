@@ -26,7 +26,7 @@ Currently the Backup Module can only be used with Local Emoncms <strong>not</str
 If the Backup module is not visible in the Local Emoncms menu then the emonPi / emonBase is running an older version e.g Emoncms V8.x.
 
 <p class="note">
-To check what software stack (emonSD pre-built SD card) version an emonPi is running see instructions on emonPi <a href="https:github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log">emonSD repository and changelog</a>
+To check what software stack (emonSD pre-built SD card) version an emonPi is running see instructions on emonPi <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log">emonSD download repository and changelog</a>
 </p>
 
 To export data from an older emonPi:
@@ -174,7 +174,7 @@ $(document).ready(function(){
 
 ## Troubleshooting
 
-If you have any questions or if an error occures during the backup or import process please post in the [`Hardware > emonPi` category of the Community Forums](http://community.openenergymonitor.org/c/hardware/emonpi). Please provide as much infomation as possible e.g. backup / import logs and [emonSD version](https:github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&-Change-Log).
+If you have any questions or if an error occures during the backup or import process please post in the [`Hardware > emonPi` category of the Community Forums](http://community.openenergymonitor.org/c/hardware/emonpi). Please provide as much infomation as possible e.g. backup / import logs and [emonSD version](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log).
 
 Alternatively try and perform a manual import, see [Backup Module Readme](https://github.com/emoncms/backup).
 
