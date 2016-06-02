@@ -39,7 +39,7 @@ An [emonBase](http://shop.openenergymonitor.com/emonbase-web-connected-base-stat
 
 As the diagram (fig.1) shows the Atmega328 microprocessor communicates with the RaspberyPi via the internal UART `(/dev/ttyAMA0` serial port. Data is transmitted over serial using the [JeeLib packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/). The ATmega328 on the emonPi / RFM69Pi run a modifed version of [JeeLabs RFM12Demo Sketch](http://jeelabs.net/projects/jeelib/wiki/RF12demo).
 
-### Inside the emonPi 
+### Inside the emonPi
 
 <div class='videoWrapper'>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lc2LzCZnySo" frameborder="0" allowfullscreen></iframe>
@@ -81,7 +81,7 @@ By default the Raspberry Pi runs a modifed version of Debian [Raspbian Jessie Li
  - OpenHAB
  - LightWave RF MQTT OOK
 
-**See [emonSD Resources](/technical/resources#emonsd)**
+**See [emonSD Resources](/technical/resources#emonhub)**
 
 ### {% linkable_title emonHub %}
 

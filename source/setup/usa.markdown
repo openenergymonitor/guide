@@ -1,0 +1,45 @@
+---
+layout: page
+title: "Use In USA"
+description: "Using emonPi in USA"
+date: 2015-03-08 21:36
+sidebar: true
+comments: false
+sharing: true
+footer: true
+---
+
+The emonPi has been designed for single-phase single-conductor systems. However the emonPi can be used in the USA with the following considerations:
+
+## 1. Ensure clip-on CT current sensor will fit conductors
+
+Due to lower voltage (and resulting higher current) conductors (wires) in the USA are larger than in Europe. The [standard clip-on CT sensor](http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) has an opening of **13mm diamater**. Conductor size varies, check yours will fit the CT sensor.
+
+If the standard CT sensor does not fit your conductors there are two options:
+
+1. Use an [Optical Pulse Sensor](https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/) instead of CT sensor to interface directly with utlity meter. This will give an accurate reading of energy consumed (KWh) but will not provide a real-time power reading (W).
+
+2. Use an alternative larger CT sensor: It's possible to obtain larger CT sensors, however using an alternative sensor will usually require a change of calibration and possibly hardware modification (change burden resistor value). See [Building Blocks > EmonTx in North America](https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) for more info and general [Building Blocks CT sections](https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America). Please search / post on the [community forums](https://community.openenergymonitor.org) for further assistance.
+
+## 2. Use USA AC-AC Adapter
+
+A USA AC voltage sensor adapter `110VAC > 9VAC` should be used. Using an alterantive adapter to the 'offical' adapter sold via the shop will usually require re-calibration.
+
+<a class="btn pull-right" href="http://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-us-plug/">View in Shop &rarr; </a>
+<br>
+
+## 3. Set USA calibration in emonhub
+
+In the `[[RFM2Pi]]` interfacer section of `emonhub.conf` set:
+
+`calibration=110v`
+
+emonhub.conf can be edited directly in local Emoncms as described in [Setup > Logging Remotely](/setup/remote).
+
+See [[[RFM2Pi]] section of emonHub configuration guide](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md#a-rfm2pi) for advanced emonhub config info.
+
+## 4. Sum power values
+
+If monitoring a split-phase system the power values from each leg can be summed in Emoncms to calculate the total power. The emonPi by default reports `power1_plus_power2`, this input will need to be logged to a feed. See [Setup > Logging Locally](/setup/local).
+
+See [Building Blocks > EmonTx in North America](https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) for further technical info about the USA system.
