@@ -138,21 +138,21 @@ $(document).ready(function(){
 
 ### Included in backup
 
-- Emoncms credentials (username, password)
-- Feed data
-- Input Processing config
+- Emoncms account credentials
+- Historic Feed data
+- Input Processing config (only when migrating from Emoncms V9 > V9 setup)
 - Dashboards
 - MyElectric / MySolarPV app settings
 - EmonHub config: `emonhub.conf`*
-- Emoncms config: `settings.php`*
 
 \* *Included in backup but not restored due to potential version conflicts: saved as `old.xxxx.xxx` in `~/data` for manual restore if required.*
 
 ### Not included in backup
 
-- WiFi settings & passcode
+- WiFi passcode & custom network config
 - Custom NodeRED flows
 - Custom openHAB settings
+- Input processing setup if migrating from Emoncms V8, input processing will need to be re-creatred after import and new inputs should be logged to imported feeds
 
 ### How-to backup items not automatically included
 
