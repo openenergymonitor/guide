@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Creating Daily kWh - Guide | OpenEnergyMonitor</title>
+    <title>Use In USA - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="Creating Daily kWh">
+    <meta name="description" content="Using emonPi in USA">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/daily-kwh/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/usa/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Creating Daily kWh">
+    <meta property="og:title" content="Use In USA">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/daily-kwh/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/usa/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Creating Daily kWh">
+    <meta property="og:description" content="Using emonPi in USA">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Creating Daily kWh">
-    <meta name="twitter:description" content="Creating Daily kWh">
+    <meta name="twitter:title" content="Use In USA">
+    <meta name="twitter:description" content="Using emonPi in USA">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -134,84 +134,51 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   
   <header>
     <h1 class="title indent">
-      Creating Daily kWh
+      Use in USA
     </h1>
   </header>
   <hr class="divider">
   
 
-  <h2 id="using-emoncms">Using Emoncms</h2>
+  <p>The emonPi has been designed for single-phase single-conductor systems. However the emonPi can be used in the USA with the following considerations:</p>
 
-<ul>
-  <li><a href="/setup/daily-kwh">Daily kWh</a></li>
-  <li><a href="/setup/daily-averages">Daily Averages </a></li>
-  <li><a href="/setup/export-csv">Exporting CSV </a></li>
-  <li><a href="/setup/histograms">Histograms </a></li>
-</ul>
+<h2 id="ensure-clip-on-ct-current-sensor-will-fit-conductors">1. Ensure clip-on CT current sensor will fit conductors</h2>
 
-<hr />
+<p>Due to lower voltage (and resulting higher current) conductors (wires) in the USA are larger than in Europe. The <a href="http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/">standard clip-on CT sensor</a> has an opening of <strong>13mm diamater</strong>. Conductor size varies, check yours will fit the CT sensor.</p>
 
-<p>Emoncms supports the creation of daily, weekly, monthly kWh data and graph’s from several different emoncms input types.</p>
-
-<ul>
-  <li>Power in Watts (i.e emontx, emonpi CT channels)</li>
-  <li>Cumulative Wh (i.e pulse counter, 3rd party meter)</li>
-  <li>Cumulative kWh (i.e pulse counter, 3rd party meter)</li>
-</ul>
-
-<h3 id="creating-daily-kwh-data-from-power-inputs-emontx-emonpi">1) Creating daily kWh data from power inputs (emontx, emonpi)</h3>
-
-<p>The standard emonTx and emonPi firmware transmit real power values for each CT channel. Accumulating kWh data can be calculated from this power data using the emoncms “Power to kWh” input processor.</p>
-
-<p>Note: use the “CREATE NEW” option and add something like _kwh to the feed name in order to help distinguish it from your power feed.</p>
+<p>If the standard CT sensor does not fit your conductors there are two options:</p>
 
 <ol>
   <li>
-    <p>In the inputs interface select the power input for which you wish to generate kWh data. Click on the spanner icon to bring up the input processing configuration interface.</p>
+    <p>Use an <a href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">Optical Pulse Sensor</a> instead of CT sensor to interface directly with utlity meter. This will give an accurate reading of energy consumed (KWh) but will not provide a real-time power reading (W).</p>
   </li>
   <li>
-    <p>Select the <strong>power to kWh</strong> input processor and create a feed, select a feed interval that either matches your post rate i.e 10s on the emontx and emonpi or for reduced disk use; intervals of up to 3600s can be used.</p>
+    <p>Use an alternative larger CT sensor: It’s possible to obtain larger CT sensors, however using an alternative sensor will usually require a change of calibration and possibly hardware modification (change burden resistor value). See <a href="https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America">Building Blocks &gt; EmonTx in North America</a> for more info and general <a href="https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America">Building Blocks CT sections</a>. Please search / post on the <a href="https://community.openenergymonitor.org">community forums</a> for further assistance.</p>
   </li>
 </ol>
 
-<p><img src="https://emoncms.org/Modules/site/inputprocessing.png" /><br /><br /></p>
+<h2 id="use-usa-ac-ac-adapter">2. Use USA AC-AC Adapter</h2>
 
-<h3 id="creating-daily-kwh-data-from-cumulative-wh-or-kwh-inputs-pulse-counter-3rd-party-meters">Creating daily kWh data from Cumulative Wh or kWh inputs (pulse counter, 3rd party meters)</h3>
+<p>A USA AC voltage sensor adapter <code class="highlighter-rouge">110VAC &gt; 9VAC</code> should be used. Using an alterantive adapter to the ‘offical’ adapter sold via the shop will usually require re-calibration.</p>
 
-<p>Some energy meters provide kWh output via Modbus, RS485, MBus, IEC1107, etc. For those meters, the log to feed input processor could be used. However, if the data is irregular, missing data will be recorded as null values. If a null value happens to coincide with midnight, the bar graph produced will show spikes or gaps. At present the process to use is the Wh Accumulator input process. It will fill any missing data. The Wh accumulator has a 23 kW limit equivalent power limit for inputs that are cumulative Wh.</p>
+<p><a class="btn pull-right" href="http://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-us-plug/">View in Shop → </a>
+<br /></p>
 
-<ol>
-  <li>
-    <p>In the inputs interface select the input for which you wish to generate kWh data. Click on the spanner icon to bring up the input processing configuration interface.</p>
-  </li>
-  <li>
-    <p>Select the <strong>wh accumulator</strong> input processor (note: this process can also be used for accumulating kWh inputs) and create a feed, select a feed interval that either matches your post rate i.e 10s on the emontx and emonpi or for reduced disk use; intervals of up to 3600s can be used.</p>
-  </li>
-</ol>
+<h2 id="set-usa-calibration-in-emonhub">3. Set USA calibration in emonhub</h2>
 
-<h3 id="creating-a-kwh-per-day-bar-graph">2. Creating a kWh per day bar graph</h3>
+<p>In the <code class="highlighter-rouge">[[RFM2Pi]]</code> interfacer section of <code class="highlighter-rouge">emonhub.conf</code> set:</p>
 
-<p>Note: At least 2 days of data is required to generate a daily kWh graph from accumulating kWh data. At the moment, the bar graphs built using the vis module don’t show the current day’s kWh consumption. The myelectric app, which also uses the accumulating kWh feed type, does show the current day.</p>
+<p><code class="highlighter-rouge">calibration=110v</code></p>
 
-<p>Click on <strong>Extras &gt; Visualisation</strong>, and select the <strong>BarGraph.</strong></p>
+<p>emonhub.conf can be edited directly in local Emoncms as described in <a href="/setup/remote">Setup &gt; Logging Remotely</a>.</p>
 
-<p>Select the accumulating watt hour or kWh feed created in step 1.</p>
+<p>See <a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md#a-rfm2pi">[[RFM2Pi]] section of emonHub configuration guide</a> for advanced emonhub config info.</p>
 
-<p><strong>Delta:</strong> The important property here is ‘delta’. With delta set to 1, the bar graph will draw the total kWh for each day calculated from the kWh value at the end of the day, minus the kWh value at the start of the day.</p>
+<h2 id="sum-power-values">4. Sum power values</h2>
 
-<p><strong>Scale &amp; Units:</strong> If the feed is in watt hours, the scale can be used to convert it to kWh by multiplying by 0.001. Units can be set in the units field.</p>
+<p>If monitoring a split-phase system the power values from each leg can be summed in Emoncms to calculate the total power. The emonPi by default reports <code class="highlighter-rouge">power1_plus_power2</code>, this input will need to be logged to a feed. See <a href="/setup/local">Setup &gt; Logging Locally</a>.</p>
 
-<p><strong>Interval:</strong> The interval property can be set if you wish to have kwh at a set interval such as kwh per hour, for daily, weekly, monthly data use the <strong>mode</strong> property.</p>
-
-<p><strong>Mode:</strong> Use this property to obtain timezone correct kwh data. Set to either daily, weekly or monthly.</p>
-
-<p>Click view to view the graph.</p>
-
-<p><img src="https://emoncms.org/Modules/site/dailykwh.png" /></p>
-
-<p>The same options can be used in dashboards for the same output.</p>
-
-<p>All of the visualisations in emoncms that make use of daily data also support this approach including: SimpleZoom, Stacked, StackedSolar, Zoom and OrderBars.</p>
+<p>See <a href="https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America">Building Blocks &gt; EmonTx in North America</a> for further technical info about the USA system.</p>
 
 
 </article>
@@ -227,8 +194,8 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
   
     <section class="aside-module grid__item one-whole lap-one-half">
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/setup/daily-kwh.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/setup/daily-kwh.markdown'>Edit on GitHub Prose</a></div>
+  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/setup/usa.markdown'>Edit on GitHub</a></div>
+<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/setup/usa.markdown'>Edit on GitHub Prose</a></div>
 
 
   <div class='section'>
@@ -246,7 +213,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
           <li><a  href='/setup/emontx/'>Add Energy Nodes </a></li>
           <li><a  href='/setup/emonth/'>Add Temperature Nodes </a></li>
           <li><a  href='/setup/import/'>Import / Backup </a></li>
-          <li><a  href='/setup/usa/'>Use in USA </a></li>
+          <li><a class='active' href='/setup/usa/'>Use in USA </a></li>
           <li><a  href='/setup/troubleshooting/'>Troubleshooting </a></li>
         </ul>
         <li>
