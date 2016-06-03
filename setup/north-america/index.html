@@ -140,7 +140,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   <hr class="divider">
   
 
-  <p>The emonPi has been designed for single-phase systems. However, the emonPi can be used on a North American Split-Phase system with the following considerations:</p>
+  <p>The emonPi / emonTx has been designed for single-phase systems. However, the emonPi can be used on a North American Split-Phase system with the following considerations:</p>
 
 <h3 id="ensure-clip-on-ct-current-sensor-will-fit-conductors">1. Ensure clip-on CT current sensor will fit conductors</h3>
 
@@ -171,7 +171,9 @@ Installing clip-on CT sensors on USA electrical systems should only by undertake
 <p><a class="btn pull-right" href="http://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-us-plug/">View in Shop → </a>
 <br /><br /></p>
 
-<h3 id="set-emonhub-usa-calibration">3. Set EmonHub USA Calibration</h3>
+<h3 id="software-calibration">3. Software Calibration</h3>
+
+<h4 id="a-emonpi-set-emonhub-usa-calibration">a.) emonPi: Set EmonHub USA Calibration</h4>
 
 <p>In the <code class="highlighter-rouge">[[RFM2Pi]]</code> interfacer section of <code class="highlighter-rouge">emonhub.conf</code> set:</p>
 
@@ -181,9 +183,15 @@ Installing clip-on CT sensors on USA electrical systems should only by undertake
 
 <p>See <a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md#a-rfm2pi">[[RFM2Pi]] section of emonHub configuration guide</a> for advanced emonhub config info.</p>
 
+<h4 id="b-emontx-enable-usa-calibration-using-on-board-dip-switchhttpswikiopenenergymonitororgindexphpemontxv34dipswitchconfig">b.) emonTx: Enable USA calibration using <a href="https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4#DIP_Switch_Config">on-board DIP switch</a></h4>
+
 <h3 id="sum-power-values">4. Sum power values</h3>
 
-<p>If monitoring a split-phase system the power values from each leg can be summed in Emoncms to calculate the total power. The emonPi by default reports <code class="highlighter-rouge">power1_plus_power2</code>, this input will need to be logged to a feed. See <a href="/setup/local">Setup &gt; Logging Locally</a>.</p>
+<p>If monitoring a split-phase system the power values from each leg can be summed in Emoncms to calculate the total power.</p>
+
+<p>The emonPi by default reports <code class="highlighter-rouge">power1_plus_power2</code>, this input will need to be logged to a feed. See <a href="/setup/local">Setup &gt; Logging Locally</a>.</p>
+
+<p>If using emonTx then the power values from multiple CT inputs can be summed in Emoncms using <code class="highlighter-rouge">+ feed</code> Input Processor.</p>
 
 <p>See <a href="https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America">Building Blocks &gt; EmonTx in North America</a> for further technical info about the USA system.</p>
 
