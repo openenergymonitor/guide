@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Use In USA
+title: Use In North America
 description: Using emonPi in USA
 date: '2015-03-08 21:36'
 sidebar: true
@@ -28,7 +28,7 @@ If the standard CT sensor does not fit your conductors there are two options:
 2. Use an alternative larger CT sensor: It's possible to obtain larger CT sensors, however using an alternative sensor will usually require a change of calibration and possibly hardware modification (change burden resistor value). See [Building Blocks > EmonTx in North America](https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) for more info and general [Building Blocks CT sections](https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America). Please search / post on the [community forums](https://community.openenergymonitor.org) for further assistance.
 
 <p class='note warning'>
-Installing clip-on CT sensors on USA electrical systems should only by undertaken by a professional electrician. In a typical residential installation an isolator isn't present, therefore the load center feeders and busbars are always live inside an electrical cabinet.
+Installing clip-on CT sensors on USA electrical systems should only by undertaken by a professional electrician. In a typical residential installation Even if the main breaker is swiched off, the load center feeders and busbars are always live.
 </p>
 
 ### 2. Use USA AC-AC Adapter
@@ -54,11 +54,3 @@ See [[[RFM2Pi]] section of emonHub configuration guide](https://github.com/opene
 If monitoring a split-phase system the power values from each leg can be summed in Emoncms to calculate the total power. The emonPi by default reports `power1_plus_power2`, this input will need to be logged to a feed. See [Setup > Logging Locally](/setup/local).
 
 See [Building Blocks > EmonTx in North America](https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) for further technical info about the USA system.
-
-
-
-#### Teminology
-
-- Feeders = Incomers
-- Load Center = Consumer Unit
-- AWG = American Wire Gauge
