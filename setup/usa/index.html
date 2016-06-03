@@ -140,11 +140,14 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   <hr class="divider">
   
 
-  <p>The emonPi has been designed for single-phase single-conductor systems. However the emonPi can be used in the USA with the following considerations:</p>
+  <p>The emonPi has been designed for single-phase single-conductor systems. However, the emonPi can be used on a North American Split-Phase system with the following considerations:</p>
 
-<h2 id="ensure-clip-on-ct-current-sensor-will-fit-conductors">1. Ensure clip-on CT current sensor will fit conductors</h2>
+<h3 id="ensure-clip-on-ct-current-sensor-will-fit-conductors">1. Ensure clip-on CT current sensor will fit conductors</h3>
 
-<p>Due to lower voltage (and resulting higher current) conductors (wires) in the USA are larger than in Europe. The <a href="http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/">standard clip-on CT sensor</a> has an opening of <strong>13mm diamater</strong>. Conductor size varies, check yours will fit the CT sensor.</p>
+<p>Due to lower voltage (and resulting higher current) conductors (wires) in the USA are larger than in Europe. We recommend you measure the diameter of your feeders before purchasing a CT sensor. The opening in the <a href="http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/">standard clip-on CT sensor sold in the OpenEnergyMonitor shop</a> is <strong>13mm diamater</strong>, and hence can accommodate a maximum wire size of <strong>AWG 1/0</strong>.</p>
+
+<p><a class="btn pull-right" href="http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/">View in Shop → </a>
+<br /><br /></p>
 
 <p>If the standard CT sensor does not fit your conductors there are two options:</p>
 
@@ -157,14 +160,18 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   </li>
 </ol>
 
-<h2 id="use-usa-ac-ac-adapter">2. Use USA AC-AC Adapter</h2>
+<p class="note warning">
+Installing clip-on CT sensors on USA electrical systems should only by undertaken by a professional electrician. In a typical residential installation an isolator isn't present, therefore the load center feeders and busbars are always live inside an electrical cabinet.
+</p>
 
-<p>A USA AC voltage sensor adapter <code class="highlighter-rouge">110VAC &gt; 9VAC</code> should be used. Using an alternative adapter to the ‘official’ adapter sold via the shop will usually require re-calibration.</p>
+<h3 id="use-usa-ac-ac-adapter">2. Use USA AC-AC Adapter</h3>
+
+<p>Use the <a href="http://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-us-plug">USA AC-AC voltage sensor adapter sold via the OpenEnergyMonitor Shop</a>. The system has been calibrated to work with this adapter. Using any other adapter will usually requires re-calibration.</p>
 
 <p><a class="btn pull-right" href="http://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-us-plug/">View in Shop → </a>
-<br /></p>
+<br /><br /></p>
 
-<h2 id="set-usa-calibration-in-emonhub">3. Set USA calibration in emonhub</h2>
+<h3 id="set-emonhub-usa-calibration">3. Set EmonHub USA Calibration</h3>
 
 <p>In the <code class="highlighter-rouge">[[RFM2Pi]]</code> interfacer section of <code class="highlighter-rouge">emonhub.conf</code> set:</p>
 
@@ -174,11 +181,19 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <p>See <a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md#a-rfm2pi">[[RFM2Pi]] section of emonHub configuration guide</a> for advanced emonhub config info.</p>
 
-<h2 id="sum-power-values">4. Sum power values</h2>
+<h3 id="sum-power-values">4. Sum power values</h3>
 
 <p>If monitoring a split-phase system the power values from each leg can be summed in Emoncms to calculate the total power. The emonPi by default reports <code class="highlighter-rouge">power1_plus_power2</code>, this input will need to be logged to a feed. See <a href="/setup/local">Setup &gt; Logging Locally</a>.</p>
 
 <p>See <a href="https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America">Building Blocks &gt; EmonTx in North America</a> for further technical info about the USA system.</p>
+
+<h4 id="teminology">Teminology</h4>
+
+<ul>
+  <li>Feeders = Incomers</li>
+  <li>Load Center = Consumer Unit</li>
+  <li>AWG = American Wire Gauge</li>
+</ul>
 
 
 </article>
