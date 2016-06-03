@@ -10,7 +10,7 @@ footer: true
 published: true
 ---
 
-The emonPi has been designed for single-phase single-conductor systems. However, the emonPi can be used on a North American Split-Phase system with the following considerations:
+The emonPi has been designed for single-phase systems. However, the emonPi can be used on a North American Split-Phase system with the following considerations:
 
 
 ### 1. Ensure clip-on CT current sensor will fit conductors
@@ -34,7 +34,7 @@ Installing clip-on CT sensors on USA electrical systems should only by undertake
 ### 2. Use USA AC-AC Adapter
 
 
-Use the [USA AC-AC voltage sensor adapter sold via the OpenEnergyMonitor Shop](http://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-us-plug). The system has been calibrated to work with this adapter. Using any other adapter will usually requires re-calibration.
+Use the [USA AC-AC voltage sensor adapter sold via the OpenEnergyMonitor Shop](http://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-us-plug). The system has been calibrated to work with this adapter. Using any other adapter will usually require re-calibration.
 
 <a class="btn pull-right" href="http://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-us-plug/">View in Shop &rarr; </a>
 <br><br>
