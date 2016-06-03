@@ -10,7 +10,7 @@ footer: true
 published: true
 ---
 
-The emonPi has been designed for single-phase systems. However, the emonPi can be used on a North American Split-Phase system with the following considerations:
+The emonPi / emonTx has been designed for single-phase systems. However, the emonPi can be used on a North American Split-Phase system with the following considerations:
 
 
 ### 1. Ensure clip-on CT current sensor will fit conductors
@@ -39,7 +39,9 @@ Use the [USA AC-AC voltage sensor adapter sold via the OpenEnergyMonitor Shop](h
 <a class="btn pull-right" href="http://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-us-plug/">View in Shop &rarr; </a>
 <br><br>
 
-### 3. Set EmonHub USA Calibration
+### 3. Software Calibration 
+
+#### a.) emonPi: Set EmonHub USA Calibration
 
 In the `[[RFM2Pi]]` interfacer section of `emonhub.conf` set:
 
@@ -49,8 +51,14 @@ emonhub.conf can be edited directly in local Emoncms as described in [Setup > Lo
 
 See [[[RFM2Pi]] section of emonHub configuration guide](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md#a-rfm2pi) for advanced emonhub config info.
 
+#### b.) emonTx: Enable USA calibration using [on-board DIP switch](https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4#DIP_Switch_Config)
+
 ### 4. Sum power values
 
-If monitoring a split-phase system the power values from each leg can be summed in Emoncms to calculate the total power. The emonPi by default reports `power1_plus_power2`, this input will need to be logged to a feed. See [Setup > Logging Locally](/setup/local).
+If monitoring a split-phase system the power values from each leg can be summed in Emoncms to calculate the total power. 
+
+The emonPi by default reports `power1_plus_power2`, this input will need to be logged to a feed. See [Setup > Logging Locally](/setup/local).
+
+If using emonTx then the power values from multiple CT inputs can be summed in Emoncms using `+ feed` Input Processor.
 
 See [Building Blocks > EmonTx in North America](https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) for further technical info about the USA system.
