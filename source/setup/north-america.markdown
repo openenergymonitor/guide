@@ -10,12 +10,12 @@ footer: true
 published: true
 ---
 
-The emonPi has been designed for single-phase systems. However, the emonPi can be used on a North American Split-Phase system with the following considerations:
+The emonPi was designed for use on single-phase systems. However, the emonPi can be used on a North American Split-Phase system with the following considerations:
 
 
-### 1. Ensure clip-on CT current sensor will fit conductors
+### 1. Ensure clip-on CT sensor will fit your conductors
 
-Due to lower voltage (and resulting higher current) conductors (wires) in the USA are larger than in Europe. We recommend you measure the diameter of your feeders before purchasing a CT sensor. The opening in the [standard clip-on CT sensor sold in the OpenEnergyMonitor shop](http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) is **13mm diamater**, and hence can accommodate a maximum wire size of **AWG 1/0**.
+Typical residential feeder conductors are AWG 2/0 Copper or AWG 4/0 Aluminum.  The opening in the [standard clip-on CT sensor sold in the OpenEnergyMonitor shop](http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) is **13mm**, and hence can accommodate a maximum wire size of **AWG 1/0**. Therefore, we recommend you measure the diameter of your feeders before purchasing a CT sensor.
 
 
 <a class="btn pull-right" href="http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/">View in Shop &rarr; </a>
@@ -25,10 +25,10 @@ If the standard CT sensor does not fit your conductors there are two options:
 
 1. Use an [Optical Pulse Sensor](https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/) instead of CT sensor to interface directly with a utility meter. This will give an accurate reading of energy consumed (KWh) but will not provide a real-time power reading (W).
 
-2. Use an alternative larger CT sensor: It's possible to obtain larger CT sensors, however using an alternative sensor will usually require a change of calibration and possibly hardware modification (change burden resistor value). See [Building Blocks > EmonTx in North America](https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) for more info and general [Building Blocks CT sections](https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America). Please search / post on the [community forums](https://community.openenergymonitor.org) for further assistance.
+2. Use an alternative larger CT sensor: It's possible to obtain larger CT sensors. However, using an alternative CT will usually require re-calibration and possibly, hardware modification (burden resistor may need replacement). See [Building Blocks > EmonTx in North America](https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) for more info. [Building Blocks CT sections](https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America). Please search / post on the [community forums](https://community.openenergymonitor.org) for further assistance.
 
 <p class='note warning'>
-Installing clip-on CT sensors on USA electrical systems should only by undertaken by a professional electrician. In a typical residential installation Even if the main breaker is swiched off, the load center feeders and busbars are always live.
+Installing clip-on CT sensors on USA electrical systems should only by undertaken by a professional electrician. In a typical residential installation, even if the main breaker is swiched off, the load center feeders and busbars are always live.
 </p>
 
 ### 2. Use USA AC-AC Adapter
