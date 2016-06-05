@@ -1,12 +1,13 @@
 ---
 layout: page
-title: "Log Remotely"
-description: "Log remotly to Emoncms.org"
-date: 2015-03-08 21:36
+title: Log Remotely
+description: Log remotly to Emoncms.org
+date: '2015-03-08 21:36'
 sidebar: true
 comments: false
 sharing: true
 footer: true
+published: true
 ---
 
 ### [&laquo; Previous step: Log Locally](/setup/local/)
@@ -15,7 +16,7 @@ footer: true
 
 ***
 
-Data can also (optionally) be posted remotly to [Emoncms.org](https://emoncms.org). Posting data remotly has the advantage of being able to easily access your data from anywhere on the web without having to open access to your local emonPi:
+Data can also (optionally) be posted remotely to [Emoncms.org](https://emoncms.org). Posting data remotely has the advantage of being able to easily access your data from anywhere on the web without having to open access to your local emonPi:
 
 ## 1. Create Emoncms.org account
 
@@ -42,7 +43,7 @@ Data can also (optionally) be posted remotly to [Emoncms.org](https://emoncms.or
 
 ## 3. Setup Emoncms.org Input Processing
 
-- Log back in to [Emoncms.org](htts://emoncms.org)
+- Log back into [Emoncms.org](htts://emoncms.org)
 - Inputs from emonPi should be visible on the Inputs page
 - Log Inputs to Feeds in the same way as [Local Emoncms Logging](/setup/local)
 
