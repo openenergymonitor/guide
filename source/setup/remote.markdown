@@ -43,7 +43,7 @@ Data can also (optionally) be posted remotely to [Emoncms.org](https://emoncms.o
 
 ## 3. Setup Emoncms.org Input Processing
 
-- Log back into [Emoncms.org](htts://emoncms.org)
+- Log back into [Emoncms.org](https://emoncms.org)
 - Inputs from emonPi should be visible on the Inputs page
 - Log Inputs to Feeds in the same way as [Local Emoncms Logging](/setup/local)
 
