@@ -62,7 +62,7 @@ Energy monitoring on the emonPi and emonTx is acheved using [emonLib](https://gi
 
 ### {% linkable_title Pulse Counting %}
 
-Pulse couting on the emonPi and emonTx uses ATmega328's second hardware interrupt IRQ1. The first hardware interrupt IRQ0 is used by the RFM69CW. Only one pulse couter input is possible per emonTx/emonPi.
+Pulse counting on the emonPi and emonTx uses ATmega328's second hardware interrupt IRQ1. The first hardware interrupt IRQ0 is used by the RFM69CW. Only one pulse counter input is possible per emonTx/emonPi.
 
 **See [Optical Pulse Sensor Resources](/technical/resources#optical-pulse-counter)**
 
@@ -85,9 +85,9 @@ By default the Raspberry Pi runs a modifed version of Debian [Raspbian Jessie Li
 
 ### {% linkable_title emonHub %}
 
-emonHub (emonpi variant) is pre-installed on emonSD. EmonHub is a pythion service wich receives the data from the emonPi via serial (in JeeLabs packet) format. emonHub decodes the data and publishes it to the emonPi's localhost Mosquitto MQTT server and ([if configured](/setup/remote)) remotely to [Emoncms.org](https://emoncms.org).
+emonHub (emonpi variant) is pre-installed on emonSD. EmonHub is a pythion service which receives the data from the emonPi via serial (in JeeLabs packet) format. emonHub decodes the data and publishes it to the emonPi's localhost Mosquitto MQTT server and ([if configured](/setup/remote)) remotely to [Emoncms.org](https://emoncms.org).
 
-Corresponding EmonHub node-decoder entriess must be present in emonhub config for each wireless RF node e.g. emonTx, emonTH. See confguring emonhub in the resources:
+Corresponding EmonHub node-decoder entries must be present in emonhub config for each wireless RF node e.g. emonTx, emonTH. See confguring emonhub in the resources:
 
 **See [emonHub Resources](/technical/resources#emonhub)**
 

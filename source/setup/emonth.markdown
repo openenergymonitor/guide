@@ -59,9 +59,9 @@ Only one DS18B20 sensor can be connected to an emonTH, if a DHT22 sensor is dete
 
 #### 4. Indicator LED
   - Illuminates solid for a few seconds at first power up
-  - LED should then extinguish to indicate succesful sensor detection
+  - LED should then extinguish to indicate successful sensor detection
   - Flashing LED indicates sensor detection failure
-  - To preserve battery LED does NOT flash reguarly during opperation
+  - To preserve battery LED does NOT flash regularly during operation
 
 ### Base-station Emoncms Setup
 
@@ -72,7 +72,7 @@ The emonTH is compatible with emonPi / emonBase. RF transmission from the emonTH
 #### 1. [Log inputs to feeds](/setup/local/)
 
 **Note: if using more than four emonTH units (with custom RF node ID or modified firmware) [`emonhub.conf` node decoders will need to be setup](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md).**
-  
+
 <br>
 
 ***

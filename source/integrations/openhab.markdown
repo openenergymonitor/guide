@@ -73,7 +73,7 @@ See the full items file used for this example on the open_openhab GitHub repo (s
 
 #### Sitemap
 
-The second openHAB config file of interest is 'sitemap'. Sitemaps are used to create elements of a user interface for making openHAB items accessible to the frontend interface.
+The second openHAB config file of interest is 'sitemap'. Sitemaps are used to create elements of a user interface for making openHAB items accessible to the front-end interface.
 
 For example the sitemap config line to produce the emonPi Power1 in the interface is as follows:
 

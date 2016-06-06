@@ -71,10 +71,10 @@ If logging a `Power` value input you will also want to create a corresponding KW
 
 - To view the feed data click the `Eye Icon`
 - This will open `Data Viewer`
-- Multiple feeds can be overlayed on the same graph by checking the boxs on the right hand side
+- Multiple feeds can be overlayed on the same graph by checking the boxes on the right hand side
 - To view daily data see [Emoncms > Daily KWh](/setup/daily-kwh).
 
-Note: no data will be visisble immediately. Wait a few hours to build up some data before trying to view a feed.
+Note: no data will be visible immediately. Wait a few hours to build up some data before trying to view a feed.
 
 ![Feed Viewer](/images/setup/data-viewer.png)
 
@@ -99,6 +99,3 @@ We recommend making regular backups of local data. See [Setup > Import/Backup](/
 ***
 
 ### [Next step: Log Remotely &raquo;](/setup/remote/)
-
-
-

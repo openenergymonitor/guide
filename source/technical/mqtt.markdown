@@ -19,7 +19,7 @@ footer: true
 
 > [MQTT](http://mqtt.org/) is a machine-to-machine (M2M)/"Internet of Things" connectivity protocol. It was designed as an extremely lightweight publish/subscribe messaging transport.
 
-The emonPi with [emonSD pre-built SD card](/technical/#emonsd-features) by default runs a local [Mosquitto MQTT](http://mosquitto.org/) server. This server is accesiable ([via authentication](/technical/credentials#mqtt) on port 1883. See [MQTT Service Credentials](/technical/credentials#mqtt).
+The emonPi with [emonSD pre-built SD card](/technical/#emonsd-features) by default runs a local [Mosquitto MQTT](http://mosquitto.org/) server. This server is accessible ([via authentication](/technical/credentials#mqtt) on port 1883. See [MQTT Service Credentials](/technical/credentials#mqtt).
 
 ## {% linkable_title MQTT Publishers %}
 
@@ -41,7 +41,7 @@ Example:
 
 #### {% linkable_title 2. Legacy CSV MQTT Topic Format %}
 
-Used by older version of emonPi and emonPiLCD service. All data from a single node is published in CSV format to a single topic. More compact but does not allow naming of keys and difficult to subscibe to a single key.
+Used by older version of emonPi and emonPiLCD service. All data from a single node is published in CSV format to a single topic. More compact but does not allow naming of keys and difficult to subscribe to a single key.
 
 `emonhub/rx/[nodeID]/values format`
 
@@ -50,7 +50,7 @@ Example:
 `emonhub/rx/10/values format`
 
 emonHub servie can be restarted with `$ sudo service emonhub restart`.
-Latest log file entries can be viewed via the Emoncms web interface admion or with: `$ tail /var/log/emonhub/emonhub.log`. All the data currently being published to MQTT topic can be viewed in real-time in the EmonHub log.
+Latest log file entries can be viewed via the Emoncms web interface admin or with: `$ tail /var/log/emonhub/emonhub.log`. All the data currently being published to MQTT topic can be viewed in real-time in the EmonHub log.
 
 ### {% linkable_title Emoncms Publisher %}
 
@@ -91,13 +91,13 @@ Latest log file entries can be viewed with: `$ tail /var/log/emonpilcd/emonpilcd
 To view all MQTT messages subscribe to  `emon/#` base topic :
 
   `$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t ' emon/#'`
-  
+
 To view all MQTT messages for a particular node subscribe to sub-topic:
 
 `$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t ' emon/emonpi/#'`
 
 *Note: `#` denotes a wild-card*
-  
+
 **Test publishing and subscribing on a test topic:**
 
 Subscribe to test topic:
@@ -105,10 +105,10 @@ Subscribe to test topic:
 	`$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t 'test'`
 
 Open *another shell window* to publish to the test topic :
- 
+
 	`$mosquitto_pub -u 'emonpi' -P 'emonpimqtt2016' -t 'test' -m 'helloWorld'`
-	
-If all is working we should see `helloWord` :-) 
+
+If all is working we should see `helloWord` :-)
 
 
 To avoid connecting via SSH alternately you could use [MQTTlens Chrome Extension](https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en) or any other MQTT client connected to the emonPi IP address on port 1883 with user name: `emonpi` and password: `emonpimqtt2016`.
