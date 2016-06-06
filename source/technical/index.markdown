@@ -37,7 +37,7 @@ An [emonBase](http://shop.openenergymonitor.com/emonbase-web-connected-base-stat
 
 ## {% linkable_title Hardware Overview %}
 
-As the diagram (fig.1) shows the Atmega328 microprocessor communicates with the Raspbery Pi via the internal UART `(/dev/ttyAMA0` serial port. Data is transmitted over serial using the [JeeLib packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/). The ATmega328 on the emonPi / RFM69Pi run a modifed version of [JeeLabs RFM12Demo Sketch](http://jeelabs.net/projects/jeelib/wiki/RF12demo).
+As the diagram (fig.1) shows the Atmega328 microprocessor communicates with the Raspberry Pi via the internal UART `(/dev/ttyAMA0` serial port. Data is transmitted over serial using the [JeeLib packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/). The ATmega328 on the emonPi / RFM69Pi run a modifed version of [JeeLabs RFM12Demo Sketch](http://jeelabs.net/projects/jeelib/wiki/RF12demo).
 
 ### Inside the emonPi
 
