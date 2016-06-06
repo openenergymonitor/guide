@@ -191,7 +191,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <h3 id="a-classtitle-link-namepulse-counting-hrefpulse-countinga-pulse-counting"><a class="title-link" name="pulse-counting" href="#pulse-counting"></a> Pulse Counting</h3>
 
-<p>Pulse couting on the emonPi and emonTx uses ATmega328’s second hardware interrupt IRQ1. The first hardware interrupt IRQ0 is used by the RFM69CW. Only one pulse couter input is possible per emonTx/emonPi.</p>
+<p>Pulse counting on the emonPi and emonTx uses ATmega328’s second hardware interrupt IRQ1. The first hardware interrupt IRQ0 is used by the RFM69CW. Only one pulse counter input is possible per emonTx/emonPi.</p>
 
 <p><strong>See <a href="/technical/resources#optical-pulse-counter">Optical Pulse Sensor Resources</a></strong></p>
 
@@ -216,9 +216,9 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <h3 id="a-classtitle-link-nameemonhub-hrefemonhuba-emonhub"><a class="title-link" name="emonhub" href="#emonhub"></a> emonHub</h3>
 
-<p>emonHub (emonpi variant) is pre-installed on emonSD. EmonHub is a pythion service wich receives the data from the emonPi via serial (in JeeLabs packet) format. emonHub decodes the data and publishes it to the emonPi’s localhost Mosquitto MQTT server and (<a href="/setup/remote">if configured</a>) remotely to <a href="https://emoncms.org">Emoncms.org</a>.</p>
+<p>emonHub (emonpi variant) is pre-installed on emonSD. EmonHub is a pythion service which receives the data from the emonPi via serial (in JeeLabs packet) format. emonHub decodes the data and publishes it to the emonPi’s localhost Mosquitto MQTT server and (<a href="/setup/remote">if configured</a>) remotely to <a href="https://emoncms.org">Emoncms.org</a>.</p>
 
-<p>Corresponding EmonHub node-decoder entriess must be present in emonhub config for each wireless RF node e.g. emonTx, emonTH. See confguring emonhub in the resources:</p>
+<p>Corresponding EmonHub node-decoder entries must be present in emonhub config for each wireless RF node e.g. emonTx, emonTH. See confguring emonhub in the resources:</p>
 
 <p><strong>See <a href="/technical/resources#emonhub">emonHub Resources</a></strong></p>
 

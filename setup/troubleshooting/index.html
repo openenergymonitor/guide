@@ -295,10 +295,10 @@ INFO     emoncmsorg sending: https://emoncms.org/input/bulk.json?apikey=E-M-O-N-
 
 <h3 id="a-classtitle-link-name3-incorrect-system-time-href3-incorrect-system-timea-3-incorrect-system-time"><a class="title-link" name="3-incorrect-system-time" href="#3-incorrect-system-time"></a> 3. Incorrect system time</h3>
 
-<p>It’s important that the emonPi has the correct time. If required timezone should be set in Emoncms Account page and on the Raspberry Pi (see below). The emonPi requires an active Internet connection at bootup to obtain current time from NTP. After correct time has been obtained the soft-ntp function <em>should</em> be able to keep valid time even if Internet connection is lost. See <a href="https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/read-only.md#ntp-time-fix">NTP Time Fix</a> for more info. If using an emonPi for a long period with no web connection it’s recomended to <a href="https://wiki.openenergymonitor.org/index.php/EmonPi#Adding_a_Real_Time_Clock_.28RTC.29">add a hardware Real-Time-Clock (RTC)</a>.</p>
+<p>It’s important that the emonPi has the correct time. If required timezone should be set in Emoncms Account page and on the Raspberry Pi (see below). The emonPi requires an active Internet connection at bootup to obtain current time from NTP. After correct time has been obtained the soft-ntp function <em>should</em> be able to keep valid time even if Internet connection is lost. See <a href="https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/read-only.md#ntp-time-fix">NTP Time Fix</a> for more info. If using an emonPi for a long period with no web connection it’s recommended to <a href="https://wiki.openenergymonitor.org/index.php/EmonPi#Adding_a_Real_Time_Clock_.28RTC.29">add a hardware Real-Time-Clock (RTC)</a>.</p>
 
 <ul>
-  <li>Check time on emonPi LCD disply, press LCD push-button until <code class="highlighter-rouge">uptime</code> page is displayed
+  <li>Check time on emonPi LCD display, press LCD push-button until <code class="highlighter-rouge">uptime</code> page is displayed
     <ul>
       <li><code class="highlighter-rouge">$ date</code></li>
     </ul>
@@ -321,7 +321,7 @@ INFO     emoncmsorg sending: https://emoncms.org/input/bulk.json?apikey=E-M-O-N-
       <li>Run <code class="highlighter-rouge">$ sudo rapi-config</code> select <code class="highlighter-rouge">Internationalisation Options</code> and set local timezone</li>
       <li>Check time is correct by running <code class="highlighter-rouge">$ date</code></li>
       <li>If time is STILL not correct try:</li>
-      <li>Check emonpi has an active Internet connection <code class="highlighter-rouge">$ wget google.com</code> should connect succesfully</li>
+      <li>Check emonpi has an active Internet connection <code class="highlighter-rouge">$ wget google.com</code> should connect successfully</li>
       <li><code class="highlighter-rouge">$ sudo service ntp restart</code></li>
       <li>Check time with `$ date</li>
     </ul>
@@ -330,7 +330,7 @@ INFO     emoncmsorg sending: https://emoncms.org/input/bulk.json?apikey=E-M-O-N-
 
 <h3 id="a-classtitle-link-name4-disk-space-href4-disk-spacea-4-disk-space"><a class="title-link" name="4-disk-space" href="#4-disk-space"></a> 4. Disk space</h3>
 
-<p>Check avilable disk space in the data paritition (<code class="highlighter-rouge">/home/pi/data</code>) by looking at the graph at the bottom of:
+<p>Check available disk space in the data partition (<code class="highlighter-rouge">/home/pi/data</code>) by looking at the graph at the bottom of:
 <code class="highlighter-rouge">Local Emoncms &gt; Setup &gt; Administration</code></p>
 
 <p><br /></p>

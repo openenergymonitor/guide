@@ -152,7 +152,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   <p><a href="http://mqtt.org/">MQTT</a> is a machine-to-machine (M2M)/”Internet of Things” connectivity protocol. It was designed as an extremely lightweight publish/subscribe messaging transport.</p>
 </blockquote>
 
-<p>The emonPi with <a href="/technical/#emonsd-features">emonSD pre-built SD card</a> by default runs a local <a href="http://mosquitto.org/">Mosquitto MQTT</a> server. This server is accesiable (<a href="/technical/credentials#mqtt">via authentication</a> on port 1883. See <a href="/technical/credentials#mqtt">MQTT Service Credentials</a>.</p>
+<p>The emonPi with <a href="/technical/#emonsd-features">emonSD pre-built SD card</a> by default runs a local <a href="http://mosquitto.org/">Mosquitto MQTT</a> server. This server is accessible (<a href="/technical/credentials#mqtt">via authentication</a> on port 1883. See <a href="/technical/credentials#mqtt">MQTT Service Credentials</a>.</p>
 
 <h2 id="a-classtitle-link-namemqtt-publishers-hrefmqtt-publishersa-mqtt-publishers"><a class="title-link" name="mqtt-publishers" href="#mqtt-publishers"></a> MQTT Publishers</h2>
 
@@ -174,7 +174,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <h4 id="a-classtitle-link-name2-legacy-csv-mqtt-topic-format-href2-legacy-csv-mqtt-topic-formata-2-legacy-csv-mqtt-topic-format"><a class="title-link" name="2-legacy-csv-mqtt-topic-format" href="#2-legacy-csv-mqtt-topic-format"></a> 2. Legacy CSV MQTT Topic Format</h4>
 
-<p>Used by older version of emonPi and emonPiLCD service. All data from a single node is published in CSV format to a single topic. More compact but does not allow naming of keys and difficult to subscibe to a single key.</p>
+<p>Used by older version of emonPi and emonPiLCD service. All data from a single node is published in CSV format to a single topic. More compact but does not allow naming of keys and difficult to subscribe to a single key.</p>
 
 <p><code class="highlighter-rouge">emonhub/rx/[nodeID]/values format</code></p>
 
@@ -183,7 +183,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 <p><code class="highlighter-rouge">emonhub/rx/10/values format</code></p>
 
 <p>emonHub servie can be restarted with <code class="highlighter-rouge">$ sudo service emonhub restart</code>.
-Latest log file entries can be viewed via the Emoncms web interface admion or with: <code class="highlighter-rouge">$ tail /var/log/emonhub/emonhub.log</code>. All the data currently being published to MQTT topic can be viewed in real-time in the EmonHub log.</p>
+Latest log file entries can be viewed via the Emoncms web interface admin or with: <code class="highlighter-rouge">$ tail /var/log/emonhub/emonhub.log</code>. All the data currently being published to MQTT topic can be viewed in real-time in the EmonHub log.</p>
 
 <h3 id="a-classtitle-link-nameemoncms-publisher-hrefemoncms-publishera-emoncms-publisher"><a class="title-link" name="emoncms-publisher" href="#emoncms-publisher"></a> Emoncms Publisher</h3>
 
