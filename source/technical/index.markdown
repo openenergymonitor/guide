@@ -37,7 +37,7 @@ An [emonBase](http://shop.openenergymonitor.com/emonbase-web-connected-base-stat
 
 ## {% linkable_title Hardware Overview %}
 
-As the diagram (fig.1) shows the Atmega328 microprocessor communicates with the Raspberry Pi via the internal UART `(/dev/ttyAMA0` serial port. Data is transmitted over serial using the [JeeLib packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/). The ATmega328 on the emonPi / RFM69Pi run a modifed version of [JeeLabs RFM12Demo Sketch](http://jeelabs.net/projects/jeelib/wiki/RF12demo).
+As the diagram (fig.1) shows the Atmega328 microprocessor communicates with the Raspberry Pi via the internal UART `(/dev/ttyAMA0` serial port. Data is transmitted over serial using the [JeeLib packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/). The ATmega328 on the emonPi / RFM69Pi run a modified version of [JeeLabs RFM12Demo Sketch](http://jeelabs.net/projects/jeelib/wiki/RF12demo).
 
 ### Inside the emonPi
 
@@ -49,7 +49,7 @@ As the diagram (fig.1) shows the Atmega328 microprocessor communicates with the 
 
 ### {% linkable_title RF %}
 
-The emonPi / RFM69Pi uses the HopeRF RFM69CW RF module to recieve data from other wireless nodes (emonTx, emonTH etc) using 433Mhz. Each RF node is required to be on the same network group (default 210) and have an unique node ID. Data is transmitted over serial using the [JeeLib packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/). EmonHub python service on the Raspberry Pi requires a corresponding node decoder entry in emonhub config for each RF node. See [emonHub in section below](#emonhub).
+The emonPi / RFM69Pi uses the HopeRF RFM69CW RF module to receive data from other wireless nodes (emonTx, emonTH etc) using 433Mhz. Each RF node is required to be on the same network group (default 210) and have an unique node ID. Data is transmitted over serial using the [JeeLib packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/). EmonHub python service on the Raspberry Pi requires a corresponding node decoder entry in emonhub config for each RF node. See [emonHub in section below](#emonhub).
 
 **See [Fundamental Building block Resources](/technical/resources/fundamentals)**
 
