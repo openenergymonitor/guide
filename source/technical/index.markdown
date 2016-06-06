@@ -21,7 +21,7 @@ The emonPi is based on a RaspberryPi + [emonPi Shield PCB](https://wiki.openener
 
 <figure>
 <img src="https://github.com/openenergymonitor/Hardware/raw/master/emonPi/emonPi_V1_6/photo.png" alt="emonPi RaspberryPi Shield PCB">
-<figcaption style="text-align:center;"><i>emonPi RaspberryPi Shield PCB</i></figcaption>
+<figcaption style="text-align:center;"><i>emonPi Raspberry Pi Shield PCB</i></figcaption>
 </figure>
 <br>
 
@@ -37,7 +37,7 @@ An [emonBase](http://shop.openenergymonitor.com/emonbase-web-connected-base-stat
 
 ## {% linkable_title Hardware Overview %}
 
-As the diagram (fig.1) shows the Atmega328 microprocessor communicates with the RaspberyPi via the internal UART `(/dev/ttyAMA0` serial port. Data is transmitted over serial using the [JeeLib packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/). The ATmega328 on the emonPi / RFM69Pi run a modifed version of [JeeLabs RFM12Demo Sketch](http://jeelabs.net/projects/jeelib/wiki/RF12demo).
+As the diagram (fig.1) shows the Atmega328 microprocessor communicates with the Raspbery Pi via the internal UART `(/dev/ttyAMA0` serial port. Data is transmitted over serial using the [JeeLib packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/). The ATmega328 on the emonPi / RFM69Pi run a modifed version of [JeeLabs RFM12Demo Sketch](http://jeelabs.net/projects/jeelib/wiki/RF12demo).
 
 ### Inside the emonPi
 
@@ -56,7 +56,7 @@ The emonPi / RFM69Pi uses the HopeRF RFM69CW RF module to recieve data from othe
 
 ### {% linkable_title Energy Monitoring %}
 
-Energy monitoring on the emonPi and emonTx is acheved using [emonLib](https://github.com/openenergymonitor/emonlib) discrete sampling and the ATmega328's 10-bit ADC. By default samples are taken once every 5 seconds.
+Energy monitoring on the emonPi and emonTx is achieved using [emonLib](https://github.com/openenergymonitor/emonlib) discrete sampling and the ATmega328's 10-bit ADC. By default samples are taken once every 5 seconds.
 
 **See [Fundamental Building block Resources](/technical/resources#fundamentals)**
 
@@ -68,7 +68,7 @@ Pulse counting on the emonPi and emonTx uses ATmega328's second hardware interru
 
 ## {% linkable_title Software Overview %}
 
-By default the Raspberry Pi runs a modifed version of Debian [Raspbian Jessie Lite](https://www.raspberrypi.org/downloads/raspbian/). A pre-build SD card image (**emonSD**) is available to [purchase or download](https://github.com/openenergymonitor/emonpi/Docs/emonSD-pre-built-SD-card-Download-&-Change-Log)) which has everything already set up.
+By default the Raspberry Pi runs a modified version of Debian [Raspbian Jessie Lite](https://www.raspberrypi.org/downloads/raspbian/). A pre-build SD card image (**emonSD**) is available to [purchase or download](https://github.com/openenergymonitor/emonpi/Docs/emonSD-pre-built-SD-card-Download-&-Change-Log)) which has everything already set up.
 
 ### {% linkable_title emonSD features %}
 
@@ -85,9 +85,9 @@ By default the Raspberry Pi runs a modifed version of Debian [Raspbian Jessie Li
 
 ### {% linkable_title emonHub %}
 
-emonHub (emonpi variant) is pre-installed on emonSD. EmonHub is a pythion service which receives the data from the emonPi via serial (in JeeLabs packet) format. emonHub decodes the data and publishes it to the emonPi's localhost Mosquitto MQTT server and ([if configured](/setup/remote)) remotely to [Emoncms.org](https://emoncms.org).
+emonHub (emonpi variant) is pre-installed on emonSD. EmonHub is a python service which receives the data from the emonPi via serial (in JeeLabs packet) format. emonHub decodes the data and publishes it to the emonPi's localhost Mosquitto MQTT server and ([if configured](/setup/remote)) remotely to [Emoncms.org](https://emoncms.org).
 
-Corresponding EmonHub node-decoder entries must be present in emonhub config for each wireless RF node e.g. emonTx, emonTH. See confguring emonhub in the resources:
+Corresponding EmonHub node-decoder entries must be present in emonhub config for each wireless RF node e.g. emonTx, emonTH. See configuring emonhub in the resources:
 
 **See [emonHub Resources](/technical/resources#emonhub)**
 
