@@ -2,27 +2,81 @@
 
 <style>
 
+.searchtools {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+input[type=text] {
+  width: 100%;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+}
+
+.titleholder {
+  
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    z-index: 21;
+    overflow: hidden;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+}
+
+.monitormytitle {
+  
+    position: absolute;
+    margin-left: 6px;
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial,"sans-serif";
+    color: #0699fa;
+    z-index: 22;
+    width: 100%;
+}
+
+.monitormytitle span {
+  
+    color: #777;
+}
+
+
 .burgerbar {
     position: fixed;
     top: 0;
     right: 100px;
-    z-index: 1;
+    z-index: 22;
+}
+
+.burgerbar span:after {
+    font-family: "FontAwesome";
+    content: "\f0c9";
+    color: #777;
 }
 
 .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 2;
+    z-index: 23;
     top: 0;
     right: 0;
     background-color: #777;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
--moz-box-shadow:    3px 3px 8px 2px #000000;
-  -webkit-box-shadow: 3px 3px 8px 2px #000000;
-  box-shadow:         0px 0px 20px 0px #000000;}
+    
+    -moz-box-shadow:      0px 0px 20px 0px #000000;
+    -webkit-box-shadow:   0px 0px 20px 0px #000000;
+    box-shadow:           0px 0px 20px 0px #000000;
+}
 
 .sidenav a {
     padding: 8px 8px 8px 32px;
@@ -33,24 +87,31 @@
     transition: 0.3s
 }
 
-.sidenav span {
-    margin-right: -24px;
+.closebtn {
+    position: absolute;
+    top: 0;
+    font-size: 36px !important;
+    width: 100%;
+    padding: 18px;
+    text-align: center;
+    margin-top: -5px;
+    outline: none;
+    cursor: default;
 }
 
-.sidenav span:after {
+.closebtn span {
+    cursor: pointer;
+    margin-left: 176px ;
+}
+
+.closebtn span:after {
     font-family: "FontAwesome";
     content:"\f00d";
 }
 
-.closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px !important;
-    margin-left: 50px;
-}
-
 #main {
+    position: relative;
+    top: 60px;
     transition: margin-right .5s;
 }
 
@@ -67,28 +128,40 @@ button.accordion {
     padding: 18px;
     border: none;
     text-align: left;
+    font-family: "Arial","sans-serif";
     font-weight: bold;
     outline: none;
     font-size: 18px;
-    border-bottom: 1px solid white;
+    border-bottom: 4px solid #474747;
+    transition: 0.1s;
+}
+
+button.accordion span:before {
+    font-family: "FontAwesome";
+    content: "\f002";
 }
 
 button.accordion:after {
     font-family: "FontAwesome";
     content: '\f067';
-    font-size: 16px;
+    font-size: 18px;
     color: #ffffff;
     float: right;
     margin-left: 5px;
+    margin-top: 3px;
 }
 
 button.accordion.active:after {
     content: "\f068";
 }
 
+button.accordion:hover {
+    background-color: #5f5f5f;
+}
+
 div.panel {
     width: 100%;
-    background-color: white;
+    background-color: #f8f8f8;
     max-height: 0;
     overflow: hidden;
     transition: 0.6s ease-in-out;
@@ -99,7 +172,6 @@ div.panel a {
     font-size: 18px;
     color: #777;
     width: 100%;
-    background-color: #ffffff;
     padding-left: 18px;
     padding-bottom: 9px;
     padding-top: 9px;
@@ -115,22 +187,28 @@ div.panel a:hover {
 div.panel.show {
     max-height: 500px;
 }
+
 </style>
 
+<header>
+<div class="titleholder">
+    
+        <div class="monitormytitle">
+            
+            <a href="/#setup"><span>Open</span>EnergyMonitor</a>
 
-
-
-    <header>
-      
- <div class="burgerbar">
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰</span>
- </div>
-    </header>
+  
+<div class="burgerbar">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()"></span>
+</div>
+</div>
+</div>
+</header>
 
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span></span></a>
+<a href="javascript:void(0)" class="closebtn"><span onclick="closeNav()"></span></a>
 
-<button class="accordion" style="border-top:1px solid white">Set Up</button>
+<button class="accordion" style="border-top:4px solid #474747">Set Up</button>
 <div class="panel">
   
 <a href="/setup/">Hardware</a>
@@ -143,7 +221,6 @@ div.panel.show {
 <a href="/setup/emonth/">Add Temperature Nodes</a>
 <a href="/setup/import/">Import / Backup</a>
 <a href="/setup/troubleshooting/">Troubleshooting</a>
-
 
 </div>
 
@@ -228,8 +305,30 @@ div.panel.show {
 
 
 </div>
-  
-  
+
+
+<table style="width:100%;background-color:black">
+  <tr>
+    <td style="width:20%;color:white;
+">search</td>
+    <td style="width:80%;text-align:center;
+"><div class="searchtools">
+
+{% if site.simple_search %}
+<form action="{{ site.simple_search }}" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:guide.openenergymonitor.org" />
+    <input class="search" type="text" name="q" results="0" />
+  </fieldset>
+</form>
+{% endif %}
+
+
+</div></td>
+    
+  </tr>
+</table>
+ 
 </div>
 
 
@@ -267,14 +366,7 @@ div.panel.show {
       {% include site/footer.html %}
     </footer>
 
-    <!--[if lt IE 7]>
-      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
-
     {% include javascripts/scripts.html %}
-
-
-
 
 </div>
 </div>
