@@ -1,10 +1,235 @@
 {% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}{% include site/head.html %}
 
-  <body {% if page.body_id %} id="{{ page.body_id }}"{% endif %}>
+<style>
 
+.burgerbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+button.accordion {
+    background-color: #ffffff;
+    width: 100%;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    font-weight: bold;
+    outline: none;
+    font-size: 18px;
+}
+
+button.accordion:after {
+    font-family: "FontAwesome";
+    content: '\f067';
+    font-size: 16px;
+    color: #ffffff;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\f068";
+}
+
+div.panel {
+    width: 100%;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+}
+
+div.panel a {
+    display: inline-block;
+    font-size: 18px;
+    color: white;
+    width: 100%;
+    background-color: #777;
+    padding-left: 18px;
+    padding-bottom: 9px;
+    padding-top: 9px;
+}
+
+div.panel a:hover {
+    background-color: #0699fa;
+    
+}
+
+div.panel.show {
+    max-height: 500px;
+}
+</style>
+
+<body {% if page.body_id %} id="{{ page.body_id }}"{% endif %}>
+
+
+  
+  
+  
     <header>
-      {% include site/header.html %}
+      
+ <div class="burgerbar">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰</span>
+ </div>
     </header>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+<button class="accordion" style="background-color:red;">Set Up</button>
+<div class="panel">
+  
+<a href="/setup/">Hardware</a>
+<a href="/setup/">Connect</a>
+<a href="/setup/install/">Install</a>
+<a href="/setup/local/">Log Locally</a>
+<a href="/setup/remote/">Log Remotely</a>
+<a href="/setup/dashboards/">Dashboards</a>
+<a href="/setup/emontx/">Add Energy Nodes</a>
+<a href="/setup/emonth/">Add Temperature Nodes</a>
+<a href="/setup/import/">Import / Backup</a>
+<a href="/setup/troubleshooting/">Troubleshooting</a>
+
+
+</div>
+
+<button class="accordion" style="background-color:green;">Emoncms</button>
+<div class="panel">
+  
+<a href="/setup/">Hardware</a>
+<a href="/setup/">Connect</a>
+<a href="/setup/install/">Install</a>
+<a href="/setup/local/">Log Locally</a>
+<a href="/setup/remote/">Log Remotely</a>
+<a href="/setup/dashboards/">Dashboards</a>
+<a href="/setup/emontx/">Add Energy Nodes</a>
+<a href="/setup/emonth/">Add Temperature Nodes</a>
+<a href="/setup/import/">Import / Backup</a>
+<a href="/setup/troubleshooting/">Troubleshooting</a>
+
+
+</div><button class="accordion" style="background-color:black;">Applications</button>
+<div class="panel">
+  
+<a href="/setup/">Hardware</a>
+<a href="/setup/">Connect</a>
+<a href="/setup/install/">Install</a>
+<a href="/setup/local/">Log Locally</a>
+<a href="/setup/remote/">Log Remotely</a>
+<a href="/setup/dashboards/">Dashboards</a>
+<a href="/setup/emontx/">Add Energy Nodes</a>
+<a href="/setup/emonth/">Add Temperature Nodes</a>
+<a href="/setup/import/">Import / Backup</a>
+<a href="/setup/troubleshooting/">Troubleshooting</a>
+
+
+</div>
+
+<button class="accordion" style="background-color:blue;">Integrations</button>
+<div class="panel">
+  
+<a href="/setup/">Hardware</a>
+<a href="/setup/">Connect</a>
+<a href="/setup/install/">Install</a>
+<a href="/setup/local/">Log Locally</a>
+<a href="/setup/remote/">Log Remotely</a>
+<a href="/setup/dashboards/">Dashboards</a>
+<a href="/setup/emontx/">Add Energy Nodes</a>
+<a href="/setup/emonth/">Add Temperature Nodes</a>
+<a href="/setup/import/">Import / Backup</a>
+<a href="/setup/troubleshooting/">Troubleshooting</a>
+
+
+</div>
+
+<button class="accordion" style="background-color:orange;">Technical</button>
+<div class="panel">
+  
+<a href="/setup/">Hardware</a>
+<a href="/setup/">Connect</a>
+<a href="/setup/install/">Install</a>
+<a href="/setup/local/">Log Locally</a>
+<a href="/setup/remote/">Log Remotely</a>
+<a href="/setup/dashboards/">Dashboards</a>
+<a href="/setup/emontx/">Add Energy Nodes</a>
+<a href="/setup/emonth/">Add Temperature Nodes</a>
+<a href="/setup/import/">Import / Backup</a>
+<a href="/setup/troubleshooting/">Troubleshooting</a>
+
+
+</div><button class="accordion" style="background-color:purple;">Support</button>
+<div class="panel">
+  
+<a href="/setup/">Hardware</a>
+<a href="/setup/">Connect</a>
+<a href="/setup/install/">Install</a>
+<a href="/setup/local/">Log Locally</a>
+<a href="/setup/remote/">Log Remotely</a>
+<a href="/setup/dashboards/">Dashboards</a>
+<a href="/setup/emontx/">Add Energy Nodes</a>
+<a href="/setup/emonth/">Add Temperature Nodes</a>
+<a href="/setup/import/">Import / Backup</a>
+<a href="/setup/troubleshooting/">Troubleshooting</a>
+
+
+
+</div>
+  
+  
+</div>
+
+
+
+<div id="main">
+
 
     {% if page.hero_unit %}
       {% include site/hero_unit.html %}
@@ -41,6 +266,38 @@
     <![endif]-->
 
     {% include javascripts/scripts.html %}
+
+
+
+
+</div>
+</div>
+</div>
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginRight = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginRight= "0";
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+
+</script>
+
 
   </body>
 </html>
