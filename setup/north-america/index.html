@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Connect - Guide | OpenEnergyMonitor</title>
+    <title>Use In North America - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="Connect to network & create account">
+    <meta name="description" content="Using emonPi in USA">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/connect/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/north-america/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Connect">
+    <meta property="og:title" content="Use In North America">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/connect/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/north-america/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Connect to network & create account">
+    <meta property="og:description" content="Using emonPi in USA">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Connect">
-    <meta name="twitter:description" content="Connect to network & create account">
+    <meta name="twitter:title" content="Use In North America">
+    <meta name="twitter:description" content="Using emonPi in USA">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -134,180 +134,66 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   
   <header>
     <h1 class="title indent">
-      Connect
+      Use in North America
     </h1>
   </header>
   <hr class="divider">
   
 
-  <h3 id="laquo-previous-step-required-hardwaresetup"><a href="/setup/">« Previous step: Required Hardware</a></h3>
+  <p>The emonPi / emonTx hardware units are designed for use on single-phase systems. However, the they can be used on a North American Split-Phase system with the following considerations:</p>
 
-<h3 id="next-step-install-raquosetupinstall"><a href="/setup/install/">Next step: Install »</a></h3>
+<h3 id="ensure-clip-on-ct-sensor-will-fit-your-conductors">1. Ensure clip-on CT sensor will fit your conductors</h3>
 
-<hr />
+<p>Typical residential feeder conductors are AWG 2/0 Copper or AWG 4/0 Aluminum.  The opening in the <a href="http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/">standard clip-on CT sensor sold in the OpenEnergyMonitor shop</a> is <strong>13mm</strong>, and hence can accommodate a maximum wire size of <strong>AWG 1/0</strong>. Therefore, we recommend you measure the diameter of your feeders before purchasing a CT sensor.</p>
 
-<h3 id="a-classtitle-link-namefirst-boot-hreffirst-boota-first-boot"><a class="title-link" name="first-boot" href="#first-boot"></a> First Boot</h3>
+<p><a class="btn pull-right" href="http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/">View in Shop → </a>
+<br /><br /></p>
 
-<p class="note">
-<b>This guide assumes you are using an emonPi / emonBase pre-built SD card.</b>
-</p>
-
-<p>This SD card can be <a href="http://shop.openenergymonitor.com/pre-loaded-emonsd-microsd-card-for-raspberry-pi/">purchased from the shop</a> or downloaded:</p>
-
-<ul>
-  <li><a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">Pre-build SD card download &amp; Change Log</a></li>
-  <li><a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">Instructions to flash image to SD card (RaspberryPi)</a></li>
-</ul>
-
-<p><em>The emonPi runs Emoncms data logging web-app locally from emonPi’s internal web sever. Using Emoncms data can be logged locally to the emonPi’s SD card and (optionally) posted remotely to the <a href="https://emoncms.org">Emoncms.org</a> cloud server.</em></p>
-
-<p class="note">
-<b>Emoncms local:</b> Emoncms instance running locally on the emonPi
-<br />
-<b>Emoncms remote:</b> Emoncms.org cloud server.
-</p>
-
-<h3 id="a-classtitle-link-name1-connect-ethernet-and-usb-power-href1-connect-ethernet-and-usb-powera-1-connect-ethernet-and-usb-power"><a class="title-link" name="1-connect-ethernet-and-usb-power" href="#1-connect-ethernet-and-usb-power"></a> 1. Connect Ethernet and USB power</h3>
-
-<p><img src="/images/setup/emonpi_ethernet_first_boot.png" alt="emonPi First Boot Etherent" /></p>
-
-<ul>
-  <li>
-    <p><a href="http://shop.openenergymonitor.com/power-supplies/">1.2A USB power adapter recommended</a></p>
-  </li>
-  <li>
-    <p class="note"> Take care to connect Ethernet to the socket on the same side as the USB sockets, not the RJ45 connector on the opposite side.</p>
-  </li>
-  <li>The emonPi LCD display will start by cycling through information about what is connected to it. Once the Raspberry Pi has booted up, the LCD will display the IP address of the emonPi on your local network.</li>
-  <li><img src="/images/setup/Etherent_Connected.jpg" alt="Ethernet Connected" /></li>
-</ul>
-
-<h3 id="a-classtitle-link-name2-enter-the-emonpis-ip-address-into-your-web-browsers-address-bar-href2-enter-the-emonpis-ip-address-into-your-web-browsers-address-bara-2-enter-the-emonpis-ip-address-into-your-web-browsers-address-bar"><a class="title-link" name="2-enter-the-emonpis-ip-address-into-your-web-browsers-address-bar" href="#2-enter-the-emonpis-ip-address-into-your-web-browsers-address-bar"></a> 2. Enter the emonPi’s IP address into your web browser’s address bar</h3>
-
-<ul>
-  <li>Browsing the hostname will work on some networks: <a href="http://emonpi">http://emonpi</a></li>
-  <li><em>If using an emonBase and hostname does not work, lookup it’s IP address from your router or use Fing Network Discovery tool on <a href="https://play.google.com/store/apps/details?id=com.overlook.android.fing&amp;hl=en_GB">Android</a> and <a href="https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8">iOS</a></em>.</li>
-</ul>
-
-<h3 id="a-classtitle-link-name3-create-local-emoncms-user-account-href3-create-local-emoncms-user-accounta-3-create-local-emoncms-user-account"><a class="title-link" name="3-create-local-emoncms-user-account" href="#3-create-local-emoncms-user-account"></a> 3. Create local Emoncms user account</h3>
-
-<p><img src="/images/setup/Emoncms_reg.png" width="250" /></p>
-
-<ul>
-  <li>By default only a single (admin) account can be created on local emonPi Emoncms. To enable multiple accounts edit Emoncms settings in <code class="highlighter-rouge">/var/www/emoncms/settings.php</code></li>
-</ul>
-
-<h3 id="a-classtitle-link-name4-connect-to-wifi-optional-href4-connect-to-wifi-optionala-4-connect-to-wifi-optional"><a class="title-link" name="4-connect-to-wifi-optional" href="#4-connect-to-wifi-optional"></a> 4. Connect to WiFi (optional)</h3>
-
-<p>WiFi is optional and requires either a RaspberryPi 3 (integrated WiFi) or a USB WiFi dongle (<a href="http://shop.openenergymonitor.com/edimax-usb-wifi-adapter-ew-7811un/">Edimax EW7811UN</a>).</p>
-
-<p><em>Note: All emonPi’s shipped June 2016 onwards will have a Raspberry Pi 3 as standard, emonPi’s with a Pi3 can be identified by a plastic end-plate(s). <a href="https://blog.openenergymonitor.org/2016/05/emonpi-raspberrypi3/">See blog post</a>.</em></p>
-
-<p><img src="/images/setup/wifi9_0.png" alt="Connect to Wifi" /></p>
+<p>If the standard CT sensor does not fit your conductors there are two options:</p>
 
 <ol>
-  <li><strong>Wifi config in <em>local Emoncms</em> : <code class="highlighter-rouge">Setup &gt; Wi-Fi</code></strong>
-    <ul>
-      <li>Network scan should happen automatically.</li>
-    </ul>
+  <li>
+    <p>Use an <a href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">Optical Pulse Sensor</a> instead of CT sensor to interface directly with a utility meter. This will give an accurate reading of energy consumed (KWh) but will not provide a real-time power reading (W).</p>
   </li>
   <li>
-    <p><strong>Check the box to select the network(s) you want to connect to</strong></p>
+    <p>Use an alternative larger CT sensor: It’s possible to obtain larger CT sensors. However, using an alternative CT will usually require re-calibration and possibly, hardware modification (burden resistor may need replacement). See <a href="https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America">Building Blocks &gt; EmonTx in North America</a> for more info. <a href="https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America">Building Blocks CT sections</a>. Please search / post on the <a href="https://community.openenergymonitor.org">community forums</a> for further assistance.</p>
   </li>
-  <li>
-    <p><strong>Enter PSK password</strong></p>
-  </li>
-  <li><strong>Hit <code class="highlighter-rouge">Save and Connect</code></strong></li>
 </ol>
 
-<p>After a few seconds information should refresh automatically to report <code class="highlighter-rouge">Status: Connected</code> and after a few more seconds the IP address should appear.</p>
-
-<h3 id="a-classtitle-link-nameassign-static-ip-optional--advanced-hrefassign-static-ip-optional--advanceda-assign-static-ip-optional--advanced"><a class="title-link" name="assign-static-ip-optional--advanced" href="#assign-static-ip-optional--advanced"></a> Assign static IP (Optional &amp; Advanced)</h3>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
-
-<script src="/javascripts/showHide.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-
-$(document).ready(function(){
-   $('.show_hide').showHide({
-		speed: 100,  // speed you want the toggle to happen
-		easing: '',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
-		changeText: 0, // if you dont want the button text to change, set this to 0
-		showText: 'View',// the button text to show when a div is closed
-		hideText: 'Close' // the button text to show when a div is open
-					 
-	});
-});
-</script>
-
-<p><button type="button" class="show_hide" href="#" rel="#slidingDiv">View</button></p>
-<div id="slidingDiv" class="toggleDiv" style="display: none;">
-    <p>If local static IP address is required the easiest way is to allow IP address to be given via DHCP then fix the IP address on the router. Not all routers support this.</p>
-
-    <p>Alternatively to set a static IP address on the emonPi itself connect via SSH and edit /etc/network/interfaces. E.g the following commands will SSH into emonPi, create backup of the interfaces file then setup a static IP on Ethernet. For WiFi change eth0 to wlan0.</p>
-    <pre>
-    $ shh pi@192.168.X.X
-    User: "pi" | Password: "emonpi2016"
-    $ rpi-rw
-    $ sudo cp /etc/network/interfaces /etc/network/backup_interfaces
-    $ sudo nano /etc/network/interfaces
-    <br />
-    &gt; Edit the file to be the following changing to suit your network: <br />
-    auto lo
-    iface lo inet loopback
-    iface eth0 inet static
-    address 10.0.1.96        # Static IP address
-    netmask 255.255.255.0
-    network 10.0.1.0
-    broadcast 10.0.1.255
-    gateway 10.0.1.254       # IP address gateway (router)
-    <br />
-    [CTRL + X] then Y to save and exit nano
-    $rpi-ro
-    </pre>
-    <a href="http://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address">Tutorial - How to give your Raspberry Pi a Static IP Address</a>
-
-
-</div>
-
-<p><br /></p>
-
-<h3 id="a-classtitle-link-name5-connect-via-3g-gsm-optional-href5-connect-via-3g-gsm-optionala-5-connect-via-3g-gsm-optional"><a class="title-link" name="5-connect-via-3g-gsm-optional" href="#5-connect-via-3g-gsm-optional"></a> 5. Connect via 3G GSM (optional)</h3>
-
-<p>Huawei HiLink 3G USB GSM/3G dongle modems are supported. Connection should be automatic and LCD will display connection status. (<em>Tested with Huawei E3231 and E3131</em>).</p>
-
-<p><img src="/images/setup/3g.jpg" width="200" /></p>
-
-<p><a href="https://github.com/openenergymonitor/huawei-hilink-status">GSM Documentation</a> | <a href="https://github.com/openenergymonitor/emonpi/tree/master/wifiAP">WiFi Access -point setup (dev)</a></p>
-
-<h3 id="a-classtitle-link-name6-update-href6-updatea-6-update"><a class="title-link" name="6-update" href="#6-update"></a> 6. Update</h3>
-
-<p><strong>UPDATE HIGHLY RECOMMENDED:</strong> Now your emonPi is connected to a network this would be a good time to pull in any new updates: <code class="highlighter-rouge">Setup &gt; Admin &gt; Update</code></p>
-
-<h3 id="a-classtitle-link-name6-shutdown-href6-shutdowna-6-shutdown"><a class="title-link" name="6-shutdown" href="#6-shutdown"></a> 6. Shutdown</h3>
-
-<p>Shut down the emonPi by holding down the shutdown button for 5 seconds, then wait 30 seconds for unit to fully shut down.</p>
-
-<p><img src="/images/setup/emonPi_shutdown.png" width="200" /></p>
-
 <p class="note warning">
-Unplugging power from the emonPi without following the correct shutdown procedure can result in a corrupted SD card.
+Installing clip-on CT sensors on USA electrical systems should only by undertaken by a professional electrician. In a typical residential installation, even if the main breaker is swiched off, the load center feeders and busbars are always live.
 </p>
 
-<p>The emonPi is now ready to be physically installed and the sensors connected.</p>
+<h3 id="use-usa-ac-ac-adapter">2. Use USA AC-AC Adapter</h3>
 
-<p><br /></p>
+<p>Use the <a href="http://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-us-plug">USA AC-AC voltage sensor adapter sold via the OpenEnergyMonitor Shop</a>. The system has been calibrated to work with this adapter. Using any other adapter will usually require re-calibration.</p>
 
-<h3 id="video-guide">Video Guide</h3>
-<div class="videoWrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/77WEj9Q6JEE" frameborder="0" allowfullscreen=""></iframe>
-</div>
+<p><a class="btn pull-right" href="http://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-us-plug/">View in Shop → </a>
+<br /><br /></p>
 
-<hr />
+<h3 id="software-calibration">3. Software Calibration</h3>
 
-<h3 id="next-step-install-raquosetupinstall-1"><a href="/setup/install/">Next step: Install »</a></h3>
+<h4 id="a-emonpi-set-emonhub-usa-calibration">a.) emonPi: Set EmonHub USA Calibration</h4>
+
+<p>In the <code class="highlighter-rouge">[[RFM2Pi]]</code> interfacer section of <code class="highlighter-rouge">emonhub.conf</code> set:</p>
+
+<p><code class="highlighter-rouge">calibration=110v</code></p>
+
+<p>emonhub.conf can be edited directly in local Emoncms as described in <a href="/setup/remote">Setup &gt; Logging Remotely</a>.</p>
+
+<p>See <a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md#a-rfm2pi">[[RFM2Pi]] section of emonHub configuration guide</a> for advanced emonhub config info.</p>
+
+<h4 id="b-emontx-enable-usa-calibration-using-on-board-dip-switchhttpswikiopenenergymonitororgindexphpemontxv34dipswitchconfig">b.) emonTx: Enable USA calibration using <a href="https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4#DIP_Switch_Config">on-board DIP switch</a></h4>
+
+<h3 id="sum-power-values">4. Sum power values</h3>
+
+<p>If monitoring a split-phase system the power values from each leg can be summed in Emoncms to calculate the total power.</p>
+
+<p>The emonPi by default reports <code class="highlighter-rouge">power1_plus_power2</code>, this input will need to be logged to a feed. See <a href="/setup/local">Setup &gt; Logging Locally</a>.</p>
+
+<p>If using emonTx then the power values from multiple CT inputs can be summed in Emoncms using <code class="highlighter-rouge">+ feed</code> Input Processor.</p>
+
+<p>See <a href="https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America">Building Blocks &gt; EmonTx in North America</a> for further technical info about the USA system.</p>
 
 
 </article>
@@ -323,8 +209,8 @@ Unplugging power from the emonPi without following the correct shutdown procedur
 
   
     <section class="aside-module grid__item one-whole lap-one-half">
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/setup/connect.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/setup/connect.markdown'>Edit on GitHub Prose</a></div>
+  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/setup/north-america.markdown'>Edit on GitHub</a></div>
+<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/setup/north-america.markdown'>Edit on GitHub Prose</a></div>
 
 
   <div class='section'>
@@ -334,7 +220,7 @@ Unplugging power from the emonPi without following the correct shutdown procedur
           <b>Setup</b>
         <ul>
           <li><a  href='/setup/'>Hardware </a></li>
-          <li><a class='active' href='/setup/connect/'>Connect </a></li>
+          <li><a  href='/setup/connect/'>Connect </a></li>
           <li><a  href='/setup/install/'>Install </a></li>
           <li><a  href='/setup/local/'>Log Locally </a></li>
           <li><a  href='/setup/remote/'>Log Remotely </a></li>
@@ -342,7 +228,7 @@ Unplugging power from the emonPi without following the correct shutdown procedur
           <li><a  href='/setup/emontx/'>Add Energy Nodes </a></li>
           <li><a  href='/setup/emonth/'>Add Temperature Nodes </a></li>
           <li><a  href='/setup/import/'>Import / Backup </a></li>
-          <li><a  href='/setup/north-america/'>Use in North America </a></li>
+          <li><a class='active' href='/setup/north-america/'>Use in North America </a></li>
           <li><a  href='/setup/troubleshooting/'>Troubleshooting </a></li>
         </ul>
         <li>

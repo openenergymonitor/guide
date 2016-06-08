@@ -4,6 +4,7 @@
   <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
   <!--[if gt IE 8]><!--> <html> <!--<![endif]-->
 
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Histograms - Guide | OpenEnergyMonitor</title>
@@ -50,7 +51,6 @@
     <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon-76.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-180.png">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="/images/favicon-144.png">
     <meta name="msapplication-config" content="/images/browserconfig.xml">
@@ -69,236 +69,55 @@ $(document).ready(function(){
    
      <!--<link href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,700' rel='stylesheet' type='text/css' -->
 
-<style>
+  </head>
 
-.burgerbar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1;
-}
+  <body >
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    right: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
-}
-
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
-
-.closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px !important;
-    margin-left: 50px;
-}
-
-#main {
-    transition: margin-left .5s;
-    padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-button.accordion {
-    background-color: #ffffff;
-    width: 100%;
-    color: #ffffff;
-    cursor: pointer;
-    padding: 18px;
-    border: none;
-    text-align: left;
-    font-weight: bold;
-    outline: none;
-    font-size: 18px;
-}
-
-button.accordion:after {
-    font-family: "FontAwesome";
-    content: '\f067';
-    font-size: 16px;
-    color: #ffffff;
-    float: right;
-    margin-left: 5px;
-}
-
-button.accordion.active:after {
-    content: "\f068";
-}
-
-div.panel {
-    width: 100%;
-    background-color: white;
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.6s ease-in-out;
-}
-
-div.panel a {
-    display: inline-block;
-    font-size: 18px;
-    color: white;
-    width: 100%;
-    background-color: #777;
-    padding-left: 18px;
-    padding-bottom: 9px;
-    padding-top: 9px;
-}
-
-div.panel a:hover {
-    background-color: #0699fa;
-    
-}
-
-div.panel.show {
-    max-height: 500px;
-}
-</style>
-
-<body >
-
-
-  
-  
-  
     <header>
-      
- <div class="burgerbar">
-  <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰</span>
- </div>
+      <div class="grid-wrapper">
+  <div class="grid">
+
+    <div class="grid__item three-tenths lap-two-sixths palm-one-whole ha-title">
+  <a href="/" class="site-title">
+    <!--<img width='40' src='/images/favicon-192x192.png'> -->
+    <!--<span>Guide | OpenEnergyMonitor</span>-->
+    <span style="color:#777;font-weight:bold;font-family:Arial;font-size:20">
+Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-size:20">EnergyMonitor</span>
+  </a>
+</div>
+
+
+<div class="grid__item seven-tenths lap-four-sixths palm-one-whole">
+  <nav>
+    <input type="checkbox" id="toggle">
+<label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu"></label>
+<ul class="menu pull-right">
+  <li><a  href='/setup/'>Setup </a></li>
+  <li>
+    <a href="/applications/">Applications <i class="icon icon-caret-down"></i></a>
+    <ul>
+      <li><a  href='/applications/home-energy/'>Home Energy </a></li>
+      <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
+    </ul>
+  </li>
+  <li><a  href='/integrations/'>Integrations </a></li>
+  <li><a  href='/technical/'>Technical </a></li>
+
+  <li>
+   <a href="/help/">Help <i class="icon icon-caret-down"></i></a>
+    <ul>
+     <li><a  href='https://community.openenergymonitor.org/'>Forum </a></li>
+    </ul>
+  </li>
+   <li><a  href='http://shop.openenergymonitor.com'>Shop <i class="icon icon-shopping-cart"></i> </a></li>
+
+</ul>
+  </nav>
+</div>
+
+  </div>
+</div>
     </header>
-
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-
-<button class="accordion" style="background-color:red;">Set Up</button>
-<div class="panel">
-  
-<a href="/setup/">Hardware</a>
-<a href="/setup/">Connect</a>
-<a href="/setup/install/">Install</a>
-<a href="/setup/local/">Log Locally</a>
-<a href="/setup/remote/">Log Remotely</a>
-<a href="/setup/dashboards/">Dashboards</a>
-<a href="/setup/emontx/">Add Energy Nodes</a>
-<a href="/setup/emonth/">Add Temperature Nodes</a>
-<a href="/setup/import/">Import / Backup</a>
-<a href="/setup/troubleshooting/">Troubleshooting</a>
-
-
-</div>
-
-<button class="accordion" style="background-color:green;">Emoncms</button>
-<div class="panel">
-  
-<a href="/setup/">Hardware</a>
-<a href="/setup/">Connect</a>
-<a href="/setup/install/">Install</a>
-<a href="/setup/local/">Log Locally</a>
-<a href="/setup/remote/">Log Remotely</a>
-<a href="/setup/dashboards/">Dashboards</a>
-<a href="/setup/emontx/">Add Energy Nodes</a>
-<a href="/setup/emonth/">Add Temperature Nodes</a>
-<a href="/setup/import/">Import / Backup</a>
-<a href="/setup/troubleshooting/">Troubleshooting</a>
-
-
-</div><button class="accordion" style="background-color:black;">Applications</button>
-<div class="panel">
-  
-<a href="/setup/">Hardware</a>
-<a href="/setup/">Connect</a>
-<a href="/setup/install/">Install</a>
-<a href="/setup/local/">Log Locally</a>
-<a href="/setup/remote/">Log Remotely</a>
-<a href="/setup/dashboards/">Dashboards</a>
-<a href="/setup/emontx/">Add Energy Nodes</a>
-<a href="/setup/emonth/">Add Temperature Nodes</a>
-<a href="/setup/import/">Import / Backup</a>
-<a href="/setup/troubleshooting/">Troubleshooting</a>
-
-
-</div>
-
-<button class="accordion" style="background-color:blue;">Integrations</button>
-<div class="panel">
-  
-<a href="/setup/">Hardware</a>
-<a href="/setup/">Connect</a>
-<a href="/setup/install/">Install</a>
-<a href="/setup/local/">Log Locally</a>
-<a href="/setup/remote/">Log Remotely</a>
-<a href="/setup/dashboards/">Dashboards</a>
-<a href="/setup/emontx/">Add Energy Nodes</a>
-<a href="/setup/emonth/">Add Temperature Nodes</a>
-<a href="/setup/import/">Import / Backup</a>
-<a href="/setup/troubleshooting/">Troubleshooting</a>
-
-
-</div>
-
-<button class="accordion" style="background-color:orange;">Technical</button>
-<div class="panel">
-  
-<a href="/setup/">Hardware</a>
-<a href="/setup/">Connect</a>
-<a href="/setup/install/">Install</a>
-<a href="/setup/local/">Log Locally</a>
-<a href="/setup/remote/">Log Remotely</a>
-<a href="/setup/dashboards/">Dashboards</a>
-<a href="/setup/emontx/">Add Energy Nodes</a>
-<a href="/setup/emonth/">Add Temperature Nodes</a>
-<a href="/setup/import/">Import / Backup</a>
-<a href="/setup/troubleshooting/">Troubleshooting</a>
-
-
-</div><button class="accordion" style="background-color:purple;">Support</button>
-<div class="panel">
-  
-<a href="/setup/">Hardware</a>
-<a href="/setup/">Connect</a>
-<a href="/setup/install/">Install</a>
-<a href="/setup/local/">Log Locally</a>
-<a href="/setup/remote/">Log Remotely</a>
-<a href="/setup/dashboards/">Dashboards</a>
-<a href="/setup/emontx/">Add Energy Nodes</a>
-<a href="/setup/emonth/">Add Temperature Nodes</a>
-<a href="/setup/import/">Import / Backup</a>
-<a href="/setup/troubleshooting/">Troubleshooting</a>
-
-
-
-</div>
-  
-  
-</div>
-
-
-
-<div id="main">
-
 
     
 
@@ -389,12 +208,13 @@ div.panel.show {
           <li><a  href='/setup/emontx/'>Add Energy Nodes </a></li>
           <li><a  href='/setup/emonth/'>Add Temperature Nodes </a></li>
           <li><a  href='/setup/import/'>Import / Backup </a></li>
+          <li><a  href='/setup/north-america/'>Use in North America </a></li>
           <li><a  href='/setup/troubleshooting/'>Troubleshooting </a></li>
         </ul>
         <li>
           <b>Emoncms</b>
           <ul>
-          <li><a  href='/setup/daily-kwh'>Daily kWh</a></li>
+          <li><a  href='/setup/daily-kwh'>Daily kWh </a></li>
           <li><a  href='/setup/daily-averages'>Daily Averages </a></li>
           <li><a  href='/setup/export-csv'>Exporting CSV </a></li>
           <li><a  href='/setup/histograms'>Histograms </a></li>
@@ -432,7 +252,7 @@ div.panel.show {
         <li><a  href='/technical/resources/'>Resources </a></li>
        </ul>
       </li>
-      
+
       <li>
      <b>Support</b>
         <ul>
@@ -440,8 +260,8 @@ div.panel.show {
          <li><a  href='/help/'>Contact </a></li>
         </ul>
       </li>
-      
-      
+
+
     </div>
 <gcse:search></gcse:search>
 </section>
@@ -496,7 +316,7 @@ fieldset {
 
   <a rel="me" href='https://twitter.com/openenergymon'><i class="icon-twitter"></i></a>
   <a rel="me" href='https://github.com/openenergymonitor/guide'><i class="icon-github"></i></a>
-  <a rel="me" href='http://blog.openenergymonitor.org'><i class="icon-rss"></i></a>
+  <a rel="me" href='http://blog.openenergymonitor.org'><i class="icon-bullhorn"></i></a>
 
   <div class="credit">
     Website powered by <a href='http://jekyllrb.com/'>Jekyll</a> and <a href='https://github.com/coogie/oscailte'>Oscalite</a>.<br />
@@ -553,38 +373,6 @@ fieldset {
   });
 </script>
 <script src="/javascripts/github.js"></script>
-
-
-
-
-</div>
-</div>
-</div>
-
-
-<script>
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginRight = "250px";
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginRight= "0";
-}
-
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
-  }
-}
-
-</script>
-
 
   </body>
 </html>
