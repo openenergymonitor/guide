@@ -5,7 +5,7 @@
 .burgerbar {
     position: fixed;
     top: 0;
-    right: 0;
+    right: 100px;
     z-index: 1;
 }
 
@@ -16,23 +16,30 @@
     z-index: 2;
     top: 0;
     right: 0;
-    background-color: #111;
+    background-color: #777;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-}
+-moz-box-shadow:    3px 3px 8px 2px #000000;
+  -webkit-box-shadow: 3px 3px 8px 2px #000000;
+  box-shadow:         0px 0px 20px 0px #000000;}
 
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #ffffff;
     display: block;
     transition: 0.3s
 }
 
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+.sidenav span {
+    margin-right: -24px;
+}
+
+.sidenav span:after {
+    font-family: "FontAwesome";
+    content:"\f00d";
 }
 
 .closebtn {
@@ -44,8 +51,7 @@
 }
 
 #main {
-    transition: margin-left .5s;
-    padding: 16px;
+    transition: margin-right .5s;
 }
 
 @media screen and (max-height: 450px) {
@@ -54,7 +60,7 @@
 }
 
 button.accordion {
-    background-color: #ffffff;
+    background-color: #777;
     width: 100%;
     color: #ffffff;
     cursor: pointer;
@@ -64,6 +70,7 @@ button.accordion {
     font-weight: bold;
     outline: none;
     font-size: 18px;
+    border-bottom: 1px solid white;
 }
 
 button.accordion:after {
@@ -90,16 +97,18 @@ div.panel {
 div.panel a {
     display: inline-block;
     font-size: 18px;
-    color: white;
+    color: #777;
     width: 100%;
-    background-color: #777;
+    background-color: #ffffff;
     padding-left: 18px;
     padding-bottom: 9px;
     padding-top: 9px;
+    transition: none;
 }
 
 div.panel a:hover {
     background-color: #0699fa;
+    color: #ffffff;
     
 }
 
@@ -108,12 +117,9 @@ div.panel.show {
 }
 </style>
 
-<body {% if page.body_id %} id="{{ page.body_id }}"{% endif %}>
 
 
-  
-  
-  
+
     <header>
       
  <div class="burgerbar">
@@ -122,9 +128,9 @@ div.panel.show {
     </header>
 
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span></span></a>
 
-<button class="accordion" style="background-color:red;">Set Up</button>
+<button class="accordion" style="border-top:1px solid white">Set Up</button>
 <div class="panel">
   
 <a href="/setup/">Hardware</a>
@@ -141,7 +147,7 @@ div.panel.show {
 
 </div>
 
-<button class="accordion" style="background-color:green;">Emoncms</button>
+<button class="accordion">Emoncms</button>
 <div class="panel">
   
 <a href="/setup/">Hardware</a>
@@ -156,24 +162,7 @@ div.panel.show {
 <a href="/setup/troubleshooting/">Troubleshooting</a>
 
 
-</div><button class="accordion" style="background-color:black;">Applications</button>
-<div class="panel">
-  
-<a href="/setup/">Hardware</a>
-<a href="/setup/">Connect</a>
-<a href="/setup/install/">Install</a>
-<a href="/setup/local/">Log Locally</a>
-<a href="/setup/remote/">Log Remotely</a>
-<a href="/setup/dashboards/">Dashboards</a>
-<a href="/setup/emontx/">Add Energy Nodes</a>
-<a href="/setup/emonth/">Add Temperature Nodes</a>
-<a href="/setup/import/">Import / Backup</a>
-<a href="/setup/troubleshooting/">Troubleshooting</a>
-
-
-</div>
-
-<button class="accordion" style="background-color:blue;">Integrations</button>
+</div><button class="accordion">Applications</button>
 <div class="panel">
   
 <a href="/setup/">Hardware</a>
@@ -190,7 +179,7 @@ div.panel.show {
 
 </div>
 
-<button class="accordion" style="background-color:orange;">Technical</button>
+<button class="accordion">Integrations</button>
 <div class="panel">
   
 <a href="/setup/">Hardware</a>
@@ -205,7 +194,24 @@ div.panel.show {
 <a href="/setup/troubleshooting/">Troubleshooting</a>
 
 
-</div><button class="accordion" style="background-color:purple;">Support</button>
+</div>
+
+<button class="accordion">Technical</button>
+<div class="panel">
+  
+<a href="/setup/">Hardware</a>
+<a href="/setup/">Connect</a>
+<a href="/setup/install/">Install</a>
+<a href="/setup/local/">Log Locally</a>
+<a href="/setup/remote/">Log Remotely</a>
+<a href="/setup/dashboards/">Dashboards</a>
+<a href="/setup/emontx/">Add Energy Nodes</a>
+<a href="/setup/emonth/">Add Temperature Nodes</a>
+<a href="/setup/import/">Import / Backup</a>
+<a href="/setup/troubleshooting/">Troubleshooting</a>
+
+
+</div><button class="accordion">Support</button>
 <div class="panel">
   
 <a href="/setup/">Hardware</a>
@@ -298,6 +304,4 @@ for (i = 0; i < acc.length; i++) {
 
 </script>
 
-
-  </body>
 </html>
