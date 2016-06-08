@@ -4,7 +4,6 @@
   <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
   <!--[if gt IE 8]><!--> <html> <!--<![endif]-->
 
-  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Hardware - Guide | OpenEnergyMonitor</title>
@@ -51,6 +50,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon-76.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-180.png">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="/images/favicon-144.png">
     <meta name="msapplication-config" content="/images/browserconfig.xml">
@@ -69,55 +69,236 @@ $(document).ready(function(){
    
      <!--<link href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,700' rel='stylesheet' type='text/css' -->
 
-  </head>
+<style>
 
-  <body >
+.burgerbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
 
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+button.accordion {
+    background-color: #ffffff;
+    width: 100%;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    font-weight: bold;
+    outline: none;
+    font-size: 18px;
+}
+
+button.accordion:after {
+    font-family: "FontAwesome";
+    content: '\f067';
+    font-size: 16px;
+    color: #ffffff;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\f068";
+}
+
+div.panel {
+    width: 100%;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+}
+
+div.panel a {
+    display: inline-block;
+    font-size: 18px;
+    color: white;
+    width: 100%;
+    background-color: #777;
+    padding-left: 18px;
+    padding-bottom: 9px;
+    padding-top: 9px;
+}
+
+div.panel a:hover {
+    background-color: #0699fa;
+    
+}
+
+div.panel.show {
+    max-height: 500px;
+}
+</style>
+
+<body >
+
+
+  
+  
+  
     <header>
-      <div class="grid-wrapper">
-  <div class="grid">
-
-    <div class="grid__item three-tenths lap-two-sixths palm-one-whole ha-title">
-  <a href="/" class="site-title">
-    <!--<img width='40' src='/images/favicon-192x192.png'> -->
-    <!--<span>Guide | OpenEnergyMonitor</span>-->
-    <span style="color:#777;font-weight:bold;font-family:Arial;font-size:20">
-Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-size:20">EnergyMonitor</span>
-  </a>
-</div>
-
-
-<div class="grid__item seven-tenths lap-four-sixths palm-one-whole">
-  <nav>
-    <input type="checkbox" id="toggle">
-<label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu"></label>
-<ul class="menu pull-right">
-  <li><a class='active' href='/setup/'>Setup </a></li>
-  <li>
-    <a href="/applications/">Applications <i class="icon icon-caret-down"></i></a>
-    <ul>
-      <li><a  href='/applications/home-energy/'>Home Energy </a></li>
-      <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
-    </ul>
-  </li>
-  <li><a  href='/integrations/'>Integrations </a></li>
-  <li><a  href='/technical/'>Technical </a></li>
-
-  <li>
-   <a href="/help/">Help <i class="icon icon-caret-down"></i></a>
-    <ul>
-     <li><a  href='https://community.openenergymonitor.org/'>Forum </a></li>
-    </ul>
-  </li>
-   <li><a  href='http://shop.openenergymonitor.com'>Shop <i class="icon icon-shopping-cart"></i> </a></li>
-
-</ul>
-  </nav>
-</div>
-
-  </div>
-</div>
+      
+ <div class="burgerbar">
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰</span>
+ </div>
     </header>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+
+<button class="accordion" style="background-color:red;">Set Up</button>
+<div class="panel">
+  
+<a href="/setup/">Hardware</a>
+<a href="/setup/">Connect</a>
+<a href="/setup/install/">Install</a>
+<a href="/setup/local/">Log Locally</a>
+<a href="/setup/remote/">Log Remotely</a>
+<a href="/setup/dashboards/">Dashboards</a>
+<a href="/setup/emontx/">Add Energy Nodes</a>
+<a href="/setup/emonth/">Add Temperature Nodes</a>
+<a href="/setup/import/">Import / Backup</a>
+<a href="/setup/troubleshooting/">Troubleshooting</a>
+
+
+</div>
+
+<button class="accordion" style="background-color:green;">Emoncms</button>
+<div class="panel">
+  
+<a href="/setup/">Hardware</a>
+<a href="/setup/">Connect</a>
+<a href="/setup/install/">Install</a>
+<a href="/setup/local/">Log Locally</a>
+<a href="/setup/remote/">Log Remotely</a>
+<a href="/setup/dashboards/">Dashboards</a>
+<a href="/setup/emontx/">Add Energy Nodes</a>
+<a href="/setup/emonth/">Add Temperature Nodes</a>
+<a href="/setup/import/">Import / Backup</a>
+<a href="/setup/troubleshooting/">Troubleshooting</a>
+
+
+</div><button class="accordion" style="background-color:black;">Applications</button>
+<div class="panel">
+  
+<a href="/setup/">Hardware</a>
+<a href="/setup/">Connect</a>
+<a href="/setup/install/">Install</a>
+<a href="/setup/local/">Log Locally</a>
+<a href="/setup/remote/">Log Remotely</a>
+<a href="/setup/dashboards/">Dashboards</a>
+<a href="/setup/emontx/">Add Energy Nodes</a>
+<a href="/setup/emonth/">Add Temperature Nodes</a>
+<a href="/setup/import/">Import / Backup</a>
+<a href="/setup/troubleshooting/">Troubleshooting</a>
+
+
+</div>
+
+<button class="accordion" style="background-color:blue;">Integrations</button>
+<div class="panel">
+  
+<a href="/setup/">Hardware</a>
+<a href="/setup/">Connect</a>
+<a href="/setup/install/">Install</a>
+<a href="/setup/local/">Log Locally</a>
+<a href="/setup/remote/">Log Remotely</a>
+<a href="/setup/dashboards/">Dashboards</a>
+<a href="/setup/emontx/">Add Energy Nodes</a>
+<a href="/setup/emonth/">Add Temperature Nodes</a>
+<a href="/setup/import/">Import / Backup</a>
+<a href="/setup/troubleshooting/">Troubleshooting</a>
+
+
+</div>
+
+<button class="accordion" style="background-color:orange;">Technical</button>
+<div class="panel">
+  
+<a href="/setup/">Hardware</a>
+<a href="/setup/">Connect</a>
+<a href="/setup/install/">Install</a>
+<a href="/setup/local/">Log Locally</a>
+<a href="/setup/remote/">Log Remotely</a>
+<a href="/setup/dashboards/">Dashboards</a>
+<a href="/setup/emontx/">Add Energy Nodes</a>
+<a href="/setup/emonth/">Add Temperature Nodes</a>
+<a href="/setup/import/">Import / Backup</a>
+<a href="/setup/troubleshooting/">Troubleshooting</a>
+
+
+</div><button class="accordion" style="background-color:purple;">Support</button>
+<div class="panel">
+  
+<a href="/setup/">Hardware</a>
+<a href="/setup/">Connect</a>
+<a href="/setup/install/">Install</a>
+<a href="/setup/local/">Log Locally</a>
+<a href="/setup/remote/">Log Remotely</a>
+<a href="/setup/dashboards/">Dashboards</a>
+<a href="/setup/emontx/">Add Energy Nodes</a>
+<a href="/setup/emonth/">Add Temperature Nodes</a>
+<a href="/setup/import/">Import / Backup</a>
+<a href="/setup/troubleshooting/">Troubleshooting</a>
+
+
+
+</div>
+  
+  
+</div>
+
+
+
+<div id="main">
+
 
     
 
@@ -185,7 +366,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
       <li>Install next to utility meter</li>
       <li>Local &amp; remote data logging with <a href="https://emoncms.org/">Emoncms</a>, our open-source web-app for processing, logging and visualising energy and other environmental data, such as humidity and temperature</li>
       <li>Requires WiFi / Ethernet plus 2 x power outlets</li>
-      <li>Requires <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">pre-built SD card image</a> (included)</li>
+      <li>Requires <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&amp;-Change-Log">pre-built SD card image</a> (included)</li>
     </ul>
 
     <h4 id="sensors-required">Sensors required:</h4>
@@ -201,7 +382,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
       <li>1 x <a href="https://shop.openenergymonitor.com/power-supplies/">USB 5V DC PSU</a></li>
     </ul>
 
-    <p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emonPi-3">View in Shop → </a></p>
+    <p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emonPi-3">View in Store → </a></p>
 
     <p><br /></p>
 
@@ -227,26 +408,7 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 An emonTx can be powered by 3 x AA batteries; however, if possible, it is recommended to power the unit with an AC-AC adapter to provide an AC voltage reference for more accurate Real Power and VRMS calculations.
 </p>
 
-    <p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz">View in Shop → </a></p>
-
-    <p><br /></p>
-
-    <hr />
-
-    <h4 id="optical-utility-meter-led-pulse-sensorhttpsshopopenenergymonitorcomoptical-utility-meter-led-pulse-sensor-optional"><a href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">Optical Utility Meter LED Pulse Sensor</a> (optional)</h4>
-
-    <p><img src="/images/setup/ops.png" width="100" /></p>
-
-    <ul>
-      <li>Optional add-on sensor for interfacing directly with utility meters</li>
-      <li>Compatible with all utility meters with LED pulse output</li>
-      <li>Compatible with emonPi &amp; emonTx (one pulse sensor per unit)</li>
-      <li>Reports exact amount of energy (Wh) reported by utility meter</li>
-      <li>Cannot measure instantaneous power</li>
-      <li>Best used in conjunction with clip-on CT sensor(s)</li>
-    </ul>
-
-    <p><a class="btn pull-right" href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor">View in Shop → </a></p>
+    <p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz">View in Store → </a></p>
 
     <p><br /></p>
 
@@ -254,20 +416,35 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
     <h4 id="emonbasehttpsshopopenenergymonitorcomemonbase-web-connected-base-station-alternative-to-emonpi"><a href="https://shop.openenergymonitor.com/emonbase-web-connected-base-station/">emonBase</a> (alternative to emonPi)</h4>
 
-    <p><img src="/images/setup/emonbase.jpg" width="200" /></p>
-
     <ul>
       <li>Web connected gateway: <a href="https://shop.openenergymonitor.com/raspberry-pi-2-web-connected-base-station/">Raspberry Pi</a> + <a href="https://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/">RFM69Pi RF receiver board</a></li>
       <li>No on-board energy monitoring functions</li>
       <li>Receive data via low power RF (433Mhz) from emonTx or emonTH</li>
       <li>Local &amp; Remote Emoncms data logging</li>
-      <li>Runs the same <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">software stack</a> as the emonPi</li>
+      <li>Runs the same <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&amp;-Change-Log">software stack</a> as the emonPi</li>
       <li>No LCD screen to display local IP address or shut-down button</li>
       <li>Knowledge of SSH highly desirable</li>
-      <li>Requires <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">pre-built SD card image</a> (optional extra)</li>
+      <li>Requires <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&amp;-Change-Log">pre-built SD card image</a> (optional extra)</li>
     </ul>
 
-    <p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emonbase-web-connected-base-station">View in Shop → </a></p>
+    <p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emonbase-web-connected-base-station">View in Store → </a></p>
+
+    <p><br /></p>
+
+    <hr />
+
+    <h4 id="optical-utility-meter-led-pulse-sensorhttpsshopopenenergymonitorcomoptical-utility-meter-led-pulse-sensor-optional"><a href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">Optical Utility Meter LED Pulse Sensor</a> (optional)</h4>
+
+    <ul>
+      <li>Optional add-on sensor for interfacing directly with utility meter</li>
+      <li>Compatible with emonPi &amp; emonTx (one per unit)</li>
+      <li>Requires utility meter with LED pulse output</li>
+      <li>Reports exact amount of energy (Wh) reported by utility meter</li>
+      <li>Does not report instantaneous power</li>
+      <li>Best used in conjunction with clip-on CT sensor(s)</li>
+    </ul>
+
+    <p><a class="btn pull-right" href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor">View in Store → </a></p>
 
     <p><br /></p>
 
@@ -298,10 +475,10 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
       <li>Local &amp; Remote Emoncms data logging</li>
       <li>Requires WiFi / Ethernet plus 2 x power outlets</li>
       <li>Single unit required to monitor solar PV, provided the generation and site-consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accessible at this location</li>
-      <li>Requires <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">pre-built SD card image</a> (included)</li>
+      <li>Requires <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&amp;-Change-Log">pre-built SD card image</a> (included)</li>
     </ul>
 
-    <p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emonPi-3">View in Shop → </a></p>
+    <p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emonPi-3">View in Store → </a></p>
 
     <p><br /></p>
 
@@ -337,7 +514,26 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
       <li><em>1 x <a href="https://shop.openenergymonitor.com/power-supplies/">AC-AC voltage sensor adapter</a> (optional if using an emonTx but highly recommended)</em></li>
     </ul>
 
-    <p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz">View in Shop → </a></p>
+    <p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz">View in Store → </a></p>
+
+    <p><br /></p>
+
+    <hr />
+
+    <h4 id="emonbasehttpsshopopenenergymonitorcomemonbase-web-connected-base-station-emonpi-alternative"><a href="https://shop.openenergymonitor.com/emonbase-web-connected-base-station/">emonBase</a> (emonPi alternative)</h4>
+
+    <ul>
+      <li>Web connected gateway: <a href="https://shop.openenergymonitor.com/raspberry-pi-2-web-connected-base-station/">Raspberry Pi</a> + <a href="https://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/">RFM69Pi RF receiver board</a></li>
+      <li>No on-board energy monitoring functions</li>
+      <li>Receive data via low power RF (433Mhz) from emonTx or emonTH</li>
+      <li>Local &amp; Remote Emoncms data logging</li>
+      <li>Runs the same <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&amp;-Change-Log">software stack</a> as the emonPi</li>
+      <li>No LCD screen to display local IP address or shut-down button</li>
+      <li>Knowledge of SSH highly desirable</li>
+      <li>Requires <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Repository-&amp;-Change-Log">pre-built SD card image</a> (optional extra)</li>
+    </ul>
+
+    <p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emonbase-web-connected-base-station">View in Store → </a></p>
 
     <p><br /></p>
 
@@ -345,42 +541,18 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 
     <h4 id="optical-utility-meter-led-pulse-sensorhttpsshopopenenergymonitorcomoptical-utility-meter-led-pulse-sensor-optional-1"><a href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">Optical Utility Meter LED Pulse Sensor</a> (optional)</h4>
 
-    <p><img src="/images/setup/ops.png" width="100" /></p>
-
     <ul>
-      <li>Optional add-on sensor for interfacing directly with utility meters</li>
-      <li>Compatible with all utility meters with LED pulse output</li>
-      <li>Compatible with emonPi &amp; emonTx (one pulse sensor per unit)</li>
+      <li>Optional add-on sensor for interfacing directly with utility meter</li>
+      <li>Compatible with emonPi &amp; emonTx (one per unit)</li>
+      <li>Requires utility meter with LED pulse output</li>
       <li>Reports exact amount of energy (Wh) reported by utility meter</li>
-      <li>Cannot measure instantaneous power</li>
+      <li>Does not report instantaneous power</li>
       <li>Best used in conjunction with clip-on CT sensor(s)</li>
     </ul>
 
-    <p><a class="btn pull-right" href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor">View in Shop → </a></p>
+    <p><a class="btn pull-right" href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor">View in Store → </a></p>
 
     <p><br /></p>
-
-    <hr />
-
-    <h4 id="emonbasehttpsshopopenenergymonitorcomemonbase-web-connected-base-station-alternative-to-emonpi-1"><a href="https://shop.openenergymonitor.com/emonbase-web-connected-base-station/">emonBase</a> (alternative to emonPi)</h4>
-
-    <p><img src="/images/setup/emonbase.jpg" width="200" /></p>
-
-    <ul>
-      <li>Web connected gateway: <a href="https://shop.openenergymonitor.com/raspberry-pi-2-web-connected-base-station/">Raspberry Pi</a> + <a href="https://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/">RFM69Pi RF receiver board</a></li>
-      <li>No on-board energy monitoring functions</li>
-      <li>Receive data via low power RF (433Mhz) from emonTx or emonTH</li>
-      <li>Local &amp; Remote Emoncms data logging</li>
-      <li>Runs the same <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">software stack</a> as the emonPi</li>
-      <li>No LCD screen to display local IP address or shut-down button</li>
-      <li>Knowledge of SSH highly desirable</li>
-      <li>Requires <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">pre-built SD card image</a> (optional extra)</li>
-    </ul>
-
-    <p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emonbase-web-connected-base-station">View in Shop → </a></p>
-
-    <p><br />
-<br /></p>
 
   </div> <!-- END SOLAR PV -->
 <div class="install-instructions temperature">
@@ -427,10 +599,6 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
       <li>Sensor wire can be extended using RJ45 cable and <a href="http://shop.openenergymonitor.com/rj45-extender/">RJ45 Extender</a></li>
     </ul>
 
-    <p><a class="btn pull-right" href="http://shop.openenergymonitor.com/rj45-encapsulated-ds18b20-temperature-sensor/">View in Shop → </a></p>
-
-    <p><br /></p>
-
     <h4 id="ds18b20-sensor-on-wirehttpshopopenenergymonitorcomencapsulated-ds18b20-temperature-sensor"><a href="http://shop.openenergymonitor.com/encapsulated-ds18b20-temperature-sensor/">DS18B20 sensor on wire</a></h4>
     <p><img src="https://cdn2.bigcommerce.com/server4400/98a75/products/173/images/668/SWE2btesting__95144.1429694876.1280.1280.jpg?c=2" width="300" /></p>
 
@@ -439,9 +607,6 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
       <li>Compatible with emonPi using <a href="http://shop.openenergymonitor.com/rj45-to-terminal-block-breakout-for-ds18b20/">RJ45 Breakout</a></li>
       <li>Up to 6 sensors can be connected to emonPi / emonTx using <a href="http://shop.openenergymonitor.com/rj45-to-terminal-block-breakout-for-ds18b20/">RJ45 Breakout</a></li>
     </ul>
-
-    <p><a class="btn pull-right" href="http://shop.openenergymonitor.com/encapsulated-ds18b20-temperature-sensor/">View in Shop → </a>
-<br /></p>
 
   </div> <!-- END TEMP -->
 
@@ -599,13 +764,12 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
           <li><a  href='/setup/emontx/'>Add Energy Nodes </a></li>
           <li><a  href='/setup/emonth/'>Add Temperature Nodes </a></li>
           <li><a  href='/setup/import/'>Import / Backup </a></li>
-          <li><a  href='/setup/north-america/'>Use in North America </a></li>
           <li><a  href='/setup/troubleshooting/'>Troubleshooting </a></li>
         </ul>
         <li>
           <b>Emoncms</b>
           <ul>
-          <li><a  href='/setup/daily-kwh'>Daily kWh </a></li>
+          <li><a  href='/setup/daily-kwh'>Daily kWh</a></li>
           <li><a  href='/setup/daily-averages'>Daily Averages </a></li>
           <li><a  href='/setup/export-csv'>Exporting CSV </a></li>
           <li><a  href='/setup/histograms'>Histograms </a></li>
@@ -643,7 +807,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
         <li><a  href='/technical/resources/'>Resources </a></li>
        </ul>
       </li>
-
+      
       <li>
      <b>Support</b>
         <ul>
@@ -651,8 +815,8 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
          <li><a  href='/help/'>Contact </a></li>
         </ul>
       </li>
-
-
+      
+      
     </div>
 <gcse:search></gcse:search>
 </section>
@@ -707,7 +871,7 @@ fieldset {
 
   <a rel="me" href='https://twitter.com/openenergymon'><i class="icon-twitter"></i></a>
   <a rel="me" href='https://github.com/openenergymonitor/guide'><i class="icon-github"></i></a>
-  <a rel="me" href='http://blog.openenergymonitor.org'><i class="icon-bullhorn"></i></a>
+  <a rel="me" href='http://blog.openenergymonitor.org'><i class="icon-rss"></i></a>
 
   <div class="credit">
     Website powered by <a href='http://jekyllrb.com/'>Jekyll</a> and <a href='https://github.com/coogie/oscailte'>Oscalite</a>.<br />
@@ -764,6 +928,38 @@ fieldset {
   });
 </script>
 <script src="/javascripts/github.js"></script>
+
+
+
+
+</div>
+</div>
+</div>
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginRight = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginRight= "0";
+}
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+
+</script>
+
 
   </body>
 </html>
