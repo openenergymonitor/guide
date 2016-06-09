@@ -42,7 +42,7 @@ This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/
   - [1.2A USB power adapter recommended](http://shop.openenergymonitor.com/power-supplies/)
 
   - <p class="note"> Take care to connect Ethernet to the socket on the same side as the USB sockets, not the RJ45 connector on the opposite side.</p>
-  - The emonPi LCD display will start by cycling through information about what is connected to it. Once the Raspberry Pi has booted up, the LCD will display the IP address of the emonPi on your local network.
+  - The emonPi LCD display will display firmware version then scan for connected sensors. Once the Raspberry Pi has booted up, the LCD will display the IP address of the emonPi on the local network.
  - ![Ethernet Connected](/images/setup/Etherent_Connected.jpg)
 
 
