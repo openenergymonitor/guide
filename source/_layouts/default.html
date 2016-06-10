@@ -130,6 +130,7 @@ box-sizing: border-box;
 .monitormytitle {
   
     position: absolute;
+    top: 0;
     margin-left: 6px;
     line-height: 60px;
     font-size: 30px;
@@ -138,6 +139,8 @@ box-sizing: border-box;
     color: #0699fa;
     z-index: 22;
     width: 100%;
+    transition: 0.3s ease-in-out;
+
 }
 
 .monitormytitle span {
@@ -151,7 +154,7 @@ box-sizing: border-box;
 
 .burgerbar {
     position: fixed;
-    top: 10px;
+    top: 8px;
     right: 20px;
     z-index: 30;
     transition: 0.3s ease-in-out;
@@ -169,16 +172,11 @@ box-sizing: border-box;
     position: fixed;
     z-index: 23;
     top: 0;
-    right: -255px;
+    right: -250px;
     background-color: #777;
     padding-top: 60px;
     overflow-x: hidden;
     transition: 0.3s ease-in-out;
-    
-    
-    -moz-box-shadow:      0px 0px 20px 0px #000000;
-    -webkit-box-shadow:   0px 0px 20px 0px #000000;
-    box-shadow:           0px 0px 20px 0px #000000;
 }
 
 .sidenav a {
@@ -300,7 +298,7 @@ div.panel.show {
 <header>
 <div class="titleholder">
     
-        <div class="monitormytitle">
+        <div class="monitormytitle" id="monitormytitle">
             
             <span>Open</span>EnergyMonitor
 
@@ -525,13 +523,18 @@ for (i = 0; i < acc.length; i++) {
 
 function openNav() {
     document.getElementById("mySidenav").style.right = "0";
+    document.getElementById("mySidenav").style.boxShadow = "0px 0px 20px 0px #000000";
+    document.getElementById("monitormytitle").style.top = "-60px";
     document.getElementById("main").style.right = "250px";
     document.getElementById( "buttonspan" ).setAttribute( "onClick", "javascript: closeNav();" );
     document.getElementById("burgerid").style.right = "270px";
+
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.right = "-255px";
+    document.getElementById("mySidenav").style.right = "-250px";
+    document.getElementById("mySidenav").style.boxShadow = "none";
+    document.getElementById("monitormytitle").style.top = "0";
     document.getElementById("main").style.right= "0";
     document.getElementById( "buttonspan" ).setAttribute( "onClick", "javascript: openNav();" );
     document.getElementById("burgerid").style.right = "20px";
