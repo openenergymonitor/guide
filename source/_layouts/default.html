@@ -2,12 +2,86 @@
 
 <style>
 
+.searchbundle {
+  margin-top: 90px;
+  
+}
+
+.userguidepress {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 60px;
+  z-index: 700;
+  cursor: pointer;
+}
+
+.userguide {
+  position: absolute;
+  top: 0;
+  height: 60px;
+  color: #0699fa;
+  padding-top: 8px;
+  width: 100%;
+  text-align: left;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: white;
+}
+
+.userguide span {
+  color: #777;
+  padding-left: 15px;
+}
+
+.userguideicon {
+  
+  position: absolute;
+  top: 1px;
+  right: 5px;
+  height:60px;
+  width: 40px;
+  text-align: center;
+  z-index: 600;
+}
+
+.userguideicon span {
+  display: block;
+  font-size: 30px;
+  height: 60px;
+  line-height: 60px;
+}
+
+.userguideicon span:after {
+  font-family: "FontAwesome";
+  content: "\f13a";
+}
+
+.twitlinks {
+  position: relative;
+
+  background-color: #777;
+  width: 100%;
+  text-align: center;
+
+}
+
+.twitlinks i {
+  display: inline-block;
+  font-size: 30px;
+  color: #ffffff;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+
 .searchtools {
   position: relative;
   display: block;
   width: 100%;
   height: 60px;
-  top: 0;
+  background-color: #777;
 }
 
 .searchtools form {
@@ -15,7 +89,10 @@
 }
 .searchtools input.search {
 width: 125px;
-margin-top: 20px;
+box-sizing: border-box;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    outline: none;
 }
 
 .searchtools fieldset {
@@ -24,7 +101,20 @@ margin-top: 20px;
   border: 0;
   margin: 0;
   text-align: center;
+  font-size: 25px;
+  padding-top: 11px;
+
 }
+.searchtools fieldset span:after {
+    font-family:"FontAwesome";
+    content:"\f002";
+    color: #ffffff;
+    font-size: 25px;
+    padding-right: 10px;
+
+}
+
+
 .titleholder {
   
     position: fixed;
@@ -60,10 +150,11 @@ margin-top: 20px;
 }
 
 .burgerbar {
-    position: absolute;
-    top: -80px;
+    position: fixed;
+    top: 10px;
     right: 20px;
     z-index: 30;
+    transition: 0.3s ease-in-out;
 }
 
 .burgerbar span:after {
@@ -74,14 +165,20 @@ margin-top: 20px;
 
 .sidenav {
     height: 100%;
-    width: 0;
+    width: 250px;
     position: fixed;
     z-index: 23;
     top: 0;
-    right: 0;
+    right: -255px;
     background-color: #777;
+    padding-top: 60px;
     overflow-x: hidden;
     transition: 0.3s ease-in-out;
+    
+    
+    -moz-box-shadow:      0px 0px 20px 0px #000000;
+    -webkit-box-shadow:   0px 0px 20px 0px #000000;
+    box-shadow:           0px 0px 20px 0px #000000;
 }
 
 .sidenav a {
@@ -168,21 +265,24 @@ button.accordion:hover {
 
 div.panel {
     width: 100%;
-    background-color: #f8f8f8;
+    background-color: #ebebeb;
     max-height: 0;
     overflow: hidden;
-    transition: 0.6s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 div.panel a {
     display: inline-block;
     font-size: 18px;
-    color: #777;
+    color: #5f5f5f;
     width: 100%;
     padding-left: 18px;
     padding-bottom: 9px;
     padding-top: 9px;
     transition: none;
+       -moz-box-shadow:    inset 0 0 5px #ffffff;
+   -webkit-box-shadow: inset 0 0 5px #ffffff;
+   box-shadow:         inset 0 0 5px #ffffff;
 }
 
 div.panel a:hover {
@@ -202,31 +302,34 @@ div.panel.show {
     
         <div class="monitormytitle">
             
-            <a href="/#setup"><span>Open</span>EnergyMonitor</a>
+            <span>Open</span>EnergyMonitor
 
 
 
 </div>
+</div>
+
+  <div id="burgerid" class="burgerbar">
+<span id="buttonspan" style="font-size:30px;cursor:pointer" onclick="openNav()"></span>
 </div>
   
 </header>
 
 <div id="mySidenav" class="sidenav">
-
-<div class="searchtools">
-
-{% if site.simple_search %}
-<form action="{{ site.simple_search }}" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:guide.openenergymonitor.org" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search..." />
-  </fieldset>
-</form>
-{% endif %}
-
+<div class="userguideicon"> <span id="iconswitcher"></span></div>
+<div class="userguide">
+<span>User</span> Guide
+</div>
+<div class="userguidepress"></div>
+<div class="panel">
+  
+<a href="/setup/">Main Site</a>
+<a href="/setup/">Forum</a>
+<a href="/setup/install/">Resources</a>
+<a href="/setup/local/">Shop</a>
+<a href="/setup/remote/">Blog</a>
 
 </div>
-
 
 <button class="accordion" style="border-top:4px solid #474747">Set Up</button>
 <div class="panel">
@@ -325,19 +428,38 @@ div.panel.show {
 
 
 </div>
+<div class="searchbundle">
+<div class="searchtools">
 
- 
+{% if site.simple_search %}
+<form action="{{ site.simple_search }}" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:guide.openenergymonitor.org" />
+    <span></span><input class="search" type="text" name="q" results="0" placeholder="Search..." />
+  </fieldset>
+</form>
+{% endif %}
+
+
+</div>
+
+
+<div class="twitlinks">
+
+  <i class="icon-twitter"></i>
+  <i class="icon-github"></i>
+  <i class="icon-bullhorn"></i>
+
+</div>
+
+
+</div>
 </div>
 
 
 
 <div id="main">
   
-  
-  <div id="burgerid" class="burgerbar">
-<span id="buttonspan" style="font-size:30px;cursor:pointer" onclick="openNav()"></span>
-</div>
-
 
     {% if page.hero_unit %}
       {% include site/hero_unit.html %}
@@ -379,6 +501,18 @@ div.panel.show {
 <script>
 
 var acc = document.getElementsByClassName("accordion");
+
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+
+var acc = document.getElementsByClassName("userguidepress");
+
 var i;
 
 for (i = 0; i < acc.length; i++) {
@@ -389,18 +523,20 @@ for (i = 0; i < acc.length; i++) {
 }
 
 
-
 function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.right = "0";
     document.getElementById("main").style.right = "250px";
     document.getElementById( "buttonspan" ).setAttribute( "onClick", "javascript: closeNav();" );
+    document.getElementById("burgerid").style.right = "270px";
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mySidenav").style.right = "-255px";
     document.getElementById("main").style.right= "0";
     document.getElementById( "buttonspan" ).setAttribute( "onClick", "javascript: openNav();" );
+    document.getElementById("burgerid").style.right = "20px";
 }
+
 </script>
 
 </html>
