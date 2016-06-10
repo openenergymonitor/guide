@@ -2,7 +2,8 @@ language: ruby
 sudo: false
 cache: bundler
 script: bundle exec rake generate
-after_success: bundle exec rake deploy
+after_success:
+- '[ "${TRAVIS_BRANCH}" = "master" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ] && rake deploy || false'
 env:
   global:
     secure: P0d1t6SJet/XTgiJMMNJEBTJFHdrl10pXEOWXrc76e6aP+eiwr0Qt/0OXdVv3dEeymoZWS+JKSAfRGIw66k29PINq8A3soYOKRBStSrjhfW/IQnEv8SISj13+kxrDfLHN0S4mvEm3gHir6wsd9HOKVftLECsMxuP4JiabgeaQD5hsnzFJ5huJukDTfgTmGTOnem1xReZTrhiMKZbE6LQh2VKwfOh0jk7wGgrEOtq6GQo0SFmccQjLeh0rt+dAI9DrljlV3z124z1PnldApkithyKkxnPpsun2CLNls7s40bBxwxsACN3KQg83/6gr3Ikq6WJ/h40yG2/8EBfCkYlKbCAKNk9eCkY0pbh56ZWERTesApBvcDYCo6QjkUvyGiASxTHoV014tTGGUx1HJWn2F4WQWFEGDZ7QQ3GR2qb/Jplmug5pLGrUeWi85kRu2Zrsp1deCycIECbx0RnfsCsnLV1JMTpZwYewpAt581WlTUoZh/J1XticP+sbTKXLCsYb7+f0l+Kg4qDYQsshxn1jps8MxXesIe6ogxPNi6Js7QFkZqhqHFC2XCs1Qwy25gHpHDgXG7Ik7BZGC3JDBABd1LyVdSuhEC/hTnkpJITt3jJ8QWj+1ytCFIi+mYxGqtaVHq6DeYapGzLsryGpt42v9gfqgDp7i039WhaDaLRsbQ=
