@@ -177,6 +177,23 @@ Check available disk space in the data partition (`/home/pi/data`) by looking at
 <br>
 
 ***
+## {% linkable_title Emoncms Local Account Reset %}
+
+If the password for the local Emoncms account has been forgotten this can be reset by [connecting in via ssh]((/technical/credentials/#ssh) then running:
+
+`$ php ~/usefulscripts/resetpassword.php`
+
+It then asks for the userid (default:1) and for a new password or option to auto generate. Example:
+
+```
+=======================================
+EMONCMS PASSWORD RESET
+=======================================
+Select userid, or press enter for default:
+Using default user 1
+Enter new password, or press enter to auto generate:
+Auto generated password: 9f7599c8da
+```
 
 ## {% linkable_title Factory Reset %}
 
