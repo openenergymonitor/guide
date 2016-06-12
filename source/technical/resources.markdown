@@ -66,7 +66,7 @@ footer: true
 - [Emoncms forum category](https://community.openenergymonitor.org/c/emoncms)
 
 ### {% linkable_title emonSD Pre-built SD card%}
-- [EmonSD Download repository & changelog](https://github.com/openenergymonitor/emonpi/Docs/emonSD-pre-built-SD-card-Download-&-Change-Log)
+- [EmonSD Download repository & changelog](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log)
 - [emonSD Build Guide](https://github.com/openenergymonitor/emonpi/blob/master/docs/SD-card-build.md)
 - [EmonSD forum category](https://community.openenergymonitor.org/c/emonsd)
 
