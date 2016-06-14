@@ -178,7 +178,7 @@ Check available disk space in the data partition (`/home/pi/data`) by looking at
 
 ***
 
-## {% linkable_title Emoncms Local Account Reset %}
+## {% linkable_title Emoncms Local Password Reset %}
 
 If the password for the local Emoncms account has been forgotten this can be reset by [connecting in via ssh](/technical/credentials/#ssh) then running:
 
