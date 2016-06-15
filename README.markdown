@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/openenergymonitor/guide.svg?branch=master)](https://travis-ci.org/openenergymonitor/guide)
 
-A clean responsive user guide website for OpenEnergyMonitor
+A clean responsive user guide website for OpenEnergyMonitor.
 
 Using all the shiny new toys: powered by Jekyll and the Oscalite theme. Hosted by GitHub and served over SSL/TSL by CloudFlare.
 
