@@ -1,246 +1,667 @@
 <!doctype html>
-  <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-  <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-  <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-  <!--[if gt IE 8]><!--> <html> <!--<![endif]-->
 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Guide | OpenEnergyMonitor</title>
-    <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="OpenEnergyMonitor User Guide">
-    
-    <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/">
+<html lang="en">
+  
+<head>
+<meta charset="utf-8">
+<title>User Guide</title>
+<meta name="description" content="OpenEnergyMonitor User Guide">
+<meta name="author" content="OpenEnergyMonitor">
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" href="css/styles.css?v=1.0">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<style>
 
-    <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Guide | OpenEnergyMonitor">
-    <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="OpenEnergyMonitor User Guide">
-    <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
-
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@openenergymon">
-    
-    <meta name="twitter:title" content="Guide | OpenEnergyMonitor">
-    <meta name="twitter:description" content="OpenEnergyMonitor User Guide">
-    <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
-
-    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
-    <link href="/atom.xml" rel="alternate" title="Guide | OpenEnergyMonitor" type="application/atom+xml">
-    <link rel='shortcut icon' href='/images/favicon.ico' />
-    <link rel='icon' type='image/png' href='/images/favicon-192x192.png' sizes='192x192' />
-
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="icon" sizes="16x16 32x32 64x64" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="196x196" href="/images/favicon-192.png">
-    <link rel="icon" type="image/png" sizes="160x160" href="/images/favicon-160.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96.png">
-    <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon-64.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
-    <link rel="apple-touch-icon" href="/images/favicon-57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicon-114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicon-72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicon-144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicon-60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicon-120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicon-76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicon-152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-180.png">
-    <meta name="msapplication-TileColor" content="#FFFFFF">
-    <meta name="msapplication-TileImage" content="/images/favicon-144.png">
-    <meta name="msapplication-config" content="/images/browserconfig.xml">
-    
-    <script>
-    src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("button").click(function(){
-        $("p").toggle();
-    });
-});
-</script>
-
-    
-   
-     <!--<link href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,700' rel='stylesheet' type='text/css' -->
-
-  </head>
-
-  <body >
-
-    <header>
-      <div class="grid-wrapper">
-  <div class="grid">
-
-    <div class="grid__item three-tenths lap-two-sixths palm-one-whole ha-title">
-  <a href="/" class="site-title">
-    <!--<img width='40' src='/images/favicon-192x192.png'> -->
-    <!--<span>Guide | OpenEnergyMonitor</span>-->
-    <span style="color:#777;font-weight:bold;font-family:Arial;font-size:20">
-Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-size:20">EnergyMonitor</span>
-  </a>
-</div>
-
-
-<div class="grid__item seven-tenths lap-four-sixths palm-one-whole">
-  <nav>
-    <input type="checkbox" id="toggle">
-<label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu"></label>
-<ul class="menu pull-right">
-  <li><a  href='/setup/'>Setup </a></li>
-  <li>
-    <a href="/applications/">Applications <i class="icon icon-caret-down"></i></a>
-    <ul>
-      <li><a  href='/applications/home-energy/'>Home Energy </a></li>
-      <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
-    </ul>
-  </li>
-  <li><a  href='/integrations/'>Integrations </a></li>
-  <li><a  href='/technical/'>Technical </a></li>
-
-  <li>
-   <a href="/help/">Help <i class="icon icon-caret-down"></i></a>
-    <ul>
-     <li><a  href='https://community.openenergymonitor.org/'>Forum </a></li>
-    </ul>
-  </li>
-   <li><a  href='http://shop.openenergymonitor.com'>Shop <i class="icon icon-shopping-cart"></i> </a></li>
-
-</ul>
-  </nav>
-</div>
-
-  </div>
-</div>
-    </header>
-
-    
-      <div class="hero">
-  <div class="grid-wrapper">
-    <div class="grid flex">
-      <div class="grid__item flex__item two-fifths palm-one-whole">
-          <img src="/images/hero_unit.png" style="display:block;margin:auto;border-radius: 10%;" alt="emonPi">
-      </div>
-      <div class="grid__item flex__item three-fifths palm-one-whole">
-      <style>
-div.mktxtcentral {
-    text-align: center;
+html, body {
+width: 100%;
+height: 100%;
+padding: 0;
+margin: 0;
+overflow-x: hidden;
 }
-</style>
-<div class="mktxtcentral">
-<h1>User Guide</h1>
-<p class="lead">
-Set up, install and configure an OpenEnergyMonitor system
-</p>
-<a href='/setup/' class="buttongets" style="vertical-align:middle"><span>Get Started</span></a>
-</div>
-      </div>
-    </div>
-  </div>
-</div>
-    
 
-    <div class="grid-wrapper">
-      <div class="grid grid-center">
-        
-        <div class="grid__item one-whole">
-        
+a {
+text-decoration: none;
+}
 
-          <article class="page">
-  
-    
+iframe {
+position: absolute;
+width: 90%;
+height: 80%;
+left: 5%;
+top: 5%;
+border: 0;
+margin: 0;
+}
 
-  
+footer {
+position: fixed;
+width: 100%;
+height: 60px;
+left: 0;
+bottom: 0;
+background-color: #0699fa;
+text-align: center;
+box-shadow: 0 -2px 4px -1px rgba(0,0,0,0.25);
+}
 
-  <style>
+.footerlinks {
+height: 60px;
+width: 100%;
+font-size: 30px;
+line-height: 60px;
+}
+
+.footerlinks a {
+display: inline-block;
+padding-left: 40px;
+padding-right: 40px;
+height: 100%
+color: #ffffff;
+cursor: pointer;
+}
+
+.sidenav {
+position: fixed;
+top: 0;
+max-height: 100vh;
+min-height: 100vh;
+max-width: 250px;
+z-index: 600;
+right: -250px;
+background-color: #777;
+transition: 0.3s ease-in-out;
+overflow-x: hidden;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+}
+
+#titleholder {
+position: fixed;
+left: 0;
+top: 60px;
+width: 100%;
+height: 60px;
+background-color: #0699fa;
+overflow: hidden;
+box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
+transition: 0.3s ease-in-out;
+}
+
+.userguidetitle {
+position: absolute;
+top: 0;
+left: 0;
+margin-left: 20px;
+line-height: 60px;
+font-size: 30px;
+font-weight: bold;
+font-family: Arial,"sans-serif";
+color: #ffffff;
+width: 100%;
+transition: 0.3s ease-in-out;
+}
+
+.userguidetitle span {
+color: #777;
+}
+
+#burger {
+display: block;
+}
+
+.burgerbar {
+position: fixed;
+top: 74px;
+right: 20px;
+font-size: 30px;
+z-index: 300;
+transition: 0.3s ease-in-out;
+}
+
+.burgerbar span:after {
+font-family: "FontAwesome";
+content: "\f0c9";
+color: #ffffff;
+}
+
+#sidebarwrapper {
+position: relative;
+height: 100vh;
+width: 250px;
+}
+
+#pusher {
+position: absolute;
+top: 0;
+}
+
+#searchbundle {
+height: 60px;
+border-bottom: 4px solid #474747;
+}
+
+.searchtools fieldset {
+height: 100%;
+padding: 0;
+border: 0;
+margin: 0;
+text-align: center;
+padding-top: 15px;
+}
+
+.searchtools fieldset span:after {
+font-family:"FontAwesome";
+content:"\f002";
+color: #ffffff;
+font-size: 25px;
+padding: 10px;
+}
+
+.searchtools input.search {
+width: 125px;
+box-sizing: border-box;
+border: 2px solid #ffffff;
+border-radius: 10px;
+outline: none;
+padding: 5px;
+}
+
+#main {
+position: fixed;
+width: 100%;
+height: 100%;
+top: 120px;
+left: 0;
+transition: 0.3s ease-in-out;
+}
+
+#titleholdertop {
+position: fixed;
+top: 0;
+width: 100%;
+height: 60px;
+background-color: #ffffff;
+overflow: hidden;
+transition: 0.3s ease-in-out;
+z-index: 500;
+}
+
+.monitormytitle {
+position: absolute;
+font-size: 30px;
+font-weight: bold;
+font-family: Arial,"sans-serif";
+color: #0699fa;
+width: 100%;
+line-height: 60px;
+}
+
+.monitormytitle span {
+color: #777;
+}
+
+@media screen and (min-width: 1150px) {
+
+.monitormytitle {
+position: absolute;
+left: 50%;
+margin-left: -557px;
+font-size: 30px;
+font-weight: bold;
+font-family: Arial,"sans-serif";
+color: #0699fa;
+}
+}
 
 .dropbtn {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  color: #ffffff;
-  background-color: #FFA500;
-  cursor: pointer;
-  height: 70px;
-  width: 70px;
-  border-top-right-radius: 10%;
-  text-align: center;
-  padding-top: 8px;
-  font-size: 40px;
-  color: #000000;
-  font-weight: bold;
-
+float: right;
+margin-right: 20px;
+width: 30px;
+height: 30px;
+text-align: center;
+font-size: 30px;
+color: #777;
+cursor: pointer;
 }
 
-.dropdown {
-    position: relative;
-    z-index: 22;
+@media screen and (min-width: 820px) {
+
+.dropbtn {
+display: none;}
 }
 
-.dropdown-content {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    background-color: #000000;
-    width: 9em;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+.navigation {
+position: absolute;
+top: 0;
+right: 0;
+margin-right: 6px;
+height: 60px;
 }
 
-.dropdown-content a {
-    text-align: left;
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-    font-weight: bold;
+@media screen and (max-width: 820px) {
+
+.navigation {
+display: none;}
 }
 
-.dropdown a:hover {
-	background-color: #0699fa;
-	color: #000000;
+@media screen and (min-width: 1200px) {
 
+.navigation {
+position: absolute;
+right: 50%;
+margin-right: -557px;
+}
 }
 
-.show {
-	display: block;
+.navigation ul {
+list-style-type: none;
+top: 0;
+margin: 0;
+padding: 0;
+height: 100%;
+}
+
+.navigation li {
+float: left;
+background-color: #0699fa;
+}
+
+.navigation a {
+display: block;
+line-height: 68px;
+height: 100%;
+font-family: Arial,"sans-serif";
+font-size: 16px;
+text-align: center;
+-webkit-transition: all 100ms ease-out;
+-moz-transition: all 100ms ease-out;
+-o-transition: all 100ms ease-out;
+transition: all 100ms ease-out;
+padding-left: 10px;
+padding-right: 10px;
+background-color: #ffffff;
+color: #0699fa;
+}
+
+.navigation a:hover {
+margin-top: 10px;
+}
+
+#sitelinkpanel {
+position: fixed;
+left: 0;
+top: -500px;
+width: 100%;
+background-color: #ffffff;
+transition: 0.3s ease-in-out;
+z-index: 400;
+}
+
+#sitelinkpanel a {
+position: relative;
+display: block;
+color: #ffffff;
+background-color: #777;
+cursor: pointer;
+font-family: "Arial","sans-serif";
+font-weight: bold;
+font-size: 18px;
+padding-top: 16px;
+padding-bottom: 16px;
+padding-left: 20px;
+margin-bottom: 3px;
+}
+
+#sitelinkpanel a:hover {
+background-color: #0699fa;
+}
+
+.twitlinks {
+position: relative;
+background-color: #777;
+width: 100%;
+text-align: center;
+}
+
+.twitlinks i {
+display: inline-block;
+font-size: 30px;
+color: #ffffff;
+padding-left: 15px;
+padding-right: 15px;
+}
+
+button.accordion {
+background-color: #777;
+width: 100%;
+color: #ffffff;
+cursor: pointer;
+padding: 18px;
+border: none;
+text-align: left;
+font-family: "Arial","sans-serif";
+font-weight: bold;
+outline: none;
+font-size: 18px;
+border-bottom: 4px solid #474747;
+}
+
+button.accordion:after {
+font-family: "FontAwesome";
+content: '\f067';
+font-size: 18px;
+color: #ffffff;
+float: right;
+padding-right: 10px;
+margin-top: 3px;
+}
+
+button.accordion.active:after {
+content: "\f068";
+}
+
+button.accordion:hover {
+background-color: #5f5f5f;
+}
+
+div.panel {
+height: 100%;
+max-width: 250px;
+background-color: #ebebeb;
+max-height: 0;
+transition: 0.3s ease-in-out;
+overflow: hidden;
+}
+
+div.panel a {
+display: inline-block;
+font-family: Arial,"sans-serif";
+font-size: 18px;
+text-decoration: none;
+color: #5f5f5f;
+width: 100%;
+padding-left: 18px;
+padding-bottom: 16px;
+padding-top: 16px;
+transition: none;
+-moz-box-shadow:    inset 0 0 5px #ffffff;
+-webkit-box-shadow: inset 0 0 5px #ffffff;
+box-shadow:         inset 0 0 5px #ffffff;
+}
+
+div.panel a:hover {
+background-color: #0699fa;
+color: #ffffff;
+}
+
+.active a {
+color: #000000! important;
+font-weight: bold! important;
+}
+
+div.panel.show {
+max-height: 700px;
 }
 
 </style>
+</head>
+<body>
   
-<div class="dropdown">
-   
-<div onclick="myFunction()" class="dropbtn">+</i>
+<header id="myheader">
+
+<div id="titleholdertop">
+
+  <div class="monitormytitle">
+
+    <span>Open</span>EnergyMonitor
+
+    <div id="opensitelink" onclick="openTopnav()" class="dropbtn">
+
+      <span><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></span>
+
+    </div>
+
+  </div>
+
+  <div class="navigation">
+  
+  <ul>
+    <li><a href="/setup/">Main Site</a></li>
+    <li><a href="/setup/">Forum</a></li>
+    <li><a href="/setup/install/">Resources</a></li>
+    <li><a href="/setup/remote/">Blog</a></li>
+    <li><a href="/setup/local/">Shop&nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+  </ul>
+  
+  </div>
+
+
 </div>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="https://openenergymonitor.org/"><i class="icon-globe" style="color:#FFA500"></i>&nbsp;&nbsp;Main Site</a>
-    <a href="https://shop.openenergymonitor.org/"><i class="icon-shopping-cart"  style="color:#FFA500"></i>&nbsp;&nbsp;Shop</a>
-    <a href="https://community.openenergymonitor.org/"><i class="icon-comment" style="color:#FFA500"></i>&nbsp;&nbsp;Community</a>
-    <a href="https://guide.openenergymonitor.org/technical/resources/"><i class="icon-book"  style="color:#FFA500"></i>&nbsp;&nbsp;Resources</a>
-    <a href="https://blog.openenergymonitor.org/"><i class="icon-bullhorn"  style="color:#FFA500"></i>&nbsp;&nbsp;Blog</a>
-    <a href="https://twitter.com/Openenergymon/"><i class="icon-twitter"  style="color:#FFA500"></i>&nbsp;&nbsp;Twitter</a>
-    <a onclick="myFunction()" style="cursor:pointer;text-align:center;background-color:#000000;">&#10006;</a>
+
+
+  <div id="sitelinkpanel">
+
+    <a href="/setup/">Main Site</a>
+    <a href="/setup/">Forum</a>
+    <a href="/setup/install/">Resources</a>
+    <a href="/setup/remote/">Blog</a>
+    <a href="/setup/local/">Shop&nbsp;<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+
+  </div>
+
+<div id="titleholder" onclick="closeNav()">
+
+  <div class="userguidetitle" id="userguidetitle">
+
+    User Guide
+
   </div>
 </div>
 
+<div id="burgerid" class="burgerbar" onclick="closeTopnav()">
+
+  <span id="buttonspan" title="Open navigation" style="font-size:30px;cursor:pointer" onclick="openNav()"></span>
+
+</div>
+
+</header>
+
+<div id="mySidenav" class="sidenav">
+<div id="sidebarwrapper">
+<div id="pusher">
+<div id="searchbundle" class="searchbundle">
+<div class="searchtools">
+
+<form action="{{ site.simple_search }}" method="get">
+<fieldset role="search">
+<input type="hidden" name="q" value="site:guide.openenergymonitor.org" />
+<span></span><input class="search" type="text" name="q"
+results="0" placeholder="Search..." />
+</fieldset>
+</form>
+
+</div>
+</div>
+
+<button class="accordion">Set Up</button>
+
+<div class="panel">
+
+<div id="detectlink"><a href="http://localhost:4001/setup" target="openlink">Hardware</a></div>
+<div id="detectlink"><a href="/setup/connect" target="openlink">Connect</a></div>
+<div id="detectlink"><a href="/setup/install" target="openlink">Install</a></div>
+<div id="detectlink"><a href="/setup/local" target="openlink">Log Locally</a></div>
+<div id="detectlink"><a href="setup/remote" target="openlink">Log Remotely</a></div>
+<div id="detectlink"><a href="setup/dashboards" target="openlink">Dashboards</a></div>
+<div id="detectlink"><a href="setup/emontx" target="openlink">Add Energy Nodes</a></div>
+<div id="detectlink"><a href="setup/emonth" target="openlink">Add Temperature Nodes</a></div>
+<div id="detectlink"><a href="setup/import" target="openlink">Import / Backup</a></div>
+<div id="detectlink"><a href="setup/troubleshooting" target="openlink">Troubleshooting</a></div>
+
+</div>
+
+<button class="accordion">Emoncms</button>
+
+<div class="panel">
+
+<a href="/setup/daily-kwh">Daily</a>
+<a href="/setup/daily-averages">Daily Averages</a>
+<a href="/setup/export-csv">Exporting CSV</a>
+<a href="/setup/histograms">Histograms</a>
+
+</div>
+
+<button class="accordion">Applications</button>
+
+<div class="panel">
+
+<a href="/applications/home-energy/">Home Energy</a>
+<a href="/applications/solar-pv/">Solar PV</a>
+<a href="http://heatpumpmonitor.org/">Heatpump</a>
+
+</div>
+
+<button class="accordion">Integrations</button>
+
+<div class="panel">
+
+<a href="/integrations/nodered/">Node-RED</a>
+<a href="/integrations/openhab/">OpenHAB</a>
+<a href="/integrations/mqtt-relay/">Control Relay</a>
+<a href="/integrations/lightwaverf/">LightWave RF Control</a>
+
+</div>
+
+<button class="accordion">Technical</button>
+
+<div class="panel">
+
+<a href="/technical/">Overview</a>
+<a href="/technical/specifications/">Specifications</a>
+<a href="/technical/credentials/">Service Credentials</a>
+<a href="/technical/api/">Emoncms API</a>
+<a href="/technical/mqtt/">MQTT</a>
+<a href="/technical/resources/">Resources</a>
+
+</div>
+
+<button class="accordion">Support</button>
+
+<div class="panel">
+
+<a href="https://community.openenergymonitor.org/latest">Community Forum</a>
+<a href="/help/">Contact</a>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div id="main" onclick="closeNav()">
+<iframe name="openlink" id="iframeit"></iframe>
+</div>
+
+<!--<footer onclick="closeNav()">
+
+<div class="footerlinks" onclick="closeNav()">
+
+<a href="https://twitter.com/openenergymon"><i title="Twitter" class="fa fa-twitter" aria-hidden="true"></i></a>
+<a href="https://github.com/openenergymonitor/guide"><i title="GitHub" class="fa fa-github" aria-hidden="true"></i></a>
+<a href="http://blog.openenergymonitor.org"><i title="Blog" class="fa fa-bullhorn" aria-hidden="true"></i></a>
+
+</div>
+
+</footer>-->
+
 <script>
+
+document.getElementById("iframeit").contentWindow.document.body.onclick =
+function() {
+  closeNav();
+}
+
+$(document).ready(function(){
+$('div#detectlink').click(
+    function(e)
+    {
+        $('div#detectlink').removeClass('active');
+        $(e.currentTarget).addClass('active');
+    }
+);
+});
+
+var acc = document.getElementsByClassName("accordion");
+
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+
+function openTopnav() {
+    document.getElementById("sitelinkpanel").style.top = "60px";
+    document.getElementById("opensitelink").setAttribute( "onClick", "javascript: closeTopnav();" );
+    document.getElementById("titleholder").style.top = "346px";
+    document.getElementById("burgerid").style.top = "360px";
+    document.getElementById("main").style.top = "406px";
+
+}
+
+function closeTopnav() {
+    document.getElementById("sitelinkpanel").style.top = "-500px";
+    document.getElementById("opensitelink").setAttribute( "onClick", "javascript: openTopnav();" );
+    document.getElementById("titleholder").style.top = "60px";
+    document.getElementById("burgerid").style.top = "74px";
+    document.getElementById("main").style.top = "120px";
+}
+
+function openNav() {
+    document.getElementById("mySidenav").style.right = "0";
+    document.getElementById("mySidenav").style.boxShadow = "0px 0px 20px 0px #000000";
+    document.getElementById("userguidetitle").style.left = "-250px";
+    document.getElementById("userguidetitle").style.marginTop = "-60";
+    document.getElementById("main").style.left = "-250px";
+    document.getElementById("main").style.marginTop = "-60px";
+    document.getElementById("buttonspan").setAttribute( "onClick", "javascript: closeNav();" );
+    document.getElementById("burgerid").style.right = "270px";
+    document.getElementById("burgerid").style.marginTop = "-60px";
+    document.getElementById("titleholdertop").style.height = "0";
+    document.getElementById("titleholder").style.marginTop = "-60px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.right = "-250px";
+    document.getElementById("mySidenav").style.boxShadow = "none";
+    document.getElementById("userguidetitle").style.left = "0";
+    document.getElementById("main").style.left= "0";
+    document.getElementById("main").style.marginTop= "0";
+    document.getElementById("buttonspan").setAttribute( "onClick", "javascript: openNav();" );
+    document.getElementById("burgerid").style.right = "20px";
+    document.getElementById("burgerid").style.marginTop = "0";
+    document.getElementById("titleholdertop").style.height = "60px";
+    document.getElementById("titleholder").style.marginTop = "0";
+}
 
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
-	document.getElementById("myDropdown").classList.toggle("show");
-
+    document.getElementById("myDropdown").classList.toggle("show");
 }
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
+  if (!event.target.matches('.dropbtn span i')) {
 
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
@@ -255,294 +676,5 @@ window.onclick = function(event) {
 
 </script>
 
-<!--End of Site Nav-->
-
-<div class="grid-wrapper">
-  <div class="grid">
-    <div class="grid__item one-third lap-one-whole palm-one-whole usp">
-      <div class="grid">
-        <div class="grid__item one-whole lap-one-third">
-            <div class='supported-brands clearfix'>
-                <img src="/images/frontpageimages/homeenergycoverimage.png" style="border-radius:10%;"/>
-             </div>
-        </div>
-        <div class="grid__item one-whole lap-two-thirds">
-          <h2 class="title">Home Energy</h2>
-
-    <hr>
-    <p>Understand your energy consumption:</p>
-    <ul>
-    <li>Monitor in real-time</li>
-    <li>Review historic data</li>
-    <li>Calculate cost</li>
-    <li>Android app</li>
-</ul>
-
-
-<p class='pull-right'><a href='/applications/home-energy'>Learn more &raquo;</a></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid__item one-third lap-one-whole palm-one-whole usp">
-      <div class="grid">
-        <div class="grid__item one-whole lap-one-third">
-            <div class='supported-brands clearfix'>
-                <img src="/images/frontpageimages/solarpvcoverimage.png" style="border-radius:10%;"/>
-            </div>
-        </div>
-        <div class="grid__item one-whole lap-two-thirds">
-          <h2 class="title">Solar PV</h2>
-<hr>
-<p>Make the most of your solar PV:</p>
-<ul>
-    <li>Monitor generation and grid import</li>
-    <li>Calculate on-site use of solar.</li>
-    <li>Real-time & historic performance</li>
-    <li>Optimise demand matching</li>
-</ul>
-<p class='pull-right'><a href='/applications/solar-pv'>Learn more &raquo;</a></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid__item one-third lap-one-whole palm-one-whole usp">
-      <div class="grid">
-        <div class="grid__item one-whole lap-one-third">
-          <span class="icon">
-            <i class="icon-cogs"></i>
-          </span>
-        </div>
-
-        <div class="grid__item one-whole lap-two-thirds">
-         <h2 class="title">Integrate</h2>
-<hr>
-<p>Extend functionality with:</p>
-<ul>
-    <li>Emoncms</li>
-    <li>MQTT</li>
-    <li>NodeRED</li>
-    <li>OpenHAB</li>
-</ul>
-<p class='pull-right'><a href='/integrations/'>Learn more &raquo;</a></p>
-        </div>
-      </div>
-    </div>
-
-
-
-<div class="grid-wrapper">
-
-  <div class="grid">
-    <div class="grid__item one-half lap-one-whole palm-one-whole usp">
-      <div class="grid">
-        <div class="grid__item one-whole">
-          <figure>
-           <a href="https://www.youtube.com/embed/E1M2uLSiQy0"><img src="/images/frontpageimages/emonpi-overview.png"/></a>
-           <figcaption>System Overview</figcaption>
-           </figure>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid__item one-half lap-one-whole palm-one-whole usp">
-      <div class="grid">
-        <div class="grid__item one-whole">
-          <figure>
-          <a href="https://www.youtube.com/embed/xFPpBbf555c"><img src="/images/frontpageimages/sustainable-energy.png"/></a>
-          <figcaption>Sustainable Energy Challenge</figcaption>
-          </figure>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-</div>
-</div>
-
-
-
-</article>
-
-
-        </div>
-
-        
-        <aside id="sidebar" class="grid__item one-third lap-one-whole palm-one-whole">
-          <div class="grid">
-
-  
-
-  
-    <section class="aside-module grid__item one-whole lap-one-half">
-  
-
-
-  <div class='section'>
-    <h1 class="title delta">Site Map</h1>
-    <ul class='divided sidebar-menu'>
-      <li>
-          <b>Setup</b>
-        <ul>
-          <li><a  href='/setup/'>Hardware </a></li>
-          <li><a  href='/setup/connect/'>Connect </a></li>
-          <li><a  href='/setup/install/'>Install </a></li>
-          <li><a  href='/setup/local/'>Log Locally </a></li>
-          <li><a  href='/setup/remote/'>Log Remotely </a></li>
-          <li><a  href='/setup/dashboards/'>Dashboards </a></li>
-          <li><a  href='/setup/emontx/'>Add Energy Nodes </a></li>
-          <li><a  href='/setup/emonth/'>Add Temperature Nodes </a></li>
-          <li><a  href='/setup/import/'>Import / Backup </a></li>
-          <li><a  href='/setup/north-america/'>Use in North America </a></li>
-          <li><a  href='/setup/troubleshooting/'>Troubleshooting </a></li>
-        </ul>
-        <li>
-          <b>Emoncms</b>
-          <ul>
-          <li><a  href='/setup/daily-kwh'>Daily kWh </a></li>
-          <li><a  href='/setup/daily-averages'>Daily Averages </a></li>
-          <li><a  href='/setup/export-csv'>Exporting CSV </a></li>
-          <li><a  href='/setup/histograms'>Histograms </a></li>
-        </ul>
-
-
-      </li>
-
-      <li>
-         <b>Applications</b>
-        <ul>
-         <li><a  href='/applications/home-energy/'>Home Energy </a></li>
-         <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
-         <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
-        </ul>
-      </li>
-
-      <li>
-         <b>Integrations</b>
-        <ul>
-         <li><a  href='/integrations/nodered/'>Node-RED </a></li>
-         <li><a  href='/integrations/openhab/'>OpenHAB </a></li>
-         <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
-         <li><a  href='/integrations/lightwaverf/'>LightWave RF Control </a></li>
-        </ul>
-
-      <li>
-        <b>Technical</b>
-       <ul>
-        <li><a  href='/technical/'>Overview </a></li>
-        <li><a  href='/technical/specifications/'>Specifications </a></li>
-        <li><a  href='/technical/credentials/'>Service Credentials </a></li>
-        <li><a  href='/technical/api/'>Emoncms API </a></li>
-        <li><a  href='/technical/mqtt/'>MQTT </a></li>
-        <li><a  href='/technical/resources/'>Resources </a></li>
-       </ul>
-      </li>
-
-      <li>
-     <b>Support</b>
-        <ul>
-         <li><a  href='https://community.openenergymonitor.org/latest'>Community Forum <i class="icon-external-link"></i> </a>
-         <li><a  href='/help/'>Contact </a></li>
-        </ul>
-      </li>
-
-
-    </div>
-<gcse:search></gcse:search>
-</section>
-  
-
-    
-</div>
-        </aside>
-        
-      </div>
-    </div>
-
-    <footer>
-      <div class="grid-wrapper">
-  <div class="grid">
-    <div class="grid__item">
-      <style>
-
-
-div.searchtool {
-  position: relative;
-  display: inline-block;
-  top: -6px;
-}
-
-input[type=text] {
-  border: 3px solid #0699fa;
-}
-
-fieldset {
-  border: 0;
-}
-
-</style>
-<div class="copyright">
-
-  <a rel="me" href='https://twitter.com/openenergymon'><i class="icon-twitter"></i></a>
-  <a rel="me" href='https://github.com/openenergymonitor/guide'><i class="icon-github"></i></a>
-  <a rel="me" href='http://blog.openenergymonitor.org'><i class="icon-bullhorn"></i></a>
-
-  <div class="credit">
-    Website powered by <a href='http://jekyllrb.com/'>Jekyll</a> and <a href='https://github.com/coogie/oscailte'>Oscalite</a>.<br />
-    Hosted by <a href='https://pages.github.com/'>GitHub</a> and served by <a href='https://cloudflare.com'>CloudFlare</a>.
-  </div>
-
-<div class="searchtool">
-
-
-<form action="https://encrypted.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:guide.openenergymonitor.org" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search..." />
-  </fieldset>
-</form>
-
-
-</div>
-</div>
-    </div>
-  </div>
-</div>
-    </footer>
-
-    <!--[if lt IE 7]>
-      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-    <![endif]-->
-
-    <script>
-  var _gaq=[['_setAccount','UA-10321170-5'],['_trackPageview']];
-  (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-  g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-  s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
-
-
-
-<script>
-  $(document).ready(function(){
-    if (!window.jXHR){
-      var jxhr = document.createElement('script');
-      jxhr.type = 'text/javascript';
-      jxhr.src = '/javascripts/libs/jXHR.js';
-      var s = document.getElementsByTagName('script')[0];
-      s.parentNode.insertBefore(jxhr, s);
-    }
-
-    github.showRepos({
-      user: 'openenergymonitor',
-      count: 5,
-      skip_forks: true,
-      target: '#gh_repos'
-    });
-  });
-</script>
-<script src="/javascripts/github.js"></script>
-
-  </body>
+</body>
 </html>
