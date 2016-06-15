@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Install - Guide | OpenEnergyMonitor</title>
+    <title>Use In North America - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="Physically install emonPi">
+    <meta name="description" content="Using emonPi in USA">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/install/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/north-america/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Install">
+    <meta property="og:title" content="Use In North America">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/install/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/north-america/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Physically install emonPi">
+    <meta property="og:description" content="Using emonPi in USA">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Install">
-    <meta name="twitter:description" content="Physically install emonPi">
+    <meta name="twitter:title" content="Use In North America">
+    <meta name="twitter:description" content="Using emonPi in USA">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -134,111 +134,66 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   
   <header>
     <h1 class="title indent">
-      Install
+      Use in North America
     </h1>
   </header>
   <hr class="divider">
   
 
-  <h3 id="laquo-previous-step-connectsetupconnect"><a href="/setup/connect/">« Previous step: Connect</a></h3>
+  <p>The emonPi / emonTx hardware units are designed for use on single-phase systems. However, the they can be used on a North American Split-Phase system with the following considerations:</p>
 
-<h3 id="next-step-log-locally-raquosetuplocal"><a href="/setup/local/">Next step: Log Locally »</a></h3>
+<h3 id="ensure-clip-on-ct-sensor-will-fit-your-conductors">1. Ensure clip-on CT sensor will fit your conductors</h3>
 
-<h2 id="installation">Installation</h2>
+<p>Typical residential feeder conductors are AWG 2/0 Copper or AWG 4/0 Aluminum.  The opening in the <a href="http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/">standard clip-on CT sensor sold in the OpenEnergyMonitor shop</a> is <strong>13mm</strong>, and hence can accommodate a maximum wire size of <strong>AWG 1/0</strong>. Therefore, we recommend you measure the diameter of your feeders before purchasing a CT sensor.</p>
 
-<p><img src="/images/setup/emonpilabel.png" alt="emonpi install digram" /></p>
+<p><a class="btn pull-right" href="http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/">View in Shop → </a>
+<br /><br /></p>
 
-<p><img src="/images/setup/emonPi_install_diagram.png" alt="emonpi install" /></p>
+<p>If the standard CT sensor does not fit your conductors there are two options:</p>
+
+<ol>
+  <li>
+    <p>Use an <a href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">Optical Pulse Sensor</a> instead of CT sensor to interface directly with a utility meter. This will give an accurate reading of energy consumed (KWh) but will not provide a real-time power reading (W).</p>
+  </li>
+  <li>
+    <p>Use an alternative larger CT sensor: It’s possible to obtain larger CT sensors. However, using an alternative CT will usually require re-calibration and possibly, hardware modification (burden resistor may need replacement). See <a href="https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America">Building Blocks &gt; EmonTx in North America</a> for more info. <a href="https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America">Building Blocks CT sections</a>. Please search / post on the <a href="https://community.openenergymonitor.org">community forums</a> for further assistance.</p>
+  </li>
+</ol>
 
 <p class="note warning">
-<a href="https://openenergymonitor.org/emon/Current_Transformer_Installation">Please read the CT installation guide before installing.</a>
-Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off, prior to installing your sensors, and proceeding slowly with care. If you have any doubts, seek professional assistance.
+Installing clip-on CT sensors on USA electrical systems should only by undertaken by a professional electrician. In a typical residential installation, even if the main breaker is swiched off, the load center feeders and busbars are always live.
 </p>
 
-<h2 id="a-classtitle-link-name1-ct-sensor-href1-ct-sensora-1-ct-sensor"><a class="title-link" name="1-ct-sensor" href="#1-ct-sensor"></a> 1. <strong>CT sensor</strong></h2>
+<h3 id="use-usa-ac-ac-adapter">2. Use USA AC-AC Adapter</h3>
 
-<ul>
-  <li>Clip the CT sensor around either the Live or Neutral Cable</li>
-  <li>Connect jack plug into either CT1 or CT2 socket on the emonPi</li>
-  <li>If the power reading is negative: reverse the CT sensor orientation</li>
-  <li>CT sensor cable should not be extended to avoid induced noise</li>
-  <li>For Solar PV install see <a href="/applications/solar-pv/#sensor-installation">Solar PV Application page</a></li>
-</ul>
+<p>Use the <a href="http://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-us-plug">USA AC-AC voltage sensor adapter sold via the OpenEnergyMonitor Shop</a>. The system has been calibrated to work with this adapter. Using any other adapter will usually require re-calibration.</p>
 
-<p class="note">
-The clip-on CT sensors must be clipped round either the live or Neutral AC wire. <strong>NOT BOTH</strong>.
-</p>
+<p><a class="btn pull-right" href="http://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-us-plug/">View in Shop → </a>
+<br /><br /></p>
 
-<p><img src="/images/applications/solar-pv/ctinstall.jpg" alt="CT sensor installation " /></p>
+<h3 id="software-calibration">3. Software Calibration</h3>
 
-<h2 id="a-classtitle-link-name2-ac-ac-adpater-href2-ac-ac-adpatera-2-ac-ac-adpater"><a class="title-link" name="2-ac-ac-adpater" href="#2-ac-ac-adpater"></a> 2. <strong>AC-AC Adpater</strong></h2>
-<ul>
-  <li>Plug the AC-AC adapter into a power outlet</li>
-  <li>This may require installation of a new outlet or extending an existing one</li>
-  <li>AC-AC adapter cable can be extended if required</li>
-  <li>Plug power connector into the AC socket on the emonPi</li>
-  <li>Essential for <a href="/applications/solar-pv/#sensor-installation">Solar PV monitoring</a></li>
-  <li>Provides AC waveform reference for accurate Real Power measurements. <a href="http://openenergymonitor.org/emon/applications/homeenergy">[1]</a> , <a href="http://openenergymonitor.org/emon/buildingblocks">[2]</a></li>
-</ul>
+<h4 id="a-emonpi-set-emonhub-usa-calibration">a.) emonPi: Set EmonHub USA Calibration</h4>
 
-<h2 id="a-classtitle-link-name3-dc-5v-usb-adapter-href3-dc-5v-usb-adaptera-3-dc-5v-usb-adapter"><a class="title-link" name="3-dc-5v-usb-adapter" href="#3-dc-5v-usb-adapter"></a> 3. <strong>DC 5V USB Adapter</strong></h2>
-<ul>
-  <li>Plug the DC 5V USB adapter into a power outlet</li>
-  <li>Plug the mini-B USB connector into the emonPi</li>
-  <li>High quality minimum <a href="https://shop.openenergymonitor.com/power-supplies/">1.2A power supply recommend</a></li>
-</ul>
+<p>In the <code class="highlighter-rouge">[[RFM2Pi]]</code> interfacer section of <code class="highlighter-rouge">emonhub.conf</code> set:</p>
 
-<p><br /></p>
+<p><code class="highlighter-rouge">calibration=110v</code></p>
 
-<h3 id="a-classtitle-link-name4-optical-utility-meter-led-pulse-sensor-optional-href4-optical-utility-meter-led-pulse-sensor-optionala-4-optical-utility-meter-led-pulse-sensor-optional"><a class="title-link" name="4-optical-utility-meter-led-pulse-sensor-optional" href="#4-optical-utility-meter-led-pulse-sensor-optional"></a> 4. <em>Optical Utility Meter LED Pulse Sensor (optional)</em></h3>
-<ul>
-  <li>See <a href="http://openenergymonitor.org/emon/opticalpulsesensor">Optical Pulse Sensor setup page</a></li>
-  <li>Connects to emonPi / emonTx via RJ45 connector</li>
-  <li>Self-adhesive velcro attachment to utility meter</li>
-  <li>One optical pulse sensor per emonPi/emonTx</li>
-  <li>Can be used in conjunction with temperature sensors using <a href="http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/">RJ45 Breakout</a></li>
-</ul>
+<p>emonhub.conf can be edited directly in local Emoncms as described in <a href="/setup/remote">Setup &gt; Logging Remotely</a>.</p>
 
-<h3 id="a-classtitle-link-name5-temperature-sensors-optional-href5-temperature-sensors-optionala-5-temperature-sensors-optional"><a class="title-link" name="5-temperature-sensors-optional" href="#5-temperature-sensors-optional"></a> 5. <em>Temperature Sensors (optional)</em></h3>
-<ul>
-  <li>Connect to emonPi / emonTx via RJ45 connector</li>
-  <li>Up to 6x sensors can be connected using <a href="http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/">RJ45 Breakout</a></li>
-  <li>Sensor wire can be extended using RJ45 cable and <a href="http://shop.openenergymonitor.com/rj45-extender/">RJ45 Extender</a></li>
-</ul>
+<p>See <a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md#a-rfm2pi">[[RFM2Pi]] section of emonHub configuration guide</a> for advanced emonhub config info.</p>
 
-<p><img src="/images/applications/home-energy/home-energy-emonpi-install.jpg" alt="home energy" /></p>
+<h4 id="b-emontx-enable-usa-calibration-using-on-board-dip-switchhttpswikiopenenergymonitororgindexphpemontxv34dipswitchconfig">b.) emonTx: Enable USA calibration using <a href="https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4#DIP_Switch_Config">on-board DIP switch</a></h4>
 
-<h2 id="a-classtitle-link-namepower-up-hrefpower-upa-power-up"><a class="title-link" name="power-up" href="#power-up"></a> Power Up</h2>
+<h3 id="sum-power-values">4. Sum power values</h3>
 
-<p class="note">
-Ensure all sensors are connected before powering up.
-</p>
+<p>If monitoring a split-phase system the power values from each leg can be summed in Emoncms to calculate the total power.</p>
 
-<ol>
-  <li>
-    <p><strong>Switch on DC &amp; AC power</strong></p>
-  </li>
-  <li>
-    <p><strong>Check CT sensor(s) &amp; AC Wave are detected:</strong></p>
-  </li>
-</ol>
+<p>The emonPi by default reports <code class="highlighter-rouge">power1_plus_power2</code>, this input will need to be logged to a feed. See <a href="/setup/local">Setup &gt; Logging Locally</a>.</p>
 
-<p><img src="/images/setup/acwave_ct1.JPG" /></p>
+<p>If using emonTx then the power values from multiple CT inputs can be summed in Emoncms using <code class="highlighter-rouge">+ feed</code> Input Processor.</p>
 
-<ol>
-  <li><strong>emonPi should remember WiFi network and re-connect</strong></li>
-</ol>
-
-<p><img src="/images/setup/wifi_connected.JPG" /></p>
-
-<h3 id="video-guide">Video Guide</h3>
-<div class="videoWrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6SB4fRYQjno" frameborder="0" allowfullscreen=""></iframe>
-</div>
-
-<hr />
-
-<h3 id="next-step-log-locally-raquosetuplocal-1"><a href="/setup/local/">Next step: Log Locally »</a></h3>
+<p>See <a href="https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America">Building Blocks &gt; EmonTx in North America</a> for further technical info about the USA system.</p>
 
 
 </article>
@@ -254,8 +209,8 @@ Ensure all sensors are connected before powering up.
 
   
     <section class="aside-module grid__item one-whole lap-one-half">
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/setup/install.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/setup/install.markdown'>Edit on GitHub Prose</a></div>
+  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/setup/north-america.markdown'>Edit on GitHub</a></div>
+<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/setup/north-america.markdown'>Edit on GitHub Prose</a></div>
 
 
   <div class='section'>
@@ -266,14 +221,14 @@ Ensure all sensors are connected before powering up.
         <ul>
           <li><a  href='/setup/'>Hardware </a></li>
           <li><a  href='/setup/connect/'>Connect </a></li>
-          <li><a class='active' href='/setup/install/'>Install </a></li>
+          <li><a  href='/setup/install/'>Install </a></li>
           <li><a  href='/setup/local/'>Log Locally </a></li>
           <li><a  href='/setup/remote/'>Log Remotely </a></li>
           <li><a  href='/setup/dashboards/'>Dashboards </a></li>
           <li><a  href='/setup/emontx/'>Add Energy Nodes </a></li>
           <li><a  href='/setup/emonth/'>Add Temperature Nodes </a></li>
           <li><a  href='/setup/import/'>Import / Backup </a></li>
-          <li><a  href='/setup/north-america/'>Use in North America </a></li>
+          <li><a class='active' href='/setup/north-america/'>Use in North America </a></li>
           <li><a  href='/setup/troubleshooting/'>Troubleshooting </a></li>
         </ul>
         <li>

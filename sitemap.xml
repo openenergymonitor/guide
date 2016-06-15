@@ -41,6 +41,9 @@
 <loc>http://guide.openenergymonitor.org/setup/import/</loc>
 </url>
 <url>
+<loc>http://guide.openenergymonitor.org/</loc>
+</url>
+<url>
 <loc>http://guide.openenergymonitor.org/about/</loc>
 </url>
 <url>
@@ -77,6 +80,9 @@
 <loc>http://guide.openenergymonitor.org/integrations/nodered/</loc>
 </url>
 <url>
+<loc>http://guide.openenergymonitor.org/setup/north-america/</loc>
+</url>
+<url>
 <loc>http://guide.openenergymonitor.org/integrations/openhab/</loc>
 </url>
 <url>
@@ -104,11 +110,7 @@
 <loc>http://guide.openenergymonitor.org/advanced/open-hab/</loc>
 </url>
 <url>
-<loc>http://guide.openenergymonitor.org/index.html</loc>
-<lastmod>2016-06-15T14:47:43+00:00</lastmod>
-</url>
-<url>
 <loc>http://guide.openenergymonitor.org/static/mdi-demo.html</loc>
-<lastmod>2016-06-15T14:47:43+00:00</lastmod>
+<lastmod>2016-06-15T15:50:01+00:00</lastmod>
 </url>
 </urlset>
