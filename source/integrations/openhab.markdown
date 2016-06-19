@@ -11,7 +11,7 @@ footer: true
 
 Open Home Automation Bus (OpenHAB) is *"a vendor and technology agnostic open source automation software for your home"*. OpenHAB can run on an emonPi (Raspberry Pi) and is very flexible and can be configured for just about any home automation task. This high level of configurability can also make it seem quite hard to understand to start with.
 
-**OpenHAB is pre-installed and setup on the latest emonSD Raspberry Pi images, see [emonSD repository and change log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log). If your running an emonSD image that includes OpenHAB browse to:**
+**OpenHAB is pre-installed and setup on the latest emondSD Raspberry Pi images, see [emonSD repository and change log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log). If your running an emonSD image that includes OpenHAB browse to:**
 
 ## [http://emonpi:8080](http://emonpi:8080)
 
@@ -24,7 +24,7 @@ Password: "emonpi2016"
 
 ![OpenHAB OpenEnergyMonitor](https://raw.githubusercontent.com/openenergymonitor/oem_openHab/master/images/web.png)
 
-Pre installed on the emonPi is a skeleton config setup openHAB with to subscribe to data from the emonPi's MQTT server (see [MQTT docs](/technical/mqtt/)). For a full OpenHAB demo see the [OpenHAB Demo House](http://demo.openhab.org:8080/openhab.app?sitemap=demo).
+Pre installed on the emonPi is a skeleton config setup openHAB with to subscribe to data from the emonPi's MQTT server (see [MQTT docs](/technical/mqtt/)). For a full OpenHAB demo see the [OpenHAB Demo House](http://demo.openhab.org:8080/).
 
 ### Configuring OpenHAB
 
