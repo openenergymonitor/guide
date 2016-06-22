@@ -79,7 +79,7 @@ footer: true
 
 *General info on topics such as AC theory, CT sensors, calibration etc.*
 
-- [Building Block Resouces](https://openenergymonitor.org/emon/buildingblocks)
+- [Building Block Resources](https://openenergymonitor.org/emon/buildingblocks)
 
 ***
 
