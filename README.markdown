@@ -21,7 +21,7 @@ Using all the shiny new toys: powered by Jekyll and the Oscalite theme. Hosted b
 
 ## Setup
 
-_You need to have Ruby 2.x and bundler installed._
+You need to have Ruby 2.x and bundler installed.
 
 - [Ruby installation instructions](https://www.ruby-lang.org/en/documentation/installation/)
 
