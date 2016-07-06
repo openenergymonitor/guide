@@ -26,7 +26,7 @@ Your safety is your responsibility. Clip-on current sensors are non-invasive and
 
 ## {% linkable_title 1. **CT sensor** %}
 
-- Clip the CT sensor around either the Live or Neutral Cable
+- Clip the CT sensor around either the **Live** or **Neutral** cable
 - Connect jack plug into either CT1 or CT2 socket on the emonPi
 - If the power reading is negative: reverse the CT sensor orientation
 - CT sensor cable should not be extended to avoid induced noise
