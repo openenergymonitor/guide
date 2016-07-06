@@ -53,7 +53,7 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 ## {% linkable_title 3. **DC 5V USB Adapter** %}
 - Plug the DC 5V USB adapter into a power outlet
 - Plug the mini-B USB connector into the emonPi
-- High quality minimum [1.2A power supply recommend](https://shop.openenergymonitor.com/power-supplies/)
+- High quality minimum [1.2A power supply recommended](https://shop.openenergymonitor.com/power-supplies/)
 
 <br>
 
