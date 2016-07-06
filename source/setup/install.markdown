@@ -2,7 +2,7 @@
 layout: page
 title: Install
 description: Physically install emonPi
-date: "2015-03-08 21:36"
+date: '2015-03-08 21:36'
 sidebar: true
 comments: false
 sharing: true
@@ -40,7 +40,7 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 
 
-## {% linkable_title 2. **AC-AC Adpater** %}
+## {% linkable_title 2. **AC-AC Adapter** %}
 - Plug the AC-AC adapter into a power outlet
 - This may require installation of a new outlet or extending an existing one
 - AC-AC adapter cable can be extended if required
