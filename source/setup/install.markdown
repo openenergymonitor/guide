@@ -2,7 +2,7 @@
 layout: page
 title: Install
 description: Physically install emonPi
-date: "2015-03-08 21:36"
+date: '2015-03-08 21:36'
 sidebar: true
 comments: false
 sharing: true
@@ -26,7 +26,7 @@ Your safety is your responsibility. Clip-on current sensors are non-invasive and
 
 ## {% linkable_title 1. **CT sensor** %}
 
-- Clip the CT sensor around either the Live or Neutral Cable
+- Clip the CT sensor around either the **Live** or **Neutral** cable
 - Connect jack plug into either CT1 or CT2 socket on the emonPi
 - If the power reading is negative: reverse the CT sensor orientation
 - CT sensor cable should not be extended to avoid induced noise
@@ -40,7 +40,7 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 
 
-## {% linkable_title 2. **AC-AC Adpater** %}
+## {% linkable_title 2. **AC-AC Adapter** %}
 - Plug the AC-AC adapter into a power outlet
 - This may require installation of a new outlet or extending an existing one
 - AC-AC adapter cable can be extended if required
@@ -53,7 +53,7 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 ## {% linkable_title 3. **DC 5V USB Adapter** %}
 - Plug the DC 5V USB adapter into a power outlet
 - Plug the mini-B USB connector into the emonPi
-- High quality minimum [1.2A power supply recommend](https://shop.openenergymonitor.com/power-supplies/)
+- High quality minimum [1.2A power supply recommended](https://shop.openenergymonitor.com/power-supplies/)
 
 <br>
 

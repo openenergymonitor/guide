@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/openenergymonitor/guide.svg?branch=master)](https://travis-ci.org/openenergymonitor/guide)
 
-A clean responsive user guide website for OpenEnergyMonitor
+A clean responsive user guide website for OpenEnergyMonitor.
 
 Using all the shiny new toys: powered by Jekyll and the Oscalite theme. Hosted by GitHub and served over SSL/TSL by CloudFlare.
 
@@ -21,7 +21,7 @@ Using all the shiny new toys: powered by Jekyll and the Oscalite theme. Hosted b
 
 ## Setup
 
-_You need to have Ruby 2.x and bundler installed._
+You need to have Ruby 2.x and bundler installed.
 
 - [Ruby installation instructions](https://www.ruby-lang.org/en/documentation/installation/)
 
