@@ -26,7 +26,7 @@ Default log-in credentials for latest [pre-built emonPi/emonBase ready-to-go SD 
 
 To connect to emonPi / emonBase via ssh:
 
- - Linux / Mac : open terminal window `$ ssh pit@emonpi` or `$ ssh pi@<IP ADDRESS>`
+ - Linux / Mac : open terminal window `$ ssh pi@emonpi` or `$ ssh pi@<IP ADDRESS>`
  - Windows: use [Putty application](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
  - Google search ['Raspberry Pi SSH'](http://lmgtfy.com/?q=raspberry+pi+ssh) for many tutorials, [Adafruit has a good guide](https://learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-6-using-ssh.pdf)
 
