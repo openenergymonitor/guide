@@ -49,6 +49,27 @@ Data can also (optionally) be posted remotely to [Emoncms.org](https://emoncms.o
 
 *If no appear in Emoncms.org emonHub.log on `emonHub` page of Local Emoncms for debugging*
 
+***
+
+## {% linkable_title 1. Multiple emonPi's posting to a single Emoncms.org account %}
+
+It's possible to setup multiple emonPi's posting to a single Emoncms.org account, this is useful if you want to monitor several installations with a single login. By defaut data from sensors connected direclty to the emonPi are tagged in Emoncms with **node ID 5**. If multiple emonPi's are posting to the same account we need to set a different node ID to each emonPi.
+
+### 1. Change emonPi node ID
+
+The emonPi's node ID can be changed in the *EmonHub Config Editor*. Login to **local Emoncms* then browser to `Setup > EmonHub`, in the `[interfacers]` section change `baseid = 5` to a different number: 4, 3, and 2 are recomended since these node ID's are not already allocated:
+
+![remote log1](/images/emonpi-nodeid.png)
+
+### 2. Update emonPi Node Decoder
+
+After changing the emonPi node ID we also needto update the EmonHub node decoder to enablelocal Emoncms to decode the data from the emonPi with the updated node ID. To do this scroll further down the emonhub config page to the `[Nodes]` section and change `[[5]]` to the new emonPi node ID e.g. 5, 3, or 2. Then click `Save` to save changes.
+
+![remote log1](/images/setup/emonpi-nodeid-decoder.png)
+
+[See here for detailed emonhub config documentation.](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md)
+
+To start the emonPi's posting to the same emoncms.org account paste in the same Emoncms.org read-write API key into each emonPi's emonhub config file as detailed above.
 
 <br>
 
