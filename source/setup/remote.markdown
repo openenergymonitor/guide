@@ -51,7 +51,7 @@ Data can also (optionally) be posted remotely to [Emoncms.org](https://emoncms.o
 
 ***
 
-## {% linkable_title 1. Multiple emonPi's posting to a single Emoncms.org account %}
+## {% linkable_title Multiple emonPi's posting to a single Emoncms.org account %}
 
 It's possible to setup multiple emonPi's posting to a single Emoncms.org account, this is useful if you want to monitor several installations with a single login. By defaut data from sensors connected direclty to the emonPi are tagged in Emoncms with **node ID 5**. If multiple emonPi's are posting to the same account we need to set a different node ID to each emonPi.
 
