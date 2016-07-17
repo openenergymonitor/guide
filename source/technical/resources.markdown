@@ -33,6 +33,13 @@ footer: true
   - [emonTx Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/emonTxV3)
   - [emonTx Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
 
+### {% linkable_title emonTx Arduino Shield %}
+  - [User Guide](https://wiki.openenergymonitor.org/index.php/EmonTx_Arduino_Shield#emonTx_Arduino_Shield)
+  - [emonTx Shield Firmware](https://github.com/openenergymonitor/emonTxFirmware/tree/master/emonTxShield)
+  - [emonTx Shield Hardware Docs](https://wiki.openenergymonitor.org/index.php/EmonTx_Arduino_Shield#emonTx_Arduino_Shield)
+  - [emonTx Shield Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/emontx-shield-smt)
+  - [emonTx Shield Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
+   
 ### {% linkable_title emonTH %}
   - [User Guide](https://guide.openenergymonitor.org/setup/emonth/)
   - [emonTH Firmware](https://github.com/openenergymonitor/emonth)
