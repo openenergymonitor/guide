@@ -1,12 +1,13 @@
 ---
 layout: page
-title: "Troubleshooting"
-description: "Troubleshooting issues deugging"
-date: 2015-03-08 21:36
+title: Troubleshooting
+description: Troubleshooting issues deugging
+date: '2015-03-08 21:36'
 sidebar: true
 comments: false
 sharing: true
 footer: true
+published: true
 ---
 
 <figure><a href="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png">
@@ -196,6 +197,16 @@ Enter new password, or press enter to auto generate:
 Auto generated password: 9f7599c8da
 ```
 
+If the account username has also been forgotten this can be retreived by connecting via ssh and looking at the MYSQL database entry :
+
+When prompted enter the [emonPi default MYSQL root password.](https://guide.openenergymonitor.org/technical/credentials/#mysql)  
+
+```
+$ mysql -uroot -p
+USE emoncms;
+SELECT * FROM users;
+exit
+```
 ## {% linkable_title Factory Reset %}
 
 **Caution: this will delete ALL Emoncms data**
