@@ -207,6 +207,7 @@ USE emoncms;
 SELECT * FROM users;
 exit
 ```
+
 ## {% linkable_title Factory Reset %}
 
 **Caution: this will delete ALL Emoncms data**
