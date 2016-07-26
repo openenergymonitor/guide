@@ -117,7 +117,7 @@ For automatic MySolarPV App setup use the suggested feed names in <b>bold</b>. T
 
  1. Click on spanner icon to configure `emonPi/power1`
  2. Select `allow positive` to isolate import component
- 3. Select `power to feed` and create a feed called **import** with the feed engine set to `PHPFina` and feed `interval=10s`
+ 3. Select `log to feed` and create a feed called **import** with the feed engine set to `PHPFina` and feed `interval=10s`
  4. Select `power to kwh`, create a feed called **import_kwh** with feed engine `PHPFina` and feed `interval=10s`
  
 **2. Setup Solar Generation Feed**
