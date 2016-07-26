@@ -355,7 +355,17 @@ Auto generated password: 9f7599c8da
 </code></pre>
 </div>
 
-<h2 id="a-classtitle-link-namefactory-reset-hreffactory-reseta-factory-reset"><a class="title-link" name="factory-reset" href="#factory-reset"></a> Factory Reset</h2>
+<p>If the account username has also been forgotten this can be retreived by connecting via ssh and looking at the MYSQL database entry :</p>
+
+<p>When prompted enter the <a href="https://guide.openenergymonitor.org/technical/credentials/#mysql">emonPi default MYSQL root password.</a></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ mysql -uroot -p
+USE emoncms;
+SELECT * FROM users;
+exit
+</code></pre>
+</div>
+<p>## <a class="title-link" name="factory-reset" href="#factory-reset"></a> Factory Reset</p>
 
 <p><strong>Caution: this will delete ALL Emoncms data</strong></p>
 
