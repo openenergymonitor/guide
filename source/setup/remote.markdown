@@ -59,13 +59,11 @@ It's possible to setup multiple emonPi's posting to a single Emoncms.org account
 
 The emonPi's node ID can be changed in the *EmonHub Config Editor*. Login to **local Emoncms* then browser to `Setup > EmonHub`, in the `[interfacers]` section change `baseid = 5` to a different number: 4, 3, and 2 are recomended since these node ID's are not already allocated:
 
-![remote log1](/images/emonpi-nodeid.png)
+![remote log1](/images/setup/emonpi-nodeid-decoder.png)
 
 ### 2. Update emonPi Node Decoder
 
 After changing the emonPi node ID we also needto update the EmonHub node decoder to enablelocal Emoncms to decode the data from the emonPi with the updated node ID. To do this scroll further down the emonhub config page to the `[Nodes]` section and change `[[5]]` to the new emonPi node ID e.g. 5, 3, or 2. Then click `Save` to save changes.
-
-![remote log1](/images/setup/emonpi-nodeid-decoder.png)
 
 [See here for detailed emonhub config documentation.](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md)
 
