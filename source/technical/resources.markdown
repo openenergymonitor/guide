@@ -50,7 +50,7 @@ footer: true
 ### {% linkable_title emonGLCD %}
   - [User Guide](https://openenergymonitor.org/emon/emonglcd/)
   - [emonGLCD Firmware](https://github.com/openenergymonitor/emonglcd)
-  - [emonGLCD Hardware CAD Design](https://github.com/openenergymonitor/Hardware/tree/master/emonGLCD_V1
+  - [emonGLCD Hardware CAD Design](https://github.com/openenergymonitor/Hardware/tree/master/emonGLCD_V1)
   - [Display Forum Category](https://community.openenergymonitor.org/c/hardware/display)
 
 ### {% linkable_title WiFi Relay %}
