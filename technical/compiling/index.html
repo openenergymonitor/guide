@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Compiling Firmware - Guide | OpenEnergyMonitor</title>
+    <title>Compiling and Uploading AVR Firmware using PlatformIO - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
     <meta name="description" content="Compiling Firmware">
     
@@ -15,7 +15,7 @@
     <link rel="canonical" href="http://guide.openenergymonitor.org/technical/compiling/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Compiling Firmware">
+    <meta property="og:title" content="Compiling and Uploading AVR Firmware using PlatformIO">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
     <meta property="og:url" content="http://guide.openenergymonitor.org/technical/compiling/">
     <meta property="og:type" content="website">
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Compiling Firmware">
+    <meta name="twitter:title" content="Compiling and Uploading AVR Firmware using PlatformIO">
     <meta name="twitter:description" content="Compiling Firmware">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
@@ -134,13 +134,32 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   
   <header>
     <h1 class="title indent">
-      Compiling Firmware
+      Compiling and Uploading AVR Firmware Using PlatformIO
     </h1>
   </header>
   <hr class="divider">
   
 
-  <h2 id="compiling-firmware">Compiling Firmware</h2>
+  <p>The emonTx, emonTH and emonPi all use a ATmega328p 8-bit AVR microprocessor. This microprocessor is Arduino compatible. You may want to modify and re-compile the firmware for one of the following reasons:</p>
+
+<ul>
+  <li>Modify the firmware to add custom feature e.g support a new type of sensor etc.</li>
+  <li>Change the RF nodeID e.g. if you want to use nodeID’s than are possible to configure via the hardware DIP switches (more than 2x emonTx V3 units, or more than 4x emonTH units)</li>
+</ul>
+
+<h2 id="example-change-emontx-v3-rf-nodeid">Example: Change emonTx V3 RF nodeID</h2>
+
+<p>The process of editing, compiling and uploading firmware is best explained with an example. In this example we will change the emonTx V3 node ID, this is useful if we want to connect more than 4x emonTx V3 units to a single emonPi / emonBase.</p>
+
+<h3 id="use-arduino-ide">Use Arduino IDE</h3>
+
+<h3 id="use-platformio">Use PlatformIO</h3>
+
+<p><img src="/images/technical/pio-ide-download.png" alt="Download PlatfomIO" /></p>
+
+<p><img src="/images/technical/pioide-installing.png" alt="Install PlatfomIO" /></p>
+
+<p><img src="/images/technical/pioopen.png" alt="Dowhload PlatfomIO" /></p>
 
 
 </article>
