@@ -59,7 +59,7 @@ footer: true
 
 ## <a id="network_setup" name="network_setup"></a>Network Setup
 
-On first power the unit will enter WiFi Access Point (AP) mode serving it's own WiFi hotspot called 'ESP_XXX', where XXX is the units MAC address. The unit can be used in AP mode, however most users will probably want to connect the unit to an existing WiFi network:
+On first power the unit will enter WiFi Access Point (AP) mode serving it's own WiFi hotspot called 'ESP_XXX', where XXX is the units MAC address. AP mode is only designed to setup the unit, opperation of the thermostat requires connection to a WiFi network with interent access to obtain NTP time.
 
 1\. Connect to the '**OEM_XXX**' WiFi network and browse to **[http://192.168.10.1](http://192.168.10.1).**
 

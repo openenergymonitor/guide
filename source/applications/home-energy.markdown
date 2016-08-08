@@ -81,4 +81,13 @@ Once the required feeds are selected, the Launch App button will appear.
 
 The main view shows a moving window power view of site-consumption in the top half and historic daily energy consumption in kWh in the bottom half.
 
+#### Energy View 
+
 ![MyElectric Web App](/images/applications/home-energy/myelectric_webapp.png)
+
+#### Cost View
+
+![MyElectric Web App](/images/applications/home-energy/myelectric_cost.png)
+
+
+
