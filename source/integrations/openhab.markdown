@@ -11,6 +11,10 @@ footer: true
 
 Open Home Automation Bus (OpenHAB) is *"a vendor and technology agnostic open source automation software for your home"*. OpenHAB can run on an emonPi (Raspberry Pi) and is very flexible and can be configured for just about any home automation task. This high level of configurability can also make it seem quite hard to understand to start with.
 
+## http://www.openhab.org/
+
+***
+
 **OpenHAB is pre-installed and setup on the latest emondSD Raspberry Pi images, see [emonSD repository and change log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log). If your running an emonSD image that includes OpenHAB browse to:**
 
 ## [http://emonpi:8080](http://emonpi:8080)
