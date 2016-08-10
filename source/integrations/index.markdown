@@ -9,10 +9,31 @@ sharing: true
 footer: true
 ---
 
+# Pre Installed on emonPi 
+
+*Assuming pre-build SD card image [emonSD-03-May16](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log#emonsd-03may16--release) or later* 
+
 ## [Node-RED](/integrations/nodered)
+
+Node-RED is a tool for wiring together hardware devices, APIs and online services in new and interesting ways. Using NodeRED the emonPi can become a central hub for home automation, control and notification.
 
 ## [OpenHAB](/integrations/openhab)
 
-## [WiFi MQTT Control Relay Thermostat](/integrations/mqtt-relay/)
+Open Home Automation Bus (OpenHAB) is “a vendor and technology agnostic open source automation software for your home”. OpenHAB is java based and can run on an emonPi (Raspberry Pi) and is very flexible and can be configured for just about any home automation task
 
 ## [LightWaveRF Control](/integrations/lightwaverf)
+
+LightWaveRF produce a variety of RF plugs and relays which can be controlled via OOK (on-off-keying RF. The LightWaveRF OOK protocol is also compatible with some lower cost un-branded OOK learning receivers relays.
+
+# No Installation Required 
+
+## [WiFi MQTT Control Relay Thermostat](/integrations/mqtt-relay/)
+
+Multi-purpose Wifi connected relay control board. Applications include: remote heating an A/C systems control via nodeRED, openHAB and Android Tasker etc.
+
+# Installation Required 
+
+## [Home Assistant](https://blog.openenergymonitor.org/2016/04/Home-Assistant/)
+
+Fully open-source python based home automation platform, similar to openHAB but easier to setup with some nice auto-detection. Tested to work on emonPi (requires install)
+
