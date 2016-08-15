@@ -78,7 +78,7 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 See [Solar PV Application Note](applications/solar-pv/) for emonPi solar PV install guide & images.
 
-## {% linkable_title Power Up %}
+## {% linkable_title 6. Power Up %}
 
 
 <p class='note'>
@@ -86,13 +86,13 @@ Ensure all sensors are connected before powering up.
 </p>
 
 
-1. **Switch on DC & AC power**
+a.) **Switch on DC & AC power**
 
-2. **Check CT sensor(s) & AC Wave are detected:**
+b.) **Check CT sensor(s) & AC Wave are detected:**
 
 {% img /images/setup/acwave_ct1.JPG %}
 
-3. **emonPi should remember WiFi network and re-connect**
+c.) **emonPi should remember WiFi network and re-connect**
 
 {% img /images/setup/wifi_connected.JPG %}
 
