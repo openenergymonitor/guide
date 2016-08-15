@@ -330,7 +330,7 @@ The emonTH is powered by two AA batteries and is available with a choice of eith
 
 #### {% linkable_title Use in the USA%}
 
-The emonPi and emonTx are designed to monitor single phase AC up to 100A. The system can work for some set-ups in the USA with some changes to the configuration. Users in North America should consult the Building Blocks guide ['emonTx - Use in North America'](http://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) and forum thread discussions [[1]](http://openenergymonitor.org/emon/node/711) [[2]](http://openenergymonitor.org/emon/node/3265).
+The emonPi and emonTx are designed to monitor single phase AC up to 100A. The system can work for some set-ups in the USA with some changes to the configuration. See user guide section [Use in North America](/setup/north-america/).
 
 #### {% linkable_title Use with 3 phase%}
 
