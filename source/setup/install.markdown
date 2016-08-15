@@ -70,7 +70,13 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 - Up to 6x sensors can be connected using [RJ45 Breakout](http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/)
 - Sensor wire can be extended using RJ45 cable and [RJ45 Extender](http://shop.openenergymonitor.com/rj45-extender/)
 
+## Installation Examples 
+
 ![home energy](/images/applications/home-energy/home-energy-emonpi-install.jpg)
+
+![home energy](/images/applications/home-energy/emonpi-install2.jpg)
+
+See [Solar PV Application Note](applications/solar-pv/) for emonPi solar PV install guide & images.
 
 ## {% linkable_title Power Up %}
 
