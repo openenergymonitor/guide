@@ -11,7 +11,7 @@ footer: true
 
 Open Home Automation Bus (OpenHAB) is *"a vendor and technology agnostic open source automation software for your home"*. OpenHAB can run on an emonPi (Raspberry Pi) and is very flexible and can be configured for just about any home automation task. This high level of configurability can also make it seem quite hard to understand to start with.
 
-## http://www.openhab.org/
+**[http://www.openhab.org](http://www.openhab.org)**
 
 ***
 
