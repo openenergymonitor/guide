@@ -24,6 +24,8 @@ See [Resources page](/technical/resources) for links to firmware repositories fo
 The process of editing, compiling and uploading firmware is best explained with an example. In this example we will change the emonTx V3 node ID, this is useful if we want to connect more than 4x emonTx V3 units to a single emonPi / emonBase.
 
  **A [USB to UART adapter](https://shop.openenergymonitor.com/programmers) is required to upload to emonTx / emonTH. Any 5v FTDI adapter can also be used.**
+ 
+ Note: The method of compiling and uploading firmware is identical for the emonTx and emonTH. To upload firmware to the emonPi this can either be done by compiling locally then flashing .hex file (in the `.pioenvs` folder in the project dir if using platformIO) then using avrdue on the emonPi to upload ([see emonPi avrdude upload script](https://github.com/openenergymonitor/emonpi/blob/master/firmware/compiled/update) or compiling and uploading using PlatformIO directly on the emonPi ([see blog post](https://blog.openenergymonitor.org/2016/06/platformio/).
 
 ### Using Arduino IDE
 
