@@ -17,9 +17,13 @@ The emonTx, emonTH and emonPi all use an ATmega328p 8-bit AVR microprocessor. Th
 
 *Note: The 433Mhz RF networks supports node ID's in the range of 1-29, RF nodeID must be unique to each unit on the same network. A corresponding node decoder entry must be created for each node in `emonhub.conf`. See [configuring EmonHub config](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md)
 
+***
+
 ## Example: Change emonTx V3 RF nodeID
 
 The process of editing, compiling and uploading firmware is best explained with an example. In this example we will change the emonTx V3 node ID, this is useful if we want to connect more than 4x emonTx V3 units to a single emonPi / emonBase.
+
+ **A [USB to UART cable](https://shop.openenergymonitor.com/programmers) is required to upload to emonTx / emonTH. Any 5v FTDI adapter can also be used.**
 
 ### Using Arduino IDE
 
@@ -44,7 +48,11 @@ These install steps have been tested to work on Linux, Mac and Windows.
 
 - [Download and install PlatformIO IDE](http://platformio.org/platformio-ide)
 
-*Note: if your running windows Python will also need to be installed, see [PlatformIO IDEinstall guide](http://platformio.org/platformio-id)*
+If running windows:
+- Python will also need to be installed, see [PlatformIO IDEinstall guide](http://platformio.org/platformio-id) *
+- [USB to UART adapter windows drivers](http://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx) will need to be installed
+
+
 
 ![Download PlatfomIO](/images/technical/pio-ide-download.png)
 
