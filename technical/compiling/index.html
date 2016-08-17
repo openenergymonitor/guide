@@ -149,9 +149,13 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <p>*Note: The 433Mhz RF networks supports node ID’s in the range of 1-29, RF nodeID must be unique to each unit on the same network. A corresponding node decoder entry must be created for each node in <code class="highlighter-rouge">emonhub.conf</code>. See <a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md">configuring EmonHub config</a></p>
 
+<hr />
+
 <h2 id="example-change-emontx-v3-rf-nodeid">Example: Change emonTx V3 RF nodeID</h2>
 
 <p>The process of editing, compiling and uploading firmware is best explained with an example. In this example we will change the emonTx V3 node ID, this is useful if we want to connect more than 4x emonTx V3 units to a single emonPi / emonBase.</p>
+
+<p><strong>A <a href="https://shop.openenergymonitor.com/programmers">USB to UART cable</a> is required to upload to emonTx / emonTH. Any 5v FTDI adapter can also be used.</strong></p>
 
 <h3 id="using-arduino-ide">Using Arduino IDE</h3>
 
@@ -181,7 +185,9 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   <li><a href="http://platformio.org/platformio-ide">Download and install PlatformIO IDE</a></li>
 </ul>
 
-<p><em>Note: if your running windows Python will also need to be installed, see <a href="http://platformio.org/platformio-id">PlatformIO IDEinstall guide</a></em></p>
+<p>If running windows:
+- Python will also need to be installed, see <a href="http://platformio.org/platformio-id">PlatformIO IDEinstall guide</a> *
+- <a href="http://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx">USB to UART adapter windows drivers</a> will need to be installed</p>
 
 <p><img src="/images/technical/pio-ide-download.png" alt="Download PlatfomIO" /></p>
 
