@@ -237,6 +237,8 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   <li>After successful upload check nodeID has changed by viewing serial output, click <code class="highlighter-rouge">Serial Monitor (4)</code> and choose <code class="highlighter-rouge">9600 baud</code>.</li>
 </ul>
 
+<hr />
+
 <h2 id="platformio-command-line">PlatformIO Command Line</h2>
 
 <p>PlatformIO works great from the commandline, follow these instructions to install and run platformIO from the commandline. See the excellent <a href="http://docs.platformio.org/en/latest/quickstart.html">PlatformIO Quick Start Guide</a> for more info.</p>
@@ -265,7 +267,7 @@ cd emonpi/firmware
 </code></pre>
 </div>
 
-<h3 id="compile-with-platformio">3. Compile with PlatformIO</h3>
+<h3 id="compile-with-platformio-cli">3. Compile with PlatformIO CLI</h3>
 
 <p><code class="highlighter-rouge">$ platformIO run</code></p>
 
@@ -273,9 +275,17 @@ cd emonpi/firmware
 
 <p><code class="highlighter-rouge">$ pio run</code></p>
 
-<p><strong>That’s it!</strong> That’s all that’s needed to setup pio from scratch and compile emonTx firmware :-D</p>
+<h3 id="upload-with-platformio-cli">4. Upload with PlatformIO CLI</h3>
 
-<p>The first time platformIO is run it will ask to install the required libraries  and avr toolchain. The required libraries are defined in platformio.ini in the project folder.</p>
+<p><code class="highlighter-rouge">$ pio run -t upload</code></p>
+
+<p><em>The first time platformIO is run it will ask to install the required libraries  and avr toolchain. The required libraries are defined in platformio.ini in the project folder.</em></p>
+
+<h3 id="view-serial-port-with-platformio-cli">4. View serial port with PlatformIO CLI</h3>
+
+<p><code class="highlighter-rouge">$ pio serialports monitor -b9600</code></p>
+
+<p>For more PlatformIO commandline love see <a href="http://docs.platformio.org/en/latest/quickstart.html">PlatformIO getting started</a></p>
 
 
 </article>
