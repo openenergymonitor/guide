@@ -92,7 +92,7 @@ The first time Atom IDE is opened after a few seconds PlatformIO will finish the
  - Note: A [USB to UART cable](https://shop.openenergymonitor.com/programmers) is required to upload to emonTx / emonTH
 - After successful upload check nodeID has changed by viewing serial output, click `Serial Monitor (4)` and choose `9600 baud`.
 
-
+***
 
 ## PlatformIO Command Line
 
@@ -122,7 +122,7 @@ $ git clone https://github.com/openenergymonitor/emonpi`
 cd emonpi/firmware
 ```
 
-### 3. Compile with PlatformIO
+### 3. Compile with PlatformIO CLI
 
 `$ platformIO run`
 
@@ -130,6 +130,14 @@ or shorthand for the lazy
 
 `$ pio run`
 
-**That's it!** That's all that's needed to setup pio from scratch and compile emonTx firmware :-D
+### 4. Upload with PlatformIO CLI
 
-The first time platformIO is run it will ask to install the required libraries  and avr toolchain. The required libraries are defined in platformio.ini in the project folder.
+`$ pio run -t upload`
+
+*The first time platformIO is run it will ask to install the required libraries  and avr toolchain. The required libraries are defined in platformio.ini in the project folder.*
+
+### 4. View serial port with PlatformIO CLI
+
+`$ pio serialports monitor -b9600`
+
+For more PlatformIO commandline love see [PlatformIO getting started](http://docs.platformio.org/en/latest/quickstart.html)
