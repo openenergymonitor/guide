@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Compiling and Uploading AVR Firmware using PlatformIO
+title: Firmware Modification
 description: Compiling Firmware
 date: '2014-12-18 21:49'
 sidebar: true
@@ -15,7 +15,7 @@ The emonTx, emonTH and emonPi all use an ATmega328p 8-bit AVR microprocessor. Th
 - Modify the firmware to add custom feature e.g support a new type of sensor etc.
 - **Change the RF nodeID** e.g. To use more than 2x emonTx V3 units (or more than 4x emonTH units) on a single network the nodeID's must be set manually in the firmware since more nodeID's are required than is possible to set using the on-board hardware DIP switches.
 
-*Note: The 433Mhz RF networks supports node ID's in the range of 1-29, RF nodeID must be unique to each unit on the same network. A corresponding node decoder entry must be created for each node in `emonhub.conf`. See [configuring EmonHub config](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md)
+See [Resources page](/technical/resources) for links to firmware repositories for all OpenEnergyMonitor units.  
 
 ***
 
@@ -23,7 +23,7 @@ The emonTx, emonTH and emonPi all use an ATmega328p 8-bit AVR microprocessor. Th
 
 The process of editing, compiling and uploading firmware is best explained with an example. In this example we will change the emonTx V3 node ID, this is useful if we want to connect more than 4x emonTx V3 units to a single emonPi / emonBase.
 
- **A [USB to UART cable](https://shop.openenergymonitor.com/programmers) is required to upload to emonTx / emonTH. Any 5v FTDI adapter can also be used.**
+ **A [USB to UART adapter](https://shop.openenergymonitor.com/programmers) is required to upload to emonTx / emonTH. Any 5v FTDI adapter can also be used.**
 
 ### Using Arduino IDE
 
@@ -34,6 +34,8 @@ Either PlatformIO or Arduino IDE can be used to compile and upload the firmware.
 > PlatformIO is an open-source ecosystem for IoT development.
 
 > Cross-platform build system, IDE integration and continuous testing. Arduino, Espressif, ARM and mbed compatible.
+
+[**platformio.org**](https://platformio.org)
 
 See our [blog post introducing PlatformIO](https://blog.openenergymonitor.org/2016/06/platformio/).
 
@@ -49,7 +51,7 @@ These install steps have been tested to work on Linux, Mac and Windows.
 - [Download and install PlatformIO IDE](http://platformio.org/platformio-ide)
 
 If running windows:
-- Python will also need to be installed, see [PlatformIO IDEinstall guide](http://platformio.org/platformio-id) *
+- Python will also need to be installed, see [PlatformIO IDE install-guide](http://platformio.org/platformio-id) *
 - [USB to UART adapter windows drivers](http://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx) will need to be installed
 
 
@@ -65,9 +67,9 @@ The first time Atom IDE is opened after a few seconds PlatformIO will finish the
 ##### 2. Open emonTx Firmware
 
 - Download [emonTx Firmware GitHub repo](github.com/openenergymonitor/emontxFirmware/) either via git clone or downloading the zip and extracting.
-- From the *PlatformIO Home page* in Atom IDE choose `Open Project (1)*`
+- From the PlatformIO Home screen in Atom IDE choose `Open Project (1)*`
 - Navigate to the standard emonTx Firmware `emonTxFirmware/emonTxV3/RFM/emonTxV3.4/emonTxV3_4_DiscreteSampling` then chosen `open`
-- You should see the emonTx firmware files in the file tree on the RHS of the editor
+- You should see the emonTx firmware files in the file tree on the right-hand-side of the editor
 
 
 ##### 3. Change node ID
@@ -76,6 +78,8 @@ The first time Atom IDE is opened after a few seconds PlatformIO will finish the
 - Change `byte nodeID = 8;` (currently line 128) to be a different number e.g. `byte nodeID = 29;`
   - 29 is recommended since this does not conflict with any other nodeID's
   - Switching the DIP switch 1 on the emonTx will subtract 1 from the nodeID in the firmware e.g. 29 will be come 28 if DIP switch 1 = ON. See [emonTx Setup for more info](http://guide.openenergymonitor.org/setup/emontx/)
+
+*Note: The 433Mhz RF networks supports node ID's in the range of 1-29, RF nodeID must be unique to each unit on the same network. A corresponding node decoder entry must be created for each node in `emonhub.conf`. See [configuring EmonHub config](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md)
 
 ##### 4. Compile Firmware
 
