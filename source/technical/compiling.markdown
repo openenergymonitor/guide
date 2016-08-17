@@ -69,7 +69,7 @@ The first time Atom IDE is opened after a few seconds PlatformIO will finish the
 - Download [emonTx Firmware GitHub repo](github.com/openenergymonitor/emontxFirmware/) either via git clone or downloading the zip and extracting.
 - From the PlatformIO Home screen in Atom IDE choose `Open Project (1)*`
 - Navigate to the standard emonTx Firmware `emonTxFirmware/emonTxV3/RFM/emonTxV3.4/emonTxV3_4_DiscreteSampling` then chosen `open`
-- You should see the emonTx firmware files in the file tree on the right-hand-side of the editor
+- You should see the emonTx firmware files in the file-tree on the right-hand-side of the editor
 
 
 ##### 3. Change node ID
