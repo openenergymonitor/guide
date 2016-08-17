@@ -157,6 +157,8 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <p><strong>A <a href="https://shop.openenergymonitor.com/programmers">USB to UART adapter</a> is required to upload to emonTx / emonTH. Any 5v FTDI adapter can also be used.</strong></p>
 
+<p>Note: The method of compiling and uploading firmware is identical for the emonTx and emonTH. To upload firmware to the emonPi this can either be done by compiling locally then flashing .hex file (in the <code class="highlighter-rouge">.pioenvs</code> folder in the project dir if using platformIO) then using avrdue on the emonPi to upload (<a href="https://github.com/openenergymonitor/emonpi/blob/master/firmware/compiled/update">see emonPi avrdude upload script</a> or compiling and uploading using PlatformIO directly on the emonPi (<a href="https://blog.openenergymonitor.org/2016/06/platformio/">see blog post</a>.</p>
+
 <h3 id="using-arduino-ide">Using Arduino IDE</h3>
 
 <p>Either PlatformIO or Arduino IDE can be used to compile and upload the firmware. This example will use PlatformIO since we consider it the easiest method. If you wish to use Arduino IDE see <a href="https://openenergymonitor.org/emon/buildingblocks/setting-up-the-arduino-environment">Setting Up the Arduino Environment</a>.</p>
