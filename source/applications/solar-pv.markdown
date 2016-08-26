@@ -76,31 +76,31 @@ The polarity of the power readings depends on the orientation of the clip-on CT 
 
 
 <p class='note'>
-For automatic MySolarPV App setup use the suggested feed names mendtioned below <b>bold The names are case sensitive</b>..
+For automatic MySolarPV App setup use the suggested feed names mendtioned below in <b>bold</b>. These names are case sensitive.
 </p>
+
+The following assumes:
+
+ * CT1 (power 1) = site consumption.
+ * CT2 (power 2) = solar generation.
 
 **1. Setup site-consumption Feed**
 
-*Assuming CT1 (power 1) = site-consumption*
-
  1. Click on spanner icon to configure `emonPi/power1`.
- 2. Select `log to feed` and create a feed called `use` with the feed engine set to PHPFina and feed `interval=10s`.
- 3. Select `power to kwh`, create a feed called `use_kwh` with feed engine `PHPFina` and feed `interval=10s`.
+ 2. Add the following process steps under **Add process**:
+    1. **Log to feed**, called **use**, with feed engine **PHPFINA**, at **10s** interval.
+    2. **Power to kWh**, called **use_kwh**, with feed engine **PHPFINA**, at **10s** interval.
+    3. **- input**, choosing **power2:**. This will subtract the solar generation from the current value, giving us what's being imported.
+    4. **Allow positive**. This will allow only positive values to pass, since import is only if this number is positive.
+    5. **Log to feed**, called **import**, with feed engine **PHPFINA**, at **10s** interval.
+    6. **Power to kWh**, called **import_kwh**, with feed engine **PHPFINA**, at **10s** interval.
 
-**2. Calculated grid import:**
-
- 1. Use the `- input` input processor to subtract solar generation from site consumption in order to calculate import as positive (export will be negative).
- 2. Use `allow positive` in order to isolate the import component
- 3. Select `log to feed` and create a feed called `import` with the feed engine set to `PHPFina` and feed `interval=10s`
- 4. Select `power to kwh`, create a feed called `import_kwh` with feed engine `PHPFina` and feed `interval=10s`
-
-**3. Setup Solar PV Generation Feed**
-
-*Assuming CT2 (power 2) = Solar Gen*
+**2. Setup Solar PV Generation Feed**
 
  1. Click on spanner icon to configure `emonPi/power2`.
- 2. Select `log to feed` and create a feed called `solar` with the feed engine set to `PHPFina` and feed `interval=10s`
- 3. Select `power to kwh`, create a feed called `solar_kwh` with feed engine `PHPFina` and feed `interval=10s`
+ 2. Add the following process steps under **Add process**:
+    1. **Log to feed**, called **solar**, with feed engine **PHPFINA**, at **10s** interval.
+    2. **Power to kWh**, called **solar_kwh**, with feed engine **PHPFINA**, at **10s** interval.
  
 Once complete click on `Apps > MySolarPV` in order to launch the MySolarPV Emoncms app, If you decide to use custom feed names the app will give you the option to select your solar, use and import feeds.
 
@@ -108,31 +108,31 @@ Once complete click on `Apps > MySolarPV` in order to launch the MySolarPV Emonc
 
 
 <p class='note'>
-For automatic MySolarPV App setup use the suggested feed names in <b>bold</b>. The names are case sensitive:
+For automatic MySolarPV App setup use the suggested feed names mendtioned below in <b>bold</b>. These names are case sensitive.
 </p>
+
+The following assumes:
+
+ * CT1 (power 1) = grid import (positive) / export (negative).
+ * CT2 (power 2) = solar generation.
 
 **1. Setup Grid Import Feed**
 
-*Assuming CT1 (power 1) = Grid import/export*
-
  1. Click on spanner icon to configure `emonPi/power1`
- 2. Select `allow positive` to isolate import component
- 3. Select `log to feed` and create a feed called **import** with the feed engine set to `PHPFina` and feed `interval=10s`
- 4. Select `power to kwh`, create a feed called **import_kwh** with feed engine `PHPFina` and feed `interval=10s`
+ 2. Add the following process steps under **Add process**:
+    1. **Allow positive**. This will isolate only import.
+    2. **Log to feed**, called **import**, with feed engine **PHPFINA**, at **10s** interval.
+    3. **Power to kWh**, called **import_kwh**, with feed engine **PHPFINA**, at **10s** interval.
  
 **2. Setup Solar Generation Feed**
 
-*Assuming CT2 (power 2) = Solar Generation*
-
  1. Click on spanner icon to configure `emonPi/power2`
- 2. Select `log to feed` and create a feed called **solar** with the feed engine set to `PHPFina` and feed `interval=10s`
- 3. Select `power to kwh`, create a feed called **solar_kwh** with feed engine `PHPFina` and feed `interval=10s`
-
-**3. Calculated site-consumption:**
-
- 1. Use `+ input` input processor to add CT1 grid import/export to solar generation in order to calculate site-consumption
- 2. Select `log to feed` and create a feed called **use** with the feed engine set to `PHPFina` and feed `interval=10s`
- 3. Select `power to kwh`, create a feed called **use_kwh** with feed engine `PHPFina` and feed `interval=10s`
+ 2. Add the following process steps under **Add process**:
+    1. **Log to feed**, called **solar**, with feed engine **PHPFINA**, at **10s** interval.
+    2. **Power to kWh**, called **solar_kwh**, with feed engine **PHPFINA**, at **10s** interval.
+    3. **+ input**, choosing **power1:**. This adds grid import/export to the solar generation, to calculate site consumption.
+    4. **Log to feed**, called **use**, with feed engine **PHPFINA**, at **10s** interval.
+    5. **Power to kWh**, called **use_kwh**, with feed engine **PHPFINA**, at **10s** interval.
 
 ### {% linkable_title Configure MySolarPV App %}
 
