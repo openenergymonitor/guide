@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Connect
-description: "Connect to network & create account"
-date: "2015-03-08 21:36"
+description: Connect to network & create account
+date: '2015-03-08 21:36'
 sidebar: true
 comments: false
 sharing: true
@@ -26,7 +26,7 @@ This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/
 - [Pre-build SD card download & Change Log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log)
 - [Instructions to flash image to SD card (RaspberryPi)](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
 
-*The emonPi runs Emoncms data logging web-app locally from emonPi's internal web sever. Using Emoncms data can be logged locally to the emonPi's SD card and (optionally) posted remotely to the [Emoncms.org](https://emoncms.org) cloud server.*
+*The emonPi runs the Emoncms data logging web-app locally from emonPi's internal web sever. Using Emoncms data can be logged locally to the emonPi's SD card and (optionally) posted remotely to the [Emoncms.org](https://emoncms.org) cloud server.*
 
 
 <p class="note">
@@ -37,11 +37,11 @@ This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/
 
 ### {% linkable_title 1. Connect Ethernet and USB power %}
 
-![emonPi First Boot Etherent](/images/setup/emonpi_ethernet_first_boot.png)
+![emonPi First Boot Ethernet](/images/setup/emonpi_ethernet_first_boot.png)
 
   - [1.2A USB power adapter recommended](http://shop.openenergymonitor.com/power-supplies/)
 
-  - <p class="note"> Take care to connect Ethernet to the socket on the same side as the USB sockets, not the RJ45 connector on the opposite side.</p>
+  - <p class="note"> Take care to connect the Ethernet to the socket on the same side as the USB sockets, not the RJ45 connector on the opposite side.</p>
   - The emonPi LCD display will display firmware version then scan for connected sensors. Once the Raspberry Pi has booted up, the LCD will display the IP address of the emonPi on the local network.
  - ![Ethernet Connected](/images/setup/Etherent_Connected.jpg)
 
@@ -49,7 +49,7 @@ This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/
 ### {% linkable_title 2. Enter the emonPi's IP address into your web browser's address bar %}
 
 - Browsing the hostname will work on some networks: [http://emonpi](http://emonpi)
-- *If using an emonBase and hostname does not work, lookup it's IP address from your router or use Fing Network Discovery tool on [Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en_GB) and [iOS](https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8)*.
+- *If using an emonBase and hostname does not work, look up its IP address from your router or use the Fing Network Discovery tool on [Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en_GB) and [iOS](https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8)*.
 
 
 ### {% linkable_title  3. Create local Emoncms user account %}
@@ -62,7 +62,7 @@ This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/
 
 WiFi is optional and requires either a RaspberryPi 3 (integrated WiFi) or a USB WiFi dongle ([Edimax EW7811UN](http://shop.openenergymonitor.com/edimax-usb-wifi-adapter-ew-7811un/)).
 
-*Note: All emonPi's shipped June 2016 onwards will have a Raspberry Pi 3 as standard, emonPi's with a Pi3 can be identified by a plastic end-plate(s). [See blog post](https://blog.openenergymonitor.org/2016/05/emonpi-raspberrypi3/).*
+*Note: All emonPis shipped June 2016 onwards will have a Raspberry Pi 3 as standard, emonPis with a Pi3 can be identified by a plastic end-plate(s). [See blog post](https://blog.openenergymonitor.org/2016/05/emonpi-raspberrypi3/).*
 
 ![Connect to Wifi](/images/setup/wifi9_0.png)
 
