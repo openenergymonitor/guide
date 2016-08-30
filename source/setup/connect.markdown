@@ -46,7 +46,7 @@ This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/
  - ![Ethernet Connected](/images/setup/Etherent_Connected.jpg)
 
 
-### {% linkable_title 2. Enter the emonPi's IP address into your web browser's address bar %}
+### {% linkable_title 2. Enter the emonPis IP address into your web browser's address bar %}
 
 - Browsing the hostname will work on some networks: [http://emonpi](http://emonpi)
 - *If using an emonBase and hostname does not work, look up its IP address from your router or use the Fing Network Discovery tool on [Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en_GB) and [iOS](https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8)*.
@@ -56,7 +56,7 @@ This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/
 
  {% img /images/setup/Emoncms_reg.png 250 %}
 
-  - By default only a single (admin) account can be created on local emonPi Emoncms. To enable multiple accounts edit Emoncms settings in `/var/www/emoncms/settings.php`
+  - By default only a single (admin) account can be created on the local emonPi Emoncms. To enable multiple accounts edit Emoncms settings in `/var/www/emoncms/settings.php`
 
 ### {% linkable_title  4. Connect to WiFi (optional) %}
 
