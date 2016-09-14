@@ -55,7 +55,8 @@ footer: true
 
 2\. The relay contacts are isolated from the main supply. The 3 x relay terminals are connected as follows:
 
-![](https://openenergymonitor.org/emon/sites/default/files/IMG_20160303_195806.jpg)![](https://openenergymonitor.org/emon/sites/default/files/Selection_020_0.png)
+
+![relay connections](/images/integrations/mqtt_wifi_relay_connections.png)
 
 ## <a id="network_setup" name="network_setup"></a>Network Setup
 
