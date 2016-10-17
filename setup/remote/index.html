@@ -184,6 +184,24 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <p><em>If no appear in Emoncms.org emonHub.log on <code class="highlighter-rouge">emonHub</code> page of Local Emoncms for debugging</em></p>
 
+<h2 id="a-classtitle-link-nameposting-to-multiple-emoncms-accounts-hrefposting-to-multiple-emoncms-accountsa-posting-to-multiple-emoncms-accounts"><a class="title-link" name="posting-to-multiple-emoncms-accounts" href="#posting-to-multiple-emoncms-accounts"></a> Posting to multiple Emoncms accounts</h2>
+
+<p>The emonPi can post to other remote Emoncms accounts as well as or instead of emoncms.org. To post to another Emoncms account create another <code class="highlighter-rouge">EmonHubEmoncmsHTTPInterfacer</code> section in <code class="highlighter-rouge">emonhub.conf</code> e.g :</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[[my-emoncms-server]]
+    Type = EmonHubEmoncmsHTTPInterfacer
+    [[[init_settings]]]
+    [[[runtimesettings]]]
+        pubchannels = ToRFM12,
+        subchannels = ToEmonCMS,
+        url = https://my-awesome-emoncms-server-url
+        apikey = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        senddata = 1                    # my-awesome-emoncms-server
+        sendstatus = 0                  # Enable sending WAN IP to Emoncms MyIP (requires My IP installed)
+        sendinterval= 10                # Bulk send interval to post in seconds
+</code></pre>
+</div>
+
 <hr />
 
 <h2 id="a-classtitle-link-namemultiple-emonpis-posting-to-a-single-emoncmsorg-account-hrefmultiple-emonpis-posting-to-a-single-emoncmsorg-accounta-multiple-emonpis-posting-to-a-single-emoncmsorg-account"><a class="title-link" name="multiple-emonpis-posting-to-a-single-emoncmsorg-account" href="#multiple-emonpis-posting-to-a-single-emoncmsorg-account"></a> Multiple emonPi’s posting to a single Emoncms.org account</h2>
