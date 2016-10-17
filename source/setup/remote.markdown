@@ -49,7 +49,28 @@ Data can also (optionally) be posted remotely to [Emoncms.org](https://emoncms.o
 
 *If no appear in Emoncms.org emonHub.log on `emonHub` page of Local Emoncms for debugging*
 
+
+## {% linkable_title Posting to multiple Emoncms accounts %}
+
+The emonPi can post to other remote Emoncms accounts as well as or instead of emoncms.org. To post to another Emoncms account create another `EmonHubEmoncmsHTTPInterfacer` section in `emonhub.conf` e.g :
+
+```
+[[my-emoncms-server]]
+    Type = EmonHubEmoncmsHTTPInterfacer
+    [[[init_settings]]]
+    [[[runtimesettings]]]
+        pubchannels = ToRFM12,
+        subchannels = ToEmonCMS,
+        url = https://my-awesome-emoncms-server-url
+        apikey = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        senddata = 1                    # my-awesome-emoncms-server
+        sendstatus = 0                  # Enable sending WAN IP to Emoncms MyIP (requires My IP installed)
+        sendinterval= 10                # Bulk send interval to post in seconds
+```
+
+
 ***
+
 
 ## {% linkable_title Multiple emonPi's posting to a single Emoncms.org account %}
 

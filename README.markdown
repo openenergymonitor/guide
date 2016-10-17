@@ -21,20 +21,42 @@ Using all the shiny new toys: powered by Jekyll and the Oscalite theme. Hosted b
 
 ## Setup
 
-You need to have Ruby 2.x and bundler installed.
+#### Install Ruby
 
-- [Ruby installation instructions](https://www.ruby-lang.org/en/documentation/installation/)
+Jekyll requires Ruby 2.x and bundler installed. Ubuntu 14.04 only includes 1.9.3 in it's packages. Solution use RVM (Ruby version manager), install with:
 
-```bash
-$ gem install bundler
+```
+$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+$ \curl -sSL https://get.rvm.io | bash -s stable
 ```
 
-```bash
+Perform any further tasks recomended by rvm installer then restart shell session to re-load bash profile.
+
+```
+$ rvm install 2.3
+```
+
+#### Install required Ruby Gems
+
+```
+$ gem install bundler
 $ git clone --recursive https://github.com/openenergymonitor/guide.git
 $ cd guide
 $ bundle
 ```
 
+### Preview site locally
+
+```
+$ rake generate
+$ rake generate preview
+```
+
+[https://localhost:4001](https://localhost:4001)
+
+Full [Ruby installation instructions](https://www.ruby-lang.org/en/documentation/installation/)
+
+***
 
 ### Deploy to GitHub Pages
 
