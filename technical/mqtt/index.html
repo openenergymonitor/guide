@@ -158,11 +158,11 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <h3 id="a-classtitle-link-nameemonhub-hrefemonhuba-emonhub"><a class="title-link" name="emonhub" href="#emonhub"></a> emonHub</h3>
 
-<p><a href="/technical/#emonhub">EmonHub</a> python service decodes the data received from the emonPi + RF nodes and publishes to the emonPi’s Mosquitto MQTT server using the following two topic formats (both formats are published to parallel) :</p>
+<p><a href="/technical/#emonhub">EmonHub</a> python service decodes the data received from the emonPi + RF nodes and publishes to the emonPi’s Mosquitto MQTT server using the following two topic formats (both formats are published to parallel):</p>
 
 <h4 id="a-classtitle-link-name1-new-mqtt-topic-format-href1-new-mqtt-topic-formata-1-new-mqtt-topic-format"><a class="title-link" name="1-new-mqtt-topic-format" href="#1-new-mqtt-topic-format"></a> 1. New MQTT Topic Format</h4>
 
-<p>Each data key (power) has it’s own MQTT topic as a sub-topic of the NodeID or NodeName. This MQTT topic structure makes it far easier to subscribe to a particular node key of interest e.g. <code class="highlighter-rouge">emontx/power1</code> using another service e.g. <a href="/integrations/openhab">OpenHAB</a>.</p>
+<p>Each data key (power) has its own MQTT topic as a sub-topic of the NodeID or NodeName. This MQTT topic structure makes it far easier to subscribe to a particular node key of interest e.g. <code class="highlighter-rouge">emontx/power1</code> using another service e.g. <a href="/integrations/openhab">openHAB</a>.</p>
 
 <p><code class="highlighter-rouge">[basetopic]/[node]/[keyname]</code></p>
 
