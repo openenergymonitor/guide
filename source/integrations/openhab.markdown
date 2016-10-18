@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "OpenHAB"
-description: "OpenHAB Integration"
+title: "openHAB"
+description: "openHAB Integration"
 date: 2014-12-18 21:49
 sidebar: true
 comments: false
@@ -9,13 +9,13 @@ sharing: true
 footer: true
 ---
 
-Open Home Automation Bus (OpenHAB) is *"a vendor and technology agnostic open source automation software for your home"*. OpenHAB can run on an emonPi (Raspberry Pi) and is very flexible and can be configured for just about any home automation task. This high level of configurability can also make it seem quite hard to understand to start with.
+Open Home Automation Bus (openHAB) is *"a vendor and technology agnostic open source automation software for your home"*. openHAB can run on an emonPi (Raspberry Pi) and is very flexible and can be configured for just about any home automation task. This high level of configurability can also make it seem quite hard to understand to start with.
 
 **[http://www.openhab.org](http://www.openhab.org)**
 
 ***
 
-**OpenHAB is pre-installed and setup on the latest emondSD Raspberry Pi images, see [emonSD repository and change log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log). If your running an emonSD image that includes OpenHAB browse to:**
+**openHAB is pre-installed and setup on the latest emondSD Raspberry Pi images, see [emonSD repository and change log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log). If your running an emonSD image that includes openHAB browse to:**
 
 ## [http://emonpi:8080](http://emonpi:8080)
 
@@ -26,13 +26,13 @@ Username: "pi"
 Password: "emonpi2016"
 ```
 
-![OpenHAB OpenEnergyMonitor](https://raw.githubusercontent.com/openenergymonitor/oem_openHab/master/images/web.png)
+![openHAB OpenEnergyMonitor](https://raw.githubusercontent.com/openenergymonitor/oem_openHab/master/images/web.png)
 
-Pre installed on the emonPi is a skeleton config setup openHAB with to subscribe to data from the emonPi's MQTT server (see [MQTT docs](/technical/mqtt/)). For a full OpenHAB demo see the [OpenHAB Demo House](http://demo.openhab.org:8080/).
+Pre installed on the emonPi is a skeleton config setup openHAB with to subscribe to data from the emonPi's MQTT server (see [MQTT docs](/technical/mqtt/)). For a full openHAB demo see the [openHAB Demo House](http://demo.openhab.org:8080/).
 
 ### Configuring OpenHAB
 
-OpenHAB is configured from three main files:
+openHAB is configured from three main files:
 
 - **`openhab.cfg`**
 - **`<sitemap-name>.items`**
@@ -95,7 +95,7 @@ I have intentionally kept this 'skeleton' example as simple as possible. To view
 
 ### Documentation & Source Code
 
-**[emonPi OpenHAB](https://github.com/openenergymonitor/oem_openhab)**
+**[emonPi openHAB](https://github.com/openenergymonitor/oem_openhab)**
 
 
 ### Related Blog Posts
