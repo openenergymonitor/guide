@@ -25,11 +25,11 @@ The emonPi with [emonSD pre-built SD card](/technical/#emonsd-features) by defau
 
 ### {% linkable_title emonHub %}
 
-[EmonHub](/technical/#emonhub) python service decodes the data received from the emonPi + RF nodes and publishes to the emonPi's Mosquitto MQTT server using the following two topic formats (both formats are published to parallel) :
+[EmonHub](/technical/#emonhub) python service decodes the data received from the emonPi + RF nodes and publishes to the emonPi's Mosquitto MQTT server using the following two topic formats (both formats are published to parallel):
 
 #### {% linkable_title 1. New MQTT Topic Format %}
 
-Each data key (power) has it's own MQTT topic as a sub-topic of the NodeID or NodeName. This MQTT topic structure makes it far easier to subscribe to a particular node key of interest e.g. `emontx/power1` using another service e.g. [OpenHAB](/integrations/openhab).
+Each data key (power) has its own MQTT topic as a sub-topic of the NodeID or NodeName. This MQTT topic structure makes it far easier to subscribe to a particular node key of interest e.g. `emontx/power1` using another service e.g. [openHAB](/integrations/openhab).
 
 `[basetopic]/[node]/[keyname]`
 
