@@ -16,7 +16,7 @@ The OpenEnergyMonitor system  has the capability to monitor electrical energy us
 
 The system is made up of five main units. These can be assembled and configured to work for a variety of [applications](/applications). The system is fully open-source, both hardware and software. All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms.
 
-Documentation on everything from AC theory to sensor circuit design and application programming is available in the [Resources](https://openenergymonitor.org/emon/buildingblocks) section.
+Documentation on everything from AC theory to sensor circuit design and application programming is available in the [Technical Resources](/technical/resources/) section.
 
 ***
 
