@@ -19,17 +19,17 @@ footer: true
 *   OTA Firmware upload function
 *   Powered direct from 110-240V AC via isolated on-board PSU
 *   Built-in web server with mobile device friendly UI and
-*   HTTP API to control
+*   HTTP Control API
 *   Thermostat function with weekly scheduling
 *   Manual relay control via web interface
-*   [MQTT ](http://en.wikipedia.org/wiki/MQTT)support (control & status)
+*   [MQTT ](http://en.wikipedia.org/wiki/MQTT) control
 *   [NTP](http://en.wikipedia.org/wiki/Network_Time_Protocol) for network time and scheduling functionality
 *   Web server settings: including HTTP port & authentication setup
 *   Temperature sensor support - 1 x sensor included
 
-[![](https://openenergymonitor.org/emon/sites/default/files/IMG_20160303_200359.jpg)](https://openenergymonitor.org/emon/sites/default/files/IMG_20160303_200359.jpg)
+![mqtt-relay](/images/integrations/mqtt-relay.jpg)
 
-## [![](https://openenergymonitor.org/emon/sites/default/files/Trolley.png)](http://shop.openenergymonitor.com/wifi-mqtt-relay-thermostat/)<span style="line-height: 1.2; font-size: 13px;"> </span>[**Store**](http://shop.openenergymonitor.com/wifi-mqtt-relay-thermostat/)
+<a class="btn pull-right" href="http://shop.openenergymonitor.com/wifi-mqtt-relay-thermostat/">View in Shop &rarr; </a>
 
 ## Contents
 
@@ -64,7 +64,7 @@ On first power the unit will enter WiFi Access Point (AP) mode serving it's own
 
 1\. Connect to the '**OEM_XXX**' WiFi network and browse to **[http://192.168.10.1](http://192.168.10.1).**
 
-![](https://openenergymonitor.org/emon/sites/default/files/Selection_009_0.png)
+![relay-menu](/images/integrations/relay-menu.png)
 
 2\. Select **WiFi Settings**, wait for auto scan to populate then select the network to connect to and enter password. If required enter static IP settings or choose DHCP (default).
 
@@ -74,7 +74,8 @@ Unit will now reboot and turn off AP mode. Unit should not be connected to the c
 
 `sudo arp-scan –retry 7 –quiet –localnet –interface=wlan0 | grep -s -i 18:fe:34`
 
-![](https://openenergymonitor.org/emon/sites/default/files/Selection_010_0.png)
+![relay-wifi](/images/integrations/relay-wifi.png)
+
 
 ## Turn on WiFi AP / Restore Default Settings <a id="Reset" name="Reset"></a>
 
@@ -92,13 +93,13 @@ Relay can now be in four ways:
 
 Select **Relay Control** via web interface. Or browse to http://<IP-ADDRESS>/control/relay.html
 
-![](https://openenergymonitor.org/emon/sites/default/files/Selection_014_0.png)
+![relay-control](/images/integrations/relay-control.png)
 
 #### <a id="Thermostat" name="Thermostat"></a>2\. Thermostat Scheduler
 
 Heating or A/C schedule and desired set point (from connected internal DS18B20 temperature sensor) can be set using the Thermostat Scheduler interface
 
-![](https://openenergymonitor.org/emon/sites/default/files/Selection_023.png)
+![relay-thermostat](/images/integrations/relay-thermostat.png)
 
 The **Thermostate Settings **page allow setting of Thermostat Input (currently only DS18B20 sensor is implemented)
 
@@ -108,7 +109,10 @@ The "high" defines how much higher than the desired temperature the temperature 
 
 The "low" defines how much lower than the desired temperature the temperature reading has to be in order for the relay to switch on
 
-![](https://openenergymonitor.org/emon/sites/default/files/Selection_015_2.png)    ![](https://openenergymonitor.org/emon/sites/default/files/image.png)
+![relay-thermostat-settings](/images/integrations/relay-thermostat-settings.png)
+
+![relay-hist](/images/integrations/relay-hist.png)  
+
 
 #### <a id="HTTP" name="HTTP"></a>3\. HTTP API
 
@@ -134,7 +138,8 @@ Returns:
 
 **HTTP Auth** allows for setting separate Admin and User password. Non-admin user cannot make any changes to the config.
 
-![](https://openenergymonitor.org/emon/sites/default/files/Selection_012_0.png)
+![relay-httpd](/images/integrations/relay-httpd.png)
+
 
 #### <a id="MQTT" name="MQTT"></a>4. MQTT API
 
@@ -160,9 +165,20 @@ Relay can be controlled by publishing 1 or 0 to the MQTT control topic, default:
 
 After a control message has been received (either via MQTT or HTTP) relay will respond with a status MQTT message posted to the status topic (see above).
 
+MQTT topic names are fully configurable, see **MQTT Setttings:**
+
+![relay-mqtt](/images/integrations/relay-mqtt.png)
+
+##### MQTT with emonPi & Emoncms
 
 
-Note: The emonPi has a Mosquitto MQTT server running by default. Older 1st gen emonPi's have an unauthenticated MQTT server running on localhost with port 1883 closed. Port can be opened and make persistently open with:
+The emonPi has a Mosquitto MQTT server running as standard on port 1883. To publish heating / temperature status to Emoncms publish to emonPi MQTT server with the `emon/` MQTT prefix e.g:
+
+`emon/heating/status/ds18b20/1`
+
+![mqtt-emonpi-relay](/images/integrations/mqtt-emonpi-relay.png)
+
+*Note: Older 1st gen emonPi's have an unauthenticated MQTT server running on localhost with port 1883 closed. Port can be opened and make persistently open with:*
 
 `sudo iptables -A INPUT -p tcp -m tcp --dport 1883 -j ACCEPT`
 
@@ -171,15 +187,16 @@ Note: The emonPi has a Mosquitto MQTT server running by default. Older 1st
 Newer emonPi's have the MQTT port open by default and authentication turned on with default _user: `emonpi`, password: `emonpimqtt2016`. _Port 1883 is closed by default on all home network routers therefor this port is not exposed to the web.
 
 
-MQTT topic names are fully configurable, see **MQTT Setttings:**
 
-![](https://openenergymonitor.org/emon/sites/default/files/Selection_011_0.png)
+
+
 
 #### <a id="other_settings" name="other_settings"></a>Other Settings
 
 **NTP Settings **- unit obtain current time from NTP for use with thermostat scheduler, set GMT offset based on your time zone.
 
-![](https://openenergymonitor.org/emon/sites/default/files/Selection_021.png)
+![relay-ntp](/images/integrations/relay-ntp.png)
+
 
 **Relay latching**  - Restores relay state after reset (not recommended)
 
@@ -187,15 +204,15 @@ MQTT topic names are fully configurable, see **MQTT Setttings:**
 
 **Relay Pulse time:** max "on" time in milliseconds. 0 means disabled (the default setting), setting it to 500 for example will result in the relay auto-switching off after 500ms of on-time. Useful when you want to pulse-contact something, say simulate a button press or make temporary make contact of the relay. Also useful when you want to ensure that the relay will be forced off after certain time, regardless of connectivity loss. I'd say if you control some heater, it would make sense to have the pulse time to 3hrs (1000*60*60*3) for just in case.
 
-![](https://openenergymonitor.org/emon/sites/default/files/Selection_013_0.png)
+![relay-settings](/images/integrations/relay-settings.png)
 
 **DS18B20 Setting - **A DS18B20 is used to inform the on-board thermostat. Changing these setting should not be required
 
-![](https://openenergymonitor.org/emon/sites/default/files/Selection_016_0.png)
+![relay-settings](/images/integrations/ds18b20-settings.png)
 
 **ADC Poll** - defaults to 0, it is the ADC polling interval. The two-wire connector is connected to the ADC, you can use it to measure temperature, light etc and take action accordingly. **3.3V Max**
 
-![](https://openenergymonitor.org/emon/sites/default/files/Selection_017_0.png)
+![relay-settings](/images/integrations/adc-settings.png)
 
 ## <a id="firmware" name="firmware"></a>Firmware Upgrade (recommended way)
 
@@ -205,7 +222,8 @@ The unit has the ability to **update firmware over WiFi network via the web inte
 
 **​Unzip then select the .bin into units interface then hit upload**
 
-![](https://openenergymonitor.org/emon/sites/default/files/Selection_018_0.png)
+![relay-settings](/images/integrations/relay-firmware.png)
+
 
 ## <a id="Programming" name="Programming"></a>Programming (advanced)
 
@@ -270,8 +288,7 @@ Note: flash address  0xFC000 contains board identification information. do not 
 
 ## <a id="schematic" name="schematic"></a>Schematic
 
-[![](https://openenergymonitor.org/emon/sites/default/files/Selection_019_0.png)](https://openenergymonitor.org/emon/sites/default/files/Selection_019_0.png)
-
+![relay-settings](/images/integrations/relay-schematic.png)
 
 ## <a id="dimentions" name="dimentions"></a>Physical Dimentions
 
@@ -280,7 +297,7 @@ PCB: 87mm x 50mm
 
 #### Credits
 
-This unit has been designed by Martin Harizanov.
+This unit has been designed by [Martin Harizanov](https://twitter.com/mharizanov).
 
 Code from the following sources has been used in this project:
 
@@ -288,6 +305,3 @@ Code from the following sources has been used in this project:
 *   The ESP-MQTT project by Tuan PM, MIT license
 *   JSON jsmn library, Z Serge, MIT license
 *   Open heating controller/thermostat scheduler by Trystan Lea
-
-
-[![](https://openenergymonitor.org/emon/sites/default/files/IMG_20160303_195742.jpg)](https://openenergymonitor.org/emon/sites/default/files/IMG_20160303_195742.jpg)
