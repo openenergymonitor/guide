@@ -168,7 +168,7 @@ To set timezone:
    - If time is STILL not correct try:
    - Check emonpi has an active Internet connection `$ wget google.com` should connect successfully
    - `$ sudo service ntp restart`
-   - Check time with `$ date
+   - Check time with `$ date`
 
 ### {% linkable_title 4. Disk space %}
 
