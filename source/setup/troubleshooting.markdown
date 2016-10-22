@@ -163,12 +163,14 @@ To set timezone:
    - Try a reboot
    - If time is still incorrect, then force manual NTP update:
    - [Connect Via SSH](/technical/credentials/#ssh)
-   - Run `$ sudo raspi-config` select `Internationalisation Options` and set local timezone
+
+   - Run `$ rpi-rw`, then run `$ sudo raspi-config`, select `Internationalisation Options` and set local timezone.  Then run `$ rpi-ro`.
+   
    - Check time is correct by running `$ date`
    - If time is STILL not correct try:
    - Check emonpi has an active Internet connection `$ wget google.com` should connect successfully
    - `$ sudo service ntp restart`
-   - Check time with `$ date
+   - Check time with `$ date`
 
 ### {% linkable_title 4. Disk space %}
 
@@ -199,7 +201,7 @@ Auto generated password: 9f7599c8da
 
 If the account username has also been forgotten this can be retreived by connecting via ssh and looking at the MYSQL database entry :
 
-When prompted enter the [emonPi default MYSQL root password.](https://guide.openenergymonitor.org/technical/credentials/#mysql)  
+When prompted enter the [emonPi default MYSQL root password.](https://guide.openenergymonitor.org/technical/credentials/#mysql)
 
 ```
 $ mysql -uroot -p
