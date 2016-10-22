@@ -163,7 +163,7 @@ To set timezone:
    - Try a reboot
    - If time is still incorrect, then force manual NTP update:
    - [Connect Via SSH](/technical/credentials/#ssh)
-   - Run `$ sudo rapi-config` select `Internationalisation Options` and set local timezone
+   - Run `$ sudo raspi-config` select `Internationalisation Options` and set local timezone
    - Check time is correct by running `$ date`
    - If time is STILL not correct try:
    - Check emonpi has an active Internet connection `$ wget google.com` should connect successfully
