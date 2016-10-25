@@ -251,23 +251,26 @@ $(document).ready(function(){
     $ shh pi@192.168.X.X
     User: "pi" | Password: "emonpi2016"
     $ rpi-rw
-    $ sudo cp /etc/network/interfaces /etc/network/backup_interfaces
-    $ sudo nano /etc/network/interfaces
+    $ sudo cp /etc/dhcpcd.conf /etc/backup_dhcpcd.conf
+    $ sudo nano /etc/dhcpcd.conf
     <br />
-    &gt; Edit the file to be the following changing to suit your network: <br />
-    auto lo
-    iface lo inet loopback
-    iface eth0 inet static
-    address 10.0.1.96        # Static IP address
-    netmask 255.255.255.0
-    network 10.0.1.0
-    broadcast 10.0.1.255
-    gateway 10.0.1.254       # IP address gateway (router)
+    &gt; Append to the end of dhcpcd.conf (change to suit your network and interface reqiuired static IP): <br />
+    
+    interface eth0
+    static ip_address=192.168.0.10/24
+    static routers=192.168.0.1
+    static domain_name_servers=192.168.0.1
+
+    interface wlan0
+    static ip_address=192.168.0.200/24
+    static routers=192.168.0.1
+    static domain_name_servers=192.168.0.1
     <br />
     [CTRL + X] then Y to save and exit nano
-    $rpi-ro
+    $ sudo reboot
     </pre>
-    <a href="http://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address">Tutorial - How to give your Raspberry Pi a Static IP Address</a>
+    <a href="http://www.modmypi.com/blog/tutorial-how-to-give-your-raspberry-pi-a-static-ip-address">For more info see Tutorial - How to give your Raspberry Pi a Static IP Address</a>
+    <p> If required the changes above to dhcpcd.conf can be made by inserting the SD card into a Linux computer and editing the file directly if working offline.</p>
 
 
 </div>
