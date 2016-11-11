@@ -109,7 +109,7 @@ env:
 
 ```
 
-## Use custom URLs
+## Use custom URL's
 
 Add `CNAME` file with custom domain and point CNAME DNS to `openenergymonitor.github.io`
 
