@@ -3,7 +3,8 @@ sudo: false
 cache: bundler
 script: bundle exec rake generate
 after_success:
-- '[ "${TRAVIS_BRANCH}" = "master" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ] && bundle exec rake deploy || false'
+- '[ "${TRAVIS_BRANCH}" = "master" ] && [ "${TRAVIS_PULL_REQUEST}" = "false" ] &&
+  bundle exec rake deploy || false'
 env:
   global:
-    secure: P0d1t6SJet/XTgiJMMNJEBTJFHdrl10pXEOWXrc76e6aP+eiwr0Qt/0OXdVv3dEeymoZWS+JKSAfRGIw66k29PINq8A3soYOKRBStSrjhfW/IQnEv8SISj13+kxrDfLHN0S4mvEm3gHir6wsd9HOKVftLECsMxuP4JiabgeaQD5hsnzFJ5huJukDTfgTmGTOnem1xReZTrhiMKZbE6LQh2VKwfOh0jk7wGgrEOtq6GQo0SFmccQjLeh0rt+dAI9DrljlV3z124z1PnldApkithyKkxnPpsun2CLNls7s40bBxwxsACN3KQg83/6gr3Ikq6WJ/h40yG2/8EBfCkYlKbCAKNk9eCkY0pbh56ZWERTesApBvcDYCo6QjkUvyGiASxTHoV014tTGGUx1HJWn2F4WQWFEGDZ7QQ3GR2qb/Jplmug5pLGrUeWi85kRu2Zrsp1deCycIECbx0RnfsCsnLV1JMTpZwYewpAt581WlTUoZh/J1XticP+sbTKXLCsYb7+f0l+Kg4qDYQsshxn1jps8MxXesIe6ogxPNi6Js7QFkZqhqHFC2XCs1Qwy25gHpHDgXG7Ik7BZGC3JDBABd1LyVdSuhEC/hTnkpJITt3jJ8QWj+1ytCFIi+mYxGqtaVHq6DeYapGzLsryGpt42v9gfqgDp7i039WhaDaLRsbQ=
+  - secure: DiQeYv+Al63KrwtPFcS7lhzsZXIX8R42W3ccSY+eTKEJJeLDB11xFSf4SDu7KNi7wkOYWER8XtyzxKq8WW4bfoKncqCok8qlvXjItSWLzOu21odVPDCUWDjmiJffru3JRV/mTkoz6ZmLWvqRNSIASsb0C2LlxImowF7Txq5zGojpqOjSvU17C+1FTjgtxkBlOj5X192emhlm3vS68y68AxOORJKqisvZPevU6a/HFymeGXnCat8TTp7bE/nu/xHOPEvyz95rpMYDLhpIpuornkX1on1ZkLX/hRoUvEAmfUe2B14VIyYarMyPisFp7Hv24VHMaiMna6ZezZiT0TBSJiqWYk4gzTUBOhjTDhLcWRB/n8x/8fCJnhXpwhswF2XEo/5wzeXL+ZRudnfp+hKEQEOaqdEgBUef7xd4LV6npUl2Bf4gx9JcovQh15zYErZ5HFTXiBcgbupArDNwxVsQ0J/otq01vMBKQ3pvP5rydP6BaGFY1yABoPkCgQHu1gua9sRFgL8Ga1cSXDR4C+yguAUajhliukgd6nXMlJx4HDne0+UvrkAa0gtMAEmsxPi97pKHNNfoZ9VtHfz6HA2x80dy5ELUsnUV8UsI9lSG0hYgpwpkkqUwKepj3hshZP2uKrjTzPBaYPH0hciKK4yM0VeHnpGLaHufuMLMb/LnFtc=
