@@ -33,7 +33,7 @@ footer: true
 
 ## Contents
 
-2.  [Physical Connections ](#physical connections)
+2.  [Physical Connections ](#physical-connections)
 3.  [Network Setup ](#network_setup)
 5.  [Web UI Control ](#Reset)
 6.  [Thermostat Scheduler ](#Thermostat)
@@ -45,7 +45,8 @@ footer: true
 12.  [Schematic](#schematic)
 13.  [Dimentions](#dimentions)
 
-## Hardware connections
+## <a id="#physical-connections" name="#physical-connections"></a>#physical connections
+
 
 <p class="note warning">
 <b>The board connects to and controls high voltage, knowledge and attention is required when installing to prevent electrical shock</b>
