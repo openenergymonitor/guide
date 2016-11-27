@@ -59,6 +59,13 @@ footer: true
 
 ![relay connections](/images/integrations/mqtt_wifi_relay_connections.png)
 
+
+*Note: the latest relay design (shipping Dec 16) is connected as follows. NC (normally closed) is not connected:*
+
+![new relay connections](/images/integrations/new-relay-contacts.png)
+
+
+
 ## <a id="network_setup" name="network_setup"></a>Network Setup
 
 On first power the unit will enter WiFi Access Point (AP) mode serving it's own WiFi hotspot called 'ESP_XXX', where XXX is the units MAC address. AP mode is only designed to setup the unit, opperation of the thermostat requires connection to a WiFi network with interent access to obtain NTP time.
@@ -112,7 +119,7 @@ The "low" defines how much lower than the desired temperature the temperature re
 
 ![relay-thermostat-settings](/images/integrations/relay-thermostat-settings.png)
 
-![relay-hist](/images/integrations/relay-hist.png)  
+![relay-hist](/images/integrations/relay-hist.png)
 
 
 #### <a id="HTTP" name="HTTP"></a>3\. HTTP API
