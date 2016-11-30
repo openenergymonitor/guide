@@ -40,11 +40,17 @@ footer: true
   - [emonTx Shield Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/emontx-shield-smt)
   - [emonTx Shield Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
    
-### {% linkable_title emonTH %}
+### {% linkable_title emonTH V1%}
   - [User Guide](https://guide.openenergymonitor.org/setup/emonth/)
   - [emonTH Firmware](https://github.com/openenergymonitor/emonth)
   - [emonTH Hardware Docs](https://wiki.openenergymonitor.org/index.php/EmonTH_V1.5)
   - [emonTH Hardware CAD Design](https://github.com/openenergymonitor/Hardware/tree/master/emonTH)
+  - [emonTH Forum Category](https://community.openenergymonitor.org/c/hardware/emonth)
+
+### {% linkable_title emonTH V2%}
+  - [User Guide](https://guide.openenergymonitor.org/setup/emonth/)
+  - [emonTH Firmware](https://github.com/openenergymonitor/emonth2)
+  - [emonTH Hardware CAD Design](https://github.com/openenergymonitor/emonth2)
   - [emonTH Forum Category](https://community.openenergymonitor.org/c/hardware/emonth)
 
 ### {% linkable_title emonGLCD %}
