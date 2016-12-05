@@ -45,7 +45,7 @@ footer: true
 12.  [Schematic](#schematic)
 13.  [Dimentions](#dimentions)
 
-## <a id="#physical-connections" name="#physical-connections"></a>#physical connections
+## <a id="#physical-connections" name="#physical-connections"></a># physical connections
 
 
 <p class="note warning">
@@ -64,6 +64,9 @@ footer: true
 
 ![new relay connections](/images/integrations/new-relay-contacts.png)
 
+<p class='note warning'>
+<a href="https://openenergymonitor.org/emon/Current_Transformer_Installation"> <b<Your safety is your responsibility. Ensure all contacts are fully isolated before installing. If you have any doubts, seek professional assistance. Ensure power cables are securely wired into relay terminal blocks and are held captive externally.</b>
+</p>
 
 
 ## <a id="network_setup" name="network_setup"></a>Network Setup
