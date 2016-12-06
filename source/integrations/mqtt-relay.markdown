@@ -1,18 +1,19 @@
 ---
 layout: page
-title: "WiFi MQTT Control Relay Thermostat"
-description: "MQTT heating control relay"
-date: 2014-12-18 21:49
+title: WiFi MQTT Control Relay Thermostat
+description: MQTT heating control relay
+date: '2014-12-18 21:49'
 sidebar: true
 comments: false
 sharing: true
 footer: true
+published: true
 ---
 
 > **Multi-purpose Wifi connected relay control board. Applications include: remote heating an A/C systems control via nodeRED, openHAB and Android Tasker etc. **
 
 
-## <a id="overview" name="overview"></a>Overview
+## Overview
 
 *   1 x High quality 16A Relay  (tested 100 switches @ 3x rated current)
 *   Powered by the popular [ESP8266 ](https://espressif.com/en/products/esp8266/)WiFi SoC
@@ -43,10 +44,9 @@ footer: true
 10.  [Firmware Update](#firmware)
 11.  [Programming](#Programming)
 12.  [Schematic](#schematic)
-13.  [Dimentions](#dimentions)
+13.  [<a id="network_setup" name="network_setup"></a>Dimentions](#dimentions)
 
-## <a id="#physical-connections" name="#physical-connections"></a># physical connections
-
+## Physical Connections
 
 <p class="note warning">
 <b>The board connects to and controls high voltage, knowledge and attention is required when installing to prevent electrical shock</b>
@@ -65,11 +65,11 @@ footer: true
 ![new relay connections](/images/integrations/new-relay-contacts.png)
 
 <p class='note warning'>
-<a href="https://openenergymonitor.org/emon/Current_Transformer_Installation"> <b<Your safety is your responsibility. Ensure all contacts are fully isolated before installing. If you have any doubts, seek professional assistance. Ensure power cables are securely wired into relay terminal blocks and are held captive externally.</b>
+<a href="https://openenergymonitor.org/emon/Current_Transformer_Installation"> <b<Your safety is your responsibility. Ensure all contacts are fully isolated before installing. If you have any doubts, seek professional assistance. Ensure power cables are securely wired into relay terminal blocks and are held captive externally.</b></a>
 </p>
 
 
-## <a id="network_setup" name="network_setup"></a>Network Setup
+## Network Setup
 
 On first power the unit will enter WiFi Access Point (AP) mode serving it's own WiFi hotspot called 'ESP_XXX', where XXX is the units MAC address. AP mode is only designed to setup the unit, opperation of the thermostat requires connection to a WiFi network with interent access to obtain NTP time.
 
