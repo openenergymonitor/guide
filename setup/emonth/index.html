@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Add Temperature Nodes - Guide | OpenEnergyMonitor</title>
+    <title>Add Temperature Node(s) - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
     <meta name="description" content="Add Temperature Nodes">
     
@@ -15,7 +15,7 @@
     <link rel="canonical" href="http://guide.openenergymonitor.org/setup/emonth/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Add Temperature Nodes">
+    <meta property="og:title" content="Add Temperature Node(s)">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
     <meta property="og:url" content="http://guide.openenergymonitor.org/setup/emonth/">
     <meta property="og:type" content="website">
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Add Temperature Nodes">
+    <meta name="twitter:title" content="Add Temperature Node(s)">
     <meta name="twitter:description" content="Add Temperature Nodes">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
@@ -134,28 +134,32 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   
   <header>
     <h1 class="title indent">
-      Add Temperature Nodes
+      Add Temperature Node(s)
     </h1>
   </header>
   <hr class="divider">
   
 
-  <h3 id="laquo-previous-step-add-energy-nodessetupemontx"><a href="/setup/emontx/">« Previous step: Add Energy Nodes</a></h3>
+  <h3 id="laquo-previous-step-add-energy-sensing-nodessetupemontx"><a href="/setup/emontx/">« Previous step: Add Energy Sensing Node(s)</a></h3>
 
 <h3 id="next-step-import--backup-raquosetupimport"><a href="/setup/import/">Next step: Import / Backup »</a></h3>
 
 <hr />
 
-<h2 id="add-additional-temperature-monitoring-nodes">Add additional temperature monitoring nodes</h2>
+<h2 id="temperature-monitoring">Temperature Monitoring</h2>
 
-<p>Multiple temperature sensors can be connected directly to an emonPi, see Temperature tab of <a href="/setup/hardware">Setup &gt; Hardware</a>.</p>
+<h2 id="wired">Wired</h2>
 
-<h3 id="emonthhttpshopopenenergymonitorcomemonth-433mhz-temperature-humidity-node"><a href="http://shop.openenergymonitor.com/emonth-433mhz-temperature-humidity-node/">emonTH</a></h3>
+<p>Multiple wired temperature sensors can be connected directly to an emonPi via RJ45 connection, see Temperature tab of <a href="/setup/hardware">Setup &gt; Hardware</a>.</p>
+
+<h3 id="wireless">Wireless</h3>
+
+<h4 id="emonth-wireless-temperature-monitoring-node">emonTH Wireless Temperature Monitoring Node</h4>
 
 <ul>
   <li>Wireless temperature &amp; humidity monitoring node</li>
-  <li>Compatible with emonPi &amp; emonBase</li>
-  <li>6 month battery life (2 x AA not included)</li>
+  <li>Communicates with emonPi &amp; emonBase via RF (433Mhz)</li>
+  <li>1yr+ battery life (2 x AA not included)</li>
   <li>Up to 4x emonTH can communicate to a single emonPi*</li>
   <li>Internal temperature &amp; humidity + optional external probe</li>
   <li>Optional pulse sensor input</li>
@@ -165,9 +169,9 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <p><img src="/images/setup/emonth-plant.png" width="400" /></p>
 
-<p><a class="btn pull-right" href="http://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/">View in Shop → </a></p>
+<p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emonth-433mhz-temperature-humidity-node/">View in Shop → </a></p>
 
-<h3 id="hardware-setup">Hardware Setup</h3>
+<h3 id="emonth-hardware-setup">emonTH Hardware Setup</h3>
 
 <h4 id="dip-switch-config">1. DIP Switch Config</h4>
 
@@ -175,18 +179,17 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
   <li>If more than one emonTH is to be used with the same base-station set the node ID using the <a href="https://wiki.openenergymonitor.org/index.php/EmonTH_V1.5#DIP_Switch_node_ID">on-board DIP switches</a>.</li>
 </ul>
 
-<h4 id="install-sensors">2. Install Sensors</h4>
+<h4 id="install-additional-sensors">2. Install Additional Sensors</h4>
 
-<p>Sensors should be pre-installed in the emonTH, if required:</p>
+<p>Internal temperature and humidity sensor is pre-installed in the emonTH, additional external sensors can be connected if required:</p>
 
 <ul>
-  <li>Install DHT22 sensor into 4-pin socket facing outwards, <a href="http://shop.openenergymonitor.com/emonth-433mhz-temperature-humidity-node/">see photo</a>.</li>
   <li>External DS18B20 can be wired into terminal block see <a href="https://wiki.openenergymonitor.org/index.php/EmonTH_V1.5#External_DS18B20_Temperature_Sensor_Connections">Hardware Wiki Section</a></li>
   <li>Optical Pulse Counting Sensor can be wired into terminal block see <a href="https://wiki.openenergymonitor.org/index.php/EmonTH_V1.5#Pulse_Sensor_Connection">Hardware Wiki Section</a></li>
 </ul>
 
 <p class="note">
-Only one DS18B20 sensor can be connected to an emonTH, if a DHT22 sensor is detected it's assumed the DS18B20 is external. If more than one DS18B20 is required see <a href="https://github.com/openenergymonitor/emonth">emonTH alternative firmware.</a></p>
+Only one external DS18B20 sensor can be connected to an emonTH with standard firmare. If more than one DS18B20 is required see <a href="https://github.com/openenergymonitor/emonth">emonTH alternative firmware.</a></p>
 
 <h4 id="power-up">3. Power Up</h4>
 <ul>
@@ -196,7 +199,7 @@ Only one DS18B20 sensor can be connected to an emonTH, if a DHT22 sensor is dete
 
 <h4 id="indicator-led">4. Indicator LED</h4>
 <ul>
-  <li>Illuminates solid for a few seconds at first power up</li>
+  <li>Illuminates solid (dimly) for a few seconds at first power up</li>
   <li>LED should then extinguish to indicate successful sensor detection</li>
   <li>Flashing LED indicates sensor detection failure</li>
   <li>To preserve battery LED does NOT flash regularly during operation</li>
@@ -210,13 +213,13 @@ Only one DS18B20 sensor can be connected to an emonTH, if a DHT22 sensor is dete
 
 <h4 id="log-inputs-to-feedssetuplocal">1. <a href="/setup/local/">Log inputs to feeds</a></h4>
 
-<p><strong>Note: if using more than four emonTH units (with custom RF node ID or modified firmware) <a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md"><code class="highlighter-rouge">emonhub.conf</code> node decoders will need to be setup</a>.</strong></p>
+<p><strong>Note: if using more than 4x emonTH units (with custom RF node ID or modified firmware) <a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md"><code class="highlighter-rouge">emonhub.conf</code> node decoders will need to be setup</a>.</strong></p>
 
 <p><br /></p>
 
 <hr />
 
-<h3 id="next-step-import--backup-raquosetupimport-1"><a href="/setup/import/">Next step: Import / Backup »</a></h3>
+<h3 id="next-step-add-optical-pulse-sensor-raquosetupoptical-pulse-sensor"><a href="/setup/optical-pulse-sensor">Next step: Add Optical Pulse Sensor »</a></h3>
 
 
 </article>
@@ -248,8 +251,9 @@ Only one DS18B20 sensor can be connected to an emonTH, if a DHT22 sensor is dete
           <li><a  href='/setup/local/'>Log Locally </a></li>
           <li><a  href='/setup/remote/'>Log Remotely </a></li>
           <li><a  href='/setup/dashboards/'>Dashboards </a></li>
-          <li><a  href='/setup/emontx/'>Add Energy Nodes </a></li>
-          <li><a class='active' href='/setup/emonth/'>Add Temperature Nodes </a></li>
+          <li><a  href='/setup/emontx/'>Add Energy Sensing Node(s) </a></li>
+          <li><a class='active' href='/setup/emonth/'>Add Temperature Node(s) </a></li>
+          <li><a  href='/setup/optical-pulse-sensor/'>Add Optical Pulse Sensor </a></li>
           <li><a  href='/setup/import/'>Import / Backup </a></li>
           <li><a  href='/setup/north-america/'>Use in North America </a></li>
           <li><a  href='/setup/troubleshooting/'>Troubleshooting </a></li>
