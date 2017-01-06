@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Add Energy Node"
+title: "Add Energy Sensing Node(s)"
 description: "Add additional energy monitoring nodes"
 date: 2015-03-08 21:36
 sidebar: true
@@ -11,7 +11,7 @@ footer: true
 
 ### [&laquo; Previous step: Dashboards](/setup/dashboards/)
 
-### [Next step: Add Temperature Nodes &raquo;](/setup/emonth/)
+### [Next step: Add Temperature Node(s) &raquo;](/setup/emonth/)
 
 ***
 
@@ -79,4 +79,4 @@ The emonTx is compatible with emonPi / emonBase. RF transmission from the emonTx
 
 ***
 
-### [Next step: Add Temperature Nodes &raquo;](/setup/emonth/)
+### [Next step: Add Temperature Node(s) &raquo;](/setup/emonth/)

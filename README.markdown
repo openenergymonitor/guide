@@ -12,12 +12,14 @@ Using all the shiny new toys: powered by Jekyll and the Oscalite theme. Hosted b
 
 | Command | Action |
 |---|---|
-| `rake preview` | Generate & Preview site on [http://localhost:4001](http://127.0.0.1:4001)
+| `rake generate preview` | Generate & Preview site on [http://localhost:4001](http://127.0.0.1:4001)
 | `rake generate` | Generates static html in `/public`
 | `rake deploy` | Deploys site to `gh-pages` branch
 | `rake deploy rsync` | Deploys site via rsync over SSH
 
+### Edit sidebar nav menu
 
+`guide/source/_includes/asides/navigation_side.html`
 
 ## Setup
 
@@ -94,7 +96,7 @@ In the deploy example above the site is generated locally then pushed to github 
   - `curl -u 'your_github_name' -d '{ "scopes": [ "public_repo"], "note": "Travis access"}' https://api.github.com/authorizations `
   - Install Travis command line `gem install travis`
   - Encypt token and add to `travis.yaml` by running the following in website dir: `$ travis encrypt GH_TOKEN=XXXXXX --add env.global`
- 
+
 Example `travis.yaml` to generate the site using `rake generate` then if generation is succesful deploy to `gh pages` branch with `rake deploy`:
 
 ```yaml
