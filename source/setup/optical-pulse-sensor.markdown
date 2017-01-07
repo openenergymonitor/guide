@@ -18,7 +18,7 @@ footer: true
 
 ## Optical Pulse Sensor
 
-{% img /images/setup/ops.png 100 %}
+<img src="/images/setup/optical_pulse.jpg" />
 
 An Optical Pulse Sensor detects the LED / IR 'pulse' output from a utility meters. Each pulse corresponds to a certain amount of energy passing through the meter. The amount of energy each pulse corresponds to depends on the meter. By counting these pulses and measuring the time between each pulse the meters KWh value can be calculated.
 
@@ -30,7 +30,7 @@ The emonPi and emonTx can simultaneously perform pulse counting and CT based mon
 
 ### {% linkable_title Sensor Installation %}
 
-{% img /images/setup/optical_pulse_emonpi.jpg 500 %}
+<img src="/images/setup/optical_pulse_emonpi.jpg" />
 
 1. Identify your utility meter's pulse output, usually a red flashing LED marked 'KWh'. Stick the supplied self adhesive base-pad over the LED, carefully aligning the hole in the center of the circle so the flashing LED shines through clearly. Be sure to clean any dust from the meter face before attaching the sensor.
 
