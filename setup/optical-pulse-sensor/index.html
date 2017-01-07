@@ -150,11 +150,15 @@ Open</span><span style="color:#0699fa;font-weight:bold;font-family:Arial;font-si
 
 <p><img src="/images/setup/ops.png" width="100" /></p>
 
-<p>The Optical Pulse Sensor detects an utility meters pulsed LED output. Each pulse corresponds to a certain amount of energy passing through the meter. The amount of energy each pulse corresponds to depends on the meter. By counting these pulses the meters KWh value can be calculated.</p>
+<p>An Optical Pulse Sensor detects the LED / IR ‘pulse’ output from a utility meters. Each pulse corresponds to a certain amount of energy passing through the meter. The amount of energy each pulse corresponds to depends on the meter. By counting these pulses and measuring the time between each pulse the meters KWh value can be calculated.</p>
 
-<p>Unlike clip-on CT based monitoring, pulse counting is measuring exactly what the utility meter is measuring i.e. what you get billed for. The pulse counting cannot provide an instantaneous power reading like CT based monitoring can. Where possible, we recommend using pulse counting in conjunction with CT monitoring. The emonPi and emonTx can simultaneously perform pulse counting and CT based monitoring.</p>
+<p>Unlike clip-on CT based monitoring, pulse counting is measuring exactly what the utility meter is measuring i.e. what you get billed for. Pulse counting cannot provide an instantaneous power reading like clip on CT sensors can. <strong>Where possible, we recommend using pulse counting in conjunction with clip on CT sensors</strong>.</p>
 
-<h3 id="sensor-installation">Sensor Installation</h3>
+<p>The emonPi and emonTx can simultaneously perform pulse counting and CT based monitoring.</p>
+
+<p><strong>Due to hardware limitations only a single pulse counting sensor can be connected to a single emonPi, emonTx or emonTH unit.</strong></p>
+
+<h3 id="a-classtitle-link-namesensor-installation-hrefsensor-installationa-sensor-installation"><a class="title-link" name="sensor-installation" href="#sensor-installation"></a> Sensor Installation</h3>
 
 <p><img src="/images/setup/optical_pulse_emonpi.jpg" width="500" /></p>
 
@@ -182,7 +186,145 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vq5EmMRrOY0" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
-<h2 id="configure-emoncms">Configure Emoncms</h2>
+<h2 id="a-classtitle-link-nameconfigure-emoncms-hrefconfigure-emoncmsa-configure-emoncms"><a class="title-link" name="configure-emoncms" href="#configure-emoncms"></a> Configure Emoncms</h2>
+
+<p>View the Input list:</p>
+
+<p><img src="/images/setup/emonpi-input-list.png" /></p>
+
+<p>Clicking the spanner icon brings up the feed input processor. It’s a good idea to log the raw pulse count to a feed for debugging. The pulse count needs to be multiplied by a scalar to convert the pulses to Wh. The scale factor will depend on your meter, see the table in Appendix A below. Once the scalar has been applied, log the result to a Wh Accumulator feed. This feed is an ever increasing number which won’t return to zero if the emonPi / emonTx is reset, which would result in the raw pulse count returning to zero.</p>
+
+<p><img src="/images/setup/emonpi-pulse-input-process.png" /></p>
+
+<p>Viewing the Wh accumulator feed:</p>
+
+<p><img src="/images/setup/wh-accumulator.png" /></p>
+
+<p>To convert the wh accumulator feed to daily KWh bargraph using the graph tool select Window <code class="highlighter-rouge">type-daily</code> feed <code class="highlighter-rouge">type=Bars</code> and <code class="highlighter-rouge">delta = 1</code> then click <code class="highlighter-rouge">reload</code></p>
+
+<p><img src="/images/setup/wh-accumulator-bargraph.png" /></p>
+
+<p>See Emoncms <a href="/setup/daily-kwh">daily Kwh guide</a> for mor info.</p>
+
+<h2 id="a-classtitle-link-nameappendix-a-hrefappendix-aa-appendix-a"><a class="title-link" name="appendix-a" href="#appendix-a"></a> Appendix A:</h2>
+
+<p>The optical pulse sensor should work with all utility meters that have an LED or IR optical pulse output. The sensor has been tested to work with the following meters. The ‘pulses per kwh’ calibration can be used to configure the input process for the pulse data, see above:</p>
+
+<table border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
+	<caption>&nbsp;</caption>
+	<tbody>
+		<tr>
+			<td><strong>Meter</strong></td>
+			<td><strong>Image</strong></td>
+			<td><strong>Pulses Per KWh</strong></td>
+			<td>
+			<p><strong>Multiplication factor for </strong></p>
+
+			<p><strong>Wh Accumulator feed</strong></p>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Elster&nbsp;A100c</p>
+
+			<p>(single phase)</p>
+			</td>
+			<td><a href="/images/setup/meters/a100c.png"><img alt="" src="/images/setup/meters/a100c.png" style="width: 100px; height: 78px;" /></a></td>
+			<td>1000</td>
+			<td>1000 / 1000 = <strong>1</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>Actaris ace9000</p>
+
+			<p>(single phase)</p>
+			</td>
+			<td><a href="/images/setup/meters/Actaris_ace9000.jpg"><img alt="" src="/images/setup/meters/Actaris_ace9000.jpg" style="width: 100px; height: 118px;" /></a></td>
+			<td>800</td>
+			<td>1000 / 800 = <strong>1.25</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>Xil&nbsp;XLA12</p>
+
+			<p>(single phase)</p>
+			</td>
+			<td><a href="/images/setup/meters/Xil_XLA12.jpg"><img alt="" src="/images/setup/meters/Xil_XLA12.jpg" style="width: 100px; height: 100px;" /></a></td>
+			<td>800</td>
+			<td>1000 / 800 =&nbsp;<strong>1.25</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>Elster A1100</p>
+
+			<p>(3-phase)</p>
+			</td>
+			<td><a href="/images/setup/meters/ElsterA1100.jpg"><img alt="" src="/images/setup/meters/ElsterA1100.jpg" style="width: 100px; height: 69px;" /></a></td>
+			<td>500</td>
+			<td>1000 / 500 = <b>2</b></td>
+		</tr>
+		<tr>
+			<td>
+			<p>&nbsp;</p>
+			</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+			<p>Elster&nbsp;A1140</p>
+
+			<p>(3-phase)</p>
+			</td>
+			<td><a href="/images/setup/meters/Elster_A1140.jpg"><img alt="" src="/images/setup/meters/Elster_A1140.jpg" style="width: 100px; height: 75px;" /></a></td>
+			<td>1000</td>
+			<td>1000 / 5000 = <b>1</b></td>
+		</tr>
+		<tr>
+			<td>
+			<p>Landis &amp; Gyr 5254E</p>
+
+			<p>(single phase)</p>
+			</td>
+			<td><a href="/images/setup/meters/LandisGyr5254E.png"><img alt="" src="/images/setup/meters/LandisGyr5254E.png" style="width: 100px; height: 100px;" /></a></td>
+			<td>1000</td>
+			<td>1000 / 1000 = <strong>1</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>&nbsp;Inepro PRO1D</p>
+			</td>
+			<td><a href="/images/setup/meters/Inepro_PRO1D.jpg"><img alt="" src="/images/setup/meters/Inepro_PRO1D.jpg" style="width: 50px; height: 109px;" /></a></td>
+			<td>2000</td>
+			<td>1000/2000 = <strong>0.5</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>EDMI&nbsp;MK7C&nbsp;</p>
+
+			<p>AMR Smart Meter</p>
+			</td>
+			<td><a href="/images/setup/meters/edmi_mk7c.jpg"><img alt="" src="/images/setup/meters/edmi_mk7c.jpg" style="width: 80px; height: 130px;" /></a></td>
+			<td>1000</td>
+			<td>1000 / 1000 =&nbsp;<strong>1</strong></td>
+		</tr>
+		<tr>
+			<td>
+			<p>Landis &amp; Gyr E110</p>
+
+			<p>(Single Phase)</p>
+			</td>
+			<td><a href="/images/setup/meters/Original-Landis_E110_1__1.jpg"><img alt="" src="/images/setup/meters/Original-Landis_E110_1__1.jpg" style="width: 100px; height: 66px;" /></a></td>
+			<td>1000</td>
+			<td>
+			<p>1000 / 1000 =&nbsp;<strong>1</strong></p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Please help us expand this table by contributing details for your meter. Email photo and scale factor to <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#047;&#105;&#109;&#097;&#103;&#101;&#115;&#047;&#115;&#101;&#116;&#117;&#112;&#047;&#109;&#101;&#116;&#101;&#114;&#115;&#047;&#101;&#109;&#111;&#110;&#112;&#105;&#095;&#112;&#117;&#108;&#115;&#101;&#095;&#119;&#104;&#095;&#108;&#111;&#103;&#046;&#112;&#110;&#103;&#063;&#115;&#117;&#098;&#106;&#101;&#099;&#116;&#061;&#112;&#117;&#108;&#115;&#101;&#037;&#050;&#048;&#111;&#117;&#116;&#112;&#117;&#116;&#037;&#050;&#048;&#117;&#116;&#105;&#108;&#105;&#116;&#121;&#037;&#050;&#048;&#109;&#101;&#116;&#101;&#114;">support@openenergymonitor.zendesk.com</a></p>
 
 <p><br /></p>
 
