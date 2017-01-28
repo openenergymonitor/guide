@@ -1,4 +1,4 @@
----
+f---
 layout: page
 title: "Add Energy Sensing Node(s)"
 description: "Add additional energy monitoring nodes"
@@ -28,7 +28,7 @@ Additional energy monitoring nodes can be added if more AC circuits require moni
 - Up to 2x emonTx can be connected to a single emonPi *
 
 
-\* *More than 2x emonTx units can be connected to a single emonPi / emonBase with manual change of RF nodeID. This can be done in the factory, please leave note with your online store order*
+\* *More than 2x emonTx units can be connected to a single emonPi / emonBase with manual change of RF nodeID. This can be done This can be done via [serial node ID config](https://community.openenergymonitor.org/t/emontx-emonth-configure-rf-settings-via-serial-released-fw-v2-6-v3-2/2064?u=glyn.hudson)*
 
 ![emontx](/images/setup/emontx.jpg)
 
