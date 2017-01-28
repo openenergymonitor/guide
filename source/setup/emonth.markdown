@@ -19,7 +19,7 @@ footer: true
 
 ## Wired
 
-Multiple wired temperature sensors can be connected directly to an emonPi via RJ45 connection, see Temperature tab of [Setup > Hardware](/setup/hardware).
+Up to 6x wired temperature sensors can be connected directly to an emonPi / emonTx V3 via RJ45 connection, see Temperature tab of [Setup > Temperature & Humidity](/setup/).
 
 ### Wireless
 
@@ -33,7 +33,7 @@ Multiple wired temperature sensors can be connected directly to an emonPi via RJ
 - Optional pulse sensor input
 
 
-\* *More than 4x emonTH units can be connected to a single emonPi / emonBase with manual change of RF nodeID. This can be done in the factory, please leave note with your online store order.*
+\* *More than 4x emonTH units can be connected to a single emonPi / emonBase with manual change of RF nodeID. This can be done via [serial node ID config](https://community.openenergymonitor.org/t/emontx-emonth-configure-rf-settings-via-serial-released-fw-v2-6-v3-2/2064?u=glyn.hudson)*
 
 {% img /images/setup/emonth-plant.png 400 %}
 
