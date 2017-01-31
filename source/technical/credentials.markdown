@@ -36,6 +36,8 @@ To connect to emonPi / emonBase via ssh:
 
 Once logged in change password with: `$ passwd`
 
+In case you're getting error _Authentication token manipulation error_ when changing password, first mount the filesystem as read-write using `$rpi-rw`.
+
 ## {% linkable_title MYSQL %}
 
 MYSQL: `root` user password is `emonpimysql2016` and mysql `emoncms` user password is `emonpiemoncmsmysql2016`
