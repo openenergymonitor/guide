@@ -12,8 +12,11 @@ published: true
 
 The emonTx, emonTH and emonPi all use an ATmega328p 8-bit AVR microprocessor. This AVR microprocessor is Arduino compatible. You may want to modify and re-compile the firmware for one of the following reasons:
 
+
 - Modify the firmware to add custom feature e.g support a new type of sensor etc.
 - **Change the RF nodeID** e.g. To use more than 2x emonTx V3 units (or more than 4x emonTH units) on a single network the nodeID's must be set manually in the firmware since more nodeID's are required than is possible to set using the on-board hardware DIP switches.
+
+**Update: latest emonTx / emonTH firmware has the feature to be able to set the nodeID via serial config: see [forum post](https://community.openenergymonitor.org/t/emontx-emonth-configure-rf-settings-via-serial-released-fw-v2-6-v3-2/2064?u=glyn.hudson).**
 
 See [Resources page](/technical/resources) for links to firmware repositories for all OpenEnergyMonitor units.  
 
@@ -24,7 +27,7 @@ See [Resources page](/technical/resources) for links to firmware repositories fo
 The process of editing, compiling and uploading firmware is best explained with an example. In this example we will change the emonTx V3 node ID, this is useful if we want to connect more than 4x emonTx V3 units to a single emonPi / emonBase.
 
  **A [USB to UART adapter](https://shop.openenergymonitor.com/programmers) is required to upload to emonTx / emonTH. Any 5v FTDI adapter can also be used.**
- 
+
  Note: The method of compiling and uploading firmware is identical for the emonTx and emonTH. To upload firmware to the emonPi this can either be done by compiling locally then flashing .hex file (in the `.pioenvs` folder in the project dir if using platformIO) then using avrdue on the emonPi to upload ([see emonPi avrdude upload script](https://github.com/openenergymonitor/emonpi/blob/master/firmware/compiled/update) or compiling and uploading using PlatformIO directly on the emonPi ([see blog post](https://blog.openenergymonitor.org/2016/06/platformio/).
 
 ### Using Arduino IDE
