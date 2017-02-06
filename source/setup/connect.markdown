@@ -79,23 +79,9 @@ After a few seconds information should refresh automatically to report `Status: 
 
 ### {% linkable_title  Assign static IP (Optional & Advanced) %}
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
-<script src="/javascripts/showHide.js" type="text/javascript"></script>
-<script type="text/javascript">
-
-$(document).ready(function(){
-   $('.show_hide').showHide({
-		speed: 100,  // speed you want the toggle to happen
-		easing: '',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
-		changeText: 0, // if you dont want the button text to change, set this to 0
-		showText: 'View',// the button text to show when a div is closed
-		hideText: 'Close' // the button text to show when a div is open
-					 
-	});
-});
-</script>
 
 <button type="button" class="show_hide" href="#" rel="#slidingDiv">View</button>
+
 <div id="slidingDiv" class="toggleDiv" style="display: none;">
     <p>If local static IP address is required the easiest way is to allow IP address to be given via DHCP then fix the IP address on the router. Not all routers support this.</p>
 
@@ -108,7 +94,7 @@ $(document).ready(function(){
     $ sudo nano /etc/dhcpcd.conf
     <br>
     > Append to the end of dhcpcd.conf (change to suit your network and interface reqiuired static IP): <br>
-    
+
     interface eth0
     static ip_address=192.168.0.10/24
     static routers=192.168.0.1
