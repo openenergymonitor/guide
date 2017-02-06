@@ -14,12 +14,14 @@ published: true
 
 The OpenEnergyMonitor system  has the capability to monitor electrical energy use / generation, temperature and humidity.
 
-The system is made up of five main units. These can be assembled and configured to work for a variety of [applications](/applications). The system is fully open-source, both hardware and software. All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms.
+The system is made up of five main units. These can be assembled and configured to work for a variety of [applications](/applications). The system is fully open-source, both hardware and software. All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms:
 
-Documentation on everything from AC theory to sensor circuit design and application programming is available in the [Technical Resources](/technical/resources/) section.
+![image](/images/setup/oemfpsystemdiagram.png)
+
 
 ***
 
+**Please select the type of system you are interested in using the tabs below:**
 
 
 <div class='install-instructions-container' markdown='0'>
@@ -301,10 +303,6 @@ The emonTH is powered by two AA batteries and is available with a choice of eith
 
 ***
 
-### {% linkable_title Overview%}
-
-![image](/images/setup/oemfpsystemdiagram.png)
-
 
 ### {% linkable_title Comparison Table%}
 
@@ -327,6 +325,7 @@ The emonTH is powered by two AA batteries and is available with a choice of eith
 
 \* Requires RJ45 breakout board
 
+*Full Documentation on all hardware units in the [Technical Resources](/technical/resources/) section.*
 
 #### {% linkable_title Use in the USA%}
 
