@@ -395,11 +395,11 @@ background-color: #77c8ea;
 <ul>
 <li title="the homepage of OpenEnergyMonitor"><a href="https://openenergymonitor.org">
 <i class="fa fa-home" aria-hidden="true"></i><span class="navname">&nbsp;Home</span></a></li>
-<li title="you are here: a user guide for the OpenEnergyMonitor system" class="actoemLink"><a href="https://guide.openenergymonitor.org">
+<li title="you are here: a user guide for the OpenEnergyMonitor system" id="takeitawaynow" class="actoemLink"><a href="https://guide.openenergymonitor.org">
 <i class="fa fa-book" aria-hidden="true"></i><span class="navname">&nbsp;Guide</span></a></li>
 <li title="general information about energy monitoring, diversion and sustainability"><a href="https://learn.openenergymonitor.org">
 <i class="fa fa-mortar-board" aria-hidden="true"></i><span class="navname">&nbsp;Learn</span></a></li>
-<li title="a definitive list of resources for OpenEnergyMonitor hardware"><a href="https://guide.openenergymonitor.org/technical/resources/">
+<li title="a definitive list of resources for OpenEnergyMonitor hardware" id="changeittomenow"><a href="https://guide.openenergymonitor.org/technical/resources/">
 <i class="fa fa-list-alt" aria-hidden="true"></i><span class="navname">&nbsp;Resources</span></a></li>
 <li title="the openenergymonitor forum"><a href="https://community.openenergymonitor.org">
 <i class="fa fa-comments" aria-hidden="true"></i><span class="navname">&nbsp;Community</span></a></li>
@@ -693,6 +693,16 @@ $(document).ready(function(){
 $(".show_hide").click(function(){
 $("#slidingDiv").slideToggle();
 });
+});
+
+
+$(document).ready(function(){
+  var pathname = window.location.pathname;
+  if (pathname == "/technical/resources/") {
+    $(".thisTitle a").html("<strong>Resources&nbsp;</strong><span class='oemWrap'>| Open<strong>EnergyMonitor</strong></span>");
+    $("#takeitawaynow").removeClass("actoemLink").prop('title', 'a user guide for the OpenEnergyMonitor system');
+    $("#changeittomenow").addClass("actoemLink").prop('title', 'you are here: a definitive list of resources for OpenEnergyMonitor hardware');
+}
 });
 
 
