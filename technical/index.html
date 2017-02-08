@@ -63,6 +63,51 @@
 
 <style>
 
+html, body {
+  font-family: "ubuntu", sans-serif;
+}
+
+a:visited, .a:hover, a:focus, a {
+  color: #44b3e2;
+}
+
+.copyright {
+  padding: 0;
+}
+
+.searchtool {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+
+input[type=text] {
+  border: 3px solid #44b3e2;
+  border-radius: 6px;
+  width: 100%;
+  color: #000000;
+  padding: 14px 20px;
+  margin: 0;
+  outline: none;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+}
+
+button[type=submit] {
+    width: 100%;
+    background-color: #44b3e2;
+    color: white;
+    padding: 14px 20px;
+    margin: 4px 0 0 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 /*--------------------------------------------
 custom header...
 --------------------------------------------*/
@@ -591,25 +636,7 @@ background-color: #77c8ea;
 <div class="grid-wrapper">
   <div class="grid">
     <div class="grid__item">
-      <style>
-
-
-div.searchtool {
-  position: relative;
-  display: inline-block;
-  top: -6px;
-}
-
-input[type=text] {
-  border: 3px solid #44b3e2;
-}
-
-fieldset {
-  border: 0;
-}
-
-</style>
-<div class="copyright">
+      <div class="copyright">
 
   <a rel="me" href='https://twitter.com/openenergymon'><i class="icon-twitter"></i></a>
   <a rel="me" href='https://github.com/openenergymonitor/guide'><i class="icon-github"></i></a>
@@ -627,6 +654,7 @@ fieldset {
   <fieldset role="search">
     <input type="hidden" name="q" value="site:guide.openenergymonitor.org" />
     <input class="search" type="text" name="q" results="0" placeholder="Search..." />
+    <button type="submit">Search </>
   </fieldset>
 </form>
 
@@ -716,7 +744,9 @@ closeStatus = false;
 
 <script>
 
-
+$(document).ready(function(){
+  $("table").wrap("<div style='max-width:100%;overflow-x:auto'></div>");
+});
 
 $(document).ready(function(){
 $(".show_hide").click(function(){
