@@ -388,6 +388,7 @@ display: none;
 }
 .hero {
 background-color: #77c8ea;
+margin-top: 0 !important;
 }
 </style>
 
@@ -870,6 +871,7 @@ $(document).ready(function(){
     $(".thisTitle a").html("<strong>Resources&nbsp;</strong><span class='oemWrap'>| Open<strong>EnergyMonitor</strong></span>");
     $("#takeitawaynow").removeClass("actoemLink").prop('title', 'a user guide for the OpenEnergyMonitor system');
     $("#changeittomenow").addClass("actoemLink").prop('title', 'you are here: a definitive list of resources for OpenEnergyMonitor hardware');
+    $(".thisTitle a").attr("href", "/technical/resources/");
 }
 });
 
