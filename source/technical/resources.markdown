@@ -11,6 +11,8 @@ footer: true
 
 ## {% linkable_title Hardware & Firmware Resources %}
 
+A definitive list of resources for openenergymonitor hardware.
+
 > **Firmware:** code that runs on an embeded microcontroller
 
 ### {% linkable_title emonPi %}
@@ -39,7 +41,7 @@ footer: true
   - [emonTx Shield Hardware Docs](https://wiki.openenergymonitor.org/index.php/EmonTx_Arduino_Shield#emonTx_Arduino_Shield)
   - [emonTx Shield Hardware Design](https://github.com/openenergymonitor/Hardware/tree/master/emontx-shield-smt)
   - [emonTx Shield Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
-   
+
 ### {% linkable_title emonTH V1%}
   - [User Guide](https://guide.openenergymonitor.org/setup/emonth/)
   - [emonTH Firmware](https://github.com/openenergymonitor/emonth)
