@@ -9,11 +9,11 @@ sharing: true
 footer: true
 ---
 
-### A Definitive List of Resources for OpenEnergyMonitor Hardware, Software and Firmware
+### A Definitive List of Resources for OpenEnergyMonitor Hardware,Firmware and Software
 
 ***
 
-## 1. Hardware & Firmware
+- ## 1. Hardware & Firmware
 
 - ### {% linkable_title emonPi %}
   - [User Guide](https://guide.openenergymonitor.org/setup/)
@@ -88,7 +88,7 @@ footer: true
 
 ***
 
-## 2. Software
+- ## 2. Software
 
 - ### {% linkable_title Emoncms %}
   - [Emoncms GitHub](https://github.com/emoncms/emoncms)
