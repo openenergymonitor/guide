@@ -18,6 +18,12 @@ The system is made up of five main units. These can be assembled and configured 
 
 ![image](/images/setup/oemfpsystemdiagram.png)
 
+Overview video of the emonPi: 
+
+<div class='videoWrapper'>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3l3toOi8v-8" frameborder="0" allowfullscreen></iframe>
+</div>
+
 
 ***
 
