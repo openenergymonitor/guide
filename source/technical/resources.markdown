@@ -9,7 +9,7 @@ sharing: true
 footer: true
 ---
 
-### A Definitive List of Resources for OpenEnergyMonitor Hardware,Firmware and Software
+### A Definitive List of Resources for OpenEnergyMonitor Hardware, Firmware and Software
 
 ***
 
