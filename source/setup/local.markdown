@@ -17,7 +17,7 @@ footer: true
 
 Data can now be logged to Emoncms runnning on the emonPi's local server, data will be saved to the Raspberry Pi's SD card.
 
-Data can also (optionally) be posted remotly to [Emoncms.org](https://emoncms.org), see [Next step: Log Remotely](/setup/remote/).
+Data can also (optionally) be posted remotely to [Emoncms.org](https://emoncms.org), see [Next step: Log Remotely](/setup/remote/).
 
 
 For application specific input processing see:
