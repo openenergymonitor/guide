@@ -44,7 +44,7 @@ published: true
 10.  [Firmware Update](#firmware)
 11.  [Programming](#Programming)
 12.  [Schematic](#schematic)
-13.  [<a id="network_setup" name="network_setup"></a>Dimensions](#dimensions)
+14.  [Dimensions](#dimensions)
 
 ## Physical Connections
 
