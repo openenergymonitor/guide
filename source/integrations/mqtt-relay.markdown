@@ -44,7 +44,7 @@ published: true
 10.  [Firmware Update](#firmware)
 11.  [Programming](#Programming)
 12.  [Schematic](#schematic)
-13.  [<a id="network_setup" name="network_setup"></a>Dimentions](#dimentions)
+13.  [<a id="network_setup" name="network_setup"></a>Dimensions](#dimensions)
 
 ## Physical Connections
 
@@ -301,7 +301,7 @@ Note: flash address  0xFC000 contains board identification information. do not 
 
 ![relay-settings](/images/integrations/relay-schematic.png)
 
-## <a id="dimentions" name="dimentions"></a>Physical Dimentions
+## <a id="dimentions" name="dimensions"></a>Physical Dimensions
 
 PCB: 87mm x 50mm
 
