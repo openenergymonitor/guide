@@ -154,15 +154,23 @@ It's important that the emonPi has the correct time. If required timezone should
 - Check time on emonPi LCD display, press LCD push-button until `uptime` page is displayed
   - `$ date`
 
-To set timezone:
+#### To Foce NTP time update:
 
-- In Emoncms: `Local Emoncms > Setup > My Account > Timezone`
-
-- On Raspberry Pi (Linux system time):
    - Check emonPi has a connection to the internet
    - Try a reboot
    - If time is still incorrect, then force manual NTP update:
    - [Connect Via SSH](/technical/credentials/#ssh)
+   - Make file-system RW: `$rpi-rw`
+   - `$ sudo service ntp stop`
+   - `$ sudo service ntp start`
+   - `$ rpi-ro`
+   -  Check time by typing: `$ date`
+
+#### To set timezone:
+
+- In Emoncms: `Local Emoncms > Setup > My Account > Timezone`
+
+- On Raspberry Pi (Linux system time):
 
    - Run `$ rpi-rw`, then run `$ sudo raspi-config`, select `Internationalisation Options` and set local timezone.  Then run `$ rpi-ro`.
    
