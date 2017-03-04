@@ -612,7 +612,21 @@ INFO     emoncmsorg sending: https://emoncms.org/input/bulk.json?apikey=E-M-O-N-
   </li>
 </ul>
 
-<p>To set timezone:</p>
+<h4 id="to-foce-ntp-time-update">To Foce NTP time update:</h4>
+
+<ul>
+  <li>Check emonPi has a connection to the internet</li>
+  <li>Try a reboot</li>
+  <li>If time is still incorrect, then force manual NTP update:</li>
+  <li><a href="/technical/credentials/#ssh">Connect Via SSH</a></li>
+  <li>Make file-system RW: <code class="highlighter-rouge">$rpi-rw</code></li>
+  <li><code class="highlighter-rouge">$ sudo service ntp stop</code></li>
+  <li><code class="highlighter-rouge">$ sudo service ntp start</code></li>
+  <li><code class="highlighter-rouge">$ rpi-ro</code></li>
+  <li>Check time by typing: <code class="highlighter-rouge">$ date</code></li>
+</ul>
+
+<h4 id="to-set-timezone">To set timezone:</h4>
 
 <ul>
   <li>
@@ -620,13 +634,8 @@ INFO     emoncmsorg sending: https://emoncms.org/input/bulk.json?apikey=E-M-O-N-
   </li>
   <li>
     <p>On Raspberry Pi (Linux system time):</p>
+
     <ul>
-      <li>Check emonPi has a connection to the internet</li>
-      <li>Try a reboot</li>
-      <li>If time is still incorrect, then force manual NTP update:</li>
-      <li>
-        <p><a href="/technical/credentials/#ssh">Connect Via SSH</a></p>
-      </li>
       <li>
         <p>Run <code class="highlighter-rouge">$ rpi-rw</code>, then run <code class="highlighter-rouge">$ sudo raspi-config</code>, select <code class="highlighter-rouge">Internationalisation Options</code> and set local timezone.  Then run <code class="highlighter-rouge">$ rpi-ro</code>.</p>
       </li>
