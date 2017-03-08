@@ -9,9 +9,9 @@ sharing: true
 footer: true
 ---
 
-# Pre Installed on emonPi 
+# Pre Installed on emonPi
 
-*Assuming pre-build SD card image [emonSD-03-May16](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log#emonsd-03may16--release) or later* 
+*Assuming pre-build SD card image [emonSD-03-May16](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log#emonsd-03may16--release) or later*
 
 ## [Node-RED](/integrations/nodered)
 
@@ -29,13 +29,21 @@ Open Home Automation Bus (OpenHAB) is “a vendor and technology agnostic open s
 
 LightWaveRF produce a variety of RF plugs and relays which can be controlled via OOK (on-off-keying RF. The LightWaveRF OOK protocol is also compatible with some lower cost un-branded OOK learning receivers relays.
 
-# No Installation Required 
+***
+
+# No Software Installation Required
 
 ## [WiFi MQTT Control Relay Thermostat](/integrations/mqtt-relay/)
 
-Multi-purpose Wifi connected relay control board. Applications include: remote heating an A/C systems control via HTTP or MQTT using nodeRED, openHAB etc. 
+Multi-purpose Wifi connected relay control board. Applications include: remote heating an A/C systems control via HTTP or MQTT using nodeRED, openHAB etc.
 
-# Installation Required 
+## [OpenEVSE Open-source EV charging station](/integrations/openevse/)
+
+OpenEVSE is a fully open-source EVSE (Electric Vehicle Supply Equipment) charging station. Emoncms and MQTT enabled.
+
+***
+
+# Installation Required
 
 ## [Home Assistant](https://blog.openenergymonitor.org/2016/04/Home-Assistant/)
 
