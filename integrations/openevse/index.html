@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Log Locally - Guide | OpenEnergyMonitor</title>
+    <title>OpenEVSE EV Charging Station - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="Log data locally to emonPi">
+    <meta name="description" content="Open Source Electric Vehicle Charging Staion">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/local/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/integrations/openevse/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Log Locally">
+    <meta property="og:title" content="OpenEVSE EV Charging Station">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/local/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/integrations/openevse/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Log data locally to emonPi">
+    <meta property="og:description" content="Open Source Electric Vehicle Charging Staion">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Log Locally">
-    <meta name="twitter:description" content="Log data locally to emonPi">
+    <meta name="twitter:title" content="OpenEVSE EV Charging Station">
+    <meta name="twitter:description" content="Open Source Electric Vehicle Charging Staion">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -441,138 +441,69 @@ margin-top: 0 !important;
   
   <header>
     <h1 class="title indent">
-      Log Locally
+      OpenEVSE EV Charging Station
     </h1>
   </header>
   <hr class="divider">
   
 
-  <h3 id="laquo-previous-step-connectsetupconnect"><a href="/setup/connect/">« Previous step: Connect</a></h3>
+  <p>OpenEVSE is a fully open-source EVSE (Electric Vehicle Supply Equipment) charging station designed by <a href="http://openevse.com">OpenEV</a>.</p>
 
-<h3 id="next-step-log-remotely-raquosetupremote"><a href="/setup/remote/">Next step: Log Remotely »</a></h3>
+<blockquote>
+  <p>An EVSE charging station, is a device an electric car (EV) is plugged into to charge. It communicates with the car to agree on a charging rate that is the fastest and safest rate both the car and the power supply can support.</p>
+</blockquote>
 
-<hr />
+<p><img src="/images/integrations/leaf-openevse.jpg" alt="Nissan LEAF OpenEVSE" /></p>
 
-<p>Data can now be logged to Emoncms runnning on the emonPi’s local server, data will be saved to the Raspberry Pi’s SD card.</p>
+<p><em>OpenEnergyMonitor have been collaborating with OpenEV to improve energy monitoring integration, control and tailor the setup for use in Europe / UK. This page we will provide Europe / UK specific setup instructions and considerations.</em></p>
 
-<p>Data can also (optionally) be posted remotely to <a href="https://emoncms.org">Emoncms.org</a>, see <a href="/setup/remote/">Next step: Log Remotely</a>.</p>
+<h2 id="assembly">Assembly</h2>
 
-<p>For application specific input processing see:</p>
-
-<ul>
-  <li><a href="/applications/home-energy">Applications &gt; Home Energy</a></li>
-  <li><a href="/applications/solar-pv">Applications &gt; Solar PV</a>.</li>
-</ul>
-
-<h2 id="a-classtitle-link-name1-emoncms-inputs-href1-emoncms-inputsa-1-emoncms-inputs"><a class="title-link" name="1-emoncms-inputs" href="#1-emoncms-inputs"></a> 1. Emoncms Inputs</h2>
+<p>The standard build guide from OpenEV can be followed taking into account the specific OpenEnergyMonitor (Europe / UK) considerations (see below):</p>
 
 <ul>
-  <li>Login to Local Emoncms <a href="http://emonpi/">http://emonpi/</a> (or local IP address)</li>
-  <li>Navigate to <code class="highlighter-rouge">Setup &gt; Inputs</code></li>
+  <li><strong>OpenEVSE P50D Assembly guide</strong> (<a href="http://openevse.dozuki.com/Guide/OpenEVSE+50A+Charging+Station/8"><strong>Web</strong></a>, <a href="http://openevse.dozuki.com/GuidePDF/link/8/en"><strong>pdf</strong></a>)</li>
 </ul>
 
-<p>You should now see an updating input list of connected nodes (e.g emonPi, emonTx, emonTH) and they keys (e.g. power1, power2 etc.) together with the last received value. If you do not, see <a href="/setup/troubleshooting">Setup &gt; Troubleshooting</a>.</p>
+<h3 id="openenergymonitor-evse-considerations">OpenEnergyMonitor EVSE Considerations</h3>
 
-<p>Input data is not saved to disk. To save an input Emoncms Input Processing is used to log an input to a Feed. Feed data is then logged persistantly to disk. To log an Input to a Feed:</p>
+<p><em>Specific considerations for OpenEVSE units obtained via the <a href="http://shop.openenergymonitor.com/ev-charge-controllers/">OpenEnergyMonitor Shop</a> to be installed in UK / Europe:</em></p>
 
-<ul>
-  <li>Click on the <code class="highlighter-rouge">Input Config Spanner</code> next to the input you wish to log to a Feed:</li>
-</ul>
+<h4 id="ev-connector-cable-wiring">1. EV Connector Cable Wiring</h4>
 
-<p><img src="/images/setup/local-log1.png" alt="Emoncms Inputs" /></p>
+<p>The <a href="http://shop.openenergymonitor.com/tethered-ev-charging-cable/">EV cables from the OpenEnergyMonitor shop (Type 1 &amp; Type 2)</a> are wired as follows:</p>
 
-<ul>
-  <li>Process List setup box will open</li>
-  <li>Choose required Input Process e.g <code class="highlighter-rouge">Log to Feed</code></li>
-  <li>Create a new feed giving it a name e.g. <code class="highlighter-rouge">use</code> or log to an existing feed *</li>
-  <li>Select the default <code class="highlighter-rouge">PHPFINA</code> Feed Engine</li>
-  <li>Select a logging interval e.g. <code class="highlighter-rouge">10s</code> **</li>
-  <li>Click add to <code class="highlighter-rouge">Add</code> to add that input process</li>
-</ul>
+<p><img src="/images/integrations/oem-ev-cable-wire.jpg" alt="" /></p>
 
-<p><img src="/images/setup/local-log2.png" alt="Input Processing Power" /></p>
+<h4 id="evse-mains-wiring">2. EVSE Mains Wiring</h4>
 
-<p>If logging a <code class="highlighter-rouge">Power</code> value input you will also want to create a corresponding KWh Feed. This is done by adding another input process:</p>
+<p class="note warning">
+Mains wiring should only be undertaken by a qualified electrician.
+</p>
 
-<ul>
-  <li>Choose <code class="highlighter-rouge">Power to KWh</code> Input Process</li>
-  <li>Create a new KWh feed e.g. <code class="highlighter-rouge">use_kwh</code> *</li>
-</ul>
+<p>In the UK / Europe an EVSE must be directly wired into a consumer unit using appropriately sized wiring and a RCD circuit breaker e.g. RCBO. It is highly recomended to size the mains wiring for at least the maximum rating of the EV teathered cable (usually 32A).</p>
 
-<p><img src="/images/setup/local-log3.png" alt="Input Processing kwh" /></p>
+<p class="note">
+The max current of the EVSE should be set to match the continous current rating of mains wiring in the OpenEVSE settings (via LCD menu) on first power up before connecting to an EV (Setup &gt; Max Current &gt;).
+</p>
 
-<ul>
-  <li>Once required input processes have been added click <code class="highlighter-rouge">Changed, Press to Save</code></li>
-  <li>Then <code class="highlighter-rouge">Close</code> the Input List window</li>
-</ul>
+<p><em>In the USA / Canada you may <a href="https://cdn.shopify.com/s/files/1/0249/6207/products/IMG_6864_1024x1024.JPG?v=1478546994">see photos of the EVSE plugged into a wall-outlet</a>, this is a <a href="https://en.wikipedia.org/wiki/AC_power_plugs_and_sockets#NEMA_14-30">NEMA 14-30 plug</a> commonly used for electric clothes dryers etc. These plugs don’t exist in the UK. The UK uses <a href="https://en.wikipedia.org/wiki/AC_power_plugs_and_sockets:_British_and_related_types#BS_1363-2_13.C2.A0A_switched_and_unswitched_socket-outlets">BS1363 3-pin plugs</a> rated to 13A max (10A continuous).</em></p>
 
-<p><img src="/images/setup/local-log4.png" alt="Input Processes List View" /></p>
+<p><strong>Do not wire an EVSE into a 3-pin BS1363 plug unless the charging current is limited to 10A</strong>. This defeats the point of using an EVSE; better to use a <a href="http://www.evcables.co.uk/231/Portable-Charger-Cables">portable EVSE ‘granny cable’</a> instead.</p>
 
-<ul>
-  <li>The Inputs page should now display the active input processes in the <code class="highlighter-rouge">Process list</code> column</li>
-</ul>
+<p>In mainland Europe <a href="https://en.wikipedia.org/wiki/Schuko">Schuko plugs</a> are rated to to 16A max (13A continous).</p>
 
-<p><img src="/images/setup/local-log5.png" alt="Input View with processing" /></p>
+<h4 id="charging-level">3. Charging Level</h4>
 
-<ul>
-  <li>Navigate to <code class="highlighter-rouge">Setup &gt; Feeds</code></li>
-  <li>Updating feeds should now be visible</li>
-</ul>
+<p>The OpenEVSE unit should be set to <strong>Level 2</strong> charging mode, the charging mode can be set via the LCD menu:</p>
 
-<p><img src="/images/setup/local-log6.png" alt="Feed View" /></p>
+<p><code class="highlighter-rouge">Setup &gt; Charging Mode &gt; L2</code></p>
 
-<ul>
-  <li>To view the feed data click the <code class="highlighter-rouge">Eye Icon</code></li>
-  <li>This will open <code class="highlighter-rouge">Data Viewer</code></li>
-  <li>Multiple feeds can be overlayed on the same graph by checking the boxes on the right hand side</li>
-  <li>To view daily data see <a href="/setup/daily-kwh">Emoncms &gt; Daily KWh</a>.</li>
-</ul>
-
-<p>Note: no data will be visible immediately. Wait a few hours to build up some data before trying to view a feed.</p>
-
-<p><img src="/images/setup/data-viewer.png" alt="Feed Viewer" /></p>
-
-<p>* Using standard feed names such as <code class="highlighter-rouge">use</code>, <code class="highlighter-rouge">use_kwh</code>, <code class="highlighter-rouge">solar</code>, <code class="highlighter-rouge">solar_kwh</code> <code class="highlighter-rouge">import</code> and <code class="highlighter-rouge">import_kwh</code> (<strong>case sensitive</strong>) will automate the setup of MyElectric, MySolar PV and Android app dashboards. See <a href="/setup/dashboards">Setup &gt; Dashboards</a> and <a href="/applications/home-energy">Home Energy</a> and <a href="/applications/solar-pv">Solar PV</a> applications pages for more info.</p>
-
-<p>** Feed interval loging time should not be less (faster) then the default node update rate. Choosing a longer (slower) update rate is fine and will conserve disk space:</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td><strong>Node</strong></td>
-      <td><strong>Max Update Rate</strong></td>
-    </tr>
-    <tr>
-      <td>emonPi</td>
-      <td>5s</td>
-    </tr>
-    <tr>
-      <td>emonTx</td>
-      <td>10s</td>
-    </tr>
-    <tr>
-      <td>emonTH</td>
-      <td>60s</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>We recommend making regular backups of local data. See <a href="/setup/import">Setup &gt; Import/Backup</a>.</p>
-
-<h3 id="video-guide">Video Guide</h3>
-<div class="videoWrapper">
-<iframe width="300" height="315" src="https://www.youtube.com/embed/8nVP0Hgkuuc" frameborder="0" allowfullscreen=""></iframe>
-</div>
-
-<p><br /></p>
-
-<hr />
-
-<h3 id="next-step-log-remotely-raquosetupremote-1"><a href="/setup/remote/">Next step: Log Remotely »</a></h3>
+<p><em>Level 2 charging referes to charging from 220v-240v, as opposed to level 1 charging from 110v.</em></p>
 
 
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/setup/local.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/setup/local.markdown'>Edit on GitHub Prose</a></div>
+  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/integrations/openevse.markdown'>Edit on GitHub</a></div>
+<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/integrations/openevse.markdown'>Edit on GitHub Prose</a></div>
 
 </article>
 
@@ -608,7 +539,7 @@ margin-top: 0 !important;
           <li><a  href='/setup/'>System Overview </a></li>
           <li><a  href='/setup/connect/'>Connect </a></li>
           <li><a  href='/setup/install/'>Install </a></li>
-          <li><a class='active' href='/setup/local/'>Log Locally </a></li>
+          <li><a  href='/setup/local/'>Log Locally </a></li>
           <li><a  href='/setup/remote/'>Log Remotely </a></li>
           <li><a  href='/setup/dashboards/'>Dashboards </a></li>
           <li><a  href='/setup/emontx/'>Add Energy Sensing Node(s) </a></li>
@@ -643,7 +574,7 @@ margin-top: 0 !important;
       <li>
          <b>Integrations</b>
         <ul>
-         <li><a  href='/integrations/openevse/'>OpenEVSE </a></li>
+         <li><a class='active' href='/integrations/openevse/'>OpenEVSE </a></li>
          <li><a  href='/integrations/nodered/'>Node-RED </a></li>
          <li><a  href='/integrations/openhab/'>OpenHAB </a></li>
          <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
