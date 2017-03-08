@@ -54,6 +54,8 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 The polarity of the power readings depends on the orientation of the clip-on CT sensor. Orientate the CTs so that site-consumption is positive. The correct orientation can be determined by trial and error.
 </p>
 
+![home energy2](/images/applications/home-energy/emonpi-install2.jpg)
+
 
 ### {% linkable_title 3. Emoncms Feed Setup %}
 
