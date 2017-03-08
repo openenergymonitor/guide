@@ -25,19 +25,21 @@ OpenEVSE is a fully open-source EVSE (Electric Vehicle Supply Equipment) chargin
 
 The standard build guide from OpenEV can be followed taking into account the specific OpenEnergyMonitor (Europe / UK) considerations (see below):
 
-- **OpenEVSE P50D Assembly guide** ([**Web**](http://openevse.dozuki.com/Guide/OpenEVSE+50A+Charging+Station/8), [**pdf**](http://openevse.dozuki.com/GuidePDF/link/8/en))
+**OpenEVSE P50D Assembly guide** ([**Web**](http://openevse.dozuki.com/Guide/OpenEVSE+50A+Charging+Station/8), [**pdf**](http://openevse.dozuki.com/GuidePDF/link/8/en))
 
-### OpenEnergyMonitor EVSE Considerations
+![OpenEVSE Build](/images/integrations/openevse-build.jpg)
+
+## OpenEnergyMonitor EVSE Considerations
 
 *Specific considerations for OpenEVSE units obtained via the [OpenEnergyMonitor Shop](http://shop.openenergymonitor.com/ev-charge-controllers/) to be installed in UK / Europe:*
 
-#### 1. EV Connector Cable Wiring
+### 1. EV Connector Cable Wiring
 
 The [EV cables from the OpenEnergyMonitor shop (Type 1 & Type 2)](http://shop.openenergymonitor.com/tethered-ev-charging-cable/) are wired as follows:
 
 ![](/images/integrations/oem-ev-cable-wire.jpg)
 
-#### 2. EVSE Mains Wiring
+### 2. EVSE Mains Wiring
 
 <p class='note warning'>
 Mains wiring should only be undertaken by a qualified electrician.
@@ -56,7 +58,7 @@ The max current of the EVSE should be set to match the continous current rating 
 
 In mainland Europe [Schuko plugs](https://en.wikipedia.org/wiki/Schuko) are rated to to 16A max (13A continous).
 
-#### 3. Charging Level
+### 3. Charging Level
 
 The OpenEVSE unit should be set to **Level 2** charging mode, the charging mode can be set via the LCD menu:
 
