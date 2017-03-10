@@ -18,15 +18,9 @@ The system is made up of five main units. These can be assembled and configured 
 
 ![image](/images/setup/oemfpsystemdiagram.png)
 
-<div class='videoWrapper'>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/E1M2uLSiQy0" frameborder="0" allowfullscreen></iframe>
-</div>
-
-
 ***
 
 **Please select the type of system you are interested in using the tabs below:**
-
 
 <div class='install-instructions-container' markdown='0'>
 <input name='install-instructions' type='radio' id='home-energy-hardware' checked>
@@ -40,11 +34,9 @@ The system is made up of five main units. These can be assembled and configured 
 <label class='menu-selector temperature' for='temperature-hardware'><strong>Temperature<br>& Humidity<br><i class="icon-arrow-down"></i></strong></label>
 <div class='install-instructions energy' markdown='1'>
 
-
 ### {% linkable_title Home Energy Hardware %}
 
 > The OpenEnergyMonitor system can be used as a simple home energy monitoring system for analyzing real-time power use and daily energy consumption.
-
 
 The hardware options to set up a home energy monitor are as follows:
 
@@ -64,12 +56,12 @@ The emonPi can monitor two single-phase AC circuits using clip-on CT sensors. Th
 - Requires WiFi / Ethernet plus 2 x power outlets
 - Requires [pre-built SD card image](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log) (included)
 
-#### Sensors required:
+#### Sensors Required:
 
  - 1 X [Clip-on CT sensors](https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) (the emonPi can accept up to two CT sensors; one is included as standard with the emonPi)
  - 1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/components/) (optional but highly recommended)
 
-#### Power adapters required:
+#### Power Adapters Required:
 
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
 
@@ -118,9 +110,6 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 <br>
 
-
-
-
 ***
 
 #### [emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/) (alternative to emonPi)
@@ -140,10 +129,8 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 
 <br>
 
-
 </div> <!-- END HOME ENERGY -->
 <div class='install-instructions solarpv' markdown='1'>
-
 
 ### {% linkable_title Solar PV Hardware %}
 
@@ -188,13 +175,12 @@ The emonPi can monitor two single-phase AC circuits using clip-on CT sensors. Th
 An emonTx can be powered by 3 x AA batteries, however this is not recommended for solar PV monitoring application since sensor adapter is require to determine direction of current flow and accurate VRMS & Real Power calculations.
 </p>
 
-
-#### Sensors required:
+#### Sensors Required:
 
  - 2 X [Clip-on CT sensors](https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) (included in emonPi solar PV bundle)
  - 1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/components/) (included in emonPi solar PV bundle)
 
-#### Power adapters required:
+#### Power Adapters Required:
 
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
  - *1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/power-supplies/) (optional if using an emonTx but highly recommended)*
@@ -219,9 +205,6 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 <a class="btn pull-right" href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor">View in Shop &rarr; </a>
 
 <br>
-
-
-
 
 ***
 
@@ -277,8 +260,6 @@ The emonTH is powered by two AA batteries and is available with a choice of eith
 
 #### 2. Wired Temperature Hardware
 
-
-
 #### [DS18B20 sensor on RJ45](https://shop.openenergymonitor.com/rj45-encapsulated-ds18b20-temperature-sensor/)
   {% img https://cdn2.bigcommerce.com/server4400/98a75/products/144/images/633/IMG_5193__36054.1424864401.1280.1280.JPG?c=2 300 %}
 
@@ -302,14 +283,11 @@ The emonTH is powered by two AA batteries and is available with a choice of eith
 
 </div> <!-- END TEMP -->
 
-
 </div>
 
 ***
 
-
 ### {% linkable_title Comparison Table%}
-
 
 |                                    | emonPi  | emonBase  | emonTx  | emonTH |
 |---|---|---|---|---|
@@ -323,7 +301,6 @@ The emonTH is powered by two AA batteries and is available with a choice of eith
 | Local data storage (Emoncms)      |  Yes | Yes | No | No |
 | Requires additional base-station | No | No | Yes | Yes
 | LCD Display | Yes | No | No | No
-
 
 \* Requires manual wiring into terminal block
 
