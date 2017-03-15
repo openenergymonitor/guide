@@ -84,7 +84,7 @@ footer: true
   <br/>
 
 - ### {% linkable_title Optical Pulse Sensor %}
-  - [Optical Pulse Sensor Docs](guide.openenergymonitor.org/setup/optical-pulse-sensor)
+  - [Optical Pulse Sensor Docs](https://guide.openenergymonitor.org/setup/optical-pulse-sensor)
 
 ***
 
