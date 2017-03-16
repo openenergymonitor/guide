@@ -224,5 +224,5 @@ exit
 
 ```shell
 $ sudo su
-$ ~/emonpi/./factoryreset
+$ /home/pi/emonpi/factoryreset
 ```
