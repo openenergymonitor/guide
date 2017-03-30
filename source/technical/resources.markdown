@@ -32,11 +32,16 @@ footer: true
 
   <br/>
 
-- ### {% linkable_title emonTx %}
+- ### {% linkable_title emonTx V3 %}
   - [User Guide](https://guide.openenergymonitor.org/setup/emontx/)
   - [emonTx V3 Hardware & Offical Firmware](https://github.com/openenergymonitor/emontx3)
   - [Other emonTx firmware examples](https://github.com/openenergymonitor/emonTxFirmware)
   - [emonTx V3 Hardware Docs](https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3.4)
+  - [emonTx Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
+ 
+ - ### {% linkable_title emonTx V2 %}
+  - [Build Guide](https://github.com/openenergymonitor/emontx2/blob/master/buildguide.md)
+  - [emonTx V2 Hardware & Firmware](https://github.com/openenergymonitor/emontx2)
   - [emonTx Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
 
   <br/>
