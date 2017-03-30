@@ -20,7 +20,7 @@ The emonPi is based on a RaspberryPi + [emonPi Shield PCB](https://wiki.openener
 
 
 <figure>
-<img src="https://github.com/openenergymonitor/Hardware/raw/master/emonPi/emonPi_V1_6/photo.png" alt="emonPi RaspberryPi Shield PCB">
+<img src="https://github.com/openenergymonitor/emonpi/raw/master/hardware/emonpi/emonpi_V1_6/photo.png" alt="emonPi RaspberryPi Shield PCB">
 <figcaption style="text-align:center;"><i>emonPi Raspberry Pi Shield PCB</i></figcaption>
 </figure>
 <br>
