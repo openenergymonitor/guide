@@ -471,22 +471,35 @@ margin-top: 0 !important;
   <hr class="divider">
   
 
-  <p>This is a guide on how to use the Adafruit ESP8266 Huzzah WIFI module with an EmonTx v3 to make a simple WIFI enabled energy monitor that can post directly to emoncms.org - or any other emoncms installation local or remote.</p>
+  <h2 id="using-the-emontx-v3-with-the-esp8266-huzzah-wifi-module">Using the EmonTx v3 with the ESP8266 Huzzah WIFI module</h2>
+
+<hr />
+
+<p>This is a guide on how to use the Adafruit ESP8266 Huzzah WIFI module with an EmonTx v3 to make a simple WIFI enabled energy monitor that can post directly to emoncms.org - or any other emoncms installation local or remote.</p>
 
 <p>For applications that only require basic posting of data from one EmonTx to a remote server such as emoncms.org an EmonTx with this WIFI module provides a lower cost route than a emonBase or EmonPi basestation installation.</p>
 
 <p>An emonBase or EmonPi is recommended for more complex applications where local storage is needed or/and an installation with multiple sensors and control nodes.</p>
 
-<p>To setup an EmonTx v3 + ESP8266 Wifi energy monitor you will need:</p>
+<p><img src="/images/setup/esp8266adapter/emontxesp.jpg" alt="emontxesp.jpg" /></p>
 
-<p>EmonTx V3 + CT, ACAC, temperature and pulse sensors as required by your application.
-https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz</p>
+<p><strong>To setup an EmonTx v3 + ESP8266 Wifi energy monitor you will need:</strong></p>
 
-<p>USB Power supply for the EmonTx – The ACAC Voltage adapter that can power the EmonTx in normal operation does not deliver enough power to run the ESP8266 Huzzah WIFI module and so an additional USB Power supply is required.</p>
-
-<p>ESP8266 Huzzah WIFI module with a 6 way stackable header, we offer a pre-programmed ESP8266 Huzzah WIFI module in our shop, ready to go out of the box with the header already installed and running our open source EmonESP firmware (Alternatively for a DIY approach see the original forum post here: https://community.openenergymonitor.org/t/using-the-emontx-v3-with-the-esp8266-huzzah-wifi-module/795)</p>
+<ul>
+  <li>
+    <p>EmonTx V3 + CT, ACAC, temperature and pulse sensors as required by your application.</p>
+  </li>
+  <li>
+    <p>USB Power supply for the EmonTx – The ACAC Voltage adapter that can power the EmonTx in normal operation does not deliver enough power to run the ESP8266 Huzzah WIFI module and so an additional USB Power supply is required.</p>
+  </li>
+  <li>
+    <p>ESP8266 Huzzah WIFI module with a 6 way stackable header, we offer a pre-programmed ESP8266 Huzzah WIFI module in our shop, ready to go out of the box with the header already installed and running our open source EmonESP firmware (Alternatively for a DIY approach see the original forum post here: https://community.openenergymonitor.org/t/using-the-emontx-v3-with-the-esp8266-huzzah-wifi-module/795)</p>
+  </li>
+</ul>
 
 <p>ESP8266 Huzzah WIFI module with a 6 way stackable header:</p>
+
+<p><img src="/images/setup/esp8266adapter/esp8266adapter.jpg" alt="esp8266adapter.jpg" /></p>
 
 <h3 id="setup-procedure">Setup procedure</h3>
 
@@ -508,9 +521,17 @@ https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-
   <li>
     <p>After successful connection, navigate to IP address 192.168.4.1 to access the configuration page:</p>
   </li>
-  <li>
-    <p>Select the WIFI network that you wish to connect to, enter passkey and click Connect. Wait about 30s for the module to connect. Once connected the module will show its IP-address in the interface (underlined in red in the screenshot).</p>
-  </li>
+</ol>
+
+<p><img src="/images/setup/esp8266adapter/emonesp-scan.png" alt="emonesp-scan.png" /></p>
+
+<ol>
+  <li>Select the WIFI network that you wish to connect to, enter passkey and click Connect. Wait about 30s for the module to connect. Once connected the module will show its IP-address in the interface (underlined in red in the screenshot).</li>
+</ol>
+
+<p><img src="/images/setup/esp8266adapter/emonesp-ipaddress.png" alt="emonesp-ipaddress.png" /></p>
+
+<ol>
   <li>
     <p>Click on the IP address to change your browser to the new location. Reconnect to your home WIFI network. Refresh the page to load the emonESP configuration page across your home LAN WIFI rather than the access point.</p>
   </li>
@@ -523,9 +544,12 @@ https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-
   <li>
     <p>Click save, after around 10-20 seconds the interface should report that the successful packets have been sent to emoncms.org. You can now check the inputs page on your emoncms.org account, which should looks like this:</p>
   </li>
-  <li>
-    <p>Configure emoncms.org as normal, see section on “Using Emoncms” in emoncms documentation: https://github.com/emoncms/emoncms/blob/master/readme.md</p>
-  </li>
+</ol>
+
+<p><img src="/images/setup/esp8266adapter/espinputs.png" alt="espinputs.png" /></p>
+
+<ol>
+  <li>Configure emoncms.org as normal, see section on “Using Emoncms” in the <a href="https://github.com/emoncms/emoncms/blob/master/readme.md">emoncms documentation</a>.</li>
 </ol>
 
 <h3 id="mqtt">MQTT</h3>
@@ -534,10 +558,10 @@ https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-
 
 <p>If you have an emonBase or EmonPi on your local network the default settings are:</p>
 
-<p><strong>hostname:</strong> emonpi
-<strong>username:</strong> emonpi
-<strong>password:</strong> emonpimqtt2016
-<strong>base topic:</strong> emon/emontx</p>
+<p><strong>hostname:</strong> emonpi<br />
+<strong>username:</strong> emonpi<br />
+<strong>password:</strong> emonpimqtt2016<br />
+<strong>base topic:</strong> emon/emontx<br /></p>
 
 
   <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/setup/esp8266-adapter-emontx.markdown'>Edit on GitHub</a></div>
