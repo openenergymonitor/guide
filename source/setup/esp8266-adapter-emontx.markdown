@@ -36,35 +36,35 @@ ESP8266 Huzzah WIFI module with a 6 way stackable header:
 
 ### Setup procedure
 
-1. Plug the ESP8266 Huzzah WIFI module into the EmonTx as shown in the first picture above.
+1) Plug the ESP8266 Huzzah WIFI module into the EmonTx as shown in the first picture above.
 
-2. Connect up any CT sensors, ACAC adapter for voltage sensing and other sensors as required and plug in USB Power to the USB mini socket on the EmonTx.
+2) Connect up any CT sensors, ACAC adapter for voltage sensing and other sensors as required and plug in USB Power to the USB mini socket on the EmonTx.
 
-3. Power up both the USB power supply and the ACAC adapter simultaneously, to ensure that the EmonTx starts up detecting the ACAC adapter and that enough power is delivered to the ESP8266 Huzzah WIFI module for startup.
+3) Power up both the USB power supply and the ACAC adapter simultaneously, to ensure that the EmonTx starts up detecting the ACAC adapter and that enough power is delivered to the ESP8266 Huzzah WIFI module for startup.
 
-4. The ESP8266 WIFI module will now create a WIFI access point for configuration. Using your laptop or phone, scan for WIFI networks, you should see a network SSID that looks something like:
+4) The ESP8266 WIFI module will now create a WIFI access point for configuration. Using your laptop or phone, scan for WIFI networks, you should see a network SSID that looks something like:
 
     emonESP_1679732
 
-5. After successful connection, navigate to IP address 192.168.4.1 to access the configuration page:
+5) After successful connection, navigate to IP address 192.168.4.1 to access the configuration page:
 
 ![emonesp-scan.png](/images/setup/esp8266adapter/emonesp-scan.png)
 
-6. Select the WIFI network that you wish to connect to, enter passkey and click Connect. Wait about 30s for the module to connect. Once connected the module will show its IP-address in the interface (underlined in red in the screenshot).
+6) Select the WIFI network that you wish to connect to, enter passkey and click Connect. Wait about 30s for the module to connect. Once connected the module will show its IP-address in the interface (underlined in red in the screenshot).
 
 ![emonesp-ipaddress.png](/images/setup/esp8266adapter/emonesp-ipaddress.png)
 
-7. Click on the IP address to change your browser to the new location. Reconnect to your home WIFI network. Refresh the page to load the emonESP configuration page across your home LAN WIFI rather than the access point.
+7) Click on the IP address to change your browser to the new location. Reconnect to your home WIFI network. Refresh the page to load the emonESP configuration page across your home LAN WIFI rather than the access point.
 
-8. If you wish to post data to emoncms.org, enter your emoncms.org write apikey found on your emoncms.org account page.
+8) If you wish to post data to emoncms.org, enter your emoncms.org write apikey found on your emoncms.org account page.
 
-9. Set the Emoncms Node Name to 0 or other numeric node id in the range 0 – 31 (Emoncms.org does not currently support non-numeric node names).
+9) Set the Emoncms Node Name to 0 or other numeric node id in the range 0 – 31 (Emoncms.org does not currently support non-numeric node names).
 
-10. Click save, after around 10-20 seconds the interface should report that the successful packets have been sent to emoncms.org. You can now check the inputs page on your emoncms.org account, which should looks like this:
+10) Click save, after around 10-20 seconds the interface should report that the successful packets have been sent to emoncms.org. You can now check the inputs page on your emoncms.org account, which should looks like this:
 
 ![espinputs.png](/images/setup/esp8266adapter/espinputs.png)
 
-11. Configure emoncms.org as normal, see section on “Using Emoncms” in the [emoncms documentation](https://github.com/emoncms/emoncms/blob/master/readme.md). 
+11) Configure emoncms.org as normal, see section on “Using Emoncms” in the [emoncms documentation](https://github.com/emoncms/emoncms/blob/master/readme.md). 
 
 ### MQTT
 
