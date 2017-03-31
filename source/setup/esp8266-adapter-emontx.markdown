@@ -17,15 +17,15 @@ An emonBase or EmonPi is recommended for more complex applications where local s
 
 ![emontxesp.jpg](/images/setup/esp8266adapter/emontxesp.jpg)
 
-**To setup an EmonTx v3 + ESP8266 Wifi energy monitor you will need:**
+### To setup an EmonTx v3 + ESP8266 Wifi energy monitor you will need:
 
-- EmonTx V3 + CT, ACAC, temperature and pulse sensors as required by your application.
+- **EmonTx V3** + CT, ACAC, temperature and pulse sensors as required by your application.
 
-- USB Power supply for the EmonTx – The ACAC Voltage adapter that can power the EmonTx in normal operation does not deliver enough power to run the ESP8266 Huzzah WIFI module and so an additional USB Power supply is required.
+- **USB Power supply for the EmonTx** – The ACAC Voltage adapter that can power the EmonTx in normal operation does not deliver enough power to run the ESP8266 Huzzah WIFI module and so an additional USB Power supply is required.
 
-- ESP8266 Huzzah WIFI module with a 6 way stackable header, we offer a pre-programmed ESP8266 Huzzah WIFI module in our shop, ready to go out of the box with the header already installed and running our open source EmonESP firmware (Alternatively for a DIY approach see the original forum post here: https://community.openenergymonitor.org/t/using-the-emontx-v3-with-the-esp8266-huzzah-wifi-module/795)
+- **ESP8266 Huzzah WIFI module with a 6 way stackable header**, we offer a pre-programmed ESP8266 Huzzah WIFI module in our [shop here](https://shop.openenergymonitor.com/esp8266-wifi-adapter-for-emontx/), ready to go out of the box with the header already installed and running our open source EmonESP firmware (Alternatively for a DIY approach see the original forum post [here](https://community.openenergymonitor.org/t/using-the-emontx-v3-with-the-esp8266-huzzah-wifi-module/795).
 
-ESP8266 Huzzah WIFI module with a 6 way stackable header:
+### ESP8266 Huzzah WIFI module with a 6 way stackable header:
 
 ![esp8266adapter.jpg](/images/setup/esp8266adapter/esp8266adapter.jpg)
 
