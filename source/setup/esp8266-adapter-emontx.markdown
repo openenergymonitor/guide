@@ -9,11 +9,6 @@ sharing: true
 footer: true
 ---
 
-
-## Using the EmonTx v3 with the ESP8266 Huzzah WIFI module
-
-***
-
 This is a guide on how to use the Adafruit ESP8266 Huzzah WIFI module with an EmonTx v3 to make a simple WIFI enabled energy monitor that can post directly to emoncms.org - or any other emoncms installation local or remote.
 
 For applications that only require basic posting of data from one EmonTx to a remote server such as emoncms.org an EmonTx with this WIFI module provides a lower cost route than a emonBase or EmonPi basestation installation. 
