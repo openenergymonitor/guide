@@ -1,12 +1,13 @@
 ---
 layout: page
-title: "Add Optical Pulse Sensor"
-description: "Add Temperature Nodes"
-date: 2017-01-06 21:36
+title: Add Optical Pulse Sensor
+description: Add Temperature Nodes
+date: '2017-01-06 21:36'
 sidebar: true
 comments: false
 sharing: true
 footer: true
+published: true
 ---
 
 ### [&laquo; Previous step: Add Temperature Node(s)](/setup/emonth/)
@@ -190,7 +191,7 @@ The optical pulse sensor should work with all utility meters that have an LED or
 </table>
 
 
-Please help us expand this table by contributing details for your meter. Email photo and scale factor to [support@openenergymonitor.zendesk.com](mailto:/images/setup/meters/emonpi_pulse_wh_log.png?subject=pulse%20output%20utility%20meter)
+Please help us expand this table by contributing details for your meter. Email photo and scale factor to [support@openenergymonitor.zendesk.com](mailto:support@openenergymonitor.zendesk.com?subject=pulse%20output%20utility%20meter)
 
 
 <br>
