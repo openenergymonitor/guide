@@ -40,9 +40,9 @@ footer: true
   - [emonTx Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
  
  - ### {% linkable_title emonTx V2 %}
-  - [Build Guide](https://github.com/openenergymonitor/emontx2/blob/master/buildguide.md)
-  - [emonTx V2 Hardware & Firmware](https://github.com/openenergymonitor/emontx2)
-  - [emonTx Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
+   - [Build Guide](https://github.com/openenergymonitor/emontx2/blob/master/buildguide.md)
+   - [emonTx V2 Hardware & Firmware](https://github.com/openenergymonitor/emontx2)
+   - [emonTx Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
 
   <br/>
 
