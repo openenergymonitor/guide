@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Add Optical Pulse Sensor
-description: Add Temperature Nodes
+description: Add optical puse sensor
 date: '2017-01-06 21:36'
 sidebar: true
 comments: false
