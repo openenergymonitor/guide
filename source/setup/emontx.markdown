@@ -19,6 +19,9 @@ footer: true
 
 Additional energy monitoring nodes can be added if more AC circuits require monitoring or the monitoring location of the circuits is inconvenient to access power outlet and network connectivity.
 
+The emonTx is a remote sensor node. Data is transmitted to an emonPi or an emonBase via a low power 433MHz radio.
+
+**Note:** as an alternative option, the emonTx can be used 'standalone' with an ESP8266 WiFi module running EmonESP to post directly to Emoncms without an emonPi / emonBase. See [Using the EmonTx v3 with the ESP8266 Huzzah WIFI module](/setup/esp8266-adapter-emontx/)
 
 ### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)**
 

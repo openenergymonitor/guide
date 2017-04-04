@@ -75,7 +75,9 @@ The emonPi can monitor two single-phase AC circuits using clip-on CT sensors. Th
 
 The emonTx is a remote sensor node. Data is transmitted to an emonPi or an emonBase via a low power 433MHz radio.
 
-The emonTx can monitor up to four single-phase AC circuits using clip-on CT sensors. A plug-in AC-AC adapter can be used to power the unit and provide an AC voltage sample for real-power calculations. Four AA batteries can be used to power the emonTx if AC power is not available.
+**Note:** as an alternative option, the emonTx can be used 'standalone' with an ESP8266 WiFi module running EmonESP to post directly to Emoncms without an emonPi / emonBase. See [Using the EmonTx v3 with the ESP8266 Huzzah WIFI module](/setup/esp8266-adapter-emontx/)
+
+The emonTx can monitor up to four single-phase AC circuits using clip-on CT sensors. A plug-in AC-AC adapter can be used to power the unit and provide an AC voltage sample for real-power calculations. 4x AA batteries can be used to power the emonTx if AC power is not available.
 
 ![emonTxV3](/images/hardwareimages/emontxv3photo.jpg)
 
@@ -163,6 +165,12 @@ The emonPi can monitor two single-phase AC circuits using clip-on CT sensors. Th
 
 #### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
 
+The emonTx is a remote sensor node. Data is transmitted to an emonPi or an emonBase via a low power 433MHz radio.
+
+**Note:** as an alternative option, the emonTx can be used 'standalone' with an ESP8266 WiFi module running EmonESP to post directly to Emoncms without an emonPi / emonBase. See [Using the EmonTx v3 with the ESP8266 Huzzah WIFI module](/setup/esp8266-adapter-emontx/)
+
+The emonTx can monitor up to four single-phase AC circuits using clip-on CT sensors. A plug-in AC-AC adapter can be used to power the unit and provide an AC voltage sample for real-power calculations.
+
 ![emonTxV3](/images/hardwareimages/emontxv3photo.jpg)
 
 - Energy monitoring add-on node
@@ -183,7 +191,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 #### Power Adapters Required:
 
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
- - *1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/power-supplies/) (optional if using an emonTx but highly recommended)*
+ - *1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/power-supplies/) (essential for solar PV monitoring)*
 
 <a class="btn pull-right" href="https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz">View in Shop &rarr; </a>
 
