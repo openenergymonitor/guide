@@ -1,23 +1,24 @@
 ---
 layout: page
-title: "Using the EmonTx v3 with the ESP8266 Huzzah WIFI module"
-description: "Using the EmonTx v3 with the ESP8266 Huzzah WIFI module"
-date: 2017-03-31 14:51
+title: Using the EmonTx v3 with the ESP8266 Huzzah WIFI module
+description: Using the EmonTx v3 with the ESP8266 Huzzah WIFI module
+date: '2017-03-31 14:51'
 sidebar: true
 comments: false
 sharing: true
 footer: true
+published: true
 ---
 
-This is a guide on how to use the Adafruit ESP8266 Huzzah WIFI module with an EmonTx v3 to make a simple WIFI enabled energy monitor that can post directly to [emoncms.org](https://emoncms.org) or any other Emoncms installation local or remote.
+This is a guide on how to use the Adafruit ESP8266 Huzzah WiFi module with an emonTx v3 to make a simple WiFi enabled energy monitor that can post directly to [emoncms.org](https://emoncms.org) or any other Emoncms installation local or remote.
 
-For applications that only require basic posting of data from one EmonTx to a remote server such as emoncms.org an EmonTx with this WiFi module provides a lower cost route than a emonBase or emonPi base-station installation.
+For applications that only require basic posting of data from one emonTx to a remote server such as emoncms.org an emonTx with this WiFi module provides a lower cost route than a emonBase or emonPi base-station installation.
 
-An emonBase or emonPi is recommended for more complex applications where local storage is desirable and/or an installation with multiple sensors and control nodes. An emonPi / emonBase system allows for much greater expandability and customisation.
+An emonBase or emonPi is recommended for more complex applications where local storage is desirable and/or an installation with multiple sensors and control nodes. An emonPi/emonBase system allows for much greater expandability and customisation.
 
 ![emontxesp.jpg](/images/setup/esp8266adapter/emontxesp.jpg)
 
-### To setup an EmonTx v3 + ESP8266 Wifi energy monitor you will need:
+### To setup an emonTx v3 + ESP8266 Wifi energy monitor you will need:
 
 - **emonTx V3:** + CT, AC-AC adapter, temperature and pulse sensors as required by your application.
 
@@ -33,13 +34,13 @@ An emonBase or emonPi is recommended for more complex applications where local s
 
 ### Setup procedure
 
-1) Plug the ESP8266 Huzzah WIFI module into the EmonTx as shown in the first picture above.
+1) Plug the ESP8266 Huzzah WIFI module into the emonTx as shown in the first picture above.
 
-2) Connect up any CT sensors, ACAC adapter for voltage sensing and other sensors as required and plug in USB Power to the USB mini socket on the EmonTx.
+2) Connect up any CT sensors, ACAC adapter for voltage sensing and other sensors as required and plug in USB Power to the USB mini socket on the emonTx.
 
-3) Remove (open) jumper JP2 on the emonTx PCB, then connect both the 5V DC USB power supply and the AC-AC adapter simultaneously, to ensure that the EmonTx starts up detecting the AC-AC adapter and that enough power is delivered to the ESP8266 Huzzah WIFI module for startup.
+3) Remove (open) jumper JP2 on the emonTx PCB, then connect both the 5V DC USB power supply and the AC-AC adapter simultaneously, to ensure that the emonTx starts up detecting the AC-AC adapter and that enough power is delivered to the ESP8266 Huzzah WIFI module for startup.
 
-**Note:** It's important to remove / open jumper JP2 seperates the AC and DC power supplies to ensure the emonTx is powerd via DC and the AC is only used to provide an AC voltage referance.
+**Note:** It's important to remove / open jumper JP2 seperates the AC and DC power supplies to ensure the emonTx is powered via DC and the AC is only used to provide an AC voltage referance.
 
 4) The ESP8266 WIFI module will now create a WIFI access point for configuration. Using your laptop or phone, scan for WIFI networks, you should see a network SSID that looks something like:
 
