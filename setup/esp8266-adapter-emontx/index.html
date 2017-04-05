@@ -473,13 +473,13 @@ margin-top: 0 !important;
 
   <p>This is a guide on how to use the Adafruit ESP8266 Huzzah WiFi module with an emonTx v3 to make a simple WiFi enabled energy monitor that can post directly to <a href="https://emoncms.org">emoncms.org</a> or any other Emoncms installation local or remote.</p>
 
-<p>For applications that only require basic posting of data from one emonTx to a remote server such as emoncms.org an emonTx with this WiFi module provides a lower cost route than a emonBase or emonPi base-station installation.</p>
+<p>For applications that only require basic posting of data from one emonTx to a remote server such as Emoncms.org an emonTx with this WiFi module provides a lower cost route than an emonBase or emonPi base-station installation.</p>
 
 <p>An emonBase or emonPi is recommended for more complex applications where local storage is desirable and/or an installation with multiple sensors and control nodes. An emonPi/emonBase system allows for much greater expandability and customisation.</p>
 
 <p><img src="/images/setup/esp8266adapter/emontxesp.jpg" alt="emontxesp.jpg" /></p>
 
-<h3 id="to-setup-an-emontx-v3--esp8266-wifi-energy-monitor-you-will-need">To setup an emonTx v3 + ESP8266 Wifi energy monitor you will need:</h3>
+<h3 id="to-set-up-an-emontx-v3--esp8266-wifi-energy-monitor-you-will-need">To set up an emonTx v3 + ESP8266 Wifi energy monitor you will need:</h3>
 
 <ul>
   <li>
@@ -493,7 +493,7 @@ margin-top: 0 !important;
     <p><strong>5V USB DC Power supply for the emonTx:</strong> The AC-AC Voltage adapter that can power the emonTx in normal operation does not deliver enough power to run the ESP8266 Huzzah WiFi module and so an additional USB Power supply is required.</p>
   </li>
   <li>
-    <p><strong>ESP8266 Huzzah WIFI module with a 6 way stackable header running <a href="https://github.com/openenergymonitor/emonesp">EmonESP</a>:</strong> we offer a pre-programmed ESP8266 Huzzah WiFi module in our <a href="https://shop.openenergymonitor.com/esp8266-wifi-adapter-for-emontx/">shop here</a>, ready to go out of the box with the header already installed and running our open source EmonESP firmware (Alternatively for a DIY approach see the original forum post <a href="https://community.openenergymonitor.org/t/using-the-emontx-v3-with-the-esp8266-huzzah-wifi-module/795">here</a>.</p>
+    <p><strong>ESP8266 Huzzah WiFi module with a 6 way stackable header running <a href="https://github.com/openenergymonitor/emonesp">EmonESP</a>:</strong> we offer a pre-programmed ESP8266 Huzzah WiFi module in our <a href="https://shop.openenergymonitor.com/esp8266-wifi-adapter-for-emontx/">shop here</a>, ready to go out of the box with the header already installed and running our open source EmonESP firmware (Alternatively for a DIY approach see the original forum post <a href="https://community.openenergymonitor.org/t/using-the-emontx-v3-with-the-esp8266-huzzah-wifi-module/795">here</a>.</p>
   </li>
 </ul>
 
@@ -505,11 +505,11 @@ margin-top: 0 !important;
 
 <p>1) Plug the ESP8266 Huzzah WIFI module into the emonTx as shown in the first picture above.</p>
 
-<p>2) Connect up any CT sensors, ACAC adapter for voltage sensing and other sensors as required and plug in USB Power to the USB mini socket on the emonTx.</p>
+<p>2) Connect any CT sensors, AC-AC adapter for voltage sensing and other sensors as required and plug in USB Power to the USB mini socket on the emonTx.</p>
 
-<p>3) Remove (open) jumper JP2 on the emonTx PCB, then connect both the 5V DC USB power supply and the AC-AC adapter simultaneously, to ensure that the emonTx starts up detecting the AC-AC adapter and that enough power is delivered to the ESP8266 Huzzah WIFI module for startup.</p>
+<p>3) Remove (open) jumper JP2 on the emonTx PCB, then connect both the 5V DC USB power supply and the AC-AC adapter simultaneously, to ensure that the emonTx starts up detecting the AC-AC adapter and that enough power is delivered to the ESP8266 Huzzah WiFi module for start-up.</p>
 
-<p><strong>Note:</strong> It’s important to remove / open jumper JP2 seperates the AC and DC power supplies to ensure the emonTx is powered via DC and the AC is only used to provide an AC voltage referance.</p>
+<p><strong>Note:</strong> It’s important to remove/open jumper JP2 separates the AC and DC power supplies to ensure the emonTx is powered via DC and the AC is only used to provide an AC voltage reference.</p>
 
 <p>4) The ESP8266 WIFI module will now create a WIFI access point for configuration. Using your laptop or phone, scan for WIFI networks, you should see a network SSID that looks something like:</p>
 
