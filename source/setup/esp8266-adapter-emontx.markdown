@@ -42,7 +42,7 @@ An emonBase or emonPi is recommended for more complex applications where local s
 
 **Note:** It's important to remove/open jumper JP2 separates the AC and DC power supplies to ensure the emonTx is powered via DC and the AC is only used to provide an AC voltage reference.
 
-4) The ESP8266 WIFI module will now create a WIFI access point for configuration. Using your laptop or phone, scan for WIFI networks, you should see a network SSID that looks something like:
+4) The ESP8266 WiFi module will now create a WiFi access point for configuration. Using your laptop or phone, scan for WIFI networks, you should see a network SSID that looks something like:
 
     emonESP_1679732
 
@@ -50,13 +50,13 @@ An emonBase or emonPi is recommended for more complex applications where local s
 
 ![emonesp-scan.png](/images/setup/esp8266adapter/emonesp-scan.png)
 
-6) Select the WIFI network that you wish to connect to, enter passkey and click Connect. Wait about 30s for the module to connect. Once connected the module will show its IP-address in the interface (underlined in red in the screenshot).
+6) Select the WiFi network that you wish to connect to, enter passkey and click 'Connect'. Wait about 30s for the module to connect. Once connected the module will show its IP-address in the interface (underlined in red in the screenshot).
 
 ![emonesp-ipaddress.png](/images/setup/esp8266adapter/emonesp-ipaddress.png)
 
-7) Click on the IP address to change your browser to the new location. Reconnect to your home WIFI network. Refresh the page to load the emonESP configuration page across your home LAN WIFI rather than the access point.
+7) Click on the IP address to change your browser to the new location. Re-connect to your home WiFi network. Refresh the page to load the emonESP configuration page across your home LAN WiFi rather than the access point.
 
-8) If you wish to post data to emoncms.org, enter your emoncms.org write apikey found on your emoncms.org account page.
+8) If you wish to post data to Emoncms.org, enter your Emoncms.org write apikey found on your Emoncms.org account page.
 
 9) Set the Emoncms Node Name to 0 or other numeric node id in the range 0 – 31 (Emoncms.org does not currently support non-numeric node names).
 
@@ -64,7 +64,7 @@ An emonBase or emonPi is recommended for more complex applications where local s
 
 ![espinputs.png](/images/setup/esp8266adapter/espinputs.png)
 
-11) Configure emoncms.org as normal, see section on “Using Emoncms” in the [emoncms documentation](https://github.com/emoncms/emoncms/blob/master/readme.md).
+11) Configure Emoncms.org as normal, see section on “Using Emoncms” in the [emoncms documentation](https://github.com/emoncms/emoncms/blob/master/readme.md).
 
 ### EmonESP
 
@@ -74,7 +74,7 @@ The ESP8266 needs to run EmonESP firmware. The Huzzah modules sold via the shop 
 
 The emonESP firmware also supports publishing data to an MQTT broker. To use MQTT see the MQTT section on the EmonESP configuration page. You can enter a hostname, username, password and base topic to configure the module to post to an MQTT broker of your choice.
 
-If you have an emonBase or EmonPi on your local network the default settings are:
+If you have an emonBase or emonPi on your local network the default settings are:
 
 **hostname:** emonpi<br>
 **username:** emonpi<br>
