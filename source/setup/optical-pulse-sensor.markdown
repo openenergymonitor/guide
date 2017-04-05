@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Add Optical Pulse Sensor
+title: 8. Add Optical Pulse Sensor
 description: Add optical puse sensor
 date: '2017-01-06 21:36'
 sidebar: true

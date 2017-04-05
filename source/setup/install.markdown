@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Install
+title: 2. Install
 description: Physically install emonPi
 date: '2015-03-08 21:36'
 sidebar: true
