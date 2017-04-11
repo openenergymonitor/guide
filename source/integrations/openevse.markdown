@@ -28,9 +28,7 @@ OpenEVSE is a fully open-source EVSE (Electric Vehicle Supply Equipment) chargin
 
 The standard build guide from OpenEV can be followed taking into account the specific OpenEnergyMonitor (Europe / UK) considerations (see below):
 
-**OpenEVSE P50D Assembly guide**: [**Web**](http://openevse.dozuki.com/Guide/OpenEVSE+50A+Charging+Station/8), [**pdf**](http://openevse.dozuki.com/GuidePDF/link/8/en), or embedded below...
-
-<iframe src="http://openevse.dozuki.com/Guide/embed/8" width="100%" height="584" allowfullscreen frameborder="0"></iframe>
+**OpenEVSE P50D Assembly guide**: [**Web**](http://openevse.dozuki.com/Guide/OpenEVSE+50A+Charging+Station/8), [**pdf**](http://openevse.dozuki.com/GuidePDF/link/8/en)
 
 <figure>
   <img src="/images/integrations/openevse-build.jpg">
