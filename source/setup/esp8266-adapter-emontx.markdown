@@ -58,13 +58,11 @@ An emonBase or emonPi is recommended for more complex applications where local s
 
 8) If you wish to post data to Emoncms.org, enter your Emoncms.org write apikey found on your Emoncms.org account page.
 
-9) Set the Emoncms Node Name to 0 or other numeric node id in the range 0 – 31 (Emoncms.org does not currently support non-numeric node names).
-
-10) Click save, after around 10-20 seconds the interface should report that the successful packets have been sent to emoncms.org. You can now check the inputs page on your emoncms.org account, which should looks like this:
+9) Click save, after around 10-20 seconds the interface should report that the successful packets have been sent to emoncms.org. You can now check the inputs page on your emoncms.org account, which should looks like this:
 
 ![espinputs.png](/images/setup/esp8266adapter/espinputs.png)
 
-11) Configure Emoncms.org as normal, see section on “Using Emoncms” in the [emoncms documentation](https://github.com/emoncms/emoncms/blob/master/readme.md).
+10) Configure Emoncms.org as normal, see section on “Using Emoncms” in the [emoncms documentation](https://github.com/emoncms/emoncms/blob/master/readme.md).
 
 ### EmonESP
 
