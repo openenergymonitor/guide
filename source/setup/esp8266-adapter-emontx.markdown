@@ -18,6 +18,10 @@ An emonBase or emonPi is recommended for more complex applications where local s
 
 ![emontxesp.jpg](/images/setup/esp8266adapter/emontxesp.jpg)
 
+<a class="btn pull-right" href="https://shop.openenergymonitor.com/esp8266-wifi-adapter-for-emontx/">View in Shop &rarr; </a>
+
+<br><br>
+
 ### To set up an emonTx v3 + ESP8266 Wifi energy monitor you will need:
 
 - **emonTx V3:** + CT, AC-AC adapter, temperature and pulse sensors as required by your application.
