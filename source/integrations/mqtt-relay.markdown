@@ -28,6 +28,8 @@ published: true
 *   Web server settings: including HTTP port & authentication setup
 *   Temperature sensor support - 1 x sensor included
 
+![mqtt-relay-overview.png](/images/integrations/mqtt-relay-overview.png)
+
 ![mqtt-relay](/images/integrations/mqtt-relay.jpg)
 
 <a class="btn pull-right" href="http://shop.openenergymonitor.com/wifi-mqtt-relay-thermostat/">View in Shop &rarr; </a>

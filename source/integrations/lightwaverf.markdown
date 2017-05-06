@@ -15,6 +15,8 @@ While not strictly open-source the LightWaveRF OOK protocol has been reverse eng
 
 **The latest emonSD emonPi / emonBase image includes a LightWaveRF MQTT service running by default. To use this feature you will need to add an OOK transmitter to the emonPi.**
 
+![lightwave-rf-diagram.png](/images/integrations/lightwave-rf-diagram.png)
+
 
 ## Hardware
 

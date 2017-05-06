@@ -26,7 +26,7 @@ Username: "pi"
 Password: "emonpi2016"
 ```
 
-![openHAB OpenEnergyMonitor](https://raw.githubusercontent.com/openenergymonitor/oem_openHab/master/images/web.png)
+![openhab-demo.png](/images/integrations/openhab-demo.png)
 
 Pre installed on the emonPi is a skeleton config setup openHAB with to subscribe to data from the emonPi's MQTT server (see [MQTT docs](/technical/mqtt/)). For a full openHAB demo see the [openHAB Demo House](http://demo.openhab.org:8080/).
 
