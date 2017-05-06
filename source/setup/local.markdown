@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Log Locally"
+title: "3. Log Locally"
 description: "Log data locally to emonPi"
 date: 2015-03-08 21:36
 sidebar: true

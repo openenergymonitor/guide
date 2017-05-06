@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Dashboards"
+title: "5. Dashboards"
 description: "Setup Emoncms dashboards"
 date: 2015-03-08 21:36
 sidebar: true

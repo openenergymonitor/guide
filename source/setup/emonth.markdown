@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Add Temperature Node(s)"
+title: "7. Add Temperature Node(s)"
 description: "Add Temperature Nodes"
 date: 2015-03-08 21:36
 sidebar: true

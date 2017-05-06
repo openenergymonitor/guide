@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Add Energy Sensing Node(s)"
+title: "6. Add Energy Sensing Node(s)"
 description: "Add additional energy monitoring nodes"
 date: 2015-03-08 21:36
 sidebar: true

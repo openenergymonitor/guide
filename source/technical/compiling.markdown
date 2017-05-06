@@ -32,7 +32,7 @@ The process of editing, compiling and uploading firmware is best explained with 
 
 ### Using Arduino IDE
 
-Either PlatformIO or Arduino IDE can be used to compile and upload the firmware. This example will use PlatformIO since we consider it the easiest method. If you wish to use Arduino IDE see [Setting Up the Arduino Environment](https://openenergymonitor.org/emon/buildingblocks/setting-up-the-arduino-environment).
+Either PlatformIO or Arduino IDE can be used to compile and upload the firmware. This example will use PlatformIO since we consider it the easiest method. If you wish to use Arduino IDE see [Offical Arduino Getting Started Guide](https://www.arduino.cc/en/Guide/HomePage).
 
 ### Using PlatformIO
 
