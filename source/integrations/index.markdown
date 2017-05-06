@@ -45,6 +45,10 @@ OpenEVSE is a fully open-source EVSE (Electric Vehicle Supply Equipment) chargin
 
 # Installation Required
 
+## [HA-bridge](https://github.com/openenergymonitor/emonpi-ha-bridge)
+
+Enable voice control of MQTT devices using Google Home or Amazon Eco using home automation bridge (ha-bridge) running on emonPi 
+
 ## [Home Assistant](https://blog.openenergymonitor.org/2016/04/Home-Assistant/)
 
 Fully open-source python based home automation platform, similar to openHAB but easier to setup with some nice auto-detection. Tested to work on emonPi (not pre-installed, requires install)
