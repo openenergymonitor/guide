@@ -18,6 +18,8 @@ OpenEVSE is a fully open-source EVSE (Electric Vehicle Supply Equipment) chargin
 
 *OpenEnergyMonitor have been collaborating with OpenEV to improve energy monitoring integration and control as well as tailoring the setup for use in Europe and the UK. This page provides Europe / UK specific setup instructions and considerations.*
 
+See our [blog post](https://blog.openenergymonitor.org/2017/01/openevse-build/) detailing a full OpenEVSE build review, and usage.
+
 <a class="btn pull-right" href="https://shop.openenergymonitor.com/ev-charge-controllers/">View in Shop &rarr; </a>
 
 <br>
