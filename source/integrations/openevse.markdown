@@ -22,6 +22,18 @@ OpenEVSE is a fully open-source EVSE (Electric Vehicle Supply Equipment) chargin
 
 <br>
 
+<div class='videoWrapper'>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A9D48V1D1G4" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<br>
+
+<div class='videoWrapper'>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cIvmYP57eOo" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<br>
+
 ***
 
 ## Assembly
