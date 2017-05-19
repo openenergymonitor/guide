@@ -1,12 +1,13 @@
 ---
 layout: page
-title: "5. Dashboards"
-description: "Setup Emoncms dashboards"
-date: 2015-03-08 21:36
+title: 5. Dashboards
+description: Setup Emoncms dashboards
+date: '2015-03-08 21:36'
 sidebar: true
 comments: false
 sharing: true
 footer: true
+published: true
 ---
 
 ### [&laquo; Previous step: Log Remotely](/setup/remote/)
@@ -26,7 +27,7 @@ footer: true
 ## 1. Application Specific Dashboards
 
 
-#### [My Home Energy](/applicatins/home-energy)
+#### [My Home Energy](/applications/home-energy)
 
 ![My home energy](/images/applications/home-energy/myelectric_webapp.png)
 
