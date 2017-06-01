@@ -268,7 +268,7 @@ Hold down the push button for the duration of the upload, note there are 4 stage
 
 ###### **Bootloader re-load **
 
-You can re-flash the bootloader ([download.zip](https://openenergymonitor.org/emon/sites/default/files/bootloader.zip)) like this:
+You can re-flash the bootloader ([download.zip](https://github.com/openenergymonitor/ESP8266_Relay_Board/blob/master/bootloader.zip)) like this:
 
 `esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_freq 80m --flash_mode qio --flash_size 16m-c1 0x00000 "boot_v1.5.bin" `
 
