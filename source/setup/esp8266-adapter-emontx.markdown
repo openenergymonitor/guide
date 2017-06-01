@@ -28,7 +28,7 @@ An emonBase or emonPi is recommended for more complex applications where local s
 
   - **Note:** [emonTx V3 firmware V2.5+](https://github.com/openenergymonitor/emontx3/tree/master/firmware) is required to support EmonESP.
 
-- **5V USB DC Power supply for the emonTx:** The AC-AC Voltage adapter that can power the emonTx in normal operation does not deliver enough power to run the ESP8266 Huzzah WiFi module and so an additional USB Power supply is required.
+- **5V USB DC Power supply for the emonTx:** The AC-AC Voltage adapter that can power the emonTx in normal operation does not deliver enough power to run the ESP8266 Huzzah WiFi module and so an additional 5V USB Power supply is required Battery opperation is not possible when using ESP8266.
 
 - **ESP8266 Huzzah WiFi module with a 6 way stackable header running [EmonESP](https://github.com/openenergymonitor/emonesp):** we offer a pre-programmed ESP8266 Huzzah WiFi module in our [shop here](https://shop.openenergymonitor.com/esp8266-wifi-adapter-for-emontx/), ready to go out of the box with the header already installed and running our open source EmonESP firmware (Alternatively for a DIY approach see the original forum post [here](https://community.openenergymonitor.org/t/using-the-emontx-v3-with-the-esp8266-huzzah-wifi-module/795).
 
