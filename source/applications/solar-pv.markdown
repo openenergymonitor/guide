@@ -2,7 +2,7 @@
 layout: page
 title: Solar PV
 description: Solar PV Monitor
-date: "2015-10-08 19:05"
+date: '2015-10-08 19:05'
 sidebar: true
 comments: false
 sharing: true
@@ -44,6 +44,8 @@ The Emoncms setup instructions below are applicable to both the emonPi and the e
 ### {% linkable_title Sensor Installation %}
 
 ![Solar PV CT Install](/images/applications/solar-pv/solar-pv-install.png)
+
+It is important that an  AC-AC adapter is used for both type 1 and type 2 solar PV systems. Without an AC-AC adapter the power reading can be significantly wrong - especially at night - due to the low power factor from some solar PV inverters. Further, at times an inverter might be consuming a small amount of grid power; without using an AC-AC adapter there would be no way to distinguish this consumption from generation and establish the true power flow direction.
 
 <p class='note warning'>
 <a href="https://openenergymonitor.org/emon/Current_Transformer_Installation">Please read the CT installation guide before installing.</a>
