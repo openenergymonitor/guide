@@ -40,7 +40,9 @@ published: true
   - [emonTx V3 Hardware Docs](https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3.4)
   - [emonTx Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
   
-  - ### {% linkable_title emonESP %}
+  <br/>
+  
+- ### {% linkable_title emonESP %}
   - [User Guide](https://guide.openenergymonitor.org/setup/esp8266-adapter-emontx/)
   - [Firmware & Hardware](https://github.com/openenergymonitor/emonesp)
   - [emonESP Forum Category](https://community.openenergymonitor.org/c/hardware/emonesp)
