@@ -41,7 +41,7 @@ emonPi can be connected to the internet via Ethernet or WiFi, or operate in stan
 
 ### {% linkable_title 1a. Connect to WiFi %}
 
-*Note: All emonPi's purchased during or after July 2017 have the abiity to broadcast a WiFi access point and display a setup wizard to connect to local WiFi. For older units skip to [instructions 1b](#1b-connect-to-ethernet). RaspberryPi 3 is required for WiFi AP*
+*Note: All emonPi's purchased during or after July 2017 have the ability to broadcast a WiFi access point and display a setup wizard to connect to local WiFi. For older units skip to [instructions 1b](#1b-connect-to-ethernet). RaspberryPi 3 is required for WiFi AP*
 
 ![emonPi WiFi](/images/setup/emonpi_wifi.png)
 
@@ -78,7 +78,7 @@ emonPi can be connected to the internet via Ethernet or WiFi, or operate in stan
  - ![Ethernet Connected](/images/setup/Etherent_Connected.jpg)
 
 
-### {% linkable_title 2. Connnect to emonPi via local network %}
+### {% linkable_title 2. Connect to emonPi via local network %}
 
 - Browsing the hostname will work on some networks: [http://emonpi](http://emonpi) or [http://emonpi.local](http://emonpi.local)
 - If hostname does not work on your network, enter the IP address shown on the emonPi LCD into your browsers address bar
