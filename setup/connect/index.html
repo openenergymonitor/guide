@@ -511,7 +511,7 @@ margin-top: 0 !important;
 
 <ul>
   <li>Connect 5V USB power <a href="http://shop.openenergymonitor.com/power-supplies/">(1.2A USB power adapter recommended)</a></li>
-  <li>After a couple of minutes the emonPi will broadcast a Wifi access point (AP) called <code class="highlighter-rouge">emonPi</code></li>
+  <li>After a couple of minutes the emonPi will broadcast a Wifi access point (AP) called <code class="highlighter-rouge">emonPi</code> with password <code class="highlighter-rouge">emonpi2016</code></li>
   <li>Connect to <code class="highlighter-rouge">emonPi</code> WiFi network then either browse to hostname: <a href="http://emonpi">http://emonpi</a> or <a href="http://emonpi.local">http://emonpi.local</a> or IP address <a href="http://102.168.4.1">http://102.168.4.1</a></li>
   <li>emonPi network setup wizard should now be displayed:</li>
 </ul>
@@ -529,7 +529,7 @@ margin-top: 0 !important;
 <p><img src="/images/setup/emonpi-network-wizard3.png" alt="emonpi-network-wizard3" /></p>
 
 <ul>
-  <li>After selecting local WiFi network and entering password the emonPi will reboot and try and connect to local WiFi network.</li>
+  <li>After selecting local WiFi network and entering password the emonPi will turn off its own WiFi AP then reboot and try and connect to local WiFi network.</li>
 </ul>
 
 <p><em>Note: if connection fails e.g. incorrect password, follow <a href="#1b-connect-to-ethernet">instructions 1b</a> to connect temporary via Ethernet and use the Emoncms WiFi setup as detailed in <a href="#4-connect-to-wifi-optional">step 4</a></em></p>
