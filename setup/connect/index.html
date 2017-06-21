@@ -493,13 +493,50 @@ margin-top: 0 !important;
 
 <p><em>The emonPi runs the Emoncms data logging web-app locally from emonPi’s internal web sever. Using Emoncms data can be logged locally to the emonPi’s SD card and (optionally) posted remotely to the <a href="https://emoncms.org">Emoncms.org</a> cloud server.</em></p>
 
+<p><strong>Emoncms local:</strong> Emoncms instance running locally on the emonPi
+<strong>Emoncms remote:</strong> Emoncms.org cloud server</p>
+
 <p class="note">
-<b>Emoncms local:</b> Emoncms instance running locally on the emonPi
+<b>emonPi / emonBase purchased before July 2017 do not have the ability to broadcast a setup WiFi access point. For older units please follow '1b' instructions to connect temporary via Ethernet then connect to local WiFi if required.</b>
 <br />
-<b>Emoncms remote:</b> Emoncms.org cloud server.
 </p>
 
-<h3 id="a-classtitle-link-name1-connect-ethernet-and-usb-power-href1-connect-ethernet-and-usb-powera-1-connect-ethernet-and-usb-power"><a class="title-link" name="1-connect-ethernet-and-usb-power" href="#1-connect-ethernet-and-usb-power"></a> 1. Connect Ethernet and USB power</h3>
+<p>emonPi can be connected to the internet via Ethernet or WiFi, or operate in stand-alone WiFi access point mode.</p>
+
+<h3 id="a-classtitle-link-name1a-connect-to-wifi-href1a-connect-to-wifia-1a-connect-to-wifi"><a class="title-link" name="1a-connect-to-wifi" href="#1a-connect-to-wifi"></a> 1a. Connect to WiFi</h3>
+
+<p><em>Note: All emonPi’s purchased during or after July 2017 have the abiity to broadcast a WiFi access point and display a setup wizard to connect to local WiFi. For older units skip to <a href="#1b-connect-to-ethernet">instructions 1b</a>. RaspberryPi 3 is required for WiFi AP</em></p>
+
+<p><img src="/images/setup/emonpi_wifi.png" alt="emonPi WiFi" /></p>
+
+<ul>
+  <li>Connect 5V USB power <a href="http://shop.openenergymonitor.com/power-supplies/">(1.2A USB power adapter recommended)</a></li>
+  <li>After a couple of minutes the emonPi will broadcast a Wifi access point (AP) called <code class="highlighter-rouge">emonPi</code></li>
+  <li>Connect to <code class="highlighter-rouge">emonPi</code> WiFi network then either browse to hostname: <a href="http://emonpi">http://emonpi</a> or <a href="http://emonpi.local">http://emonpi.local</a> or IP address <a href="http://102.168.4.1">http://102.168.4.1</a></li>
+  <li>emonPi network setup wizard should now be displayed:</li>
+</ul>
+
+<p><img src="/images/setup/emonpi-network-wizard1.png" alt="emonpi-network-wizard1" /></p>
+
+<ul>
+  <li>Follow setup wizard to connect to local WiFi network:</li>
+</ul>
+
+<p><em>Note: If required emonPi can operate in Wifi AP mode without any network connection. If operating in AP mode use of a <a href="https://wiki.openenergymonitor.org/index.php/EmonPi#Adding_a_Real_Time_Clock_.28RTC.29">RTC (real-time-clock)</a> is highly recommended to keep system time.</em></p>
+
+<p><img src="/images/setup/emonpi-network-wizard2.png" alt="emonpi-network-wizard2" /></p>
+
+<p><img src="/images/setup/emonpi-network-wizard3.png" alt="emonpi-network-wizard3" /></p>
+
+<ul>
+  <li>After selecting local WiFi network and entering password the emonPi will reboot and try and connect to local WiFi network.</li>
+</ul>
+
+<p><em>Note: if connection fails e.g. incorrect password, follow <a href="#1b-connect-to-ethernet">instructions 1b</a> to connect temporary via Ethernet and use the Emoncms WiFi setup as detailed in <a href="#4-connect-to-wifi-optional">step 4</a></em></p>
+
+<p><img src="/images/setup/emonpi-network-wizard4.png" alt="emonpi-network-wizard4" /></p>
+
+<h3 id="a-classtitle-link-name1b-connect-to-ethernet-href1b-connect-to-etherneta-1b-connect-to-ethernet"><a class="title-link" name="1b-connect-to-ethernet" href="#1b-connect-to-ethernet"></a> 1b. Connect to Ethernet</h3>
 
 <p><img src="/images/setup/emonpi_ethernet_first_boot.png" alt="emonPi First Boot Ethernet" /></p>
 
@@ -514,10 +551,11 @@ margin-top: 0 !important;
   <li><img src="/images/setup/Etherent_Connected.jpg" alt="Ethernet Connected" /></li>
 </ul>
 
-<h3 id="a-classtitle-link-name2-enter-the-emonpis-ip-address-into-your-web-browsers-address-bar-href2-enter-the-emonpis-ip-address-into-your-web-browsers-address-bara-2-enter-the-emonpis-ip-address-into-your-web-browsers-address-bar"><a class="title-link" name="2-enter-the-emonpis-ip-address-into-your-web-browsers-address-bar" href="#2-enter-the-emonpis-ip-address-into-your-web-browsers-address-bar"></a> 2. Enter the emonPis IP address into your web browser’s address bar</h3>
+<h3 id="a-classtitle-link-name2-connnect-to-emonpi-via-local-network-href2-connnect-to-emonpi-via-local-networka-2-connnect-to-emonpi-via-local-network"><a class="title-link" name="2-connnect-to-emonpi-via-local-network" href="#2-connnect-to-emonpi-via-local-network"></a> 2. Connnect to emonPi via local network</h3>
 
 <ul>
-  <li>Browsing the hostname will work on some networks: <a href="http://emonpi">http://emonpi</a></li>
+  <li>Browsing the hostname will work on some networks: <a href="http://emonpi">http://emonpi</a> or <a href="http://emonpi.local">http://emonpi.local</a></li>
+  <li>If hostname does not work on your network, enter the IP address shown on the emonPi LCD into your browsers address bar</li>
   <li><em>If using an emonBase and hostname does not work, look up its IP address from your router or use the Fing Network Discovery tool on <a href="https://play.google.com/store/apps/details?id=com.overlook.android.fing&amp;hl=en_GB">Android</a> and <a href="https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8">iOS</a></em>.</li>
 </ul>
 
@@ -531,9 +569,7 @@ margin-top: 0 !important;
 
 <h3 id="a-classtitle-link-name4-connect-to-wifi-optional-href4-connect-to-wifi-optionala-4-connect-to-wifi-optional"><a class="title-link" name="4-connect-to-wifi-optional" href="#4-connect-to-wifi-optional"></a> 4. Connect to WiFi (optional)</h3>
 
-<p>WiFi is optional and requires either a RaspberryPi 3 (integrated WiFi) or a USB WiFi dongle (<a href="http://shop.openenergymonitor.com/edimax-usb-wifi-adapter-ew-7811un/">Edimax EW7811UN</a>).</p>
-
-<p><em>Note: All emonPis shipped June 2016 onwards will have a Raspberry Pi 3 as standard, emonPis with a Pi3 can be identified by a plastic end-plate(s). <a href="https://blog.openenergymonitor.org/2016/05/emonpi-raspberrypi3/">See blog post</a>.</em></p>
+<p>**Note: if emonPi has been already connect to local Wifi using network setup wizard (see above) then skip this section.</p>
 
 <p><img src="/images/setup/wifi9_0.png" alt="Connect to Wifi" /></p>
 
