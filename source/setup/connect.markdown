@@ -47,7 +47,7 @@ emonPi can be connected to the internet via Ethernet or WiFi, or operate in stan
 
 - Connect 5V USB power [(1.2A USB power adapter recommended)](http://shop.openenergymonitor.com/power-supplies/)
 - After a couple of minutes the emonPi will broadcast a Wifi access point (AP) called `emonPi` with password `emonpi2016`
-- Connect to `emonPi` WiFi network then either browse to hostname: [http://emonpi](http://emonpi) or [http://emonpi.local](http://emonpi.local) or IP address [http://192.168.4.1](http://192.168.4.1)
+- Connect to `emonPi` WiFi network then either browse to hostname: [http://emonpi](http://emonpi) or [http://emonpi.local](http://emonpi.local) or IP address [http://192.168.42.1](http://192.168.42.1)
 - emonPi network setup wizard should now be displayed:
 
 ![emonpi-network-wizard1](/images/setup/emonpi-network-wizard1.png)
