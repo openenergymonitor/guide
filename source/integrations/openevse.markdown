@@ -95,6 +95,16 @@ The OpenEVSE unit should be set to **Level 2** charging mode. The charging mode 
 
 **See User Guide video at the top of this page for a overview of how to opperate the unit**
 
-## WiFi Setup 
+## WiFi Setup (optional)
 
-Follow the [OpenEVSE WiFi setup](https://openevse.dozuki.com/Guide/OpenEVSE+WiFi+%28Beta%29/14) guide to connect the unit to local WiFi network to post data to Emoncms and enable remote RAPi control. 
+If using the optional WiFi module:
+
+- Follow the [OpenEVSE WiFi setup](https://openevse.dozuki.com/Guide/OpenEVSE+WiFi+%28Beta%29/14) guide to connect up the ESP8266 WiFi unit
+
+- Once powered up connect to WiFi network with SSID `OpenEVSE_xxxx` with password `openevse` using a computer or mobile device. 
+
+- You should get directed to a captive portal where you choose to join a local network. If captive portal does not work, browse to [http:192.168.4.1](http:192.168.4.1).
+
+- Setup Emoncms / MQTT settings 
+
+See full guide and source code in the [OpenEVSE ESP8266 WiFi GitHub Repo](github.com/openevse/ESP8266_WiFi_v2.x/)
