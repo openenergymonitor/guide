@@ -92,3 +92,9 @@ The OpenEVSE unit should be set to **Level 2** charging mode. The charging mode 
 `Setup > Charging Mode > L2`
 
 *Level 2 charging refers to charging from 220v-240v, as opposed to level 1 charging from 110v.*
+
+**See User Guide video at the top of this page for a overview of how to opperate the unit**
+
+## WiFi Setup 
+
+Follow the [OpenEVSE WiFi setup](https://openevse.dozuki.com/Guide/OpenEVSE+WiFi+%28Beta%29/14) guide to connect the unit to local WiFi network to post data to Emoncms and enable remote RAPi control. 
