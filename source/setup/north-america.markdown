@@ -25,7 +25,7 @@ If the standard CT sensor does not fit your conductors there are two options:
 
 1. Use an [Optical Pulse Sensor](https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/) instead of CT sensor to interface directly with a utility meter. This will give an accurate reading of energy consumed (KWh) but will not provide a real-time power reading (W).
 
-2. Use an alternative larger CT sensor: It's possible to obtain larger CT sensors. However, using an alternative CT will usually require re-calibration and possibly, hardware modification (burden resistor may need replacement). See [Building Blocks > EmonTx in North America](https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) for more info. [Building Blocks CT sections](https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America). Please search / post on the [community forums](https://community.openenergymonitor.org) for further assistance.
+2. Use an alternative larger CT sensor: It's possible to obtain larger CT sensors. However, using an alternative CT will usually require re-calibration and possibly, hardware modification (burden resistor may need replacement). See [Learn > EmonTx in North America](https://learn.openenergymonitor.org/electricity-monitoring/ac-power-theory/use-in-north-america) for more info. ['Learn' CT sections](https://learn.openenergymonitor.org/electricity-monitoring/ac-power-theory/use-in-north-america). Please search / post on the [community forums](https://community.openenergymonitor.org) for further assistance.
 
 <p class='note warning'>
 Installing clip-on CT sensors on USA electrical systems should only by undertaken by a professional electrician. In a typical residential installation, even if the main breaker is swiched off, the load center Service Entrance Wires and busbars are always live.
@@ -61,4 +61,4 @@ The emonPi by default reports `power1_plus_power2`, this input will need to be l
 
 If using emonTx then the power values from multiple CT inputs can be summed in Emoncms using `+ feed` Input Processor.
 
-See [Building Blocks > EmonTx in North America](https://openenergymonitor.org/emon/buildingblocks/EmonTx-in-North-America) for further technical info about the USA system.
+See [Learn > EmonTx in North America](https://learn.openenergymonitor.org/electricity-monitoring/ac-power-theory/use-in-north-america) for further technical info about the USA system.
