@@ -5,17 +5,17 @@
   {% if page.is_homepage %}
     {% include asides/navigation_side.html %}
   {% else %}
-  <div class="searchtool">
+  <!--<div class="searchtool">
 
   {% if site.simple_search %}
   <form action="{{ site.simple_search }}" method="get">
     <fieldset role="search">
       <input type="hidden" name="q" value="site:guide.openenergymonitor.org" />
       <input class="search" type="text" name="q" results="0" placeholder="Search..." />
-      <button type="submit">Search </>
+      <button type="submit">Search</button>
     </fieldset>
   </form>
-  </div>
+  </div>-->
   {% endif %}
     {% include asides/navigation_side.html %}
   {% endif %}
