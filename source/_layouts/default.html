@@ -525,13 +525,13 @@ $(".blackOut").click(function() {
 var windowState = true;
 
 $(window).resize(function(){
-  if ($(window).width() < 1079) {
+  if ($(window).width() <= 1079) {
     $(".section").hide();
     $(".section").css("width","0");
     $(".navigation").css("width","0");
     windowState = true;
   }
-  else if ($(window).width() > 1079 && windowState == true) {
+  else if ($(window).width() >= 1080 && windowState == true) {
     if (!$("html").hasClass("mobile-device")) {
       $("html, body").removeClass("menuFreeze");
       $(".blackOut").hide();
@@ -542,20 +542,15 @@ $(window).resize(function(){
   }
 });
 
-</script>
-
-<script>
-
 $(document).ready(function(){
   $("table").wrap("<div style='max-width:100%;overflow-x:auto'></div>");
 });
 
 $(document).ready(function(){
-$(".show_hide").click(function(){
-$("#slidingDiv").slideToggle();
+  $(".show_hide").click(function(){
+  $("#slidingDiv").slideToggle();
+  });
 });
-});
-
 
 $(document).ready(function(){
   var pathname = window.location.pathname;
@@ -564,27 +559,30 @@ $(document).ready(function(){
     $("#takeitawaynow").removeClass("actoemLink").prop('title', 'a user guide for the OpenEnergyMonitor system');
     $("#changeittomenow").addClass("actoemLink").prop('title', 'you are here: a definitive list of resources for OpenEnergyMonitor hardware');
     $(".thisTitle a").attr("href", "/technical/resources/");
-}
+  }
 });
-
-	$(".searchIcon").click(function() {
-	   $(".searchBox").css("display","flex");
-	   $(".searchText").animate({width: "200px"});
-     $(".searchText").focus();
-	   $("html, body").addClass("menuFreeze");
-	   
-	});
-	$(".searchBox").click(function() {
-	   $(".searchBox").css("display","none");
-	   $(".searchText").blur();
-	   $(".searchText").css("width","0");
-	   closeButton();
-	});
-	$(".searchBox form").click( function(event) {
-     event.stopPropagation();
-  });
-
+$(".searchIcon").click(function() {
+   $(".searchBox").css("display","flex");
+   $(".searchText").animate({width: "200px"});
+   $(".searchText").focus();
+   $("html, body").addClass("menuFreeze");
+   
+});
+$(".searchBox").click(function() {
+   $(".searchBox").css("display","none");
+   $(".searchText").blur();
+   $(".searchText").css("width","0");
+  $("html, body").removeClass("menuFreeze");
+  $(".blackOut").hide();
+  $(".navigation").animate({ width:'0' },"0.5s");
+  if ($(window).width() <= 1079) {
+    $(".section").hide();
+    $(".section").css("width","0");
+  }
+});
+$(".searchBox form").click( function(event) {
+   event.stopPropagation();
+});
 </script>
-
 </body>
 </html>
