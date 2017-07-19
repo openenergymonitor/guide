@@ -67,13 +67,6 @@ html, body {
   font-family: "ubuntu", sans-serif;
 }
 
-@media screen and (max-width: 1024px) {
-  .searchtool {
-    padding-left: 20px !important;
-  }
-
-}
-
 .grid {
   margin-bottom: 0;
 }
@@ -82,131 +75,145 @@ a:visited, .a:hover, a:focus, a {
   color: #44b3e2;
 }
 
-.copyright {
-  padding: 0;
-  text-align: center;
-}
-
-.credit {
-  text-align: center !important;
-}
-
-.searchtool {
-  width: 100%;
-  max-width: 280px;
-  margin: 0 auto;
-}
-
-
-input[type=text] {
-  border: 3px solid #44b3e2;
-  border-radius: 6px;
-  width: 100%;
-  color: #000000;
-  padding: 14px 20px;
-  margin: 0;
-  outline: none;
-}
-
-fieldset {
-  border: 0;
-  margin: 0;
-}
-
-button[type=submit] {
-    width: 100%;
-    background-color: #44b3e2;
-    color: white;
-    padding: 14px 20px;
-    margin: 4px 0 0 0;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    letter-spacing: normal !important;
-}
-
 /*--------------------------------------------
 custom header...
 --------------------------------------------*/
 
 .communityWrapper {
-box-sizing: border-box;
-margin: 0 auto;
-width: 100%;
-height: 42px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 100%;
+  height: 42px;
 }
+
 @media (min-width: 1080px) {
-.communityWrapper {
-width: 1080px;
-}
+  .communityWrapper {
+  width: 1080px;
+  }
 }
 
 @media screen and (max-width: 400px) {
-.oemWrap {
-display: none;
-}
+  .oemWrap {
+    display: none;
+  }
 }
 
 .fa-navicon {
-display: none;
-cursor: pointer;
-font-size: 30px;
-line-height: 42px;
-position: absolute;
-left: 0;
-color: #ffffff;
-padding-left: 12px;
-z-index: 9997;
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 42px;
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+  padding-left: 12px;
 }
 
 @media screen and (max-width: 1079px) {
-.fa-navicon {
-display: inline-block;
-}
+  .fa-navicon {
+    display: inline-block;
+  }
 }
 
 .titleHolder {
-position: relative;
-top: 0;
-width: 100%;
-height: 42px;
-background-color: #44b3e2;
-overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 42px;
+  background-color: #44b3e2;
+  box-shadow: 0 -2px 4px 2px #000;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .thisTitle {
-position: relative;
-display: inline-block;
-color: #ffffff;
-left: 0;
-line-height: 42px;
-padding-right: 12px;
-padding-left: 0;
-font-size: 20px;
-text-align: right;
-
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  left: 0;
+  line-height: 42px;
+  padding-right: 12px;
+  padding-left: 0;
+  font-size: 20px;
+  text-align: right;
 }
 
 .thisTitle a {
-color: #ffffff;
+  color: #ffffff;
 }
 
 @media screen and (min-width: 1080px) {
-.thisTitle {
-font-size: 16px;
-text-align: left;
-padding-right: 0;
-padding-left: 7px;
-}
+  .thisTitle {
+    font-size: 16px;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 7px;
+  }
 }
 
 @media screen and (max-width: 1079px) {
-.thisTitle {
-width: 100%;
+  .thisTitle {
+    width: 80%;
+    float: right;
+  }
 }
-.thisTitle a {
-padding-right: 12px;
+
+@media screen and (max-width: 1080px) {
+  .navigationTitle {
+    display: none;
+  }
 }
+
+
+/*--------------------------------------------
+    search...
+--------------------------------------------*/
+  
+.searchBox {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+  color: #fff;
+  display: none;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+.searchBox form {
+  margin: auto;
+}
+
+.searchBox input[type=submit] {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #44b3e2;
+  color: #fff;
+  border: none;
+  -webkit-transition: background-color 500ms linear;
+  -ms-transition: background-color 500ms linear;
+  transition: background-color 500ms linear;
+}
+
+.searchBox input[type=submit]:hover {
+  background-color: #77c8ea;
+}
+
+.searchBox input[type=text] {
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+}
+
+.searchText {
+  width: 0;
+}
+
+.searchIcon {
+  cursor: pointer;
 }
 
 /*--------------------------------------------
@@ -214,76 +221,78 @@ site links on larger screens...
 --------------------------------------------*/
 
 .navigation {
-position: absolute;
-display: inline-block;
-top: 0;
-right: 0;
-margin-right: 6px;
-height: 42px;
-min-width: 700px;
-overflow: visible;
-padding-right: 7px;
-z-index: 20;
-
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  right: 0;
+  margin-right: 6px;
+  height: 42px;
+  min-width: 700px;
+  overflow: visible;
+  padding-right: 7px;
 }
 
 @media screen and (min-width: 1080px) {
-.navigation {
-position: relative;
-float: right;
-display: inline-block;
-margin: 0;
-}
+  .navigation {
+    position: relative;
+    float: right;
+    display: inline-block;
+    margin: 0;
+  }
 }
 
 .navigation ul {
-list-style-type: none;
-float: right;
-top: 0;
-margin: 0;
-padding: 0;
-height: 100%;
-display: block;
+  list-style-type: none;
+  float: right;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: block;
+  min-width: 719px;
 }
 
 .navigation ul li {
-float: left;
-background-color: #44b3e2;
+  float: left;
+  background-color: #44b3e2;
 }
 
 .navigation ul li a {
-display: block;
-line-height: 42px;
-font-family:"ubuntu";
-font-size: 16px;
-text-align: center;
-padding-left: 10px;
-padding-right: 10px;
-color: #ffffff;
+  display: block;
+  line-height: 42px;
+  font-family:"ubuntu";
+  font-size: 16px;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #ffffff;
 }
 
 @media screen and (min-width: 1080px) {
-    .navigation ul li:nth-child(1) {
-        width: 82px;
-    }
-    .navigation ul li:nth-child(2) {
-        width: 81px;
-    }
-    .navigation ul li:nth-child(3) {
-        width: 85px;
-    }
-    .navigation ul li:nth-child(4) {
-        width: 113px;
-    }
-    .navigation ul li:nth-child(5) {
-        width: 123px;
-    }
-    .navigation ul li:nth-child(6) {
-        width: 73px;
-    }
-    .navigation ul li:nth-child(7) {
-        width: 75px;
-    }
+  .navigation ul li:nth-child(1) {
+    width: 82px;
+  }
+  .navigation ul li:nth-child(2) {
+    width: 81px;
+  }
+  .navigation ul li:nth-child(3) {
+    width: 85px;
+  }
+  .navigation ul li:nth-child(4) {
+    width: 113px;
+  }
+  .navigation ul li:nth-child(5) {
+    width: 123px;
+  }
+  .navigation ul li:nth-child(6) {
+    width: 73px;
+  }
+  .navigation ul li:nth-child(7) {
+    width: 75px;
+  }
+  .navigation ul li:nth-child(8) {
+    width: 87px;
+  }
 }
 
 /*--------------------------------------------
@@ -291,53 +300,59 @@ site links on smaller screens...
 --------------------------------------------*/
 
 .menuFreeze {
-height: 100vh;
-min-height: 100vh;
-overflow: hidden;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1079px) {
 
 .navigation {
-position: fixed;
-display: none;
-top: 0;
-left: 0;
-height: 100vh;
-margin: 0;
-width: 0;
-font-size: 20px;
-background-color: #44b3e2;
-color: #ffffff;
-box-sizing: border-box;
-overflow: auto;
-min-width: 0;
-padding-right: 0;
-z-index:9999;
-
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  margin: 0;
+  width: 0;
+  font-size: 20px;
+  background-color: #44b3e2;
+  color: #ffffff;
+  box-sizing: border-box;
+  overflow: auto;
+  min-width: 0;
+  padding-right: 0;
+  z-index: 999;
 }
 
 .navigation ul {
-list-style-type: none;
-margin: 0;
-padding-top: 0;
-display: block;
+  list-style-type: none;
+  margin: 0;
+  padding-top: 0;
+  display: block;
+  min-width: 100px;
 }
 
 .navigation ul li a {
-box-sizing: border-box;
-font-family: "ubuntu";
-font-size: 20px;
-display: block;
-color: #ffffff;
-padding: 20px 20px 20px 40px;
-min-width: 100px;
-text-align: left;
+  box-sizing: border-box;
+  font-family: "ubuntu";
+  font-size: 20px;
+  display: block;
+  color: #ffffff;
+  padding: 0 20px 0 40px;
+  height: 12.5vh;
+  line-height: 12.5vh;
+  min-width: 100px;
+  text-align: left;
 }
 
 .navigation ul li .fa {
-min-width: 25px;
+  min-width: 25px;
+  }
 }
+
+.fa {
+  text-shadow: 2px 2px 2px rgba(150,150,150,0.5);
 }
 
 /*--------------------------------------------
@@ -345,17 +360,16 @@ grayed out overlay when menu is active...
 --------------------------------------------*/
 
 .blackOut {
-position: fixed;
-display: none;
-top: 0;
-right: 0;
-height: 100%;
-width: 100%;
-background-color: rgba(0,0,0,0.5);
-overflow: hidden;
-cursor: pointer;
-z-index:9998;
-
+  position: fixed;
+  display: none;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 99;
 }
 
 /*--------------------------------------------
@@ -363,94 +377,149 @@ highlight active link...
 --------------------------------------------*/
 
 .actoemLink {
-background-color: #368fb4 !important;
+  background-color: #368fb4 !important;
 }
 
 .actoemLink a {
-color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 .section {
-display: block;
+  display: block;
 }
 
 @media screen and (max-width: 1079px) {
+  .section {
+    box-sizing: border-box;
+    position: fixed;
+    display: none;
+    left: 100px;
+    top: 0;
+    height: 100vh;
+    width: 0;
+    overflow: auto;
+    background-color: #ffffff;
+    z-index: 999;
+  }
+  
+  .section ul {
+    height: 100%;
+    padding-bottom: 20px;
+    padding-left: 0;
+    list-style-type: none;
+    margin-left: 0 !important;
+    min-width: 170px;
+  }
+  
+  .section ul li {
+    padding: 20px 10px 20px 10px;
+    min-width: 170px;
+  }
+  
+  .section ul li b {
+    padding-left: 10px;
+  }
+  
+  .section ul li a {
+    min-width: 170px;
+  }
 
-
-.section {
-box-sizing: border-box;
-position: fixed;
-display: none;
-left: 100px;
-top: 0;
-height: 100vh;
-width: 0;
-overflow: auto;
-background-color: #ffffff;
-z-index:9999;
-}
-.section ul {
-height: 100%;
-padding-bottom: 20px;
-padding-left: 10px;
+  .section h1 {
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+    padding-left: 20px;
+  }
+  
+  .navname {
+    display: none;
+  }
 }
 
-.section ul li {
-padding: 20px 0 20px 0;
-}
-.section ul li b {
-padding-left: 10px;
-
-}
-.section h1 {
-margin-bottom: 20px !important;
-margin-top: 20px !important;
-padding-left: 20px;
-
-}
-.navname {
-display: none;
-}
-}
 .hero {
-background-color: #77c8ea;
-margin-top: 0 !important;
+  background-color: #77c8ea;
+  margin-top: 0 !important;
 }
+
 </style>
 
+<div style="height:42px"></div>
 <div class="titleHolder">
-<div class="communityWrapper">
-<i class="fa fa-navicon"></i>
-<div class="thisTitle">
-<a href="/">
-<strong>Guide</strong>
-<span class="oemWrap">
-| Open<strong>EnergyMonitor</strong>
-</span>
-</a>
+  <div class="communityWrapper">
+    <i class="fa fa-navicon"></i>
+    <div class="thisTitle">
+      <a href="/">
+        <strong>Guide</strong>
+        <span class="oemWrap">
+        | Open<strong>EnergyMonitor</strong>
+        </span>
+      </a>
+    </div>
+    <div class="blackOut"></div>
+    <div id="siteLinks" class="navigation">
+      <ul>
+        <li title="the homepage of OpenEnergyMonitor">
+          <a href="https://openenergymonitor.org">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <span class="navname">Home</span>
+          </a>
+        </li>
+        <li title="you are here: a user guide for the OpenEnergyMonitor system" id="takeitawaynow" class="actoemLink">
+          <a href="https://guide.openenergymonitor.org">
+            <i class="fa fa-book" aria-hidden="true"></i>
+            <span class="navname">Guide</span>
+          </a>
+        </li>
+        <li title="general information about energy monitoring, diversion and sustainability">
+          <a href="https://learn.openenergymonitor.org">
+            <i class="fa fa-mortar-board" aria-hidden="true"></i>
+            <span class="navname">Learn</span>
+          </a>
+        </li>
+        <li title="a definitive list of resources for OpenEnergyMonitor hardware" id="changeittomenow">
+          <a href="https://guide.openenergymonitor.org/technical/resources/">
+            <i class="fa fa-list-alt" aria-hidden="true"></i>
+            <span class="navname">Resources</span>
+          </a>
+        </li>
+        <li title="the openenergymonitor forum">
+          <a href="https://community.openenergymonitor.org">
+            <i class="fa fa-comments" aria-hidden="true"></i>
+            <span class="navname">Community</span>
+          </a>
+        </li>
+        <li title="keep up with new developments at OpenEnergyMonitor">
+          <a href="https://blog.openenergymonitor.org">
+            <i class="fa fa-bullhorn" aria-hidden="true"></i>
+            <span class="navname">Blog</span>
+          </a>
+        </li>
+        <li title="the official OpenEnergyMonitor online store">
+          <a href="https://shop.openenergymonitor.com">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <span class="navname">Shop</span>
+          </a>
+        </li>
+        <li title="search for something on OpenEnergyMonitor">
+  				<a class="searchIcon">
+  					<i aria-hidden="true" class="fa fa-search"></i>
+  					<span class="navname">Search</span>
+  				</a>
+  			</li>
+      </ul>
+    </div>
+  </div>
 </div>
-<div id="siteLinks" class="navigation">
-<ul>
-<li title="the homepage of OpenEnergyMonitor"><a href="https://openenergymonitor.org">
-<i class="fa fa-home" aria-hidden="true"></i><span class="navname">&nbsp;Home</span></a></li>
-<li title="you are here: a user guide for the OpenEnergyMonitor system" id="takeitawaynow" class="actoemLink"><a href="https://guide.openenergymonitor.org">
-<i class="fa fa-book" aria-hidden="true"></i><span class="navname">&nbsp;Guide</span></a></li>
-<li title="general information about energy monitoring, diversion and sustainability"><a href="https://learn.openenergymonitor.org">
-<i class="fa fa-mortar-board" aria-hidden="true"></i><span class="navname">&nbsp;Learn</span></a></li>
-<li title="a definitive list of resources for OpenEnergyMonitor hardware" id="changeittomenow"><a href="https://guide.openenergymonitor.org/technical/resources/">
-<i class="fa fa-list-alt" aria-hidden="true"></i><span class="navname">&nbsp;Resources</span></a></li>
-<li title="the openenergymonitor forum"><a href="https://community.openenergymonitor.org">
-<i class="fa fa-comments" aria-hidden="true"></i><span class="navname">&nbsp;Community</span></a></li>
-<li title="keep up with new developments at OpenEnergyMonitor"><a href="https://blog.openenergymonitor.org">
-<i class="fa fa-bullhorn" aria-hidden="true"></i><span class="navname">&nbsp;Blog</span></a></li>
-<li title="the official OpenEnergyMonitor online store"><a href="https://shop.openenergymonitor.com">
-<i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="navname">&nbsp;Shop</span></a></li>
-</ul>
+<div class="searchBox">
+  <form target="_blank" id="searchform" action="https://www.google.com/cse">
+    <div>
+      <input type="hidden" name="cx" value="006198118389747886812:_nmxikw563w" />
+      <input type="hidden" name="ie" value="UTF-8" />
+      <input type="text" class="searchText" value="" name="q" id="q" autocomplete="off" />
+      <input type="submit" id="searchsubmit" name="sa" value="Search" />
+    </div>
+  </form>
 </div>
-</div>
-</div>
-<div class="blackOut"></div>
-<div style="position:relative;width:100%;top:0;height:20px"></div>
+<div style="position:relative;width:100%;top:0;height:20px;z-index:-99;"></div>
 
 
 <div class="grid-wrapper">
@@ -921,37 +990,37 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
   
 
   
-  <div class="searchtool">
+  <!--<div class="searchtool">
 
   
   <form action="https://encrypted.google.com/search" method="get">
     <fieldset role="search">
       <input type="hidden" name="q" value="site:guide.openenergymonitor.org" />
       <input class="search" type="text" name="q" results="0" placeholder="Search..." />
-      <button type="submit">Search </>
+      <button type="submit">Search</button>
     </fieldset>
   </form>
-  </div>
+  </div>-->
   
     <section class="aside-module grid__item one-whole lap-one-half">
   <div class='section'>
-    <h1 class="title delta">Contents</h1>
+    <h2 class="navigationTitle">Contents</h2>
     <ul class='divided sidebar-menu'>
-      <li>
+      <li style="padding-top: 10px;">
           <b>Setup</b>
         <ul>
-          <li><a class='active' href='/setup/'>System Overview </a></li>
-          <li><a  href='/setup/connect/'>1. Connect </a></li>
-          <li><a  href='/setup/install/'>2. Install </a></li>
-          <li><a  href='/setup/local/'>3. Log Locally </a></li>
-          <li><a  href='/setup/remote/'>4. Log Remotely </a></li>
-          <li><a  href='/setup/dashboards/'>5. Dashboards </a></li>
-          <li><a  href='/setup/emontx/'>6. Add Energy Sensing Node(s) </a></li>
-          <li><a  href='/setup/emonth/'>7. Add Temperature Node(s) </a></li>
-          <li><a  href='/setup/optical-pulse-sensor/'>8. Add Optical Pulse Sensor </a></li>
-          <li><a  href='/setup/import/'>Import / Backup </a></li>
-          <li><a  href='/setup/north-america/'>Use in North America </a></li>
-          <li><a  href='/setup/troubleshooting/'>Troubleshooting </a></li>
+          <li><a class='active' href='/setup/'>1. System Overview </a></li>
+          <li><a  href='/setup/connect/'>2. Connect </a></li>
+          <li><a  href='/setup/install/'>3. Install </a></li>
+          <li><a  href='/setup/local/'>4. Log Locally </a></li>
+          <li><a  href='/setup/remote/'>5. Log Remotely </a></li>
+          <li><a  href='/setup/dashboards/'>6. Dashboards </a></li>
+          <li><a  href='/setup/emontx/'>7. Add Energy Sensing Node(s) </a></li>
+          <li><a  href='/setup/emonth/'>8. Add Temperature Node(s) </a></li>
+          <li><a  href='/setup/optical-pulse-sensor/'>9. Add Optical Pulse Sensor </a></li>
+          <li><a  href='/setup/import/'>10. Import / Backup </a></li>
+          <li><a  href='/setup/north-america/'>11. Use in North America </a></li>
+          <li><a  href='/setup/troubleshooting/'>12. Troubleshooting </a></li>
         </ul>
         <li>
           <b>Emoncms</b>
@@ -1019,7 +1088,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 </div>
 
 <footer>
-<div class="grid-wrapper">
+  <div class="grid-wrapper">
   <div class="grid">
     <div class="grid__item">
       <div class="copyright">
@@ -1038,10 +1107,6 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
   </div>
 </div>
 </footer>
-
-<!--[if lt IE 7]>
-<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-<![endif]-->
 
 <script>
   var _gaq=[['_setAccount','UA-10321170-5'],['_trackPageview']];
@@ -1072,75 +1137,109 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
 </script>
 <script src="/javascripts/github.js"></script>
 
-
 <script>
 
-var closeStatus = false;
+// navigation controls
 
 function openButton() {
-$("html, body").addClass("menuFreeze");
-$(".blackOut").show();
-$(".navigation").show();
-$(".navigation").animate({ width:'100' },"0.5s");
-$(".section").delay("slow").show().animate({ width:'180' },"0.5s");
+  $("html, body").addClass("menuFreeze");
+  $(".blackOut").show();
+  $(".navigation").show();
+  $(".navigation").animate({ width:'100' },"0.5s");
+  $(".section").delay("slow").show().animate({ width:'190' },"0.5s");
 }
 
 $(".fa-navicon").click(function() {
-openButton();
-closeStatus = true;
+  openButton();
 });
 
 function closeButton() {
-$("html, body").removeClass("menuFreeze");
-$(".blackOut").hide();
-$(".section").hide();
-$(".section").css("width","0");
-$(".navigation").animate({ width:'0' },"0.5s");
+  $("html, body").removeClass("menuFreeze");
+  $(".blackOut").hide();
+  $(".section").hide();
+  $(".section").css("width","0");
+  $(".navigation").animate({ width:'0' },"0.5s");
 }
 
 $(".blackOut").click(function() {
-closeButton();
-closeStatus = false;
+  closeButton();
 });
 
+// if window size changes make responsive changes to sidebar and navigation
+
+var windowState = true;
 
 $(window).resize(function(){
-if ($(window).width() > 1079 && closeStatus == true) {
-if (!$("html").hasClass("mobile-device")) {
-closeButton();
-closeStatus = false;
-}
-}
+  if ($(window).width() <= 1079) {
+    $(".section").hide();
+    $(".section").css("width","0");
+    $(".navigation").css("width","0");
+    windowState = true;
+  }
+  else if ($(window).width() >= 1080 && windowState == true) {
+    if (!$("html").hasClass("mobile-device")) {
+      $("html, body").removeClass("menuFreeze");
+      $(".blackOut").hide();
+      $(".section").show();
+      $(".section").css("width","auto");
+      windowState = false;
+    }
+  }
 });
 
-</script>
-
-<script>
+// make tables scrollable
 
 $(document).ready(function(){
   $("table").wrap("<div style='max-width:100%;overflow-x:auto'></div>");
 });
 
+// hide and reveal elements on page
+
 $(document).ready(function(){
-$(".show_hide").click(function(){
-$("#slidingDiv").slideToggle();
-});
+  $(".show_hide").click(function(){
+  $("#slidingDiv").slideToggle();
+  });
 });
 
+// detect 'Resources' page and modify title and menu index accordingly
 
 $(document).ready(function(){
   var pathname = window.location.pathname;
   if (pathname == "/technical/resources/") {
-    $(".thisTitle a").html("<strong>Resources&nbsp;</strong><span class='oemWrap'>| Open<strong>EnergyMonitor</strong></span>");
+    $(".thisTitle a").html("<strong>Resources</strong><span class='oemWrap'>| Open<strong>EnergyMonitor</strong></span>");
     $("#takeitawaynow").removeClass("actoemLink").prop('title', 'a user guide for the OpenEnergyMonitor system');
     $("#changeittomenow").addClass("actoemLink").prop('title', 'you are here: a definitive list of resources for OpenEnergyMonitor hardware');
     $(".thisTitle a").attr("href", "/technical/resources/");
-}
+  }
 });
 
+// site search
+
+$(".searchIcon").click(function() {
+   $(".searchBox").css("display","flex");
+   $(".searchText").animate({width: "200px"});
+   $(".searchText").focus();
+   $("html, body").addClass("menuFreeze");
+});
+
+$(".searchBox").click(function() {
+  $(".searchBox").css("display","none");
+  $(".searchText").blur();
+  $(".searchText").css("width","0");
+  $("html, body").removeClass("menuFreeze");
+  $(".blackOut").hide();
+  $(".navigation").animate({ width:'0' },"0.5s");
+  if ($(window).width() <= 1079) {
+    $(".section").hide();
+    $(".section").css("width","0");
+  }
+});
+
+$(".searchBox form").click( function(event) {
+   event.stopPropagation();
+});
 
 </script>
 
 </body>
-
 </html>
