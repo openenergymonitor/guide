@@ -830,14 +830,19 @@ $(".blackOut").click(function() {
 
 // if window size changes make responsive changes to sidebar and navigation
 
-var windowState = true;
-
-$(window).resize(function(){
-  if ($(window).width() <= 1079) {
-    $(".section").hide();
-    $(".section").css("width","0");
-    $(".navigation").css("width","0");
-    windowState = true;
+var xsize = 0;
+$(window).on('load', function(){
+  xsize = $( window ).width();
+});
+$( window ).resize( function(){
+  if( xsize == $( window ).width() ) return;
+  if ( $(window).width() <= 1079 ) {
+      $("html, body").removeClass("menuFreeze");
+      $(".blackOut").hide();
+      $(".section").hide();
+      $(".section").css("width","0");
+      $(".navigation").css("width","0");
+      windowState = true;
   }
   else if ($(window).width() >= 1080 && windowState == true) {
     if (!$("html").hasClass("mobile-device")) {
@@ -848,6 +853,8 @@ $(window).resize(function(){
       windowState = false;
     }
   }
+  xsize = $( window ).width();
+  console.log(xsize);
 });
 
 // make tables scrollable
