@@ -40,15 +40,19 @@ published: true
 ### [2. Emoncms Android App](https://play.google.com/store/apps/details?id=org.emoncms.myapps)
 
 {% img https://github.com/emoncms/AndroidApp/raw/master/app.png 250 %}
-<a href="https://play.google.com/store/apps/details?id=org.emoncms.myapps&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" rel="Get it on Google Play">![Get it on Google Play](http://steverichey.github.io/google-play-badge-svg/img/en_get.svg)</a>
+
+<a href="https://play.google.com/store/apps/details?id=org.emoncms.myapps&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" rel="Get it on Google Play">![Get it on Google Play](https://emoncms.org/Modules/site/en-play-badge.png)</a>
+
+### [3. Emoncms iOS App](https://itunes.apple.com/gb/app/emoncms/id1169483587?mt=8)
+
+![ios](https://github.com/emoncms/emoncms-ios/raw/master/images/screen2.png)
+
+<a href="https://itunes.apple.com/gb/app/emoncms/id1169483587?mt=8" rel="ios">![Get it on Google Play](https://emoncms.org/Modules/site/appstore.png)</a>
 
 
+## 4. Dashboard Editor
 
-## 3. Dashboard Editor
-
-Custom dashboards can be created by drag and dropping widgets and graphs onto a canvas. Here is an example of what's possible created by a community member, see [forum thread](https://openenergymonitor.org/emon/node/11593):
-
-![Example dashboard](https://openenergymonitor.org/emon/sites/default/files/Dashboards%20v7.0.JPG)
+Custom dashboards can be created by drag and dropping widgets and graphs onto a canvas. See [Emoncms Showcase forum](https://community.openenergymonitor.org/c/emoncms/showcase) for an example of what's possible.
 
 ### Dashboard Editor Video Guide
 
