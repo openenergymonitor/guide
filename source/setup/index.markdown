@@ -71,7 +71,7 @@ The emonPi can monitor two single-phase AC circuits using clip-on CT sensors. Th
 
 ***
 
-#### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
+#### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter)** (optional)
 
 The emonTx is a remote sensor node. Data is transmitted to an emonPi or an emonBase via a low power 433MHz radio.
 
@@ -157,13 +157,13 @@ The emonPi can monitor two single-phase AC circuits using clip-on CT sensors. Th
 - Single unit required to monitor solar PV, provided the generation and site-consumption feeds are in the same physical location and WiFi/Ethernet connectivity is accessible at this location
 - Requires [pre-built SD card image](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log) (included)
 
-<a class="btn pull-right" href="https://shop.openenergymonitor.com/emonPi-3">View in Shop &rarr; </a>
+<a class="btn pull-right" href="https://shop.openenergymonitor.com/emonpi-solar-pv-bundle/">View in Shop &rarr; </a>
 
 <br>
 
 ***
 
-#### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)** (optional)
+#### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter/)** (optional)
 
 The emonTx is a remote sensor node. Data is transmitted to an emonPi or an emonBase via a low power 433MHz radio.
 
@@ -193,7 +193,7 @@ An emonTx can be powered by 3 x AA batteries, however this is not recommended fo
  - 1 x [USB 5V DC PSU](https://shop.openenergymonitor.com/power-supplies/)
  - *1 x [AC-AC voltage sensor adapter](https://shop.openenergymonitor.com/power-supplies/) (essential for solar PV monitoring)*
 
-<a class="btn pull-right" href="https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz">View in Shop &rarr; </a>
+<a class="btn pull-right" href="https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter/">View in Shop &rarr; </a>
 
 <br>
 
