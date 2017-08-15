@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Troubleshooting
-description: Troubleshooting issues deugging
+description: Troubleshooting issues debugging
 date: '2015-03-08 21:36'
 sidebar: true
 comments: false
@@ -154,7 +154,7 @@ It's important that the emonPi has the correct time. If required timezone should
 - Check time on emonPi LCD display, press LCD push-button until `uptime` page is displayed
   - `$ date`
 
-#### To Foce NTP time update:
+#### To Force NTP time update:
 
    - Check emonPi has a connection to the internet
    - Try a reboot
@@ -172,7 +172,7 @@ It's important that the emonPi has the correct time. If required timezone should
 
 - On Raspberry Pi (Linux system time):
 
-   - Run `$ rpi-rw`, then run `$ sudo raspi-config`, select `Internationalisation Options` and set local timezone.  Then run `$ rpi-ro`.
+   - Run `$ rpi-rw`, then run `$ sudo raspi-config`, select `Localisation Options` and set local timezone.  Then run `$ rpi-ro`.
    
    - Check time is correct by running `$ date`
    - If time is STILL not correct try:
