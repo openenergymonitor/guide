@@ -68,6 +68,8 @@ custom header...
   width: 100%;
   height: 42px;
   background-color: #44b3e2;
+  -webkit-box-shadow: 0 -2px 4px 2px #000;
+  -moz-box-shadow: 0 -2px 4px 2px #000;
   box-shadow: 0 -2px 4px 2px #000;
   overflow: hidden;
   z-index: 999;
@@ -242,6 +244,12 @@ site links on larger screens...
   }
 }
 
+@media screen and (max-width: 1079px) {
+  .navigation {
+    display: none;
+  }
+}
+
 /*--------------------------------------------
 site links on smaller screens...
 --------------------------------------------*/
@@ -254,7 +262,7 @@ site links on smaller screens...
 
 @media screen and (max-width: 1079px) {
 
-.navigation {
+.navigationSmall {
   position: fixed;
   display: none;
   top: 0;
@@ -272,7 +280,7 @@ site links on smaller screens...
   z-index: 999;
 }
 
-.navigation ul {
+.navigationSmall ul {
   list-style-type: none;
   margin: 0;
   padding-top: 0;
@@ -280,7 +288,7 @@ site links on smaller screens...
   min-width: 100px;
 }
 
-.navigation ul li a {
+.navigationSmall ul li a {
   box-sizing: border-box;
   font-family: "ubuntu";
   font-size: 20px;
@@ -293,8 +301,14 @@ site links on smaller screens...
   text-align: left;
 }
 
-.navigation ul li .fa {
+.navigationSmall ul li .fa {
   min-width: 25px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .navigationSmall {
+    display: none;
   }
 }
 
@@ -401,59 +415,6 @@ highlight active link...
         </span>
       </a>
     </div>
-    <div class="blackOut"></div>
-    <div id="siteLinks" class="navigation">
-      <ul>
-        <li title="the homepage of OpenEnergyMonitor">
-          <a href="https://openenergymonitor.org">
-            <i class="fa fa-home" aria-hidden="true"></i>
-            <span class="navname">Home</span>
-          </a>
-        </li>
-        <li title="you are here: a user guide for the OpenEnergyMonitor system" id="takeitawaynow" class="actoemLink">
-          <a href="https://guide.openenergymonitor.org">
-            <i class="fa fa-book" aria-hidden="true"></i>
-            <span class="navname">Guide</span>
-          </a>
-        </li>
-        <li title="general information about energy monitoring, diversion and sustainability">
-          <a href="https://learn.openenergymonitor.org">
-            <i class="fa fa-mortar-board" aria-hidden="true"></i>
-            <span class="navname">Learn</span>
-          </a>
-        </li>
-        <li title="a definitive list of resources for OpenEnergyMonitor hardware" id="changeittomenow">
-          <a href="https://guide.openenergymonitor.org/technical/resources/">
-            <i class="fa fa-list-alt" aria-hidden="true"></i>
-            <span class="navname">Resources</span>
-          </a>
-        </li>
-        <li title="the openenergymonitor forum">
-          <a href="https://community.openenergymonitor.org">
-            <i class="fa fa-comments" aria-hidden="true"></i>
-            <span class="navname">Community</span>
-          </a>
-        </li>
-        <li title="keep up with new developments at OpenEnergyMonitor">
-          <a href="https://blog.openenergymonitor.org">
-            <i class="fa fa-bullhorn" aria-hidden="true"></i>
-            <span class="navname">Blog</span>
-          </a>
-        </li>
-        <li title="the official OpenEnergyMonitor online store">
-          <a href="https://shop.openenergymonitor.com">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            <span class="navname">Shop</span>
-          </a>
-        </li>
-        <li title="search for something on OpenEnergyMonitor">
-  				<a class="searchIcon">
-  					<i aria-hidden="true" class="fa fa-search"></i>
-  					<span class="navname">Search</span>
-  				</a>
-  			</li>
-      </ul>
-    </div>
   </div>
 </div>
 <div class="searchBox">
@@ -496,6 +457,60 @@ highlight active link...
 <footer>
   {% include site/footer.html %}
 </footer>
+
+<div class="blackOut"></div>
+<div id="siteLinks" class="navigationSmall">
+  <ul>
+    <li title="the homepage of OpenEnergyMonitor">
+      <a href="https://openenergymonitor.org">
+        <i class="fa fa-home" aria-hidden="true"></i>
+        <span class="navname">Home</span>
+      </a>
+    </li>
+    <li title="you are here: a user guide for the OpenEnergyMonitor system" id="takeitawaynow" class="actoemLink">
+      <a href="https://guide.openenergymonitor.org">
+        <i class="fa fa-book" aria-hidden="true"></i>
+        <span class="navname">Guide</span>
+      </a>
+    </li>
+    <li title="general information about energy monitoring, diversion and sustainability">
+      <a href="https://learn.openenergymonitor.org">
+        <i class="fa fa-mortar-board" aria-hidden="true"></i>
+        <span class="navname">Learn</span>
+      </a>
+    </li>
+    <li title="a definitive list of resources for OpenEnergyMonitor hardware" id="changeittomenow">
+      <a href="https://guide.openenergymonitor.org/technical/resources/">
+        <i class="fa fa-list-alt" aria-hidden="true"></i>
+        <span class="navname">Resources</span>
+      </a>
+    </li>
+    <li title="the openenergymonitor forum">
+      <a href="https://community.openenergymonitor.org">
+        <i class="fa fa-comments" aria-hidden="true"></i>
+        <span class="navname">Community</span>
+      </a>
+    </li>
+    <li title="keep up with new developments at OpenEnergyMonitor">
+      <a href="https://blog.openenergymonitor.org">
+        <i class="fa fa-bullhorn" aria-hidden="true"></i>
+        <span class="navname">Blog</span>
+      </a>
+    </li>
+    <li title="the official OpenEnergyMonitor online store">
+      <a href="https://shop.openenergymonitor.com">
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        <span class="navname">Shop</span>
+      </a>
+    </li>
+    <li title="search for something on OpenEnergyMonitor">
+			<a class="searchIcon">
+				<i aria-hidden="true" class="fa fa-search"></i>
+				<span class="navname">Search</span>
+			</a>
+		</li>
+  </ul>
+</div>
 
 {% include javascripts/scripts.html %}
 
