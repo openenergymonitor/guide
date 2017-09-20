@@ -15,7 +15,7 @@ The emonPi / emonTx hardware units are designed for use on single-phase systems.
 
 ### 1. Ensure clip-on CT sensor will fit your conductors
 
-Typical residential feeder conductors are AWG 2/0 Copper or AWG 4/0 Aluminum.  The opening in the [standard clip-on CT sensor sold in the OpenEnergyMonitor shop](http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) is **13mm**, and hence can accommodate a maximum wire size of **AWG 1/0**. Therefore, we recommend you measure the diameter of your feeders before purchasing a CT sensor.
+Typical residential Service Entrance Wires are AWG 2/0 Copper or AWG 4/0 Aluminum.  The opening in the [standard clip-on CT sensor sold in the OpenEnergyMonitor shop](http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) is **13mm**, and hence can accommodate a maximum wire size of **AWG 1/0**. Therefore, we recommend you measure the diameter of your feeders before purchasing a CT sensor.
 
 
 <a class="btn pull-right" href="http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/">View in Shop &rarr; </a>
