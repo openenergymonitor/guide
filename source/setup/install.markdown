@@ -76,7 +76,7 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 ![home energy2](/images/applications/home-energy/emonpi-install2.jpg)
 
-See [Solar PV Application Note](applications/solar-pv/) for emonPi solar PV install guide & images.
+See [Solar PV Application Note](/applications/solar-pv/) for emonPi solar PV install guide & images.
 
 ## {% linkable_title 6. Power Up %}
 
