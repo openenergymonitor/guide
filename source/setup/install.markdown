@@ -31,6 +31,7 @@ Your safety is your responsibility. Clip-on current sensors are non-invasive and
 - If the power reading is negative, reverse the CT sensor orientation
 - CT sensor cable should not be extended to avoid induced noise
 - For Solar PV install see [Solar PV Application page](/applications/solar-pv/#sensor-installation)
+- [Learn more about how CT sensors work...](https://learn.openenergymonitor.org/electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter)
 
 <p class='note'>
 The clip-on CT sensors must be clipped round either the live or Neutral AC wire. <strong>NOT BOTH</strong>.
@@ -46,7 +47,8 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 - AC-AC adapter cable can be extended if required
 - Plug power connector into the AC socket on the emonPi
 - Essential for [Solar PV monitoring](/applications/solar-pv/#sensor-installation)
-- Provides AC waveform reference for accurate Real Power measurements. [[1]](http://openenergymonitor.org/emon/applications/homeenergy) , [[2]](http://openenergymonitor.org/emon/buildingblocks)
+- Provides AC waveform reference for accurate Real Power measurements.
+- [Learn more about measuring voltage with AC-AC power adpator...](https://learn.openenergymonitor.org/electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter)
 
 
 
