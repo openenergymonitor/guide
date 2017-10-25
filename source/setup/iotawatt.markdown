@@ -11,9 +11,6 @@ sharing: true
 footer: true
 published: true
 ---
-<!--### [&laquo; Previous step: Connect](/setup/connect/)-->
-
-<!--### [Next step: Log Locally &raquo;](/setup/local/)-->
 
 IotaWatt<sup>tm</sup> is an open-hardware 14 channel WiFi connected electric power monitor. It's based on the ESP8266 IoT platform using MCP3208 12 bit ADCs to sample voltage and current.
 
@@ -31,7 +28,7 @@ IotaWatt<sup>tm</sup> is an open-hardware 14 channel WiFi connected electric pow
 - [Configuration](#configuration)
   * [Configure Input Sensors](#configure-input-sensors)
     + [1. AC-AC Voltage Transformer (VT)](#1-ac-ac-voltage-transformer-vt)
-    + [2. Confugure Current Transformer(s (CT's)](#2-confugure-current-transformers-cts)
+    + [2. Configure Current Transformer(s (CT's)](#2-configure-current-transformers-cts)
   * [View Local Data](#view-local-data)
     + [Real Time Status](#real-time-status)
     + [View historic local data](#view-historic-local-data)
@@ -75,7 +72,7 @@ Your safety is your responsibility. Clip-on current sensors are non-invasive and
 
 ## 1. Clip-on Current Sensor
 
-The clip-on current sensor measures the current flow. IoTaWatt is compatiable with a number of different sized CT sensors.
+The clip-on current sensor measures the current flow. IoTaWatt is compatible with a number of different sized CT sensors.
 
 - Clip the CT sensor around either the **Live** or **Neutral** cable
 - Connect 3.5mm jack plug into one of the CT inputs on the IoTaWatt
@@ -106,7 +103,7 @@ AC-AC adapter (also known as 'VT' Voltage Transformer) is used to measure AC vol
 - Plug power connector into the AC socket on the IoTaWatt
 - Provides AC waveform reference for accurate Real Power measurements. [Learn more about measuring voltage with AC-AC power adapter...](https://learn.openenergymonitor.org/electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter)
 
-*Note: Unlike with the emonTx, the AC-AC adapter does not power the IoTaWatt. It just provides an AC voltage referance signal. This is due to the increased power requirement of the IoTaWatt WiFi connectivity*
+*Note: Unlike with the emonTx, the AC-AC adapter does not power the IoTaWatt. It just provides an AC voltage reference signal. This is due to the increased power requirement of the IoTaWatt WiFi connectivity*
 
 ## 3. DC 5V USB Adapter
 
@@ -120,7 +117,7 @@ IoTaWatt status LED should light up to indicate power-up.
 
 ## 4. Wall Mount
 
-IoTaWatt can be optionally wall mounted using encloused braket.
+IoTaWatt can be optionally wall mounted using enclosed bracket.
 
 - Open IoTaWatt enclosure
 - Attach 'male' part of wall-mount bracket to IoTaWatt
@@ -157,7 +154,7 @@ It's highly recommended to connect the IoTaWatt to a local WiFi network with a w
 - Follow on screen instructions to connect IoTaWatt to your local WiFi network.
 - Once connected, the name of the new WiFi network will be saved, and the device will continue its startup procedure.
 - If the LED begins blinking a rapid dull green, proceed to the next step Device Configuration.
-- If the device displays another three color LED sequence, see [Troubleshooting (wiki)](https://github.com/boblemaire/IoTaWatt/wiki/Troubleshooting).
+- If the device displays another three colour LED sequence, see [Troubleshooting (wiki)](https://github.com/boblemaire/IoTaWatt/wiki/Troubleshooting).
 
 ***
 
@@ -165,7 +162,7 @@ It's highly recommended to connect the IoTaWatt to a local WiFi network with a w
 
 The IotaWatt is configured via a web-interface, see online demo at [iotawatt.com](http://iotawatt.com)
 
-Successful startup will be indicated by a dull green glow on the LED. If the LED is off, or blinking a three-color sequence, see [Troubleshooting (wiki)](https://github.com/boblemaire/IoTaWatt/wiki/Troubleshooting).
+Successful startup will be indicated by a dull green glow on the LED. If the LED is off, or blinking a three-colour sequence, see [Troubleshooting (wiki)](https://github.com/boblemaire/IoTaWatt/wiki/Troubleshooting).
 
 - After successful startup, you can connect to the device with your web browser
 - Connect to IoTaWatt using [http://iotawatt.local](http://iotawatt.local)
@@ -186,7 +183,7 @@ You should have installed the device with an AC-AC voltage reference transformer
 ![iotawatt status](/images/setup/iota-input1.png)
 
 - Click on `[0]` input to edit the voltage input channel
-- Select your VT (AC-AC adapter) calibration preset from the drop down list
+- Select your VT (AC-AC adapter) calibration pre-set from the drop down list
 - Click `Save`
 
 
@@ -197,10 +194,10 @@ You should have installed the device with an AC-AC voltage reference transformer
 
 ### 2. Configure Current Transformers (CT's)
 
-IoTaWatt is compatiable with a number of different sized CT sensors. Preset calibrations are avilable for popular models.
+IoTaWatt is compatible with a number of different sized CT sensors. Pre-set calibrations are available for popular models.
 
 - Click on `[1]` to configure the first CT input channel
-- Choose calibration preset to match your CT model
+- Choose calibration pre-set to match your CT model
 - Click `Save`
 
 ![iotawatt status](/images/setup/iota-ct2.png)
@@ -234,14 +231,14 @@ Historic data logged to internal-SD card can be viewed using `Run Local Graph Ap
 
 By default the IoTaWatt logs data to internal SD card, data can be viewed using Local Graph App.
 
-The IoTaWatt can also post to a remote Emoncms server e.g. [Emoncms.org](https://emoncms.org) or emonPi etc. Posting to a remote server is recomended for backup and to enable easy remote access to view the data.
+The IoTaWatt can also post to a remote Emoncms server e.g. [Emoncms.org](https://emoncms.org) or emonPi etc. Posting to a remote server is recommended for backup and to enable easy remote access to view the data.
 
 To enable remote data logging:
 
 - Select `Setup Web Server`
 - Choose `Emoncms`
 - Enter Emoncms.org `API KEY`
-- (optional but recomended): Enter Emoncms.org `userID` to enable posting using encrypted protocol (recomended)*
+- (optional but recommended): Enter Emoncms.org `userID` to enable posting using encrypted protocol (recommended)*
 - Chose which inputs to be posted remotely (defaul all)
 
 ![iotawatt status](/images/setup/iota-emoncms.png)
@@ -280,7 +277,7 @@ IoTaWatt is fully open-source and has been designed with input from the OpenEner
 - [IoTaWatt Hardware & Firmware GitHub Repo](github.com/boblemaire/IoTaWatt)
 - [IoTaWatt Community Forum Sub-category](https://community.openenergymonitor.org/c/hardware/iotawatt)
 
-*IoTaWatt is desinged and manufactured by Bob Lemaire [@overeasy](https://community.openenergymonitor.org/u/overeasy/) in partnership with OpenEnergyMonitor.*
+*IoTaWatt is designed and manufactured by Bob Lemaire [@overeasy](https://community.openenergymonitor.org/u/overeasy/) in partnership with OpenEnergyMonitor.*
 
 <!--### Video Guide-->
 
@@ -291,6 +288,3 @@ IoTaWatt is fully open-source and has been designed with input from the OpenEner
 ***
 
 <!--### [Next step: Log Locally &raquo;](/setup/local/)-->
-
-
-
