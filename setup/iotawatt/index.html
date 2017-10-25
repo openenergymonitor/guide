@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>2. Install - Guide | OpenEnergyMonitor</title>
+    <title>IoTaWatt Quick Start - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="Physically install emonPi">
+    <meta name="description" content="IotaWatt is an open-hardware multi-channel WiFi connected electric power monitor">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/install/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/iotawatt/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="2. Install">
+    <meta property="og:title" content="IoTaWatt Quick Start">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/install/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/iotawatt/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Physically install emonPi">
+    <meta property="og:description" content="IotaWatt is an open-hardware multi-channel WiFi connected electric power monitor">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="2. Install">
-    <meta name="twitter:description" content="Physically install emonPi">
+    <meta name="twitter:title" content="IoTaWatt Quick Start">
+    <meta name="twitter:description" content="IotaWatt is an open-hardware multi-channel WiFi connected electric power monitor">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -552,116 +552,316 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      2. Install
+      IoTaWatt Quick Start
     </h1>
   </header>
   <hr class="divider">
   
 
-  <h3 id="laquo-previous-step-connectsetupconnect"><a href="/setup/connect/">« Previous step: Connect</a></h3>
+  <p>IotaWatt<sup>tm</sup> is an open-hardware 14 channel WiFi connected electric power monitor. It’s based on the ESP8266 IoT platform using MCP3208 12 bit ADCs to sample voltage and current.</p>
 
-<h3 id="next-step-log-locally-raquosetuplocal"><a href="/setup/local/">Next step: Log Locally »</a></h3>
+<p><img src="/images/setup/iotawatt-1.jpg" alt="iotawatt" /></p>
 
-<h2 id="installation">Installation</h2>
+<!-- toc -->
 
-<p><img src="/images/setup/emonpilabel.png" alt="emonpi install digram" /></p>
+<ul>
+  <li><a href="#install">Install</a>
+    <ul>
+      <li><a href="#1-clip-on-current-sensor">1. Clip-on Current Sensor</a></li>
+      <li><a href="#2-ac-ac-voltage-sensor-adapter-vt">2. AC-AC Voltage Sensor Adapter (VT)</a></li>
+      <li><a href="#3-dc-5v-usb-adapter">3. DC 5V USB Adapter</a></li>
+      <li><a href="#4-wall-mount">4. Wall Mount</a></li>
+    </ul>
+  </li>
+  <li><a href="#connect-wifi">Connect WiFi</a></li>
+  <li><a href="#configuration">Configuration</a>
+    <ul>
+      <li><a href="#configure-input-sensors">Configure Input Sensors</a>
+        <ul>
+          <li><a href="#1-ac-ac-voltage-transformer-vt">1. AC-AC Voltage Transformer (VT)</a></li>
+          <li><a href="#2-configure-current-transformers-cts">2. Configure Current Transformer(s (CT’s)</a></li>
+        </ul>
+      </li>
+      <li><a href="#view-local-data">View Local Data</a>
+        <ul>
+          <li><a href="#real-time-status">Real Time Status</a></li>
+          <li><a href="#view-historic-local-data">View historic local data</a></li>
+        </ul>
+      </li>
+      <li><a href="#configure-remote-emoncms-server">Configure Remote Emoncms Server</a></li>
+      <li><a href="#firmware-update-ota">Firmware Update (OTA)</a></li>
+      <li><a href="#technical-wiki">Technical Wiki</a></li>
+      <li><a href="#open-source">Open Source</a></li>
+    </ul>
+  </li>
+</ul>
 
-<p><img src="/images/setup/emonPi_install_diagram.png" alt="emonpi install" /></p>
+<!-- tocstop -->
+
+<p class="note info">
+This is a quick start guide, for full technical documentation see
+<a href="https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/installation">IoTaWatt GitHub repo Wiki.</a>
+</p>
+
+<h1 id="features">Features</h1>
+
+<ul>
+  <li>14 x single-phase current sense (CT) channels</li>
+  <li>1 x AC VRMS Channel</li>
+  <li>Compatible with multiple types of CT sensors and AC-AC voltage sensor adaptor</li>
+  <li>Local SD card logging</li>
+  <li>WiFi connected to post to Emoncms / InfluxDB</li>
+  <li>Sample rate: 35-40 channels per second</li>
+  <li>Voltage (VRMS), Power (W) and Energy (kWh) logged to local SD card - every 5s</li>
+  <li>On-board Real-time-clock (RTC) with battery backup</li>
+  <li>Web-config interface config</li>
+  <li>Secure encrypted data connection to emoncms.org</li>
+  <li>Secure automatic OTA firmware updates</li>
+  <li>5V Micro USB power supply</li>
+  <li>Wall mountable</li>
+  <li>Open-source / hardware</li>
+  <li>CE certified</li>
+  <li>RoHs compliant</li>
+</ul>
+
+<h1 id="install">Install</h1>
 
 <p class="note warning">
 <a href="https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/installation">Please read the CT installation guide before installing.</a>
 Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated; i.e., switch off the power prior to installing your sensors and proceed slowly with care. If you have any doubts, seek professional assistance.
 </p>
 
-<h2 id="a-classtitle-link-name1-ct-sensor-href1-ct-sensora-1-ct-sensor"><a class="title-link" name="1-ct-sensor" href="#1-ct-sensor"></a> 1. <strong>CT sensor</strong></h2>
+<h2 id="clip-on-current-sensor">1. Clip-on Current Sensor</h2>
+
+<p>The clip-on current sensor measures the current flow. IoTaWatt is compatible with a number of different sized CT sensors.</p>
 
 <ul>
   <li>Clip the CT sensor around either the <strong>Live</strong> or <strong>Neutral</strong> cable</li>
-  <li>Connect jack plug into either CT1 or CT2 socket on the emonPi</li>
+  <li>Connect 3.5mm jack plug into one of the CT inputs on the IoTaWatt</li>
   <li>If the power reading is negative, reverse the CT sensor orientation</li>
-  <li>CT sensor cable should not be extended to avoid induced noise</li>
-  <li>For Solar PV install see <a href="/applications/solar-pv/#sensor-installation">Solar PV Application page</a></li>
   <li><a href="https://learn.openenergymonitor.org/electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter">Learn more about how CT sensors work…</a></li>
 </ul>
 
 <p class="note">
-The clip-on CT sensors must be clipped round either the live or Neutral AC wire. <strong>NOT BOTH</strong>.
+The clip-on CT sensors must be clipped round either the live or Neutral AC wire. <strong>Not both.</strong>.
 </p>
 
 <p><img src="/images/applications/solar-pv/ctinstall.jpg" alt="CT sensor installation " /></p>
 
-<h2 id="a-classtitle-link-name2-ac-ac-adapter-href2-ac-ac-adaptera-2-ac-ac-adapter"><a class="title-link" name="2-ac-ac-adapter" href="#2-ac-ac-adapter"></a> 2. <strong>AC-AC Adapter</strong></h2>
+<h2 id="ac-ac-voltage-sensor-adapter-vt">2. AC-AC Voltage Sensor Adapter (VT)</h2>
+
+<p>AC-AC adapter (also known as ‘VT’ Voltage Transformer) is used to measure AC voltage, power factor and determine direction of current flow.</p>
+
+<p class="note">
+<strong>Use of an AC-AC voltage sensor plug-in adapter with IoTaWatt is essential</strong>.
+</p>
+
 <ul>
   <li>Plug the AC-AC adapter into a power outlet</li>
   <li>This may require installation of a new outlet or extending an existing one</li>
   <li>AC-AC adapter cable can be extended if required</li>
-  <li>Plug power connector into the AC socket on the emonPi</li>
-  <li>Essential for <a href="/applications/solar-pv/#sensor-installation">Solar PV monitoring</a></li>
-  <li>Provides AC waveform reference for accurate Real Power measurements.</li>
-  <li><a href="https://learn.openenergymonitor.org/electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter">Learn more about measuring voltage with AC-AC power adpator…</a></li>
+  <li>Plug power connector into the AC socket on the IoTaWatt</li>
+  <li>Provides AC waveform reference for accurate Real Power measurements. <a href="https://learn.openenergymonitor.org/electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter">Learn more about measuring voltage with AC-AC power adapter…</a></li>
 </ul>
 
-<h2 id="a-classtitle-link-name3-dc-5v-usb-adapter-href3-dc-5v-usb-adaptera-3-dc-5v-usb-adapter"><a class="title-link" name="3-dc-5v-usb-adapter" href="#3-dc-5v-usb-adapter"></a> 3. <strong>DC 5V USB Adapter</strong></h2>
+<p><em>Note: Unlike with the emonTx, the AC-AC adapter does not power the IoTaWatt. It just provides an AC voltage reference signal. This is due to the increased power requirement of the IoTaWatt WiFi connectivity</em></p>
+
+<h2 id="dc-5v-usb-adapter">3. DC 5V USB Adapter</h2>
+
+<p>A 5V DC power supply provides power to the IoTaWatt.</p>
+
 <ul>
   <li>Plug the DC 5V USB adapter into a power outlet</li>
-  <li>Plug the mini-B USB connector into the emonPi</li>
+  <li>Plug the micro-B USB connector into the IotaWatt</li>
   <li>High quality minimum <a href="https://shop.openenergymonitor.com/power-supplies/">1.2A power supply recommended</a></li>
 </ul>
 
-<p><br /></p>
+<p>IoTaWatt status LED should light up to indicate power-up.</p>
 
-<h3 id="a-classtitle-link-name4-optical-utility-meter-led-pulse-sensor-optional-href4-optical-utility-meter-led-pulse-sensor-optionala-4-optical-utility-meter-led-pulse-sensor-optional"><a class="title-link" name="4-optical-utility-meter-led-pulse-sensor-optional" href="#4-optical-utility-meter-led-pulse-sensor-optional"></a> 4. <em>Optical Utility Meter LED Pulse Sensor (optional)</em></h3>
+<h2 id="wall-mount">4. Wall Mount</h2>
+
+<p>IoTaWatt can be optionally wall mounted using enclosed bracket.</p>
+
 <ul>
-  <li>See <a href="http://openenergymonitor.org/emon/opticalpulsesensor">Optical Pulse Sensor setup page</a></li>
-  <li>Connects to emonPi / emonTx via RJ45 connector</li>
-  <li>Self-adhesive velcro attachment to utility meter</li>
-  <li>One optical pulse sensor per emonPi/emonTx</li>
-  <li>Can be used in conjunction with temperature sensors using <a href="http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/">RJ45 Breakout</a></li>
+  <li>Open IoTaWatt enclosure</li>
+  <li>Attach ‘male’ part of wall-mount bracket to IoTaWatt</li>
+  <li>Re-assemble IoTawatt</li>
+  <li>Attach ‘female’ part of wall-mount to the wall</li>
+  <li>Clip IoTaWatt onto wall-mount</li>
+  <li>IoTawatt can easily be removed if required</li>
 </ul>
 
-<h3 id="a-classtitle-link-name5-temperature-sensors-optional-href5-temperature-sensors-optionala-5-temperature-sensors-optional"><a class="title-link" name="5-temperature-sensors-optional" href="#5-temperature-sensors-optional"></a> 5. <em>Temperature Sensors (optional)</em></h3>
-<ul>
-  <li>Connect to emonPi / emonTx via RJ45 connector</li>
-  <li>Up to 6x sensors can be connected using <a href="http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/">RJ45 Breakout</a></li>
-  <li>Sensor wire can be extended using RJ45 cable and <a href="http://shop.openenergymonitor.com/rj45-extender/">RJ45 Extender</a></li>
-</ul>
-
-<h2 id="installation-examples">Installation Examples</h2>
-
-<p><img src="/images/applications/home-energy/home-energy-emonpi-install.jpg" alt="home energy" /></p>
-
-<p><img src="/images/applications/home-energy/emonpi-install2.jpg" alt="home energy2" /></p>
-
-<p>See <a href="/applications/solar-pv/">Solar PV Application Note</a> for emonPi solar PV install guide &amp; images.</p>
-
-<h2 id="a-classtitle-link-name6-power-up-href6-power-upa-6-power-up"><a class="title-link" name="6-power-up" href="#6-power-up"></a> 6. Power Up</h2>
-
-<p class="note">
-Ensure all sensors are connected before powering up.
-</p>
-
-<p>a.) <strong>Switch on DC &amp; AC power</strong></p>
-
-<p>b.) <strong>Check CT sensor(s) &amp; AC Wave are detected:</strong></p>
-
-<p><img src="/images/setup/acwave_ct1.JPG" /></p>
-
-<p>c.) <strong>emonPi should remember WiFi network and re-connect</strong></p>
-
-<p><img src="/images/setup/wifi_connected.JPG" /></p>
-
-<h3 id="video-guide">Video Guide</h3>
-<div class="videoWrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6SB4fRYQjno" frameborder="0" allowfullscreen=""></iframe>
-</div>
+<p><img src="/images/setup/iota-wall.jpg" alt="CT sensor installation " /></p>
 
 <hr />
 
-<h3 id="next-step-log-locally-raquosetuplocal-1"><a href="/setup/local/">Next step: Log Locally »</a></h3>
+<h1 id="connect-wifi">Connect WiFi</h1>
+
+<p class="note">
+It's highly recommended to connect the IoTaWatt to a local WiFi network with a web connection.
+</p>
+
+<p><em>Although the IoTaWatt can run without WiFi an internet connection is required to set the real time clock is not set</em></p>
+
+<ul>
+  <li>If the device is new and has never been connected to a WiFi network, or the last used network is not available, the IoTaWatt will start up in WiFi AP (access point) mode.</li>
+  <li>AP mode is indicated by LED flashes <code class="highlighter-rouge">RED-GREEN-GREEN</code></li>
+  <li>Using a mobile device connect to SSID <code class="highlighter-rouge">iota + &lt;unique-number&gt;</code></li>
+  <li><strong>The default WiFi password is <code class="highlighter-rouge">IotaWatt</code> (case sensative)</strong></li>
+  <li>After connecting to IoTaWatt AP a captive portal re-direct should display the IoTaWatt WiFi setup portal</li>
+</ul>
+
+<p><img src="/images/setup/iota-wifi.png" alt="iotawatt wifi" /></p>
+
+<p><em>Note: If this page does not display automatically browse to <a href="http://192.168.4.1">http://192.168.4.1</a></em></p>
+
+<ul>
+  <li>Follow on screen instructions to connect IoTaWatt to your local WiFi network.</li>
+  <li>Once connected, the name of the new WiFi network will be saved, and the device will continue its startup procedure.</li>
+  <li>If the LED begins blinking a rapid dull green, proceed to the next step Device Configuration.</li>
+  <li>If the device displays another three colour LED sequence, see <a href="https://github.com/boblemaire/IoTaWatt/wiki/Troubleshooting">Troubleshooting (wiki)</a>.</li>
+</ul>
+
+<hr />
+
+<h1 id="configuration">Configuration</h1>
+
+<p>The IotaWatt is configured via a web-interface, see online demo at <a href="http://iotawatt.com">iotawatt.com</a></p>
+
+<p>Successful startup will be indicated by a dull green glow on the LED. If the LED is off, or blinking a three-colour sequence, see <a href="https://github.com/boblemaire/IoTaWatt/wiki/Troubleshooting">Troubleshooting (wiki)</a>.</p>
+
+<ul>
+  <li>After successful startup, you can connect to the device with your web browser</li>
+  <li>Connect to IoTaWatt using <a href="http://iotawatt.local">http://iotawatt.local</a></li>
+</ul>
+
+<p><img src="/images/setup/iota-config.png" alt="iotawatt config" /></p>
+
+<p><em>Note: if local hostname resolution is not supported on your network you will need to connect to IoTaWatt using its local IP address. This can be obtained this from your router DHCP table, using <a href="https://www.fing.io/">Fing</a> or see IoTaWatt serial debug at startup to obtain local IP address (115200 baud)</em></p>
+
+<h2 id="configure-input-sensors">Configure Input Sensors</h2>
+
+<h3 id="ac-ac-voltage-transformer-vt">1. AC-AC Voltage Transformer (VT)</h3>
+
+<p>You should have installed the device with an AC-AC voltage reference transformer plugged into the IoTaWatt via 2.1mm barrel-jack. The initial configuration has this channel pre-configured as a generic “VT” or voltage-transformer.</p>
+
+<p><img src="/images/setup/iota-input1.png" alt="iotawatt status" /></p>
+
+<ul>
+  <li>Click on <code class="highlighter-rouge">[0]</code> input to edit the voltage input channel</li>
+  <li>Select your VT (AC-AC adapter) calibration pre-set from the drop down list</li>
+  <li>Click <code class="highlighter-rouge">Save</code></li>
+</ul>
+
+<p><img src="/images/setup/iota-input2.png" alt="iotawatt status" /></p>
+
+<p><em>It’s recomended for highest accuracy that calibration is done on your specific unit. See <a href="https://github.com/boblemaire/IoTaWatt/wiki/Reference-Voltage-Calibration">IoTaWatt Wiki.</a></em></p>
+
+<h3 id="configure-current-transformers-cts">2. Configure Current Transformers (CT’s)</h3>
+
+<p>IoTaWatt is compatible with a number of different sized CT sensors. Pre-set calibrations are available for popular models.</p>
+
+<ul>
+  <li>Click on <code class="highlighter-rouge">[1]</code> to configure the first CT input channel</li>
+  <li>Choose calibration pre-set to match your CT model</li>
+  <li>Click <code class="highlighter-rouge">Save</code></li>
+</ul>
+
+<p><img src="/images/setup/iota-ct2.png" alt="iotawatt status" /></p>
+
+<p>Input list should now show input 0 configured as a AC voltage input and input 1 configured as a current sensor CT input.</p>
+
+<p>Add additional CT’s as required:</p>
+
+<p><img src="/images/setup/iota-ct3.png" alt="iotawatt status" /></p>
+
+<hr />
+
+<h2 id="view-local-data">View Local Data</h2>
+
+<h3 id="real-time-status">Real Time Status</h3>
+
+<p>After VT and CT inputs have been setup, check real-time readings on the Input Channel Status page.</p>
+
+<p>Here is an example of a more complex setup:</p>
+
+<p><img src="/images/setup/iota-status.jpg" alt="iotawatt status" /></p>
+
+<h3 id="view-historic-local-data">View historic local data</h3>
+
+<p>Historic data logged to internal-SD card can be viewed using <code class="highlighter-rouge">Run Local Graph App</code></p>
+
+<hr />
+
+<h2 id="configure-remote-emoncms-server">Configure Remote Emoncms Server</h2>
+
+<p>By default the IoTaWatt logs data to internal SD card, data can be viewed using Local Graph App.</p>
+
+<p>The IoTaWatt can also post to a remote Emoncms server e.g. <a href="https://emoncms.org">Emoncms.org</a> or emonPi etc. Posting to a remote server is recommended for backup and to enable easy remote access to view the data.</p>
+
+<p>To enable remote data logging:</p>
+
+<ul>
+  <li>Select <code class="highlighter-rouge">Setup Web Server</code></li>
+  <li>Choose <code class="highlighter-rouge">Emoncms</code></li>
+  <li>Enter Emoncms.org <code class="highlighter-rouge">API KEY</code></li>
+  <li>(optional but recommended): Enter Emoncms.org <code class="highlighter-rouge">userID</code> to enable posting using encrypted protocol (recommended)*</li>
+  <li>Chose which inputs to be posted remotely (defaul all)</li>
+</ul>
+
+<p><img src="/images/setup/iota-emoncms.png" alt="iotawatt status" /></p>
+
+<p>* Emoncms UserID can be found in the <code class="highlighter-rouge">Setup &gt; Account</code> page of Emoncms.org.</p>
+
+<p>Encrpted protocol is specific to Emoncms.org, posting to other Emoncms sever (e.g. emonPi) can only be done using un-encrypted http.</p>
+
+<p class="note">
+If network connectivity is lost, data logged locally to SD card will later be bulk-uploaded to Emoncms when connectivity is restored.
+</p>
+
+<hr />
+
+<h2 id="firmware-update-ota">Firmware Update (OTA)</h2>
+
+<ul>
+  <li>The IotaWatt can receive automatic OTA updates.</li>
+  <li>Firmware releases are published to <a href="https://github.com/boblemaire/IoTaWatt/releases">Releases page of the IotaWatt GitHub Repo</a>.</li>
+</ul>
+
+<p>IotaWatt checks the <a href="http://IotaWatt.com">IotaWatt.com</a> site for new software every 1hr. The update process takes less than a minute and the new firmware is authenticated with a digital signature from IotaWatt.</p>
+
+<p><img src="/images/setup/iota-device.png" alt="iotawatt status" /></p>
+
+<hr />
+
+<h2 id="technical-wiki">Technical Wiki</h2>
+
+<p>For technical IoTaWatt documentation see <a href="github.com/boblemaire/IoTaWatt/wiki">IoTaWatt GitHub repo Wiki.</a></p>
+
+<h2 id="open-source">Open Source</h2>
+
+<p>IoTaWatt is fully open-source and has been designed with input from the OpenEnergyMonitor community.</p>
+
+<ul>
+  <li><a href="github.com/boblemaire/IoTaWatt">IoTaWatt Hardware &amp; Firmware GitHub Repo</a></li>
+  <li><a href="https://community.openenergymonitor.org/c/hardware/iotawatt">IoTaWatt Community Forum Sub-category</a></li>
+</ul>
+
+<p><em>IoTaWatt is designed and manufactured by Bob Lemaire <a href="https://community.openenergymonitor.org/u/overeasy/">@overeasy</a> in partnership with OpenEnergyMonitor.</em></p>
+
+<!--### Video Guide-->
+
+<!--<div class='videoWrapper'>-->
+<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/6SB4fRYQjno" frameborder="0" allowfullscreen></iframe>-->
+<!--</div>-->
+
+<hr />
+
+<!--### [Next step: Log Locally &raquo;](/setup/local/)-->
 
 
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/setup/install.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/setup/install.markdown'>Edit on GitHub Prose</a></div>
+  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/setup/iotawatt.markdown'>Edit on GitHub</a></div>
+<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/setup/iotawatt.markdown'>Edit on GitHub Prose</a></div>
 
 </article>
 
@@ -696,7 +896,7 @@ Ensure all sensors are connected before powering up.
         <ul>
           <li><a  href='/setup/'>1. System Overview </a></li>
           <li><a  href='/setup/connect/'>2. Connect </a></li>
-          <li><a class='active' href='/setup/install/'>3. Install </a></li>
+          <li><a  href='/setup/install/'>3. Install </a></li>
           <li><a  href='/setup/local/'>4. Log Locally </a></li>
           <li><a  href='/setup/remote/'>5. Log Remotely </a></li>
           <li><a  href='/setup/dashboards/'>6. Dashboards </a></li>
