@@ -239,7 +239,7 @@ To enable remote data logging:
 - Choose `Emoncms`
 - Enter Emoncms.org `API KEY`
 - (optional but recommended): Enter Emoncms.org `userID` to enable posting using encrypted protocol (recommended)*
-- Chose which inputs to be posted remotely (defaul all)
+- Chose which inputs to be posted remotely (default all)
 
 ![iotawatt status](/images/setup/iota-emoncms.png)
 
