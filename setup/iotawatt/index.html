@@ -565,12 +565,13 @@ highlight active link...
 <!-- toc -->
 
 <ul>
+  <li><a href="#features">Features</a></li>
   <li><a href="#install">Install</a>
     <ul>
-      <li><a href="#1-clip-on-current-sensor">1. Clip-on Current Sensor</a></li>
-      <li><a href="#2-ac-ac-voltage-sensor-adapter-vt">2. AC-AC Voltage Sensor Adapter (VT)</a></li>
-      <li><a href="#3-dc-5v-usb-adapter">3. DC 5V USB Adapter</a></li>
-      <li><a href="#4-wall-mount">4. Wall Mount</a></li>
+      <li><a href="#clip-on-current-sensor">Clip-on Current Sensor</a></li>
+      <li><a href="#ac-ac-voltage-sensor-adapter-vt">AC-AC Voltage Sensor Adapter (VT)</a></li>
+      <li><a href="#dc-5v-usb-adapter">DC 5V USB Adapter</a></li>
+      <li><a href="#wall-mount">Wall Mount</a></li>
     </ul>
   </li>
   <li><a href="#connect-wifi">Connect WiFi</a></li>
@@ -578,8 +579,8 @@ highlight active link...
     <ul>
       <li><a href="#configure-input-sensors">Configure Input Sensors</a>
         <ul>
-          <li><a href="#1-ac-ac-voltage-transformer-vt">1. AC-AC Voltage Transformer (VT)</a></li>
-          <li><a href="#2-configure-current-transformers-cts">2. Configure Current Transformer(s (CT’s)</a></li>
+          <li><a href="#ac-ac-voltage-transformer-vt">AC-AC Voltage Transformer (VT)</a></li>
+          <li><a href="#configure-current-transformers-cts">Configure Current Transformers (CT’s)</a></li>
         </ul>
       </li>
       <li><a href="#view-local-data">View Local Data</a>
@@ -631,7 +632,7 @@ This is a quick start guide, for full technical documentation see
 Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated; i.e., switch off the power prior to installing your sensors and proceed slowly with care. If you have any doubts, seek professional assistance.
 </p>
 
-<h2 id="clip-on-current-sensor">1. Clip-on Current Sensor</h2>
+<h2 id="clip-on-current-sensor">Clip-on Current Sensor</h2>
 
 <p>The clip-on current sensor measures the current flow. IoTaWatt is compatible with a number of different sized CT sensors.</p>
 
@@ -648,7 +649,7 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 <p><img src="/images/applications/solar-pv/ctinstall.jpg" alt="CT sensor installation " /></p>
 
-<h2 id="ac-ac-voltage-sensor-adapter-vt">2. AC-AC Voltage Sensor Adapter (VT)</h2>
+<h2 id="ac-ac-voltage-sensor-adapter-vt">AC-AC Voltage Sensor Adapter (VT)</h2>
 
 <p>AC-AC adapter (also known as ‘VT’ Voltage Transformer) is used to measure AC voltage, power factor and determine direction of current flow.</p>
 
@@ -666,7 +667,7 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 <p><em>Note: Unlike with the emonTx, the AC-AC adapter does not power the IoTaWatt. It just provides an AC voltage reference signal. This is due to the increased power requirement of the IoTaWatt WiFi connectivity</em></p>
 
-<h2 id="dc-5v-usb-adapter">3. DC 5V USB Adapter</h2>
+<h2 id="dc-5v-usb-adapter">DC 5V USB Adapter</h2>
 
 <p>A 5V DC power supply provides power to the IoTaWatt.</p>
 
@@ -678,7 +679,7 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 <p>IoTaWatt status LED should light up to indicate power-up.</p>
 
-<h2 id="wall-mount">4. Wall Mount</h2>
+<h2 id="wall-mount">Wall Mount</h2>
 
 <p>IoTaWatt can be optionally wall mounted using enclosed bracket.</p>
 
@@ -741,7 +742,7 @@ It's highly recommended to connect the IoTaWatt to a local WiFi network with a w
 
 <h2 id="configure-input-sensors">Configure Input Sensors</h2>
 
-<h3 id="ac-ac-voltage-transformer-vt">1. AC-AC Voltage Transformer (VT)</h3>
+<h3 id="ac-ac-voltage-transformer-vt">AC-AC Voltage Transformer (VT)</h3>
 
 <p>You should have installed the device with an AC-AC voltage reference transformer plugged into the IoTaWatt via 2.1mm barrel-jack. The initial configuration has this channel pre-configured as a generic “VT” or voltage-transformer.</p>
 
@@ -757,7 +758,7 @@ It's highly recommended to connect the IoTaWatt to a local WiFi network with a w
 
 <p><em>It’s recomended for highest accuracy that calibration is done on your specific unit. See <a href="https://github.com/boblemaire/IoTaWatt/wiki/Reference-Voltage-Calibration">IoTaWatt Wiki.</a></em></p>
 
-<h3 id="configure-current-transformers-cts">2. Configure Current Transformers (CT’s)</h3>
+<h3 id="configure-current-transformers-cts">Configure Current Transformers (CT’s)</h3>
 
 <p>IoTaWatt is compatible with a number of different sized CT sensors. Pre-set calibrations are available for popular models.</p>
 
@@ -858,6 +859,7 @@ If network connectivity is lost, data logged locally to SD card will later be bu
 <hr />
 
 <!--### [Next step: Log Locally &raquo;](/setup/local/)-->
+
 
 
   <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/setup/iotawatt.markdown'>Edit on GitHub</a></div>
