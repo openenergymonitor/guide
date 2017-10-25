@@ -11,24 +11,23 @@ sharing: true
 footer: true
 published: true
 ---
-
 IotaWatt<sup>tm</sup> is an open-hardware 14 channel WiFi connected electric power monitor. It's based on the ESP8266 IoT platform using MCP3208 12 bit ADCs to sample voltage and current.
 
 ![iotawatt](/images/setup/iotawatt-1.jpg)
 
-
 <!-- toc -->
 
+- [Features](#features)
 - [Install](#install)
-  * [1. Clip-on Current Sensor](#1-clip-on-current-sensor)
-  * [2. AC-AC Voltage Sensor Adapter (VT)](#2-ac-ac-voltage-sensor-adapter-vt)
-  * [3. DC 5V USB Adapter](#3-dc-5v-usb-adapter)
-  * [4. Wall Mount](#4-wall-mount)
+  * [Clip-on Current Sensor](#clip-on-current-sensor)
+  * [AC-AC Voltage Sensor Adapter (VT)](#ac-ac-voltage-sensor-adapter-vt)
+  * [DC 5V USB Adapter](#dc-5v-usb-adapter)
+  * [Wall Mount](#wall-mount)
 - [Connect WiFi](#connect-wifi)
 - [Configuration](#configuration)
   * [Configure Input Sensors](#configure-input-sensors)
-    + [1. AC-AC Voltage Transformer (VT)](#1-ac-ac-voltage-transformer-vt)
-    + [2. Configure Current Transformer(s (CT's)](#2-configure-current-transformers-cts)
+    + [AC-AC Voltage Transformer (VT)](#ac-ac-voltage-transformer-vt)
+    + [Configure Current Transformers (CT's)](#configure-current-transformers-cts)
   * [View Local Data](#view-local-data)
     + [Real Time Status](#real-time-status)
     + [View historic local data](#view-historic-local-data)
@@ -70,7 +69,7 @@ This is a quick start guide, for full technical documentation see
 Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated; i.e., switch off the power prior to installing your sensors and proceed slowly with care. If you have any doubts, seek professional assistance.
 </p>
 
-## 1. Clip-on Current Sensor
+## Clip-on Current Sensor
 
 The clip-on current sensor measures the current flow. IoTaWatt is compatible with a number of different sized CT sensors.
 
@@ -87,7 +86,7 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 
 
-## 2. AC-AC Voltage Sensor Adapter (VT)
+## AC-AC Voltage Sensor Adapter (VT)
 
 AC-AC adapter (also known as 'VT' Voltage Transformer) is used to measure AC voltage, power factor and determine direction of current flow.
 
@@ -105,7 +104,7 @@ AC-AC adapter (also known as 'VT' Voltage Transformer) is used to measure AC vol
 
 *Note: Unlike with the emonTx, the AC-AC adapter does not power the IoTaWatt. It just provides an AC voltage reference signal. This is due to the increased power requirement of the IoTaWatt WiFi connectivity*
 
-## 3. DC 5V USB Adapter
+## DC 5V USB Adapter
 
 A 5V DC power supply provides power to the IoTaWatt.
 
@@ -115,7 +114,7 @@ A 5V DC power supply provides power to the IoTaWatt.
 
 IoTaWatt status LED should light up to indicate power-up.
 
-## 4. Wall Mount
+## Wall Mount
 
 IoTaWatt can be optionally wall mounted using enclosed bracket.
 
@@ -174,7 +173,7 @@ Successful startup will be indicated by a dull green glow on the LED. If the LED
 
 ## Configure Input Sensors
 
-### 1. AC-AC Voltage Transformer (VT)
+### AC-AC Voltage Transformer (VT)
 
 You should have installed the device with an AC-AC voltage reference transformer plugged into the IoTaWatt via 2.1mm barrel-jack. The initial configuration has this channel pre-configured as a generic "VT" or voltage-transformer.
 
@@ -192,7 +191,7 @@ You should have installed the device with an AC-AC voltage reference transformer
 *It's recomended for highest accuracy that calibration is done on your specific unit. See [IoTaWatt Wiki.](https://github.com/boblemaire/IoTaWatt/wiki/Reference-Voltage-Calibration)*
 
 
-### 2. Configure Current Transformers (CT's)
+### Configure Current Transformers (CT's)
 
 IoTaWatt is compatible with a number of different sized CT sensors. Pre-set calibrations are available for popular models.
 
@@ -288,3 +287,4 @@ IoTaWatt is fully open-source and has been designed with input from the OpenEner
 ***
 
 <!--### [Next step: Log Locally &raquo;](/setup/local/)-->
+
