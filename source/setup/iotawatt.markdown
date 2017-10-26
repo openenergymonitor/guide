@@ -11,7 +11,7 @@ sharing: true
 footer: true
 published: true
 ---
-IotaWatt<sup>tm</sup> is an open-hardware 14 channel WiFi connected electric power monitor. It's based on the ESP8266 IoT platform using MCP3208 12 bit ADCs to sample voltage and current.
+IoTaWatt<sup>tm</sup> is an open-hardware 14 channel WiFi connected electric power monitor. It is based on the ESP8266 IoT platform using MCP3208 12 bit ADCs to sample voltage and current.
 
 ![iotawatt](/images/setup/iotawatt-1.jpg)
 
@@ -201,7 +201,7 @@ IoTaWatt is compatible with a number of different sized CT sensors. Pre-set cali
 
 ![iotawatt status](/images/setup/iota-ct2.png)
 
-Input list should now show input 0 configured as a AC voltage input and input 1 configured as a current sensor CT input.
+Input list should now show input 0 configured as an AC voltage input and input 1 configured as a current sensor CT input.
 
 Add additional CT's as required:
 
@@ -258,7 +258,7 @@ If network connectivity is lost, data logged locally to SD card will later be bu
 - The IotaWatt can receive automatic OTA updates.
 - Firmware releases are published to [Releases page of the IotaWatt GitHub Repo](https://github.com/boblemaire/IoTaWatt/releases).
 
-IotaWatt checks the [IotaWatt.com](http://IotaWatt.com) site for new software every 1hr. The update process takes less than a minute and the new firmware is authenticated with a digital signature from IotaWatt.
+IoTaWatt checks the [IotaWatt.com](http://IotaWatt.com) site for new software every 1hr. The update process takes less than a minute and the new firmware is authenticated with a digital signature from IoTaWatt.
 
 ![iotawatt status](/images/setup/iota-device.png)
 
