@@ -11,23 +11,31 @@ sharing: true
 footer: true
 published: true
 ---
+### [&laquo; Previous step: Dashboards](/setup/dashboards/)
+
+### [Next step: Add Temperature Node(s) &raquo;](/setup/emonth/)
+
+***
+
+## IoTaWatt Quick Start
+
 IotaWatt<sup>tm</sup> is an open-hardware 14 channel WiFi connected electric power monitor. It's based on the ESP8266 IoT platform using MCP3208 12 bit ADCs to sample voltage and current.
 
-![iotawatt](/images/setup/iotawatt-1.jpg)
+![iotawatt](/images/setup/iotawatt-1.jpg) <a class="btn pull-right" href="http://shop.openenergymonitor.com/iotawatt-wifi-connected-14-channel-electricity-monitor/">View in Shop &rarr; </a>
+
 
 <!-- toc -->
 
-- [Features](#features)
 - [Install](#install)
-  * [Clip-on Current Sensor](#clip-on-current-sensor)
-  * [AC-AC Voltage Sensor Adapter (VT)](#ac-ac-voltage-sensor-adapter-vt)
-  * [DC 5V USB Adapter](#dc-5v-usb-adapter)
-  * [Wall Mount](#wall-mount)
+  * [1. Clip-on Current Sensor](#1-clip-on-current-sensor)
+  * [2. AC-AC Voltage Sensor Adapter (VT)](#2-ac-ac-voltage-sensor-adapter-vt)
+  * [3. DC 5V USB Adapter](#3-dc-5v-usb-adapter)
+  * [4. Wall Mount](#4-wall-mount)
 - [Connect WiFi](#connect-wifi)
 - [Configuration](#configuration)
   * [Configure Input Sensors](#configure-input-sensors)
-    + [AC-AC Voltage Transformer (VT)](#ac-ac-voltage-transformer-vt)
-    + [Configure Current Transformers (CT's)](#configure-current-transformers-cts)
+    + [1. AC-AC Voltage Transformer (VT)](#1-ac-ac-voltage-transformer-vt)
+    + [2. Configure Current Transformer(s (CT's)](#2-configure-current-transformers-cts)
   * [View Local Data](#view-local-data)
     + [Real Time Status](#real-time-status)
     + [View historic local data](#view-historic-local-data)
@@ -49,14 +57,14 @@ This is a quick start guide, for full technical documentation see
 - 1 x AC VRMS Channel
 - Compatible with multiple types of CT sensors and AC-AC voltage sensor adaptor
 - Local SD card logging
-- WiFi connected to post to Emoncms / InfluxDB
+- WiFi connected to post to Emoncms
 - Sample rate: 35-40 channels per second
 - Voltage (VRMS), Power (W) and Energy (kWh) logged to local SD card - every 5s
 - On-board Real-time-clock (RTC) with battery backup
-- Web-config interface config
+- Web-config interface
 - Secure encrypted data connection to emoncms.org
 - Secure automatic OTA firmware updates
-- 5V Micro USB power supply
+- 5V Micro USB power supply required
 - Wall mountable
 - Open-source / hardware
 - CE certified
@@ -284,7 +292,8 @@ IoTaWatt is fully open-source and has been designed with input from the OpenEner
 <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/6SB4fRYQjno" frameborder="0" allowfullscreen></iframe>-->
 <!--</div>-->
 
+<br>
+
 ***
 
-<!--### [Next step: Log Locally &raquo;](/setup/local/)-->
-
+### [Next step: Add Temperature Node(s) &raquo;](/setup/emonth/)
