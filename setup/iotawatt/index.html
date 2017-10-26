@@ -558,20 +558,27 @@ highlight active link...
   <hr class="divider">
   
 
-  <p>IoTaWatt<sup>tm</sup> is an open-hardware 14 channel WiFi connected electric power monitor. It is based on the ESP8266 IoT platform using MCP3208 12 bit ADCs to sample voltage and current.</p>
+  <h3 id="laquo-previous-step-dashboardssetupdashboards"><a href="/setup/dashboards/">« Previous step: Dashboards</a></h3>
 
-<p><img src="/images/setup/iotawatt-1.jpg" alt="iotawatt" /></p>
+<h3 id="next-step-add-temperature-nodes-raquosetupemonth"><a href="/setup/emonth/">Next step: Add Temperature Node(s) »</a></h3>
+
+<hr />
+
+<h2 id="iotawatt-quick-start">IoTaWatt Quick Start</h2>
+
+<p>IotaWatt<sup>tm</sup> is an open-hardware 14 channel WiFi connected electric power monitor. It’s based on the ESP8266 IoT platform using MCP3208 12 bit ADCs to sample voltage and current.</p>
+
+<p><img src="/images/setup/iotawatt-1.jpg" alt="iotawatt" /> <a class="btn pull-right" href="http://shop.openenergymonitor.com/iotawatt-wifi-connected-14-channel-electricity-monitor/">View in Shop → </a></p>
 
 <!-- toc -->
 
 <ul>
-  <li><a href="#features">Features</a></li>
   <li><a href="#install">Install</a>
     <ul>
-      <li><a href="#clip-on-current-sensor">Clip-on Current Sensor</a></li>
-      <li><a href="#ac-ac-voltage-sensor-adapter-vt">AC-AC Voltage Sensor Adapter (VT)</a></li>
-      <li><a href="#dc-5v-usb-adapter">DC 5V USB Adapter</a></li>
-      <li><a href="#wall-mount">Wall Mount</a></li>
+      <li><a href="#1-clip-on-current-sensor">1. Clip-on Current Sensor</a></li>
+      <li><a href="#2-ac-ac-voltage-sensor-adapter-vt">2. AC-AC Voltage Sensor Adapter (VT)</a></li>
+      <li><a href="#3-dc-5v-usb-adapter">3. DC 5V USB Adapter</a></li>
+      <li><a href="#4-wall-mount">4. Wall Mount</a></li>
     </ul>
   </li>
   <li><a href="#connect-wifi">Connect WiFi</a></li>
@@ -579,8 +586,8 @@ highlight active link...
     <ul>
       <li><a href="#configure-input-sensors">Configure Input Sensors</a>
         <ul>
-          <li><a href="#ac-ac-voltage-transformer-vt">AC-AC Voltage Transformer (VT)</a></li>
-          <li><a href="#configure-current-transformers-cts">Configure Current Transformers (CT’s)</a></li>
+          <li><a href="#1-ac-ac-voltage-transformer-vt">1. AC-AC Voltage Transformer (VT)</a></li>
+          <li><a href="#2-configure-current-transformers-cts">2. Configure Current Transformer(s (CT’s)</a></li>
         </ul>
       </li>
       <li><a href="#view-local-data">View Local Data</a>
@@ -611,14 +618,14 @@ This is a quick start guide, for full technical documentation see
   <li>1 x AC VRMS Channel</li>
   <li>Compatible with multiple types of CT sensors and AC-AC voltage sensor adaptor</li>
   <li>Local SD card logging</li>
-  <li>WiFi connected to post to Emoncms / InfluxDB</li>
+  <li>WiFi connected to post to Emoncms</li>
   <li>Sample rate: 35-40 channels per second</li>
   <li>Voltage (VRMS), Power (W) and Energy (kWh) logged to local SD card - every 5s</li>
   <li>On-board Real-time-clock (RTC) with battery backup</li>
-  <li>Web-config interface config</li>
+  <li>Web-config interface</li>
   <li>Secure encrypted data connection to emoncms.org</li>
   <li>Secure automatic OTA firmware updates</li>
-  <li>5V Micro USB power supply</li>
+  <li>5V Micro USB power supply required</li>
   <li>Wall mountable</li>
   <li>Open-source / hardware</li>
   <li>CE certified</li>
@@ -770,7 +777,7 @@ It's highly recommended to connect the IoTaWatt to a local WiFi network with a w
 
 <p><img src="/images/setup/iota-ct2.png" alt="iotawatt status" /></p>
 
-<p>Input list should now show input 0 configured as an AC voltage input and input 1 configured as a current sensor CT input.</p>
+<p>Input list should now show input 0 configured as a AC voltage input and input 1 configured as a current sensor CT input.</p>
 
 <p>Add additional CT’s as required:</p>
 
@@ -829,7 +836,7 @@ If network connectivity is lost, data logged locally to SD card will later be bu
   <li>Firmware releases are published to <a href="https://github.com/boblemaire/IoTaWatt/releases">Releases page of the IotaWatt GitHub Repo</a>.</li>
 </ul>
 
-<p>IoTaWatt checks the <a href="http://IotaWatt.com">IotaWatt.com</a> site for new software every 1hr. The update process takes less than a minute and the new firmware is authenticated with a digital signature from IoTaWatt.</p>
+<p>IotaWatt checks the <a href="http://IotaWatt.com">IotaWatt.com</a> site for new software every 1hr. The update process takes less than a minute and the new firmware is authenticated with a digital signature from IotaWatt.</p>
 
 <p><img src="/images/setup/iota-device.png" alt="iotawatt status" /></p>
 
@@ -856,10 +863,11 @@ If network connectivity is lost, data logged locally to SD card will later be bu
 <!--<iframe width="560" height="315" src="https://www.youtube.com/embed/6SB4fRYQjno" frameborder="0" allowfullscreen></iframe>-->
 <!--</div>-->
 
+<p><br /></p>
+
 <hr />
 
-<!--### [Next step: Log Locally &raquo;](/setup/local/)-->
-
+<h3 id="next-step-add-temperature-nodes-raquosetupemonth-1"><a href="/setup/emonth/">Next step: Add Temperature Node(s) »</a></h3>
 
 
   <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/setup/iotawatt.markdown'>Edit on GitHub</a></div>
@@ -902,8 +910,12 @@ If network connectivity is lost, data logged locally to SD card will later be bu
           <li><a  href='/setup/local/'>4. Log Locally </a></li>
           <li><a  href='/setup/remote/'>5. Log Remotely </a></li>
           <li><a  href='/setup/dashboards/'>6. Dashboards </a></li>
-          <li><a  href='/setup/emontx/'>7. Add Energy Sensing Node(s) </a></li>
-          <li><a  href='/setup/emonth/'>8. Add Temperature Node(s) </a></li>
+          <li><a  href='/setup/energy-node/'>7. Energy Sensing Node(s) </a></li>
+          <ul style="margin-bottom: 0px;;">
+            <li><a  href='/setup/emontx/'>emonTx </a></li>
+            <li><a class='active' href='/setup/iotawatt/'>IoTaWatt </a></li>
+          </ul>
+          <li><a  href='/setup/emonth/'>8. Temperature Node(s) </a></li>
           <li><a  href='/setup/optical-pulse-sensor/'>9. Add Optical Pulse Sensor </a></li>
           <li><a  href='/setup/import/'>10. Import / Backup </a></li>
           <li><a  href='/setup/north-america/'>11. Use in North America </a></li>
