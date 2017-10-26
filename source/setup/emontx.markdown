@@ -15,20 +15,29 @@ footer: true
 
 ***
 
-## Additional energy monitoring nodes
+## emonTx
 
-Additional energy monitoring nodes can be added if more AC circuits require monitoring or the monitoring location of the circuits is inconvenient to access power outlet and network connectivity.
+The emonTx is an low power RF remote sensor node. Data is transmitted to an emonPi or an emonBase via a low power 433MHz radio.
 
-The emonTx is a remote sensor node. Data is transmitted to an emonPi or an emonBase via a low power 433MHz radio.
+![emontx](/images/setup/emontx.jpg)
 
-**Note:** as an alternative option, the emonTx can be used 'standalone' with an ESP8266 WiFi module running EmonESP to post directly to Emoncms without an emonPi / emonBase. See [Using the EmonTx v3 with the ESP8266 Huzzah WIFI module](/setup/esp8266-adapter-emontx/)
+### Key Features
 
-### **[emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/)**
+- 4 x single-phase current sense (CT) channels
+- 1 x AC VRMS Channel
+- Supports multiple temperature sensors
+- Supports Optical Pulse Sensor
+- Can be powered single AC-AC adaptor (DC PSU not required)
+- Battery power option
+- RF Range is approximately similar to home WiFi (real world range depends on many factors e.g. thick stone walls)
+- Up to 2x emonTx can be connected to a single emonPi (up to 30x is possible with manual RF node ID setting*)
+- Approximate three-phase possible with firmware update
+- Wall-mount option
 
-- Energy monitoring add-on node
-- Optional add-on if more then two circuits need to be monitored or if WiFi / Ethernet connectivity is not available at utility meter
-- RF Range is approximately similar to home WiFi and can be affected by obstacles e.g. thick stone walls
-- Up to 2x emonTx can be connected to a single emonPi *
+
+**Note:** it is possible to use emonTx 'standalone' (without emonPi / emonBase) with the addition of an ESP8266 WiFi module running EmonESP to post directly to Emoncms. See [Using emonTx with the ESP8266 WiFi module](/setup/esp8266-adapter-emontx/)
+
+<a class="btn pull-left" href="/setup/emontx">Setup emonTx</a><a class="btn pull-right" href="http://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/">View in Shop &rarr; </a>
 
 
 \* *More than 2x emonTx units can be connected to a single emonPi / emonBase with manual change of RF nodeID. This can be done This can be done via [serial node ID config](https://community.openenergymonitor.org/t/emontx-emonth-configure-rf-settings-via-serial-released-fw-v2-6-v3-2/2064?u=glyn.hudson)*

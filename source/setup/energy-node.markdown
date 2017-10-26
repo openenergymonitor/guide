@@ -29,7 +29,7 @@ The emonTx is an low power RF remote sensor node. Data is transmitted to an emon
 
 ### Key Features
 
-- 14 x single-phase current sense (CT) channels
+- 4 x single-phase current sense (CT) channels
 - 1 x AC VRMS Channel
 - Supports multiple temperature sensors
 - Supports Optical Pulse Sensor
