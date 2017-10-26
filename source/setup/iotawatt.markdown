@@ -1,10 +1,9 @@
 ---
 layout: page
 title: IoTaWatt Quick Start
-description: >-
-  IotaWatt is an open-hardware multi-channel WiFi connected electric power
+description: IotaWatt is an open-hardware multi-channel WiFi connected electric power
   monitor
-date: '2015-10-16 12:00'
+date: '2017-10-16 12:00'
 sidebar: true
 comments: false
 sharing: true
