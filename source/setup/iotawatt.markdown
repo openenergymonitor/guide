@@ -18,7 +18,7 @@ published: true
 
 ## IoTaWatt Quick Start
 
-IotaWatt<sup>tm</sup> is an open-hardware 14 channel WiFi connected electric power monitor. It's based on the ESP8266 IoT platform using MCP3208 12 bit ADCs to sample voltage and current.
+IotaWatt<sup>tm</sup> is an open-hardware 14 channel WiFi connected electric power monitor. It's based on the ESP8266 IoT platform using MCP3208 12 bit ADCs to sample AC voltage and current.
 
 ![iotawatt](/images/setup/iotawatt-1.jpg) <a class="btn pull-right" href="http://shop.openenergymonitor.com/iotawatt-wifi-connected-14-channel-electricity-monitor/">View in Shop &rarr; </a>
 
