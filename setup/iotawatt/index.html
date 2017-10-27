@@ -629,7 +629,7 @@ This is a quick start guide, for full technical documentation see
   <li>Wall mountable</li>
   <li>Open-source / hardware</li>
   <li>CE certified</li>
-  <li>RoHs compliant</li>
+  <li>RoHS compliant</li>
 </ul>
 
 <h1 id="install">Install</h1>
@@ -658,7 +658,7 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 <h2 id="ac-ac-voltage-sensor-adapter-vt">AC-AC Voltage Sensor Adapter (VT)</h2>
 
-<p>AC-AC adapter (also known as ‘VT’ Voltage Transformer) is used to measure AC voltage, power factor and determine direction of current flow.</p>
+<p>AC-AC adapter (also known as ‘VT’ Voltage Transformer) is used to measure AC voltage, power factor and determine the direction of current flow.</p>
 
 <p class="note">
 <strong>Use of an AC-AC voltage sensor plug-in adapter with IoTaWatt is essential</strong>.
@@ -666,7 +666,7 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 <ul>
   <li>Plug the AC-AC adapter into a power outlet</li>
-  <li>This may require installation of a new outlet or extending an existing one</li>
+  <li>This may require installation of a new outlet or extend an existing one</li>
   <li>AC-AC adapter cable can be extended if required</li>
   <li>Plug power connector into the AC socket on the IoTaWatt</li>
   <li>Provides AC waveform reference for accurate Real Power measurements. <a href="https://learn.openenergymonitor.org/electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter">Learn more about measuring voltage with AC-AC power adapter…</a></li>
@@ -681,14 +681,14 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 <ul>
   <li>Plug the DC 5V USB adapter into a power outlet</li>
   <li>Plug the micro-B USB connector into the IotaWatt</li>
-  <li>High quality minimum <a href="https://shop.openenergymonitor.com/power-supplies/">1.2A power supply recommended</a></li>
+  <li>High-quality minimum <a href="https://shop.openenergymonitor.com/power-supplies/">1.2A power supply recommended</a></li>
 </ul>
 
 <p>IoTaWatt status LED should light up to indicate power-up.</p>
 
 <h2 id="wall-mount">Wall Mount</h2>
 
-<p>IoTaWatt can be optionally wall mounted using enclosed bracket.</p>
+<p>IoTaWatt can be optionally wall mounted using the enclosed bracket.</p>
 
 <ul>
   <li>Open IoTaWatt enclosure</li>
@@ -709,13 +709,13 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 It's highly recommended to connect the IoTaWatt to a local WiFi network with a web connection.
 </p>
 
-<p><em>Although the IoTaWatt can run without WiFi an internet connection is required to set the real time clock is not set</em></p>
+<p><em>Although the IoTaWatt can run without WiFi an internet connection is required to set the real-time clock is not set</em></p>
 
 <ul>
   <li>If the device is new and has never been connected to a WiFi network, or the last used network is not available, the IoTaWatt will start up in WiFi AP (access point) mode.</li>
   <li>AP mode is indicated by LED flashes <code class="highlighter-rouge">RED-GREEN-GREEN</code></li>
   <li>Using a mobile device connect to SSID <code class="highlighter-rouge">iota + &lt;unique-number&gt;</code></li>
-  <li><strong>The default WiFi password is <code class="highlighter-rouge">IotaWatt</code> (case sensative)</strong></li>
+  <li><strong>The default WiFi password is <code class="highlighter-rouge">IotaWatt</code> (case sensitive)</strong></li>
   <li>After connecting to IoTaWatt AP a captive portal re-direct should display the IoTaWatt WiFi setup portal</li>
 </ul>
 
@@ -724,7 +724,7 @@ It's highly recommended to connect the IoTaWatt to a local WiFi network with a w
 <p><em>Note: If this page does not display automatically browse to <a href="http://192.168.4.1">http://192.168.4.1</a></em></p>
 
 <ul>
-  <li>Follow on screen instructions to connect IoTaWatt to your local WiFi network.</li>
+  <li>Follow on-screen instructions to connect IoTaWatt to your local WiFi network.</li>
   <li>Once connected, the name of the new WiFi network will be saved, and the device will continue its startup procedure.</li>
   <li>If the LED begins blinking a rapid dull green, proceed to the next step Device Configuration.</li>
   <li>If the device displays another three colour LED sequence, see <a href="https://github.com/boblemaire/IoTaWatt/wiki/Troubleshooting">Troubleshooting (wiki)</a>.</li>
@@ -736,7 +736,7 @@ It's highly recommended to connect the IoTaWatt to a local WiFi network with a w
 
 <p>The IotaWatt is configured via a web-interface, see online demo at <a href="http://iotawatt.com">iotawatt.com</a></p>
 
-<p>Successful startup will be indicated by a dull green glow on the LED. If the LED is off, or blinking a three-colour sequence, see <a href="https://github.com/boblemaire/IoTaWatt/wiki/Troubleshooting">Troubleshooting (wiki)</a>.</p>
+<p>A successful startup will be indicated by a dull green glow on the LED. If the LED is off, or blinking a three-colour sequence, see <a href="https://github.com/boblemaire/IoTaWatt/wiki/Troubleshooting">Troubleshooting (wiki)</a>.</p>
 
 <ul>
   <li>After successful startup, you can connect to the device with your web browser</li>
@@ -757,13 +757,13 @@ It's highly recommended to connect the IoTaWatt to a local WiFi network with a w
 
 <ul>
   <li>Click on <code class="highlighter-rouge">[0]</code> input to edit the voltage input channel</li>
-  <li>Select your VT (AC-AC adapter) calibration pre-set from the drop down list</li>
+  <li>Select your VT (AC-AC adapter) calibration pre-set from the drop-down list</li>
   <li>Click <code class="highlighter-rouge">Save</code></li>
 </ul>
 
 <p><img src="/images/setup/iota-input2.png" alt="iotawatt status" /></p>
 
-<p><em>It’s recomended for highest accuracy that calibration is done on your specific unit. See <a href="https://github.com/boblemaire/IoTaWatt/wiki/Reference-Voltage-Calibration">IoTaWatt Wiki.</a></em></p>
+<p><em>It’s recommended for highest accuracy that calibration is done on your specific unit. See <a href="https://github.com/boblemaire/IoTaWatt/wiki/Reference-Voltage-Calibration">IoTaWatt Wiki.</a></em></p>
 
 <h3 id="configure-current-transformers-cts">Configure Current Transformers (CT’s)</h3>
 
@@ -820,8 +820,6 @@ It's highly recommended to connect the IoTaWatt to a local WiFi network with a w
 <p><img src="/images/setup/iota-emoncms.png" alt="iotawatt status" /></p>
 
 <p>* Emoncms UserID can be found in the <code class="highlighter-rouge">Setup &gt; Account</code> page of Emoncms.org.</p>
-
-<p>Encrpted protocol is specific to Emoncms.org, posting to other Emoncms sever (e.g. emonPi) can only be done using un-encrypted http.</p>
 
 <p class="note">
 If network connectivity is lost, data logged locally to SD card will later be bulk-uploaded to Emoncms when connectivity is restored.
