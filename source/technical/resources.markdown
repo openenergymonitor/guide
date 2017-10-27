@@ -18,67 +18,73 @@ published: true
 
 - ### {% linkable_title emonPi %}
   - [User Guide](https://guide.openenergymonitor.org/setup/)
-  - [emonPi Firmware](https://github.com/openenergymonitor/emonpi)
-  - [emonPi Hardware Docs](https://wiki.openenergymonitor.org/index.php?title=EmonPi)
-  - [emonPi Hardware CAD Design](https://github.com/openenergymonitor/Hardware/tree/master/emonPi)
-  - [emonPi Forum Category](https://community.openenergymonitor.org/c/hardware/emonpi)
+  - [Firmware](https://github.com/openenergymonitor/emonpi)
+  - [Hardware Docs](https://wiki.openenergymonitor.org/index.php?title=EmonPi)
+  - [Hardware CAD Design](https://github.com/openenergymonitor/Hardware/tree/master/emonPi)
+  - [Forum Category](https://community.openenergymonitor.org/c/hardware/emonpi)
 
 <br/>
 
 - ### {% linkable_title RFM69Pi %}
-  - [RFM69Pi Firmware](https://github.com/openenergymonitor/rfm2pi)
-  - [RFM69Pi Hardware Docs](https://wiki.openenergymonitor.org/index.php/RFM69Pi_V3)
-  - [RFM69Pi Hardware CAD Design](https://github.com/openenergymonitor/rfm2pi)
-  - [RFM69Pi Forum Category](https://community.openenergymonitor.org/c/hardware/rfm69pi)
+  - [Firmware](https://github.com/openenergymonitor/rfm2pi)
+  - [Hardware Docs](https://wiki.openenergymonitor.org/index.php/RFM69Pi_V3)
+  - [Hardware CAD Design](https://github.com/openenergymonitor/rfm2pi)
+  - [Forum Category](https://community.openenergymonitor.org/c/hardware/rfm69pi)
 
 <br/>
 
 - ### {% linkable_title emonTx V3 %}
   - [User Guide](https://guide.openenergymonitor.org/setup/emontx/)
-  - [emonTx V3 Hardware & Offical Firmware](https://github.com/openenergymonitor/emontx3)
+  - [Hardware & Offical Firmware](https://github.com/openenergymonitor/emontx3)
   - [Other emonTx firmware examples](https://github.com/openenergymonitor/emonTxFirmware)
-  - [emonTx V3 Hardware Docs](https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3.4)
-  - [emonTx Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
+  - [Hardware Docs](https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3.4)
+  - [Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
+
+- ### {% linkable_title IoTaWAtt %}
+  - [Quick Start Guide](https://guide.openenergymonitor.org/setup/iotawatt)
+  - [Technical docs (wiki)](https://github.com/boblemaire/IoTaWatt/wiki)
+  - [Hardware & Firmware](https://github.com/boblemaire/IoTaWatt)
+  - [Forum Category](https://community.openenergymonitor.org/c/hardware/iotawatt)
   
   <br/>
   
 - ### {% linkable_title emonESP %}
   - [User Guide](https://guide.openenergymonitor.org/setup/esp8266-adapter-emontx/)
   - [Firmware & Hardware](https://github.com/openenergymonitor/emonesp)
-  - [emonESP Forum Category](https://community.openenergymonitor.org/c/hardware/emonesp)
+  - [Forum Category](https://community.openenergymonitor.org/c/hardware/emonesp)
  
 <br/>
  
  - ### {% linkable_title emonTx V2 %}
    - [Build Guide](https://github.com/openenergymonitor/emontx2/blob/master/buildguide.md)
-   - [emonTx V2 Hardware & Firmware](https://github.com/openenergymonitor/emontx2)
-   - [emonTx Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
+   - [Hardware & Firmware](https://github.com/openenergymonitor/emontx2)
+   - [Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
 
 <br/>
 
 - ### {% linkable_title emonTx Arduino Shield %}
   - [User Guide](https://wiki.openenergymonitor.org/index.php/EmonTx_Arduino_Shield#emonTx_Arduino_Shield)
-  - [emonTx Shield Firmware](https://github.com/openenergymonitor/emontx-shield)
-  - [emonTx Shield Hardware Docs](https://wiki.openenergymonitor.org/index.php/EmonTx_Arduino_Shield#emonTx_Arduino_Shield)
-  - [emonTx Shield Hardware Design](https://github.com/openenergymonitor/emontx-shield)
-  - [emonTx Shield Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
+  - [Firmware](https://github.com/openenergymonitor/emontx-shield)
+  - [Hardware Docs](https://wiki.openenergymonitor.org/index.php/EmonTx_Arduino_Shield#emonTx_Arduino_Shield)
+  - [Hardware Design](https://github.com/openenergymonitor/emontx-shield)
+  - [Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
 
 <br/>
 
 - ### {% linkable_title emonTH V1%}
   - [User Guide](https://guide.openenergymonitor.org/setup/emonth)
-  - [emonTH Firmware](https://github.com/openenergymonitor/emonth)
-  - [emonTH Hardware Docs](https://wiki.openenergymonitor.org/index.php/EmonTH_V1.5)
-  - [emonTH Hardware CAD Design](https://github.com/openenergymonitor/emonth)
-  - [emonTH Forum Category](https://community.openenergymonitor.org/c/hardware/emonth)
+  - [Firmware](https://github.com/openenergymonitor/emonth)
+  - [Hardware Docs](https://wiki.openenergymonitor.org/index.php/EmonTH_V1.5)
+  - [Hardware CAD Design](https://github.com/openenergymonitor/emonth)
+  - [Forum Category](https://community.openenergymonitor.org/c/hardware/emonth)
 
 <br/>
 
 - ### {% linkable_title emonTH V2%}
   - [User Guide](https://guide.openenergymonitor.org/setup/emonth/)
-  - [emonTH Firmware](https://github.com/openenergymonitor/emonth2)
-  - [emonTH Hardware CAD Design](https://github.com/openenergymonitor/emonth2)
-  - [emonTH Forum Category](https://community.openenergymonitor.org/c/hardware/emonth)
+  - [Firmware](https://github.com/openenergymonitor/emonth2)
+  - [Hardware CAD Design](https://github.com/openenergymonitor/emonth2)
+  - [Forum Category](https://community.openenergymonitor.org/c/hardware/emonth)
 
 <br/>
 
@@ -92,14 +98,24 @@ published: true
 
 - ### {% linkable_title MQTT WiFi Relay %}
   - [User Guide](https://guide.openenergymonitor.org/integrations/mqtt-relay/)
-  - [WiFi Relay Firmware](https://github.com/openenergymonitor/ESP8266_Relay_Board)
-  - [WiFi Relay Hardware CAD Design](https://github.com/mharizanov/ESP8266_Relay_Board)
-  - [WiFi Relay Forum Category](https://community.openenergymonitor.org/c/hardware/wifi-relay)
+  - [Hardware CAD Design](https://github.com/mharizanov/ESP8266_Relay_Board)
+  - [Firmware](https://github.com/openenergymonitor/ESP8266_Relay_Board)
+  - [Forum Category](https://community.openenergymonitor.org/c/hardware/wifi-relay)
 
 <br/>
 
 - ### {% linkable_title Optical Pulse Sensor %}
   - [Optical Pulse Sensor Docs](https://guide.openenergymonitor.org/setup/optical-pulse-sensor)
+
+<br/>
+
+- ### {% linkable_title Optical OpenEVSE %}
+  - [User Guide](https://guide.openenergymonitor.org/integrations/openevse)
+  - [Build Guide](http://openevse.dozuki.com/Guide/OpenEVSE+50A+Charging+Station/8)
+  - [WiFi Gateway User Guide & FW](https://github.com/openevse/ESP8266_WiFi_v2.x/)
+  - [OpenEVSE Controller FW](https://github.com/OpenEVSE/open_evse)
+  - [OpenEVSE Controller Hardware](https://github.com/OpenEVSE/OpenEVSE_PLUS)
+  - [OpenEVSE Safety Features](https://openev.freshdesk.com/support/solutions/articles/6000113537-openevse-safety-features)
 
 ***
 
