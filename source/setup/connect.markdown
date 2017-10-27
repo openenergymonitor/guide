@@ -32,16 +32,14 @@ This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/
 **Emoncms local:** Emoncms instance running locally on the emonPi
 **Emoncms remote:** Emoncms.org cloud server
 
-<p class="note">
-<b>emonPi / emonBase purchased before July 2017 do not have the ability to broadcast a setup WiFi access point. For older units please follow '1b' instructions to connect temporary via Ethernet then connect to local WiFi if required.</b>
-<br>
-</p>
-
 emonPi can be connected to the internet via Ethernet or WiFi, or operate in stand-alone WiFi access point mode.
 
 ### {% linkable_title 1a. Connect to WiFi %}
 
-*Note: All emonPi's purchased during or after July 2017 have the ability to broadcast a WiFi access point and display a setup wizard to connect to local WiFi. For older units skip to [instructions 1b](#1b-connect-to-ethernet). RaspberryPi 3 is required for WiFi AP*
+<p class="note">
+<b>emonPi / emonBase purchased before July 2017 do not have the ability to broadcast a setup WiFi access point. For older units please follow '1b' instructions to connect temporary via Ethernet then connect to local WiFi if required.</b>
+<br>
+</p>
 
 ![emonPi WiFi](/images/setup/emonpi_wifi.png)
 
