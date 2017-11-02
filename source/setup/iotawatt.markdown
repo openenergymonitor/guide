@@ -47,7 +47,7 @@ IotaWatt<sup>tm</sup> is an open-hardware 14 channel WiFi connected electric pow
 
 <p class='note info'>
 This is a quick start guide, for full technical documentation see
-<a href="https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/installation">IoTaWatt GitHub repo Wiki.</a>
+<a href="https://github.com/boblemaire/IoTaWatt/wiki">IoTaWatt GitHub repo Wiki.</a>
 </p>
 
 # Features
@@ -274,13 +274,13 @@ IotaWatt checks the [IotaWatt.com](http://IotaWatt.com) site for new software ev
 
 ## Technical Wiki
 
-For technical IoTaWatt documentation see [IoTaWatt GitHub repo Wiki.](github.com/boblemaire/IoTaWatt/wiki)
+For technical IoTaWatt documentation see [IoTaWatt GitHub repo Wiki](https://github.com/boblemaire/IoTaWatt/wiki).
 
 ## Open Source
 
 IoTaWatt is fully open-source and has been designed with input from the OpenEnergyMonitor community.
 
-- [IoTaWatt Hardware & Firmware GitHub Repo](github.com/boblemaire/IoTaWatt)
+- [IoTaWatt Hardware & Firmware GitHub Repo](https://github.com/boblemaire/IoTaWatt)
 - [IoTaWatt Community Forum Sub-category](https://community.openenergymonitor.org/c/hardware/iotawatt)
 
 *IoTaWatt is designed and manufactured by Bob Lemaire [@overeasy](https://community.openenergymonitor.org/u/overeasy/) in partnership with OpenEnergyMonitor.*
