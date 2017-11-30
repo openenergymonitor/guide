@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "MQTT"
-description: "dev2"
+description: "emonPi / emonBase MQTT technical guide"
 date: 2014-12-18 21:49
 sidebar: true
 comments: false

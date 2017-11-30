@@ -38,6 +38,7 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9.7)
     mercenary (0.3.6)
+    multi_json (1.12.2)
     octopress (3.0.11)
       jekyll (>= 2.0)
       mercenary (~> 0.3.2)
@@ -62,10 +63,8 @@ GEM
       octopress-tag-helpers (~> 1.0)
     octopress-tag-helpers (1.0.8)
       jekyll (>= 2.0)
-    posix-spawn (0.3.11)
-    pygments.rb (0.6.3)
-      posix-spawn (~> 0.3.6)
-      yajl-ruby (~> 1.2.0)
+    pygments.rb (1.1.2)
+      multi_json (>= 1.0.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -95,7 +94,6 @@ GEM
       ref
     tilt (2.0.2)
     titlecase (0.1.1)
-    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
@@ -113,7 +111,7 @@ DEPENDENCIES
   octopress (~> 3.0.11)
   octopress-filters
   octopress-include-tag
-  pygments.rb (~> 0.6.3)
+  pygments.rb (~> 1.1.0)
   rake (~> 10.5.0)
   rake-jekyll (~> 1.1.0)
   rb-fsevent (~> 0.9)

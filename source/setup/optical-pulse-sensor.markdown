@@ -149,7 +149,7 @@ The optical pulse sensor should work with all utility meters that have an LED or
 			</td>
 			<td><a href="/images/setup/meters/Elster_A1140.jpg"><img alt="" src="/images/setup/meters/Elster_A1140.jpg" style="width: 100px; height: 75px;" /></a></td>
 			<td>1000</td>
-			<td>1000 / 5000 = <b>1</b></td>
+			<td>1000 / 1000 = <b>1</b></td>
 		</tr>
 		<tr>
 			<td>

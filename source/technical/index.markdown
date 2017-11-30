@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Overview
-description: dev1
+title: Technical Overview
+description: emonPi Technical Overview
 date: "2015-05-11 12:00"
 sidebar: true
 comments: false
