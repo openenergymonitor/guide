@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Exporting CSV - Guide | OpenEnergyMonitor</title>
+    <title>Emoncms Graphs - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="Exporting CSV">
+    <meta name="description" content="View Emoncms graphs">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/export-csv/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/emoncms-graphs/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Exporting CSV">
+    <meta property="og:title" content="Emoncms Graphs">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/export-csv/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/emoncms-graphs/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Exporting CSV">
+    <meta property="og:description" content="View Emoncms graphs">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Exporting CSV">
-    <meta name="twitter:description" content="Exporting CSV">
+    <meta name="twitter:title" content="Emoncms Graphs">
+    <meta name="twitter:description" content="View Emoncms graphs">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -552,7 +552,7 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      Exporting CSV
+      Emoncms Graphs
     </h1>
   </header>
   <hr class="divider">
@@ -561,56 +561,28 @@ highlight active link...
   <h2 id="using-emoncms">Using Emoncms</h2>
 
 <ul>
-  <li><a href="/setup/emoncms-graphs/">View Graphs</a></li>
+  <li><a class="active" href="/setup/emoncms-graphs/">View Graphs</a></li>
   <li><a href="/setup/daily-kwh/">Daily kWh</a></li>
   <li><a href="/setup/daily-averages/">Daily Averages </a></li>
-  <li><a class="active" href="/setup/export-csv/">Exporting CSV </a></li>
+  <li><a href="/setup/export-csv/">Exporting CSV </a></li>
   <li><a href="/setup/histograms/">Histograms </a></li>
 </ul>
 
 <hr />
 
-<p>Its possible to easily export data selected using the emoncms data viewer by clicking on the <strong>Show CSV Output</strong> button at the bottom of the page. Multiple feeds can be selected with datapoints aligned to the same timestamps.</p>
+<h2 id="using-emoncms-graphs">Using Emoncms Graphs</h2>
 
-<p>The data viewer CSV export tool is limited to 3000 datapoints. For larger exports the export tool that is part of the feed interface can be used, see below.</p>
+<p>The Emoncms graphs can be used to quickly explore data. It’s possible to share and embed pre-made graphs into Emoncms Dashboards.</p>
 
-<h3 id="data-viewer-csv-export-tool">Data viewer CSV export tool</h3>
+<h2 id="video-guide">Video guide</h2>
 
-<p>There are 3 timestamp formats available:</p>
-
-<ol>
-  <li>Unix timestamp</li>
-  <li>Seconds since the start of the export</li>
-  <li>Date time string “2016-04-06 00:00:00”</li>
-</ol>
-
-<p><strong>Unix timestamp</strong></p>
-
-<p><img src="/images/setup/csv_export_1.png" alt="csv_export_1.png" /></p>
-
-<p><strong>Date time string (i.e: 2016-04-06 00:00:00)</strong></p>
-
-<p><img src="/images/setup/csv_export_2.png" alt="csv_export_2.png" /></p>
-
-<p><strong>Seconds since the start of the export</strong></p>
-
-<p><img src="/images/setup/csv_export_3.png" alt="csv_export_3.png" /></p>
-
-<p><strong>Example of exporting multiple feeds</strong></p>
-
-<p>Multiple feeds can be exported for the same timestamps by selecting multiple feeds from the left hand feed selection menu:</p>
-
-<p><img src="/images/setup/csv_export_4.png" alt="csv_export_4.png" /></p>
-
-<h3 id="full-export-via-feed-interface">Full Export via Feed interface</h3>
-
-<p>Full feed exports can be obtained via the export tool that can be accessed from the feed list interface. The start time, end time interval and timezone offset can be selected an estimate is given of the download size.</p>
-
-<p><img src="/images/setup/csvexportfromfeeds.png" alt="csvexportfromfeeds.png" /></p>
+<div class="videoWrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4XVRtCnLIYA" frameborder="0" allowfullscreen=""></iframe>
+</div>
 
 
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/setup/export-csv.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/setup/export-csv.markdown'>Edit on GitHub Prose</a></div>
+  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/setup/emoncms-graphs.markdown'>Edit on GitHub</a></div>
+<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/setup/emoncms-graphs.markdown'>Edit on GitHub Prose</a></div>
 
 </article>
 
@@ -663,10 +635,10 @@ highlight active link...
         <li>
           <b>Emoncms</b>
           <ul>
-          <li><a  href='/setup/emoncms-graphs/'>View Graphs </a></li>
+          <li><a class='active' href='/setup/emoncms-graphs/'>View Graphs </a></li>
           <li><a  href='/setup/daily-kwh/'>Daily kWh </a></li>
           <li><a  href='/setup/daily-averages/'>Daily Averages </a></li>
-          <li><a class='active' href='/setup/export-csv/'>Exporting CSV </a></li>
+          <li><a  href='/setup/export-csv/'>Exporting CSV </a></li>
           <li><a  href='/setup/histograms/'>Histograms </a></li>
           <li><a  href='/technical/api/'>Emoncms API </a></li>
         </ul>
