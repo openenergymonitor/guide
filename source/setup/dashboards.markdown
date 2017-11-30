@@ -36,6 +36,13 @@ published: true
 
 ![My solar PV](/images/applications/solar-pv//my-solarpv1.png)
 
+### Application Specific Dashboards Video Guide
+
+
+<div class='videoWrapper'>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aYt7-vK0JsI" frameborder="0" allowfullscreen></iframe>
+</div>
+
 
 ### [2. Emoncms Android App](https://play.google.com/store/apps/details?id=org.emoncms.myapps)
 
@@ -60,7 +67,24 @@ Custom dashboards can be created by drag and dropping widgets and graphs onto a 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eqN9rc9VnqI" frameborder="0" allowfullscreen></iframe>
 </div>
 
+Community created video tutorial for creating a Emoncms dashboard with a custom background (advanced):
+
+<div class='videoWrapper'>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/N4xHyiE6mc0" frameborder="0" allowfullscreen></iframe>
+</div>
+
 <br>
+
+***
+
+## Advanced Emoncms
+
+For tutorials on the more advanced functions see the Emoncms user guide section:
+
+- {% active_link /setup/daily-kwh Daily kWh%}
+- {% active_link /setup/daily-averages Daily Averages %}
+- {% active_link /setup/export-csv Exporting CSV %}
+- {% active_link /setup/histograms Histograms %}
 
 ***
 
