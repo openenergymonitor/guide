@@ -12,13 +12,15 @@ published: true
 
 
 ## Using Emoncms
-        
-- {% active_link /setup/daily-kwh Daily kWh%}
-- {% active_link /setup/daily-averages Daily Averages %}
-- {% active_link /setup/export-csv Exporting CSV %}
-- {% active_link /setup/histograms Histograms %}
-   
-        
+
+- {% active_link /setup/emoncms-graphs/ View Graphs%}
+- {% active_link /setup/daily-kwh/ Daily kWh%}        
+- {% active_link /setup/daily-averages/ Daily Averages %}
+- {% active_link /setup/export-csv/ Exporting CSV %}
+- {% active_link /setup/histograms/ Histograms %}
+
+
+
 ***
 
 Its possible to easily export data selected using the emoncms data viewer by clicking on the **Show CSV Output** button at the bottom of the page. Multiple feeds can be selected with datapoints aligned to the same timestamps.
@@ -56,5 +58,3 @@ Multiple feeds can be exported for the same timestamps by selecting multiple fee
 Full feed exports can be obtained via the export tool that can be accessed from the feed list interface. The start time, end time interval and timezone offset can be selected an estimate is given of the download size.
 
 ![csvexportfromfeeds.png](/images/setup/csvexportfromfeeds.png)
-
-

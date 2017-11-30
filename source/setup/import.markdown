@@ -18,7 +18,7 @@ The [Emoncms backup module](https://github.com/emoncms/backup) can be used to ba
 
 <p class="note">
 Currently the Backup Module can only be used with Local Emoncms <strong>not</strong> Emoncms.org </p>
- 
+
 ## Backup / Export
 
 ### Export from an older emonPi / emonBase
@@ -90,7 +90,7 @@ $(document).ready(function(){
 		changeText: 0, // if you dont want the button text to change, set this to 0
 		showText: 'View',// the button text to show when a div is closed
 		hideText: 'Close' // the button text to show when a div is open
-					 
+
 	});
 
 

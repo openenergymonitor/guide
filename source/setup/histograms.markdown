@@ -12,13 +12,15 @@ published: true
 
 
 ## Using Emoncms
-        
-- {% active_link /setup/daily-kwh Daily kWh%}
-- {% active_link /setup/daily-averages Daily Averages %}
-- {% active_link /setup/export-csv Exporting CSV %}
-- {% active_link /setup/histograms Histograms %}
-   
-        
+
+- {% active_link /setup/emoncms-graphs/ View Graphs%}
+- {% active_link /setup/daily-kwh/ Daily kWh%}        
+- {% active_link /setup/daily-averages/ Daily Averages %}
+- {% active_link /setup/export-csv/ Exporting CSV %}
+- {% active_link /setup/histograms/ Histograms %}
+
+
+
 ***
 
 The Emoncms Data Viewer features a histogram tool for determining the time spent at different values or energy used at different power levels.

@@ -14,7 +14,7 @@ OpenEVSE is a fully open-source EVSE (Electric Vehicle Supply Equipment) chargin
 
 > An EVSE charging station is a device an electric car (EV) is plugged into to charge. It communicates with the car to agree on the fastest and safest charging rate that both the car and the power supply can support.
 
-![Nissan LEAF OpenEVSE](/images/integrations/leaf-openevse.jpg)
+![Nissan LEAF OpenEVSE](/images/integrations/openevse-banner.png)
 
 *OpenEnergyMonitor have been collaborating with OpenEV to improve energy monitoring integration and control as well as tailoring the setup for use in Europe and the UK. This page provides Europe / UK specific setup instructions and considerations.*
 
@@ -25,7 +25,7 @@ See our [blog post](https://blog.openenergymonitor.org/2017/01/openevse-build/) 
 <br>
 
 <div class='videoWrapper'>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/A9D48V1D1G4" frameborder="0" allowfullscreen></iframe>
+<iframe width="250" height="157" src="https://www.youtube.com/embed/A9D48V1D1G4" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <br>

@@ -81,10 +81,12 @@ Community created video tutorial for creating a Emoncms dashboard with a custom 
 
 For tutorials on the more advanced functions see the Emoncms user guide section:
 
-- {% active_link /setup/daily-kwh Daily kWh%}
-- {% active_link /setup/daily-averages Daily Averages %}
-- {% active_link /setup/export-csv Exporting CSV %}
-- {% active_link /setup/histograms Histograms %}
+- {% active_link /setup/emoncms-graphs/ View Graphs%}   
+- {% active_link /setup/daily-kwh/ Daily kWh%}
+- {% active_link /setup/daily-averages/ Daily Averages %}
+- {% active_link /setup/export-csv/ Exporting CSV %}
+- {% active_link /setup/histograms/ Histograms %}
+
 
 ***
 

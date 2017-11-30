@@ -12,13 +12,15 @@ published: true
 
 
 ## Using Emoncms
-        
-- {% active_link /setup/daily-kwh Daily kWh%}
-- {% active_link /setup/daily-averages Daily Averages %}
-- {% active_link /setup/export-csv Exporting CSV %}
-- {% active_link /setup/histograms Histograms %}
-   
-        
+
+- {% active_link /setup/emoncms-graphs/ View Graphs%}
+- {% active_link /setup/daily-kwh/ Daily kWh%}        
+- {% active_link /setup/daily-averages/ Daily Averages %}
+- {% active_link /setup/export-csv/ Exporting CSV %}
+- {% active_link /setup/histograms/ Histograms %}
+
+
+
 ***
 
 Emoncms supports the creation of daily, weekly, monthly kWh data and graph's from several different emoncms input types.
@@ -87,4 +89,3 @@ Raw data wh accumulator view:
 To convert the wh accumulator feed to daily KWh bargraph using the graph tool select Window `type-daily` feed `type=Bars` and `delta = 1` then click `reload`
 
 <img src="/images/setup/wh-accumulator-bargraph.png" />
-
