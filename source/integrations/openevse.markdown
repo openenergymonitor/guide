@@ -25,13 +25,13 @@ See our [blog post](https://blog.openenergymonitor.org/2017/01/openevse-build/) 
 <br>
 
 <div class='videoWrapper'>
-<iframe width="250" height="157" src="https://www.youtube.com/embed/A9D48V1D1G4" frameborder="0" allowfullscreen></iframe>
+<iframe width="300" height="169" src="https://www.youtube.com/embed/A9D48V1D1G4" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <br>
 
 <div class='videoWrapper'>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cIvmYP57eOo" frameborder="0" allowfullscreen></iframe>
+<iframe width="300" height="169" src="https://www.youtube.com/embed/cIvmYP57eOo" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <br>
