@@ -103,7 +103,7 @@ If using the optional WiFi module:
 
 - Once powered up connect to WiFi network with SSID `OpenEVSE_xxxx` with password `openevse` using a computer or mobile device.
 
-- You should get directed to a captive portal where you choose to join a local network. If captive portal does not work, browse to [http:192.168.4.1](http:192.168.4.1).
+- You should get directed to a captive portal where you choose to join a local network. If captive portal does not work, browse to [http://192.168.4.1](http://192.168.4.1).
 
 - Setup Emoncms / MQTT settings
 
