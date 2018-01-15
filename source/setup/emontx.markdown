@@ -40,7 +40,7 @@ The emonTx is an low power RF remote sensor node. Data is transmitted to an emon
 <a class="btn pull-left" href="/setup/emontx">Setup emonTx</a><a class="btn pull-right" href="http://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/">View in Shop &rarr; </a>
 
 
-\* *More than 2x emonTx units can be connected to a single emonPi / emonBase with manual change of RF nodeID. This can be done This can be done via [serial node ID config](https://community.openenergymonitor.org/t/emontx-emonth-configure-rf-settings-via-serial-released-fw-v2-6-v3-2/2064?u=glyn.hudson)*
+
 
 ![emontx](/images/setup/emontx.jpg)
 
@@ -50,8 +50,10 @@ The emonTx is an low power RF remote sensor node. Data is transmitted to an emon
 
 #### 1. DIP Switch Config
 
-- If more than one emonTx is to be used with the same base-station set the node ID using the [on-board DIP switches](https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4#DIP_Switch_Config).
- - *USA mode can also be toggled using DIP switches*
+- If more than one emonTx is to be used with the same base-station set the node ID using the [on-board DIP switches](https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4#DIP_Switch_Config)*.
+ - *USA mode (enable 120V AC-AC adaptor calibration) can be toggled using DIP switches. See Wiki link above for further details*
+ 
+ \* *More than 2x emonTx units can be connected to a single emonPi / emonBase with manual change of RF nodeID. This can be done This can be done via [serial node ID config](https://community.openenergymonitor.org/t/emontx-emonth-configure-rf-settings-via-serial-released-fw-v2-6-v3-2/2064?u=glyn.hudson)*
 
 #### 2. Install Sensors
 

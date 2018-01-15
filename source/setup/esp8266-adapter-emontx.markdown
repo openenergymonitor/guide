@@ -83,4 +83,6 @@ If you have an emonBase or emonPi on your local network the default settings are
 **password:** emonpimqtt2016<br>
 **base topic:** emon/emontx<br>
 
+*Note: on some networks that don't support hostname lookup you will need to use the IP address of the emonPi as the hostname. Also sone networks report local hostname with the .local extension e.g. http://emonpi.local*
+
 See [emonPi technical overview](/technical) and [MQTT](/technical/mqtt) User Guide pages for more info.
