@@ -40,7 +40,9 @@ published: true
   - [Hardware Docs](https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3.4)
   - [Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
 
-- ### {% linkable_title IoTaWAtt %}
+<br/>
+
+- ### {% linkable_title IoTaWatt %}
   - [Quick Start Guide](https://guide.openenergymonitor.org/setup/iotawatt)
   - [Technical docs (wiki)](https://github.com/boblemaire/IoTaWatt/wiki)
   - [Hardware & Firmware](https://github.com/boblemaire/IoTaWatt)
@@ -128,12 +130,12 @@ published: true
 <br/>
 
 - ### {% linkable_title emonSD Pre-built SD card%}
-  - [emonSD Download repository & changelog](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log)
+  - [EmonSD Download repository & changelog](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log)
   - [emonSD Build Guide](https://github.com/openenergymonitor/emonpi/blob/master/docs/SD-card-build.md)
   - [emonSD forum category](https://community.openenergymonitor.org/c/emonsd)
 
 <br/>
 
 - ### {% linkable_title emonHub %}
-  - [emonHub GitHub](https://github.com/openenergymonitor/emonhub)
+  - [EmonHub GitHub](https://github.com/openenergymonitor/emonhub)
   - [Configuring emonHub](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md)
