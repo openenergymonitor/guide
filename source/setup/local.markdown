@@ -42,7 +42,7 @@ Input data is not saved to disk. To save an input Emoncms Input Processing is us
 - Choose required Input Process e.g `Log to Feed`
 - Create a new feed giving it a name e.g. `use` or log to an existing feed *
 - Select the default `PHPFINA` Feed Engine
-- Select a logging interval e.g. `10s` **
+- Select a logging interval e.g. `10s` for emonTx/emonpi or `60s` for emonTH**
 - Click add to `Add` to add that input process
 
 ![Input Processing Power](/images/setup/local-log2.png)
@@ -80,7 +80,7 @@ Note: no data will be visible immediately. Wait a few hours to build up some dat
 
 \* Using standard feed names such as `use`, `use_kwh`, `solar`, `solar_kwh` `import` and `import_kwh` (**case sensitive**) will automate the setup of MyElectric, MySolar PV and Android app dashboards. See [Setup > Dashboards](/setup/dashboards) and [Home Energy](/applications/home-energy) and [Solar PV](/applications/solar-pv) applications pages for more info.
 
-\** Feed interval loging time should not be less (faster) then the default node update rate. Choosing a longer (slower) update rate is fine and will conserve disk space:
+\** IMPORTANT: Feed interval logging time should not be less (faster) then the default node update rate. Choosing a longer (slower) update rate is fine and will conserve disk space:
 
 | **Node** | **Max Update Rate**  |
 | emonPi | 5s  |

@@ -73,6 +73,12 @@ The emonTH is compatible with emonPi / emonBase. RF transmission from the emonTH
 
 #### 1. [Log inputs to feeds](/setup/local/)
 
+<p class="note">
+<b>Important: the emonTH reports data at a 60s interval, it's important to log the data to emoncms with a 60s inerval as shown below:</b>
+</p>
+
+![emonth input process](/images/setup/emonth-inputprocess.png)
+
 **Note: if using more than 4x emonTH units (with custom RF node ID or modified firmware) [`emonhub.conf` node decoders will need to be setup](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md).**
 
 <br>
