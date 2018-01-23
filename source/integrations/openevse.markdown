@@ -48,6 +48,8 @@ The standard build guide from OpenEV can be followed taking into account the spe
 
 **OpenEVSE P50D Assembly guide**: [**Web**](http://openevse.dozuki.com/Guide/OpenEVSE+50A+Charging+Station/8), [**pdf**](http://openevse.dozuki.com/GuidePDF/link/8/en)
 
+**[OpenEVSE Hardware User Guide (.pdf)](https://www.openevse.com/files/P50_Users_Guide.pdf)**
+
 <figure>
   <img src="/images/integrations/openevse-kit.jpg">
   <figcaption><i>Kit contents.</i></figcaption>
