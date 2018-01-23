@@ -631,6 +631,12 @@ Only one external DS18B20 sensor can be connected to an emonTH with standard fir
 
 <h4 id="log-inputs-to-feedssetuplocal">1. <a href="/setup/local/">Log inputs to feeds</a></h4>
 
+<p class="note">
+<b>Important: the emonTH reports data at a 60s interval, it's important to log the data to emoncms with a 60s inerval as shown below:</b>
+</p>
+
+<p><img src="/images/setup/emonth-inputprocess.png" alt="emonth input process" /></p>
+
 <p><strong>Note: if using more than 4x emonTH units (with custom RF node ID or modified firmware) <a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md"><code class="highlighter-rouge">emonhub.conf</code> node decoders will need to be setup</a>.</strong></p>
 
 <p><br /></p>
