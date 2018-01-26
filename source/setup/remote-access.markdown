@@ -69,4 +69,6 @@ Wormhole create a secure tunnel to the emonPi port 80 http over a https connecti
 
 ***
 
+**Tested on emonSD-26Oct17 on 26th Jan 2018**
+
 If you encounter any issues using Dataplicity please post on the [Community Forum](httsp://community.openenergymonitor.org) using the `dataplicity` tag.
