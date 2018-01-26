@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Testing Markdown Blog Post - Guide | OpenEnergyMonitor</title>
+    <title>Remote Access - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="This is a description for testing blog post">
+    <meta name="description" content="Remote access to emonPi">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/blog/2016/04/03/test-post/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/remote-access/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Testing Markdown Blog Post">
+    <meta property="og:title" content="Remote Access">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/blog/2016/04/03/test-post/">
-    <meta property="og:type" content="article">
-    <meta property="og:description" content="This is a description for testing blog post">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/remote-access/">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Remote access to emonPi">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
-    <meta name="twitter:creator" content="@glynhudson">
-    <meta name="twitter:title" content="Testing Markdown Blog Post">
-    <meta name="twitter:description" content="This is a description for testing blog post">
+    
+    <meta name="twitter:title" content="Remote Access">
+    <meta name="twitter:description" content="Remote access to emonPi">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -545,120 +545,88 @@ highlight active link...
 <div class="grid__item two-thirds lap-one-whole palm-one-whole">
 
 
-<article class="post">
+<article class="page">
+  
+    
+
   
   <header>
+    <h1 class="title indent">
+      Remote Access
+    </h1>
+  </header>
+  <hr class="divider">
   
-  <h1 class="title indent">Testing Markdown Blog Post</h1>
-  
 
-  
-  <div class="meta clearfix">
-    <time datetime="2016-04-03T17:00:00+00:00" pubdate data-updated="true"><i class="icon-calendar"></i> March 3rd 2016</time>
-    <span class="byline author vcard"><i class='icon-user'></i> Glyn Hudson</span>
-    <span><i class='icon-time'></i> 1 minute reading time</span>
-    <span>
-    <i class="icon-tags"></i>
-    <ul class="tags unstyled">
-    
-      
-        <li><a class='category' href='/blog/categories/test/'>Test</a></li>
-      
-    
-    </ul>
-  </span>
-    
-        | <a href="/blog/2016/04/03/test-post/#disqus_thread"
-        data-disqus-identifier="http://guide.openenergymonitor.org/blog/2016/04/03/test-post/">Comments</a>
-    
-  </div>
-  
-</header>
+  <p>Sometimes for convenience or troubleshooting it’s useful to be able to access the emonPi / emonBase remotely e.g from outside the local network.</p>
 
+<h2 id="port-forwarding--dynamic-dns">Port Forwarding / Dynamic DNS</h2>
 
-  <p>Testing markdown blog post. Will this replace our <a href="http://openenergymonitor.blogspot.com">old blog</a>?</p>
+<p><strong>Not recommend, see below for a better option.</strong></p>
 
-<p>Here is a markdown post: <em>italic</em>, <strong>bold</strong>, <code class="highlighter-rouge">inline code</code></p>
+<p>Network devices such as an emonPi connected to a local network are secured behind a firewall, often integrated into a router.</p>
 
-<ul>
-  <li>Bullet points</li>
-  <li>Another bulllet</li>
-</ul>
+<p>The conventional way for obtaining access remotely is to open a port in the firewall and ‘port-forward’ requests to this port to the local emonPi. This method works but is cumbersome and insecure. It’s cumbersome because most users connect to the internet via their ISP using a non-static IP. Therefore the WAN IP address often changes, a dynamic DNS service such as <a href="https://www.duckdns.org/">Duck DNS</a>, or <a href="https://www.noip.com">noIP</a> to link a dynamic IP to a static domain name, however this is cumbersome to setup and often requires purchasing a domain name, dynamic DNS Subscription and handling the dynamic DNS IP address updates.</p>
 
-<p>Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.</p>
+<p>The port forwarding method of remote access is also insecure since by default the emonPi uses an un-secured http connections, this is not a problem on a secure local network but not recommend for use over the internet.</p>
 
-<blockquote>
-  <p>The overriding design goal for Markdown’s
-formatting syntax is to make it as readable</p>
-</blockquote>
+<h2 id="a-classtitle-link-namedataplicity-hrefdataplicitya-dataplicity"><a class="title-link" name="dataplicity" href="#dataplicity"></a> Dataplicity</h2>
 
-<h1 id="code-syntax-highlight-blocks">Code syntax highlight blocks</h1>
+<p><strong>This is the easiest and most secure method of obtaining remote access (SSH/HTTP) to the emonPi</strong></p>
 
-<p><a href="http://coapp.org/reference/garrett-flavored-markdown.html#code">See here</a> for a full list of code syntax markdown tags</p>
+<p><a href="https://www.dataplicity.com">Dataplicity</a> offers a easy to setup web-service service to enable secure remote access to RaspberryPi devices. The free tier allows free access to a single RaspberryPi device.</p>
 
-<h2 id="python-code-syntax">Python code syntax:</h2>
+<p>Follow these steps to setup Dataplicity on an emonPi</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="c"># Initialize logging</span>
-<span class="bp">self</span><span class="o">.</span><span class="n">_log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s">"EmonHub"</span><span class="p">)</span>
+<p>1. <a href="/technical/credentials/#ssh">Connect to emonPi via SSH</a></p>
 
-</code></pre>
-</div>
-<p>## PHP code syntax:</p>
+<p>Once logged in put the emonPi into read-write mode using:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>public function get_npoints($feedid) {
-    $feedid = (int) $feedid;
-
+<div class="highlighter-rouge"><pre class="highlight"><code>$rpi-rw
 </code></pre>
 </div>
 
-<h2 id="c-code-syntax">c++ code syntax:</h2>
+<p>2. Create an account with dataplicity.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">get_temperature</span><span class="p">(</span><span class="n">byte</span> <span class="n">sensor</span><span class="p">)</span>
-<span class="p">{</span>
-  <span class="kt">float</span> <span class="n">temp</span><span class="o">=</span><span class="p">(</span><span class="n">sensors</span><span class="p">.</span><span class="n">getTempC</span><span class="p">(</span><span class="n">allAddress</span><span class="p">[</span><span class="n">sensor</span><span class="p">]));</span>
-  <span class="k">if</span> <span class="p">((</span><span class="n">temp</span><span class="o">&lt;</span><span class="mf">125.0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">temp</span><span class="o">&gt;-</span><span class="mf">55.0</span><span class="p">))</span> <span class="k">return</span><span class="p">(</span><span class="n">temp</span><span class="o">*</span><span class="mi">10</span><span class="p">);</span>            <span class="c1">//if reading is within range for the sensor convert
-</span></code></pre>
+<p><img src="/images/setup/1-dataplicity.png" alt="1-dataplicity" /></p>
+
+<p><img src="/images/setup/2-dataplicity.jpg" alt="2-dataplicity" /></p>
+
+<p>Copy the Dataplicity installation command.</p>
+
+<p>3. Paste and run the installation command on the emonPi:</p>
+
+<p><img src="/images/setup/3-dataplicity.png" alt="3-dataplicity" /></p>
+
+<p>Once setup is complete (it will take several minutes) the emonPi will appear in the Dataplicity dashboard:</p>
+
+<p><img src="/images/setup/4-dataplicity.png" alt="4-dataplicity" /></p>
+
+<p>4. Log in to your account and access your device remotely:</p>
+
+<p><img src="/images/setup/5-dataplicity.png" alt="5-dataplicity" /></p>
+
+<p>Put the emonPi back into read-only mode using</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$rpi-ro
+</code></pre>
 </div>
 
-<h2 id="bash-code-syntax-markdown">Bash code syntax markdown:</h2>
+<p>5. Dataplicity ‘wormhole’ feature  can be enabled to enable https access to Emoncms running on the emonPi:</p>
 
-<pre><code class="language-console">$ echo "hello world"
-</code></pre>
-<p># Table:</p>
+<p><img src="/images/setup/6-dataplicity.png" alt="6-dataplicity" /></p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Column1</th>
-      <th style="text-align: left">Column2</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">test1</td>
-      <td style="text-align: left">xyz</td>
-    </tr>
-  </tbody>
-</table>
+<p>Wormhole create a secure tunnel to the emonPi port 80 http over a https connection.</p>
 
-<p><a href="https://github.com/vmg/redcarpet">Redcloth Ruby Gem</a> is used to render markdown in Jekyll.</p>
+<hr />
 
-<h1 id="warning-boxes">Warning boxes</h1>
+<p>If you encounter any issues using Dataplicity please post on the <a href="httsp://community.openenergymonitor.org">Community Forum</a> using the <code class="highlighter-rouge">dataplicity</code> tag.</p>
 
-<p class="note warning">
-Testing warning note
-</p>
 
-<p class="note">
-testing info node
-</p>
+  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/setup/remote-access.markdown'>Edit on GitHub</a></div>
+<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/setup/remote-access.markdown'>Edit on GitHub Prose</a></div>
+
 </article>
-
-
-<section id="disqus">
-  <h3 class="indent title">Comments</h3>
-  <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div>
-</section>
 
 
 </div>
@@ -705,7 +673,7 @@ testing info node
           <li><a  href='/setup/import/'>10. Import / Backup </a></li>
           <li><a  href='/setup/north-america/'>11. Use in North America </a></li>
           <li><a  href='/setup/troubleshooting/'>12. Troubleshooting </a></li>
-          <li><a  href='/setup/remote-access/'>13. Remote Access </a></li>
+          <li><a class='active' href='/setup/remote-access/'>13. Remote Access </a></li>
         </ul>
         <li>
           <b>Emoncms</b>
@@ -855,21 +823,7 @@ testing info node
   g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
   s.parentNode.insertBefore(g,s)}(document,'script'));
 </script>
-<script>
-  var disqus_shortname = 'openenergymonitor';
-  
-    
-    // var disqus_developer = 1;
-    var disqus_identifier = 'http://guide.openenergymonitor.org/blog/2016/04/03/test-post/';
-    var disqus_url = 'http://guide.openenergymonitor.org/blog/2016/04/03/test-post/';
-    var disqus_script = 'embed.js';
-  
-  (function () {
-    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  }());
-</script>
+
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
