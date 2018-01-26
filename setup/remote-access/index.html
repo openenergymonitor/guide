@@ -562,13 +562,13 @@ highlight active link...
 
 <h2 id="port-forwarding--dynamic-dns">Port Forwarding / Dynamic DNS</h2>
 
-<p><strong>Not recommend, see below for a better option.</strong></p>
+<p><strong>Not recommended, see below for a better option.</strong></p>
 
 <p>Network devices such as an emonPi connected to a local network are secured behind a firewall, often integrated into a router.</p>
 
-<p>The conventional way for obtaining access remotely is to open a port in the firewall and ‘port-forward’ requests to this port to the local emonPi. This method works but is cumbersome and insecure. It’s cumbersome because most users connect to the internet via their ISP using a non-static IP. Therefore the WAN IP address often changes, a dynamic DNS service such as <a href="https://www.duckdns.org/">Duck DNS</a>, or <a href="https://www.noip.com">noIP</a> to link a dynamic IP to a static domain name, however this is cumbersome to setup and often requires purchasing a domain name, dynamic DNS Subscription and handling the dynamic DNS IP address updates.</p>
+<p>The conventional way for obtaining access remotely is to open a port in the firewall and ‘port-forward’ requests to this port to the local emonPi. This method works but is cumbersome and insecure. It’s cumbersome because most users connect to the internet via their ISP using a non-static IP. Therefore the WAN IP address often changes, a dynamic DNS service such as <a href="https://www.duckdns.org/">Duck DNS</a>, or <a href="https://www.noip.com">noIP</a> can be used to link a dynamic IP to a static domain name, however this is cumbersome to set up and often requires purchasing a domain name, dynamic DNS Subscription and handling the dynamic DNS IP address updates.</p>
 
-<p>The port forwarding method of remote access is also insecure since by default the emonPi uses an un-secured http connections, this is not a problem on a secure local network but not recommend for use over the internet.</p>
+<p>The port forwarding method of remote access is also insecure since by default the emonPi uses an insecure http connections, this is not a problem on a secure local network but not recommend for use over the internet.</p>
 
 <h2 id="a-classtitle-link-namedataplicity-hrefdataplicitya-dataplicity"><a class="title-link" name="dataplicity" href="#dataplicity"></a> Dataplicity</h2>
 
