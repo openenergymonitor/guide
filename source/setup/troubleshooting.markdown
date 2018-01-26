@@ -18,7 +18,7 @@ published: true
 
 ***
 
-If you are experiancing issues please post on our community form, see [Help page](/help).
+If you are experiencing issues please post on our community form, see [Help page](/help).
 
 Debugging issues often involves connecting via SSH to restart services and view log files see:
 
@@ -173,7 +173,7 @@ It's important that the emonPi has the correct time. If required timezone should
 - On Raspberry Pi (Linux system time):
 
    - Run `$ rpi-rw`, then run `$ sudo raspi-config`, select `Localisation Options` and set local timezone.  Then run `$ rpi-ro`.
-   
+
    - Check time is correct by running `$ date`
    - If time is STILL not correct try:
    - Check emonpi has an active Internet connection `$ wget google.com` should connect successfully
@@ -207,7 +207,7 @@ Enter new password, or press enter to auto generate:
 Auto generated password: 9f7599c8da
 ```
 
-If the account username has also been forgotten this can be retreived by connecting via ssh and looking at the MYSQL database entry :
+If the account username has also been forgotten this can be retrieved by connecting via ssh and looking at the MYSQL database entry :
 
 When prompted enter the [emonPi default MYSQL root password.](https://guide.openenergymonitor.org/technical/credentials/#mysql)
 
