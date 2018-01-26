@@ -15,13 +15,13 @@ Sometimes for convenience or troubleshooting it's useful to be able to access th
 
 ## Port Forwarding / Dynamic DNS
 
-**Not recommend, see below for a better option.**
+**Not recommended, see below for a better option.**
 
 Network devices such as an emonPi connected to a local network are secured behind a firewall, often integrated into a router.
 
-The conventional way for obtaining access remotely is to open a port in the firewall and 'port-forward' requests to this port to the local emonPi. This method works but is cumbersome and insecure. It's cumbersome because most users connect to the internet via their ISP using a non-static IP. Therefore the WAN IP address often changes, a dynamic DNS service such as [Duck DNS](https://www.duckdns.org/), or [noIP](https://www.noip.com) to link a dynamic IP to a static domain name, however this is cumbersome to setup and often requires purchasing a domain name, dynamic DNS Subscription and handling the dynamic DNS IP address updates.
+The conventional way for obtaining access remotely is to open a port in the firewall and 'port-forward' requests to this port to the local emonPi. This method works but is cumbersome and insecure. It's cumbersome because most users connect to the internet via their ISP using a non-static IP. Therefore the WAN IP address often changes, a dynamic DNS service such as [Duck DNS](https://www.duckdns.org/), or [noIP](https://www.noip.com) can be used to link a dynamic IP to a static domain name, however this is cumbersome to set up and often requires purchasing a domain name, dynamic DNS Subscription and handling the dynamic DNS IP address updates.
 
-The port forwarding method of remote access is also insecure since by default the emonPi uses an un-secured http connections, this is not a problem on a secure local network but not recommend for use over the internet.
+The port forwarding method of remote access is also insecure since by default the emonPi uses an insecure http connections, this is not a problem on a secure local network but not recommend for use over the internet.
 
 ## {% linkable_title Dataplicity %}
 
