@@ -57,7 +57,7 @@ The standard build guide from OpenEV can be followed taking into account the spe
 
 <figure>
   <img src="/images/integrations/openevse-build.jpg">
-  <figcaption><i>An assembled OpenEVSE unit.</i></figcaption>
+  <figcaption><i>An assembled OpenEVSE unit. LCD, push button and WiFi module are attached to the EVSE enclosure cover, not shown. </i></figcaption>
 </figure>
 
 ___
@@ -72,16 +72,24 @@ The [EV cables from the OpenEnergyMonitor shop (Type 1 & Type 2)](http://shop.op
 
 ![](/images/integrations/oem-ev-cable-wire.jpg)
 
+**IMPORTANT**
+
+All connections in EVSE should be made using bootlace ferrules crimped terminals. This is especially essential for EV cables since they use fine stranded wire for increased flexibility. This fine stranded wire is susceptible to creeping out of a terminal due to thermal cycling resulting in possible overheating. See this [Schneider Electric Data Bulletin](http://www2.schneider-electric.com/resources/sites/SCHNEIDER_ELECTRIC/content/live/FAQS/126000/FA126881/en_US/Fine%20Stranded%20Wire%200515DB0301.pdf).
+
+**EVSE cables obtained from the OpenEnergyMonitor shop will be pre-equipped with bootlace ferrules crimped terminals connections.**
+
+![OpenEVSE WiFi](/images/integrations/crimped-evse-wire.png)
+
 ### 2. EVSE Mains Wiring
 
 <p class='note warning'>
 Mains wiring should only be undertaken by a qualified electrician.
 </p>
 
-In the UK / Europe an EVSE must be directly wired into a consumer unit using appropriately sized wiring and an RCD circuit breaker e.g. RCBO. It is highly recomended to size the mains wiring for at least the maximum rating of the EV teathered cable (usually 32A).
+In the UK / Europe an EVSE must be directly wired into a consumer unit using appropriately sized wiring and an RCD circuit breaker e.g. RCBO. The wiring and circuit breaker should be sized for maximum rating of the EV/EVSE and tethered cable, 6mm CSA wire is appropriate for 32A.
 
 <p class='note'>
-The max current of the EVSE should be set to match the continuous current rating of mains wiring in the OpenEVSE settings (via LCD menu) on first power up before connecting to an EV (Setup > Max Current >).
+The max current of the EVSE should be set to match the continuous current rating of mains wiring in the OpenEVSE settings (via LCD menu) on first power up before connecting an EV (Setup > Max Current >).
 </p>
 
 
@@ -89,7 +97,7 @@ The max current of the EVSE should be set to match the continuous current rating
 
 **Do not wire an EVSE into a 3-pin BS1363 plug unless the charging current is limited to 10A**. This defeats the point of using an EVSE; better to use a [portable EVSE 'granny cable'](http://www.evcables.co.uk/231/Portable-Charger-Cables) instead.
 
-In mainland Europe [Schuko plugs](https://en.wikipedia.org/wiki/Schuko) are rated to 16A max (13A continous).
+In mainland Europe [Schuko plugs](https://en.wikipedia.org/wiki/Schuko) are rated to 16A max (13A continuous).
 
 ### 3. Charging Level
 
@@ -99,11 +107,11 @@ The OpenEVSE unit should be set to **Level 2** charging mode. The charging mode 
 
 *Level 2 charging refers to charging from 220v-240v, as opposed to level 1 charging from 110v.*
 
-**See User Guide video at the top of this page for a overview of how to opperate the unit.**
+**See User Guide video at the top of this page for a overview of how to operate the unit.**
 
 ## WiFi Gateway
 
-The WiFi gateway allows all functions of the OpenEVSE to be controlled remotly and data logged to Emoncms. The WiFi gateway is optional but highly recommend.
+The WiFi gateway allows all functions of the OpenEVSE to be controlled remotely and data logged to Emoncms. The WiFi gateway is optional but highly recommend.
 
 ![OpenEVSE WiFi](/images/integrations/openevse-wifi.png)
 
@@ -179,4 +187,3 @@ To enable 'Eco' mode (solar PV divert) charging:
 ***
 
 See full OpenEVSE WiFi gateway documentation in the [OpenEVSE ESP8266 WiFi GitHub Repo](https://github.com/openevse/ESP8266_WiFi_v2.x/).
-
