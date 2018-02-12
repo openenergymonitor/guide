@@ -95,7 +95,7 @@ The first time Atom IDE is opened after a few seconds PlatformIO will finish the
 
 - If code compiles successfully upload the firmware by clicking on `Upload (3)`
  - Note: A [USB to UART cable](https://shop.openenergymonitor.com/programmers) is required to upload to emonTx / emonTH
-- After successful upload check nodeID has changed by viewing serial output, click `Serial Monitor (4)` and choose `9600 baud`.
+- After successful upload check nodeID has changed by viewing serial output, click `Serial Monitor (4)` and choose `115200 baud`.
 
 ***
 
