@@ -62,8 +62,13 @@
 
 <style>
 
+@font-face {
+  font-family: "oemFont";
+  src: url(/font/Ubuntu-OEM-Light.ttf);
+}
+
 html, body {
-  font-family: "ubuntu", sans-serif;
+  font-family: "oemFont", sans-serif;
   margin: 0;
   height: 100vh;
 }
@@ -85,6 +90,7 @@ custom header...
 --------------------------------------------*/
 
 .communityWrapper {
+  position: relative;
   box-sizing: border-box;
   margin: 0 auto;
   width: 100%;
@@ -112,6 +118,7 @@ custom header...
   left: 0;
   color: #ffffff;
   padding-left: 12px;
+  z-index: 9997;
 }
 
 @media screen and (max-width: 1079px) {
@@ -133,36 +140,69 @@ custom header...
   z-index: 999;
 }
 
-.thisTitle {
-  position: relative;
-  display: inline-block;
-  color: #ffffff;
-  left: 0;
+.titleIcon {
+  position: absolute;
+  height: 42px;
+  padding: 0 0 0 7px;
+  text-align: center;
   line-height: 42px;
-  padding-right: 12px;
-  padding-left: 0;
-  font-size: 20px;
-  text-align: right;
-}
-
-.thisTitle a {
   color: #ffffff;
+  vertical-align: top;
 }
 
-@media screen and (min-width: 1080px) {
-  .thisTitle {
-    font-size: 16px;
-    text-align: left;
-    padding-right: 0;
-    padding-left: 7px;
+  .titleIcon i {
+    vertical-align: middle;
+    font-size: 32px;
+    line-height: 42px;
   }
+
+.thisTitle {
+  position: absolute;
+  box-sizing: border-box;
+  left: 42px;
+  right: 0;
+  height: 42px;
+  padding: 5px 0 5px 0;
+  text-align: left;
+  color: #ffffff;
+  line-height: normal;
+  vertical-align: top;
 }
+
+  .thisTitle a {
+    position: absolute;
+    top: 0;
+    color: #ffffff;
+  }
 
 @media screen and (max-width: 1079px) {
-  .thisTitle {
-    width: 80%;
-    float: right;
+  .titleIcon {
+    left: auto;
+    right: 0;
+    padding: 0 7px 0 0;
   }
+
+  .thisTitle {
+    right: 42px;
+    left: 0;
+    text-align: right;
+  }
+
+    .thisTitle a {
+      padding-right: 0;
+    }
+}
+
+.thisTitle-top {
+  top: 0;
+  height: 60%;
+  font-size: 18px;
+}
+
+.thisTitle-bottom {
+  bottom: 0;
+  height: 40%;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 1080px) {
@@ -233,7 +273,7 @@ site links on larger screens...
   right: 0;
   margin-right: 6px;
   height: 42px;
-  min-width: 700px;
+  min-width: 774px;
   overflow: visible;
   padding-right: 7px;
 }
@@ -266,7 +306,7 @@ site links on larger screens...
 .navigation ul li a {
   display: block;
   line-height: 42px;
-  font-family:"ubuntu";
+  font-family:"oemFont";
   font-size: 16px;
   text-align: center;
   padding-left: 10px;
@@ -275,29 +315,29 @@ site links on larger screens...
 }
 
 @media screen and (min-width: 1080px) {
-  .navigation ul li:nth-child(1) {
-    width: 82px;
+ .navigation ul li:nth-child(1) {
+    width: 88px;
   }
   .navigation ul li:nth-child(2) {
-    width: 81px;
+    width: 86px;
   }
   .navigation ul li:nth-child(3) {
-    width: 85px;
+    width: 92px;
   }
   .navigation ul li:nth-child(4) {
-    width: 113px;
-  }
-  .navigation ul li:nth-child(5) {
     width: 123px;
   }
+  .navigation ul li:nth-child(5) {
+    width: 133px;
+  }
   .navigation ul li:nth-child(6) {
-    width: 73px;
+    width: 76px;
   }
   .navigation ul li:nth-child(7) {
-    width: 75px;
+    width: 80px;
   }
   .navigation ul li:nth-child(8) {
-    width: 87px;
+    width: 96px;
   }
 }
 
@@ -347,7 +387,7 @@ site links on smaller screens...
 
 .navigationSmall ul li a {
   box-sizing: border-box;
-  font-family: "ubuntu";
+  font-family: "oemFont";
   font-size: 20px;
   display: block;
   color: #ffffff;
@@ -464,14 +504,21 @@ highlight active link...
 <div class="titleHolder">
   <div class="communityWrapper">
     <i class="fa fa-navicon"></i>
-    <div class="thisTitle">
-      <a href="/">
-        <strong>Guide</strong>
-        <span class="oemWrap">
-        | Open<strong>EnergyMonitor</strong>
-        </span>
-      </a>
-    </div>
+      <div class="titleWrapper">
+        <a href="/">
+          <div class="titleIcon">
+    				<i aria-hidden="true" class="fa fa-book"></i>
+    			</div>
+    			<div class="thisTitle">
+    			  <div class="thisTitle-top">
+            		<b>Guide</b>
+    				</div>
+    				<div class="thisTitle-bottom">
+              Open<b>EnergyMonitor</b>
+    				</div>
+    			</div>
+    		</a>
+    	</div>
       <div id="siteLinks" class="navigation">
         <ul>
           <li title="the homepage of OpenEnergyMonitor">
@@ -480,7 +527,7 @@ highlight active link...
               <span class="navname">Home</span>
             </a>
           </li>
-          <li title="you are here: a user guide for the OpenEnergyMonitor system" id="takeitawaynow" class="actoemLink">
+          <li title="you are here: a user guide for the OpenEnergyMonitor system" id="takeIt" class="actoemLink">
             <a href="https://guide.openenergymonitor.org">
               <i class="fa fa-book" aria-hidden="true"></i>
               <span class="navname">Guide</span>
@@ -492,7 +539,7 @@ highlight active link...
               <span class="navname">Learn</span>
             </a>
           </li>
-          <li title="a definitive list of resources for OpenEnergyMonitor hardware" id="changeittomenow">
+          <li title="a definitive list of resources for OpenEnergyMonitor hardware" id="changeIt">
             <a href="https://guide.openenergymonitor.org/technical/resources/">
               <i class="fa fa-list-alt" aria-hidden="true"></i>
               <span class="navname">Resources</span>
@@ -955,7 +1002,7 @@ exit
         <span class="navname">Home</span>
       </a>
     </li>
-    <li title="you are here: a user guide for the OpenEnergyMonitor system" id="takeitawaynow" class="actoemLink">
+    <li title="you are here: a user guide for the OpenEnergyMonitor system" id="takeIt2" class="actoemLink">
       <a href="https://guide.openenergymonitor.org">
         <i class="fa fa-book" aria-hidden="true"></i>
         <span class="navname">Guide</span>
@@ -967,7 +1014,7 @@ exit
         <span class="navname">Learn</span>
       </a>
     </li>
-    <li title="a definitive list of resources for OpenEnergyMonitor hardware" id="changeittomenow">
+    <li title="a definitive list of resources for OpenEnergyMonitor hardware" id="changeIt2">
       <a href="https://guide.openenergymonitor.org/technical/resources/">
         <i class="fa fa-list-alt" aria-hidden="true"></i>
         <span class="navname">Resources</span>
@@ -1107,10 +1154,10 @@ $(document).ready(function(){
 $(document).ready(function(){
   var pathname = window.location.pathname;
   if (pathname == "/technical/resources/") {
-    $(".thisTitle a").html("<strong>Resources</strong><span class='oemWrap'>| Open<strong>EnergyMonitor</strong></span>");
-    $("#takeitawaynow").removeClass("actoemLink").prop('title', 'a user guide for the OpenEnergyMonitor system');
-    $("#changeittomenow").addClass("actoemLink").prop('title', 'you are here: a definitive list of resources for OpenEnergyMonitor hardware');
-    $(".thisTitle a").attr("href", "/technical/resources/");
+    $(".titleWrapper a").html("<div class='titleIcon'><i aria-hidden='true' class='fa fa-list-alt'></i></div><div class='thisTitle'><div class='thisTitle-top'><b>Resources</b></div><div class='thisTitle-bottom'>Open<b>EnergyMonitor</b></div></div>");
+    $("#takeIt,#takeIt2").removeClass("actoemLink").prop('title', 'a user guide for the OpenEnergyMonitor system');
+    $("#changeIt,#changeIt2").addClass("actoemLink").prop('title', 'you are here: a definitive list of resources for OpenEnergyMonitor hardware');
+    $(".titleWrapper a").attr("href", "/technical/resources/");
   }
 });
 
