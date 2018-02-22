@@ -629,21 +629,37 @@ highlight active link...
 
 <p><br /></p>
 
+<h2 id="safety">Safety</h2>
+
+<p>OpenEVSE units have been designed to exceed the safety requirements for EV Charging Stations from SAE J1772, NEC, UL and CE. Before supplying power to the car (and continuously while charging) the EVSE unit conducts a number of checks, no power is supplied until all the checks have passed. See</p>
+
+<ul>
+  <li><a href="https://openev.freshdesk.com/support/solutions/articles/6000113537-openevse-safety-features">OpenEVSE Safety Features</a></li>
+  <li><a href="/images/integrations/OpenEVSE_flowchart.pdf">OpenEVSE Safety Features Flow Diagram (.pdf)</a></li>
+</ul>
+
+<p class="note warning">
+Mains wiring should only be undertaken by a qualified electrician.
+</p>
+
+<h2 id="user-guide">User Guide</h2>
+
 <div class="videoWrapper">
 <iframe width="300" height="169" src="https://www.youtube.com/embed/cIvmYP57eOo" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
-<p><br /></p>
+<p><br />
+- <strong><a href="https://www.openevse.com/files/P50_Users_Guide.pdf">OpenEVSE Hardware User Guide (.pdf)</a></strong></p>
 
 <hr />
 
 <h2 id="assembly">Assembly</h2>
 
-<p>The standard build guide from OpenEV can be followed taking into account the specific OpenEnergyMonitor (Europe / UK) considerations (see below):</p>
+<p>The standard build guide from OpenEVSE can be followed taking into account the specific OpenEnergyMonitor (Europe / UK) considerations (see below):</p>
 
-<p><strong>OpenEVSE P50D Assembly guide</strong>: <a href="http://openevse.dozuki.com/Guide/OpenEVSE+50A+Charging+Station/8"><strong>Web</strong></a>, <a href="http://openevse.dozuki.com/GuidePDF/link/8/en"><strong>pdf</strong></a></p>
-
-<p><strong><a href="https://www.openevse.com/files/P50_Users_Guide.pdf">OpenEVSE Hardware User Guide (.pdf)</a></strong></p>
+<ul>
+  <li><strong>OpenEVSE P50D Assembly guide</strong>: <a href="http://openevse.dozuki.com/Guide/OpenEVSE+50A+Charging+Station/8"><strong>Web</strong></a>, <a href="http://openevse.dozuki.com/GuidePDF/link/8/en"><strong>pdf</strong></a></li>
+</ul>
 
 <figure>
   <img src="/images/integrations/openevse-kit.jpg" />
@@ -654,6 +670,10 @@ highlight active link...
   <img src="/images/integrations/openevse-build.jpg" />
   <figcaption><i>An assembled OpenEVSE unit. LCD, push button and WiFi module are attached to the EVSE enclosure cover, not shown. </i></figcaption>
 </figure>
+
+<ul>
+  <li><strong><a href="https://openevse.dozuki.com/Guide/Testing+Basic+and+Advanced/12">Testing OpenEVSE</a></strong></li>
+</ul>
 
 <hr />
 
@@ -702,6 +722,12 @@ The max current of the EVSE should be set to match the continuous current rating
 <p><em>Level 2 charging refers to charging from 220v-240v, as opposed to level 1 charging from 110v.</em></p>
 
 <p><strong>See User Guide video at the top of this page for a overview of how to operate the unit.</strong></p>
+
+<h3 id="gfci-test-enabled">4. GFCI Test Enabled</h3>
+
+<p>All OpenEVSE’s from OpenEnergyMonitor contain hardware for GFCI (ground fault interruption) continuous monitoring of ground faults. See safely features section above. GFCI test should always be enabled in the LCD menu.</p>
+
+<hr />
 
 <h2 id="wifi-gateway">WiFi Gateway</h2>
 
