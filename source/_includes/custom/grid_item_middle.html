@@ -1,13 +1,46 @@
+<style>
 
-<h2 class="title">Solar PV</h2>
-<hr>
-<p>Make the most of your solar PV:</p>
-<ul>
-    <li>Monitor generation and grid import</li>
-    <li>Calculate on-site use of solar.</li>
-    <li>Real-time & historic performance</li>
-    <li>Optimise demand matching</li>
-</ul>
-<p class='pull-right'><a href='/applications/solar-pv'>Learn more &raquo;</a></p>
+.appsBackground_2 {
+  background-color: #f5f5f5;
+/*  background-image: url("/images/frontpageimages/homeenergycoverimage.png"); */
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+  color: #777777;
+  transition: background-color 200ms linear;
+}
 
+.appsBackground_2:hover {
+  background-color: #dcdcdc;
+}
 
+.appsBackground_2 img {
+  width: 100%;
+}
+
+.innerPadding {
+  padding: 10px;
+}
+
+.appsTitle {
+  color: #777777;
+}
+
+</style>
+
+<a href='/applications/solar-pv' class="appsBackground_2" style="display:block;">
+  <img src="{{ root_url }}/images/frontpageimages/solarpvcoverimage.png"/>
+  <div class="innerPadding">
+    <h2 class="appsTitle">Solar PV</h2>
+    <p>Make the most of your solar PV:</p>
+    <br/>
+    <ul>
+      <li>Monitor generation and grid import</li>
+      <li>Calculate on-site use of solar.</li>
+      <li>Real-time & historic performance</li>
+      <li>Optimise demand matching</li>
+    </ul>
+  </div>
+</a>
+<br/>
