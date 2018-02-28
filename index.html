@@ -494,7 +494,8 @@ highlight active link...
 }
 
 .hero {
-  background-color: #77c8ea;
+  background-color: #ffffff;
+  color: #777777 !important;
   margin-top: 0 !important;
 }
 
@@ -589,8 +590,8 @@ highlight active link...
 <div class="hero">
   <div class="grid-wrapper">
     <div class="grid flex">
-      <div class="grid__item flex__item two-fifths palm-one-whole">
-          <img src="/images/hero_unit.png" style="display:block;margin:auto;border-radius: 10%;" alt="emonPi">
+      <div class="grid__item flex__item two-fifths palm-one-whole" style="text-align:center;">
+        <i class="fa fa-book" aria-hidden="true" style="font-size:205px;margin-right:5px;"></i>
       </div>
       <div class="grid__item flex__item three-fifths palm-one-whole">
       <style>
@@ -627,68 +628,171 @@ Set up, install and configure an OpenEnergyMonitor system
     <div class="grid__item one-third lap-one-whole palm-one-whole usp">
       <div class="grid">
         <div class="grid__item one-whole lap-one-third">
-            <div class='supported-brands clearfix'>
-                <img src="/images/frontpageimages/homeenergycoverimage.png" style="border-radius:10%;"/>
-             </div>
+          <!--<div class='supported-brands clearfix'>
+            <img src="/images/frontpageimages/homeenergycoverimage.png"/>
+          </div>-->
         </div>
         <div class="grid__item one-whole lap-two-thirds">
-          <h2 class="title">Home Energy</h2>
+          <style>
 
-    <hr>
+.appsBackground_1 {
+  background-color: #f5f5f5;
+/*  background-image: url("/images/frontpageimages/homeenergycoverimage.png"); */
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+  color: #777777;
+  transition: background-color 200ms linear;
+}
+
+.appsBackground_1:hover {
+  background-color: #dcdcdc;
+}
+
+.appsBackground_1 img {
+  width: 100%;
+}
+
+.innerPadding {
+  padding: 10px;
+}
+
+.appsTitle {
+  color: #777777;
+}
+
+</style>
+
+<a href='/applications/home-energy' class="appsBackground_1" style="display:block;">
+  <img src="/images/frontpageimages/homeenergyimage.png"/>
+  <div class="innerPadding">
+    <h2 class="appsTitle">Home Energy</h2>
     <p>Understand your energy consumption:</p>
+    <br/>
     <ul>
-    <li>Monitor in real-time</li>
-    <li>Review historic data</li>
-    <li>Calculate cost</li>
-    <li>Android app</li>
-</ul>
-
-
-<p class='pull-right'><a href='/applications/home-energy'>Learn more &raquo;</a></p>
+      <li>Monitor in real-time</li>
+      <li>Review historic data</li>
+      <li>Calculate cost</li>
+      <li>Android app</li>
+    </ul>
+  </div>
+</a>
+<br/>
         </div>
       </div>
     </div>
     <div class="grid__item one-third lap-one-whole palm-one-whole usp">
       <div class="grid">
         <div class="grid__item one-whole lap-one-third">
-            <div class='supported-brands clearfix'>
-                <img src="/images/frontpageimages/solarpvcoverimage.png" style="border-radius:10%;"/>
-            </div>
+          <!--<div class='supported-brands clearfix'>
+              <img src="/images/frontpageimages/solarpvcoverimage.png"/>
+          </div>-->
         </div>
         <div class="grid__item one-whole lap-two-thirds">
-          <h2 class="title">Solar PV</h2>
-<hr>
-<p>Make the most of your solar PV:</p>
-<ul>
-    <li>Monitor generation and grid import</li>
-    <li>Calculate on-site use of solar.</li>
-    <li>Real-time & historic performance</li>
-    <li>Optimise demand matching</li>
-</ul>
-<p class='pull-right'><a href='/applications/solar-pv'>Learn more &raquo;</a></p>
+          <style>
+
+.appsBackground_2 {
+  background-color: #f5f5f5;
+/*  background-image: url("/images/frontpageimages/homeenergycoverimage.png"); */
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+  color: #777777;
+  transition: background-color 200ms linear;
+}
+
+.appsBackground_2:hover {
+  background-color: #dcdcdc;
+}
+
+.appsBackground_2 img {
+  width: 100%;
+}
+
+.innerPadding {
+  padding: 10px;
+}
+
+.appsTitle {
+  color: #777777;
+}
+
+</style>
+
+<a href='/applications/solar-pv' class="appsBackground_2" style="display:block;">
+  <img src="/images/frontpageimages/solarpvcoverimage.png"/>
+  <div class="innerPadding">
+    <h2 class="appsTitle">Solar PV</h2>
+    <p>Make the most of your solar PV:</p>
+    <br/>
+    <ul>
+      <li>Monitor generation and grid import</li>
+      <li>Calculate on-site use of solar.</li>
+      <li>Real-time & historic performance</li>
+      <li>Optimise demand matching</li>
+    </ul>
+  </div>
+</a>
+<br/>
         </div>
       </div>
     </div>
-
     <div class="grid__item one-third lap-one-whole palm-one-whole usp">
       <div class="grid">
         <div class="grid__item one-whole lap-one-third">
-          <span class="icon">
+          <!--<span class="icon">
             <i class="icon-cogs"></i>
-          </span>
+          </span>-->
         </div>
-
         <div class="grid__item one-whole lap-two-thirds">
-         <h2 class="title">Integrate</h2>
-<hr>
-<p>Extend functionality with:</p>
-<ul>
-    <li>Emoncms</li>
-    <li>MQTT</li>
-    <li>NodeRED</li>
-    <li>OpenHAB</li>
-</ul>
-<p class='pull-right'><a href='/integrations/'>Learn more &raquo;</a></p>
+         <style>
+
+.appsBackground_3 {
+  background-color: #f5f5f5;
+/*  background-image: url("/images/frontpageimages/homeenergycoverimage.png"); */
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+  color: #777777;
+  transition: background-color 200ms linear;
+}
+
+.appsBackground_3:hover {
+  background-color: #dcdcdc;
+}
+
+.appsBackground_3 img {
+  width: 100%;
+}
+
+.innerPadding {
+  padding: 10px;
+}
+
+.appsTitle {
+  color: #777777;
+}
+
+</style>
+
+<a href='/integrations' class="appsBackground_3" style="display:block;">
+  <img src="/images/frontpageimages/integrations.png"/>
+  <div class="innerPadding">
+    <h2 class="appsTitle">Integrate</h2>
+    <p>Extend functionality with:</p>
+    <br/>
+    <ul>
+      <li>Emoncms</li>
+      <li>MQTT</li>
+      <li>NodeRED</li>
+      <li>OpenHAB</li>
+    </ul>
+  </div>
+</a>
+<br/>
         </div>
       </div>
     </div>
@@ -701,10 +805,10 @@ Set up, install and configure an OpenEnergyMonitor system
     <div class="grid__item one-half lap-one-whole palm-one-whole usp">
       <div class="grid">
         <div class="grid__item one-whole">
-          <figure>
+          <!--<figure>
            <a href="https://www.youtube.com/embed/E1M2uLSiQy0"><img src="/images/frontpageimages/emonpi-overview.png"/></a>
            <figcaption>System Overview</figcaption>
-           </figure>
+           </figure>-->
         </div>
       </div>
     </div>
@@ -712,10 +816,10 @@ Set up, install and configure an OpenEnergyMonitor system
     <div class="grid__item one-half lap-one-whole palm-one-whole usp">
       <div class="grid">
         <div class="grid__item one-whole">
-          <figure>
+          <!--<figure>
           <a href="https://www.youtube.com/embed/xFPpBbf555c"><img src="/images/frontpageimages/sustainable-energy.png"/></a>
           <figcaption>Sustainable Energy Challenge</figcaption>
-          </figure>
+          </figure>-->
         </div>
       </div>
     </div>
