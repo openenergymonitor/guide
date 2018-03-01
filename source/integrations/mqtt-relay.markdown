@@ -94,9 +94,9 @@ Unit will now reboot and turn off AP mode. Unit should not be connected to the c
 
 Once the unit is connected to your local Wifi network for security the Wifi AP will automatically be turned off.
 
-**To turn the Wifi AP back on (e.g to scan and connect to a different network) press and hold the rest button for 3 seconds**
+**To turn the Wifi AP back on (e.g to scan and connect to a different network) press and hold the reset button for 3 seconds**
 
-**When in Wifi AP mode a further 3 second press of the rest button will <u>clear all setting and restore to default.</u>**
+**When in Wifi AP mode a further 3 second press of the reset button will <u>clear all setting and restore to default.</u>**
 
 ## Control
 
