@@ -13,6 +13,8 @@ published: true
 > **Multi-purpose Wifi connected relay control board. Applications include: remote heating an A/C systems control via nodeRED, openHAB and Android Tasker etc. **
 
 
+![iotawatt](/images/setup/iotawatt-1.jpg) <a class="btn pull-right" href="https://shop.openenergymonitor.com/wifi-mqtt-relay-thermostat/r/">View in Shop &rarr; </a>
+
 ## Overview
 
 *   1 x High quality 16A Relay  (tested 100 switches @ 3x rated current)
@@ -54,15 +56,9 @@ published: true
 <b>The board connects to and controls high voltage, knowledge and attention is required when installing to prevent electrical shock</b>
 </p>
 
-1\. Connect 110V-240V AC into the 2 x terminal block to power the unit (polarity does not matter) . There is a 0.25A fuse (MST250 slow blow) on the board, however an external fuse is also recommended.
+1\. Connect 110V-240V AC into the duel terminal block to power the unit (polarity does not matter) . There is a 0.25A fuse (MST250 slow blow) on the board, however an external fuse is also recommended.
 
 2\. The relay contacts are isolated from the main supply. The 3 x relay terminals are connected as follows:
-
-
-![relay connections](/images/integrations/mqtt_wifi_relay_connections.png)
-
-
-*Note: the latest relay design (shipping Dec 16) is connected as follows. NC (normally closed) is not connected:*
 
 ![new relay connections](/images/integrations/new-relay-contacts.png)
 
