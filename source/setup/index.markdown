@@ -260,7 +260,7 @@ The emonTH is powered by two AA batteries and is available with a choice of eith
 - Internal temperature & humidity + optional external probe
 - Optional pulse sensor input
 
-<a class="btn pull-right" href="https://shop.openenergymonitor.com/emonth-433mhz-temperature-humidity-node">View in Store &rarr; </a>
+<a class="btn pull-right" href="https://shop.openenergymonitor.com/emonth-v2-temperature-humidity-node/">View in Store &rarr; </a>
 
 <br>
 
