@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Applications - Guide | OpenEnergyMonitor</title>
+    <title>EV Charging - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="OpenEnergyMonitor Applications">
+    <meta name="description" content="EV charging">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/applications/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/applications/ev-charging/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Applications">
+    <meta property="og:title" content="EV Charging">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/applications/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/applications/ev-charging/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="OpenEnergyMonitor Applications">
+    <meta property="og:description" content="EV charging">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Applications">
-    <meta name="twitter:description" content="OpenEnergyMonitor Applications">
+    <meta name="twitter:title" content="EV Charging">
+    <meta name="twitter:description" content="EV charging">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -600,34 +600,84 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      Applications
+      EV Charging
     </h1>
   </header>
   <hr class="divider">
   
 
-  <p>The OpenEnergyMonitor system can be applied to a number of applications, see application specific setup:</p>
+  <p>OpenEVSE is a fully open-source EVSE (Electric Vehicle Supply Equipment) charging station.</p>
 
-<ul>
-  <li>
-    <h2 id="home-energy-monitorapplicationshome-energy"><a href="/applications/home-energy">Home Energy Monitor</a></h2>
-  </li>
-  <li>
-    <h2 id="solar-pv-monitorapplicationssolar-pv"><a href="/applications/solar-pv">Solar PV Monitor</a></h2>
-  </li>
-  <li>
-    <h2 id="ev-chargingapplicationsev-charging"><a href="/applications/ev-charging">EV Charging</a></h2>
-  </li>
-  <li>
-    <h2 id="heatpump-monitor-i-classicon-external-linkihttpheatpumpmonitororg"><a href="http://heatpumpmonitor.org">Heatpump Monitor <i class="icon-external-link"></i></a></h2>
-  </li>
-</ul>
+<p>OpenEnergyMonitor has partnered with OpenEVSE to develop our EmonEVSE unit which is fully certified and designed for the European market.</p>
 
-<p>Many more applications are possible, for inspiration and to share your application and results visit the <a href="http://community.openenergymonitor.org/c/applications">Applications Section of the Community Forums</a>.</p>
+<p>OpenEnergyMonitor is the official European re-seller for OpenEVSE. We have been collaborating with OpenEVSE to improve Emoncms remote data logging integration, web UI control interface and solar PV diversion.</p>
+
+<p>Solar PV diversion dynamically adjusts the charging rate in real-time based on the excess generated power, an EmonPi is required for solar PV diversion. See <a href="/applications/solar-pv">Solar PV Application Guide</a>.</p>
+
+<table style="width:100%">
+  <tr>
+    <th><h2>EmonEVSE</h2></th>
+    <th><h2>OpenEVSE (kit)<h2>
+  
+  <tr>
+    <td><img src="/images/applications/ev-charging/emonevse-t2.png" /></td>
+    <td><img src="/images/applications/ev-charging/openevse.jpg" /></td>
+
+  </tr>
+  <tr>
+    <td>
+      <ul>
+        <li>Non-tethered socket (Type 2)</li>
+        <li>Fully assembled &amp; certified</li>
+        <li>Single/Three-phase</li>
+        <li>32A (7kW/22kW)</li>
+        <div class="divider"></div>
+        <li>Energy monitoring</li>
+        <li>RGB LCD display</li>
+      	<li>WiFi connected</li>
+		    <li>Web app interface</li>
+		    <li>Real-time solar PV diversion</li>
+				<li>Variable charge rate</li>
+				<li>Emoncms data logging</li>
+        <li>Advanced safety features</li>
+				<li>Open API</li>
+        <a class="btn" href="https://shop.openenergymonitor.com/emonevse-wifi-connected-ev-charging-station-iec-60947-5-type-2/">View in Shop &rarr; </a>
+
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li>Tethered cable</li>
+        <li>Kit form</li>
+        <li>Single-phase</li>
+        <li>32A (7kW)</li>
+        <div class="divider"></div>
+        <li>Energy monitoring</li>
+        <li>RGB LCD display</li>
+				<li>WiFi connected</li>
+		    <li>Web app interface</li>
+		    <li>Real-time solar PV diversion</li>
+				<li>Variable charge rate</li>
+				<li>Emoncms data logging</li>
+        <li>Advanced safety features</li>
+				<li>Open API</li>
+        <a class="btn" href="/integrations/openevse">Assembly guide</a>
+        <a class="btn" href="https://shop.openenergymonitor.com/openevse-wifi-emoncms-ev-charging-station-kit/">View in Shop &rarr; </a>
+
+      </ul>
+    </td>
+  </tr>
 
 
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/applications/index.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/applications/index.markdown'>Edit on GitHub Prose</a></div>
+
+
+<!-- <img src="/images/applications/ev-charging/openevse-wifi.png">
+<img src="/images/applications/ev-charging/evsolarpv.jpeg"> -->
+</h2></h2></th></tr></table>
+
+
+  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/applications/ev-charging.markdown'>Edit on GitHub</a></div>
+<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/applications/ev-charging.markdown'>Edit on GitHub Prose</a></div>
 
 </article>
 

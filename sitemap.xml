@@ -41,6 +41,9 @@
 <loc>http://guide.openenergymonitor.org/setup/esp8266-adapter-emontx/</loc>
 </url>
 <url>
+<loc>http://guide.openenergymonitor.org/applications/ev-charging/</loc>
+</url>
+<url>
 <loc>http://guide.openenergymonitor.org/setup/export-csv/</loc>
 </url>
 <url>
@@ -129,6 +132,6 @@
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/static/mdi-demo.html</loc>
-<lastmod>2018-05-14T07:37:30+00:00</lastmod>
+<lastmod>2018-05-15T15:30:24+00:00</lastmod>
 </url>
 </urlset>
