@@ -70,7 +70,10 @@ Solar PV diversion dynamically adjusts the charging rate in real-time based on t
   </tr>
 </table>
 
-<img src="/images/applications/ev-charging/openevse-wifi.png">
-<img src="/images/applications/ev-charging/evsolarpv.jpeg">
+![](/images/applications/ev-charging/openevse-wifi.png)
 
+<div class='videoWrapper'>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WJtNEPrSSvg" frameborder="0" allowfullscreen></iframe>
+</div>
 
+![](/images/applications/ev-charging/evsolarpv.jpeg)
