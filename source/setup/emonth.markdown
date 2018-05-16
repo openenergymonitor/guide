@@ -39,11 +39,24 @@ Up to 6x wired temperature sensors can be connected directly to an emonPi / emon
 
 <a class="btn pull-right" href="https://shop.openenergymonitor.com/emonth-433mhz-temperature-humidity-node/">View in Shop &rarr; </a>
 
+<br>
+
 ### emonTH Hardware Setup
 
-#### 1. DIP Switch Config
+#### 1. DIP Switch Config (emonTH V1.5 and up)
 
-- If more than one emonTH is to be used with the same base-station set the node ID using the [on-board DIP switches](https://wiki.openenergymonitor.org/index.php/EmonTH_V1.5#DIP_Switch_node_ID).
+If more than one emonTH is to be used with the same base-station, each emonTH will need a different RF node ID. The node IDs on each unit can be set using the on-board DIP switch; this enables four node IDs to be selected by changing the switch positions without the need to change the firmware (as before). Up to 30 emonTHs can theoretically connect to a single emonBase / emonPi.
+
+A USB to UART cable and Arduino IDE can be used to set additional unique node IDs by changing the nodeID variable at the beginning of the [sketch](https://community.openenergymonitor.org/t/emontx-emonth-configure-rf-settings-via-serial-released-fw-v2-6-v3-2/2064?source_topic_id=5468).
+
+Alternatively, we are happy to set the node ID for you before shipping (please leave us a note with your order).
+
+| DIP 1 | DIP 2 | RF node ID V1.x firmware | RF node ID V2.x firmware |
+|-------|-------|--------------------------|--------------------------|
+| OFF   | OFF   | 19 (default)             | 23 (default)             |
+| ON    | OFF   | 20                       | 24                       |
+| OFF   | ON    | 21                       | 25                       |
+| ON    | ON    | 22                       | 26                       |
 
 #### 2. Install Additional Sensors
 
