@@ -641,13 +641,54 @@ highlight active link...
 
 <p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emonth-433mhz-temperature-humidity-node/">View in Shop → </a></p>
 
+<p><br /></p>
+
 <h3 id="emonth-hardware-setup">emonTH Hardware Setup</h3>
 
-<h4 id="dip-switch-config">1. DIP Switch Config</h4>
+<h4 id="dip-switch-config-emonth-v15-and-up">1. DIP Switch Config (emonTH V1.5 and up)</h4>
 
-<ul>
-  <li>If more than one emonTH is to be used with the same base-station set the node ID using the <a href="https://wiki.openenergymonitor.org/index.php/EmonTH_V1.5#DIP_Switch_node_ID">on-board DIP switches</a>.</li>
-</ul>
+<p>If more than one emonTH is to be used with the same base-station, each emonTH will need a different RF node ID. The node IDs on each unit can be set using the on-board DIP switch; this enables four node IDs to be selected by changing the switch positions without the need to change the firmware (as before). Up to 30 emonTHs can theoretically connect to a single emonBase / emonPi.</p>
+
+<p>A USB to UART cable and Arduino IDE can be used to set additional unique node IDs by changing the nodeID variable at the beginning of the <a href="https://community.openenergymonitor.org/t/emontx-emonth-configure-rf-settings-via-serial-released-fw-v2-6-v3-2/2064?source_topic_id=5468">sketch</a>.</p>
+
+<p>Alternatively, we are happy to set the node ID for you before shipping (please leave us a note with your order).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>DIP 1</th>
+      <th>DIP 2</th>
+      <th>RF node ID V1.x firmware</th>
+      <th>RF node ID V2.x firmware</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>OFF</td>
+      <td>OFF</td>
+      <td>19 (default)</td>
+      <td>23 (default)</td>
+    </tr>
+    <tr>
+      <td>ON</td>
+      <td>OFF</td>
+      <td>20</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <td>OFF</td>
+      <td>ON</td>
+      <td>21</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>ON</td>
+      <td>ON</td>
+      <td>22</td>
+      <td>26</td>
+    </tr>
+  </tbody>
+</table>
 
 <h4 id="install-additional-sensors">2. Install Additional Sensors</h4>
 
