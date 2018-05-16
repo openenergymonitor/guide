@@ -18,17 +18,14 @@ OpenEnergyMonitor is the official European re-seller for OpenEVSE. We have been 
 
 Solar PV diversion dynamically adjusts the charging rate in real-time based on the excess generated power, an EmonPi is required for solar PV diversion. See [Solar PV Application Guide](/applications/solar-pv).
 
-
-
 <table style="width:100%">
   <tr>
     <th><h2>EmonEVSE</h2></th>
-    <th><h2>OpenEVSE (kit)<h2></th>
+    <th><h2>OpenEVSE (kit)</h2></th>
   </tr>
   <tr>
     <td><img src="/images/applications/ev-charging/emonevse-t2.png"></td>
     <td><img src="/images/applications/ev-charging/openevse.jpg"></td>
-
   </tr>
   <tr>
     <td>
@@ -48,7 +45,6 @@ Solar PV diversion dynamically adjusts the charging rate in real-time based on t
         <li>Advanced safety features</li>
 				<li>Open API</li>
         <a class="btn" href="https://shop.openenergymonitor.com/emonevse-wifi-connected-ev-charging-station-iec-60947-5-type-2/">View in Shop &rarr; </a>
-
       </ul>
     </td>
     <td>
@@ -69,13 +65,12 @@ Solar PV diversion dynamically adjusts the charging rate in real-time based on t
 				<li>Open API</li>
         <a class="btn" href="/integrations/openevse">Assembly guide</a>
         <a class="btn" href="https://shop.openenergymonitor.com/openevse-wifi-emoncms-ev-charging-station-kit/">View in Shop &rarr; </a>
-
       </ul>
     </td>
   </tr>
-
 </table>
 
+<img src="/images/applications/ev-charging/openevse-wifi.png">
+<img src="/images/applications/ev-charging/evsolarpv.jpeg">
 
-<!-- <img src="/images/applications/ev-charging/openevse-wifi.png">
-<img src="/images/applications/ev-charging/evsolarpv.jpeg"> -->
+
