@@ -71,11 +71,15 @@ html, body {
   font-family: "oemFont", sans-serif;
   margin: 0;
   height: 100vh;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 html {
   min-height: 100vh;
 }
+
+
 
 .grid {
   margin-bottom: 0;
@@ -617,12 +621,11 @@ highlight active link...
 <table style="width:100%">
   <tr>
     <th><h2>EmonEVSE</h2></th>
-    <th><h2>OpenEVSE (kit)<h2>
-  
+    <th><h2>OpenEVSE (kit)</h2></th>
+  </tr>
   <tr>
     <td><img src="/images/applications/ev-charging/emonevse-t2.png" /></td>
     <td><img src="/images/applications/ev-charging/openevse.jpg" /></td>
-
   </tr>
   <tr>
     <td>
@@ -642,7 +645,6 @@ highlight active link...
         <li>Advanced safety features</li>
 				<li>Open API</li>
         <a class="btn" href="https://shop.openenergymonitor.com/emonevse-wifi-connected-ev-charging-station-iec-60947-5-type-2/">View in Shop &rarr; </a>
-
       </ul>
     </td>
     <td>
@@ -663,17 +665,14 @@ highlight active link...
 				<li>Open API</li>
         <a class="btn" href="/integrations/openevse">Assembly guide</a>
         <a class="btn" href="https://shop.openenergymonitor.com/openevse-wifi-emoncms-ev-charging-station-kit/">View in Shop &rarr; </a>
-
       </ul>
     </td>
   </tr>
+</table>
 
+<p><img src="/images/applications/ev-charging/openevse-wifi.png" />
+<img src="/images/applications/ev-charging/evsolarpv.jpeg" /></p>
 
-
-
-<!-- <img src="/images/applications/ev-charging/openevse-wifi.png">
-<img src="/images/applications/ev-charging/evsolarpv.jpeg"> -->
-</h2></h2></th></tr></table>
 
 
   <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/applications/ev-charging.markdown'>Edit on GitHub</a></div>
@@ -929,7 +928,7 @@ $(".blackOut").click(function() {
 });
 
 // if window size changes make responsive changes to sidebar and navigation
-
+windowState = true;
 var xsize = 0;
 $(window).on('load', function(){
   xsize = $( window ).width();
