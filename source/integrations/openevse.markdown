@@ -34,7 +34,7 @@ See our [blog post](https://blog.openenergymonitor.org/2017/01/openevse-build/) 
 
 <br>
 
-## Safety
+## {% linkable_title Safety %}
 
 OpenEVSE units have been designed to exceed the safety requirements for EV Charging Stations from SAE J1772, NEC, UL and CE. Before supplying power to the car (and continuously while charging) the EVSE unit conducts a number of checks, no power is supplied until all the checks have passed. See
 
@@ -45,7 +45,7 @@ OpenEVSE units have been designed to exceed the safety requirements for EV Charg
 Mains wiring should only be undertaken by a qualified electrician.
 </p>
 
-## User Guide
+## {% linkable_title User Guide %}
 
 <div class='videoWrapper'>
 <iframe width="300" height="169" src="https://www.youtube.com/embed/cIvmYP57eOo" frameborder="0" allowfullscreen></iframe>
@@ -56,7 +56,7 @@ Mains wiring should only be undertaken by a qualified electrician.
 
 ***
 
-## Assembly
+## {% linkable_title Assembly %}
 
 The standard build guide from OpenEVSE can be followed taking into account the specific OpenEnergyMonitor (Europe / UK) considerations (see below):
 
@@ -76,7 +76,7 @@ The standard build guide from OpenEVSE can be followed taking into account the s
 
 ___
 
-## OpenEnergyMonitor EVSE Considerations
+## {% linkable_title OpenEnergyMonitor EVSE Considerations %}
 
 Specific considerations for OpenEVSE units obtained via the [OpenEnergyMonitor Shop](http://shop.openenergymonitor.com/ev-charge-controllers/) to be installed in Europe / UK.
 
@@ -130,7 +130,7 @@ All OpenEVSE's from OpenEnergyMonitor contain hardware for GFCI (ground fault in
 
 ***
 
-## WiFi Gateway
+## {% linkable_title WiFi Gateway %}
 
 The WiFi gateway allows all functions of the OpenEVSE to be controlled remotely and data logged to Emoncms. The WiFi gateway is optional but highly recommend.
 
@@ -154,7 +154,8 @@ The WiFi gateway allows all functions of the OpenEVSE to be controlled remotely 
 
 See full OpenEVSE WiFi gateway documentation in the [OpenEVSE ESP8266 WiFi GitHub Repo](https://github.com/openevse/ESP8266_WiFi_v2.x/).
 
-### Solar PV Divert
+### {% linkable_title Solar PV Divert %}
+
 
 The OpenEVSE WifI gateway includes a solar PV diversion feature. This feature allows the OpenEVSE to adjust the charge rate based on the amount of available solar PV production or excess power.
 
