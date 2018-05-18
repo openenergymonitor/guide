@@ -4,24 +4,29 @@
 
 <style>
 
+:target:before {  /* target not hidden by fixed top bar */
+  content : "";
+  display : block;
+  height  : 45px;
+  margin  : -45px 0 0;
+}
+
 @font-face {
-  font-family: "oemFont";
-  src: url(/font/Ubuntu-OEM-Light.ttf);
+  font-family : "oemFont";
+  src         : url(/font/Ubuntu-OEM-Light.ttf);
 }
 
 html, body {
-  font-family: "oemFont", sans-serif;
-  margin: 0;
-  height: 100vh;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+  font-family   : "oemFont", sans-serif;
+  margin        : 0;
+  height        : 100vh;
+  overflow-wrap : break-word;
+  word-wrap     : break-word;
 }
 
 html {
   min-height: 100vh;
 }
-
-
 
 .grid {
   margin-bottom: 0;
