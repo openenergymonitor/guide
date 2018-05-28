@@ -90,11 +90,11 @@ Latest log file entries can be viewed with: `$ tail /var/log/emonpilcd/emonpilcd
 
 To view all MQTT messages subscribe to  `emon/#` base topic :
 
-  `$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t ' emon/#'`
+  `$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t 'emon/#'`
 
 To view all MQTT messages for a particular node subscribe to sub-topic:
 
-`$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t ' emon/emonpi/#'`
+`$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t 'emon/emonpi/#'`
 
 *Note: `#` denotes a wild-card*
 
