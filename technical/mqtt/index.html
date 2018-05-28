@@ -696,11 +696,11 @@ Latest log file entries can be viewed with: <code class="highlighter-rouge">$ ta
 
 <p>To view all MQTT messages subscribe to  <code class="highlighter-rouge">emon/#</code> base topic :</p>
 
-<p><code class="highlighter-rouge">$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t ' emon/#'</code></p>
+<p><code class="highlighter-rouge">$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t 'emon/#'</code></p>
 
 <p>To view all MQTT messages for a particular node subscribe to sub-topic:</p>
 
-<p><code class="highlighter-rouge">$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t ' emon/emonpi/#'</code></p>
+<p><code class="highlighter-rouge">$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t 'emon/emonpi/#'</code></p>
 
 <p><em>Note: <code class="highlighter-rouge">#</code> denotes a wild-card</em></p>
 
