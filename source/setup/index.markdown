@@ -234,7 +234,8 @@ The system is made up of five main units. These can be assembled and configured 
 		<h4 id="wireless-temperature-hardware">a) Wireless Temperature Hardware</h4>
 		<h4 id="emonthhttpshopopenenergymonitorcomemonth-433mhz-temperature-humidity-node"><a href="http://shop.openenergymonitor.com/emonth-433mhz-temperature-humidity-node/">emonTH</a></h4>
 		<p>The emonTH is a long battery-life, easy to deploy, wireless room temperature and humidity sensor node designed for monitoring a building’s thermal performance.</p>
-		<p>The emonTH is powered by two AA batteries and is available with a choice of either DS18B20 temperature sensors or DHT22 based Temperature and Humidity sensors. An external DS18B20 temperature sensor can easily be connected to a screw terminal block to provide external temperature readings.</p>
+		<p>The emonTH is powered by two AA batteries and has an on-board Si7021 temperature and humidity sensor. An external DS18B20 temperature sensor can easily be connected to a screw terminal block to provide external temperature readings.
+</p>
 		<p><img alt="emonTH" src="/images/setup/emonth-plant.png" title="emonTH"></p>
 		<ul>
 			<li>Wireless temperature &amp; humidity monitoring node</li>
