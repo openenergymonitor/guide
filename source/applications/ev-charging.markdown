@@ -32,7 +32,7 @@ Solar PV diversion dynamically adjusts the charging rate in real-time based on t
       <ul>
         <li>Non-tethered socket (Type 2)</li>
         <li>Fully assembled & certified</li>
-	<li>OLEV Homecharge Scheme grant approved<li>
+	<li>OLEV Homecharge Scheme grant approved</li>
         <li>Single/Three-phase</li>
         <li>32A (7kW/22kW)</li>
         <div class="divider"></div>
