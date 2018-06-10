@@ -35,7 +35,7 @@ published: true
 
 - ### {% linkable_title emonTx V3 %}
   - [User Guide](https://guide.openenergymonitor.org/setup/emontx/)
-  - [Hardware & Offical Firmware](https://github.com/openenergymonitor/emontx3)
+  - [Hardware & Official Firmware](https://github.com/openenergymonitor/emontx3)
   - [Other emonTx firmware examples](https://github.com/openenergymonitor/emonTxFirmware)
   - [Hardware Docs](https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3.4)
   - [Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
