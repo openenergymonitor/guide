@@ -15,7 +15,11 @@ The OpenEnergyMonitor Solar PV monitor is a tool to help you make the most of yo
 
 Providing real-time and historic information on your solar generation and demand matching, it will help you make better use of available solar power.
 
-MySolar PV is a dashboard app which runs on [Emoncms](https://Emoncms.org).
+<p><a class="btn pull-right" href="http://shop.openenergymonitor.com/emonpi-solar-pv-bundle/">View in Shop →</a></p>
+
+MySolar PV is a dashboard app which runs on Emoncms. 
+
+Emoncms is pre-installed on the emonPi and can run locally and or data can be posted to our remote emoncms server [Emoncms.org](https://emoncms.org)
 
 ![SolarPV](/images/applications/solar-pv/my-solar-pv.jpg)
 
