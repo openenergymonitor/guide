@@ -9,10 +9,12 @@ sharing: true
 footer: true
 ---
 
+<p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emonPi-3">View in Shop →</a></p>
+
 The OpenEnergyMonitor system can be used as a simple home energy monitoring system for understanding energy consumption.
+
 View and explore real-time power and daily energy consumption in kWh.
 
-<p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emonPi-3">View in Shop →</a></p>
 
 MyElectric is a web app which runs on [Emoncms](https://Emoncms.org). MyElectric is also available as a native [Android app](https://play.google.com/store/apps/details?id=org.emoncms.myapps&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1)
 
@@ -85,7 +87,7 @@ Once the required feeds are selected, the Launch App button will appear.
 
 The main view shows a moving window power view of site-consumption in the top half and historic daily energy consumption in kWh in the bottom half.
 
-#### Energy View 
+#### Energy View
 
 ![MyElectric Web App](/images/applications/home-energy/myelectric_webapp.png)
 
