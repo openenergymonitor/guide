@@ -61,6 +61,8 @@ emonPi can be connected to the internet via Ethernet or WiFi, or operate in stan
 
 ![emonpi-network-wizard2](/images/setup/emonpi-network-wizard2.png)
 
+**Please be patient, scanning for networks can take a while**
+
 ![emonpi-network-wizard3](/images/setup/emonpi-network-wizard3.png)
 
 - After selecting local WiFi network and entering password the emonPi will turn off its own WiFi AP then reboot and try and connect to local WiFi network.
