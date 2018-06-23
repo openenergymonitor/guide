@@ -43,8 +43,10 @@ emonPi can be connected to the internet via Ethernet or WiFi, or operate in stan
 
 ![emonPi WiFi](/images/setup/emonpi_wifi.png)
 
-- Connect 5V USB power [(1.2A USB power adapter recommended)](http://shop.openenergymonitor.com/power-supplies/)
+- Connect 5V USB power [(2A USB power adapter recommended (2.5A ideal))](http://shop.openenergymonitor.com/power-supplies/)
 - After a couple of minutes the emonPi will broadcast a Wifi access point (AP) called `emonPi` with password `emonpi2016`
+
+*Note: Please be patient it can take a number of minutes to start broadcasting an a WiFi AP at startup. The LCD will display `WiFi: YES 0% 192.168.42.1` once the WiFi AP is active.*
 
 ![emonpi wiki connect](/images/setup/emonpi-wifi.png)
 
