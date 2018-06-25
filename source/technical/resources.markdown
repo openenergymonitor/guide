@@ -91,8 +91,8 @@ published: true
 <br/>
 
 - ### {% linkable_title emonGLCD %}
-  - [User Guide](https://openenergymonitor.org/emon/emonglcd/)
-  - [emonGLCD Firmware](https://github.com/openenergymonitor/emonglcd)
+  - [Build Guide](https://github.com/openenergymonitor/EmonGLCD/tree/master/buildguide)
+  - [emonGLCD Firmware](https://github.com/openenergymonitor/emonglcd)
   - [emonGLCD Hardware CAD Design](https://github.com/openenergymonitor/emonglcd)
   - [Display Forum Category](https://community.openenergymonitor.org/c/hardware/display)
 
