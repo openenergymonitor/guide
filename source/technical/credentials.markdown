@@ -42,6 +42,8 @@ In case you're getting error _Authentication token manipulation error_ when chan
 
 MYSQL: `root` user password is `emonpimysql2016` and mysql `emoncms` user password is `emonpiemoncmsmysql2016`
 
+Note: On newer versions of mysql root access is disabled. 
+
 
 ## {% linkable_title MQTT %}
 
