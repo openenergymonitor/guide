@@ -135,11 +135,13 @@ The optical pulse sensor should work with all utility meters that have an LED or
 		</tr>
 		<tr>
 			<td>
-			<p>&nbsp;</p>
+			<p>Elster AS300P</p>
+			
+			<p>(single phase)</p>
 			</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
+			<td><a href="/images/setup/meters/ElsterAS300P.jpg"><img alt="" src="/images/setup/meters/ElsterAS300P.jpg" style="width: 100px; height: 100px;" /></a></td>
+			<td>4000</td>
+			<td>1000 / 4000 = <b>0.25</b></td>
 		</tr>
 		<tr>
 			<td>
