@@ -22,7 +22,7 @@ See [Resources page](/technical/resources) for links to firmware repositories fo
 
 ### Using Arduino IDE
 
-Either PlatformIO or Arduino IDE can be used to compile and upload the firmware. This example will use PlatformIO since we consider it the easiest method. If you wish to use Arduino IDE see [Offical Arduino Getting Started Guide](https://www.arduino.cc/en/Guide/HomePage).
+Either PlatformIO or Arduino IDE can be used to compile and upload the firmware. This example will use PlatformIO since we consider it the easiest method. If you wish to use Arduino IDE see [this Learn article](https://learn.openenergymonitor.org/electricity-monitoring/arduino-ide/windows10ide).
 
 ### Using PlatformIO
 
