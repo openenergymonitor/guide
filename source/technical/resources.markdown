@@ -16,6 +16,8 @@ published: true
 
 ## 1. Hardware & Firmware
 
+Either [PlatformIO](https://guide.openenergymonitor.org/technical/compiling/) (recommended) or the [Arduino IDE](https://learn.openenergymonitor.org/electricity-monitoring/arduino-ide/windows10ide) can be used to compile and upload firmware. 
+
 - ### {% linkable_title emonPi %}
   - [User Guide](https://guide.openenergymonitor.org/setup/)
   - [Firmware](https://github.com/openenergymonitor/emonpi)
@@ -48,7 +50,7 @@ published: true
   - [Hardware & Firmware](https://github.com/boblemaire/IoTaWatt)
   - [Forum Category](https://community.openenergymonitor.org/c/hardware/iotawatt)
   
-  <br/>
+<br/>
   
 - ### {% linkable_title emonESP %}
   - [User Guide](https://guide.openenergymonitor.org/setup/esp8266-adapter-emontx/)
