@@ -60,6 +60,8 @@ published: true
 
 2\. The relay contacts are isolated from the main supply. The 3 x relay terminals are connected as follows:
 
+![relay connection labeled](/images/integrations/relay-connections.png)
+
 ![new relay connections](/images/integrations/new-relay-contacts.png)
 
 <p class='note warning'>
