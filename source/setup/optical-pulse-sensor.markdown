@@ -193,6 +193,18 @@ The optical pulse sensor should work with all utility meters that have an LED or
 			<p>1000 / 1000 =&nbsp;<strong>1</strong></p>
 			</td>
 		</tr>
+		<tr>
+			<td>
+			<p>Secure Liberty 100</p>
+
+			<p>(Single Phase)</p>
+			</td>
+			<td><a href="/images/setup/meters/Secure_Liberty_100.png"><img alt="" src="/images/setup/meters/Secure_Liberty_100.png" style="width: 150px; height: 100px;" /></a></td>
+			<td>3200</td>
+			<td>
+			<p>1000 / 3200 =&nbsp;<strong>0.3125</strong></p>
+			</td>
+		</tr>
 	</tbody>
 </table>
 
