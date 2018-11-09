@@ -20,11 +20,21 @@ published: true
 
 Default log-in credentials for latest [pre-built emonPi/emonBase ready-to-go SD card](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log).
 
-**Note: Before changing any password the root file-system will need to be put into Read Write mode with command `$rpi-rw`. When finished put the file-system back to Read Only with `$rpi-ro`.**
+**Note: Any emonSD image pre emonSD-30Oct18 runs root file-system in read-only mode, the root file-system will need to be put into Read Write mode with command `$rpi-rw`. When finished put the file-system back to Read Only with `$rpi-ro`. emonSD-30-18 does not require this step**
 
 ## {% linkable_title SSH %}
 
 To connect to emonPi / emonBase via ssh:
+
+
+ - **If running emonSD-30Oct18 or newer SSH is disabled by default**
+ - SSH can be enabled by either:
+    - Creating a file called `ssh` in the FAT `/boot` partion on the SD card
+    - Or pressing and holding the emonPi LCD push-button for 5 seconds:
+
+<div class='videoWrapper'>
+<iframe width="300" height="315" src="https://www.youtube.com/embed/HbdUuNKaKwY" frameborder="0" allowfullscreen></iframe>
+</div>
 
  - Linux / Mac : open terminal window `$ ssh pi@emonpi` or `$ ssh pi@<IP ADDRESS>`
  - Windows: use [Putty application](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
@@ -32,17 +42,22 @@ To connect to emonPi / emonBase via ssh:
 
 **SSH: port 22 user,pass:`pi`,`emonpi2016`**
 
-*On older emonSD images ssh password is `raspberry`, see emonSD [repository & changelog](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log)*
+*On very old emonSD images ssh password is `raspberry`, see emonSD [repository & changelog](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log)*
 
 Once logged in change password with: `$ passwd`
 
 In case you're getting error _Authentication token manipulation error_ when changing password, first mount the filesystem as read-write using `$rpi-rw`.
 
+If you wish to disable SSH run:
+
+`$ sudo /home/pi/emonpi/lcd/./disablessh.sh`
+
+
 ## {% linkable_title MYSQL %}
 
 MYSQL: `root` user password is `emonpimysql2016` and mysql `emoncms` user password is `emonpiemoncmsmysql2016`
 
-Note: On newer versions of mysql root access is disabled. 
+Note: On newer versions of mysql root access is disabled.
 
 
 ## {% linkable_title MQTT %}
