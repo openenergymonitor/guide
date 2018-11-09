@@ -26,11 +26,11 @@ This SD card can be [purchased from the shop](http://shop.openenergymonitor.com/
 - [Pre-build SD card download & Change Log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log)
 - [Instructions to flash image to SD card (RaspberryPi)](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
 
-*The emonPi runs the Emoncms data logging web-app locally from emonPi's internal web sever. Using Emoncms data can be logged locally to the emonPi's SD card and (optionally) posted remotely to the [Emoncms.org](https://emoncms.org) cloud server.*
+*The emonPi runs the Emoncms data logging web-app locally from emonPi's internal web server. Using Emoncms data can be logged locally to the emonPi's SD card and (optionally) posted remotely to the [Emoncms.org](https://emoncms.org) cloud server.*
 
 
-**Emoncms local:** Emoncms instance running locally on the emonPi
-**Emoncms remote:** Emoncms.org cloud server
+**Emoncms local:** Emoncms instance running locally on the emonPi. <br />
+**Emoncms remote:** Emoncms.org cloud server.
 
 emonPi can be connected to the internet via Ethernet or WiFi, or operate in stand-alone WiFi access point mode.
 
@@ -46,7 +46,7 @@ emonPi can be connected to the internet via Ethernet or WiFi, or operate in stan
 - Connect 5V USB power [(2A USB power adapter recommended (2.5A ideal))](http://shop.openenergymonitor.com/power-supplies/)
 - After a couple of minutes the emonPi will broadcast a Wifi access point (AP) called `emonPi` with password `emonpi2016`
 
-*Note: Please be patient it can take a number of minutes to start broadcasting an a WiFi AP at startup. The LCD will display `WiFi: YES 0% 192.168.42.1` once the WiFi AP is active.*
+*Note: Please be patient, it can take a number of minutes to start broadcasting an a WiFi AP at startup. The LCD will display `WiFi: YES 0% 192.168.42.1` once the WiFi AP is active.*
 
 ![emonpi wiki connect](/images/setup/emonpi-wifi.png)
 
