@@ -13,7 +13,7 @@ Open Home Automation Bus (openHAB) is *"a vendor and technology agnostic open so
 
 **[http://www.openhab.org](http://www.openhab.org)**
 
-**OpenHAB is NOT pre-installed on emonSD-30Oct18, see [NodeRED Install Guide](https://www.openhab.org/docs/installation/linux.html#installation) to install the latest version**
+**OpenHAB is NOT pre-installed on emonSD-30Oct18, see [OpenHAB Install Guide](https://www.openhab.org/docs/installation/linux.html#installation) to install the latest version**
 
 ***
 
