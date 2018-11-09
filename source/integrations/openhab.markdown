@@ -13,9 +13,11 @@ Open Home Automation Bus (openHAB) is *"a vendor and technology agnostic open so
 
 **[http://www.openhab.org](http://www.openhab.org)**
 
+**OpenHAB is NOT pre-installed on emonSD-30Oct18, see [NodeRED Install Guide](https://www.openhab.org/docs/installation/linux.html#installation) to install the latest version**
+
 ***
 
-**openHAB is pre-installed and setup on the latest emondSD Raspberry Pi images, see [emonSD repository and change log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log). If your running an emonSD image that includes openHAB browse to:**
+**openHAB is pre-installed and setup on emondSD pre 2018, see [emonSD repository and change log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log). If your running an emonSD image that includes openHAB browse to:**
 
 ## [http://emonpi:8080](http://emonpi:8080)
 

@@ -13,7 +13,11 @@ Node-RED is a tool for wiring together hardware devices, APIs and online service
 
 At the heart of Node-RED is a visual editor allowing complex data flows to be wired together with little coding.
 
-**Node-RED is pre-installed and set up on the latest emonSD Raspberry Pi images, see [emonSD repository and change log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log). If you are running an emonSD image that includes Node-RED browse to:**
+**Node-RED is NOT pre-installed on emonSD-30Oct18, see [NodeRED RaspberryPi Install Guide](https://nodered.org/docs/hardware/raspberrypi) to install**
+
+***
+
+**Node-RED is pre-installed on emonSD pre 2018, see [emonSD repository and change log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log). If you are running an emonSD image that includes Node-RED just browse to:**
 
 ## [http://emonpi:1880](http://emonpi:1880)
 
