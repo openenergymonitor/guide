@@ -101,6 +101,9 @@
 <loc>http://guide.openenergymonitor.org/setup/north-america/</loc>
 </url>
 <url>
+<loc>http://guide.openenergymonitor.org/integrations/openevse-software/</loc>
+</url>
+<url>
 <loc>http://guide.openenergymonitor.org/integrations/openevse/</loc>
 </url>
 <url>
@@ -132,6 +135,6 @@
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/static/mdi-demo.html</loc>
-<lastmod>2018-11-09T17:49:17+00:00</lastmod>
+<lastmod>2018-11-09T18:14:37+00:00</lastmod>
 </url>
 </urlset>
