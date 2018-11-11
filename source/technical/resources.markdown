@@ -113,7 +113,7 @@ Either [PlatformIO](https://guide.openenergymonitor.org/technical/compiling/) (r
 
 <br/>
 
-- ### {% linkable_title Optical OpenEVSE %}
+- ### {% linkable_title OpenEVSE %}
   - [User Guide](https://guide.openenergymonitor.org/integrations/openevse)
   - [Build Guide](http://openevse.dozuki.com/Guide/OpenEVSE+50A+Charging+Station/8)
   - [WiFi Gateway User Guide & FW](https://github.com/openevse/ESP8266_WiFi_v2.x/)
