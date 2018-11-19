@@ -37,9 +37,9 @@ LightWaveRF produce a variety of RF plugs and relays which can be controlled via
 
 Multi-purpose Wifi connected relay control board. Applications include: remote heating an A/C systems control via HTTP or MQTT using nodeRED, openHAB etc.
 
-## [OpenEVSE Open-source EV charging station](/integrations/openevse/)
+## [EV Charging](/integrations/ev-chargin/)
 
-OpenEVSE is a fully open-source EVSE (Electric Vehicle Supply Equipment) charging station. Emoncms and MQTT enabled.
+We have worked with OpenEVSE to develope open-source EV charging stations which can integrate with OpenEnergyMonitor. With WiFi connectivity the OpenEVSE and EmonEVSE units can log data directly to Emoncms and integrate with emonPi via MQTT for features such as Solar PV energy divert.
 
 ***
 
@@ -47,7 +47,7 @@ OpenEVSE is a fully open-source EVSE (Electric Vehicle Supply Equipment) chargin
 
 ## [HA-bridge](https://github.com/openenergymonitor/emonpi-ha-bridge)
 
-Enable voice control of MQTT devices using Google Home or Amazon Eco using home automation bridge (ha-bridge) running on emonPi 
+Enable voice control of MQTT devices using Google Home or Amazon Eco using home automation bridge (ha-bridge) running on emonPi
 
 ## [Home Assistant](https://blog.openenergymonitor.org/2016/04/Home-Assistant/)
 
