@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>OpenEVSE EV Charging Station - Guide | OpenEnergyMonitor</title>
+    <title>OpenEVSE Build Guide - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
     <meta name="description" content="Open Source Electric Vehicle Charging Staion">
     
@@ -15,7 +15,7 @@
     <link rel="canonical" href="http://guide.openenergymonitor.org/integrations/openevse/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="OpenEVSE EV Charging Station">
+    <meta property="og:title" content="OpenEVSE Build Guide">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
     <meta property="og:url" content="http://guide.openenergymonitor.org/integrations/openevse/">
     <meta property="og:type" content="website">
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="OpenEVSE EV Charging Station">
+    <meta name="twitter:title" content="OpenEVSE Build Guide">
     <meta name="twitter:description" content="Open Source Electric Vehicle Charging Staion">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
@@ -609,57 +609,21 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      OpenEVSE EV Charging Station
+      OpenEVSE Build Guide
     </h1>
   </header>
   <hr class="divider">
   
 
-  <p>OpenEVSE is a fully open-source EVSE (Electric Vehicle Supply Equipment) charging station designed by <a href="http://openevse.com">OpenEV</a>.</p>
-
-<blockquote>
-  <p>An EVSE charging station is a device an electric car (EV) is plugged into to charge. It communicates with the car to agree on the fastest and safest charging rate that both the car and the power supply can support.</p>
-</blockquote>
+  <p>OpenEVSE is a fully open-source EVSE (Electric Vehicle Supply Equipment) charging station designed by <a href="http://openevse.com">OpenEVSE</a> and re-sold by OpenEnergyMonitor.</p>
 
 <p><img src="/images/integrations/openevse-banner.png" alt="Nissan LEAF OpenEVSE" /></p>
 
-<p><img src="/images/integrations/openevse-wifi.png" alt="OpenEVSE WiFi" /></p>
-
-<p><em>OpenEnergyMonitor have been collaborating with OpenEV to improve energy monitoring integration and control as well as tailoring the setup for use in Europe and the UK. This page provides Europe / UK specific setup instructions and considerations.</em></p>
-
-<p>See our <a href="https://blog.openenergymonitor.org/2017/01/openevse-build/">blog post</a> detailing a full OpenEVSE build review, and usage.</p>
-
-<p><a class="btn pull-right" href="https://shop.openenergymonitor.com/ev-charge-controllers/">View in Shop → </a></p>
-
-<p><br /></p>
-
-<!--<div class='videoWrapper'>-->
-<!--<iframe width="300" height="169" src="https://www.youtube.com/embed/A9D48V1D1G4" frameborder="0" allowfullscreen></iframe>-->
-<!--</div>-->
-
-<p><br /></p>
-
-<h2 id="a-classtitle-link-namesafety-hrefsafetya-safety"><a class="title-link" name="safety" href="#safety"></a> Safety</h2>
-
-<p>OpenEVSE units have been designed to exceed the safety requirements for EV Charging Stations from SAE J1772, NEC, UL and CE. Before supplying power to the car (and continuously while charging) the EVSE unit conducts a number of checks, no power is supplied until all the checks have passed. See</p>
-
-<ul>
-  <li><a href="https://openev.freshdesk.com/support/solutions/articles/6000113537-openevse-safety-features">OpenEVSE Safety Features</a></li>
-  <li><a href="/images/integrations/OpenEVSE_flowchart.pdf">OpenEVSE Safety Features Flow Diagram (.pdf)</a></li>
-</ul>
-
-<p class="note warning">
-Mains wiring should only be undertaken by a qualified electrician.
+<p class="note">
+OpenEnergyMonitor have collaborated with OpenEVSE to improve energy monitoring integration and control as well as tailoring the setup for use in Europe and the UK. This page provides Europe / UK specific setup instructions and considerations.
 </p>
 
-<h2 id="a-classtitle-link-nameuser-guide-hrefuser-guidea-user-guide"><a class="title-link" name="user-guide" href="#user-guide"></a> User Guide</h2>
-
-<div class="videoWrapper">
-<iframe width="300" height="169" src="https://www.youtube.com/embed/cIvmYP57eOo" frameborder="0" allowfullscreen=""></iframe>
-</div>
-
-<p><br />
-- <strong><a href="https://www.openevse.com/files/P50_Users_Guide.pdf">OpenEVSE Hardware User Guide (.pdf)</a></strong></p>
+<p>See our <a href="https://blog.openenergymonitor.org/2017/01/openevse-build/">blog post</a> detailing a full OpenEVSE build review, and usage.</p>
 
 <hr />
 
@@ -668,7 +632,8 @@ Mains wiring should only be undertaken by a qualified electrician.
 <p>The standard build guide from OpenEVSE can be followed taking into account the specific OpenEnergyMonitor (Europe / UK) considerations (see below):</p>
 
 <ul>
-  <li><strong>OpenEVSE P50D Assembly guide</strong>: <a href="http://openevse.dozuki.com/Guide/OpenEVSE+50A+Charging+Station/8"><strong>Web</strong></a>, <a href="http://openevse.dozuki.com/GuidePDF/link/8/en"><strong>pdf</strong></a></li>
+  <li><strong>OpenEVSE Assembly guide</strong>: <a href="http://openevse.dozuki.com/Guide/OpenEVSE+50A+Charging+Station/8"><strong>Web</strong></a>, <a href="http://openevse.dozuki.com/GuidePDF/link/8/en"><strong>pdf</strong></a></li>
+  <li><a href="https://openevse.dozuki.com/Guide/OpenEVSE+WiFi+%28Beta%29/14"><strong>OpenEVSE WiFi Module Installation Guide</strong></a></li>
 </ul>
 
 <figure>
@@ -697,9 +662,9 @@ Mains wiring should only be undertaken by a qualified electrician.
 
 <p><img src="/images/integrations/oem-ev-cable-wire.jpg" alt="" /></p>
 
-<p><strong>IMPORTANT</strong></p>
-
-<p>All connections in EVSE should be made using bootlace ferrules crimped terminals. This is especially essential for EV cables since they use fine stranded wire for increased flexibility. This fine stranded wire is susceptible to creeping out of a terminal due to thermal cycling resulting in possible overheating. See this <a href="http://www2.schneider-electric.com/resources/sites/SCHNEIDER_ELECTRIC/content/live/FAQS/126000/FA126881/en_US/Fine%20Stranded%20Wire%200515DB0301.pdf">Schneider Electric Data Bulletin</a>.</p>
+<p class="note warning">
+All connections in EVSE should be made using bootlace ferrules crimped terminals. This is especially essential for EV cables since they use fine stranded wire for increased flexibility. This fine stranded wire is susceptible to creeping out of a terminal due to thermal cycling resulting in possible overheating. See this <a href="http://www2.schneider-electric.com/resources/sites/SCHNEIDER_ELECTRIC/content/live/FAQS/126000/FA126881/en_US/Fine%20Stranded%20Wire%200515DB0301.pdf">Schneider Electric Data Bulletin</a>.
+</p>
 
 <p><strong>EVSE cables obtained from the OpenEnergyMonitor shop will be pre-equipped with bootlace ferrules crimped terminals connections.</strong></p>
 
@@ -721,17 +686,17 @@ The max current of the EVSE should be set to match the continuous current rating
 
 <p><strong>Do not wire an EVSE into a 3-pin BS1363 plug unless the charging current is limited to 10A</strong>. This defeats the point of using an EVSE; better to use a <a href="http://www.evcables.co.uk/231/Portable-Charger-Cables">portable EVSE ‘granny cable’</a> instead.</p>
 
-<p>In mainland Europe <a href="https://en.wikipedia.org/wiki/Schuko">Schuko plugs</a> are rated to 16A max (13A continuous).</p>
+<p>In mainland Europe <a href="https://en.wikipedia.org/wiki/Schuko">Schuko plugs</a> are rated to 16A max (10A continuous).</p>
 
 <h3 id="charging-level">3. Charging Level</h3>
 
-<p>The OpenEVSE unit should be set to <strong>Level 2</strong> charging mode. The charging mode can be set via the LCD menu:</p>
+<p>The OpenEVSE unit should be set to <strong>L2</strong> (Level 2) charging mode (240V). This should be default setting for OpeneVSE running EU firmware. The charging mode can be set via the LCD menu:</p>
 
 <p><code class="highlighter-rouge">Setup &gt; Charging Mode &gt; L2</code></p>
 
 <p><em>Level 2 charging refers to charging from 220v-240v, as opposed to level 1 charging from 110v.</em></p>
 
-<p><strong>See User Guide video at the top of this page for a overview of how to operate the unit.</strong></p>
+<p><strong>See User Guide video at the bottom of this page for a overview of how to operate the unit.</strong></p>
 
 <h3 id="gfci-test-enabled">4. GFCI Test Enabled</h3>
 
@@ -739,104 +704,28 @@ The max current of the EVSE should be set to match the continuous current rating
 
 <hr />
 
-<h2 id="a-classtitle-link-namewifi-gateway-hrefwifi-gatewaya-wifi-gateway"><a class="title-link" name="wifi-gateway" href="#wifi-gateway"></a> WiFi Gateway</h2>
+<h2 id="a-classtitle-link-nameuser-guide-hrefuser-guidea-user-guide"><a class="title-link" name="user-guide" href="#user-guide"></a> User Guide</h2>
 
-<p>The WiFi gateway allows all functions of the OpenEVSE to be controlled remotely and data logged to Emoncms. The WiFi gateway is optional but highly recommend.</p>
+<h3 id="hardware-user-guide">Hardware User Guide</h3>
 
-<p><img src="/images/integrations/openevse-wifi.png" alt="OpenEVSE WiFi" /></p>
+<div class="videoWrapper">
+<iframe width="300" height="169" src="https://www.youtube.com/embed/cIvmYP57eOo" frameborder="0" allowfullscreen=""></iframe>
+</div>
 
-<h3 id="setup">Setup</h3>
+<p><strong><a href="/integrations/evse-setup">Software User Guide</a></strong></p>
 
-<ul>
-  <li>
-    <p>Follow the <a href="https://openevse.dozuki.com/Guide/OpenEVSE+WiFi+%28Beta%29/14">OpenEVSE WiFi setup</a> guide to connect up the ESP8266 WiFi module.</p>
-  </li>
-  <li>
-    <p>Once powered up connect to WiFi network with SSID <code class="highlighter-rouge">OpenEVSE_xxxx</code> with password <code class="highlighter-rouge">openevse</code> using a computer or mobile device.</p>
-  </li>
-  <li>
-    <p>You should get directed to a captive portal where you choose to join a local network. If captive portal does not work, browse to <a href="http://192.168.4.1">http://192.168.4.1</a></p>
-  </li>
-</ul>
+<h2 id="a-classtitle-link-namesafety-hrefsafetya-safety"><a class="title-link" name="safety" href="#safety"></a> Safety</h2>
 
-<p><img src="/images/integrations/openevse-wifi-scan.png" alt="" /></p>
+<p>OpenEVSE units have been designed to exceed the safety requirements for EV Charging Stations from SAE J1772, NEC, UL and CE. Before supplying power to the car (and continuously while charging) the EVSE unit conducts a number of checks, no power is supplied until all the checks have passed. See</p>
 
 <ul>
-  <li>Setup Emoncms / MQTT settings</li>
+  <li><a href="https://openev.freshdesk.com/support/solutions/articles/6000113537-openevse-safety-features">OpenEVSE Safety Features</a></li>
+  <li><a href="/images/integrations/OpenEVSE_flowchart.pdf">OpenEVSE Safety Features Flow Diagram (.pdf)</a></li>
 </ul>
 
-<p><img src="/images/integrations/openevse-services.png" alt="" /></p>
-
-<ul>
-  <li>OpenEVSE control: the OpenEVSE can be controlled remotely via web interface or via  MQTT, HTTP or direct serial using RAPI API.</li>
-</ul>
-
-<p>See full OpenEVSE WiFi gateway documentation in the <a href="https://github.com/openevse/ESP8266_WiFi_v2.x/">OpenEVSE ESP8266 WiFi GitHub Repo</a>.</p>
-
-<h3 id="a-classtitle-link-namesolar-pv-divert-hrefsolar-pv-diverta-solar-pv-divert"><a class="title-link" name="solar-pv-divert" href="#solar-pv-divert"></a> Solar PV Divert</h3>
-
-<p>The OpenEVSE WifI gateway includes a solar PV diversion feature. This feature allows the OpenEVSE to adjust the charge rate based on the amount of available solar PV production or excess power.</p>
-
-<figure>
-  <img src="/images/integrations/openevse-divert.png" />
-  <figcaption><i>OpenEVSE solar PV diversion example. Yellow: solar PV, blue: OpenEVSE.</i></figcaption>
-</figure>
-
-<p>The graph above is explained as follows:</p>
-
-<ul>
-  <li>OpenEVSE is initially sleeping with an EV connected</li>
-  <li>Once solar PV generation (yellow) reaches 6A (1.5kW @ 240V) the OpenEVSE initiates charging</li>
-  <li>Charging current is dynamically adjusted based on available solar PV generation</li>
-  <li>Once charging has begun, even if generation drops below 6A, the EV will continue to charge*</li>
-</ul>
-
-<p><em>*The decision was made not to pause charging if generation current drops below 6A since repeatedly starting / stopping a charge causes excess wear to the OpenEVSE relay contactor.</em></p>
-
-<p>If a Grid +I/-E (positive import / negative export) feed was used (instead of solar PV generation feed) the OpenEVSE would adjust its charging rate based on <em>excess</em> power that would be exported to the grid; for example, if solar PV was producing 4kW and 1kW was being used on-site, the OpenEVSE would charge at 3kW and the amount exported to the grid would be 0kW. If on-site consumption increases to 2kW the OpenEVSE would reduce its charging rate to 2kW.</p>
-
-<p>An <a href="https://guide.openenergymonitor.org/applications/solar-pv/">OpenEnergyMonitor solar PV energy monitor</a> with an AC-AC voltage sensor adaptor is required to monitor direction of current flow.</p>
-
-<h4 id="solar-pv-divert-setup">Solar PV Divert Setup</h4>
-
-<ul>
-  <li>To use ‘Eco’ charging mode MQTT must be enabled and ‘Solar PV divert’ MQTT topics must be entered.</li>
-  <li>Integration with an OpenEnergyMonitor emonPi is straightforward:
-    <ul>
-      <li>Connect to emonPi MQTT server, <a href="https://guide.openenergymonitor.org/technical/credentials/#mqtt">emonPi MQTT credentials</a> should be pre-populated</li>
-      <li>Enter solar PV generation / Grid (+I/-E) MQTT topic e.g. if solar PV is being monitored by emonPi CT channel 1 enter <code class="highlighter-rouge">emon/emonpi/power1</code></li>
-      <li><a href="https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en">MQTT lens Chrome extension</a> can be used to view MQTT data e.g. subscribe to <code class="highlighter-rouge">emon/#</code> for all OpenEnergyMonitor MQTT data. To lean more about MQTT see <a href="https://guide.openenergymonitor.org/technical/mqtt/">MQTT section of OpenEnergyMonitor user guide</a></li>
-      <li>If using Grid +I/-E (positive import / negative export) MQTT feed ensure the notation positive import / negative export is correct, CT sensor can be physically reversed on the cable to invert the reading.</li>
-    </ul>
-  </li>
-</ul>
-
-<h4 id="solar-pv-divert-operation">Solar PV Divert Operation</h4>
-
-<p><img src="/images/integrations/eco.png" alt="eco" /></p>
-
-<p>To enable ‘Eco’ mode (solar PV divert) charging:</p>
-
-<ul>
-  <li>Connect EV and ensure EV’s internal charging timer is switched off</li>
-  <li>Pause charge; OpenEVSE should display ‘sleeping’</li>
-  <li>Enable ‘Eco’ mode using web interface or via MQTT</li>
-  <li>
-    <p>EV will not begin charging when generation / excess current reaches 6A (1.4kW @ 240V)</p>
-  </li>
-  <li>During ‘Eco’ charging changes to charging current are temporary (not saved to EEPROM)</li>
-  <li>After an ‘Eco mode’ charge the OpenEVSE will revert to ‘Normal’ when EV is disconnected and previous ‘Normal’ charging current will be reinstated.</li>
-  <li>Current is adjusted in 1A increments between 6A* (1.5kW @ 240V) &gt; max charging current (as set in OpenEVSE setup)</li>
-  <li>6A is the lowest supported charging current that SAE J1772 EV charging protocol supports</li>
-  <li>The OpenEVSE does not adjust the current itself but rather request that the EV adjusts its charging current by varying the duty cycle of the pilot signal, see <a href="https://openev.freshdesk.com/support/solutions/articles/6000052070-theory-of-operation">theory of operation</a> and <a href="https://openev.freshdesk.com/support/solutions/articles/6000052074-basics-of-sae-j1772">Basics of SAE J1772</a>.</li>
-  <li>Charging mode can be viewed and set via MQTT: <code class="highlighter-rouge"><span class="p">{</span><span class="err">base-topic</span><span class="p">}</span><span class="err">/divertmode/set</span></code> (1 = normal, 2 = eco).</li>
-</ul>
-
-<p>* <em>OpenEVSE controller firmware <a href="https://github.com/OpenEVSE/open_evse/releases/tag/v4.8.0">V4.8.0</a> has a bug which restricts the lowest charging current to 10A. The J1772 protocol can go down to 6A. This <del>will</del> has be fixed with a firmware update. See <a href="https://github.com/openenergymonitor/open_evse/releases/">OpenEnergyMonitor OpenEVSE FW releases</a>. A ISP programmer is required to update openevse controler FW.</em></p>
-
-<hr />
-
-<p>See full OpenEVSE WiFi gateway documentation in the <a href="https://github.com/openevse/ESP8266_WiFi_v2.x/">OpenEVSE ESP8266 WiFi GitHub Repo</a>.</p>
+<p class="note warning">
+Mains wiring should only be undertaken by a qualified electrician.
+</p>
 
 
   <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/integrations/openevse.markdown'>Edit on GitHub</a></div>
@@ -910,7 +799,6 @@ The max current of the EVSE should be set to match the continuous current rating
         <ul>
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
-         <li><a  href='/applications/openevse/'>Electric Vehicle Charging </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
         </ul>
       </li>
@@ -918,7 +806,10 @@ The max current of the EVSE should be set to match the continuous current rating
       <li>
          <b>Integrations</b>
         <ul>
-         <li><a class='active' href='/integrations/openevse/'>EV Charging </a></li>
+         <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
+         <ul style="margin-bottom: 0px;;">
+            <li><a  href='/integrations/evse-setup'>User Guide Setup </a></li>
+          </ul>
          <li><a  href='/integrations/nodered/'>Node-RED </a></li>
          <li><a  href='/integrations/openhab/'>OpenHAB </a></li>
          <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>

@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>EV Charging - Guide | OpenEnergyMonitor</title>
+    <title>OpenEVSE / EmonEVSE Setup Guide - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="EV charging">
+    <meta name="description" content="Open Source Electric Vehicle Charging Staion">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/applications/ev-charging/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/integrations/evse-setup/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="EV Charging">
+    <meta property="og:title" content="OpenEVSE / EmonEVSE Setup Guide">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/applications/ev-charging/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/integrations/evse-setup/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="EV charging">
+    <meta property="og:description" content="Open Source Electric Vehicle Charging Staion">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="EV Charging">
-    <meta name="twitter:description" content="EV charging">
+    <meta name="twitter:title" content="OpenEVSE / EmonEVSE Setup Guide">
+    <meta name="twitter:description" content="Open Source Electric Vehicle Charging Staion">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -609,84 +609,235 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      EV Charging
+      OpenEVSE / EmonEVSE Setup Guide
     </h1>
   </header>
   <hr class="divider">
   
 
-  <p>OpenEVSE is a fully open-source EVSE (Electric Vehicle Supply Equipment) charging station.</p>
+  <p class="note">
+OpenEVSE and EmonEVSE share the same software platform, both these units are configured and setup in the same way, "OpenEVSE" and "EmonEVSE" will be used interchangeably in this guide.
+</p>
 
-<p>OpenEnergyMonitor has partnered with OpenEVSE to develop our EmonEVSE unit which is fully certified and designed for the European market.</p>
+<!-- toc -->
 
-<p>OpenEnergyMonitor is the official European re-seller for OpenEVSE. We have been collaborating with OpenEVSE to improve Emoncms remote data logging integration, web UI control interface and solar PV diversion.</p>
+<ul>
+  <li><a href="#web-interface-setup">Web Interface Setup</a>
+    <ul>
+      <li><a href="#wifi-setup">WiFi Setup</a></li>
+      <li><a href="#services-setup">Services Setup</a>
+        <ul>
+          <li><a href="#emoncms-server-setup">Emoncms Server Setup</a></li>
+          <li><a href="#mqtt-setup">MQTT Setup</a></li>
+          <li><a href="#developer-api">Developer API</a></li>
+        </ul>
+      </li>
+      <li><a href="#solar-pv-divert">Solar PV Divert</a>
+        <ul>
+          <li><a href="#solar-pv-divert-setup">Solar PV Divert Setup</a></li>
+          <li><a href="#solar-pv-divert-operation">Solar PV Divert Operation</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#emoncms-setup">Emoncms Setup</a>
+    <ul>
+      <li><a href="#input-processing">Input Processing</a></li>
+      <li><a href="#emoncms-apps-dashboard">Emoncms ‘Apps’ Dashboard</a></li>
+    </ul>
+  </li>
+</ul>
 
-<p>Solar PV diversion dynamically adjusts the charging rate in real-time based on the excess generated power, an EmonPi is required for solar PV diversion. See <a href="/applications/solar-pv">Solar PV Application Guide</a>.</p>
+<!-- tocstop -->
 
-<table style="width:100%">
-  <tr>
-    <th><h2>EmonEVSE</h2></th>
-    <th><h2>OpenEVSE (kit)</h2></th>
-  </tr>
-  <tr>
-    <td><img src="/images/applications/ev-charging/emonevse-t2.png" /></td>
-    <td><img src="/images/applications/ev-charging/openevse.jpg" /></td>
-  </tr>
-  <tr>
-    <td>
-      <ul>
-        <li>Non-tethered socket (Type 2)</li>
-        <li>Fully assembled &amp; certified</li>
-	<li>OLEV Homecharge Scheme grant approved</li>
-        <li>Single/Three-phase</li>
-        <li>32A (7kW/22kW)</li>
-        <div class="divider"></div>
-        <li>Energy monitoring</li>
-        <li>RGB LCD display</li>
-      	<li>WiFi connected</li>
-		    <li>Web app interface</li>
-		    <li>Real-time solar PV diversion</li>
-				<li>Variable charge rate</li>
-				<li>Emoncms data logging</li>
-        <li>Advanced safety features</li>
-				<li>Open API</li>
-        <a class="btn" href="https://shop.openenergymonitor.com/emonevse-wifi-connected-ev-charging-station-iec-60947-5-type-2/">View in Shop &rarr; </a>
-      </ul>
-    </td>
-    <td>
-      <ul>
-        <li>Tethered cable</li>
-        <li>Kit form</li>
-        <li>Single-phase</li>
-        <li>32A (7kW)</li>
-        <div class="divider"></div>
-        <li>Energy monitoring</li>
-        <li>RGB LCD display</li>
-				<li>WiFi connected</li>
-		    <li>Web app interface</li>
-		    <li>Real-time solar PV diversion</li>
-				<li>Variable charge rate</li>
-				<li>Emoncms data logging</li>
-        <li>Advanced safety features</li>
-				<li>Open API</li>
-        <a class="btn" href="/integrations/openevse">Assembly guide</a>
-        <a class="btn" href="https://shop.openenergymonitor.com/openevse-wifi-emoncms-ev-charging-station-kit/">View in Shop &rarr; </a>
-      </ul>
-    </td>
-  </tr>
-</table>
+<h2 id="web-interface-setup">Web Interface Setup</h2>
 
-<p><img src="/images/applications/ev-charging/openevse-wifi.png" alt="" /></p>
-
+<p><br /></p>
 <div class="videoWrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WJtNEPrSSvg" frameborder="0" allowfullscreen=""></iframe>
+<iframe width="300" height="169" src="https://www.youtube.com/embed/OAjlKmyRJMk" frameborder="0" allowfullscreen=""></iframe>
 </div>
+<p><br /></p>
 
-<p><img src="/images/applications/ev-charging/evsolarpv.jpeg" alt="" /></p>
+<h3 id="wifi-setup">WiFi Setup</h3>
+
+<p><img src="/images/integrations/openevse-wifi.png" alt="OpenEVSE WiFi" /></p>
+
+<ul>
+  <li>
+    <p>Once powered up connect to WiFi network with SSID <code class="highlighter-rouge">OpenEVSE_xxxx</code> with password <code class="highlighter-rouge">openevse</code> using a computer or mobile device.</p>
+  </li>
+  <li>
+    <p>You should get directed to a captive portal where you choose to join a local network. If captive portal does not work, browse to <a href="http://192.168.4.1">http://192.168.4.1</a></p>
+  </li>
+</ul>
+
+<p><img src="/images/integrations/openevse-wifi-scan.png" alt="" /></p>
+
+<h3 id="services-setup">Services Setup</h3>
+
+<p><img src="/images/integrations/openevse-services.png" alt="" /></p>
+
+<h4 id="emoncms-server-setup">Emoncms Server Setup</h4>
+
+<p>OpenEVSE can post data directly to an Emoncms server, enter the following:</p>
+
+<ul>
+  <li>Emoncms server url e.g <a href="https://emoncms.org">emoncms.org</a></li>
+  <li>Node-name is the name given to the OpenEVSE data in Emoncms Inputs</li>
+  <li>Write API key, obtained from Emoncms account page</li>
+  <li>SHA-1 fingerpint, if posting over HTTPS/SSL is required enter Emoncms server SHA-1 fingerprint. Recomended leave blank. The emoncms.org SHA-1 finger print will change ever few months.</li>
+  <li>See <a href="#emoncms-setup">Emoncms Setup</a> below for details of how to log the EVSE data in Emoncms</li>
+</ul>
+
+<h4 id="mqtt-setup">MQTT Setup</h4>
+
+<p>The OpenEVSE supports <a href="/technical/mqtt">MQTT connection</a>. MQTT is used to communicate with an emonPi for Solar PV Divert (EcoMode) feature.</p>
+
+<p class="note">
+For Solar PV Divert (EcoMode) to work emonPi and OpenEVSE should be on the same local network.
+</p>
+
+<ul>
+  <li>Check your local emonPi hostname, this should bt <a href="http://emonpi">emonpi/</a> or <a href="http://emonpi.local">emonpi.local/</a>. On some networks local hostname lookup doesn’t work. In this case use emonPi local IP address, highly recommend assigning emonPi a reserved local IP address to avoid it chaging via DHCP.</li>
+  <li>Enter emonPi local netwok</li>
+  <li>To connect to an emonPi MQTT server on local network use pre-populated username and password</li>
+  <li>Base-topic is the base topic used by the OpenEVSE to publish data. If posting data to local emonPi via MQTT is required change base-topic to <code class="highlighter-rouge">emon/openevse</code>. EVSE data should will now appaar in local emonPi Emoncms Inputs</li>
+  <li>If Solar PV Divert feature is required enter <em>either</em> Grid Import Export to divert <em>excess</em> generation to the EVSE <em>or</em> Solar PV generation feed to divert generated energy to EVSE. I</li>
+  <li>If using an emonPi CT1 this will the default MQTT feed is <code class="highlighter-rouge">emon/emonpi/power1</code> or power2 for CT2. It’s also possible to obtain data from an emonTx connected to an emonPi, the default for a single emonTx is system (Node ID 8) is <code class="highlighter-rouge">emon/emontx3/power1</code> for CT1.</li>
+  <li>See <a href="#solar-pv-divert">Solar PV Divert</a> section below for more info</li>
+</ul>
+
+<h4 id="developer-api">Developer API</h4>
+
+<p>The OpenEVSE can be controlled remotely via web interface or via  MQTT, HTTP or direct serial using RAPI API.See full OpenEVSE WiFi gateway documentation in the <a href="https://github.com/openevse/ESP8266_WiFi_v2.x/">OpenEVSE ESP8266 WiFi GitHub Repo</a>.</p>
+
+<p>Developer mode can be enabled on the <code class="highlighter-rouge">System</code> tab of the OpenEVSE web interface</p>
+
+<h3 id="solar-pv-divert">Solar PV Divert</h3>
+
+<p>The OpenEVSE WifI gateway includes a solar PV diversion feature. This feature allows the OpenEVSE to adjust the charge rate based on the amount of available solar PV production or excess power.</p>
+
+<figure>
+  <img src="/images/integrations/openevse-divert.png" />
+  <figcaption><i>OpenEVSE solar PV diversion example. Yellow: solar PV, blue: OpenEVSE.</i></figcaption>
+</figure>
+
+<p>The graph above is explained as follows:</p>
+
+<ul>
+  <li>OpenEVSE is initially sleeping with an EV connected</li>
+  <li>Once solar PV generation (yellow) reaches 6A (1.5kW @ 240V) the OpenEVSE initiates charging</li>
+  <li>Charging current is dynamically adjusted based on available solar PV generation</li>
+  <li>Once charging has begun, even if generation drops below 6A, the EV will continue to charge*</li>
+</ul>
+
+<p><em>*The decision was made not to pause charging if generation current drops below 6A since repeatedly starting / stopping a charge causes excess wear to the OpenEVSE relay contactor.</em></p>
+
+<p>If a Grid +I/-E (positive import / negative export) feed was used (instead of solar PV generation feed) the OpenEVSE would adjust its charging rate based on <em>excess</em> power that would be exported to the grid; for example, if solar PV was producing 4kW and 1kW was being used on-site, the OpenEVSE would charge at 3kW and the amount exported to the grid would be 0kW. If on-site consumption increases to 2kW the OpenEVSE would reduce its charging rate to 2kW.</p>
+
+<p>An <a href="https://guide.openenergymonitor.org/applications/solar-pv/">OpenEnergyMonitor solar PV energy monitor</a> with an AC-AC voltage sensor adaptor is required to monitor direction of current flow.</p>
+
+<h4 id="solar-pv-divert-setup">Solar PV Divert Setup</h4>
+
+<ul>
+  <li>To use ‘Eco’ charging mode MQTT must be enabled and ‘Solar PV divert’ MQTT topics must be entered.</li>
+  <li>Integration with an OpenEnergyMonitor emonPi is straightforward:
+    <ul>
+      <li>Connect to emonPi MQTT server, <a href="https://guide.openenergymonitor.org/technical/credentials/#mqtt">emonPi MQTT credentials</a> should be pre-populated</li>
+      <li>Enter solar PV generation / Grid (+I/-E) MQTT topic e.g. if solar PV is being monitored by emonPi CT channel 1 enter <code class="highlighter-rouge">emon/emonpi/power1</code></li>
+      <li><a href="https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en">MQTT lens Chrome extension</a> can be used to view MQTT data e.g. subscribe to <code class="highlighter-rouge">emon/#</code> for all OpenEnergyMonitor MQTT data. To lean more about MQTT see <a href="https://guide.openenergymonitor.org/technical/mqtt/">MQTT section of OpenEnergyMonitor user guide</a></li>
+      <li>If using Grid +I/-E (positive import / negative export) MQTT feed ensure the notation positive import / negative export is correct, CT sensor can be physically reversed on the cable to invert the reading.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="solar-pv-divert-operation">Solar PV Divert Operation</h4>
+
+<p><img src="/images/integrations/eco.png" alt="eco" /></p>
+
+<p>To enable ‘Eco’ mode (solar PV divert) charging:</p>
+
+<ul>
+  <li>Connect EV and ensure EV’s internal charging timer is switched off</li>
+  <li>Pause charge; OpenEVSE should display ‘sleeping’</li>
+  <li>Enable ‘Eco’ mode using web interface or via MQTT</li>
+  <li>
+    <p>EV will not begin charging when generation / excess current reaches 6A (1.4kW @ 240V)</p>
+  </li>
+  <li>During ‘Eco’ charging changes to charging current are temporary (not saved to EEPROM)</li>
+  <li>After an ‘Eco mode’ charge the OpenEVSE will revert to ‘Normal’ when EV is disconnected and previous ‘Normal’ charging current will be reinstated.</li>
+  <li>Current is adjusted in 1A increments between 6A* (1.5kW @ 240V) &gt; max charging current (as set in OpenEVSE setup)</li>
+  <li>6A is the lowest supported charging current that SAE J1772 EV charging protocol supports</li>
+  <li>The OpenEVSE does not adjust the current itself but rather request that the EV adjusts its charging current by varying the duty cycle of the pilot signal, see <a href="https://openev.freshdesk.com/support/solutions/articles/6000052070-theory-of-operation">theory of operation</a> and <a href="https://openev.freshdesk.com/support/solutions/articles/6000052074-basics-of-sae-j1772">Basics of SAE J1772</a>.</li>
+  <li>Charging mode can be viewed and set via MQTT: <code class="highlighter-rouge"><span class="p">{</span><span class="err">base-topic</span><span class="p">}</span><span class="err">/divertmode/set</span></code> (1 = normal, 2 = eco).</li>
+</ul>
+
+<p>* <em>OpenEVSE controller firmware <a href="https://github.com/OpenEVSE/open_evse/releases/tag/v4.8.0">V4.8.0</a> has a bug which restricts the lowest charging current to 10A. The J1772 protocol can go down to 6A. This <del>will</del> has be fixed with a firmware update. See <a href="https://github.com/openenergymonitor/open_evse/releases/">OpenEnergyMonitor OpenEVSE FW releases</a>. A ISP programmer is required to update openevse controler FW.</em></p>
+
+<hr />
+
+<p>See full OpenEVSE WiFi gateway documentation in the <a href="https://github.com/openevse/ESP8266_WiFi_v2.x/">OpenEVSE ESP8266 WiFi GitHub Repo</a>.</p>
+
+<hr />
+
+<h2 id="emoncms-setup">Emoncms Setup</h2>
+
+<p>OpenEVSE can be setup to log data directly to Emoncms for datalogging and visualization. This guide section will cover configuring Emoncms once OpenEVSE is posting data.</p>
+
+<p><br /></p>
+<div class="videoWrapper">
+<iframe width="300" height="169" src="https://www.youtube.com/embed/uI1mtGOGLRw" frameborder="0" allowfullscreen=""></iframe>
+</div>
+<p><br /></p>
+
+<h3 id="input-processing">Input Processing</h3>
+
+<p>First enable Device Module view (currently beta)</p>
+
+<p><img src="/images/integrations/1-evse-sw.png" alt="" /></p>
+
+<p>On the Emoncms Inputs page click the ‘cog’ icon on the OpenEVSE device to log OpenEVSE Inputs to Feeds using Device Module template:</p>
+
+<p><em>Note: If OpenEVSE Inputs are not present see section 1 to check OpenEVSE WiFi Emoncms service setup settings.</em></p>
+
+<p><img src="/images/integrations/2-evse-sw.png" alt="" /></p>
+
+<p>Choose OpenEVSE device template then click Save:</p>
+
+<p><img src="/images/integrations/3-evse-sw.png" alt="" /></p>
+
+<p>Device Module shows the Feeds and Input Processing which will be applied:</p>
+
+<p><img src="/images/integrations/4-evse-sw.png" alt="" /></p>
+
+<p>Once Initialized and saved the Device Module has automatically applied the correct Input Processing to the OpenEVSE Inputs:</p>
+
+<p><img src="/images/integrations/5-evse-sw.png" alt="" /></p>
+
+<p>On the Emoncms Feeds page the OpenEVSE Feeds should now be there with correct scale, names and units:</p>
+
+<p><img src="/images/integrations/6-evse-sw.png" alt="" /></p>
+
+<h3 id="emoncms-apps-dashboard">Emoncms ‘Apps’ Dashboard</h3>
+
+<p>Click on ‘Apps’ on the Emoncms top bar then select new OpenEVSE App</p>
+
+<p><img src="/images/integrations/7-evse-sw.png" alt="" /></p>
+
+<p><img src="/images/integrations/8-evse-sw.png" alt="" /></p>
+
+<p><img src="/images/integrations/9-evse-sw.png" alt="" /></p>
+
+<p>Clicking on a Feed on the feeds page will open the Emoncms Graph display to show the raw feed data. Various Feeds van be displayed at once, e.g. looking at the effect of the internal temperature of the OpenEVSE unit during a charge:</p>
+
+<p><em>Note: The OpenEVSE has integrated temperature monitoring and will automatically throttle charging current and eventually stop a charging session if the temperature gets too hot.</em></p>
+
+<p><img src="/images/integrations/10-evse-sw.png" alt="" /></p>
 
 
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/applications/ev-charging.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/applications/ev-charging.markdown'>Edit on GitHub Prose</a></div>
+
+  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/integrations/evse-setup.markdown'>Edit on GitHub</a></div>
+<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/integrations/evse-setup.markdown'>Edit on GitHub Prose</a></div>
 
 </article>
 
@@ -756,7 +907,6 @@ highlight active link...
         <ul>
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
-         <li><a  href='/applications/openevse/'>Electric Vehicle Charging </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
         </ul>
       </li>
@@ -764,7 +914,10 @@ highlight active link...
       <li>
          <b>Integrations</b>
         <ul>
-         <li><a  href='/integrations/openevse/'>EV Charging </a></li>
+         <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
+         <ul style="margin-bottom: 0px;;">
+            <li><a  href='/integrations/evse-setup'>User Guide Setup </a></li>
+          </ul>
          <li><a  href='/integrations/nodered/'>Node-RED </a></li>
          <li><a  href='/integrations/openhab/'>OpenHAB </a></li>
          <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>

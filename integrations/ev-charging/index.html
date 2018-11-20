@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>OpenEVSE / EmonEVSE WiFi Software Setup - Guide | OpenEnergyMonitor</title>
+    <title>EV Charging - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="Open Source Electric Vehicle Charging Staion">
+    <meta name="description" content="EV charging">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/integrations/openevse-software/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/integrations/ev-charging/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="OpenEVSE / EmonEVSE WiFi Software Setup">
+    <meta property="og:title" content="EV Charging">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/integrations/openevse-software/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/integrations/ev-charging/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Open Source Electric Vehicle Charging Staion">
+    <meta property="og:description" content="EV charging">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="OpenEVSE / EmonEVSE WiFi Software Setup">
-    <meta name="twitter:description" content="Open Source Electric Vehicle Charging Staion">
+    <meta name="twitter:title" content="EV Charging">
+    <meta name="twitter:description" content="EV charging">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -609,85 +609,111 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      OpenEVSE / EmonEVSE WiFi Software Setup
+      EV Charging
     </h1>
   </header>
   <hr class="divider">
   
 
-  <p><strong>Note: OpenEVSE and EmonEVSE share the same software platform, both these units are configured and setup in the same way. The names “OpenEVSE” and “EmonEVSE” will be used interchangeably in this guide</strong></p>
+  <p>OpenEnergyMonitor has partnered with <a href="https://www.openevse.com">OpenEVSE</a> to develop the EmonEVSE unit which is fully certified and designed for the European market. We are also the official European re-seller of OpenEVSE.</p>
 
-<h2 id="a-classtitle-link-nameevse-web-interface-setup-hrefevse-web-interface-setupa-evse-web-interface-setup"><a class="title-link" name="evse-web-interface-setup" href="#evse-web-interface-setup"></a> EVSE Web Interface Setup</h2>
+<p>We have been collaborating with OpenEVSE to improve Emoncms remote data logging integration, web UI control interface and solar PV diversion.</p>
 
-<h3 id="video-guide">Video Guide</h3>
+<table style="width:100%">
+  <tr>
+    <th><h2>EmonEVSE</h2></th>
+    <th><h2>OpenEVSE (Kit)</h2></th>
+  </tr>
+  <tr>
+    <td>
+      <img src="/images/integrations/ev-charging/emonevse-t2.png" />
+    </td>
+    <td>
+      <img src="/images/integrations/ev-charging/openevse.jpg" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <ul>
+        <li>Non-tethered socket (Type 2)</li>
+        <li>Pre-assembled</li>
+      	<li>Fully CE certified &amp;&amp; OLEV grant approved</li>
+        <li>7kW single-phase / 22kW three-phase</li>
+        <div class="divider"></div>
+        <li>Energy monitoring</li>
+        <li>RGB LCD display</li>
+      	<li>WiFi connectivity</li>
+		    <li>Web-app interface</li>
+		    <li>Real-time solar PV diversion</li>
+				<li>Variable charge rate</li>
+				<li>Emoncms data logging</li>
+        <li>Advanced safety features</li>
+				<li>Open hardware &amp; firmware</li>
+				<li>HTTP/MQTT developer API</li>
+				<div class="divider"></div>
+				<li><a href="http://files.openenergymonitor.org/datasheet/EmonEVSE-datasheet.pdf"><b>Installation Guide</b></a></li>
+				<li><a href="/integrations/evse-setup"><b>User Setup Guide</b></a></li>
+	      <a class="btn pull-center" href="https://shop.openenergymonitor.com/emonevse-wifi-connected-ev-charging-station-iec-60947-5-type-2/">View in Shop &rarr; </a>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li>Tethered cable</li>
+        <li>DIY Assembly Kit</li>
+        <li>Components are CE complient </li>
+        <li>Single-phase 7kW</li>
+        <div class="divider"></div>
+        <li>Energy monitoring</li>
+        <li>RGB LCD display</li>
+				<li>WiFi connectivity</li>
+		    <li>Web-app interface</li>
+		    <li>Real-time solar PV diversion</li>
+				<li>Variable charge rate</li>
+				<li>Emoncms data logging</li>
+        <li>Advanced safety features</li>
+        <li>Open hardware &amp; firmware</li>
+				<li>HTTP/MQTT developer API</li>
+				<div class="divider"></div>
+				<li><a href="/integrations/openevse"><b>Assembly Guide</b></a></li>
+				<li><a href="/integrations/evse-setup"><b>User Setup Guide</b></a></li>
+				<a class="btn pull-center" href="https://shop.openenergymonitor.com/openevse-wifi-emoncms-ev-charging-station-kit/">View in Shop &rarr; </a>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-<p><br /></p>
+<h2 id="wifi-connectivity">WiFi Connectivity</h2>
+
+<p><img src="/images/integrations/ev-charging/openevse-wifi.png" alt="" /></p>
+
+<p><a class="btn pull-center" href="https://openevse.openenergymonitor.org">View Live App Demo → </a></p>
+
+<h2 id="solar-pv-diversion-demo">Solar PV Diversion Demo</h2>
+
+<p>Solar PV diversion dynamically adjusts the charging rate in real-time based on the excess generated power, an OpenEnergyMonitor emonPi is required for solar PV diversion. See <a href="/applications/solar-pv">Solar PV Application Guide</a>.</p>
+
 <div class="videoWrapper">
-<iframe width="300" height="169" src="https://www.youtube.com/embed/OAjlKmyRJMk" frameborder="0" allowfullscreen=""></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WJtNEPrSSvg" frameborder="0" allowfullscreen=""></iframe>
 </div>
-<p><br /></p>
-
-<h2 id="a-classtitle-link-nameemoncms-setup-hrefemoncms-setupa-emoncms-setup"><a class="title-link" name="emoncms-setup" href="#emoncms-setup"></a> Emoncms Setup</h2>
-
-<p>OpenEVSE can be setup to log data directly to Emoncms for datalogging and visualization. This guide section will cover configuring Emoncms once OpenEVSE is posting data:</p>
-
-<h3 id="video-guide-1">Video Guide</h3>
-
-<p><br /></p>
-<div class="videoWrapper">
-<iframe width="300" height="169" src="https://www.youtube.com/embed/uI1mtGOGLRw" frameborder="0" allowfullscreen=""></iframe>
-</div>
-<p><br /></p>
-
-<h3 id="setup-emoncms-input-processing">Setup Emoncms Input Processing</h3>
-
-<p>First enable Device Module view (currently beta)</p>
-
-<p><img src="/images/integrations/1-evse-sw.png" alt="" /></p>
-
-<p>On the Emoncms Inputs page click the ‘cog’ icon on the OpenEVSE device to log OpenEVSE Inputs to Feeds using Device Module template:</p>
-
-<p><em>Note: If OpenEVSE Inputs are not present see section 1 to check OpenEVSE WiFi Emoncms service setup settings.</em></p>
-
-<p><img src="/images/integrations/2-evse-sw.png" alt="" /></p>
-
-<p>Choose OpenEVSE device template then click Save:</p>
-
-<p><img src="/images/integrations/3-evse-sw.png" alt="" /></p>
-
-<p>Device Module shows the Feeds and Input Processing which will be applied:</p>
-
-<p><img src="/images/integrations/4-evse-sw.png" alt="" /></p>
-
-<p>Once Initialized and saved the Device Module has automatically applied the correct Input Processing to the OpenEVSE Inputs:</p>
-
-<p><img src="/images/integrations/5-evse-sw.png" alt="" /></p>
-
-<p>On the Emoncms Feeds page the OpenEVSE Feeds should now be there with correct scale, names and units:</p>
-
-<p><img src="/images/integrations/6-evse-sw.png" alt="" /></p>
-
-<h3 id="setup-openevse-emoncms-app-view">Setup OpenEVSE Emoncms ‘App’ View</h3>
-
-<p>Click on ‘Apps’ on the Emoncms top bar then select new OpenEVSE App</p>
-
-<p><img src="/images/integrations/7-evse-sw.png" alt="" /></p>
-
-<p><img src="/images/integrations/8-evse-sw.png" alt="" /></p>
-
-<p><img src="/images/integrations/9-evse-sw.png" alt="" /></p>
-
-<p>Clicking on a Feed on the feeds page will open the Emoncms Graph display to show the raw feed data. Various Feeds van be displayed at once, e.g. looking at the effect of the internal temperature of the OpenEVSE unit during a charge:</p>
-
-<p><em>Note: The OpenEVSE has integrated temperature monitoring and will automatically throttle charging current and eventually stop a charging session if the temperature gets too hot.</em></p>
-
-<p><img src="/images/integrations/10-evse-sw.png" alt="" /></p>
 
 <h2 id="a-classtitle-link-namesafety-hrefsafetya-safety"><a class="title-link" name="safety" href="#safety"></a> Safety</h2>
 
+<p>OpenEVSE &amp; EmonEVSE units have been designed to exceed the safety requirements for EV Charging Stations from SAE J1772, NEC, UL and CE. Before supplying power to the car (and continuously while charging) the EVSE unit conducts a number of checks, no power is supplied until all the checks have passed. See</p>
 
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/integrations/openevse-software.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/integrations/openevse-software.markdown'>Edit on GitHub Prose</a></div>
+<ul>
+  <li><a href="https://openev.freshdesk.com/support/solutions/articles/6000113537-openevse-safety-features">Safety Features</a></li>
+  <li><a href="/images/integrations/OpenEVSE_flowchart.pdf">Safety Features Flow Diagram (.pdf)</a></li>
+</ul>
+
+<p class="note warning">
+Installation should only be undertaken by a qualified electrician.
+</p>
+
+<p><img src="/images/integrations/ev-charging/evsolarpv.jpeg" alt="" /></p>
+
+
+  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/integrations/ev-charging.markdown'>Edit on GitHub</a></div>
+<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/integrations/ev-charging.markdown'>Edit on GitHub Prose</a></div>
 
 </article>
 
@@ -757,7 +783,6 @@ highlight active link...
         <ul>
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
-         <li><a  href='/applications/openevse/'>Electric Vehicle Charging </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
         </ul>
       </li>
@@ -765,7 +790,10 @@ highlight active link...
       <li>
          <b>Integrations</b>
         <ul>
-         <li><a  href='/integrations/openevse/'>EV Charging </a></li>
+         <li><a class='active' href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
+         <ul style="margin-bottom: 0px;;">
+            <li><a  href='/integrations/evse-setup'>User Guide Setup </a></li>
+          </ul>
          <li><a  href='/integrations/nodered/'>Node-RED </a></li>
          <li><a  href='/integrations/openhab/'>OpenHAB </a></li>
          <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
