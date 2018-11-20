@@ -1,41 +1,100 @@
 ---
 layout: page
-title: Electric Vehicle (EV) Charging
-description: Open Source Electric Vehicle Charging
-date: '2018-11-18 21:49'
+title: EV Charging
+description: EV charging
+date: '2018-05-15 14:05'
 sidebar: true
 comments: false
 sharing: true
 footer: true
-published: false
+published: true
 ---
 
-We have worked with [OpenEVSE](https://www.openevse.com/) to develop a high qulity open-source EV charging station (EVSE) that integrates with OpenEnergyMonitor.
+OpenEnergyMonitor has partnered with [OpenEVSE](https://www.openevse.com) to develop the EmonEVSE unit which is fully certified and designed for the European market. We are also the official European re-seller of OpenEVSE.
 
-The EmonEVSE has been developed by OpenEnergyMonitor for highest compatability with European charging standards e.g 3-phase, type-2 etc. In The OpenEnergyMonitor web shop we sell both the EmonEVSE and resell the OpenEVSE unit in kit form.
+We have been collaborating with OpenEVSE to improve Emoncms remote data logging integration, web UI control interface and solar PV diversion.
+
+<table style="width:100%">
+  <tr>
+    <th><h2>EmonEVSE</h2></th>
+    <th><h2>OpenEVSE (Kit)</h2></th>
+  </tr>
+  <tr>
+    <td>
+      <img src="/images/integrations/ev-charging/emonevse-t2.png">
+    </td>
+    <td>
+      <img src="/images/integrations/ev-charging/openevse.jpg">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <ul>
+        <li>Non-tethered socket (Type 2)</li>
+        <li>Pre-assembled</li>
+      	<li>Fully CE certified && OLEV grant approved</li>
+        <li>7kW single-phase / 22kW three-phase</li>
+        <div class="divider"></div>
+        <li>Energy monitoring</li>
+        <li>RGB LCD display</li>
+      	<li>WiFi connectivity</li>
+		    <li>Web-app interface</li>
+		    <li>Real-time solar PV diversion</li>
+				<li>Variable charge rate</li>
+				<li>Emoncms data logging</li>
+        <li>Advanced safety features</li>
+				<li>Open hardware & firmware</li>
+				<li>HTTP/MQTT developer API</li>
+				<div class="divider"></div>
+				<li><a href="http://files.openenergymonitor.org/datasheet/EmonEVSE-datasheet.pdf"><b>Installation Guide</b></a></li>
+				<li><a href="/integrations/evse-setup"><b>User Setup Guide</b></a></li>
+	      <a class="btn pull-center" href="https://shop.openenergymonitor.com/emonevse-wifi-connected-ev-charging-station-iec-60947-5-type-2/">View in Shop &rarr; </a>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li>Tethered cable</li>
+        <li>DIY Assembly Kit</li>
+        <li>Components are CE complient </li>
+        <li>Single-phase 7kW</li>
+        <div class="divider"></div>
+        <li>Energy monitoring</li>
+        <li>RGB LCD display</li>
+				<li>WiFi connectivity</li>
+		    <li>Web-app interface</li>
+		    <li>Real-time solar PV diversion</li>
+				<li>Variable charge rate</li>
+				<li>Emoncms data logging</li>
+        <li>Advanced safety features</li>
+        <li>Open hardware & firmware</li>
+				<li>HTTP/MQTT developer API</li>
+				<div class="divider"></div>
+				<li><a href="/integrations/openevse"><b>Assembly Guide</b></a></li>
+				<li><a href="/integrations/evse-setup"><b>User Setup Guide</b></a></li>
+				<a class="btn pull-center" href="https://shop.openenergymonitor.com/openevse-wifi-emoncms-ev-charging-station-kit/">View in Shop &rarr; </a>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+## WiFi Connectivity
+
+![](/images/integrations/ev-charging/openevse-wifi.png)
+
+<a class="btn pull-center" href="https://openevse.openenergymonitor.org">View Live App Demo &rarr; </a>
 
 
-| **EmonEVSE**                                   | **OpenEVSE**           |
-| :-------------:|:-------------:|
-| ![emonevse](/images/integrations/emonevse.png)     | ![openevse](/images/integrations/openevse.jpg)      |
-|  32A Max                                  |  32A Max                                    |
-|  7kW single-phase / 22kW three-phase*     |  7kW single-phase                           |
-|  Type-2 European standard EV socket       |  Tethered cable (type-1 or type-2)          |
-|  WiFi Interface                           |  WiFi Interface                             |
-|  Fully assembled                          |  DIY assembly kit                           |
-|  Fully CE certified && OLEV grant approved|  Components are CE complient                |
-|  OpenEnergyMonitor Integration            |  OpenEnergyMonitor Integration              |
-| <a class="btn pull-center" href="https://openenergymonitor.com/openevse-wifi-emoncms-ev-charging-station-kit/">View in Shop &rarr; </a> | <a class="btn pull-center" href="https://openenergymonitor.com/openevse-wifi-emoncms-ev-charging-station-kit/">View in Shop &rarr; </a> |
-| EmonEVSE Installation                      | [**OpenEVSE Kit Build Guide**](/integrations/openevse)   |
-| [**Setup Guide**](/integrations/openevse-software) | [**Setup Guide**](/integrations/openevse-software) |
+## Solar PV Diversion Demo
 
-\*optional
+Solar PV diversion dynamically adjusts the charging rate in real-time based on the excess generated power, an OpenEnergyMonitor emonPi is required for solar PV diversion. See [Solar PV Application Guide](/applications/solar-pv).
 
-Both the EmonEVSE and OpenEVSE use the same open-source [OpenEVSE Controler](https://openenergymonitor.com/openevse-v5-controller-pcb/) running almost the same firmware and both have the same WiFi module running the same WiFi interface software.
+<div class='videoWrapper'>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WJtNEPrSSvg" frameborder="0" allowfullscreen></iframe>
+</div>
 
 ## {% linkable_title Safety %}
 
-EmonEVSe / OpenEVSE units have been designed to exceed the safety requirements for EV Charging Stations from SAE J1772, NEC, UL and CE. Before supplying power to the car (and continuously while charging) the EVSE unit conducts a number of checks, no power is supplied until all the checks have passed. See
+OpenEVSE & EmonEVSE units have been designed to exceed the safety requirements for EV Charging Stations from SAE J1772, NEC, UL and CE. Before supplying power to the car (and continuously while charging) the EVSE unit conducts a number of checks, no power is supplied until all the checks have passed. See
 
 - [Safety Features](https://openev.freshdesk.com/support/solutions/articles/6000113537-openevse-safety-features)
 - [Safety Features Flow Diagram (.pdf)](/images/integrations/OpenEVSE_flowchart.pdf)
@@ -43,3 +102,5 @@ EmonEVSe / OpenEVSE units have been designed to exceed the safety requirements f
 <p class='note warning'>
 Installation should only be undertaken by a qualified electrician.
 </p>
+
+![](/images/integrations/ev-charging/evsolarpv.jpeg)
