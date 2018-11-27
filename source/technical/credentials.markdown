@@ -29,7 +29,7 @@ To connect to emonPi / emonBase via ssh:
 
  - **If running emonSD-30Oct18 or newer SSH is disabled by default**
  - SSH can be enabled by either:
-    - Creating a file called `ssh` in the FAT `/boot` partion on the SD card
+    - Creating a file called `ssh` in the FAT `/boot` partion on the SD card. This can be done externally using a card reader + PC or using a USB keyboard + HDMI screen to login to the Pi and create the ssh file: `sudo touch /boot/ssh`. Then reboot `sudo reboot`
     - Or pressing and holding the emonPi LCD push-button for 5 seconds:
 
 <div class='videoWrapper'>
@@ -80,12 +80,16 @@ and node red using flows editor
 
 ## {% linkable_title NodeRED %}
 
+*NodeRED is no longer installed on latest emonSD-30Oct18 it can be insalled if required*
+
 NodeRED: port:1880 user,pass:`emonpi`,`emonpi2016`
 
 change it here:  `~/data/node-red/settings.js`
 
 
 ## {% linkable_title OpenHab %}
+
+*OpenHAB is no longer installed on latest emonSD-30Oct18, it can be insalled if required*
 
 OpenHab port:8080 user,pass:`pi`,`emonpi2016`
 
