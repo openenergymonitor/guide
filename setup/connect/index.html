@@ -749,7 +749,7 @@ highlight active link...
 
     <p>Alternatively to set a static IP address on the emonPi itself connect via SSH and edit /etc/network/interfaces. E.g the following commands will SSH into emonPi, create backup of the interfaces file then setup a static IP on Ethernet. For WiFi change eth0 to wlan0.</p>
     <pre>
-    $ shh pi@192.168.X.X
+    $ ssh pi@192.168.X.X
     User: "pi" | Password: "emonpi2016"
     $ rpi-rw
     $ sudo cp /etc/dhcpcd.conf /etc/backup_dhcpcd.conf
