@@ -78,6 +78,8 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 
 ![home energy2](/images/applications/home-energy/emonpi-install2.jpg)
 
+The included [Wall mount plalstic clips](https://www.lincolnbinns.com/wp-content/uploads/2013/12/Plastic-Linc-Lug.png) can be attached onto the emonPi / emonTx and held in place by a plastic locking nut. 
+
 See [Solar PV Application Note](/applications/solar-pv/) for emonPi solar PV install guide & images.
 
 ## {% linkable_title 6. Power Up %}
