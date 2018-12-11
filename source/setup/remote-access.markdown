@@ -33,7 +33,7 @@ Follow these steps to setup Dataplicity on an emonPi
 
 1\. [Connect to emonPi via SSH](/technical/credentials/#ssh)
 
-Once logged in put the emonPi into read-write mode using:
+Once logged in put the emonPi into read-write mode using (this is not required on emonSD-30Oct18 emonSD):
 
     $rpi-rw
 
@@ -57,7 +57,7 @@ Once setup is complete (it will take several minutes) the emonPi will appear in 
 
 ![5-dataplicity](/images/setup/5-dataplicity.png)
 
-Put the emonPi back into read-only mode using
+Put the emonPi back into read-only mode using (this is not required on emonSD-30Oct18 emonSD).
 
     $rpi-ro
 
@@ -69,6 +69,6 @@ Wormhole create a secure tunnel to the emonPi port 80 http over a https connecti
 
 ***
 
-**Tested on emonSD-26Oct17 on 26th Jan 2018**
+**Tested on emonSD-26Oct17 and emonSD-30Oct18 on 11th Dec 2018**
 
 If you encounter any issues using Dataplicity please post on the [Community Forum](httsp://community.openenergymonitor.org) using the `dataplicity` tag.
