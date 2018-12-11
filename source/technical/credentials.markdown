@@ -30,10 +30,12 @@ To connect to emonPi / emonBase via ssh:
  - **If running emonSD-30Oct18 or newer SSH is disabled by default**
  - SSH can be enabled by either:
     - Creating a file called `ssh` in the FAT `/boot` partion on the SD card. This can be done externally using a card reader + PC or using a USB keyboard + HDMI screen to login to the Pi and create the ssh file: `sudo touch /boot/ssh`. Then reboot `sudo reboot`
-    - Or pressing and holding the emonPi LCD push-button for 5 seconds:
+    - Or selecting `SSH Enable` LCD menu item then pressing and holding the emonPi LCD push-button:
+
+*Once enabled, SSH can be disabled in the same way:*
 
 <div class='videoWrapper'>
-<iframe width="300" height="315" src="https://www.youtube.com/embed/HbdUuNKaKwY" frameborder="0" allowfullscreen></iframe>
+<iframe width="300" height="315" src="https://www.youtube.com/embed/sFwFamB-ifU" frameborder="0" allowfullscreen></iframe>
 </div>
 
  - Linux / Mac : open terminal window `$ ssh pi@emonpi` or `$ ssh pi@<IP ADDRESS>`
@@ -42,7 +44,7 @@ To connect to emonPi / emonBase via ssh:
 
 **SSH: port 22 user,pass:`pi`,`emonpi2016`**
 
-*On very old emonSD images ssh password is `raspberry`, see emonSD [repository & changelog](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log)*
+*On very old emonSD images (2015) ssh password is `raspberry`, see emonSD [repository & changelog](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log)*
 
 Once logged in change password with: `$ passwd`
 
