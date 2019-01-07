@@ -23,6 +23,8 @@ published: true
 
 An Optical Pulse Sensor detects the LED / IR 'pulse' output from a utility meters. Each pulse corresponds to a certain amount of energy passing through the meter. The amount of energy each pulse corresponds to depends on the meter. By counting these pulses and measuring the time between each pulse the meters KWh value can be calculated.
 
+<a class="btn pull-right" href="https://openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">View in Shop &rarr; </a>
+
 Unlike clip-on CT based monitoring, pulse counting is measuring exactly what the utility meter is measuring i.e. what you get billed for. Pulse counting cannot provide an instantaneous power reading like clip on CT sensors can. **Where possible, we recommend using pulse counting in conjunction with clip on CT sensors**.
 
 The emonPi and emonTx can simultaneously perform pulse counting and CT based monitoring.
