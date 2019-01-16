@@ -9,6 +9,13 @@ sharing: true
 footer: true
 published: true
 ---
+
+<p>&larr; <a href="/integrations/ev-charging/">EV-Charging</a></p>
+
+<div class='videoWrapper'>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WJtNEPrSSvg" frameborder="0" allowfullscreen></iframe>
+</div>
+
 <p class='note'>
 OpenEVSE and EmonEVSE share the same software platform, both these units are configured and setup in the same way, "OpenEVSE" and "EmonEVSE" will be used interchangeably in this guide.
 </p>
