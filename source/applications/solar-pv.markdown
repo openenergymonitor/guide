@@ -47,7 +47,114 @@ The Emoncms setup instructions below are applicable to both the emonPi and the e
 
 ### {% linkable_title Sensor Installation %}
 
-![Solar PV CT Install](/images/applications/solar-pv/solar-pv-install.png)
+<!-------------------------------------------------------------------
+-- Lightbox ---------------------------------------------------------
+-------------------------------------------------------------------->
+
+<style>
+
+#openImg {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#openImg:hover {
+  opacity: 0.7;
+}
+
+.lightBox {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+.lightBox-image {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 1000px;
+}
+
+.lightBox-image {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)}
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+.lightBox-close {
+  position: absolute;
+  top: 40px;
+  right: 25px;
+  color: #f1f1f1;
+  font-size: 50px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.lightBox-close:hover,
+.lightBox-close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .lightBox-image {
+    width: 100%;
+  }
+}
+
+</style>
+
+<img id="openImg" src="/images/applications/solar-pv/solar-pv-install.png" alt="Solar PV installation">
+
+<div id="lightBox" class="lightBox">
+  <span class="lightBox-close">&times;</span>
+  <img class="lightBox-image" id="img01">
+</div>
+
+<script>
+
+  var lightbox = document.getElementById('lightBox');
+  
+  var img = document.getElementById('openImg');
+  var lightboxImg = document.getElementById("img01");
+  
+  img.onclick = function(){
+    lightbox.style.display = "block";
+    lightboxImg.src = this.src;
+  }
+  
+  var span = document.getElementsByClassName("lightBox-close")[0];
+  
+  span.onclick = function() {
+    lightbox.style.display = "none";
+  }
+
+</script>
+
+<!-------------------------------------------------------------------
+-- // Lightbox ------------------------------------------------------
+-------------------------------------------------------------------->
 
 It is important that an  AC-AC adapter is used for both type 1 and type 2 solar PV systems. Without an AC-AC adapter the power reading can be significantly wrong - especially at night - due to the low power factor from some solar PV inverters. Further, at times an inverter might be consuming a small amount of grid power; without using an AC-AC adapter there would be no way to distinguish this consumption from generation and establish the true power flow direction.
 
