@@ -26,7 +26,7 @@ Your safety is your responsibility. Clip-on current sensors are non-invasive and
 
 ## {% linkable_title 1. **CT sensor** %}
 
-- Clip the CT sensor around either the **Live** or **Neutral** cable
+- Clip the CT sensor around either the **Line** or **Neutral** cable
 - Connect jack plug into either CT1 or CT2 socket on the emonPi
 - If the power reading is negative, reverse the CT sensor orientation
 - CT sensor cable should not be extended to avoid induced noise
@@ -34,7 +34,7 @@ Your safety is your responsibility. Clip-on current sensors are non-invasive and
 - [Learn more about how CT sensors work...](https://learn.openenergymonitor.org/electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter)
 
 <p class='note'>
-The clip-on CT sensors must be clipped round either the Live or Neutral AC wire. <strong>NOT BOTH</strong>.
+The clip-on CT sensors must be clipped round either the Line or Neutral AC wire. <strong>NOT BOTH</strong>.
 </p>
 
 ![CT sensor installation ](/images/applications/solar-pv/ctinstall.jpg)
