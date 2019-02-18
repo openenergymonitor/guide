@@ -1,6 +1,6 @@
 ---
 layout: page
-title: OpenEVSE Build Guide
+title: OpenEVSE Kit Build Guide
 description: Open Source Electric Vehicle Charging Staion
 date: '2014-12-18 21:49'
 sidebar: true
@@ -10,7 +10,7 @@ footer: true
 published: true
 ---
 
-OpenEVSE is a fully open-source EVSE (Electric Vehicle Supply Equipment) charging station designed by [OpenEVSE](http://openevse.com) and re-sold by OpenEnergyMonitor.
+OpenEVSE is a fully open-source EVSE (Electric Vehicle Supply Equipment) charging station designed by [OpenEVSE](http://openevse.com) and re-sold by [OpenEnergyMonitor Store](https://openenergymonitor.com/openevse-wifi-emoncms-ev-charging-station-kit/?ctk=cf86cd83-ac4d-4f18-a852-0b8fa1eb427a).
 
 ![Nissan LEAF OpenEVSE](/images/integrations/openevse-banner.png)
 
@@ -29,7 +29,7 @@ See our [blog post](https://blog.openenergymonitor.org/2017/01/openevse-build/) 
 
 The standard build guide from OpenEVSE can be followed taking into account the specific OpenEnergyMonitor (Europe / UK) considerations (see below):
 
-- **OpenEVSE Assembly guide**: [**Web**](http://openevse.dozuki.com/Guide/OpenEVSE+50A+Charging+Station/8), [**pdf**](http://openevse.dozuki.com/GuidePDF/link/8/en)
+- [**OpenEVSE Kit Assembly guide**](https://openevse.dozuki.com/Guide/%22Standard+Series%22+with+OpenEVSE+v5/27)
 - [**OpenEVSE WiFi Module Installation Guide**](https://openevse.dozuki.com/Guide/OpenEVSE+WiFi+%28Beta%29/14)
 
 <figure>
