@@ -173,6 +173,8 @@ Successful start-up will be indicated by a dull green glow on the LED. If the LE
 - After successful start-up, you can connect to the device with your web browser
 - Connect to IoTaWatt using [http://iotawatt.local](http://iotawatt.local)
 
+If local host-name (iotawat.local) does not work on your network, use 'Fing' mobile app [Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en_GB) | [iOS](https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8) to scan the local network for an IoTaWatt (ESP8266, espressif) device. Alternatively local IP address be be found via router DHCP table or IoTaWatt serial output at startup (115200 baud). 
+
 ![iotawatt config](/images/setup/iota-config.png)
 
 *Note: if local hostname resolution is not supported on your network you will need to connect to IoTaWatt using its local IP address. This can be obtained this from your router DHCP table, using [Fing](https://www.fing.io/) or see IoTaWatt serial debug at start up to obtain local IP address (115200 baud)*
