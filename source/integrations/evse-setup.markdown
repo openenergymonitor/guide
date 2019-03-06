@@ -30,6 +30,7 @@ OpenEVSE and EmonEVSE share the same software platform, both these units are con
     + [Developer API](#developer-api)
   * [Solar PV Divert](#solar-pv-divert)
     + [Solar PV Divert Setup](#solar-pv-divert-setup)
+    + [Advanced Solar PV Divert Setup](#advanced-solar-pv-divert-setup)
     + [Solar PV Divert Operation](#solar-pv-divert-operation)
 - [Emoncms Setup](#emoncms-setup)
   * [Input Processing](#input-processing)
