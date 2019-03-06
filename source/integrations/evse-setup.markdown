@@ -40,6 +40,8 @@ OpenEVSE and EmonEVSE share the same software platform, both these units are con
 
 ## Web Interface Setup
 
+All functions of the EVSE can be controlled via the web interface, see [https://openevse.openenergymonitor.org](https://openevse.openenergymonitor.org) for a live demo. This interface is optimised to work well on a mobile device. 
+
 <br>
 <div class='videoWrapper'>
 <iframe width="300" height="169" src="https://www.youtube.com/embed/OAjlKmyRJMk" frameborder="0" allowfullscreen></iframe>
