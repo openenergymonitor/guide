@@ -702,17 +702,15 @@ OpenEVSE and EmonEVSE share the same software platform, both these units are con
 <p>The OpenEVSE supports <a href="/technical/mqtt">MQTT connection</a>. MQTT is used to communicate with an emonPi for Solar PV Divert (EcoMode) feature.</p>
 
 <p class="note">
-For Solar PV Divert (EcoMode) to work emonPi and OpenEVSE should be on the same local network.
+For Solar PV Divert (EcoMode) to work emonPi and OpenEVSE need be on the same local network or at least access to emonPi MQTT server (port 1883)
 </p>
 
 <ul>
   <li>Check your local emonPi hostname, this should bt <a href="http://emonpi">emonpi/</a> or <a href="http://emonpi.local">emonpi.local/</a>. On some networks local hostname lookup doesn’t work. In this case use emonPi local IP address, highly recommend assigning emonPi a reserved local IP address to avoid it chaging via DHCP.</li>
-  <li>Enter emonPi local netwok</li>
+  <li>Enter emonPi local network</li>
   <li>To connect to an emonPi MQTT server on local network use pre-populated username and password</li>
   <li>Base-topic is the base topic used by the OpenEVSE to publish data. If posting data to local emonPi via MQTT is required change base-topic to <code class="highlighter-rouge">emon/openevse</code>. EVSE data should will now appaar in local emonPi Emoncms Inputs</li>
-  <li>If Solar PV Divert feature is required enter <em>either</em> Grid Import Export to divert <em>excess</em> generation to the EVSE <em>or</em> Solar PV generation feed to divert generated energy to EVSE. I</li>
-  <li>If using an emonPi CT1 this will the default MQTT feed is <code class="highlighter-rouge">emon/emonpi/power1</code> or power2 for CT2. It’s also possible to obtain data from an emonTx connected to an emonPi, the default for a single emonTx is system (Node ID 8) is <code class="highlighter-rouge">emon/emontx3/power1</code> for CT1.</li>
-  <li>See <a href="#solar-pv-divert">Solar PV Divert</a> section below for more info</li>
+  <li>If Solar PV Divert feature is required see <a href="#solar-pv-divert">Solar PV Divert</a> section below for more info</li>
 </ul>
 
 <h4 id="developer-api">Developer API</h4>
@@ -739,7 +737,7 @@ For Solar PV Divert (EcoMode) to work emonPi and OpenEVSE should be on the same 
   <li>Once charging has begun, even if generation drops below 6A, the EV will continue to charge*</li>
 </ul>
 
-<p><em>*The decision was made not to pause charging if generation current drops below 6A since repeatedly starting / stopping a charge causes excess wear to the OpenEVSE relay contactor.</em></p>
+<p><strong>The decision was made not to pause charging if generation current drops below 6A since repeatedly starting / stopping a charge causes excess wear to the OpenEVSE relay contactor.</strong></p>
 
 <p>If a Grid +I/-E (positive import / negative export) feed was used (instead of solar PV generation feed) the OpenEVSE would adjust its charging rate based on <em>excess</em> power that would be exported to the grid; for example, if solar PV was producing 4kW and 1kW was being used on-site, the OpenEVSE would charge at 3kW and the amount exported to the grid would be 0kW. If on-site consumption increases to 2kW the OpenEVSE would reduce its charging rate to 2kW.</p>
 
@@ -748,16 +746,43 @@ For Solar PV Divert (EcoMode) to work emonPi and OpenEVSE should be on the same 
 <h4 id="solar-pv-divert-setup">Solar PV Divert Setup</h4>
 
 <ul>
-  <li>To use ‘Eco’ charging mode MQTT must be enabled and ‘Solar PV divert’ MQTT topics must be entered.</li>
+  <li>To use ‘Eco’ charging mode MQTT must be enabled and ‘Solar PV divert’ <a href="/technical/mqtt/">emonPi MQTT topics</a> must be entered.</li>
   <li>Integration with an OpenEnergyMonitor emonPi is straightforward:
     <ul>
-      <li>Connect to emonPi MQTT server, <a href="https://guide.openenergymonitor.org/technical/credentials/#mqtt">emonPi MQTT credentials</a> should be pre-populated</li>
-      <li>Enter solar PV generation / Grid (+I/-E) MQTT topic e.g. if solar PV is being monitored by emonPi CT channel 1 enter <code class="highlighter-rouge">emon/emonpi/power1</code></li>
-      <li><a href="https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en">MQTT lens Chrome extension</a> can be used to view MQTT data e.g. subscribe to <code class="highlighter-rouge">emon/#</code> for all OpenEnergyMonitor MQTT data. To lean more about MQTT see <a href="https://guide.openenergymonitor.org/technical/mqtt/">MQTT section of OpenEnergyMonitor user guide</a></li>
-      <li>If using Grid +I/-E (positive import / negative export) MQTT feed ensure the notation positive import / negative export is correct, CT sensor can be physically reversed on the cable to invert the reading.</li>
+      <li><em>Note: This guide assumes an OpenEnergyMonitor emonPi system is already setup monitoring solar PV, see not <a href="/applications/solar-pv">emonPi Solar PV Setup Guide</a></em></li>
+      <li>Connect to emonPi MQTT server, <a href="technical/credentials/#mqtt">emonPi MQTT credentials</a> should be pre-populated</li>
+      <li><a href="https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en">MQTT lens Chrome extension</a> can be used to view MQTT data e.g. subscribe to <code class="highlighter-rouge">emon/#</code> to see all OpenEnergyMonitor MQTT data. To lean more about MQTT see <a href="https://guide.openenergymonitor.org/technical/mqtt/">MQTT section of OpenEnergyMonitor user guide</a></li>
     </ul>
   </li>
 </ul>
+
+<p><strong>Divert Total PV Generation:</strong></p>
+
+<p>Preferable if another solar PV diversion system is fitted e.g hot water immersion, battery storage or the solar PV system is small. Setting the EVSE to divert the total PV generation to the EV will ensure the EV takes priority over other diversion systems that may be fitted.</p>
+
+<ul>
+  <li>Enter MQTT topic of the solar PV generation into the <code class="highlighter-rouge">Solar PV Generation</code> field e.g if emonPi CT1 is monitoring generation enter <code class="highlighter-rouge">emon/emonpi/power1</code> or if using emonTx CT2 <code class="highlighter-rouge">emon/emontx3/power2</code>. Leave the Grid field empty</li>
+</ul>
+
+<p><strong>Divert Excess Generation:</strong></p>
+
+<p>Preferable to minimise grid import. Excess generation takes into account the power being used locally onsite e.g home consumption.</p>
+
+<ul>
+  <li>Enter MQTT topic of the CT sensor being using to monitor the grid connection into the <code class="highlighter-rouge">Grid</code> field. This CT should be clipped on the incoming Live/Neutral before any consumption or generation. The grid feed should be <strong>positive while importing and negative when exporting</strong>, physically invert the CT sensor to invert the reading if required. If emonPi CT1 is monitoring generation enter <code class="highlighter-rouge">emon/emonpi/power1</code> or if using emonTx CT2 <code class="highlighter-rouge">emon/emontx3/power2</code>. Leave the Solar PV generation field empty.</li>
+</ul>
+
+<h4 id="advanced-solar-pv-divert-setup">Advanced Solar PV Divert Setup</h4>
+
+<p>In some installations it may be not possible measure the correct metric required by the EVSE e.g solar PV gen or grid import / export. However if is possible to calculate the required metric by addition or subtraction using Emoncms Input Processing the resulting value then then be published to a new MQTT topic which can be used by the EVSE. eg This maybe required for a <a href="/applications/solar-pv/#sensor-installation">Type 1 solar PV system</a>: <code class="highlighter-rouge">Grid (import/export) = site-consumption – Generation</code>.</p>
+
+<p>To publish a value to a new MQTT topic feed use the Emoncms <code class="highlighter-rouge">Publish to MQTT</code> Input Process then enter a new unique MQTT topic e.g <code class="highlighter-rouge">grid</code> or <code class="highlighter-rouge">import</code> then use this new MQTT topic in the EVSE config.</p>
+
+<p>For more advance solar PV divert config it’s possible to modify the MQTT feed value and republish to a new topic using Emoncms Input processing or something like NodeRED. This may be desirable to increase the s</p>
+
+<p><img src="/images/integrations/ev-charging/publish-mqtt.png" alt="mqtt1" /></p>
+
+<p><img src="/images/integrations/ev-charging/publish-mqtt2.png" alt="mqtt2" /></p>
 
 <h4 id="solar-pv-divert-operation">Solar PV Divert Operation</h4>
 
@@ -781,6 +806,8 @@ For Solar PV Divert (EcoMode) to work emonPi and OpenEVSE should be on the same 
 </ul>
 
 <p>* <em>OpenEVSE controller firmware <a href="https://github.com/OpenEVSE/open_evse/releases/tag/v4.8.0">V4.8.0</a> has a bug which restricts the lowest charging current to 10A. The J1772 protocol can go down to 6A. This <del>will</del> has be fixed with a firmware update. See <a href="https://github.com/openenergymonitor/open_evse/releases/">OpenEnergyMonitor OpenEVSE FW releases</a>. A ISP programmer is required to update openevse controler FW.</em></p>
+
+<p>*Note: Solar PV divert under 10A may not work reliably with ‘Q’ models of Renault Zoe *</p>
 
 <hr />
 
@@ -841,7 +868,6 @@ For Solar PV Divert (EcoMode) to work emonPi and OpenEVSE should be on the same 
 <p><em>Note: The OpenEVSE has integrated temperature monitoring and will automatically throttle charging current and eventually stop a charging session if the temperature gets too hot.</em></p>
 
 <p><img src="/images/integrations/10-evse-sw.png" alt="" /></p>
-
 
 
   <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/integrations/evse-setup.markdown'>Edit on GitHub</a></div>
