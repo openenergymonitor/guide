@@ -44,7 +44,7 @@ The system is made up of five main units. These can be assembled and configured 
 		<hr>
 		<h4 id="emonpihttpsshopopenenergymonitorcomemonpi-3"><strong><a href="https://shop.openenergymonitor.com/emonpi-3/">emonPi</a></strong></h4>
 		<p>The emonPi is an all-in-one Raspberry Pi based energy monitoring unit making for a simple installation where Ethernet or WiFi is available at the meter location.</p>
-		<p>The emonPi can monitor two single-phase AC circuits using clip-on CT sensors. The emonPi can also monitor temperature, and interface directly with utility meters via an optical pulse sensor.</p>
+		<p>The emonPi can monitor two single-phase AC circuits using clip-on CT sensors. The emonPi can also monitor temperature, and interface directly with a utility meter via an optical pulse sensor.</p>
 		<p><img alt="emonPi" src="/images/hardwareimages/emonPi_shop_photo.png"></p>
 		<ul>
 			<li>Raspberry Pi-based energy monitor</li>
@@ -89,7 +89,7 @@ The system is made up of five main units. These can be assembled and configured 
 		<h4 id="optical-utility-meter-led-pulse-sensorhttpsshopopenenergymonitorcomoptical-utility-meter-led-pulse-sensor-optional"><a href="https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">Optical Utility Meter LED Pulse Sensor</a> (optional)</h4>
 		<p><img src="/images/setup/ops.png" width="100"></p>
 		<ul>
-			<li>Optional add-on sensor for interfacing directly with utility meters</li>
+			<li>Optional add-on sensor for interfacing directly with a utility meter</li>
 			<li>Compatible with all utility meters with LED pulse output</li>
 			<li>Compatible with emonPi &amp; emonTx (one pulse sensor per unit)</li>
 			<li>Reports exact amount of energy (Wh) reported by utility meter</li>
@@ -139,7 +139,7 @@ The system is made up of five main units. These can be assembled and configured 
 		<hr>
 		<h4 id="emonpihttpsshopopenenergymonitorcomemonpi-solar-pv"><strong><a href="https://shop.openenergymonitor.com/emonpi-solar-pv/">emonPi</a></strong></h4>
 		<p>The emonPi is an all-in-one Raspberry Pi based energy monitoring unit making for a simple installation where Ethernet or WiFi is available at the meter location.</p>
-		<p>The emonPi can monitor two single-phase AC circuits using clip-on CT sensors. The emonPi can also monitor temperature, and interface directly with utility meters via an optical pulse sensor.</p>
+		<p>The emonPi can monitor two single-phase AC circuits using clip-on CT sensors. The emonPi can also monitor temperature, and interface directly with a utility meter via an optical pulse sensor.</p>
 		<p><img alt="emonPi" src="/images/hardwareimages/emonPi_shop_photo.png"></p>
 		<ul>
 			<li>Raspberry Pi-based energy monitor</li>
