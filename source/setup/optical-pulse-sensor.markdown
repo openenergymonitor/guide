@@ -31,6 +31,13 @@ The emonPi and emonTx can simultaneously perform pulse counting and CT based mon
 
 **Due to hardware limitations only a single pulse counting sensor can be connected to a single emonPi, emonTx or emonTH unit.**
 
+<p class='note'>
+Some meters are configured to pulse on both import and export. If your meter is, and you use it for both (e.g. an import meter on a property with grid-connected Solar PV) then you will have difficulty making good use of an optical pulse sensor, as it will not agree with either the meter reading or any CT sensor measurement.
+  
+One possibility is to use the sign (positive or negative) of the output of a CT sensor attached to the meter's input (or output) to distinguish between positive and negative pulses. You can then either reject negative pulses, or count them separately if you wish.
+<a href="https://community.openenergymonitor.org/t/large-discrepancy-between-pulse-counter-and-ct/10561">This community forum discussion</a> contains more information on how to do this.
+</p>
+
 ### {% linkable_title Sensor Installation %}
 
 <img src="/images/setup/optical_pulse_emonpi.jpg" />
