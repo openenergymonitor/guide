@@ -176,20 +176,35 @@ The clip-on CT sensors must be clipped round either the live or Neutral AC wire.
 > *Type 1 system:  Grid (import/export) = site-consumption – Generation*
 
 
-**Type 2 solar PV System:** When the generation and site-consumption **cannot** be monitored separately e.g. the PV inverter output is fed into the fuse box and the household loads are connected to other circuits in the same fuse box. If this is the case, the output from the PV inverter and the grid import/export connection will need to be monitored and site-consumption calculated by subtracting.
+**Type 2 solar PV System:** When the generation and import can be monitored separately, but site-consumption **cannot**, for example where:
+
+* the PV inverter output is fed into the fuse box (consumer unit) and the household loads are connected to other circuits in the same fuse box, or
+* it's physically difficult to attach a CT sensor to anywhere after the import and generation supplies meet (e.g. to the meter tails from the junction point to the fuse box).
+
+If this is the case, the output from the PV inverter and the grid import/export connection will need to be monitored and site-consumption calculated by subtracting.
 
 > *Type 2 system:  Site-consumption = Generation + Grid import (negative when exporting)*
 
+<p class='note'>
+The polarity of the power readings depends on the orientation of the clip-on CT sensor. Orientate the CTs so that generation and site-consumption is positive and grid import/export is <b>positive when importing and negative when exporting</b>. The correct orientation can be determined by trial and error. But for CT sensors from our shop, the writing on the side should normally be on the downstream/consumer side, so try that first.
+</p>
+
+#### {% linkable_title Device Setup shortcut %}
 
 <p class='note'>
-The polarity of the power readings depends on the orientation of the clip-on CT sensor. Orientate the CTs so that generation and site-consumption is positive and grid import/export is <b>positive when importing and negative when exporting</b>. The correct orientation can be determined by trial and error.
-</p>
+For new installations, if you have connected:
+  
+ * CT1 (power 1) = grid import (positive) / export (negative), and
+ * CT2 (power 2) = solar generation,
+  
+then you can use the shortcut menu _Setup &gt; Device Setup_ to configure your inputs automatically.
+  
+Click on the spanner icon next to your emonPi, and then from the left-hand menu choose _OpenEnergyMonitor > EmonPi > Solar PV Type 1/2_ (as appropriate). Click _Save_ and it will create or reset your Input configurations to the recommended values.
 
 #### {% linkable_title Type 1 System Setup %}
 
-
 <p class='note'>
-For automatic MySolarPV App setup use the suggested feed names mendtioned below in <b>bold</b>. These names are case sensitive.
+For automatic MySolarPV App setup use the suggested feed names mentioned below in <b>bold</b>. These names are case sensitive.
 </p>
 
 The following assumes:
