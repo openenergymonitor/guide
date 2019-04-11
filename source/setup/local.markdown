@@ -1,13 +1,12 @@
 ---
 layout: page
-title: 3. Log Locally
-description: Log data locally to emonPi
-date: '2015-03-08 21:36'
+title: "3. Log Locally"
+description: "Log data locally to emonPi"
+date: 2015-03-08 21:36
 sidebar: true
 comments: false
 sharing: true
 footer: true
-published: true
 ---
 
 ### [&laquo; Previous step: Connect](/setup/connect/)
@@ -21,7 +20,7 @@ Data can now be logged to Emoncms runnning on the emonPi's local server, data wi
 Data can also (optionally) be posted remotely to [Emoncms.org](https://emoncms.org), see [Next step: Log Remotely](/setup/remote/).
 
 
-For application specific input processing, please read this page first (unless you are already familiar with Inputs and Feeds) and then see:
+For application specific input processing see:
 
 - [Applications > Home Energy](/applications/home-energy)
 - [Applications > Solar PV](/applications/solar-pv).
