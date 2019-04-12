@@ -191,7 +191,7 @@ The polarity of the power readings depends on the orientation of the clip-on CT 
 
 #### {% linkable_title Device Setup shortcut %}
 
-<p class='note'>
+
 For new installations, if you have connected:
   
  * CT1 (power 1) = grid import (positive) / export (negative), and
@@ -200,6 +200,8 @@ For new installations, if you have connected:
 then you can use the shortcut menu _Setup &gt; Device Setup_ to configure your inputs automatically.
   
 Click on the spanner icon next to your emonPi, and then from the left-hand menu choose _OpenEnergyMonitor > EmonPi > Solar PV Type 1/2_ (as appropriate). Click _Save_ and it will create or reset your Input configurations to the recommended values.
+
+
 
 #### {% linkable_title Type 1 System Setup %}
 
