@@ -83,9 +83,6 @@
 <loc>http://guide.openenergymonitor.org/setup/install/</loc>
 </url>
 <url>
-<loc>http://guide.openenergymonitor.org/setup/iotawatt/</loc>
-</url>
-<url>
 <loc>http://guide.openenergymonitor.org/integrations/lightwaverf/</loc>
 </url>
 <url>
@@ -135,6 +132,6 @@
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/static/mdi-demo.html</loc>
-<lastmod>2019-04-12T15:48:52+00:00</lastmod>
+<lastmod>2019-06-11T23:59:02+00:00</lastmod>
 </url>
 </urlset>
