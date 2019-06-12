@@ -82,7 +82,7 @@ and node red using flows editor
 
 ## {% linkable_title NodeRED %}
 
-*NodeRED is no longer installed on latest emonSD-30Oct18 it can be insalled if required*
+*NodeRED is no longer installed on latest emonSD-30Oct18 it can be installed if required*
 
 NodeRED: port:1880 user,pass:`emonpi`,`emonpi2016`
 
@@ -91,7 +91,7 @@ change it here:  `~/data/node-red/settings.js`
 
 ## {% linkable_title OpenHab %}
 
-*OpenHAB is no longer installed on latest emonSD-30Oct18, it can be insalled if required*
+*OpenHAB is no longer installed on latest emonSD-30Oct18, it can be installed if required*
 
 OpenHab port:8080 user,pass:`pi`,`emonpi2016`
 
