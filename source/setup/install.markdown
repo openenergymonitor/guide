@@ -68,9 +68,10 @@ The clip-on CT sensors must be clipped round either the Line or Neutral AC wire.
 
 
 ### {% linkable_title 5. *Temperature Sensors (optional)* %}
-- Connect to emonPi / emonTx via RJ45 connector
-- Up to 6x sensors can be connected using [RJ45 Breakout](http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/)
-- Sensor wire can be extended using RJ45 cable and [RJ45 Extender](http://shop.openenergymonitor.com/rj45-extender/)
+- Connect to emonPi / emonTx via RJ45 connector.
+- Up to 6x [RJ45 sensors](https://shop.openenergymonitor.com/rj45-encapsulated-ds18b20-temperature-sensor/) can be connected using the [RJ45 expander](http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/).
+- Up to 6x [wired sensors](https://shop.openenergymonitor.com/encapsulated-ds18b20-temperature-sensor/) can be connected using the [terminal block breakout board](https://shop.openenergymonitor.com/rj45-to-terminal-block-breakout-for-ds18b20/).
+- Sensor wire can be extended using RJ45 cable and the [RJ45 Extender](http://shop.openenergymonitor.com/rj45-extender/).
 
 ## Installation Examples
 
@@ -78,7 +79,7 @@ The clip-on CT sensors must be clipped round either the Line or Neutral AC wire.
 
 ![home energy2](/images/applications/home-energy/emonpi-install2.jpg)
 
-The included [Wall mount plalstic clips](https://www.lincolnbinns.com/wp-content/uploads/2013/12/Plastic-Linc-Lug.png) can be attached onto the emonPi / emonTx and held in place by a plastic locking nut. 
+The included [plastic clips](https://www.lincolnbinns.com/wp-content/uploads/2013/12/Plastic-Linc-Lug.png) and plastic locking nut can be used to mount the emonPi / emonTx on a wall. 
 
 See [Solar PV Application Note](/applications/solar-pv/) for emonPi solar PV install guide & images.
 
