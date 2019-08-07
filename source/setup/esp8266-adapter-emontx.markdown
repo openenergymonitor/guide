@@ -27,6 +27,7 @@ An emonBase or emonPi is recommended for more complex applications where local s
 - **emonTx V3:** + CT, AC-AC adapter, temperature and pulse sensors as required by your application.
 
   - **Note:** [emonTx V3 firmware V2.5+](https://github.com/openenergymonitor/emontx3/tree/master/firmware) is required to support EmonESP.
+  - **Note:** To use ESP8266 with emonTx three-phase firmware EmonESP baud rate for EmonESP needs to be set to 9600 
 
 - **5V USB DC Power supply for the emonTx:** The AC-AC Voltage adapter that can power the emonTx in normal operation does not deliver enough power to run the ESP8266 Huzzah WiFi module and so an additional 5V USB Power supply is required Battery opperation is not possible when using ESP8266.
 
