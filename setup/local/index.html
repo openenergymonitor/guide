@@ -617,13 +617,23 @@ highlight active link...
 
   <h3 id="-previous-step-connect"><a href="/setup/connect/">« Previous step: Connect</a></h3>
 
-<h3 id="next-step-log-remotely-"><a href="/setup/remote/">Next step: Log Remotely »</a></h3>
+<h3 id="next-log-remotely-"><a href="/setup/remote/">Next: Log Remotely »</a></h3>
 
 <hr />
 
-<p>Data can now be logged to Emoncms runnning on the emonPi’s local server, data will be saved to the Raspberry Pi’s SD card.</p>
+<p><strong>Local vs Remote logging</strong></p>
 
-<p>Data can also (optionally) be posted remotely to <a href="https://emoncms.org">Emoncms.org</a>, see <a href="/setup/remote/">Next step: Log Remotely</a>.</p>
+<p>Both the emonPi and emonBase feature full local data logging and visualisation capability using our <a href="https://github.com/emoncms/emoncms">open source emoncms web application</a> - making it easy to keep your energy data within the privacy of your home and without any online service subscription requirements. The local web interface is accessible via the emonPi/emonBase hostname or IP address.</p>
+
+<p>The emonPi and emonBase SD card includes 10 GB’s of data storage enough for 138 years! worth of feed data for our solar PV application (6 feeds at 10s resolution). The software has also been designed to minimise write wear to prolong SD card lifespan.</p>
+
+<p>If you wish to access your data away from home this is possible using remote access services such as Dataplicity. Dataplicity currently offer a free-tier of one device per user. For more information see: <a href="/setup/remote-access/">Remote Access</a>.</p>
+
+<p>We do also offer an optional remote data logging and visualisation service called <a href="https://emoncms.org">Emoncms.org</a> running a slightly reduced feature set to that available locally for applications where remote logging is required.  Emoncms.org is a pay-as-you-go service but all OpenEnergyMonitor shop hardware purchases come with 20% free emoncms.org credit which is designed to give 5-10 years of free use. See <a href="/setup/remote/">Log Remotely</a> for configuration steps.</p>
+
+<p>It is also possible to install our emoncms software on your own remote server, we have a nice installation script to help with this for use with Debian systems, see <a href="https://github.com/openenergymonitor/EmonScripts">EmonScripts</a>.</p>
+
+<h2 id="-1-emoncms-inputs"><a class="title-link" name="1-emoncms-inputs" href="#1-emoncms-inputs"></a> 1. Emoncms Inputs</h2>
 
 <p>For application specific input processing see:</p>
 
@@ -632,12 +642,12 @@ highlight active link...
   <li><a href="/applications/solar-pv">Applications &gt; Solar PV</a>.</li>
 </ul>
 
-<h2 id="-1-emoncms-inputs"><a class="title-link" name="1-emoncms-inputs" href="#1-emoncms-inputs"></a> 1. Emoncms Inputs</h2>
+<p>The following describes a generic example of configuring an emonpi power input.</p>
 
-<ul>
-  <li>Login to Local Emoncms <a href="http://emonpi/">http://emonpi/</a> (or local IP address)</li>
+<ol>
+  <li>Start by logging in to your emonPi/emonBase <a href="http://emonpi/">http://emonpi/</a> (or local IP address)</li>
   <li>Navigate to <code class="highlighter-rouge">Setup &gt; Inputs</code></li>
-</ul>
+</ol>
 
 <p>You should now see an updating input list of connected nodes (e.g emonPi, emonTx, emonTH) and they keys (e.g. power1, power2 etc.) together with the last received value. If you do not, see <a href="/setup/troubleshooting">Setup &gt; Troubleshooting</a>.</p>
 
@@ -736,7 +746,7 @@ highlight active link...
 
 <hr />
 
-<h3 id="next-step-log-remotely--1"><a href="/setup/remote/">Next step: Log Remotely »</a></h3>
+<h3 id="next-step-log-remotely-"><a href="/setup/remote/">Next step: Log Remotely »</a></h3>
 
 
 </article>
