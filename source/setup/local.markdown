@@ -23,9 +23,9 @@ The emonPi and emonBase SD card includes 10 GB's of data storage enough for 138 
 
 If you wish to access your data away from home this is possible using remote access services such as Dataplicity. Dataplicity currently offer a free-tier of one device per user. For more information see: [Remote Access](/setup/remote-access/).
 
-We do also offer an optional remote data logging and visualisation service called [Emoncms.org](https://emoncms.org) running a slightly reduced feature set to that available locally for applications where remote logging is required.  Emoncms.org is a pay-as-you-go service but all OpenEnergyMonitor shop hardware purchases come with 20% free emoncms.org credit which is designed to give 5-10 years of free use. See [Log Remotely](/setup/remote/) for configuration steps.
+We do also offer an optional remote data logging and visualisation service called [Emoncms.org](https://emoncms.org) running a slightly reduced feature set to that available locally for applications were remote logging is required.  Emoncms.org is a pay-as-you-go service but all OpenEnergyMonitor shop hardware purchases come with 20% free emoncms.org credit which is designed to give 5-10 years of free use. See [Log Remotely](/setup/remote/) for configuration steps.
 
-It is also possible to install our emoncms software on your own remote server, we have a nice installation script to help with this for use with Debian systems, see [EmonScripts](https://github.com/openenergymonitor/EmonScripts).
+It is also possible to install our open source emoncms software on your own remote server, we have a nice installation script to help with this for use with Debian systems, see [EmonScripts](https://github.com/openenergymonitor/EmonScripts).
 
 ## {% linkable_title 1. Emoncms Inputs %}
 
