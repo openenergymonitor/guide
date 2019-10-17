@@ -3,12 +3,6 @@ layout: default
 ---
 
 <article class="page">
-  {% assign url_parts = page.url | split: '/' %}
-    {% if url_parts[1] != 'setup' and
-          url_parts[1] != 'applications' and
-          url_parts[1] != 'technical'
-     {% include edit_github.html %}
-    {% endif %}
 
   {% if page.title and page.show_title != false %}
   <header>
@@ -20,7 +14,5 @@ layout: default
   {% endif %}
 
   {{ content }}
-
-  {% include edit_github.html %}
 
 </article>

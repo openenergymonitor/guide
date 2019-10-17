@@ -55,7 +55,7 @@ syntax_highlighter_opts:
 
 highlighter: rouge
 
-gems:
+plugins:
   - jekyll-time-to-read
   - octopress-filters
   - octopress-include-tag
