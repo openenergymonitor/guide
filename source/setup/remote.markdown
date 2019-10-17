@@ -16,7 +16,7 @@ published: true
 
 ***
 
-Data can also (optionally) be posted remotely to [Emoncms.org](https://emoncms.org). Posting data remotely has the advantage of being able to easily access your data from anywhere on the web without having to open access to your local emonPi:
+In addition to [local logging](/setup/local/), we also offer an optional remote data logging and visualisation service called Emoncms.org running a slightly reduced feature set to that available locally for applications where remote logging is required. Emoncms.org is a pay-as-you-go service but all OpenEnergyMonitor shop hardware purchases come with 20% free emoncms.org credit which is designed to give 5-10 years of free use.
 
 ## 1. Create Emoncms.org account
 
