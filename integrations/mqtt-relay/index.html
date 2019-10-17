@@ -605,8 +605,6 @@ highlight active link...
 
 
 <article class="page">
-  
-    
 
   
   <header>
@@ -698,7 +696,7 @@ highlight active link...
 
 <p><img src="/images/integrations/relay-wifi.png" alt="relay-wifi" /></p>
 
-<h2 id="turn-on-wifi-ap--restore-default-settingsa-idreset-namereseta">Turn on WiFi AP / Restore Default Settings <a id="Reset" name="Reset"></a></h2>
+<h2 id="turn-on-wifi-ap--restore-default-settings">Turn on WiFi AP / Restore Default Settings <a id="Reset" name="Reset"></a></h2>
 
 <p>Once the unit is connected to your local Wifi network for security the Wifi AP will automatically be turned off.</p>
 
@@ -710,13 +708,13 @@ highlight active link...
 
 <p>Relay can now be in four ways:</p>
 
-<h4 id="a-idwebui-namewebuia1-web-ui-simple-interface"><a id="web_UI" name="web_UI"></a>1. Web UI Simple interface</h4>
+<h4 id="1-web-ui-simple-interface"><a id="web_UI" name="web_UI"></a>1. Web UI Simple interface</h4>
 
-<p>Select <strong>Relay Control</strong> via web interface. Or browse to http://<ip-address>/control/relay.html</ip-address></p>
+<p>Select <strong>Relay Control</strong> via web interface. Or browse to http://<IP-ADDRESS>/control/relay.html</IP-ADDRESS></p>
 
 <p><img src="/images/integrations/relay-control.png" alt="relay-control" /></p>
 
-<h4 id="a-idthermostat-namethermostata2-thermostat-scheduler"><a id="Thermostat" name="Thermostat"></a>2. Thermostat Scheduler</h4>
+<h4 id="2-thermostat-scheduler"><a id="Thermostat" name="Thermostat"></a>2. Thermostat Scheduler</h4>
 
 <p>Heating or A/C schedule and desired set point (from connected internal DS18B20 temperature sensor) can be set using the Thermostat Scheduler interface</p>
 
@@ -734,7 +732,7 @@ highlight active link...
 
 <p><img src="/images/integrations/relay-hist.png" alt="relay-hist" /></p>
 
-<h4 id="a-idhttp-namehttpa3-http-api"><a id="HTTP" name="HTTP"></a>3. HTTP API</h4>
+<h4 id="3-http-api"><a id="HTTP" name="HTTP"></a>3. HTTP API</h4>
 
 <p><strong>Return Status</strong></p>
 
@@ -760,7 +758,7 @@ highlight active link...
 
 <p><img src="/images/integrations/relay-httpd.png" alt="relay-httpd" /></p>
 
-<h4 id="a-idmqtt-namemqtta4mqttapi"><a id="MQTT" name="MQTT"></a>4. MQTT API</h4>
+<h4 id="4mqttapi"><a id="MQTT" name="MQTT"></a>4. MQTT API</h4>
 
 <p>The best (secure and lightweight) way IMHO to control the unit is via MQTT.</p>
 
@@ -804,7 +802,7 @@ highlight active link...
 
 <p>Newer emonPi’s have the MQTT port open by default and authentication turned on with default _user: <code class="highlighter-rouge">emonpi</code>, password: <code class="highlighter-rouge">emonpimqtt2016</code>. _Port 1883 is closed by default on all home network routers therefor this port is not exposed to the web.</p>
 
-<h4 id="a-idothersettings-nameothersettingsaother-settings"><a id="other_settings" name="other_settings"></a>Other Settings</h4>
+<h4 id="other-settings"><a id="other_settings" name="other_settings"></a>Other Settings</h4>
 
 <p><strong>NTP Settings </strong>- unit obtain current time from NTP for use with thermostat scheduler, set GMT offset based on your time zone.</p>
 
@@ -826,7 +824,7 @@ highlight active link...
 
 <p><img src="/images/integrations/adc-settings.png" alt="relay-settings" /></p>
 
-<h2 id="a-idfirmware-namefirmwareafirmware-upgrade-recommended-way"><a id="firmware" name="firmware"></a>Firmware Upgrade (recommended way)</h2>
+<h2 id="firmware-upgrade-recommended-way"><a id="firmware" name="firmware"></a>Firmware Upgrade (recommended way)</h2>
 
 <p>The unit has the ability to <strong>update firmware over WiFi network via the web interface</strong>. Firmware updates will be posted here. There are two branches of the relay board firmware the first is Martin’s more advanced firmware based on his recent developments, Martin has not made source code available for this but has given us a compiled binary, available here:</p>
 
@@ -836,7 +834,7 @@ highlight active link...
 
 <p><img src="/images/integrations/relay-firmware.png" alt="relay-settings" /></p>
 
-<h2 id="a-idprogramming-nameprogrammingaprogramming-advanced"><a id="Programming" name="Programming"></a>Programming (advanced)</h2>
+<h2 id="programming-advanced"><a id="Programming" name="Programming"></a>Programming (advanced)</h2>
 
 <p>The ESP8266 can be programmed manually using 3.3V USB to UART / FTDI cable. Jumper 5 should be between 2 and 3 (closer to the LED side). <strong>Hold down the push button for the duration of the upload.</strong></p>
 
@@ -897,11 +895,11 @@ highlight active link...
 
 <p>Note: flash address  0xFC000 contains board identification information. do not erase or modify it. Check debug serial output.</p>
 
-<h2 id="a-idschematic-nameschematicaschematic"><a id="schematic" name="schematic"></a>Schematic</h2>
+<h2 id="schematic"><a id="schematic" name="schematic"></a>Schematic</h2>
 
 <p><img src="/images/integrations/relay-schematic.png" alt="relay-settings" /></p>
 
-<h2 id="a-iddimentions-namedimensionsaphysical-dimensions"><a id="dimentions" name="dimensions"></a>Physical Dimensions</h2>
+<h2 id="physical-dimensions"><a id="dimentions" name="dimensions"></a>Physical Dimensions</h2>
 
 <p>PCB: 87mm x 50mm</p>
 
@@ -918,9 +916,6 @@ highlight active link...
   <li>Open heating controller/thermostat scheduler by Trystan Lea</li>
 </ul>
 
-
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/integrations/mqtt-relay.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/integrations/mqtt-relay.markdown'>Edit on GitHub Prose</a></div>
 
 </article>
 
@@ -990,6 +985,7 @@ highlight active link...
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
+         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
       </li>
 

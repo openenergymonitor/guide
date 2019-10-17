@@ -605,8 +605,6 @@ highlight active link...
 
 
 <article class="page">
-  
-    
 
   
   <header>
@@ -805,7 +803,7 @@ For Solar PV Divert (EcoMode) to work emonPi and OpenEVSE need be on the same lo
   <li>Current is adjusted in 1A increments between 6A* (1.5kW @ 240V) &gt; max charging current (as set in OpenEVSE setup)</li>
   <li>6A is the lowest supported charging current that SAE J1772 EV charging protocol supports</li>
   <li>The OpenEVSE does not adjust the current itself but rather request that the EV adjusts its charging current by varying the duty cycle of the pilot signal, see <a href="https://openev.freshdesk.com/support/solutions/articles/6000052070-theory-of-operation">theory of operation</a> and <a href="https://openev.freshdesk.com/support/solutions/articles/6000052074-basics-of-sae-j1772">Basics of SAE J1772</a>.</li>
-  <li>Charging mode can be viewed and set via MQTT: <code class="highlighter-rouge"><span class="p">{</span><span class="err">base-topic</span><span class="p">}</span><span class="err">/divertmode/set</span></code> (1 = normal, 2 = eco).</li>
+  <li>Charging mode can be viewed and set via MQTT: <code class="highlighter-rouge">{base-topic}/divertmode/set</code> (1 = normal, 2 = eco).</li>
 </ul>
 
 <p>* <em>OpenEVSE controller firmware <a href="https://github.com/OpenEVSE/open_evse/releases/tag/v4.8.0">V4.8.0</a> has a bug which restricts the lowest charging current to 10A. The J1772 protocol can go down to 6A. This <del>will</del> has be fixed with a firmware update. See <a href="https://github.com/openenergymonitor/open_evse/releases/">OpenEnergyMonitor OpenEVSE FW releases</a>. A ISP programmer is required to update openevse controler FW.</em></p>
@@ -872,9 +870,6 @@ For Solar PV Divert (EcoMode) to work emonPi and OpenEVSE need be on the same lo
 
 <p><img src="/images/integrations/10-evse-sw.png" alt="" /></p>
 
-
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/integrations/evse-setup.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/integrations/evse-setup.markdown'>Edit on GitHub Prose</a></div>
 
 </article>
 
@@ -944,6 +939,7 @@ For Solar PV Divert (EcoMode) to work emonPi and OpenEVSE need be on the same lo
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
+         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
       </li>
 

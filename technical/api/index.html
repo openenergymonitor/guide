@@ -605,8 +605,6 @@ highlight active link...
 
 
 <article class="page">
-  
-    
 
   
   <header>
@@ -621,33 +619,29 @@ highlight active link...
 
 <p>The  API is the same for remote <a href="https://emoncms.org">Emoncms.org</a> and local Emoncms (running on emonPi). To get started on the EmonPi, read /var/www/emoncms/readme.md or browse to http://127.0.0.1/emoncms/feed/api.</p>
 
-<p>For a local EmonCMS system, just replace <code class="highlighter-rouge">emoncms.org</code> with <code class="highlighter-rouge">&lt;EMONPI_LOCAL_IP_ADDDRESS&gt;/emoncms</code>. For instance http://127.0.0.1/emoncms.
-* <a href="https://emoncms.org/site/api#input">Emoncms Input API</a>
-* <a href="https://emoncms.org/site/api#feed">Emoncms Feed API</a></p>
+<p>For a local EmonCMS system, just replace <code class="highlighter-rouge">emoncms.org</code> with <code class="highlighter-rouge">&lt;EMONPI_LOCAL_IP_ADDDRESS&gt;/emoncms</code>. For instance http://127.0.0.1/emoncms.</p>
+<ul>
+  <li><a href="https://emoncms.org/site/api#input">Emoncms Input API</a></li>
+  <li><a href="https://emoncms.org/site/api#feed">Emoncms Feed API</a></li>
+</ul>
 
-<p>When trying to read a value, you’ll notice that authentication is required.
-<code class="highlighter-rouge">
-pi@emonpi(ro):~$ wget -qO- "http://127.0.0.1/emoncms/feed/timevalue.json?id=1"
+<p>When trying to read a value, you’ll notice that authentication is required.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pi@emonpi(ro):~$ wget -qO- "http://127.0.0.1/emoncms/feed/timevalue.json?id=1"
 {"success":false,"message":"Username or password empty"}pi@emonpi(ro):~$ 
-</code></p>
+</code></pre></div></div>
 
-<p>Visit https://emoncms.org/site/api# for more information on authentication. Retrieve the API keys from http://127.0.0.1/emoncms/feed/api. For this example, the read only key is ok.
-<code class="highlighter-rouge">
-pi@emonpi(ro):~$ APIKEY=put_your_api_key_here
+<p>Visit https://emoncms.org/site/api# for more information on authentication. Retrieve the API keys from http://127.0.0.1/emoncms/feed/api. For this example, the read only key is ok.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pi@emonpi(ro):~$ APIKEY=put_your_api_key_here
 pi@emonpi(ro):~$ wget -qO- "http://127.0.0.1/emoncms/feed/timevalue.json?id=1&amp;apikey=$APIKEY"
 {"time":1523695587,"value":32}pi@emonpi(ro):~$ 
-</code></p>
+</code></pre></div></div>
 
-<p>If you specify an invalid feed id, you’ll get an error message.
-<code class="highlighter-rouge">
-pi@emonpi(rw):~$ wget -qO- "http://127.0.0.1/emoncms/feed/timevalue.json?id=3&amp;apikey=$APIKEY"
+<p>If you specify an invalid feed id, you’ll get an error message.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pi@emonpi(rw):~$ wget -qO- "http://127.0.0.1/emoncms/feed/timevalue.json?id=3&amp;apikey=$APIKEY"
 {"success":false,"message":"Feed does not exist"}
-</code>
-Check your feed list id against the EmonCMS web interface at http://127.0.0.1/emoncms/feed/list</p>
+</code></pre></div></div>
+<p>Check your feed list id against the EmonCMS web interface at http://127.0.0.1/emoncms/feed/list</p>
 
-
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/technical/api.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/technical/api.markdown'>Edit on GitHub Prose</a></div>
 
 </article>
 
@@ -717,6 +711,7 @@ Check your feed list id against the EmonCMS web interface at http://127.0.0.1/em
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
+         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
       </li>
 

@@ -605,8 +605,6 @@ highlight active link...
 
 
 <article class="page">
-  
-    
 
   
   <header>
@@ -617,15 +615,15 @@ highlight active link...
   <hr class="divider">
   
 
-  <h3 id="laquo-previous-step-log-locallysetuplocal"><a href="/setup/local/">« Previous step: Log Locally</a></h3>
+  <h3 id="-previous-step-log-locally"><a href="/setup/local/">« Previous step: Log Locally</a></h3>
 
-<h3 id="next-step-dashboards-raquosetupdashboards"><a href="/setup/dashboards/">Next step: Dashboards »</a></h3>
+<h3 id="next-step-dashboards-"><a href="/setup/dashboards/">Next step: Dashboards »</a></h3>
 
 <hr />
 
 <p>Data can also (optionally) be posted remotely to <a href="https://emoncms.org">Emoncms.org</a>. Posting data remotely has the advantage of being able to easily access your data from anywhere on the web without having to open access to your local emonPi:</p>
 
-<h2 id="create-emoncmsorg-account">1. Create Emoncms.org account</h2>
+<h2 id="1-create-emoncmsorg-account">1. Create Emoncms.org account</h2>
 
 <p><img src="/images/setup/remote-log0.png" alt="remote log1" /></p>
 
@@ -638,7 +636,7 @@ highlight active link...
 
 <p><img src="/images/setup/remote-log01.png" alt="remote log1" /></p>
 
-<h2 id="enter-api-key-into-local-emoncms">2. Enter API key into local Emoncms</h2>
+<h2 id="2-enter-api-key-into-local-emoncms">2. Enter API key into local Emoncms</h2>
 
 <p><img src="/images/setup/remote-log1.png" alt="remote log1" /></p>
 
@@ -651,7 +649,7 @@ highlight active link...
 
 <p><a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md"><em>Advanced emonhub.conf configuration guide</em></a></p>
 
-<h2 id="setup-emoncmsorg-input-processing">3. Setup Emoncms.org Input Processing</h2>
+<h2 id="3-setup-emoncmsorg-input-processing">3. Setup Emoncms.org Input Processing</h2>
 
 <ul>
   <li>Log back into <a href="https://emoncms.org">Emoncms.org</a></li>
@@ -663,11 +661,11 @@ highlight active link...
 
 <hr />
 
-<h2 id="a-classtitle-link-nameposting-to-multiple-emoncms-accounts-hrefposting-to-multiple-emoncms-accountsa-posting-to-multiple-emoncms-accounts"><a class="title-link" name="posting-to-multiple-emoncms-accounts" href="#posting-to-multiple-emoncms-accounts"></a> Posting to multiple Emoncms accounts</h2>
+<h2 id="-posting-to-multiple-emoncms-accounts"><a class="title-link" name="posting-to-multiple-emoncms-accounts" href="#posting-to-multiple-emoncms-accounts"></a> Posting to multiple Emoncms accounts</h2>
 
 <p>The emonPi can post to other remote Emoncms accounts as well as or instead of emoncms.org. To post to another Emoncms account create another <code class="highlighter-rouge">EmonHubEmoncmsHTTPInterfacer</code> section in <code class="highlighter-rouge">emonhub.conf</code> e.g :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>[[my-emoncms-server]]
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[[my-emoncms-server]]
     Type = EmonHubEmoncmsHTTPInterfacer
     [[[init_settings]]]
     [[[runtimesettings]]]
@@ -678,22 +676,21 @@ highlight active link...
         senddata = 1                    # my-awesome-emoncms-server
         sendstatus = 0                  # Enable sending WAN IP to Emoncms MyIP (requires My IP installed)
         sendinterval= 10                # Bulk send interval to post in seconds
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <hr />
 
-<h2 id="a-classtitle-link-namemultiple-emonpis-posting-to-a-single-emoncmsorg-account-hrefmultiple-emonpis-posting-to-a-single-emoncmsorg-accounta-multiple-emonpis-posting-to-a-single-emoncmsorg-account"><a class="title-link" name="multiple-emonpis-posting-to-a-single-emoncmsorg-account" href="#multiple-emonpis-posting-to-a-single-emoncmsorg-account"></a> Multiple emonPi’s posting to a single Emoncms.org account</h2>
+<h2 id="-multiple-emonpis-posting-to-a-single-emoncmsorg-account"><a class="title-link" name="multiple-emonpis-posting-to-a-single-emoncmsorg-account" href="#multiple-emonpis-posting-to-a-single-emoncmsorg-account"></a> Multiple emonPi’s posting to a single Emoncms.org account</h2>
 
 <p>It’s possible to setup multiple emonPi’s posting to a single Emoncms.org account, this is useful if you want to monitor several installations with a single login. By defaut data from sensors connected direclty to the emonPi are tagged in Emoncms with <strong>node ID 5</strong>. If multiple emonPi’s are posting to the same account we need to set a different node ID to each emonPi.</p>
 
-<h3 id="change-emonpi-node-id">1. Change emonPi node ID</h3>
+<h3 id="1-change-emonpi-node-id">1. Change emonPi node ID</h3>
 
 <p>The emonPi’s node ID can be changed in the <em>EmonHub Config Editor</em>. Login to <em>*local Emoncms</em> then browser to <code class="highlighter-rouge">Setup &gt; EmonHub</code>, in the <code class="highlighter-rouge">[interfacers]</code> section change <code class="highlighter-rouge">baseid = 5</code> to a different number: 4, 3, and 2 are recomended since these node ID’s are not already allocated:</p>
 
 <p><img src="/images/setup/emonpi-nodeid-decoder.png" alt="remote log1" /></p>
 
-<h3 id="update-emonpi-node-decoder">2. Update emonPi Node Decoder</h3>
+<h3 id="2-update-emonpi-node-decoder">2. Update emonPi Node Decoder</h3>
 
 <p>After changing the emonPi node ID we also needto update the EmonHub node decoder to enablelocal Emoncms to decode the data from the emonPi with the updated node ID. To do this scroll further down the emonhub config page to the <code class="highlighter-rouge">[Nodes]</code> section and change <code class="highlighter-rouge">[[5]]</code> to the new emonPi node ID e.g. 5, 3, or 2. Then click <code class="highlighter-rouge">Save</code> to save changes.</p>
 
@@ -705,11 +702,8 @@ highlight active link...
 
 <hr />
 
-<h3 id="next-step-dashboards-raquosetupdashboards-1"><a href="/setup/dashboards/">Next step: Dashboards »</a></h3>
+<h3 id="next-step-dashboards--1"><a href="/setup/dashboards/">Next step: Dashboards »</a></h3>
 
-
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/setup/remote.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/setup/remote.markdown'>Edit on GitHub Prose</a></div>
 
 </article>
 
@@ -779,6 +773,7 @@ highlight active link...
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
+         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
       </li>
 

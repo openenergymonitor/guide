@@ -605,8 +605,6 @@ highlight active link...
 
 
 <article class="page">
-  
-    
 
   
   <header>
@@ -631,13 +629,13 @@ highlight active link...
 
 <p>The emonPi with <a href="/technical/#emonsd-features">emonSD pre-built SD card</a> by default runs a local <a href="http://mosquitto.org/">Mosquitto MQTT</a> server. This server is accessible (<a href="/technical/credentials#mqtt">via authentication</a> on port 1883. See <a href="/technical/credentials#mqtt">MQTT Service Credentials</a>.</p>
 
-<h2 id="a-classtitle-link-namemqtt-publishers-hrefmqtt-publishersa-mqtt-publishers"><a class="title-link" name="mqtt-publishers" href="#mqtt-publishers"></a> MQTT Publishers</h2>
+<h2 id="-mqtt-publishers"><a class="title-link" name="mqtt-publishers" href="#mqtt-publishers"></a> MQTT Publishers</h2>
 
-<h3 id="a-classtitle-link-nameemonhub-hrefemonhuba-emonhub"><a class="title-link" name="emonhub" href="#emonhub"></a> emonHub</h3>
+<h3 id="-emonhub"><a class="title-link" name="emonhub" href="#emonhub"></a> emonHub</h3>
 
 <p><a href="/technical/#emonhub">EmonHub</a> python service decodes the data received from the emonPi + RF nodes and publishes to the emonPi’s Mosquitto MQTT server using the following two topic formats (both formats are published to parallel):</p>
 
-<h4 id="a-classtitle-link-name1-new-mqtt-topic-format-href1-new-mqtt-topic-formata-1-new-mqtt-topic-format"><a class="title-link" name="1-new-mqtt-topic-format" href="#1-new-mqtt-topic-format"></a> 1. New MQTT Topic Format</h4>
+<h4 id="-1-new-mqtt-topic-format"><a class="title-link" name="1-new-mqtt-topic-format" href="#1-new-mqtt-topic-format"></a> 1. New MQTT Topic Format</h4>
 
 <p>Each data key (power) has its own MQTT topic as a sub-topic of the NodeID or NodeName. This MQTT topic structure makes it far easier to subscribe to a particular node key of interest e.g. <code class="highlighter-rouge">emontx/power1</code> using another service e.g. <a href="/integrations/openhab">openHAB</a>.</p>
 
@@ -649,7 +647,7 @@ highlight active link...
 
 <p><code class="highlighter-rouge">emon/emonpi/power1</code></p>
 
-<h4 id="a-classtitle-link-name2-legacy-csv-mqtt-topic-format-href2-legacy-csv-mqtt-topic-formata-2-legacy-csv-mqtt-topic-format"><a class="title-link" name="2-legacy-csv-mqtt-topic-format" href="#2-legacy-csv-mqtt-topic-format"></a> 2. Legacy CSV MQTT Topic Format</h4>
+<h4 id="-2-legacy-csv-mqtt-topic-format"><a class="title-link" name="2-legacy-csv-mqtt-topic-format" href="#2-legacy-csv-mqtt-topic-format"></a> 2. Legacy CSV MQTT Topic Format</h4>
 
 <p>Used by older version of emonPi and emonPiLCD service. All data from a single node is published in CSV format to a single topic. More compact but does not allow naming of keys and difficult to subscribe to a single key.</p>
 
@@ -662,15 +660,15 @@ highlight active link...
 <p>emonHub servie can be restarted with <code class="highlighter-rouge">$ sudo service emonhub restart</code>.
 Latest log file entries can be viewed via the Emoncms web interface admin or with: <code class="highlighter-rouge">$ tail /var/log/emonhub/emonhub.log</code>. All the data currently being published to MQTT topic can be viewed in real-time in the EmonHub log.</p>
 
-<h3 id="a-classtitle-link-nameemoncms-publisher-hrefemoncms-publishera-emoncms-publisher"><a class="title-link" name="emoncms-publisher" href="#emoncms-publisher"></a> Emoncms Publisher</h3>
+<h3 id="-emoncms-publisher"><a class="title-link" name="emoncms-publisher" href="#emoncms-publisher"></a> Emoncms Publisher</h3>
 
 <p>Data can be published to an MQTT topic using the <code class="highlighter-rouge">Publish to MQTT</code> Emoncms Input Process. In the Input process ‘Text’ box add the topic, for example: <code class="highlighter-rouge">house/power/solar</code>.</p>
 
 <hr />
 
-<h2 id="a-classtitle-link-namemqtt-subscribers-hrefmqtt-subscribersa-mqtt-subscribers"><a class="title-link" name="mqtt-subscribers" href="#mqtt-subscribers"></a> MQTT Subscribers</h2>
+<h2 id="-mqtt-subscribers"><a class="title-link" name="mqtt-subscribers" href="#mqtt-subscribers"></a> MQTT Subscribers</h2>
 
-<h3 id="a-classtitle-link-nameemoncms-mqtt-service-hrefemoncms-mqtt-servicea-emoncms-mqtt-service"><a class="title-link" name="emoncms-mqtt-service" href="#emoncms-mqtt-service"></a> Emoncms MQTT Service</h3>
+<h3 id="-emoncms-mqtt-service"><a class="title-link" name="emoncms-mqtt-service" href="#emoncms-mqtt-service"></a> Emoncms MQTT Service</h3>
 
 <p>Emoncms MQTT Input service subscribes to the MQTT base topic (default <code class="highlighter-rouge">emon/#</code>) and posts any data on this topic to Emoncms Inputs with the NodeName and KeyName taken from the MQTT topic and sub-topic name.</p>
 
@@ -685,7 +683,7 @@ Latest log file entries can be viewed via the Emoncms web interface admin or wit
 <p>The MQTT input service can be restarted using <code class="highlighter-rouge">$ sudo service mqtt_input restart</code>.The MQTT input service runs a <a href="https://github.com/emoncms/emoncms/blob/master/scripts/phpmqtt_input.php"><code class="highlighter-rouge">phpmqtt_input.php</code> script</a>.
 Latest log file entries can be viewed via Emoncms web inerface admin or with: <code class="highlighter-rouge">$ tail /var/log/emoncms.log</code></p>
 
-<h3 id="a-classtitle-link-nameemonpilcd-service-hrefemonpilcd-servicea-emonpilcd-service"><a class="title-link" name="emonpilcd-service" href="#emonpilcd-service"></a> EmonPiLCD Service</h3>
+<h3 id="-emonpilcd-service"><a class="title-link" name="emonpilcd-service" href="#emonpilcd-service"></a> EmonPiLCD Service</h3>
 
 <p>The <a href="https://github.com/openenergymonitor/emonpi/blob/master/lcd/emonPiLCD.py">emonPi’s python LCD Service Script</a> subscribes to the ‘Legacy MQTT Topic’ structure to obtain the real-time data to display on the emonPi LCD.</p>
 
@@ -694,7 +692,7 @@ Latest log file entries can be viewed with: <code class="highlighter-rouge">$ ta
 
 <hr />
 
-<h2 id="a-classtitle-link-nametesting-mqtt-hreftesting-mqtta-testing-mqtt"><a class="title-link" name="testing-mqtt" href="#testing-mqtt"></a> Testing MQTT</h2>
+<h2 id="-testing-mqtt"><a class="title-link" name="testing-mqtt" href="#testing-mqtt"></a> Testing MQTT</h2>
 
 <p>To view all MQTT messages subscribe to  <code class="highlighter-rouge">emon/#</code> base topic :</p>
 
@@ -710,15 +708,13 @@ Latest log file entries can be viewed with: <code class="highlighter-rouge">$ ta
 
 <p>Subscribe to test topic:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>`$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t 'test'`
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t 'test'`
+</code></pre></div></div>
 
 <p>Open <em>another shell window</em> to publish to the test topic :</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>`$mosquitto_pub -u 'emonpi' -P 'emonpimqtt2016' -t 'test' -m 'helloWorld'`
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`$mosquitto_pub -u 'emonpi' -P 'emonpimqtt2016' -t 'test' -m 'helloWorld'`
+</code></pre></div></div>
 
 <p>If all is working we should see <code class="highlighter-rouge">helloWord</code> :-)</p>
 
@@ -726,7 +722,7 @@ Latest log file entries can be viewed with: <code class="highlighter-rouge">$ ta
 
 <hr />
 
-<h1 id="a-classtitle-link-namerelated-blog-posts-hrefrelated-blog-postsa-related-blog-posts"><a class="title-link" name="related-blog-posts" href="#related-blog-posts"></a> Related Blog Posts</h1>
+<h1 id="-related-blog-posts"><a class="title-link" name="related-blog-posts" href="#related-blog-posts"></a> Related Blog Posts</h1>
 
 <ul>
   <li><a href="https://blog.openenergymonitor.org/2015/10/emonpi-nodered-and-mqtt/">EmonPi, Node-RED and MQTT</a></li>
@@ -734,7 +730,7 @@ Latest log file entries can be viewed with: <code class="highlighter-rouge">$ ta
   <li><a href="https://blog.openenergymonitor.org/categories/mqtt/">MQTT blog category</a></li>
 </ul>
 
-<h1 id="a-classtitle-link-nameresources-hrefresourcesa-resources"><a class="title-link" name="resources" href="#resources"></a> Resources</h1>
+<h1 id="-resources"><a class="title-link" name="resources" href="#resources"></a> Resources</h1>
 
 <ul>
   <li><a href="/technical/credentials#mqtt">MQTT Service Credentials</a>.</li>
@@ -743,9 +739,6 @@ Latest log file entries can be viewed with: <code class="highlighter-rouge">$ ta
   <li><a href="https://github.com/emoncms/emoncms/blob/master/scripts/phpmqtt_input.php">Emoncms PHP MQTT Input Script</a></li>
 </ul>
 
-
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/technical/mqtt.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/technical/mqtt.markdown'>Edit on GitHub Prose</a></div>
 
 </article>
 
@@ -815,6 +808,7 @@ Latest log file entries can be viewed with: <code class="highlighter-rouge">$ ta
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
+         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
       </li>
 

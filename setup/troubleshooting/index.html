@@ -605,8 +605,6 @@ highlight active link...
 
 
 <article class="page">
-  
-    
 
   
   <header>
@@ -629,13 +627,13 @@ highlight active link...
 
 <p>Debugging issues often involves connecting via SSH to restart services and view log files see:</p>
 
-<h3 id="technical--credentials--connect-via-sshtechnicalcredentialsssh"><a href="/technical/credentials/#ssh">Technical &gt; Credentials &gt; Connect Via SSH</a></h3>
+<h3 id="technical--credentials--connect-via-ssh"><a href="/technical/credentials/#ssh">Technical &gt; Credentials &gt; Connect Via SSH</a></h3>
 
-<h2 id="a-classtitle-link-namefeeds--inputs-not-updating-hreffeeds--inputs-not-updatinga-feeds--inputs-not-updating"><a class="title-link" name="feeds--inputs-not-updating" href="#feeds--inputs-not-updating"></a> Feeds / Inputs not Updating</h2>
+<h2 id="-feeds--inputs-not-updating"><a class="title-link" name="feeds--inputs-not-updating" href="#feeds--inputs-not-updating"></a> Feeds / Inputs not Updating</h2>
 
 <p>There are a number of things to check if feeds are not updating:</p>
 
-<h3 id="a-classtitle-link-name1-emonhub-href1-emonhuba-1-emonhub"><a class="title-link" name="1-emonhub" href="#1-emonhub"></a> 1. emonHub</h3>
+<h3 id="-1-emonhub"><a class="title-link" name="1-emonhub" href="#1-emonhub"></a> 1. emonHub</h3>
 
 <ul>
   <li>Is emonhub running?
@@ -673,7 +671,7 @@ $(document).ready(function(){
 
 <p><button type="button" class="show_hide" href="#" rel="#slidingDiv">View Example Log</button></p>
 <div id="slidingDiv" class="toggleDiv" style="display: none;">
-    <p>Example emonhub log file at startup </p>
+    <p>Example emonhub log file at startup &lt;/pre&gt;</p>
 
 <pre>
  INFO     MainThread EmonHub emonHub 'emon-pi' variant v1.1
@@ -753,7 +751,7 @@ INFO     emoncmsorg sending: https://emoncms.org/input/bulk.json?apikey=E-M-O-N-
 </pre>
 </div>
 
-<h3 id="a-classtitle-link-name2-emoncms-mqtt-input-service-href2-emoncms-mqtt-input-servicea-2-emoncms-mqtt-input-service"><a class="title-link" name="2-emoncms-mqtt-input-service" href="#2-emoncms-mqtt-input-service"></a> 2. Emoncms MQTT Input Service</h3>
+<h3 id="-2-emoncms-mqtt-input-service"><a class="title-link" name="2-emoncms-mqtt-input-service" href="#2-emoncms-mqtt-input-service"></a> 2. Emoncms MQTT Input Service</h3>
 
 <ul>
   <li>Is Emoncms MQTT Input Service running?
@@ -770,7 +768,7 @@ INFO     emoncmsorg sending: https://emoncms.org/input/bulk.json?apikey=E-M-O-N-
   </li>
 </ul>
 
-<h3 id="a-classtitle-link-name3-incorrect-system-time-href3-incorrect-system-timea-3-incorrect-system-time"><a class="title-link" name="3-incorrect-system-time" href="#3-incorrect-system-time"></a> 3. Incorrect system time</h3>
+<h3 id="-3-incorrect-system-time"><a class="title-link" name="3-incorrect-system-time" href="#3-incorrect-system-time"></a> 3. Incorrect system time</h3>
 
 <p>It’s important that the emonPi has the correct time. If required timezone should be set in Emoncms Account page and on the Raspberry Pi (see below). The emonPi requires an active Internet connection at bootup to obtain current time from NTP. After correct time has been obtained the soft-ntp function <em>should</em> be able to keep valid time even if Internet connection is lost. See <a href="https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/read-only.md#ntp-time-fix">NTP Time Fix</a> for more info. If using an emonPi for a long period with no web connection it’s recommended to <a href="https://wiki.openenergymonitor.org/index.php/EmonPi#Adding_a_Real_Time_Clock_.28RTC.29">add a hardware Real-Time-Clock (RTC)</a>.</p>
 
@@ -818,7 +816,7 @@ INFO     emoncmsorg sending: https://emoncms.org/input/bulk.json?apikey=E-M-O-N-
   </li>
 </ul>
 
-<h3 id="a-classtitle-link-name4-disk-space-href4-disk-spacea-4-disk-space"><a class="title-link" name="4-disk-space" href="#4-disk-space"></a> 4. Disk space</h3>
+<h3 id="-4-disk-space"><a class="title-link" name="4-disk-space" href="#4-disk-space"></a> 4. Disk space</h3>
 
 <p>Check available disk space in the data partition (<code class="highlighter-rouge">/home/pi/data</code>) by looking at the graph at the bottom of:
 <code class="highlighter-rouge">Local Emoncms &gt; Setup &gt; Administration</code></p>
@@ -827,7 +825,7 @@ INFO     emoncmsorg sending: https://emoncms.org/input/bulk.json?apikey=E-M-O-N-
 
 <hr />
 
-<h2 id="a-classtitle-link-nameemoncms-local-password-reset-hrefemoncms-local-password-reseta-emoncms-local-password-reset"><a class="title-link" name="emoncms-local-password-reset" href="#emoncms-local-password-reset"></a> Emoncms Local Password Reset</h2>
+<h2 id="-emoncms-local-password-reset"><a class="title-link" name="emoncms-local-password-reset" href="#emoncms-local-password-reset"></a> Emoncms Local Password Reset</h2>
 
 <p>If the password for the local Emoncms account has been forgotten this can be reset by <a href="/technical/credentials/#ssh">connecting in via ssh</a> then running:</p>
 
@@ -835,39 +833,33 @@ INFO     emoncmsorg sending: https://emoncms.org/input/bulk.json?apikey=E-M-O-N-
 
 <p>It then asks for the userid (default:1) and for a new password or option to auto generate. Example:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>=======================================
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>=======================================
 EMONCMS PASSWORD RESET
 =======================================
 Select userid, or press enter for default:
 Using default user 1
 Enter new password, or press enter to auto generate:
 Auto generated password: 9f7599c8da
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>If the account username has also been forgotten this can be retrieved by connecting via ssh and looking at the MYSQL database entry :</p>
 
 <p>When prompted enter the <a href="https://guide.openenergymonitor.org/technical/credentials/#mysql">emonPi default MYSQL root password.</a></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ mysql -uroot -p
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mysql -uroot -p
 USE emoncms;
 SELECT * FROM users;
 exit
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<h2 id="a-classtitle-link-namefactory-reset-hreffactory-reseta-factory-reset"><a class="title-link" name="factory-reset" href="#factory-reset"></a> Factory Reset</h2>
+<h2 id="-factory-reset"><a class="title-link" name="factory-reset" href="#factory-reset"></a> Factory Reset</h2>
 
 <p><strong>Caution: this will delete ALL Emoncms data</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo su
-<span class="gp">$ </span>/home/pi/emonpi/factoryreset
-</code></pre>
-</div>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">sudo </span>su
+<span class="nv">$ </span>/home/pi/emonpi/factoryreset
+</code></pre></div></div>
 
-
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/setup/troubleshooting.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/setup/troubleshooting.markdown'>Edit on GitHub Prose</a></div>
 
 </article>
 
@@ -937,6 +929,7 @@ exit
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
+         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
       </li>
 

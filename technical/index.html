@@ -605,8 +605,6 @@ highlight active link...
 
 
 <article class="page">
-  
-    
 
   
   <header>
@@ -642,7 +640,7 @@ highlight active link...
 
 <hr />
 
-<h2 id="a-classtitle-link-namehardware-overview-hrefhardware-overviewa-hardware-overview"><a class="title-link" name="hardware-overview" href="#hardware-overview"></a> Hardware Overview</h2>
+<h2 id="-hardware-overview"><a class="title-link" name="hardware-overview" href="#hardware-overview"></a> Hardware Overview</h2>
 
 <p>As the diagram (fig.1) shows the Atmega328 microprocessor communicates with the Raspberry Pi via the internal UART <code class="highlighter-rouge">(/dev/ttyAMA0</code> serial port. Data is transmitted over serial using the <a href="http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/">JeeLib packet format</a>. The ATmega328 on the emonPi / RFM69Pi run a modified version of <a href="http://jeelabs.net/projects/jeelib/wiki/RF12demo">JeeLabs RFM12Demo Sketch</a>.</p>
 
@@ -654,29 +652,29 @@ highlight active link...
 
 <p><strong>More technical info See <a href="/technical/resources#emonpi">emonPi Resources</a></strong></p>
 
-<h3 id="a-classtitle-link-namerf-hrefrfa-rf"><a class="title-link" name="rf" href="#rf"></a> RF</h3>
+<h3 id="-rf"><a class="title-link" name="rf" href="#rf"></a> RF</h3>
 
 <p>The emonPi / RFM69Pi uses the HopeRF RFM69CW RF module to receive data from other wireless nodes (emonTx, emonTH etc) using 433Mhz. Each RF node is required to be on the same network group (default 210) and have an unique node ID. Data is transmitted over serial using the <a href="http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/">JeeLib packet format</a>. EmonHub python service on the Raspberry Pi requires a corresponding node decoder entry in emonhub config for each RF node. See <a href="#emonhub">emonHub in section below</a>.</p>
 
 <p><strong>See <a href="/technical/resources/fundamentals">Fundamental Building block Resources</a></strong></p>
 
-<h3 id="a-classtitle-link-nameenergy-monitoring-hrefenergy-monitoringa-energy-monitoring"><a class="title-link" name="energy-monitoring" href="#energy-monitoring"></a> Energy Monitoring</h3>
+<h3 id="-energy-monitoring"><a class="title-link" name="energy-monitoring" href="#energy-monitoring"></a> Energy Monitoring</h3>
 
 <p>Energy monitoring on the emonPi and emonTx is achieved using <a href="https://github.com/openenergymonitor/emonlib">emonLib</a> discrete sampling and the ATmega328’s 10-bit ADC. By default samples are taken once every 5 seconds.</p>
 
 <p><strong>See <a href="/technical/resources#fundamentals">Fundamental Building block Resources</a></strong></p>
 
-<h3 id="a-classtitle-link-namepulse-counting-hrefpulse-countinga-pulse-counting"><a class="title-link" name="pulse-counting" href="#pulse-counting"></a> Pulse Counting</h3>
+<h3 id="-pulse-counting"><a class="title-link" name="pulse-counting" href="#pulse-counting"></a> Pulse Counting</h3>
 
 <p>Pulse counting on the emonPi and emonTx uses ATmega328’s second hardware interrupt IRQ1. The first hardware interrupt IRQ0 is used by the RFM69CW. Only one pulse counter input is possible per emonTx/emonPi.</p>
 
 <p><strong>See <a href="/technical/resources#optical-pulse-counter">Optical Pulse Sensor Resources</a></strong></p>
 
-<h2 id="a-classtitle-link-namesoftware-overview-hrefsoftware-overviewa-software-overview"><a class="title-link" name="software-overview" href="#software-overview"></a> Software Overview</h2>
+<h2 id="-software-overview"><a class="title-link" name="software-overview" href="#software-overview"></a> Software Overview</h2>
 
 <p>By default the Raspberry Pi runs a modified version of Debian <a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian Jessie Lite</a>. A pre-build SD card image (<strong>emonSD</strong>) is available to <a href="https://github.com/openenergymonitor/emonpi/Docs/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">purchase or download</a>) which has everything already set up.</p>
 
-<h3 id="a-classtitle-link-nameemonsd-features-hrefemonsd-featuresa-emonsd-features"><a class="title-link" name="emonsd-features" href="#emonsd-features"></a> emonSD features</h3>
+<h3 id="-emonsd-features"><a class="title-link" name="emonsd-features" href="#emonsd-features"></a> emonSD features</h3>
 
 <ul>
   <li>Read-only root file-system for long SD card lifespan</li>
@@ -691,7 +689,7 @@ highlight active link...
 
 <p><strong>See <a href="/technical/resources#emonhub">emonSD Resources</a></strong></p>
 
-<h3 id="a-classtitle-link-nameemonhub-hrefemonhuba-emonhub"><a class="title-link" name="emonhub" href="#emonhub"></a> emonHub</h3>
+<h3 id="-emonhub"><a class="title-link" name="emonhub" href="#emonhub"></a> emonHub</h3>
 
 <p>emonHub (emonpi variant) is pre-installed on emonSD. EmonHub is a python service which receives the data from the emonPi via serial (in JeeLabs packet) format. emonHub decodes the data and publishes it to the emonPi’s localhost Mosquitto MQTT server and (<a href="/setup/remote">if configured</a>) remotely to <a href="https://emoncms.org">Emoncms.org</a>.</p>
 
@@ -701,11 +699,8 @@ highlight active link...
 
 <hr />
 
-<h3 id="see-technical--resourcestechnicalresources-for-further-info-and-support-">See <a href="/technical/resources">Technical &gt; Resources</a> for further info and support &gt;</h3>
+<h3 id="see-technical--resources-for-further-info-and-support-">See <a href="/technical/resources">Technical &gt; Resources</a> for further info and support &gt;</h3>
 
-
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/technical/index.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/technical/index.markdown'>Edit on GitHub Prose</a></div>
 
 </article>
 
@@ -775,6 +770,7 @@ highlight active link...
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
+         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
       </li>
 

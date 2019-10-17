@@ -605,8 +605,6 @@ highlight active link...
 
 
 <article class="page">
-  
-    
 
   
   <header>
@@ -645,7 +643,7 @@ highlight active link...
 
 <p>See our <a href="https://blog.openenergymonitor.org/2016/06/platformio/">blog post introducing PlatformIO</a>.</p>
 
-<h4 id="install-platformio-ide">1. Install PlatformIO IDE</h4>
+<h4 id="1-install-platformio-ide">1. Install PlatformIO IDE</h4>
 
 <p>PlatformIO IDE is built on <a href="https://atom.io">Atom</a> open-source <em>‘hackable text editor for the 21st century’</em> built by the GitHub. See <a href="http://docs.platformio.org/en/latest/ide/atom.html#ide-atom">PlatformIO IDE Install guide</a> for more info.</p>
 
@@ -657,9 +655,11 @@ highlight active link...
   <li><a href="http://platformio.org/platformio-ide">Download and install PlatformIO IDE</a></li>
 </ul>
 
-<p>If running windows:
-- Python will also need to be installed, see <a href="http://platformio.org/platformio-id">PlatformIO IDE install-guide</a> *
-- <a href="http://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx">USB to UART adapter windows drivers</a> will need to be installed</p>
+<p>If running windows:</p>
+<ul>
+  <li>Python will also need to be installed, see <a href="http://platformio.org/platformio-id">PlatformIO IDE install-guide</a> *</li>
+  <li><a href="http://www.silabs.com/products/mcu/Pages/USBtoUARTBridgeVCPDrivers.aspx">USB to UART adapter windows drivers</a> will need to be installed</li>
+</ul>
 
 <p><img src="/images/technical/pio-ide-download.png" alt="Download PlatfomIO" /></p>
 
@@ -685,7 +685,7 @@ highlight active link...
   <li>If this is the first time the code has been compiled PlatformIO will ask if you want to install all the required libs that are specified in <code class="highlighter-rouge">platformio.ini</code>. See <a href="http://platformio.org/lib">PlatformIO library manager</a>.</li>
 </ul>
 
-<h5 id="upload-firmware">5. Upload Firmware</h5>
+<h5 id="5-upload-firmware">5. Upload Firmware</h5>
 
 <ul>
   <li>If code compiles successfully upload the firmware by clicking on <code class="highlighter-rouge">Upload (3)</code></li>
@@ -699,49 +699,44 @@ highlight active link...
 
 <p>PlatformIO works great from the commandline, follow these instructions to install and run platformIO from the commandline. See the excellent <a href="http://docs.platformio.org/en/latest/quickstart.html">PlatformIO Quick Start Guide</a> for more info.</p>
 
-<h3 id="install-platformio-via-commandline">1. Install PlatformIO via commandline</h3>
+<h3 id="1-install-platformio-via-commandline">1. Install PlatformIO via commandline</h3>
 
 <p>The easiest way if running Linux is to use the install script, this installs pio via python pip and installs pip if not present. See <a href="http://docs.platformio.org/en/latest/installation.html#installer-script">PlatformIO installation docs</a>:</p>
 
 <p><code class="highlighter-rouge">$ sudo python -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/master/scripts/get-platformio.py)"</code></p>
 
-<h3 id="clone-emontx--emonpi-repo">2. Clone emonTx / emonPi repo</h3>
+<h3 id="2-clone-emontx--emonpi-repo">2. Clone emonTx / emonPi repo</h3>
 
 <p>We’ll use the emonTx (V3 discrete sampling) as an example here but the steps are exactly the same for emonPi.</p>
 
 <p><strong>emonTx V3</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ git clone https://github.com/openenergymonitor/emontx3`
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/openenergymonitor/emontx3`
 $ cd emontx3/firmware
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p><strong>emonPi</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>$ git clone https://github.com/openenergymonitor/emonpi`
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/openenergymonitor/emonpi`
 cd emonpi/firmware
-</code></pre>
-</div>
+</code></pre></div></div>
 
-<h3 id="compile-with-platformio-cli">3. Compile with PlatformIO CLI</h3>
+<h3 id="3-compile-with-platformio-cli">3. Compile with PlatformIO CLI</h3>
 
 <p><code class="highlighter-rouge">$ pio run</code></p>
 
-<h3 id="upload-with-platformio-cli">4. Upload with PlatformIO CLI</h3>
+<h3 id="4-upload-with-platformio-cli">4. Upload with PlatformIO CLI</h3>
 
 <p><code class="highlighter-rouge">$ pio run -t upload</code></p>
 
 <p><em>The first time platformIO is run it will ask to install the required libraries  and avr toolchain. The required libraries are defined in platformio.ini in the project folder.</em></p>
 
-<h3 id="view-serial-port-with-platformio-cli">4. View serial port with PlatformIO CLI</h3>
+<h3 id="4-view-serial-port-with-platformio-cli">4. View serial port with PlatformIO CLI</h3>
 
 <p><code class="highlighter-rouge">$ pio device monitor</code></p>
 
 <p>For more PlatformIO commandline love see <a href="http://docs.platformio.org/en/latest/quickstart.html">PlatformIO getting started</a></p>
 
-
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/technical/compiling.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/technical/compiling.markdown'>Edit on GitHub Prose</a></div>
 
 </article>
 
@@ -811,6 +806,7 @@ cd emonpi/firmware
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
+         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
       </li>
 

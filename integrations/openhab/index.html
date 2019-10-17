@@ -605,8 +605,6 @@ highlight active link...
 
 
 <article class="page">
-  
-    
 
   
   <header>
@@ -627,14 +625,13 @@ highlight active link...
 
 <p><strong>openHAB is pre-installed and setup on emondSD pre 2018, see <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">emonSD repository and change log</a>. If your running an emonSD image that includes openHAB browse to:</strong></p>
 
-<h2 id="httpemonpi8080httpemonpi8080"><a href="http://emonpi:8080">http://emonpi:8080</a></h2>
+<h2 id="httpemonpi8080"><a href="http://emonpi:8080">http://emonpi:8080</a></h2>
 
 <p><em>Substitite <code class="highlighter-rouge">emonpi</code> for your local emonpi’s IP address if hostname lookup does not work</em></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="s">Username</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pi"</span>
-<span class="s">Password</span><span class="pi">:</span> <span class="s2">"</span><span class="s">emonpi2016"</span>
-</code></pre>
-</div>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">Username</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pi"</span>
+<span class="na">Password</span><span class="pi">:</span> <span class="s2">"</span><span class="s">emonpi2016"</span>
+</code></pre></div></div>
 
 <p><img src="/images/integrations/openhab-demo.png" alt="openhab-demo.png" /></p>
 
@@ -658,13 +655,12 @@ highlight active link...
 
 <p>This is the overall config file located in <code class="highlighter-rouge">/etc/openhab/configurations/</code>. In this file global config is set such as security authentication and MQTT server setting. E.g. to connect to emonPi local MQTT server the following is added:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>mqtt:mosquitto.url=tcp://localhost:1883
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mqtt:mosquitto.url=tcp://localhost:1883
 mqtt:mosquitto.user=emonpi
 mqtt:mosquitto.pwd=emonpimqtt2016
 mqtt:mosquitto.qos=2
 mqtt:mosquitto.retain=true
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>See the full openhab.cfg file used for this example on the open_openhab GitHub repo (see docs link below).</p>
 
@@ -674,15 +670,13 @@ mqtt:mosquitto.retain=true
 
 <p>For example the line in the items file to subscribe to <em>emonPi Power 1</em> from emonhub MQTT is as follows:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Number emonpi_ct1 "Power 1 [%d W]" { mqtt="&lt;[mosquitto:emon/emonpi/power1:state:default]" }
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Number emonpi_ct1 "Power 1 [%d W]" { mqtt="&lt;[mosquitto:emon/emonpi/power1:state:default]" }
+</code></pre></div></div>
 
 <p>The items file entry to <a href="/integrations/lightwaverf/">control LightWaveRF plug</a> (publish “1 1” to /lwrf mqtt topic) is as follows:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Switch lwrf1 "LWRF Socket 1" {mqtt="&gt;[mosquitto:lwrf:command:ON:1 1],&gt;[mosquitto:lwrf:command:OFF:1 0]"}
-</code></pre>
-</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Switch lwrf1 "LWRF Socket 1" {mqtt="&gt;[mosquitto:lwrf:command:ON:1 1],&gt;[mosquitto:lwrf:command:OFF:1 0]"}
+</code></pre></div></div>
 
 <p>See the full items file used for this example on the open_openhab GitHub repo (see docs link below).</p>
 
@@ -710,9 +704,6 @@ mqtt:mosquitto.retain=true
 
 <p><a href="https://blog.openenergymonitor.org/2015/12/openenergymonitor-emonpi-and-openhab/">OpenEnergyMonitor, emonPi and openHAB</a></p>
 
-
-  <div class='edit-github'><a href='https://github.com/openenergymonitor/guide/tree/master/source/integrations/openhab.markdown'>Edit on GitHub</a></div>
-<div class='edit-github'><a href='http://prose.io/#openenergymonitor/guide/edit/master/source/integrations/openhab.markdown'>Edit on GitHub Prose</a></div>
 
 </article>
 
@@ -782,6 +773,7 @@ mqtt:mosquitto.retain=true
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
+         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
       </li>
 

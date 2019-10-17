@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Guide | OpenEnergyMonitor</title>
+    <title>Octopus Agile - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="OpenEnergyMonitor User Guide">
+    <meta name="description" content="Octopus Agile Emoncms App">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/applications/octopusagile/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Guide | OpenEnergyMonitor">
+    <meta property="og:title" content="Octopus Agile">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/applications/octopusagile/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="OpenEnergyMonitor User Guide">
+    <meta property="og:description" content="Octopus Agile Emoncms App">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Guide | OpenEnergyMonitor">
-    <meta name="twitter:description" content="OpenEnergyMonitor User Guide">
+    <meta name="twitter:title" content="Octopus Agile">
+    <meta name="twitter:description" content="Octopus Agile Emoncms App">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -598,261 +598,130 @@ highlight active link...
 <div style="position:relative;width:100%;top:0;height:20px;z-index:-99;"></div>
 
 
-<div class="hero">
-  <div class="grid-wrapper">
-    <div class="grid flex">
-      <div class="grid__item flex__item two-fifths palm-one-whole" style="text-align:center;">
-        <i class="fa fa-book" aria-hidden="true" style="font-size:205px;margin-right:5px;"></i>
-      </div>
-      <div class="grid__item flex__item three-fifths palm-one-whole">
-      <style>
-div.mktxtcentral {
-    text-align: center;
-}
-</style>
-<div class="mktxtcentral">
-<h1>User Guide</h1>
-<p class="lead">
-Set up, install and configure an OpenEnergyMonitor system
-</p>
-<a href='/setup/' class="buttongets" style="vertical-align:middle"><span>Get Started</span></a>
-</div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="grid-wrapper">
 <div class="grid grid-center">
 
-<div class="grid__item one-whole">
+<div class="grid__item two-thirds lap-one-whole palm-one-whole">
 
 
 <article class="page">
 
   
+  <header>
+    <h1 class="title indent">
+      Octopus Agile
+    </h1>
+  </header>
+  <hr class="divider">
+  
 
-  <div class="grid-wrapper">
-  <div class="grid">
-    <div class="grid__item one-third lap-one-whole palm-one-whole usp">
-      <div class="grid">
-        <div class="grid__item one-whole lap-one-third">
-          <!--<div class='supported-brands clearfix'>
-            <img src="/images/frontpageimages/homeenergycoverimage.png"/>
-          </div>-->
-        </div>
-        <div class="grid__item one-whole lap-two-thirds">
-          <style>
+  <h3 id="what-is-octopus-agile">What is Octopus Agile?</h3>
 
-.appsBackground_1 {
-  min-height: 535px;
-  background-color: #f5f5f5;
-/*  background-image: url("/images/frontpageimages/homeenergycoverimage.png"); */
-  background-size:     cover;
-  background-repeat:   no-repeat;
-  background-position: center center;
-  box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
-  color: #777777;
-  transition: background-color 200ms linear;
-}
+<p><img src="/images/applications/agile/agile_app.png" style="width:400px; float:right; padding-left:10px" /></p>
 
-.appsBackground_1:hover {
-  background-color: #dcdcdc;
-}
+<p><a href="https://octopus.energy/agile/">Octopus Agile</a> is a time of use tariff available in the UK from Octopus Energy. The tariff varies on a half hourly basis and tracks the wholesale cost of electricity and electricity network costs. Electric loads such as water heating and electric vehicles can take advantage of time-of-use tariffs by charging at lower cost off-peak times - both providing a direct financial benefit for the household and in turn reducing the infrastructure requirements and associated cost that would otherwise be needed if these loads where added at periods of peak demand.</p>
 
-.appsBackground_1:visited {
-  color: #777777;
-}
+<p>The Octopus Agile tariff is a first of it’s kind in the UK both making use of new smart meter technology and being available nation wide. The tariff is a 100% renewable energy tariff. For more information on the tariff see the Octopus website and associated blog posts:</p>
 
-.appsBackground_1 img {
-  width: 100%;
-}
+<ul>
+  <li><a href="https://octopus.energy/agile">https://octopus.energy/agile</a></li>
+  <li><a href="https://octopus.energy/blog/agile-octopus-bigger-story/">https://octopus.energy/blog/agile-octopus-bigger-story/</a></li>
+  <li><a href="https://octopus.energy/blog/agile-pricing-explained/">https://octopus.energy/blog/agile-pricing-explained/</a></li>
+  <li><a href="https://octopus.energy/blog/outgoing/">https://octopus.energy/blog/outgoing/</a></li>
+</ul>
 
-.innerPadding {
-  padding: 10px;
-}
+<p>You may also be interested in community member Mick Wall’s (@Zarch) <a href="https://www.energy-stats.uk">Energy Stats</a> website that provides tariff pricing over time for quick reference, see his forum post here: <a href="https://community.openenergymonitor.org/t/my-octopus-agile-go-tariff-comparison-analysis-website/10987">My Octopus Agile &amp; Go Tariff comparison / analysis website</a>.</p>
 
-.appsTitle {
-  color: #777777;
-}
+<h3 id="octopus-agile-simulator">Octopus Agile Simulator</h3>
 
-</style>
+<p>We designed this app out of our own interest to find out how much the Agile tariff would cost in our own homes. With historic data from OpenEnergyMonitor energy monitoring and historic agile tariff pricing provided by Octopus it’s possible to simulate what past consumption would have cost on the Agile tariff.</p>
 
-<a href='/applications/home-energy' class="appsBackground_1" style="display:block;">
-  <img src="/images/frontpageimages/homeenergyimage.png"/>
-  <div class="innerPadding">
-    <h2 class="appsTitle">Home Energy</h2>
-    <p>Understand your energy consumption:</p>
-    <br/>
-    <ul>
-      <li>Monitor in real-time</li>
-      <li>Review historic data</li>
-      <li>Calculate cost</li>
-      <li>Android app</li>
-    </ul>
-  </div>
-</a>
-<br/>
-        </div>
-      </div>
-    </div>
-    <div class="grid__item one-third lap-one-whole palm-one-whole usp">
-      <div class="grid">
-        <div class="grid__item one-whole lap-one-third">
-          <!--<div class='supported-brands clearfix'>
-              <img src="/images/frontpageimages/solarpvcoverimage.png"/>
-          </div>-->
-        </div>
-        <div class="grid__item one-whole lap-two-thirds">
-          <style>
+<h3 id="contents">Contents</h3>
 
-.appsBackground_2 {
-  min-height: 535px;
-  background-color: #f5f5f5;
-/*  background-image: url("/images/frontpageimages/homeenergycoverimage.png"); */
-  background-size:     cover;
-  background-repeat:   no-repeat;
-  background-position: center center;
-  box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
-  color: #777777;
-  transition: background-color 200ms linear;
-}
+<ol>
+  <li>Hardware &amp; Software requirements</li>
+  <li>Adding the Octopus Agile Emoncms App</li>
+  <li>App Configuration</li>
+  <li>Agile Import only</li>
+  <li>Energy &amp; Cost mode</li>
+  <li>Agile Outgoing and Solar PV</li>
+</ol>
 
-.appsBackground_2:hover {
-  background-color: #dcdcdc;
-}
+<h2 id="1-hardware--software-requirements">1. Hardware &amp; Software requirements</h2>
 
-.appsBackground_2:visited {
-  color: #777777;
-}
+<p>The Octopus Agile emoncms app runs within our open source energy monitoring web application called <a href="https://github.com/emoncms/emoncms">emoncms</a>. Emoncms is available pre-installed on either our web connected energy monitoring base stations the <a href="https://guide.openenergymonitor.org/setup/">emonBase &amp; emonPi</a>, or via our <a href="https://emoncms.org/">emoncms.org</a> online service. It’s also possible to install emoncms on your own hardware or VM, we have a nice installation script to help with this for use with Debian systems, see <a href="https://github.com/openenergymonitor/EmonScripts">EmonScripts</a>.</p>
 
-.appsBackground_2 img {
-  width: 100%;
-}
+<p>It’s possible to either use our clip on CT based energy monitoring hardware to collect historic consumption to use with the app or feed data in yourself via a data collection script if you have an alternative suitable data source. Emoncms has an API to which you can post power data or regular meter readings (resolution must be half hourly or shorter), see <a href="https://emoncms.org/site/api#input">emoncms.org input API page</a>. Emoncms can then process this into a timeseries feed of <a href="https://guide.openenergymonitor.org/setup/daily-kwh/">cumulative kWh electricity consumption</a>.</p>
 
-.innerPadding {
-  padding: 10px;
-}
+<p>If you would like to use our hardware, follow either the Home Energy Monitor or Solar PV application guide first before continuing with the Agile App setup below. These guides cover which hardware to use, installation and emoncms feed setup.</p>
 
-.appsTitle {
-  color: #777777;
-}
+<table>
+<tr><td style="width:50%; text-align:center">
 
-</style>
+<h3><a href="https://guide.openenergymonitor.org/applications/home-energy/">Home Energy Monitor setup guide</a></h3>
 
-<a href='/applications/solar-pv' class="appsBackground_2" style="display:block;">
-  <img src="/images/frontpageimages/solarpvcoverimage.png"/>
-  <div class="innerPadding">
-    <h2 class="appsTitle">Solar PV</h2>
-    <p>Make the most of your solar PV:</p>
-    <br/>
-    <ul>
-      <li>Monitor generation and grid import</li>
-      <li>Calculate on-site use of solar.</li>
-      <li>Real-time & historic performance</li>
-      <li>Optimise demand matching</li>
-    </ul>
-  </div>
-</a>
-<br/>
-        </div>
-      </div>
-    </div>
-    <div class="grid__item one-third lap-one-whole palm-one-whole usp">
-      <div class="grid">
-        <div class="grid__item one-whole lap-one-third">
-          <!--<span class="icon">
-            <i class="icon-cogs"></i>
-          </span>-->
-        </div>
-        <div class="grid__item one-whole lap-two-thirds">
-         <style>
+<p>Rename the <i>use</i> and <i>use_kwh</i> feed names suggested in the Home Energy Monitor guide to <i>import</i> and <i>import_kwh</i> for use with the app.</p>
 
-.appsBackground_3 {
-  min-height: 535px;
-  background-color: #f5f5f5;
-/*  background-image: url("/images/frontpageimages/homeenergycoverimage.png"); */
-  background-size:     cover;
-  background-repeat:   no-repeat;
-  background-position: center center;
-  box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
-  color: #777777;
-  transition: background-color 200ms linear;
-}
+</td><td style="width:50%; text-align:center">
 
-.appsBackground_3:hover {
-  background-color: #dcdcdc;
-}
+<h3><a href="https://guide.openenergymonitor.org/applications/solar-pv/">Solar PV setup guide</a></h3>
 
-.appsBackground_3:visited {
-  color: #777777;
-}
+<p>Feed names suggested in this guide are already suitable.<br />No need to change.</p>
 
-.appsBackground_3 img {
-  width: 100%;
-}
+</td></tr>
+</table>
 
-.innerPadding {
-  padding: 10px;
-}
+<h2 id="2-adding-the-octopus-agile-emoncms-app">2. Adding the Octopus Agile Emoncms App</h2>
 
-.appsTitle {
-  color: #777777;
-}
+<p>Once logged in to emoncms, navigate to ‘Apps’, click on ‘+ New’ and then from the list of available apps select ‘Development: Octopus Agile’.</p>
 
-</style>
+<p><img src="/images/applications/agile/1.png" alt="1" /></p>
 
-<a href='/integrations' class="appsBackground_3" style="display:block;">
-  <img src="/images/frontpageimages/integrations.png"/>
-  <div class="innerPadding">
-    <h2 class="appsTitle">Integrate</h2>
-    <p>Extend functionality with:</p>
-    <br/>
-    <ul>
-      <li>Emoncms</li>
-      <li>MQTT</li>
-      <li>NodeRED</li>
-      <li>OpenHAB</li>
-      <li>OpenEVSE</li>
-    </ul>
-  </div>
-</a>
-<br/>
-        </div>
-      </div>
-    </div>
+<h2 id="3-app-configuration">3. App Configuration</h2>
 
+<p>If the app does not load automatically you will at this point see the configuration window allowing feed selection. The app requires the selection of an <em>import</em> and <em>import_kwh</em> feed. If you do not have on-site generation such as solar pv <em>import</em> and <em>import_kwh</em> will be the same as your total house consumption. Import is the power feed in watts and <em>import_kwh</em> is the cumulative kWh feed typically created using the <em>power_to_kwh</em> input processor.</p>
 
+<p>If you have historic power data but not a cumulative kWh feed, it is possible to create a cumulative kWh feed from the power feed using the emoncms postprocess module. The emoncms postprocess module is available from the emoncms setup menu, select the power_to_kwh processor and the power feed you wish to convert, enter a name for the new feed e.g import_kwh and then click Create. The new feed will be created within a couple of minutes and will be available in the feed list.</p>
 
-<div class="grid-wrapper">
+<p>If you do not have solar you do not need to specify a <em>solar_kwh</em> feed or the <em>use_kwh</em> feed. The <em>Launch App</em> button will appear with only <em>import</em> and <em>import_kwh</em> specified.</p>
 
-  <div class="grid">
-    <div class="grid__item one-half lap-one-whole palm-one-whole usp">
-      <div class="grid">
-        <div class="grid__item one-whole">
-          <!--<figure>
-           <a href="https://www.youtube.com/embed/E1M2uLSiQy0"><img src="/images/frontpageimages/emonpi-overview.png"/></a>
-           <figcaption>System Overview</figcaption>
-           </figure>-->
-        </div>
-      </div>
-    </div>
+<p>Select the relevant Octopus Agile region for your location.</p>
 
-    <div class="grid__item one-half lap-one-whole palm-one-whole usp">
-      <div class="grid">
-        <div class="grid__item one-whole">
-          <!--<figure>
-          <a href="https://www.youtube.com/embed/xFPpBbf555c"><img src="/images/frontpageimages/sustainable-energy.png"/></a>
-          <figcaption>Sustainable Energy Challenge</figcaption>
-          </figure>-->
-        </div>
-      </div>
-    </div>
-  </div>
+<p><img src="/images/applications/agile/2.png" alt="2" /></p>
 
-</div>
-</div>
-</div>
+<h2 id="4-agile-import-only">4. Agile Import only</h2>
+
+<p>Compatible with the OpenEnergyMonitor <a href="https://guide.openenergymonitor.org/applications/home-energy/">Home Energy Monitor configuration</a>.</p>
+
+<p>The default view shows half hourly consumption in blue over the last 24 hours and the forecasted price for the coming 4 hours. The Agile tariff price is overlayed in purple and the current price and cost in the last half hour is shown at the top.</p>
+
+<p>The average unit price is shown below the graph. The average unit price is calculated by summing up the cost in each half hour and then dividing by the total amount of consumption in the view.</p>
+
+<p><img src="/images/applications/agile/3.png" alt="3" /></p>
+
+<h2 id="5-energy-and-cost-mode">5. Energy and Cost mode</h2>
+
+<p>Switch between Energy and Cost mode to see how the time of use tariff affects the significance of different loads. The following example shows an EV charge event [1] and heat pump heating event [2]. The EV charge event uses much more energy in each half-hour than the heat pump but in terms of cost per half hour, they are about the same.</p>
+
+<p><img src="/images/applications/agile/4.png" alt="4" /></p>
+
+<h2 id="6-agile-outgoing-and-solar-pv">6. Agile Outgoing and Solar PV:</h2>
+
+<p>Compatible with the OpenEnergyMonitor <a href="https://guide.openenergymonitor.org/applications/solar-pv/">Solar PV configuration</a>.</p>
+
+<p>In addition to the standard import view the app also has the ability to explore the <a href="https://octopus.energy/blog/outgoing/">Octopus agile outgoing smart export tariff</a>. In addition to calculating export value and average unit price, the app also calculates the value of the solar self consumption based on the half-hourly value of otherwise imported electricity on the agile tariff. The combined value of the self-consumption and export is also displayed.</p>
+
+<p>In the week long average screenshot below covering 06 Oct to 13 Oct we can see the expected result that the value of the day time self consumption is a little lower than the cost of the imported electricity which is greater during the more expensive evening peak. The export value of the solar matches pretty closely to the fixed agile outgoing price. The app also shows the combined value of the Solar self consumption and export. This house includes PV diversion and EV charging. It would be interesting to model the addition of battery storage to use more of the solar and reduce peak time consumption.</p>
+
+<p><img src="/images/applications/agile/solarpv_1.png" alt="solarpv_1" /></p>
+
+<p><img src="/images/applications/agile/solarpv_2.png" alt="solarpv_2" /></p>
+
+<h2 id="further-development">Further Development</h2>
+
+<p>The Octopus Agile emoncms app is under ongoing development, for more information on features planned and for support using the app see the forum post: <a href="https://community.openenergymonitor.org/t/octopus-agile-emoncms-app/11767">Octopus Agile emoncms app</a>.</p>
+
+<p>The source code for this app is available on github here:<br /><a href="https://github.com/emoncms/app/blob/master/apps/OpenEnergyMonitor/octopus/octopus.php">https://github.com/emoncms/app/blob/master/apps/OpenEnergyMonitor/octopus/octopus.php</a></p>
 
 
 </article>
@@ -866,6 +735,18 @@ Set up, install and configure an OpenEnergyMonitor system
 
   
 
+  
+  <!--<div class="searchtool">
+
+  
+  <form action="https://encrypted.google.com/search" method="get">
+    <fieldset role="search">
+      <input type="hidden" name="q" value="site:guide.openenergymonitor.org" />
+      <input class="search" type="text" name="q" results="0" placeholder="Search..." />
+      <button type="submit">Search</button>
+    </fieldset>
+  </form>
+  </div>-->
   
     <section class="aside-module grid__item one-whole lap-one-half">
   <div class='section'>
@@ -911,7 +792,7 @@ Set up, install and configure an OpenEnergyMonitor system
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
-         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
+         <li><a class='active' href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
       </li>
 
