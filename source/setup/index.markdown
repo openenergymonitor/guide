@@ -48,7 +48,7 @@ The system is made up of five main units. These can be assembled and configured 
 		<p><img alt="emonPi" src="/images/hardwareimages/emonPi_shop_photo.png"></p>
 		<ul>
 			<li>Raspberry Pi-based energy monitor</li>
-			<li>Local &amp; remote data logging with <a href="https://emoncms.org/">Emoncms</a>, our open-source web-app for processing, logging and visualising energy and other environmental data, such as humidity and temperature
+			<li>Local &amp; remote data logging with <a href="https://github.com/emoncms/emoncms">Emoncms</a>, our open-source web-app for processing, logging and visualising energy and other environmental data, such as humidity and temperature
 			</li>
 			<li>Requires WiFi / Ethernet plus 2 x power outlets</li>
 			<li>Requires <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">pre-built SD card image</a> (included)
