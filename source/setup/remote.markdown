@@ -18,7 +18,11 @@ published: true
 
 In addition to [local logging](/setup/local/), we also offer an optional remote data logging and visualisation service called Emoncms.org running a slightly reduced feature set to that available locally for applications where remote logging is required. Emoncms.org is a pay-as-you-go service but all OpenEnergyMonitor shop hardware purchases come with 20% free emoncms.org credit which is designed to give 5-10 years of free use. See [Emoncms.org pricing](https://emoncms.org/site/pricing) for more information.
 
-## 1. Create Emoncms.org account
+It is also possible to self-host our open source emoncms software on your own remote server, we have a nice installation script to help with this for use with Debian systems, see [EmonScripts](https://github.com/openenergymonitor/EmonScripts).
+
+Posting data to a remote server such as emoncms.org is particularly useful for applications that require public dashboards as there is usually more bandwidth for many users to access the same dashboard than available over a household or remote monitoring site connection. Remote data logging is also useful for applications that require aggregation or remote data analysis. The OpenEnergyMonitor system provides both local and remote options so that you can choose the right tool for your application.
+
+## 1. Create an emoncms account
 
 ![remote log1](/images/setup/remote-log0.png)
 
