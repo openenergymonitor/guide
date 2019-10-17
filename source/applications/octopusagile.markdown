@@ -11,18 +11,18 @@ footer: true
 
 ### What is Octopus Agile?
 
-<img src="images/applications/agile/agile_app.png" style="width:400px; float:right; padding-left:10px">
+<img src="/images/applications/agile/agile_app.png" style="width:400px; float:right; padding-left:10px">
 
 [Octopus Agile](https://octopus.energy/agile/) is a time of use tariff available in the UK from Octopus Energy. The tariff varies on a half hourly basis and tracks the wholesale cost of electricity and electricity network costs. Electric loads such as water heating and electric vehicles can take advantage of time-of-use tariffs by charging at lower cost off-peak times - both providing a direct financial benefit for the household and in turn reducing the infrastructure requirements and associated cost that would otherwise be needed if these loads where added at periods of peak demand.
 
 The Octopus Agile tariff is a first of it's kind in the UK both making use of new smart meter technology and being available nation wide. The tariff is a 100% renewable energy tariff. For more information on the tariff see the Octopus website and associated blog posts:
 
-- https://octopus.energy/agile
-- https://octopus.energy/blog/agile-octopus-bigger-story/
-- https://octopus.energy/blog/agile-pricing-explained/
-- https://octopus.energy/blog/outgoing/
+- [https://octopus.energy/agile](https://octopus.energy/agile)
+- [https://octopus.energy/blog/agile-octopus-bigger-story/](https://octopus.energy/blog/agile-octopus-bigger-story/)
+- [https://octopus.energy/blog/agile-pricing-explained/](https://octopus.energy/blog/agile-pricing-explained/)
+- [https://octopus.energy/blog/outgoing/](https://octopus.energy/blog/outgoing/)
 
-You may also be interested in community member Mick Wall's (@Zarch) [Energy Stats](https://www.energy-stats.uk) website that provides tariff pricing over time for quick reference, see his forum post here: [My Octopus Agile & Go Tariff comparison / analysis website](https://community.openenergymonitor.org/t/my-octopus-agile-go-tariff-comparison-analysis-website/10987)
+You may also be interested in community member Mick Wall's (@Zarch) [Energy Stats](https://www.energy-stats.uk) website that provides tariff pricing over time for quick reference, see his forum post here: [My Octopus Agile & Go Tariff comparison / analysis website](https://community.openenergymonitor.org/t/my-octopus-agile-go-tariff-comparison-analysis-website/10987).
 
 ### Octopus Agile Simulator
 
@@ -65,7 +65,7 @@ If you would like to use our hardware, follow either the Home Energy Monitor or 
 
 Once logged in to emoncms, navigate to 'Apps', click on '+ New' and then from the list of available apps select 'Development: Octopus Agile'.
 
-![1](images/applications/agile/1.png)
+![1](/images/applications/agile/1.png)
 
 ## 3. App Configuration
 
@@ -77,23 +77,23 @@ If you do not have solar you do not need to specify a *solar_kwh* feed or the *u
 
 Select the relevant Octopus Agile region for your location.
 
-![2](images/applications/agile/2.png)
+![2](/images/applications/agile/2.png)
 
 ## 4. Agile Import only
 
 Compatible with the OpenEnergyMonitor [Home Energy Monitor configuration](https://guide.openenergymonitor.org/applications/home-energy/).
 
-The default view shows half hourly consumption in blue over the last 24 hours and the forecasted price for the coming 4 hours. The Agile tariff price is overlayed in purple and the current price and cost in the last half hour is shown at the top. 
+The default view shows half hourly consumption in blue over the last 24 hours and the forecasted price for the coming 4 hours. The Agile tariff price is overlayed in purple and the current price and cost in the last half hour is shown at the top.
 
 The average unit price is shown below the graph. The average unit price is calculated by summing up the cost in each half hour and then dividing by the total amount of consumption in the view.
 
-![3](images/applications/agile/3.png)
+![3](/images/applications/agile/3.png)
 
 ## 5. Energy and Cost mode
 
 Switch between Energy and Cost mode to see how the time of use tariff affects the significance of different loads. The following example shows an EV charge event [1] and heat pump heating event [2]. The EV charge event uses much more energy in each half-hour than the heat pump but in terms of cost per half hour, they are about the same.
 
-![4](images/applications/agile/4.png)
+![4](/images/applications/agile/4.png)
 
 ## 6. Agile Outgoing and Solar PV:
 
@@ -103,12 +103,12 @@ In addition to the standard import view the app also has the ability to explore 
 
 In the week long average screenshot below covering 06 Oct to 13 Oct we can see the expected result that the value of the day time self consumption is a little lower than the cost of the imported electricity which is greater during the more expensive evening peak. The export value of the solar matches pretty closely to the fixed agile outgoing price. The app also shows the combined value of the Solar self consumption and export. This house includes PV diversion and EV charging. It would be interesting to model the addition of battery storage to use more of the solar and reduce peak time consumption.
 
-![solarpv_1](images/applications/agile/solarpv_1.png)
+![solarpv_1](/images/applications/agile/solarpv_1.png)
 
-![solarpv_2](images/applications/agile/solarpv_2.png)
+![solarpv_2](/images/applications/agile/solarpv_2.png)
 
 ## Further Development
 
-The Octopus Agile emoncms app is under ongoing development, for more information on features planned and for support using the app see the forum post: [Octopus Agile emoncms app](https://community.openenergymonitor.org/t/octopus-agile-emoncms-app/11767). 
+The Octopus Agile emoncms app is under ongoing development, for more information on features planned and for support using the app see the forum post: [Octopus Agile emoncms app](https://community.openenergymonitor.org/t/octopus-agile-emoncms-app/11767).
 
 The source code for this app is available on github here:<br>[https://github.com/emoncms/app/blob/master/apps/OpenEnergyMonitor/octopus/octopus.php](https://github.com/emoncms/app/blob/master/apps/OpenEnergyMonitor/octopus/octopus.php)
