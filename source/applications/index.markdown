@@ -15,8 +15,11 @@ The OpenEnergyMonitor system can be applied to a number of applications, see app
 
 - ## [Solar PV Monitor](/applications/solar-pv)
 
-- ## [EV Charging](/applications/ev-charging)
+- ## [EV Charging](/integrations/ev-charging)
 
 - ## [Heatpump Monitor <i class="icon-external-link"></i>](http://heatpumpmonitor.org)
+
+- ## [Octopus Agile](/applications/octopusagile)
+
 
 Many more applications are possible, for inspiration and to share your application and results visit the [Applications Section of the Community Forums](http://community.openenergymonitor.org/c/applications).
