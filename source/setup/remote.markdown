@@ -16,7 +16,7 @@ published: true
 
 ***
 
-In addition to [local logging](/setup/local/), we also offer an optional remote data logging and visualisation service called Emoncms.org running a slightly reduced feature set to that available locally for applications where remote logging is required. Emoncms.org is a pay-as-you-go service but all OpenEnergyMonitor shop hardware purchases come with 20% free emoncms.org credit which is designed to give 5-10 years of free use.
+In addition to [local logging](/setup/local/), we also offer an optional remote data logging and visualisation service called Emoncms.org running a slightly reduced feature set to that available locally for applications where remote logging is required. Emoncms.org is a pay-as-you-go service but all OpenEnergyMonitor shop hardware purchases come with 20% free emoncms.org credit which is designed to give 5-10 years of free use. See [Emoncms.org pricing](https://emoncms.org/site/pricing) for more information.
 
 ## 1. Create Emoncms.org account
 
