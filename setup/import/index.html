@@ -626,27 +626,8 @@ Currently the Backup Module can only be used with Local Emoncms <strong>not</str
 
 <h2 id="backup--export">Backup / Export</h2>
 
-<h3 id="export-from-an-older-emonpi--emonbase">Export from an older emonPi / emonBase</h3>
-
-<p>If the Backup module is not visible in the Local Emoncms menu then the emonPi / emonBase is running an older version e.g Emoncms V8.x.</p>
-
-<p class="note">
-To check what software stack (emonSD pre-built SD card) version an emonPi is running see instructions on emonPi <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">emonSD download repository and changelog</a>
-</p>
-
-<p>To export data from an older emonPi:</p>
-
 <ol>
-  <li>Install the backup module by running <code class="highlighter-rouge">Admin &gt; emonPi update</code> in Local Emoncms</li>
-  <li>Wait (up to) 60s for the update to begin and then another couple of minutes for it to complete; the update log page can be refreshed to view progress</li>
-  <li>Log-out then back into Local Emoncms</li>
-  <li>Backup module should now be visible under <code class="highlighter-rouge">Extras &gt; Backup</code></li>
-  <li>Follow Backup instructions below</li>
-</ol>
-
-<h3 id="backup">Backup</h3>
-
-<ol>
+  <li>Navigate to Setup &gt; Backup</li>
   <li>Click <code class="highlighter-rouge">Create Backup</code> (see screenshot below)</li>
   <li>Wait for backup to be created, then refresh the page to view <code class="highlighter-rouge">Download Backup</code> link</li>
   <li>Download <code class="highlighter-rouge">.tar.gz</code> compressed backup</li>
@@ -662,12 +643,14 @@ To check what software stack (emonSD pre-built SD card) version an emonPi is run
 Importing / restoring a backup will overwrite <strong>ALL</strong> data in the current Emoncms account.
 </p>
 
-<p><em>Note: If a new emonSD pre-built-SDcard image has been written to an SD card larger than 4GB the read-write <code class="highlighter-rouge">~/data</code> partition should be expanded to fill the SD card to create sufficient space to import a backup. <strong>Do not use Raspbian raspi-config</strong>, instead <a href="/technical/credentials/#ssh">connect via SSH</a>) and run <code class="highlighter-rouge">$ sudo emonSDexpand</code> and follow prompts.</em></p>
+<p><em>Note for emonSD-30Oct18.img.zip: If the image has been written to an SD card larger than 4GB the data partition should be expanded to fill the SD card to create sufficient space to import a backup. <strong>Do not use Raspbian raspi-config</strong>, instead <a href="/technical/credentials/#ssh">connect via SSH</a>) and run <code class="highlighter-rouge">$ sudo emonSDexpand</code> and follow prompts.</em></p>
+
+<p>*The latest emonSD-17Oct19.img.zip has already been expanded to fit a minimum 16 GB SD card size. To expand the data partition further run: <code class="highlighter-rouge">/opt/emoncms/modules/usefulscripts/sdpart/./sdpart_imagefile</code>.</p>
 
 <p>To import a backup:</p>
 
 <ol>
-  <li>Check available disk space in the data partition (<code class="highlighter-rouge">/home/pi/data</code>), see <code class="highlighter-rouge">Local Emoncms &gt; Setup &gt; Administration</code></li>
+  <li>Check available disk space in the data partition (<code class="highlighter-rouge">/var/opt/emoncms</code>), see <code class="highlighter-rouge">Local Emoncms &gt; Setup &gt; Admin</code></li>
   <li>Select <code class="highlighter-rouge">.tar.gz</code> backup file</li>
   <li>Wait for upload to complete</li>
   <li>Click <code class="highlighter-rouge">Import Backup</code></li>
@@ -909,12 +892,10 @@ Restarting feedwriter...
   <li>Emoncms account credentials</li>
   <li>Historic Feed data</li>
   <li>Input Processing config (only when migrating from Emoncms V9 &gt; V9 setup)</li>
-  <li>Dashboards</li>
-  <li>MyElectric / MySolarPV app settings</li>
-  <li>EmonHub config: <code class="highlighter-rouge">emonhub.conf</code>*</li>
+  <li>Emoncms Dashboards</li>
+  <li>Emoncms App settings</li>
+  <li>EmonHub config: <code class="highlighter-rouge">emonhub.conf</code></li>
 </ul>
-
-<p>* <em>Included in backup but not restored due to potential version conflicts: saved as <code class="highlighter-rouge">old.xxxx.xxx</code> in <code class="highlighter-rouge">~/data</code> for manual restore if required.</em></p>
 
 <h3 id="not-included-in-backup">Not included in backup</h3>
 
@@ -942,6 +923,8 @@ Restarting feedwriter...
 
 <h2 id="video-guide">Video Guide</h2>
 
+<p>The following video guide was put together using emoncms v9, the appearance will be different if you are using v10 of emoncms or newer but the functionality is much the same. We will be updating this video soon.</p>
+
 <div class="videoWrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5U_tOlsWjXM" frameborder="0" allowfullscreen=""></iframe>
 </div>
@@ -953,6 +936,24 @@ Restarting feedwriter...
 <p>If you have any questions or if an error occures during the backup or import process please post in the <a href="http://community.openenergymonitor.org/c/hardware/emonpi"><code class="highlighter-rouge">Hardware &gt; emonPi</code> category of the Community Forums</a>. Please provide as much infomation as possible e.g. backup / import logs and <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">emonSD version</a>.</p>
 
 <p>Alternatively try and perform a manual import, see <a href="https://github.com/emoncms/backup">Backup Module Readme</a>.</p>
+
+<h3 id="export-from-an-older-emonpi--emonbase">Export from an older emonPi / emonBase</h3>
+
+<p>If the Backup module is not visible in the Local Emoncms menu then the emonPi / emonBase is running an older version e.g Emoncms V8.x.</p>
+
+<p class="note">
+To check what software stack (emonSD pre-built SD card) version an emonPi is running see instructions on emonPi <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">emonSD download repository and changelog</a>
+</p>
+
+<p>To export data from an older emonPi:</p>
+
+<ol>
+  <li>Install the backup module by running <code class="highlighter-rouge">Admin &gt; emonPi update</code> in Local Emoncms</li>
+  <li>Wait (up to) 60s for the update to begin and then another couple of minutes for it to complete; the update log page can be refreshed to view progress</li>
+  <li>Log-out then back into Local Emoncms</li>
+  <li>Backup module should now be visible under <code class="highlighter-rouge">Extras &gt; Backup</code></li>
+  <li>Follow Backup instructions below</li>
+</ol>
 
 <hr />
 
