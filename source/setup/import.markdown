@@ -43,7 +43,7 @@ To export data from an older emonPi:
 2. Wait for backup to be created, then refresh the page to view `Download Backup` link
 3. Download `.tar.gz` compressed backup
 
-![backup old data](/images/setup/low-write-17june15-backup.png)
+![backup old data](/images/setup/export.png)
 
 ***
 
@@ -71,7 +71,7 @@ Backup <b>tar.gz</b> filename cannot contain any spaces; e.g., if the same backu
 
 *`emonSDexpand` will run `~/usefulscripts/sdpart/./sdpart_imagefile` script, for more info see [Useful Scripts Readme](https://github.com/emoncms/usefulscripts#sdpart_imagefile)*
 
-![Import](/images/setup/import1.png)
+![Import](/images/setup/import.png)
 
 
 
@@ -103,34 +103,192 @@ $(document).ready(function(){
 <div id="slidingDiv" class="toggleDiv" style="display: none;">
 
 <pre>
-    Sat 23 Apr 00:42:28 UTC 2016
-    Reading ~/backup/config.cfg....
-    Location of mysql database: /home/pi/data
-    Location of emonhub.conf: /home/pi/data
-    Location of emoncms.conf: /home/pi/data
-    Location of Emoncms: /var/www/emoncms
-    Backup destination: /home/pi/data
-    Backup source path: /home/pi/data/uploads
-    Starting import from /home/pi/data/uploads to /home/pi/data...
-    Image version: emonSD-29Mar16
-    new image
-    Backup found: emoncms-backup-2016-04-23.tar.gz starting import..
-    Decompressing backup..
-    Removing compressed backup to save disk space..
-    Wipe any current data from account..
-    Restore phpfina and phptimeseries data folders...
-    Emoncms MYSQL database import...
-    Import emonhub.conf > /home/pi/data/old.emohub.conf
-    Import emoncms.conf > /home/pi/data/old.emoncms.conf
-    Start with fresh config: copy NEW default emonpi.emonhub.conf:
-    cp /home/pi/emonhub/conf/emonpi.default.emonhub.conf /home/pi/data/emonhub.conf
-    OK
-    Update Emoncms Database
-    ["ALTER TABLE dashboard MODIFY `height` int(11) Default '600'","ALTER TABLE dashboard MODIFY `main` tinyint(1) Default '0'","ALTER TABLE dashboard MODIFY `public` tinyint(1) Default '0'","ALTER TABLE dashboard MODIFY `published` tinyint(1) Default '0'","ALTER TABLE dashboard MODIFY `showdescription` tinyint(1) Default '0'","ALTER TABLE `dashboard` ADD `backgroundcolor` varchar(6) NOT NULL DEFAULT 'EDF7FC'","ALTER TABLE feeds MODIFY `time` int(10);","ALTER TABLE feeds MODIFY `value` double;","ALTER TABLE `feeds` ADD `processList` text NOT NULL","ALTER TABLE input MODIFY `time` int(10);","ALTER TABLE users MODIFY `salt` varchar(32);","ALTER TABLE users MODIFY `timezone` varchar(64) Default 'UTC';"]
-    Restarting emonhub...
-    Restarting feedwriter...
-    Sat 23 Apr 00:42:39 UTC 2016
-    === Emoncms import complete! ===
+=== Emoncms import start ===
+2019-10-18-08:21:15
+Backup module version:
+cat: /opt/emoncms/modules/backup/backup/module.json: No such file or directory
+EUID: 1000
+Reading /opt/emoncms/modules/backup/config.cfg....
+Location of data databases: /var/opt/emoncms
+Location of emonhub.conf: /etc/emonhub
+Location of Emoncms: /var/www/emoncms
+Backup destination: /opt/openenergymonitor/data
+Backup source path: /opt/openenergymonitor/data/uploads
+Starting import from /opt/openenergymonitor/data/uploads to /opt/openenergymonitor/data...
+Image version: emonSD-17Oct19
+new image
+Backup found: emoncms-backup-2019-10-18.tar.gz starting import..
+Read MYSQL authentication details from settings.php
+Decompressing backup..
+emoncms.sql
+emonhub.conf
+settings.ini
+phpfina/
+phpfina/165119.meta
+phpfina/165146.dat
+phpfina/165117.meta
+phpfina/165148.dat
+phpfina/165073.dat
+phpfina/165139.dat
+phpfina/165107.meta
+phpfina/165072.meta
+phpfina/165106.dat
+phpfina/165134.dat
+phpfina/165152.meta
+phpfina/165154.dat
+phpfina/165106.meta
+phpfina/165157.meta
+phpfina/165076.dat
+phpfina/165087.dat
+phpfina/3.meta
+phpfina/165080.meta
+phpfina/165128.dat
+phpfina/165102.dat
+phpfina/1.meta
+phpfina/165138.meta
+phpfina/165085.dat
+phpfina/165153.meta
+phpfina/165089.dat
+phpfina/165113.meta
+phpfina/165159.meta
+phpfina/165138.dat
+phpfina/165079.dat
+phpfina/165159.dat
+phpfina/165094.dat
+phpfina/2.dat
+phpfina/165088.meta
+phpfina/165135.dat
+phpfina/3.dat
+phpfina/165095.dat
+phpfina/165073.meta
+phpfina/165137.dat
+phpfina/165124.dat
+phpfina/165081.meta
+phpfina/165156.dat
+phpfina/165110.dat
+phpfina/165122.dat
+phpfina/165136.dat
+phpfina/165080.dat
+phpfina/165104.meta
+phpfina/165122.meta
+phpfina/165092.meta
+phpfina/165147.meta
+phpfina/165088.dat
+phpfina/165077.dat
+phpfina/165154.meta
+phpfina/2.meta
+phpfina/165092.dat
+phpfina/165124.meta
+phpfina/165072.dat
+phpfina/165133.dat
+phpfina/165082.meta
+phpfina/165113.dat
+phpfina/165105.dat
+phpfina/165152.dat
+phpfina/1.dat
+phpfina/165118.meta
+phpfina/165096.dat
+phpfina/165083.dat
+phpfina/165074.meta
+phpfina/165158.dat
+phpfina/165074.dat
+phpfina/165136.meta
+phpfina/165134.meta
+phpfina/165119.dat
+phpfina/165146.meta
+phpfina/165107.dat
+phpfina/165150.dat
+phpfina/165084.meta
+phpfina/165093.meta
+phpfina/165127.dat
+phpfina/165149.meta
+phpfina/165096.meta
+phpfina/165091.dat
+phpfina/165137.meta
+phpfina/165127.meta
+phpfina/165081.dat
+phpfina/165148.meta
+phpfina/165125.dat
+phpfina/165131.dat
+phpfina/165112.dat
+phpfina/165086.dat
+phpfina/165145.dat
+phpfina/165147.dat
+phpfina/165110.meta
+phpfina/165145.meta
+phpfina/165104.dat
+phpfina/165076.meta
+phpfina/165084.dat
+phpfina/165102.meta
+phpfina/165155.meta
+phpfina/165139.meta
+phpfina/165121.dat
+phpfina/165149.dat
+phpfina/165079.meta
+phpfina/165077.meta
+phpfina/165071.dat
+phpfina/165123.meta
+phpfina/165120.meta
+phpfina/165157.dat
+phpfina/165075.dat
+phpfina/165153.dat
+phpfina/165123.dat
+phpfina/165125.meta
+phpfina/165150.meta
+phpfina/165103.dat
+phpfina/165089.meta
+phpfina/165118.dat
+phpfina/165093.dat
+phpfina/165083.meta
+phpfina/165133.meta
+phpfina/165135.meta
+phpfina/165078.meta
+phpfina/165156.meta
+phpfina/165075.meta
+phpfina/165151.meta
+phpfina/165112.meta
+phpfina/165155.dat
+phpfina/165078.dat
+phpfina/165085.meta
+phpfina/165130.meta
+phpfina/165140.dat
+phpfina/165111.meta
+phpfina/165082.dat
+phpfina/165128.meta
+phpfina/165130.dat
+phpfina/165087.meta
+phpfina/165111.dat
+phpfina/165121.meta
+phpfina/165090.dat
+phpfina/165151.dat
+phpfina/165086.meta
+phpfina/165090.meta
+phpfina/165158.meta
+phpfina/165091.meta
+phpfina/165103.meta
+phpfina/165071.meta
+phpfina/165132.dat
+phpfina/165131.meta
+phpfina/165117.dat
+phpfina/165105.meta
+phpfina/165140.meta
+phpfina/165120.dat
+phpfina/165132.meta
+phpfina/165095.meta
+phpfina/165094.meta
+phpfiwa/
+phptimeseries/
+Removing compressed backup to save disk space..
+Stopping services..
+Emoncms MYSQL database import...
+Import feed meta data..
+Restore phpfina and phptimeseries data folders...
+Import emonhub.conf > /etc/emonhub/emohub.conf
+OK
+Restarting emonhub...
+Restarting feedwriter...
+2019-10-18-08:26:56
+=== Emoncms import complete! ===
 </pre>
 </div>
 
