@@ -26,6 +26,9 @@
 <loc>http://guide.openenergymonitor.org/setup/dashboards/</loc>
 </url>
 <url>
+<loc>http://guide.openenergymonitor.org/integrations/demandshaper/</loc>
+</url>
+<url>
 <loc>http://guide.openenergymonitor.org/setup/emoncms-graphs/</loc>
 </url>
 <url>
@@ -135,6 +138,6 @@
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/static/mdi-demo.html</loc>
-<lastmod>2019-10-18T08:08:23+00:00</lastmod>
+<lastmod>2019-10-18T10:20:28+00:00</lastmod>
 </url>
 </urlset>
