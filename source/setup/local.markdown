@@ -78,9 +78,9 @@ If logging a `Power` value input you will also want to create a corresponding KW
 
 ![Feed View](/images/setup/local-log6.png)
 
-- To view the feed data click the `Eye Icon`
-- This will open `Data Viewer`
-- Multiple feeds can be overlayed on the same graph by checking the boxes on the right hand side
+- To view the feed data click on the feed row
+- This will open the Emoncms Graph module
+- Multiple feeds can be overlayed on the same graph by selecting feeds in the right hand side
 - To view daily data see [Emoncms > Daily KWh](/setup/daily-kwh).
 
 Note: no data will be visible immediately. Wait a few hours to build up some data before trying to view a feed.
