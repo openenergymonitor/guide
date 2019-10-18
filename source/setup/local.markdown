@@ -99,6 +99,9 @@ Note: no data will be visible immediately. Wait a few hours to build up some dat
 We recommend making regular backups of local data. See [Setup > Import/Backup](/setup/import).
 
 ### Video Guide
+
+The following video guide was put together using emoncms v9, the appearance will be different if you are using v10 of emoncms or newer but the functionality is much the same. We will be updating this video soon.
+
 <div class='videoWrapper'>
 <iframe width="300" height="315" src="https://www.youtube.com/embed/8nVP0Hgkuuc" frameborder="0" allowfullscreen></iframe>
 </div>
