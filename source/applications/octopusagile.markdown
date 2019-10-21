@@ -36,6 +36,7 @@ We designed this app out of our own interest to find out how much the Agile tari
 4. Agile Import only
 5. Energy & Cost mode
 6. Agile Outgoing and Solar PV
+7. Smart scheduling with Octopus Agile
 
 ## 1. Hardware & Software requirements
 
@@ -106,6 +107,12 @@ In the week long average screenshot below covering 06 Oct to 13 Oct we can see t
 ![solarpv_1](/images/applications/agile/solarpv_1.png)
 
 ![solarpv_2](/images/applications/agile/solarpv_2.png)
+
+## 7. Smart scheduling with Octopus Agile
+
+If you are interested in this app you may also be interested in the Emoncms Demand Shaper module, which can be used to schedule electric vehicle charging or smart plugs to make best use of the cheaper agile tariff times. For more information see: [Emoncms DemandShaper](https://guide.openenergymonitor.org/integrations/demandshaper/).
+
+![demandshaper](/images/integrations/demandshaper/demandshaper.png)
 
 ## Further Development
 
