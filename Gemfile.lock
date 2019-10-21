@@ -15,7 +15,8 @@ GEM
     ffi (1.11.1)
     forwardable-extended (2.6.0)
     fssm (0.2.10)
-    haml (4.0.7)
+    haml (5.0.0)
+      temple (>= 0.8.0)
       tilt
     jekyll (3.6.3)
       addressable (~> 2.4)
@@ -99,10 +100,11 @@ GEM
       rack-protection (~> 1.4)
       tilt (>= 1.3, < 3)
     stringex (1.4.0)
+    temple (0.8.2)
     therubyracer (0.12.2)
       libv8 (~> 3.16.14.0)
       ref
-    tilt (2.0.2)
+    tilt (2.0.10)
     titlecase (0.1.1)
 
 PLATFORMS
@@ -113,7 +115,7 @@ DEPENDENCIES
   coderay (~> 1.1.0)
   compass (~> 0.12.2)
   execjs
-  haml (~> 4.0)
+  haml (~> 5.0)
   jekyll (~> 3.6.3)
   jekyll-paginate
   jekyll-sitemap
