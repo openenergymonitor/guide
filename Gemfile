@@ -6,7 +6,7 @@ group :development do
   gem 'pygments.rb', '~> 1.1.0'
   gem 'rdiscount', '~> 2.0'
   gem 'RedCloth', '~> 4.3.0'
-  gem 'haml', '~> 4.0'
+  gem 'haml', '~> 5.0'
   gem 'compass', '~> 0.12.2'
   gem 'sass-globbing', '~> 1.0.0'
   gem 'rubypants', '~> 0.2.0'
