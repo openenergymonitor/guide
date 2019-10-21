@@ -229,7 +229,7 @@ Newer emonPi's have the MQTT port open by default and authentication turned 
 
 The unit has the ability to **update firmware over WiFi network via the web interface**. Firmware updates will be posted here. There are two branches of the relay board firmware the first is Martin's more advanced firmware based on his recent developments, Martin has not made source code available for this but has given us a compiled binary, available here:
 
-**[See WiFi Relay Github Repo for latest FW](https://github.com/openenergymonitor/mqtt-wifi-mqtt-single-channel-relay) (Oct 2017)**
+**[See WiFi Relay Github Repo for latest FW](https://github.com/openenergymonitor/mqtt-wifi-mqtt-single-channel-relay)**
 
 **​Unzip then select the .bin into units interface then hit upload**
 
