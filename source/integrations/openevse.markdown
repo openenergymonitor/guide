@@ -29,7 +29,7 @@ See our [blog post](https://blog.openenergymonitor.org/2017/01/openevse-build/) 
 
 The standard build guide from OpenEVSE can be followed taking into account the specific OpenEnergyMonitor (Europe / UK) considerations (see below):
 
-- [**OpenEVSE Kit Assembly guide**](https://openevse.dozuki.com/Guide/%22Standard+Series%22+with+OpenEVSE+v5/27)
+- [**OpenEVSE Kit Assembly guide**](https://openevse.dozuki.com/Guide/%22Advanced+Series%22+with+OpenEVSE+v5/26)
 - [**OpenEVSE WiFi Module Installation Guide**](https://openevse.dozuki.com/Guide/OpenEVSE+WiFi+%28Beta%29/14)
 
 <figure>
