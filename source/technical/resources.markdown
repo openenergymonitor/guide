@@ -43,14 +43,6 @@ Either [PlatformIO](https://guide.openenergymonitor.org/technical/compiling/) (r
   - [Forum Category](https://community.openenergymonitor.org/c/hardware/emontx)
 
 <br/>
-
-- ### {% linkable_title IoTaWatt %}
-  - [Quick Start Guide](https://guide.openenergymonitor.org/setup/iotawatt)
-  - [Technical docs (wiki)](https://github.com/boblemaire/IoTaWatt/wiki)
-  - [Hardware & Firmware](https://github.com/boblemaire/IoTaWatt)
-  - [Forum Category](https://community.openenergymonitor.org/c/hardware/iotawatt)
-  
-<br/>
   
 - ### {% linkable_title emonESP %}
   - [User Guide](https://guide.openenergymonitor.org/setup/esp8266-adapter-emontx/)
