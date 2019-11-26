@@ -50,11 +50,12 @@ The emonTx is an low power RF remote sensor node. Data is transmitted to an emon
 
 #### 1. DIP Switch Config
 
-- If more than one emonTx is to be used with the same base-station set the node ID using the [on-board DIP switches](https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4#DIP_Switch_Config)*.
+- If using 2x emonTx units with the same base-station, the node ID on both units can be set using the [on-board DIP switches](https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4#DIP_Switch_Config). We can do this for you prior to shipping, just select which node ID you require when ordering. 
+
+- More than 2x emonTx units can be connected to a single emonPi / emonBase with manual change of RF nodeID. This can be done via [serial node ID config](https://community.openenergymonitor.org/t/emontx-emonth-configure-rf-settings-via-serial-released-fw-v2-6-v3-2/2064?u=glyn.hudson). We can do this for you prior to shipping, just leave a comment with your order.
+
  - *USA mode (enable 120V AC-AC adaptor calibration) can be toggled using DIP switches. See Wiki link above for further details*
  
- \* *More than 2x emonTx units can be connected to a single emonPi / emonBase with manual change of RF nodeID. This can be done This can be done via [serial node ID config](https://community.openenergymonitor.org/t/emontx-emonth-configure-rf-settings-via-serial-released-fw-v2-6-v3-2/2064?u=glyn.hudson)*
-
 #### 2. Install Sensors
 
 - Install clip on CT(s) on circuit to be monitored Follow [CT installation instructions](/setup/install). and plug into emonTx jack plug sockets
