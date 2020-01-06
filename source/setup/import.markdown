@@ -36,6 +36,19 @@ Currently the Backup Module can only be used with Local Emoncms <strong>not</str
 
 ![USB Import](/images/setup/usb_import.png)
 
+**Fixing a corrupt SD card**
+
+After a system failure the SD card may become corrupted and will not mount when the USB importer is ran. It can be possible to restore a corrupted SD card by running fsck to fix the card errors. Todo this: 
+
+1\. Place the old SD card in a SD card reader and plug into any of the USB ports on the Pi running the new image
+2\. SSH into the emonPi/emonbase
+3\. Run the following commands (without part in brackets) to attempt to fix the card:
+
+    sudo fsck.ext4 /dev/sda2 (root OS partition)
+    sudo fsck.ext2 /dev/sda3 (data partition)
+    
+4\. Continue as above, Navigate to Setup > Backup and click `Import from USB drive` to start import process
+
 ## 2a. Archive Export
 
 1. Navigate to Setup > Backup
