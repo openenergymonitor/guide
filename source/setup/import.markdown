@@ -34,6 +34,8 @@ Currently the Backup Module can only be used with Local Emoncms <strong>not</str
 2. Navigate to Setup > Backup
 3. Click `Import from USB drive` to start import process
 
+![USB Import](/images/setup/usb_import.png)
+
 ## 2a. Archive Export
 
 1. Navigate to Setup > Backup
