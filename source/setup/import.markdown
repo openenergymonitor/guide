@@ -14,12 +14,27 @@ published: true
 
 ***
 
-The [Emoncms backup module](https://github.com/emoncms/backup) can be used to backup Emoncms account data and import data from another Emoncms account. This process can also be used to migrate from an older emonPi / emonBase image to the latest image.
+The [Emoncms backup module](https://github.com/emoncms/backup) is used to backup and restore an emoncms installation and migrate from an older emonPi / emonBase image to the latest image.
+
+There are two methods available to do this:
+
+1. Restore an emoncms installation directly without a previous backup archive using USB SD card reader.
+2. Export and import a compressed archive containing all emoncms user data.
+
+The direct USB SD card reader approach is the most straightforward method for migration from an old SD card to a new SD card running the latest emonSD image. It can also minimise data loss in the event of a system failure where a recent archive backup has not been created.
+
+The archive export/import approach is useful for creating backup snapshot's and can be a good fall back in the case of more serious SD card corruption. An archive export will however be needed prior to the failure point.
 
 <p class="note">
 Currently the Backup Module can only be used with Local Emoncms <strong>not</strong> Emoncms.org </p>
 
-## Backup / Export
+## 1. Restore using USB SD card reader
+
+1. Place the old SD card in a SD card reader and plug into any of the USB ports on the Pi running the new image
+2. Navigate to Setup > Backup
+3. Click `Import from USB drive` to start import process
+
+## 2a. Archive Export
 
 1. Navigate to Setup > Backup
 2. Click `Create Backup` (see screenshot below)
@@ -28,9 +43,7 @@ Currently the Backup Module can only be used with Local Emoncms <strong>not</str
 
 ![backup old data](/images/setup/export.png)
 
-***
-
-## Import / Restore
+## 2b. Archive Import
 
 <p class='note warning'>
 Importing / restoring a backup will overwrite <strong>ALL</strong> data in the current Emoncms account.
