@@ -29,8 +29,13 @@ See our [blog post](https://blog.openenergymonitor.org/2017/01/openevse-build/) 
 
 The standard build guide from OpenEVSE can be followed taking into account the specific OpenEnergyMonitor (Europe / UK) considerations (see below):
 
-- [**OpenEVSE Kit Assembly guide**](https://openevse.dozuki.com/Guide/%22Standard+Series%22+with+OpenEVSE+v5/27)
-- [**OpenEVSE WiFi Module Installation Guide**](https://openevse.dozuki.com/Guide/OpenEVSE+WiFi+%28Beta%29/14)
+The kit is an OpenEVSE "Advanced" kit but with a Packard contactor.
+
+Follow the Advanced guide for the LCD / GND bar / CT / GFCI connections: https://openevse.dozuki.com/Guide/%22Advanced+Series%22+with+OpenEVSE+v5/26
+
+Refer to the standard guide for the contactor connections: https://openevse.dozuki.com/Guide/%22Standard+Series%22+with+OpenEVSE+v4/8
+
+For the WiFi module installation see: https://openevse.dozuki.com/Guide/OpenEVSE+WiFi+%28Beta%29/14
 
 <figure>
   <img src="/images/integrations/openevse-kit.jpg">
