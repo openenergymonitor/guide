@@ -619,12 +619,47 @@ highlight active link...
 
 <hr />
 
-<p>The <a href="https://github.com/emoncms/backup">Emoncms backup module</a> can be used to backup Emoncms account data and import data from another Emoncms account. This process can also be used to migrate from an older emonPi / emonBase image to the latest image.</p>
+<p>The <a href="https://github.com/emoncms/backup">Emoncms backup module</a> is used to backup and restore an emoncms installation and migrate from an older emonPi / emonBase image to the latest image.</p>
+
+<p>There are two methods available to do this:</p>
+
+<ol>
+  <li>Restore an emoncms installation directly without a previous backup archive using USB SD card reader.</li>
+  <li>Export and import a compressed archive containing all emoncms user data.</li>
+</ol>
+
+<p>The direct USB SD card reader approach is the most straightforward method for migration from an old SD card to a new SD card running the latest emonSD image. It can also minimise data loss in the event of a system failure where a recent archive backup has not been created.</p>
+
+<p>The archive export/import approach is useful for creating backup snapshot’s and can be a good fall back in the case of more serious SD card corruption. An archive export will however be needed prior to the failure point.</p>
 
 <p class="note">
 Currently the Backup Module can only be used with Local Emoncms <strong>not</strong> Emoncms.org </p>
 
-<h2 id="backup--export">Backup / Export</h2>
+<h2 id="1-restore-using-usb-sd-card-reader">1. Restore using USB SD card reader</h2>
+
+<ol>
+  <li>Place the old SD card in a SD card reader and plug into any of the USB ports on the Pi running the new image</li>
+  <li>Navigate to Setup &gt; Backup</li>
+  <li>Click <code class="highlighter-rouge">Import from USB drive</code> to start import process</li>
+</ol>
+
+<p><img src="/images/setup/usb_import.png" alt="USB Import" /></p>
+
+<p><strong>Fixing a corrupt SD card</strong></p>
+
+<p>After a system failure the SD card may become corrupted and will not mount when the USB importer is ran. It can be possible to restore a corrupted SD card by running fsck to fix the card errors. Todo this:</p>
+
+<p>1. Place the old SD card in a SD card reader and plug into any of the USB ports on the Pi running the new image
+2. SSH into the emonPi/emonbase
+3. Run the following commands (without part in brackets) to attempt to fix the card:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo fsck.ext4 /dev/sda2 (root OS partition)
+sudo fsck.ext2 /dev/sda3 (data partition)
+</code></pre></div></div>
+
+<p>4. Continue as above, Navigate to Setup &gt; Backup and click <code class="highlighter-rouge">Import from USB drive</code> to start import process</p>
+
+<h2 id="2a-archive-export">2a. Archive Export</h2>
 
 <ol>
   <li>Navigate to Setup &gt; Backup</li>
@@ -635,9 +670,7 @@ Currently the Backup Module can only be used with Local Emoncms <strong>not</str
 
 <p><img src="/images/setup/export.png" alt="backup old data" /></p>
 
-<hr />
-
-<h2 id="import--restore">Import / Restore</h2>
+<h2 id="2b-archive-import">2b. Archive Import</h2>
 
 <p class="note warning">
 Importing / restoring a backup will overwrite <strong>ALL</strong> data in the current Emoncms account.
