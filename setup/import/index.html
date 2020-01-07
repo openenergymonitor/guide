@@ -624,7 +624,7 @@ highlight active link...
 <p>There are two methods available to do this:</p>
 
 <ol>
-  <li>Restore an emoncms installation directly without a previous backup archive using USB SD card reader.</li>
+  <li>Restore an emoncms installation directly without a previous backup archive using a USB SD card reader.</li>
   <li>Export and import a compressed archive containing all emoncms user data.</li>
 </ol>
 
@@ -635,7 +635,7 @@ highlight active link...
 <p class="note">
 Currently the Backup Module can only be used with Local Emoncms <strong>not</strong> Emoncms.org </p>
 
-<h2 id="1-restore-using-usb-sd-card-reader">1. Restore using USB SD card reader</h2>
+<h2 id="restore-using-usb-sd-card-reader">Restore using USB SD card reader</h2>
 
 <ol>
   <li>Place the old SD card in a SD card reader and plug into any of the USB ports on the Pi running the new image</li>
@@ -647,11 +647,11 @@ Currently the Backup Module can only be used with Local Emoncms <strong>not</str
 
 <p><strong>Fixing a corrupt SD card</strong></p>
 
-<p>After a system failure the SD card may become corrupted and will not mount when the USB importer is ran. It can be possible to restore a corrupted SD card by running fsck to fix the card errors. Todo this:</p>
+<p>After a system failure the SD card may become corrupted and will not mount when the USB importer is ran. It can be possible to restore a corrupted SD card by running fsck to fix the card errors. To do this:</p>
 
-<p>1. Place the old SD card in a SD card reader and plug into any of the USB ports on the Pi running the new image
-2. SSH into the emonPi/emonbase
-3. Run the following commands (without part in brackets) to attempt to fix the card:</p>
+<p>1. Place the old SD card in a SD card reader and plug into any of the USB ports on the Pi running the new image<br />
+2. SSH into the emonPi/emonbase<br />
+3. Run the following commands (without part in brackets) to attempt to fix the card:<br /></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo fsck.ext4 /dev/sda2 (root OS partition)
 sudo fsck.ext2 /dev/sda3 (data partition)
@@ -659,7 +659,9 @@ sudo fsck.ext2 /dev/sda3 (data partition)
 
 <p>4. Continue as above, Navigate to Setup &gt; Backup and click <code class="highlighter-rouge">Import from USB drive</code> to start import process</p>
 
-<h2 id="2a-archive-export">2a. Archive Export</h2>
+<hr />
+
+<h2 id="archive-export">Archive Export</h2>
 
 <ol>
   <li>Navigate to Setup &gt; Backup</li>
@@ -670,7 +672,7 @@ sudo fsck.ext2 /dev/sda3 (data partition)
 
 <p><img src="/images/setup/export.png" alt="backup old data" /></p>
 
-<h2 id="2b-archive-import">2b. Archive Import</h2>
+<h2 id="archive-import">Archive Import</h2>
 
 <p class="note warning">
 Importing / restoring a backup will overwrite <strong>ALL</strong> data in the current Emoncms account.
@@ -924,7 +926,7 @@ Restarting feedwriter...
 <ul>
   <li>Emoncms account credentials</li>
   <li>Historic Feed data</li>
-  <li>Input Processing config (only when migrating from Emoncms V9 &gt; V9 setup)</li>
+  <li>Input Processing config</li>
   <li>Emoncms Dashboards</li>
   <li>Emoncms App settings</li>
   <li>EmonHub config: <code class="highlighter-rouge">emonhub.conf</code></li>
@@ -936,7 +938,7 @@ Restarting feedwriter...
   <li>WiFi passcode &amp; custom network config</li>
   <li>Custom NodeRED flows</li>
   <li>Custom openHAB settings</li>
-  <li>Input processing setup if migrating from Emoncms V8, input processing will need to be re-creatred after import and new inputs should be logged to imported feeds</li>
+  <li>Input processing setup if migrating from Emoncms V8, input processing will need to be re-created after import and new inputs should be logged to imported feeds</li>
 </ul>
 
 <h3 id="how-to-backup-items-not-automatically-included">How-to backup items not automatically included</h3>
@@ -954,7 +956,7 @@ Restarting feedwriter...
 
 <hr />
 
-<h2 id="video-guide">Video Guide</h2>
+<h2 id="video-guide-exportimport-method">Video Guide (Export/Import method)</h2>
 
 <p>The following video guide was put together using emoncms v9, the appearance will be different if you are using v10 of emoncms or newer but the functionality is much the same. We will be updating this video soon.</p>
 
@@ -972,21 +974,11 @@ Restarting feedwriter...
 
 <h3 id="export-from-an-older-emonpi--emonbase">Export from an older emonPi / emonBase</h3>
 
-<p>If the Backup module is not visible in the Local Emoncms menu then the emonPi / emonBase is running an older version e.g Emoncms V8.x.</p>
+<p>If the Backup module is not visible in the Local Emoncms menu then the emonPi / emonBase is running an older version e.g Emoncms V8.x. Try the USB Import method above.</p>
 
 <p class="note">
 To check what software stack (emonSD pre-built SD card) version an emonPi is running see instructions on emonPi <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">emonSD download repository and changelog</a>
 </p>
-
-<p>To export data from an older emonPi:</p>
-
-<ol>
-  <li>Install the backup module by running <code class="highlighter-rouge">Admin &gt; emonPi update</code> in Local Emoncms</li>
-  <li>Wait (up to) 60s for the update to begin and then another couple of minutes for it to complete; the update log page can be refreshed to view progress</li>
-  <li>Log-out then back into Local Emoncms</li>
-  <li>Backup module should now be visible under <code class="highlighter-rouge">Extras &gt; Backup</code></li>
-  <li>Follow Backup instructions below</li>
-</ol>
 
 <hr />
 
