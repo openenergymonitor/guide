@@ -28,7 +28,7 @@ The archive export/import approach is useful for creating backup snapshot's and 
 <p class="note">
 Currently the Backup Module can only be used with Local Emoncms <strong>not</strong> Emoncms.org </p>
 
-## Restore using USB SD card reader
+## Restore using a USB SD card reader
 
 1. Place the old SD card in a SD card reader and plug into any of the USB ports on the Pi running the new image
 2. Navigate to Setup > Backup
@@ -344,7 +344,7 @@ The following video guide was put together using emoncms v9, the appearance will
 
 ## Troubleshooting
 
-If you have any questions or if an error occures during the backup or import process please post in the [`Hardware > emonPi` category of the Community Forums](http://community.openenergymonitor.org/c/hardware/emonpi). Please provide as much infomation as possible e.g. backup / import logs and [emonSD version](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log).
+If you have any questions or if an error occurs during the backup or import process please post in the [`Hardware > emonPi` category of the Community Forums](http://community.openenergymonitor.org/c/hardware/emonpi). Please provide as much information as possible e.g. backup / import logs and [emonSD version](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log).
 
 Alternatively try and perform a manual import, see [Backup Module Readme](https://github.com/emoncms/backup).
 
