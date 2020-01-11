@@ -617,7 +617,7 @@ highlight active link...
 
   <p>For most updates it’s possible to use the emoncms update mechanism available in the emoncms Admin section. This downloads the latest version of emoncms and all installed modules.</p>
 
-<p>We also periodically release a new emonSD image along with a fully updated version of the base OS and emoncms software, new images sometimes include more substantial changes to partition and directory structure that are harder to update via the standard update method. We recommend upgrading to new images when they become available to ensure your system is fully up-to-date.</p>
+<p>We also periodically release a <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">new emonSD image</a> along with a fully updated version of the base OS and emoncms software, new images sometimes include more substantial changes to partition and directory structure that are harder to update via the standard update method. We recommend upgrading to new images when they become available to ensure your system is fully up-to-date.</p>
 
 <h2 id="emonpiemonbase-update">emonPi/emonbase Update</h2>
 
@@ -636,9 +636,9 @@ highlight active link...
 
 <h2 id="upgrading-to-a-new-emonsd-image">Upgrading to a new emonSD image</h2>
 
-<p>The most straightforward method of upgrading to a new emonSD image is to keep your existing emonPi/emonBase SD card as a backup to which you can revert and start with a new SD card running the latest image. It’s then possible to plug the old SD card into the same emonPi/emonBase using a USB SD card reader and import the data directly.</p>
+<p>The most straightforward method of upgrading to a new emonSD image is to start with a new SD card, keep your existing emonPi/emonBase SD card as a backup to which you can revert if needed and then plug the old SD card into the emonPi/emonBase using a USB SD card reader and import the data directly.</p>
 
-<p>For an alternative single SD card upgrade method see export/import upgrade method described below.</p>
+<p>For an alternative single SD card upgrade method see the export/import archive method covered here: <a href="https://guide.openenergymonitor.org/setup/import/">Guide: Backup</a>.</p>
 
 <h3 id="1-prepare-a-new-card">1. Prepare a new card</h3>
 
@@ -677,10 +677,6 @@ highlight active link...
 </ol>
 
 <p><img src="/images/setup/usb_import.png" alt="USB Import" /></p>
-
-<h4 id="alternative-method-exportimport">Alternative method: Export/Import</h4>
-
-<p>If you wish to upgrade your system by reusing your existing SD card the emoncms backup module Export and Import Archive method can be used for this.</p>
 
 
 </article>
