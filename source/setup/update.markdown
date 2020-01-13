@@ -14,7 +14,7 @@ For most updates it's possible to use the emoncms update mechanism available in 
 
 We also periodically release a [new emonSD image](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log) along with a fully updated version of the base OS and emoncms software, new images sometimes include more substantial changes to partition and directory structure that are harder to update via the standard update method. We recommend upgrading to new images when they become available to ensure your system is fully up-to-date.
 
-## emonPi/emonbase Update
+## [emonPi/emonbase Update](#update)
 
 1. Login to emoncms and navigate to Setup > Admin
 2. Click on dropdown selector next to 'Full Update' button to expand all update options.
@@ -27,7 +27,7 @@ We also periodically release a [new emonSD image](https://github.com/openenergym
 
 If the update fails the first time, make a record of the update log and try again. If this does not solve the problem and you would like help to proceed further please let us know on the forums [http://community.openenergymonitor.org](http://community.openenergymonitor.org). Please provide as much information as possible including the update log and Server Information (Click on the button 'Copy as Markdown' next to Server Information on the Admin page and paste the result without further formatting in your post).
 
-## Upgrading to a new emonSD image
+## [Upgrading to a new emonSD image](#upgrade)
 
 The most straightforward method of upgrading to a new emonSD image is to start with a new SD card, keep your existing emonPi/emonBase SD card as a backup to which you can revert if needed and then plug the old SD card into the emonPi/emonBase using a USB SD card reader and import the data directly. 
 
@@ -55,9 +55,10 @@ Once the initial update and setup is complete, you can proceed to import your da
 
 ### 3. Restoring your system
 
-1. Place the old SD card in a SD card reader and plug into any of the USB ports on the emonPi/emonBase running the new image.
-2. Create a temporary user on the new system if you have not done so already.
+1. Place the old SD card in an SD card reader and plug into any of the USB ports on the emonPi/emonBase running the new image.
+2. From the EmonCMS login page, click register and create a temporary user. Once the import is complete the original user details will be used.
 3. Navigate to Setup > Backup
 4. Click `Import from USB drive` to start import process
+5. Once the import is complete, log out and back into the EmonCMS page with the original user details
 
 ![USB Import](/images/setup/usb_import.png)
