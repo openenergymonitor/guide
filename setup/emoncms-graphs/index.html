@@ -615,27 +615,75 @@ highlight active link...
   <hr class="divider">
   
 
-  <h2 id="using-emoncms">Using Emoncms</h2>
+  <p>The Emoncms graph viewer is used to explore feed data. With a comprehensive set of features it is possible to compare multiple feeds on one graph, view averages and statistics, export CSV data and share and embed resulting graphs in dashboards.</p>
 
-<ul>
-  <li><a class="active" href="/setup/emoncms-graphs/">View Graphs</a></li>
-  <li><a href="/setup/daily-kwh/">Daily kWh</a></li>
-  <li><a href="/setup/daily-averages/">Daily Averages </a></li>
-  <li><a href="/setup/export-csv/">Exporting CSV </a></li>
-  <li><a href="/setup/histograms/">Histograms </a></li>
-</ul>
+<h4 id="1-select-feeds-to-view-on-feeds-page">1) Select feeds to view on feeds page</h4>
 
-<hr />
+<p>To view a single feed click on the feed row on the feeds page to bring up the graph view. To view multiple feeds select the feeds you wish to view using the selection tick boxes and then click on the eye icon in the feeds page toolbar:</p>
 
-<h2 id="using-emoncms-graphs">Using Emoncms Graphs</h2>
+<p><img src="/images/emoncms/graph1.png" alt="graph" /></p>
 
-<p>The Emoncms graphs can be used to quickly explore data. It’s possible to share and embed pre-made graphs into Emoncms Dashboards.</p>
+<p><strong>Graph view URL:</strong> Note that selected feeds are listed in the URL when accessed via the feeds page. See Graph module API options below for more examples.</p>
 
-<h2 id="video-guide">Video guide</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://emonpi.local/graph/1,2
+</code></pre></div></div>
 
-<div class="videoWrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4XVRtCnLIYA" frameborder="0" allowfullscreen=""></iframe>
-</div>
+<h4 id="2-the-graph-view">2) The Graph view</h4>
+
+<p>The feeds selected above will now display on the graph view. To compare feeds with different axis scales e.g power and temperature click on the axis tick box in the left sidebar to place the feed on the applicable left or right y-axis.</p>
+
+<p><img src="/images/emoncms/graph2.png" alt="graph" /></p>
+
+<h4 id="3-configuring-a-custom-graph">3) Configuring a custom graph</h4>
+
+<p>The screenshot below shows an example with the feed series colours changed, temperature is now in red and the power feed is filled by placing a tick in the Fill tick box.</p>
+
+<p><strong>Averaging:</strong> By default feeds are loaded without averaging. Tick the average tick box for each feed to view fully representative averages of the underlying data. <em>Tip: In the case of unreliable data with lots of missing data-points enabling averaging can give better results in the graph view.</em></p>
+
+<p><img src="/images/emoncms/graph3.png" alt="graph" /></p>
+
+<p><strong>Saving a Graph:</strong> Enter a unique graph name in the ‘My Graphs’ section to save the current graph for faster access in future.</p>
+
+<h4 id="4-feed-statistics">4) Feed statistics</h4>
+
+<p>Click on ‘Show statistics’ to view min, max, difference between min and max, mean &amp; standard deviation for each feed in the graph view. A Watt-hour calculation is also made for each feed - but only applicable in the case of power feeds in Watts. In the example graph above we can see that the power view covers 32.5 kWh of consumption.</p>
+
+<p><img src="/images/emoncms/graph4.png" alt="graph" /></p>
+
+<h4 id="5-csv-export">5) CSV Export</h4>
+
+<p>The data in the graph view can be exported as CSV for further analysis in an external program. Click on ‘Show CSV Output’, select time format as required.</p>
+
+<p><strong>Null values:</strong> If shown, missing data points will be displayed as null entries, this makes comparison across different feeds easier as it ensures the time-base is consistent.</p>
+
+<p><img src="/images/emoncms/graph5.png" alt="graph" /></p>
+
+<h4 id="6-graph-api-options">6) Graph API options</h4>
+
+<p><strong>Embed a graph:</strong><br />Remove the Emoncms theme wrap and graph editor. This is available publicly but will only show graph data if individual feeds are made public.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://emonpi.local/graph/embed?graphid=1
+</code></pre></div></div>
+
+<p><strong>Load a saved graph by id:</strong><br />Only available when logged in.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://emonpi.local/graph#/Saved/1
+</code></pre></div></div>
+
+<p><strong>Load specified feeds in a graph:</strong><br />Available publicly if individual feeds are made public.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://emonpi.local/graph/1,5
+</code></pre></div></div>
+
+<p><strong>Load graph with feeds aligned to left or right y-axis:</strong><br />Available publicly if individual feeds are made public.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http://emonpi.local/graph?feedidsLH=1&amp;feedidsRH=5
+</code></pre></div></div>
+
+<h4 id="open-source">Open Source</h4>
+
+<p>The EmonCms graph module is available on github here: <a href="https://github.com/emoncms/graph">https://github.com/emoncms/graph</a><br />
+See also open bugs and enhancement requests: <a href="https://github.com/emoncms/graph/issues">https://github.com/emoncms/graph/issues</a></p>
 
 
 </article>

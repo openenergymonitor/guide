@@ -615,68 +615,74 @@ highlight active link...
   <hr class="divider">
   
 
-  <h2 id="using-emoncms">Using Emoncms</h2>
-
-<ul>
-  <li><a href="/setup/emoncms-graphs/">View Graphs</a></li>
-  <li><a class="active" href="/setup/daily-kwh/">Daily kWh</a></li>
-  <li><a href="/setup/daily-averages/">Daily Averages </a></li>
-  <li><a href="/setup/export-csv/">Exporting CSV </a></li>
-  <li><a href="/setup/histograms/">Histograms </a></li>
-</ul>
-
-<hr />
-
-<p>Emoncms supports the creation of daily, weekly, monthly kWh data and graph’s from several different emoncms input types.</p>
+  <p>Emoncms supports the creation of daily, weekly &amp; monthly kWh data and graph’s from several different emoncms input types.</p>
 
 <ul>
   <li>Power in Watts (i.e emontx, emonpi CT channels)</li>
-  <li>Cumulative Wh (i.e pulse counter, 3rd party meter)</li>
-  <li>Cumulative kWh (i.e pulse counter, 3rd party meter)</li>
+  <li>Wh/kWh readings that do not reset on power cycle e.g energy meters</li>
+  <li>Wh/kWh readings that reset on power cycle e.g emontx/emonpi pulse count</li>
 </ul>
 
-<h3 id="-1a-creating-daily-energy-whkwh-data-from-power-inputs"><a class="title-link" name="1a-creating-daily-energy-whkwh-data-from-power-inputs" href="#1a-creating-daily-energy-whkwh-data-from-power-inputs"></a> 1a) Creating Daily Energy Wh/kWh data from power inputs</h3>
+<h3 id="-creating-daily-kwh-data-from-power-inputs"><a class="title-link" name="creating-daily-kwh-data-from-power-inputs" href="#creating-daily-kwh-data-from-power-inputs"></a> Creating daily kWh data from power inputs</h3>
 
 <p>The standard emonTx and emonPi firmware transmit real power values for each CT channel. Accumulating kWh data can be calculated from this power data using the emoncms “Power to kWh” input processor.</p>
-
-<p>Note: use the <code class="highlighter-rouge">CREATE NEW</code> option and add <code class="highlighter-rouge">_kwh</code> to the feed name in order to help distinguish it from the power feed.</p>
 
 <ol>
   <li>
     <p>In the inputs interface select the power input for which you wish to generate kWh data. Click on the spanner icon to bring up the input processing configuration interface.</p>
   </li>
   <li>
-    <p>Select the <code class="highlighter-rouge">power to kWh</code> input processor and create a feed, select a feed interval that either matches your post rate i.e 10s on the emontx and emonpi or for reduced disk use; intervals of up to 3600s can be used.</p>
+    <p>Select the <code class="highlighter-rouge">power to kWh</code> input processor and create a feed, select a feed interval that either matches your post rate i.e 10s on the emontx and emonpi or for reduced disk use; intervals of up to 3600s can be used. Add <code class="highlighter-rouge">_kwh</code> to the feed name in order to help distinguish it from the power feed.</p>
   </li>
 </ol>
 
-<p><img src="https://emoncms.org/Modules/site/inputprocessing.png" /><br /><br /></p>
+<p><img src="/images/emoncms/inputproc_powertokwh.png" alt="inputproc_powertokwh.png" /></p>
 
-<h3 id="-1b-creating-daily-kwh-data-from-cumulative-wh-or-kwh-inputs"><a class="title-link" name="1b-creating-daily-kwh-data-from-cumulative-wh-or-kwh-inputs" href="#1b-creating-daily-kwh-data-from-cumulative-wh-or-kwh-inputs"></a> 1b) Creating daily kWh data from Cumulative Wh or kWh inputs</h3>
+<h3 id="-creating-daily-kwh-data-from-cumulative-wh-or-kwh-inputs"><a class="title-link" name="creating-daily-kwh-data-from-cumulative-wh-or-kwh-inputs" href="#creating-daily-kwh-data-from-cumulative-wh-or-kwh-inputs"></a> Creating daily kWh data from cumulative Wh or kWh inputs</h3>
 
-<p>e.g. <a href="/setup/optical-pulse-sensor">Optical Pulse Sensor</a></p>
-
-<p>Some energy meters provide kWh output via Modbus, RS485, MBus, IEC1107, etc. For those meters, the log to feed input processor could be used. However, if the data is irregular, missing data will be recorded as null values. If a null value happens to coincide with midnight, the bar graph produced will show spikes or gaps. At present the process to use is the Wh Accumulator input process. It will fill any missing data. The Wh accumulator has a 23 kW limit equivalent power limit for inputs that are cumulative Wh.</p>
-
-<ol>
-  <li>In the inputs interface select the input for which you wish to generate kWh data. Click on the spanner icon to bring up the input processing configuration interface.</li>
-</ol>
-
-<p><img src="/images/setup/emonpi-input-list.png" /></p>
+<p><strong>Option 1: Wh/kWh readings that do not reset on power cycle e.g energy meters</strong><br />
+If meter data is irregular, missing data will be recorded as null values with the standard ‘log to feed’ input process. If a null value happens to coincide with midnight, the bar graph produced will show spikes or gaps. To avoid this issue use the <code class="highlighter-rouge">Log to feed (Join)</code> input process - which joins across missing values with a straight line.</p>
 
 <ol>
-  <li>Select the <code class="highlighter-rouge">wh accumulator</code> input processor (note: this process can also be used for accumulating kWh inputs) and create a feed, select a feed interval that either matches your post rate i.e 10s on the emontx and emonpi or for reduced disk use; intervals of up to 3600s can be used. A <code class="highlighter-rouge">x</code> calibration can be applied to convert raw pulse data into kwh/wh data, see <a href="/setup/optical-pulse-sensor">Optical Pulse Sensor</a> setup page.</li>
+  <li>
+    <p>In the inputs interface select the input for which you wish to record kWh data. Click on the spanner icon to bring up the input processing configuration interface.</p>
+  </li>
+  <li>
+    <p>If the input value is in Watt hours (Wh) apply a scale of 0.001 to convert to a kWh reading.</p>
+  </li>
+  <li>
+    <p>Select the <code class="highlighter-rouge">Log to feed (Join)</code> input processor and create a new feed, select a feed interval that either matches your post rate i.e 10s on the emontx and emonpi or for reduced disk use; intervals of up to 3600s can be used.</p>
+  </li>
 </ol>
 
-<p><img src="/images/setup/emonpi-pulse-input-process.png" /></p>
+<p><img src="/images/emoncms/inputproc_logfeedjoin.png" alt="inputproc_logfeedjoin.png" /></p>
 
-<h3 id="-2-viewing-a-kwh-per-day-bar-graph"><a class="title-link" name="2-viewing-a-kwh-per-day-bar-graph" href="#2-viewing-a-kwh-per-day-bar-graph"></a> 2. Viewing a kWh per day bar graph</h3>
+<p><strong>Option 2: Wh/kWh readings that reset on power cycle e.g emontx/emonpi pulse count</strong><br />
+The emontx and emonpi pulse count and continuous monitoring cumulative energy inputs reset if the unit is power cycled. If these inputs are recorded with the standard ‘log to feed’ process the resulting feed includes all resets as well as null values if there is any missing data. The bar graph produced will show spikes or gaps. To avoid this issue use the <code class="highlighter-rouge">Wh Accumulator</code> or <code class="highlighter-rouge">kWh Accumulator</code> input process - which both joins across missing values with a straight line and removes the reset - continuing from the value prior to the reset.</p>
 
-<p>Note: At least 2 days of data is required to generate a daily kWh graph from accumulating kWh data. At the moment, the bar graphs built using the vis module don’t show the current day’s kWh consumption. The myelectric app, which also uses the accumulating kWh feed type, does show the current day.</p>
+<ol>
+  <li>
+    <p>In the inputs interface select the input for which you wish to record kWh data. Click on the spanner icon to bring up the input processing configuration interface.</p>
+  </li>
+  <li>
+    <p>If the input value is in Watt hours (Wh) apply a scale of 0.001 to convert to a kWh reading.</p>
+  </li>
+  <li>
+    <p>Select the <code class="highlighter-rouge">kWh Accumulator</code> input processor and create a new feed, select a feed interval that either matches your post rate i.e 10s on the emontx and emonpi or for reduced disk use; intervals of up to 3600s can be used.</p>
+  </li>
+</ol>
 
-<p>Click on <code class="highlighter-rouge">Extras &gt; Visualisation</code>, and select the <code class="highlighter-rouge">BarGraph</code>.</p>
+<p><img src="/images/emoncms/inputproc_kwhacc.png" alt="inputproc_logfeedjoin.png" /></p>
 
-<p>Select the accumulating watt hour or kWh feed created in step 1.</p>
+<hr />
+
+<h3 id="-viewing-a-kwh-per-day-bar-graph"><a class="title-link" name="viewing-a-kwh-per-day-bar-graph" href="#viewing-a-kwh-per-day-bar-graph"></a> Viewing a kWh per day bar graph</h3>
+
+<p><strong>Note:</strong> At least 2 days of data is required to generate a daily kWh graph from accumulating kWh data. At the moment, the bar graphs built using the vis module don’t show the current day’s kWh consumption. The MyElectric app in the apps module, which also uses the cumulative kWh feed type, does show the current day.</p>
+
+<p>Click on <code class="highlighter-rouge">Setup &gt; Visualisation</code>, and select the <code class="highlighter-rouge">BarGraph</code>.</p>
+
+<p>Select the cumulative kWh feed created above.</p>
 
 <p><strong>Delta:</strong> The important property here is ‘delta’. With delta set to 1, the bar graph will draw the total kWh for each day calculated from the kWh value at the end of the day, minus the kWh value at the start of the day.</p>
 
@@ -686,21 +692,21 @@ highlight active link...
 
 <p><strong>Mode:</strong> Use this property to obtain timezone correct kwh data. Set to either daily, weekly or monthly.</p>
 
-<p><img src="https://emoncms.org/Modules/site/dailykwh.png" /></p>
+<p><img src="/images/emoncms/vis_bargraph_daily.png" alt="vis_bargraph_daily.png" /></p>
 
 <p>The same options can be used in dashboards for the same output.</p>
 
 <p>All of the visualisations in emoncms that make use of daily data also support this approach including: SimpleZoom, Stacked, StackedSolar, Zoom and OrderBars.</p>
 
-<p>The <strong>Graph module</strong> (set as default on emonPi and Emoncms.org) can also be used to create Kwh per day bar graph from Wh / Kwh accumulator data:</p>
+<p>The <strong>Graph module</strong> (set as default data viewer on the emonPi/emonBase and Emoncms.org) can also be used to create kWh per day bar graph from cumultive Wh / kWh data:</p>
 
-<p>Raw data wh accumulator view:</p>
+<p>Raw feed cumulative kWh view:</p>
 
-<p><img src="/images/setup/wh-accumulator.png" /></p>
+<p><img src="/images/emoncms/graph_cumulative.png" alt="graph_cumulative.png" /></p>
 
-<p>To convert the wh accumulator feed to daily KWh bargraph using the graph tool select Window <code class="highlighter-rouge">type-daily</code> feed <code class="highlighter-rouge">type=Bars</code> and <code class="highlighter-rouge">delta = 1</code> then click <code class="highlighter-rouge">reload</code></p>
+<p>To convert the cumulative kWh feed to daily kWh bargraph using the graph tool select Window <code class="highlighter-rouge">type-daily</code> feed <code class="highlighter-rouge">type=Bars</code> and <code class="highlighter-rouge">delta = 1</code> then click <code class="highlighter-rouge">reload</code></p>
 
-<p><img src="/images/setup/wh-accumulator-bargraph.png" /></p>
+<p><img src="/images/emoncms/graph_kwhday.png" alt="graph_kwhday.png" /></p>
 
 
 </article>
