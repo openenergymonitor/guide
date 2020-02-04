@@ -16,20 +16,20 @@ The following is an example of using this feature for determining the amount of 
 
 ## Example: Heat pump power data
 
-Here we select the heat pump power feed and data range to view. For higher resolution decrease the interval to a point where the number of datapoints is near 3000 datapoints.
+Here we select the heat pump power feed and data range to view. For higher resolution decrease the interval to a point where the number of datapoints is near 8928 datapoints.
 
-![heatpump_elec.png](/images/setup/heatpump_elec.png)
+![heatpump_elec.png](/images/emoncms/histogram_power.png)
 
 ### Time at value
 
 The first histogram mode shows the amount of time spent at a given range.
 
-This could be useful for determining the amount of time a heat pump spends at standby as an example. Here we see that the heat pump spent ~1480000 seconds between 0-50 Watts out of a total time of 2498400 seconds selected in the data viewer. This tells us that the heat pump is on standby for 60% of the time in this period.
+This could be useful for determining the amount of time a heat pump spends at standby as an example. Here we see that the heat pump spent ~1,123,200 seconds between 0-50 Watts out of a total time of 2,592,000 seconds selected in the data viewer. This tells us that the heat pump is on standby for 43% of the time in this period.
 
-![histogram_timeatvalue.png](/images/setup/histogram_timeatvalue.png)
+![histogram_timeatvalue.png](/images/emoncms/histogram_timeatvalue.png)
 
 ### kWh at power
 
-The kWh at power mode is useful for determining the power level where most power was used or generated, In this example we can see that most of the energy used by the heat pump was consumed in the 550-599 Watt segment.
+The kWh at power mode is useful for determining the power level where most power was used or generated, In this example we can see that most of the energy used by the heat pump was consumed in the 500-549 Watt segment (97 kWh).
 
-![histogram_kwhatpower.png](/images/setup/histogram_kwhatpower.png)
+![histogram_kwhatpower.png](/images/emoncms/histogram_kwhatpower.png)
