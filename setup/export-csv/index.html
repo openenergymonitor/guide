@@ -617,7 +617,7 @@ highlight active link...
 
   <p>Its possible to easily export data selected using the emoncms data viewer by clicking on the <strong>Show CSV Output</strong> button at the bottom of the page. Multiple feeds can be selected with datapoints aligned to the same timestamps.</p>
 
-<p>The data viewer CSV export tool is limited to 3000 datapoints. For larger exports the export tool that is part of the feed interface can be used, see below.</p>
+<p>The data viewer CSV export tool is limited to 8928 datapoints. For larger exports the export tool that is part of the feed interface can be used, see below.</p>
 
 <h3 id="data-viewer-csv-export-tool">Data viewer CSV export tool</h3>
 
@@ -631,27 +631,29 @@ highlight active link...
 
 <p><strong>Unix timestamp</strong></p>
 
-<p><img src="/images/setup/csv_export_1.png" alt="csv_export_1.png" /></p>
+<p><img src="/images/emoncms/csvexport_timestamp.png" alt="csv_export_1.png" /></p>
 
-<p><strong>Date time string (i.e: 2016-04-06 00:00:00)</strong></p>
+<p><strong>Date time string (i.e: 2019-11-01 00:00:00)</strong></p>
 
-<p><img src="/images/setup/csv_export_2.png" alt="csv_export_2.png" /></p>
+<p><img src="/images/emoncms/csvexport_datetime.png" alt="csv_export_2.png" /></p>
 
 <p><strong>Seconds since the start of the export</strong></p>
 
-<p><img src="/images/setup/csv_export_3.png" alt="csv_export_3.png" /></p>
+<p><img src="/images/emoncms/csvexport_secondsstart.png" alt="csv_export_3.png" /></p>
 
 <p><strong>Example of exporting multiple feeds</strong></p>
 
-<p>Multiple feeds can be exported for the same timestamps by selecting multiple feeds from the left hand feed selection menu:</p>
+<p>Multiple feeds can be exported for the same timestamps by selecting multiple feeds from the left hand feed selection menu.</p>
 
-<p><img src="/images/setup/csv_export_4.png" alt="csv_export_4.png" /></p>
+<p>Make sure that null values are shown to ensure that datapoints line up correctly.</p>
+
+<p><img src="/images/emoncms/csvexport_multiple.png" alt="csv_export_4.png" /></p>
 
 <h3 id="full-export-via-feed-interface">Full Export via Feed interface</h3>
 
-<p>Full feed exports can be obtained via the export tool that can be accessed from the feed list interface. The start time, end time interval and timezone offset can be selected an estimate is given of the download size.</p>
+<p>Full feed exports can be obtained via the export tool that can be accessed from the feed list interface. The start time, end time interval and timezone offset can be selected and am estimate is given of the download size. Select a feed using the tick box selector and then click on the down-arrow icon in the feed list toolbar to open the feed export tool.</p>
 
-<p><img src="/images/setup/csvexportfromfeeds.png" alt="csvexportfromfeeds.png" /></p>
+<p><img src="/images/emoncms/csvexport_feedlist.png" alt="csvexportfromfeeds.png" /></p>
 
 
 </article>
