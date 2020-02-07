@@ -116,6 +116,9 @@
 <loc>http://guide.openenergymonitor.org/setup/optical-pulse-sensor/</loc>
 </url>
 <url>
+<loc>http://guide.openenergymonitor.org/setup/postprocess/</loc>
+</url>
+<url>
 <loc>http://guide.openenergymonitor.org/setup/remote-access/</loc>
 </url>
 <url>
@@ -141,10 +144,10 @@
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/images/integrations/OpenEVSE_flowchart.pdf</loc>
-<lastmod>2020-02-04T22:32:21+00:00</lastmod>
+<lastmod>2020-02-07T12:49:02+00:00</lastmod>
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/static/mdi-demo.html</loc>
-<lastmod>2020-02-04T22:32:21+00:00</lastmod>
+<lastmod>2020-02-07T12:49:02+00:00</lastmod>
 </url>
 </urlset>
