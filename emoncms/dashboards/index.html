@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Calculating Daily kWh - Guide | OpenEnergyMonitor</title>
+    <title>5. Dashboards - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="Creating Daily kWh">
+    <meta name="description" content="Setup Emoncms dashboards">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/daily-kwh/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/emoncms/dashboards/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Calculating Daily kWh">
+    <meta property="og:title" content="5. Dashboards">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/daily-kwh/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/emoncms/dashboards/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Creating Daily kWh">
+    <meta property="og:description" content="Setup Emoncms dashboards">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Calculating Daily kWh">
-    <meta name="twitter:description" content="Creating Daily kWh">
+    <meta name="twitter:title" content="5. Dashboards">
+    <meta name="twitter:description" content="Setup Emoncms dashboards">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -609,104 +609,61 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      Calculating Daily kWh
+      5. Dashboards
     </h1>
   </header>
   <hr class="divider">
   
 
-  <p>Emoncms supports the creation of daily, weekly &amp; monthly kWh data and graph’s from several different emoncms input types.</p>
-
-<ul>
-  <li>Power in Watts (i.e emontx, emonpi CT channels)</li>
-  <li>Wh/kWh readings that do not reset on power cycle e.g energy meters</li>
-  <li>Wh/kWh readings that reset on power cycle e.g emontx/emonpi pulse count</li>
-</ul>
-
-<h3 id="-creating-daily-kwh-data-from-power-inputs"><a class="title-link" name="creating-daily-kwh-data-from-power-inputs" href="#creating-daily-kwh-data-from-power-inputs"></a> Creating daily kWh data from power inputs</h3>
-
-<p>The standard emonTx and emonPi firmware transmit real power values for each CT channel. Accumulating kWh data can be calculated from this power data using the emoncms “Power to kWh” input processor.</p>
-
-<ol>
-  <li>
-    <p>In the inputs interface select the power input for which you wish to generate kWh data. Click on the spanner icon to bring up the input processing configuration interface.</p>
-  </li>
-  <li>
-    <p>Select the <code class="highlighter-rouge">power to kWh</code> input processor and create a feed, select a feed interval that either matches your post rate i.e 10s on the emontx and emonpi or for reduced disk use; intervals of up to 3600s can be used. Add <code class="highlighter-rouge">_kwh</code> to the feed name in order to help distinguish it from the power feed.</p>
-  </li>
+  <ol>
+  <li>Application specific dashboard Apps</li>
+  <li>Emoncms Android App</li>
+  <li>Custom using dashboard Builder drag’n-drop editor</li>
 </ol>
 
-<p><img src="/images/emoncms/inputproc_powertokwh.png" alt="inputproc_powertokwh.png" /></p>
+<h2 id="1-application-specific-dashboards">1. Application Specific Dashboards</h2>
 
-<h3 id="-creating-daily-kwh-data-from-cumulative-wh-or-kwh-inputs"><a class="title-link" name="creating-daily-kwh-data-from-cumulative-wh-or-kwh-inputs" href="#creating-daily-kwh-data-from-cumulative-wh-or-kwh-inputs"></a> Creating daily kWh data from cumulative Wh or kWh inputs</h3>
+<h4 id="my-electric"><a href="/applications/home-energy">My Electric</a></h4>
 
-<p><strong>Option 1: Wh/kWh readings that do not reset on power cycle e.g energy meters</strong><br />
-If meter data is irregular, missing data will be recorded as null values with the standard ‘log to feed’ input process. If a null value happens to coincide with midnight, the bar graph produced will show spikes or gaps. To avoid this issue use the <code class="highlighter-rouge">Log to feed (Join)</code> input process - which joins across missing values with a straight line.</p>
+<p><img src="/images/applications/home-energy/myelectric_webapp.png" alt="My Electric" /></p>
 
-<ol>
-  <li>
-    <p>In the inputs interface select the input for which you wish to record kWh data. Click on the spanner icon to bring up the input processing configuration interface.</p>
-  </li>
-  <li>
-    <p>If the input value is in Watt hours (Wh) apply a scale of 0.001 to convert to a kWh reading.</p>
-  </li>
-  <li>
-    <p>Select the <code class="highlighter-rouge">Log to feed (Join)</code> input processor and create a new feed, select a feed interval that either matches your post rate i.e 10s on the emontx and emonpi or for reduced disk use; intervals of up to 3600s can be used.</p>
-  </li>
-</ol>
+<h4 id="my-solar-pv"><a href="/applications/solar-pv">My Solar PV</a></h4>
 
-<p><img src="/images/emoncms/inputproc_logfeedjoin.png" alt="inputproc_logfeedjoin.png" /></p>
+<p><img src="/images/applications/solar-pv//my-solarpv1.png" alt="My solar PV" /></p>
 
-<p><strong>Option 2: Wh/kWh readings that reset on power cycle e.g emontx/emonpi pulse count</strong><br />
-The emontx and emonpi pulse count and continuous monitoring cumulative energy inputs reset if the unit is power cycled. If these inputs are recorded with the standard ‘log to feed’ process the resulting feed includes all resets as well as null values if there is any missing data. The bar graph produced will show spikes or gaps. To avoid this issue use the <code class="highlighter-rouge">Wh Accumulator</code> or <code class="highlighter-rouge">kWh Accumulator</code> input process - which both joins across missing values with a straight line and removes the reset - continuing from the value prior to the reset.</p>
+<h3 id="application-specific-dashboards-video-guide">Application Specific Dashboards Video Guide</h3>
 
-<ol>
-  <li>
-    <p>In the inputs interface select the input for which you wish to record kWh data. Click on the spanner icon to bring up the input processing configuration interface.</p>
-  </li>
-  <li>
-    <p>If the input value is in Watt hours (Wh) apply a scale of 0.001 to convert to a kWh reading.</p>
-  </li>
-  <li>
-    <p>Select the <code class="highlighter-rouge">kWh Accumulator</code> input processor and create a new feed, select a feed interval that either matches your post rate i.e 10s on the emontx and emonpi or for reduced disk use; intervals of up to 3600s can be used.</p>
-  </li>
-</ol>
+<div class="videoWrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aYt7-vK0JsI" frameborder="0" allowfullscreen=""></iframe>
+</div>
 
-<p><img src="/images/emoncms/inputproc_kwhacc.png" alt="inputproc_logfeedjoin.png" /></p>
+<h3 id="2-emoncms-android-app"><a href="https://play.google.com/store/apps/details?id=org.emoncms.myapps">2. Emoncms Android App</a></h3>
 
-<hr />
+<p><img src="https://github.com/emoncms/AndroidApp/raw/master/app.png" width="250" /></p>
 
-<h3 id="-viewing-a-kwh-per-day-bar-graph"><a class="title-link" name="viewing-a-kwh-per-day-bar-graph" href="#viewing-a-kwh-per-day-bar-graph"></a> Viewing a kWh per day bar graph</h3>
+<p><a href="https://play.google.com/store/apps/details?id=org.emoncms.myapps&amp;utm_source=global_co&amp;utm_medium=prtnr&amp;utm_content=Mar2515&amp;utm_campaign=PartBadge&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" rel="Get it on Google Play"><img src="https://emoncms.org/Modules/site/en-play-badge.png" alt="Get it on Google Play" /></a></p>
 
-<p><strong>Note:</strong> At least 2 days of data is required to generate a daily kWh graph from accumulating kWh data. At the moment, the bar graphs built using the vis module don’t show the current day’s kWh consumption. The MyElectric app in the apps module, which also uses the cumulative kWh feed type, does show the current day.</p>
+<h3 id="3-emoncms-ios-app"><a href="https://itunes.apple.com/gb/app/emoncms/id1169483587?mt=8">3. Emoncms iOS App</a></h3>
 
-<p>Click on <code class="highlighter-rouge">Setup &gt; Visualisation</code>, and select the <code class="highlighter-rouge">BarGraph</code>.</p>
+<p><img src="https://github.com/emoncms/emoncms-ios/raw/master/images/screen2.png" alt="ios" /></p>
 
-<p>Select the cumulative kWh feed created above.</p>
+<p><a href="https://itunes.apple.com/gb/app/emoncms/id1169483587?mt=8" rel="ios"><img src="https://emoncms.org/Modules/site/appstore.png" alt="Get it on Google Play" /></a></p>
 
-<p><strong>Delta:</strong> The important property here is ‘delta’. With delta set to 1, the bar graph will draw the total kWh for each day calculated from the kWh value at the end of the day, minus the kWh value at the start of the day.</p>
+<h2 id="4-dashboard-editor">4. Dashboard Editor</h2>
 
-<p><strong>Scale &amp; Units:</strong> If the feed is in watt hours, the scale can be used to convert it to kWh by multiplying by 0.001. Units can be set in the units field.</p>
+<p>Custom dashboards can be created by drag and dropping widgets and graphs onto a canvas. See <a href="https://community.openenergymonitor.org/c/emoncms/showcase">Emoncms Showcase forum</a> for an example of what’s possible.</p>
 
-<p><strong>Interval:</strong> The interval property can be set if you wish to have kwh at a set interval such as kwh per hour, for daily, weekly, monthly data use the <strong>mode</strong> property.</p>
+<h3 id="dashboard-editor-video-guide">Dashboard Editor Video Guide</h3>
 
-<p><strong>Mode:</strong> Use this property to obtain timezone correct kwh data. Set to either daily, weekly or monthly.</p>
+<div class="videoWrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eqN9rc9VnqI" frameborder="0" allowfullscreen=""></iframe>
+</div>
 
-<p><img src="/images/emoncms/vis_bargraph_daily.png" alt="vis_bargraph_daily.png" /></p>
+<p>Community created video tutorial for creating a Emoncms dashboard with a custom background (advanced):</p>
 
-<p>The same options can be used in dashboards for the same output.</p>
-
-<p>All of the visualisations in emoncms that make use of daily data also support this approach including: SimpleZoom, Stacked, StackedSolar, Zoom and OrderBars.</p>
-
-<p>The <strong>Graph module</strong> (set as default data viewer on the emonPi/emonBase and Emoncms.org) can also be used to create kWh per day bar graph from cumultive Wh / kWh data:</p>
-
-<p>Raw feed cumulative kWh view:</p>
-
-<p><img src="/images/emoncms/graph_cumulative.png" alt="graph_cumulative.png" /></p>
-
-<p>To convert the cumulative kWh feed to daily kWh bargraph using the graph tool select Window <code class="highlighter-rouge">type-daily</code> feed <code class="highlighter-rouge">type=Bars</code> and <code class="highlighter-rouge">delta = 1</code> then click <code class="highlighter-rouge">reload</code></p>
-
-<p><img src="/images/emoncms/graph_kwhday.png" alt="graph_kwhday.png" /></p>
+<div class="videoWrapper">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/N4xHyiE6mc0" frameborder="0" allowfullscreen=""></iframe>
+</div>
 
 
 </article>
@@ -762,12 +719,13 @@ The emontx and emonpi pulse count and continuous monitoring cumulative energy in
         <li>
           <b>Emoncms</b>
           <ul>
-          <li><a  href='/setup/emoncms-graphs/'>View Graphs </a></li>
-          <li><a class='active' href='/setup/daily-kwh/'>Daily kWh </a></li>
-          <li><a  href='/setup/daily-averages/'>Daily Averages </a></li>
-          <li><a  href='/setup/export-csv/'>Exporting CSV </a></li>
-          <li><a  href='/setup/histograms/'>Histograms </a></li>
-          <li><a  href='/setup/postprocess/'>Post Process </a></li>
+          <li><a  href='/emoncms/coreconcepts/'>Core Concepts </a></li>
+          <li><a  href='/emoncms/graphs/'>View Graphs </a></li>
+          <li><a  href='/emoncms/daily-kwh/'>Daily kWh </a></li>
+          <li><a  href='/emoncms/daily-averages/'>Daily Averages </a></li>
+          <li><a  href='/emoncms/export-csv/'>Exporting CSV </a></li>
+          <li><a  href='/emoncms/histograms/'>Histograms </a></li>
+          <li><a  href='/emoncms/postprocess/'>Post Process </a></li>
           <li><a  href='/technical/api/'>Emoncms API </a></li>
         </ul>
 

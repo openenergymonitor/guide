@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Calculating Averages - Guide | OpenEnergyMonitor</title>
+    <title>Emoncms Core Concepts - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="Calculating Averages">
+    <meta name="description" content="Emoncms Core Concepts">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/daily-averages/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/emoncms/coreconcepts/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Calculating Averages">
+    <meta property="og:title" content="Emoncms Core Concepts">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/daily-averages/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/emoncms/coreconcepts/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Calculating Averages">
+    <meta property="og:description" content="Emoncms Core Concepts">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Calculating Averages">
-    <meta name="twitter:description" content="Calculating Averages">
+    <meta name="twitter:title" content="Emoncms Core Concepts">
+    <meta name="twitter:description" content="Emoncms Core Concepts">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -609,48 +609,114 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      Calculating Averages
+      Emoncms Core Concepts
     </h1>
   </header>
   <hr class="divider">
   
 
-  <p>This guide details how to generate interval based averages i.e hourly, or timezone correct: daily, weekly and monthly averages from emoncms feeds. Designed for determining power, temperature and humidity averages.</p>
+  <p>Emoncms is an open-source web application developed as part of this project, for processing, logging and visualising energy, temperature and other environmental data.</p>
 
-<p>Averages are returned for the time period given by the returned timestamp up to the next timestamp. The timestamp is for the start of the average period.</p>
+<p>Emoncms receives data from OpenEnergyMonitor monitoring hardware and runs both locally on the emonPi/emonBase and remotely on emoncms.org.</p>
 
-<h3 id="hourly-averages">Hourly averages</h3>
+<p>The following guide introduces the core concepts behind emoncms and provides links to guides to learn more.</p>
 
-<ol>
-  <li>Open the feed for which you wish to generate averages for in the default data viewer called graph.</li>
-  <li>Click on the Average tickbox for the feed, below the graph.</li>
-  <li>Select ‘fixed interval’ for type and then enter 3600 in the box next to it (i.e: 3600 seconds in an hour)</li>
-  <li>To complete hit <strong>Reload</strong>.</li>
-</ol>
+<h4 id="inputs-devices-input-processing-and-feeds">Inputs, Devices, Input processing and Feeds</h4>
 
-<p><strong>Note:</strong> If its your first time you may need to click on <strong>Reload a second time</strong> as the averages are computed in the background when the request is first made.</p>
+<p><strong>Inputs:</strong> Data arriving in emoncms is registered first as inputs. Inputs hold only the most recent value and time associated with incoming data. Each input has an associated “node” identifier and a “key” sub-identifier. To record historic data a feed needs to be created from an input.</p>
 
-<p>The result should look like this:</p>
+<p><strong>Feed:</strong> A place where data is recorded, a time-series of datapoints. The standard time-series databases used by emoncms are <a href="https://learn.openenergymonitor.org/electricity-monitoring/timeseries/Fixed-interval">PHPFina</a> and <a href="https://learn.openenergymonitor.org/electricity-monitoring/timeseries/Variable-interval">PHPTimeSeries</a> and were written as part of the emoncms project.</p>
 
-<p><img src="/images/emoncms/graph_averages_hourly.png" alt="hourlyaverage.png" /></p>
+<p><strong>Input processing:</strong> It is often useful to be able to perform mathematical operations on inputs before recording the result to a feed. We can use input processing to calibrate inputs, add, subtract, multiply and divide inputs by each other, and process inputs in one format to another such as the conversion of input power values to a cumulative kWh feed.</p>
 
-<p><strong>CSV Export:</strong> The returned averages can be exported as CSV for use in external programs by clicking on the ‘Show CSV Output’ button available at the bottom of the graph viewer page. See Exporting CSV for more on this.</p>
+<p><strong>Devices:</strong> If the emoncms device module is installed (included by default on emonPi/emonBase). The input “node” indentifier, links these inputs to a device. The device module provides device templates for automatic feed creation and application of input processing.</p>
 
-<h3 id="daily-averages">Daily averages</h3>
+<p>The following guides provide an overview of how to use these features:</p>
 
-<p>To calculate timezone correct daily averages:</p>
+<ul>
+  <li><a href="/setup/local/">Log Locally</a>: An example of configuring emonPi inputs, adding input processing and logging data to feeds</li>
+  <li><a href="/emoncms/daily-kwh/">Calculating Daily kWh</a>: Covers input processes: power_to_kwh, log_to_feed (join) &amp; kWh Accumulator</li>
+  <li>Application guides: <a href="/applications/home-energy/">Home Energy</a> and <a href="/applications/solar-pv/">Solar PV</a> cover input processing and feed creation for these applications.</li>
+</ul>
 
-<ol>
-  <li>Open the feed in the default data viewer (graph) as above.</li>
-  <li>Click on the Average tickbox for the feed, below the graph.</li>
-  <li>select <strong>daily</strong> for type from the dropdown menu.</li>
-  <li>To view the output as a bar graph select ‘Bars’ from the dropdown graph type selector next to the feed</li>
-  <li>To complete hit <strong>Reload</strong>.</li>
-</ol>
+<h4 id="graphs-visualisations-apps--dashboards">Graphs, Visualisations, Apps &amp; Dashboards</h4>
 
-<p><img src="/images/emoncms/graph_averages_daily.png" alt="dailyaverage.png" /></p>
+<p>Data recorded in feeds can then be visualised with a number of different tools to suit a wide range of applications.</p>
 
-<p><strong>CSV Export:</strong> The returned averages can be exported as CSV for use in external programs by clicking on the ‘Show CSV Output’ button available at the bottom of the graph viewer page. See Exporting CSV for more on this.</p>
+<p><strong>Emoncms Graph module:</strong> The emoncms graph module is the standard feed data viewer accessible directly from the emoncms feeds page by selecting or clicking on feeds. This interface provide options to compare multiple feeds on a single graph, calculate averages, daily, monthly and annual values and export data as CSV. Graphs created using this interface can be saved and included on Emoncms dashboards.</p>
+
+<p>Guides: <a href="/emoncms/graphs/">View Graphs</a>, <a href="/emoncms/daily-kwh/">Calculating Daily kWh</a>, <a href="/emoncms/daily-averages/">Calculating Averages</a>, <a href="/emoncms/export-csv/">Exporting CSV</a>, <a href="/emoncms/histograms/">Histograms</a></p>
+
+<p><strong>Visualisations:</strong> Emoncms visualisations pre-dated the graph module and include a wider range of different visualisations - some of which are reproducable using the graph module such as ‘rawdata’, ‘bargraph’ and many aspects of ‘multigraph’. Visualisations can also be included in dashboards.</p>
+
+<p><strong>Dashboards:</strong> The Emoncms dashboard module provides a way to build custom dashboards using a drag-and-drop interface using a variety of widgets and graphs. Dashboards can be made public.</p>
+
+<p><strong>Apps:</strong> The Emoncms apps module provides pre-built application specific dashboards e.g MyElectric for home energy consumption, MySolar for home solar self consumption visualisation and MyHeatpump for heatpump performance analysis.</p>
+
+<h4 id="emoncms-modules">Emoncms Modules</h4>
+
+<p>Emoncms is designed as a modular extendable application. <a href="https://github.com/emoncms/emoncms">Emoncms core</a> includes the core: user, inputs, input processing, feeds &amp; visualisations functionality.</p>
+
+<p>The following modules are all optional modules, but are installed as default on our emonSD software stack included on the emonPi/emonBase SD card.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Module</th>
+      <th>Github</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Graph</td>
+      <td>https://github.com/emoncms/graph</td>
+    </tr>
+    <tr>
+      <td>App</td>
+      <td>https://github.com/emoncms/app</td>
+    </tr>
+    <tr>
+      <td>Dashboard</td>
+      <td>https://github.com/emoncms/dashboard</td>
+    </tr>
+    <tr>
+      <td>Backup</td>
+      <td>https://github.com/emoncms/backup</td>
+    </tr>
+    <tr>
+      <td>Post Process</td>
+      <td>https://github.com/emoncms/postprocess</td>
+    </tr>
+    <tr>
+      <td>Sync</td>
+      <td>https://github.com/emoncms/sync</td>
+    </tr>
+    <tr>
+      <td>DemandShaper</td>
+      <td>https://github.com/emoncms/demandshaper</td>
+    </tr>
+    <tr>
+      <td>WiFi</td>
+      <td>https://github.com/emoncms/wifi</td>
+    </tr>
+    <tr>
+      <td>Config</td>
+      <td>https://github.com/emoncms/config</td>
+    </tr>
+    <tr>
+      <td>Usefulscripts</td>
+      <td>https://github.com/emoncms/usefulscripts</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="emonsd-and-emonscripts">emonSD and EmonScripts</h4>
+
+<p>The emonSD software stack designed to run on a emonPi/emonBase (or any RaspberryPi) is available as a pre-built image for download here: <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log</a></p>
+
+<p>This image is built using a collection of automated build scripts called EmonScripts available here: <a href="https://github.com/openenergymonitor/EmonScripts">https://github.com/openenergymonitor/EmonScripts</a>. These scripts also handle the emoncms system updater available from the Emoncms Admin page.</p>
+
+<p>The EmonScripts installer can also be used to install on any debian system. Follow the instructions here for <a href="https://github.com/openenergymonitor/EmonScripts/blob/master/install/readme.md">custom raspberrypi, ubuntu and digital ocean droplet installation</a>.</p>
 
 
 </article>
@@ -706,12 +772,13 @@ highlight active link...
         <li>
           <b>Emoncms</b>
           <ul>
-          <li><a  href='/setup/emoncms-graphs/'>View Graphs </a></li>
-          <li><a  href='/setup/daily-kwh/'>Daily kWh </a></li>
-          <li><a class='active' href='/setup/daily-averages/'>Daily Averages </a></li>
-          <li><a  href='/setup/export-csv/'>Exporting CSV </a></li>
-          <li><a  href='/setup/histograms/'>Histograms </a></li>
-          <li><a  href='/setup/postprocess/'>Post Process </a></li>
+          <li><a class='active' href='/emoncms/coreconcepts/'>Core Concepts </a></li>
+          <li><a  href='/emoncms/graphs/'>View Graphs </a></li>
+          <li><a  href='/emoncms/daily-kwh/'>Daily kWh </a></li>
+          <li><a  href='/emoncms/daily-averages/'>Daily Averages </a></li>
+          <li><a  href='/emoncms/export-csv/'>Exporting CSV </a></li>
+          <li><a  href='/emoncms/histograms/'>Histograms </a></li>
+          <li><a  href='/emoncms/postprocess/'>Post Process </a></li>
           <li><a  href='/technical/api/'>Emoncms API </a></li>
         </ul>
 

@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Emoncms API - Guide | OpenEnergyMonitor</title>
+    <title>Histograms - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="Emoncms API">
+    <meta name="description" content="Histograms">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/technical/api/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/emoncms/histograms/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Emoncms API">
+    <meta property="og:title" content="Histograms">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/technical/api/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/emoncms/histograms/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Emoncms API">
+    <meta property="og:description" content="Histograms">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Emoncms API">
-    <meta name="twitter:description" content="Emoncms API">
+    <meta name="twitter:title" content="Histograms">
+    <meta name="twitter:description" content="Histograms">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -609,38 +609,35 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      Emoncms API
+      Histograms
     </h1>
   </header>
   <hr class="divider">
   
 
-  <h2 id="emoncms-api-docs">Emoncms API docs</h2>
+  <p>The Emoncms Data Viewer features a histogram tool for determining the time spent at different values or energy used at different power levels.</p>
 
-<p>The  API is the same for remote <a href="https://emoncms.org">Emoncms.org</a> and local Emoncms (running on emonPi). To get started on the EmonPi, read /var/www/emoncms/readme.md or browse to http://127.0.0.1/emoncms/feed/api.</p>
+<p>The following is an example of using this feature for determining the amount of time a heat pump spends on standby and the power level at which most of its energy demand is consumed.</p>
 
-<p>For a local EmonCMS system, just replace <code class="highlighter-rouge">emoncms.org</code> with <code class="highlighter-rouge">&lt;EMONPI_LOCAL_IP_ADDDRESS&gt;/emoncms</code>. For instance http://127.0.0.1/emoncms.</p>
-<ul>
-  <li><a href="https://emoncms.org/site/api#input">Emoncms Input API</a></li>
-  <li><a href="https://emoncms.org/site/api#feed">Emoncms Feed API</a></li>
-</ul>
+<h2 id="example-heat-pump-power-data">Example: Heat pump power data</h2>
 
-<p>When trying to read a value, you’ll notice that authentication is required.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pi@emonpi(ro):~$ wget -qO- "http://127.0.0.1/emoncms/feed/timevalue.json?id=1"
-{"success":false,"message":"Username or password empty"}pi@emonpi(ro):~$ 
-</code></pre></div></div>
+<p>Here we select the heat pump power feed and data range to view. For higher resolution decrease the interval to a point where the number of datapoints is near 8928 datapoints.</p>
 
-<p>Visit https://emoncms.org/site/api# for more information on authentication. Retrieve the API keys from http://127.0.0.1/emoncms/feed/api. For this example, the read only key is ok.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pi@emonpi(ro):~$ APIKEY=put_your_api_key_here
-pi@emonpi(ro):~$ wget -qO- "http://127.0.0.1/emoncms/feed/timevalue.json?id=1&amp;apikey=$APIKEY"
-{"time":1523695587,"value":32}pi@emonpi(ro):~$ 
-</code></pre></div></div>
+<p><img src="/images/emoncms/histogram_power.png" alt="heatpump_elec.png" /></p>
 
-<p>If you specify an invalid feed id, you’ll get an error message.</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pi@emonpi(rw):~$ wget -qO- "http://127.0.0.1/emoncms/feed/timevalue.json?id=3&amp;apikey=$APIKEY"
-{"success":false,"message":"Feed does not exist"}
-</code></pre></div></div>
-<p>Check your feed list id against the EmonCMS web interface at http://127.0.0.1/emoncms/feed/list</p>
+<h3 id="time-at-value">Time at value</h3>
+
+<p>The first histogram mode shows the amount of time spent at a given range.</p>
+
+<p>This could be useful for determining the amount of time a heat pump spends at standby as an example. Here we see that the heat pump spent ~1,123,200 seconds between 0-50 Watts out of a total time of 2,592,000 seconds selected in the data viewer. This tells us that the heat pump is on standby for 43% of the time in this period.</p>
+
+<p><img src="/images/emoncms/histogram_timeatvalue.png" alt="histogram_timeatvalue.png" /></p>
+
+<h3 id="kwh-at-power">kWh at power</h3>
+
+<p>The kWh at power mode is useful for determining the power level where most power was used or generated, In this example we can see that most of the energy used by the heat pump was consumed in the 500-549 Watt segment (97 kWh).</p>
+
+<p><img src="/images/emoncms/histogram_kwhatpower.png" alt="histogram_kwhatpower.png" /></p>
 
 
 </article>
@@ -701,9 +698,9 @@ pi@emonpi(ro):~$ wget -qO- "http://127.0.0.1/emoncms/feed/timevalue.json?id=1&am
           <li><a  href='/emoncms/daily-kwh/'>Daily kWh </a></li>
           <li><a  href='/emoncms/daily-averages/'>Daily Averages </a></li>
           <li><a  href='/emoncms/export-csv/'>Exporting CSV </a></li>
-          <li><a  href='/emoncms/histograms/'>Histograms </a></li>
+          <li><a class='active' href='/emoncms/histograms/'>Histograms </a></li>
           <li><a  href='/emoncms/postprocess/'>Post Process </a></li>
-          <li><a class='active' href='/technical/api/'>Emoncms API </a></li>
+          <li><a  href='/technical/api/'>Emoncms API </a></li>
         </ul>
 
 

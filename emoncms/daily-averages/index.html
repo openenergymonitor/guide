@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Histograms - Guide | OpenEnergyMonitor</title>
+    <title>Calculating Averages - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="Histograms">
+    <meta name="description" content="Calculating Averages">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/histograms/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/emoncms/daily-averages/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Histograms">
+    <meta property="og:title" content="Calculating Averages">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/histograms/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/emoncms/daily-averages/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Histograms">
+    <meta property="og:description" content="Calculating Averages">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Histograms">
-    <meta name="twitter:description" content="Histograms">
+    <meta name="twitter:title" content="Calculating Averages">
+    <meta name="twitter:description" content="Calculating Averages">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -609,35 +609,48 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      Histograms
+      Calculating Averages
     </h1>
   </header>
   <hr class="divider">
   
 
-  <p>The Emoncms Data Viewer features a histogram tool for determining the time spent at different values or energy used at different power levels.</p>
+  <p>This guide details how to generate interval based averages i.e hourly, or timezone correct: daily, weekly and monthly averages from emoncms feeds. Designed for determining power, temperature and humidity averages.</p>
 
-<p>The following is an example of using this feature for determining the amount of time a heat pump spends on standby and the power level at which most of its energy demand is consumed.</p>
+<p>Averages are returned for the time period given by the returned timestamp up to the next timestamp. The timestamp is for the start of the average period.</p>
 
-<h2 id="example-heat-pump-power-data">Example: Heat pump power data</h2>
+<h3 id="hourly-averages">Hourly averages</h3>
 
-<p>Here we select the heat pump power feed and data range to view. For higher resolution decrease the interval to a point where the number of datapoints is near 8928 datapoints.</p>
+<ol>
+  <li>Open the feed for which you wish to generate averages for in the default data viewer called graph.</li>
+  <li>Click on the Average tickbox for the feed, below the graph.</li>
+  <li>Select ‘fixed interval’ for type and then enter 3600 in the box next to it (i.e: 3600 seconds in an hour)</li>
+  <li>To complete hit <strong>Reload</strong>.</li>
+</ol>
 
-<p><img src="/images/emoncms/histogram_power.png" alt="heatpump_elec.png" /></p>
+<p><strong>Note:</strong> If its your first time you may need to click on <strong>Reload a second time</strong> as the averages are computed in the background when the request is first made.</p>
 
-<h3 id="time-at-value">Time at value</h3>
+<p>The result should look like this:</p>
 
-<p>The first histogram mode shows the amount of time spent at a given range.</p>
+<p><img src="/images/emoncms/graph_averages_hourly.png" alt="hourlyaverage.png" /></p>
 
-<p>This could be useful for determining the amount of time a heat pump spends at standby as an example. Here we see that the heat pump spent ~1,123,200 seconds between 0-50 Watts out of a total time of 2,592,000 seconds selected in the data viewer. This tells us that the heat pump is on standby for 43% of the time in this period.</p>
+<p><strong>CSV Export:</strong> The returned averages can be exported as CSV for use in external programs by clicking on the ‘Show CSV Output’ button available at the bottom of the graph viewer page. See Exporting CSV for more on this.</p>
 
-<p><img src="/images/emoncms/histogram_timeatvalue.png" alt="histogram_timeatvalue.png" /></p>
+<h3 id="daily-averages">Daily averages</h3>
 
-<h3 id="kwh-at-power">kWh at power</h3>
+<p>To calculate timezone correct daily averages:</p>
 
-<p>The kWh at power mode is useful for determining the power level where most power was used or generated, In this example we can see that most of the energy used by the heat pump was consumed in the 500-549 Watt segment (97 kWh).</p>
+<ol>
+  <li>Open the feed in the default data viewer (graph) as above.</li>
+  <li>Click on the Average tickbox for the feed, below the graph.</li>
+  <li>select <strong>daily</strong> for type from the dropdown menu.</li>
+  <li>To view the output as a bar graph select ‘Bars’ from the dropdown graph type selector next to the feed</li>
+  <li>To complete hit <strong>Reload</strong>.</li>
+</ol>
 
-<p><img src="/images/emoncms/histogram_kwhatpower.png" alt="histogram_kwhatpower.png" /></p>
+<p><img src="/images/emoncms/graph_averages_daily.png" alt="dailyaverage.png" /></p>
+
+<p><strong>CSV Export:</strong> The returned averages can be exported as CSV for use in external programs by clicking on the ‘Show CSV Output’ button available at the bottom of the graph viewer page. See Exporting CSV for more on this.</p>
 
 
 </article>
@@ -693,12 +706,13 @@ highlight active link...
         <li>
           <b>Emoncms</b>
           <ul>
-          <li><a  href='/setup/emoncms-graphs/'>View Graphs </a></li>
-          <li><a  href='/setup/daily-kwh/'>Daily kWh </a></li>
-          <li><a  href='/setup/daily-averages/'>Daily Averages </a></li>
-          <li><a  href='/setup/export-csv/'>Exporting CSV </a></li>
-          <li><a class='active' href='/setup/histograms/'>Histograms </a></li>
-          <li><a  href='/setup/postprocess/'>Post Process </a></li>
+          <li><a  href='/emoncms/coreconcepts/'>Core Concepts </a></li>
+          <li><a  href='/emoncms/graphs/'>View Graphs </a></li>
+          <li><a  href='/emoncms/daily-kwh/'>Daily kWh </a></li>
+          <li><a class='active' href='/emoncms/daily-averages/'>Daily Averages </a></li>
+          <li><a  href='/emoncms/export-csv/'>Exporting CSV </a></li>
+          <li><a  href='/emoncms/histograms/'>Histograms </a></li>
+          <li><a  href='/emoncms/postprocess/'>Post Process </a></li>
           <li><a  href='/technical/api/'>Emoncms API </a></li>
         </ul>
 

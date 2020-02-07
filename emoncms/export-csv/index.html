@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Emoncms Post Processor - Guide | OpenEnergyMonitor</title>
+    <title>Exporting CSV - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="Post Process">
+    <meta name="description" content="Exporting CSV">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/postprocess/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/emoncms/export-csv/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Emoncms Post Processor">
+    <meta property="og:title" content="Exporting CSV">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/postprocess/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/emoncms/export-csv/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Post Process">
+    <meta property="og:description" content="Exporting CSV">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Emoncms Post Processor">
-    <meta name="twitter:description" content="Post Process">
+    <meta name="twitter:title" content="Exporting CSV">
+    <meta name="twitter:description" content="Exporting CSV">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -609,92 +609,51 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      Emoncms Post Processor
+      Exporting CSV
     </h1>
   </header>
   <hr class="divider">
   
 
-  <p>While emoncms is designed around ‘input processing’ the processing of data (e.g calibration, summing inputs, calculating kWh data)  before it is recorded to a feed. Sometimes it is useful to be able to manipulate feed data after it has been recorded, removing the reliance on setting everything up right in the first time.</p>
+  <p>Its possible to easily export data selected using the emoncms data viewer by clicking on the <strong>Show CSV Output</strong> button at the bottom of the page. Multiple feeds can be selected with datapoints aligned to the same timestamps.</p>
 
-<p>This guide gives an overview of how to use the Emoncms post processing module to do this. Including examples of commonly used post processors. The post process module is installed by default and available under the <strong>Setup</strong> menu on the emonSD software stack running on the emonPi and emonBase.</p>
+<p>The data viewer CSV export tool is limited to 8928 datapoints. For larger exports the export tool that is part of the feed interface can be used, see below.</p>
 
-<h4 id="example-1-creating-a-cumulative-kwh-feed-from-a-power-feed">Example 1: Creating a cumulative kWh feed from a power feed</h4>
+<h3 id="data-viewer-csv-export-tool">Data viewer CSV export tool</h3>
 
-<p>Cumulative kWh feeds are useful for calculating kWh consumption per half hour/hourday/month &amp; year. They are used by many of the emoncms apps. See the guide here on <a href="http://localhost/guide/setup/daily-kwh/">Creating Daily kWh</a>.</p>
-
-<p>Typically a cumulative kWh feed is created from a power input using input processing. The <strong>power_to_kwh</strong> input processor is used. But lets say we forgot to create this feed at original setup - or that as is still sometimes an issue the cumulative kWh value resets as a result of a power failure to the Pi. We can use the post process module to create or re-build the feed.</p>
+<p>There are 3 timestamp formats available:</p>
 
 <ol>
-  <li>
-    <p>Navigate to the post process module under the emoncms setup menu.</p>
-  </li>
-  <li>
-    <p>Select the <strong>powertokwh</strong> process in the process selection dropdown.</p>
-  </li>
-  <li>
-    <p>Select the source power feed, in the example below I have selected P1 (the power value of CT1 on an EmonTx).</p>
-  </li>
-  <li>
-    <p>Enter a suitable name for the new cumulative kWh feed. The name needs to be unique.</p>
-  </li>
-  <li>
-    <p>A ‘Create’ button will appear below the feed output name input box. Click to start the post processing operation.</p>
-  </li>
+  <li>Unix timestamp</li>
+  <li>Seconds since the start of the export</li>
+  <li>Date time string “2016-04-06 00:00:00”</li>
 </ol>
 
-<p>The page should now look similar to this screenshot:</p>
+<p><strong>Unix timestamp</strong></p>
 
-<p><img src="/images/emoncms/postprocess1.png" alt="postprocess" /></p>
+<p><img src="/images/emoncms/csvexport_timestamp.png" alt="csv_export_1.png" /></p>
 
-<p>After a breif time the new process will be listed under ‘My processes’. Above this there is a Logger window to show progress in processing the feed. Click on ‘Auto Refresh’ to see progress.</p>
+<p><strong>Date time string (i.e: 2019-11-01 00:00:00)</strong></p>
 
-<p>Depending on the size of the source feed the processing time could be short (couple of seconds) to quite long (several minutes).</p>
+<p><img src="/images/emoncms/csvexport_datetime.png" alt="csv_export_2.png" /></p>
 
-<p>After completion the new feed <strong>will not</strong> automatically update as new data is added to the original power feed. To automatically update the feed: use input processing on the original power input to update the feed - in this case we would add a <strong>power_to_kwh</strong> input process and select the feed that we have created with the post processing module.</p>
+<p><strong>Seconds since the start of the export</strong></p>
 
-<h4 id="example-2-the-importcalc-post-processor">Example 2: The ‘importcalc’ post processor</h4>
+<p><img src="/images/emoncms/csvexport_secondsstart.png" alt="csv_export_3.png" /></p>
 
-<p>The Emoncms MySolar app requires 3 power feeds: solar, use &amp; import and 3 cumulative kWh feeds: solar_kwh, use_kwh &amp; import_kwh. It’s easy to miss setting up the input processing to calculate the import feeds when doing initial setup. We can use this post process to calculate the import power feed at a later point.</p>
+<p><strong>Example of exporting multiple feeds</strong></p>
 
-<p>To configure: select the relevant solar power feed and house consumption feed, create a feed called ‘import’ as the output feed and click Create.</p>
+<p>Multiple feeds can be exported for the same timestamps by selecting multiple feeds from the left hand feed selection menu.</p>
 
-<p>As a second step we can create a cumulative kWh feed from this newly created import feed using example 1 above. The newly created import and import_kwh feed can now be used by the MySolar app to show proportion of self consumption and quantity of imported electricity from the grid.</p>
+<p>Make sure that null values are shown to ensure that datapoints line up correctly.</p>
 
-<h4 id="example-3-the-formula-post-processor">Example 3: The formula post processor</h4>
+<p><img src="/images/emoncms/csvexport_multiple.png" alt="csv_export_4.png" /></p>
 
-<p>The basic_formula processor is a versatile post processor that can be used to add, subtract, multiply and divide feeds with each other as well as applying multiplication factors and offsets.</p>
+<h3 id="full-export-via-feed-interface">Full Export via Feed interface</h3>
 
-<p>An example formula might look like this:</p>
+<p>Full feed exports can be obtained via the export tool that can be accessed from the feed list interface. The start time, end time interval and timezone offset can be selected and am estimate is given of the download size. Select a feed using the tick box selector and then click on the down-arrow icon in the feed list toolbar to open the feed export tool.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>f1+2*f2-f3/12
-</code></pre></div></div>
-
-<p>Here the feed id is the number appended to the ‘f’ identifier. f1 = feed id 1.</p>
-
-<h4 id="full-post-processor-list">Full post processor list</h4>
-
-<ul>
-  <li><strong>powertokwh:</strong> calculate a cumulative kwh feed from a power feed</li>
-  <li><strong>accumulator:</strong> calculate a cumulative sum of the source feed</li>
-  <li><strong>importcalc:</strong> calculate grid import from house consumption and solar generation</li>
-  <li><strong>exportcalc:</strong> calculate grid export from house consumption and solar generation</li>
-  <li><strong>addfeeds:</strong> add multiple feeds together (see basic_formula to add more than 2 feeds)</li>
-  <li><strong>scalefeed:</strong> scale a feed by the value given</li>
-  <li><strong>offsetfeed:</strong> add an offset to a feed</li>
-  <li><strong>mergefeeds:</strong> calculates the average of both feeds where data is available</li>
-  <li><strong>trimfeedstart:</strong> delete data from the start of a feed</li>
-  <li><strong>removeresets:</strong> remove resets in a accumulating feed</li>
-  <li><strong>removenan:</strong> join across missing data points with a straight line</li>
-  <li><strong>liquidairflow_tokwh:</strong> calculate kWh from flow, return temperature, flow rate feed and specific heat</li>
-  <li><strong>constantflow_tokwh:</strong> calculate kWh from flow, return temperature, flow rate constant and specific heat</li>
-  <li><strong>basic_formula:</strong> Vesatile formula post processor for custom calculations</li>
-</ul>
-
-<h4 id="open-source">Open Source</h4>
-
-<p>The post process module is available on github here: <a href="https://github.com/emoncms/postprocess">https://github.com/emoncms/postprocess</a><br />
-See also open bugs and enhancement requests: <a href="https://github.com/emoncms/postprocess/issues">https://github.com/emoncms/postprocess/issues</a></p>
+<p><img src="/images/emoncms/csvexport_feedlist.png" alt="csvexportfromfeeds.png" /></p>
 
 
 </article>
@@ -750,12 +709,13 @@ See also open bugs and enhancement requests: <a href="https://github.com/emoncms
         <li>
           <b>Emoncms</b>
           <ul>
-          <li><a  href='/setup/emoncms-graphs/'>View Graphs </a></li>
-          <li><a  href='/setup/daily-kwh/'>Daily kWh </a></li>
-          <li><a  href='/setup/daily-averages/'>Daily Averages </a></li>
-          <li><a  href='/setup/export-csv/'>Exporting CSV </a></li>
-          <li><a  href='/setup/histograms/'>Histograms </a></li>
-          <li><a class='active' href='/setup/postprocess/'>Post Process </a></li>
+          <li><a  href='/emoncms/coreconcepts/'>Core Concepts </a></li>
+          <li><a  href='/emoncms/graphs/'>View Graphs </a></li>
+          <li><a  href='/emoncms/daily-kwh/'>Daily kWh </a></li>
+          <li><a  href='/emoncms/daily-averages/'>Daily Averages </a></li>
+          <li><a class='active' href='/emoncms/export-csv/'>Exporting CSV </a></li>
+          <li><a  href='/emoncms/histograms/'>Histograms </a></li>
+          <li><a  href='/emoncms/postprocess/'>Post Process </a></li>
           <li><a  href='/technical/api/'>Emoncms API </a></li>
         </ul>
 
