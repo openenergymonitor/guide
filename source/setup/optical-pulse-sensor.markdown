@@ -82,7 +82,7 @@ To convert the wh accumulator feed to daily KWh bargraph using the graph tool se
 
 <img src="/images/setup/wh-accumulator-bargraph.png" />
 
-See Emoncms [daily Kwh guide](/setup/daily-kwh) for mor info.
+See Emoncms [daily kWh guide](/emoncms/daily-kwh) for mor info.
 
 ## {% linkable_title Appendix A: %}
 

@@ -94,9 +94,3 @@ After changing the emonPi node ID we also needto update the EmonHub node decoder
 [See here for detailed emonhub config documentation.](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md)
 
 To start the emonPi's posting to the same emoncms.org account paste in the same Emoncms.org read-write API key into each emonPi's emonhub config file as detailed above.
-
-<br>
-
-***
-
-### [Next step: Dashboards &raquo;](/setup/dashboards/)
