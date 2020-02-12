@@ -617,19 +617,19 @@ highlight active link...
 
   <p>Emoncms is an open-source web application developed as part of this project, for processing, logging and visualising energy, temperature and other environmental data.</p>
 
-<p>Emoncms receives data from OpenEnergyMonitor monitoring hardware and runs both locally on the emonPi/emonBase and remotely on emoncms.org.</p>
+<p>Emoncms receives data from OpenEnergyMonitor monitoring hardware is installed locally on the emonPi/emonBase. A similar (but not identical) version is also publicly available on emoncms.org. Either one may be used, or both may be used in parallel.</p>
 
 <p>The following guide introduces the core concepts behind emoncms and provides links to guides to learn more.</p>
 
 <h4 id="inputs-devices-input-processing-and-feeds">Inputs, Devices, Input processing and Feeds</h4>
 
-<p><strong>Inputs:</strong> Data arriving in emoncms is registered first as inputs. Inputs hold only the most recent value and time associated with incoming data. Each input has an associated “node” identifier and a “key” sub-identifier. To record historic data a feed needs to be created from an input.</p>
+<p><strong>Inputs:</strong> Data arriving in emoncms is registered first as inputs (This is automatic). Inputs hold only the most recent value and time associated with incoming data. Each input has an associated “node” identifier and a “key” sub-identifier. To record historic data a feed needs to be created from an input.</p>
 
-<p><strong>Feed:</strong> A place where data is recorded, a time-series of datapoints. The standard time-series databases used by emoncms are <a href="https://learn.openenergymonitor.org/electricity-monitoring/timeseries/Fixed-interval">PHPFina</a> and <a href="https://learn.openenergymonitor.org/electricity-monitoring/timeseries/Variable-interval">PHPTimeSeries</a> and were written as part of the emoncms project.</p>
+<p><strong>Feed:</strong> A place where data is recorded, a time-series of datapoints. The standard time-series databases used by emoncms are <a href="https://learn.openenergymonitor.org/electricity-monitoring/timeseries/Fixed-interval">PHPFina</a> and <a href="https://learn.openenergymonitor.org/electricity-monitoring/timeseries/Variable-interval">PHPTimeSeries</a> and were created as part of the emoncms project.</p>
 
 <p><strong>Input processing:</strong> It is often useful to be able to perform mathematical operations on inputs before recording the result to a feed. We can use input processing to calibrate inputs, add, subtract, multiply and divide inputs by each other, and process inputs in one format to another such as the conversion of input power values to a cumulative kWh feed.</p>
 
-<p><strong>Devices:</strong> If the emoncms device module is installed (included by default on emonPi/emonBase). The input “node” indentifier, links these inputs to a device. The device module provides device templates for automatic feed creation and application of input processing.</p>
+<p><strong>Devices:</strong> If the emoncms device module is installed (included by default on emonPi/emonBase) the input “node” indentifier links these inputs to a device. The device module provides device templates for automatic feed creation and application of input processing.</p>
 
 <p>The following guides provide an overview of how to use these features:</p>
 
@@ -641,9 +641,9 @@ highlight active link...
 
 <h4 id="graphs-visualisations-apps--dashboards">Graphs, Visualisations, Apps &amp; Dashboards</h4>
 
-<p>Data recorded in feeds can then be visualised with a number of different tools to suit a wide range of applications.</p>
+<p>Data recorded in feeds can be visualised with a number of different tools to suit a wide range of applications.</p>
 
-<p><strong>Emoncms Graph module:</strong> The emoncms graph module is the standard feed data viewer accessible directly from the emoncms feeds page by selecting or clicking on feeds. This interface provide options to compare multiple feeds on a single graph, calculate averages, daily, monthly and annual values and export data as CSV. Graphs created using this interface can be saved and included on Emoncms dashboards.</p>
+<p><strong>Emoncms Graph module:</strong> The emoncms graph module is the standard feed data viewer accessible directly from the emoncms feeds page by selecting or clicking on feeds. This interface provides options to compare multiple feeds on a single graph, calculate averages, daily, monthly and annual values and export data as CSV. Graphs created using this interface can be saved and included on Emoncms dashboards.</p>
 
 <p>Guides: <a href="/emoncms/graphs/">View Graphs</a>, <a href="/emoncms/daily-kwh/">Calculating Daily kWh</a>, <a href="/emoncms/daily-averages/">Calculating Averages</a>, <a href="/emoncms/export-csv/">Exporting CSV</a>, <a href="/emoncms/histograms/">Histograms</a></p>
 
@@ -657,7 +657,7 @@ highlight active link...
 
 <p>Emoncms is designed as a modular extendable application. <a href="https://github.com/emoncms/emoncms">Emoncms core</a> includes the core: user, inputs, input processing, feeds &amp; visualisations functionality.</p>
 
-<p>The following modules are all optional modules, but are installed as default on our emonSD software stack included on the emonPi/emonBase SD card.</p>
+<p>The following modules are all optional, but are installed as default on our emonSD software stack included on the emonPi/emonBase SD card.</p>
 
 <table>
   <thead>
@@ -669,54 +669,54 @@ highlight active link...
   <tbody>
     <tr>
       <td>Graph</td>
-      <td>https://github.com/emoncms/graph</td>
+      <td><a href="https://github.com/emoncms/graph">https://github.com/emoncms/graph</a></td>
     </tr>
     <tr>
       <td>App</td>
-      <td>https://github.com/emoncms/app</td>
+      <td><a href="https://github.com/emoncms/app">https://github.com/emoncms/app</a></td>
     </tr>
     <tr>
       <td>Dashboard</td>
-      <td>https://github.com/emoncms/dashboard</td>
+      <td><a href="https://github.com/emoncms/dashboard">https://github.com/emoncms/dashboard</a></td>
     </tr>
     <tr>
       <td>Backup</td>
-      <td>https://github.com/emoncms/backup</td>
+      <td><a href="https://github.com/emoncms/backup">https://github.com/emoncms/backup</a></td>
     </tr>
     <tr>
       <td>Post Process</td>
-      <td>https://github.com/emoncms/postprocess</td>
+      <td><a href="https://github.com/emoncms/postprocess">https://github.com/emoncms/postprocess</a></td>
     </tr>
     <tr>
       <td>Sync</td>
-      <td>https://github.com/emoncms/sync</td>
+      <td><a href="https://github.com/emoncms/sync">https://github.com/emoncms/sync</a></td>
     </tr>
     <tr>
       <td>DemandShaper</td>
-      <td>https://github.com/emoncms/demandshaper</td>
+      <td><a href="https://github.com/emoncms/demandshaper">https://github.com/emoncms/demandshaper</a></td>
     </tr>
     <tr>
       <td>WiFi</td>
-      <td>https://github.com/emoncms/wifi</td>
+      <td><a href="https://github.com/emoncms/wifi">https://github.com/emoncms/wifi</a></td>
     </tr>
     <tr>
       <td>Config</td>
-      <td>https://github.com/emoncms/config</td>
+      <td><a href="https://github.com/emoncms/config">https://github.com/emoncms/config</a></td>
     </tr>
     <tr>
       <td>Usefulscripts</td>
-      <td>https://github.com/emoncms/usefulscripts</td>
+      <td><a href="https://github.com/emoncms/usefulscripts">https://github.com/emoncms/usefulscripts</a></td>
     </tr>
   </tbody>
 </table>
 
 <h4 id="emonsd-and-emonscripts">emonSD and EmonScripts</h4>
 
-<p>The emonSD software stack designed to run on a emonPi/emonBase (or any RaspberryPi) is available as a pre-built image for download here: <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log</a></p>
+<p>The emonSD software stack, designed to run on a emonPi/emonBase (or any RaspberryPi), is available as a pre-built image for download here: <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log</a></p>
 
-<p>This image is built using a collection of automated build scripts called EmonScripts available here: <a href="https://github.com/openenergymonitor/EmonScripts">https://github.com/openenergymonitor/EmonScripts</a>. These scripts also handle the emoncms system updater available from the Emoncms Admin page.</p>
+<p>This image is built using a collection of automated build scripts called EmonScripts, available here: <a href="https://github.com/openenergymonitor/EmonScripts">https://github.com/openenergymonitor/EmonScripts</a>. These scripts also handle the emoncms system updater available from the Emoncms Admin page.</p>
 
-<p>The EmonScripts installer can also be used to install on any debian system. Follow the instructions here for <a href="https://github.com/openenergymonitor/EmonScripts/blob/master/install/readme.md">custom raspberrypi, ubuntu and digital ocean droplet installation</a>.</p>
+<p>The EmonScripts installer can also be used to install on any Debian system. Follow the instructions here for <a href="https://github.com/openenergymonitor/EmonScripts/blob/master/install/readme.md">custom raspberrypi, ubuntu and digital ocean droplet installation</a>.</p>
 
 
 </article>
