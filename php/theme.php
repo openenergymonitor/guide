@@ -30,7 +30,7 @@
     <meta name="twitter:description" content="Connect to network & create account">
     <meta name="twitter:image" content="<?php echo $path; ?>source/images/favicon-192x192.png">
 
-    <link href="<?php echo $path; ?>public/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
+    <link href="<?php echo $path; ?>Theme/screen.css" media="screen, projection" rel="stylesheet">
     <link href="/atom.xml" rel="alternate" title="Guide | OpenEnergyMonitor" type="application/atom+xml">
     <link rel='shortcut icon' href='<?php echo $path; ?>source/images/favicon.ico' />
     <link rel='icon' type='image/png' href='<?php echo $path; ?>source/images/favicon-192x192.png' sizes='192x192' />
