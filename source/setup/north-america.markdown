@@ -17,10 +17,6 @@ The emonPi / emonTx hardware units are designed for use on single-phase systems.
 
 Typical residential Service Entrance Wires are AWG 2/0 Copper or AWG 4/0 Aluminum.  The opening in the [standard clip-on CT sensor sold in the OpenEnergyMonitor shop](http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/) is **13mm**, and hence can accommodate a maximum wire size of **AWG 1/0**. Therefore, we recommend you measure the diameter of your feeders before purchasing a CT sensor.
 
-
-<a class="btn pull-right" href="http://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/">View in Shop &rarr; </a>
-<br><br>
-
 If the standard CT sensor does not fit your conductors there are two options:
 
 1. Use an [Optical Pulse Sensor](https://shop.openenergymonitor.com/optical-utility-meter-led-pulse-sensor/) instead of CT sensor to interface directly with a utility meter. This will give an accurate reading of energy consumed (KWh) but will not provide a real-time power reading (W).
@@ -33,11 +29,9 @@ Installing clip-on CT sensors on USA electrical systems should only by undertake
 
 ### 2. Use USA AC-AC Adapter
 
+<a class="btn pull-right" href="http://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-us-plug/">View in Shop &rarr; </a>
 
 Use the [USA AC-AC voltage sensor adapter sold via the OpenEnergyMonitor Shop](http://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-us-plug). The system has been calibrated to work with this adapter. Using any other adapter will usually require re-calibration.
-
-<a class="btn pull-right" href="http://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-us-plug/">View in Shop &rarr; </a>
-<br><br>
 
 ### 3. Software Calibration
 

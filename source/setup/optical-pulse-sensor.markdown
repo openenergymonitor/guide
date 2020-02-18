@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 8. Add Optical Pulse Sensor
+title: + Add Optical Pulse Sensor
 description: Add optical puse sensor
 date: '2017-01-06 21:36'
 sidebar: true
@@ -10,22 +10,13 @@ footer: true
 published: true
 ---
 
-### [&laquo; Previous step: Add Temperature Node(s)](/setup/emonth/)
+<img src="/images/setup/optical_pulse.jpg" style="float:left; margin-right:15px;" />
 
-### [Next step: Import / Backup &raquo;](/setup/import/)
-
-
-***
-
-## Optical Pulse Sensor
-
-<img src="/images/setup/optical_pulse.jpg" />
+<a class="btn" href="https://openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">View in Shop &rarr; </a>
 
 An Optical Pulse Sensor detects the LED / IR 'pulse' output from a utility meters. Each pulse corresponds to a certain amount of energy passing through the meter. The amount of energy each pulse corresponds to depends on the meter. By counting these pulses and measuring the time between each pulse the meters KWh value can be calculated.
 
-<a class="btn pull-right" href="https://openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">View in Shop &rarr; </a>
-
-Unlike clip-on CT based monitoring, pulse counting is measuring exactly what the utility meter is measuring i.e. what you get billed for. Pulse counting cannot provide an instantaneous power reading like clip on CT sensors can. **Where possible, we recommend using pulse counting in conjunction with clip on CT sensors**.
+Unlike clip-on CT based monitoring, pulse counting is measuring exactly what the utility meter is measuring i.e. what you get billed for. Pulse counting cannot provide an instantaneous power reading like clip on CT sensors can. It is often worthwhile using pulse counting in conjunction with clip on CT sensors to get the best of both techniques.
 
 The emonPi and emonTx can simultaneously perform pulse counting and CT based monitoring.
 
@@ -70,7 +61,7 @@ View the Input list:
 
 <img src="/images/setup/emonpi-input-list.png" />
 
-Clicking the spanner icon brings up the feed input processor. It's a good idea to log the raw pulse count to a feed for debugging. The pulse count needs to be multiplied by a scalar to convert the pulses to Wh. The scale factor will depend on your meter, see the table in Appendix A below. Once the scalar has been applied, log the result to a Wh Accumulator feed. This feed is an ever increasing number which won't return to zero if the emonPi / emonTx is reset, which would result in the raw pulse count returning to zero.
+Clicking the spanner icon brings up the feed input processor. It's a good idea to log the raw pulse count to a feed for debugging. The pulse count needs to be multiplied by a scale process to convert the pulses to Wh. The scale factor will depend on your meter, see the table in Appendix A below. Once the scale has been applied, log the result to a Wh Accumulator feed. This feed is an ever increasing number which won't return to zero if the emonPi / emonTx is reset, which would result in the raw pulse count returning to zero.
 
 <img src="/images/setup/emonpi-pulse-input-process.png" />
 
@@ -82,7 +73,7 @@ To convert the wh accumulator feed to daily KWh bargraph using the graph tool se
 
 <img src="/images/setup/wh-accumulator-bargraph.png" />
 
-See Emoncms [daily Kwh guide](/setup/daily-kwh) for mor info.
+See Emoncms [daily kWh guide](/emoncms/daily-kwh) for mor info.
 
 ## {% linkable_title Appendix A: %}
 
@@ -219,10 +210,3 @@ The optical pulse sensor should work with all utility meters that have an LED or
 
 
 Please help us expand this table by contributing details for your meter. Email photo and scale factor to [support@openenergymonitor.zendesk.com](mailto:support@openenergymonitor.zendesk.com?subject=pulse%20output%20utility%20meter)
-
-
-<br>
-
-***
-
-### [Next step: Import / Backup &raquo;](/setup/import/)

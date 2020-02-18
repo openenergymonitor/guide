@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 2. Install
+title: Install EmonPi
 description: Physically install emonPi
 date: '2015-03-08 21:36'
 sidebar: true
@@ -9,11 +9,6 @@ sharing: true
 footer: true
 published: true
 ---
-### [&laquo; Previous step: Connect](/setup/connect/)
-
-### [Next step: Log Locally &raquo;](/setup/local/)
-
-## Installation
 
 ![emonpi install digram](/images/setup/emonpilabel.png)
 
@@ -106,7 +101,3 @@ c.) **emonPi should remember WiFi network and re-connect**
 <div class='videoWrapper'>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6SB4fRYQjno" frameborder="0" allowfullscreen></iframe>
 </div>
-
-***
-
-### [Next step: Log Locally &raquo;](/setup/local/)

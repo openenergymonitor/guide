@@ -10,26 +10,16 @@ footer: true
 published: true
 ---
 
-### [&laquo; Previous step: Log Remotely](/setup/remote/)
-
-### [Next step: Add Energy Nodes &raquo;](/setup/emontx/)
-
-***
-
-## Emoncms dashboards:
 1. Application specific dashboard Apps
 2. Emoncms Android App
 3. Custom using dashboard Builder drag'n-drop editor
 
-*Note: Dashboard configuration setup is identical on local Emoncms and [Emoncms.org](http://emoncms.org).*
-
-
 ## 1. Application Specific Dashboards
 
 
-#### [My Home Energy](/applications/home-energy)
+#### [My Electric](/applications/home-energy)
 
-![My home energy](/images/applications/home-energy/myelectric_webapp.png)
+![My Electric](/images/applications/home-energy/myelectric_webapp.png)
 
 
 #### [My Solar PV](/applications/solar-pv)
@@ -72,22 +62,3 @@ Community created video tutorial for creating a Emoncms dashboard with a custom 
 <div class='videoWrapper'>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N4xHyiE6mc0" frameborder="0" allowfullscreen></iframe>
 </div>
-
-<br>
-
-***
-
-## Advanced Emoncms
-
-For tutorials on the more advanced functions see the Emoncms user guide section:
-
-- {% active_link /setup/emoncms-graphs/ View Graphs%}   
-- {% active_link /setup/daily-kwh/ Daily kWh%}
-- {% active_link /setup/daily-averages/ Daily Averages %}
-- {% active_link /setup/export-csv/ Exporting CSV %}
-- {% active_link /setup/histograms/ Histograms %}
-
-
-***
-
-### [Next step: Add Energy Nodes &raquo;](/setup/emontx/)

@@ -10,10 +10,6 @@ footer: true
 published: true
 ---
 
-### [&laquo; Previous step: Add Temperature Nodes](/setup/emonth/)
-
-***
-
 The [Emoncms backup module](https://github.com/emoncms/backup) is used to backup and restore an emoncms installation and migrate from an older emonPi / emonBase image to the latest image.
 
 There are two methods available to do this:
@@ -356,14 +352,3 @@ If the Backup module is not visible in the Local Emoncms menu then the emonPi / 
 <p class="note">
 To check what software stack (emonSD pre-built SD card) version an emonPi is running see instructions on emonPi <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log">emonSD download repository and changelog</a>
 </p>
-
-***
-
-### Next step: Applications:
-
-
-- #### [Home Energy Monitor](/applications/home-energy/)
-
-- #### [Solar PV Monitor](/applications/solar-pv/)
-
-- #### [Integrations](/integrations) e.g openHAB, nodeRED etc

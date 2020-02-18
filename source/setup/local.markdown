@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "3. Log Locally"
+title: 2. Log Locally
 description: "Log data locally to emonPi"
 date: 2015-03-08 21:36
 sidebar: true
@@ -8,12 +8,6 @@ comments: false
 sharing: true
 footer: true
 ---
-
-### [&laquo; Previous step: Connect](/setup/connect/)
-
-### [Next: Log Remotely &raquo;](/setup/remote/)
-
-***
 
 **Local vs Remote logging**
 
@@ -27,14 +21,14 @@ We do also offer an optional remote data logging and visualisation service calle
 
 It is also possible to install our open source emoncms software on your own remote server, we have a nice installation script to help with this for use with Debian systems, see [EmonScripts](https://github.com/openenergymonitor/EmonScripts).
 
-## {% linkable_title 1. Emoncms Inputs %}
+---
 
 For application specific input processing see:
 
 - [Applications > Home Energy](/applications/home-energy)
 - [Applications > Solar PV](/applications/solar-pv).
 
-The following describes a generic example of configuring an emonpi power input. 
+The following describes a generic example of configuring an emoncms input, e.g an emonpi power input. 
 
 1. Start by logging in to your emonPi/emonBase [http://emonpi/](http://emonpi/) (or local IP address)
 2. Navigate to `Setup > Inputs`
@@ -81,33 +75,20 @@ If logging a `Power` value input you will also want to create a corresponding KW
 - To view the feed data click on the feed row
 - This will open the Emoncms Graph module
 - Multiple feeds can be overlayed on the same graph by selecting feeds in the right hand side
-- To view daily data see [Emoncms > Daily KWh](/setup/daily-kwh).
+- To view daily data see [Emoncms > Daily KWh](/emoncms/daily-kwh).
 
 Note: no data will be visible immediately. Wait a few hours to build up some data before trying to view a feed.
 
 ![Feed Viewer](/images/setup/data-viewer.png)
 
-\* Using standard feed names such as `use`, `use_kwh`, `solar`, `solar_kwh` `import` and `import_kwh` (**case sensitive**) will automate the setup of MyElectric, MySolar PV and Android app dashboards. See [Setup > Dashboards](/setup/dashboards) and [Home Energy](/applications/home-energy) and [Solar PV](/applications/solar-pv) applications pages for more info.
+Using standard feed names such as `use`, `use_kwh`, `solar`, `solar_kwh` `import` and `import_kwh` (**case sensitive**) will automate the setup of MyElectric, MySolar PV and Android app dashboards. See [Setup > Dashboards](/setup/dashboards) and [Home Energy](/applications/home-energy) and [Solar PV](/applications/solar-pv) applications pages for more info.
 
-\** IMPORTANT: Feed interval logging time should not be less (faster) then the default node update rate. Choosing a longer (slower) update rate is fine and will conserve disk space:
+IMPORTANT: Feed interval logging time should not be less (faster) then the default node update rate. Choosing a longer (slower) update rate is fine and will conserve disk space:
 
 | **Node** | **Max Update Rate**  |
+| ------ | --- |
 | emonPi | 5s  |
 | emonTx | 10s |
 | emonTH | 60s |
 
 We recommend making regular backups of local data. See [Setup > Import/Backup](/setup/import).
-
-### Video Guide
-
-The following video guide was put together using emoncms v9, the appearance will be different if you are using v10 of emoncms or newer but the functionality is much the same. We will be updating this video soon.
-
-<div class='videoWrapper'>
-<iframe width="300" height="315" src="https://www.youtube.com/embed/8nVP0Hgkuuc" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<br>
-
-***
-
-### [Next step: Log Remotely &raquo;](/setup/remote/)
