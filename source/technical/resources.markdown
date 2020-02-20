@@ -19,7 +19,7 @@ published: true
 Either [PlatformIO](https://guide.openenergymonitor.org/technical/compiling/) (recommended) or the [Arduino IDE](https://learn.openenergymonitor.org/electricity-monitoring/arduino-ide/windows10ide) can be used to compile and upload firmware. 
 
 - ### {% linkable_title emonPi %}
-  - [User Guide](https://guide.openenergymonitor.org/setup/)
+  - [User Guide](https://guide.openenergymonitor.org/setup/install)
   - [Firmware](https://github.com/openenergymonitor/emonpi)
   - [Hardware Docs](https://wiki.openenergymonitor.org/index.php?title=EmonPi)
   - [Hardware CAD Design](https://github.com/openenergymonitor/Hardware/tree/master/emonPi)
@@ -36,7 +36,8 @@ Either [PlatformIO](https://guide.openenergymonitor.org/technical/compiling/) (r
 <br/>
 
 - ### {% linkable_title emonTx V3 %}
-  - [User Guide](https://guide.openenergymonitor.org/setup/emontx/)
+  - [User Guide: Install EmonTx & EmonBase](https://guide.openenergymonitor.org/setup/install-emontx/)
+  - [User Guide: + Add Additional emonTx](https://guide.openenergymonitor.org/setup/install-emontx/)
   - [Hardware & Official Firmware](https://github.com/openenergymonitor/emontx3)
   - [Other emonTx firmware examples](https://github.com/openenergymonitor/emonTxFirmware)
   - [Hardware Docs](https://wiki.openenergymonitor.org/index.php?title=EmonTx_V3.4)
@@ -125,7 +126,6 @@ Either [PlatformIO](https://guide.openenergymonitor.org/technical/compiling/) (r
 
 - ### {% linkable_title emonSD Pre-built SD card%}
   - [EmonSD Download repository & changelog](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log)
-  - [emonSD Build Guide](https://github.com/openenergymonitor/emonpi/blob/master/docs/SD-card-build.md)
   - [emonSD forum category](https://community.openenergymonitor.org/c/emonsd)
 
 <br/>

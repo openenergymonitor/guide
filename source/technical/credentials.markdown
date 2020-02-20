@@ -10,17 +10,7 @@ footer: true
 published: true
 ---
 
-<figure><a href="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png">
-<img src="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png" alt="emonPi Architecture Overview">
-<figcaption style="text-align:center;"><i>Fig.1 - emonPi Architecture Overview</i></figcaption>
-</a>
-</figure>
-
-***
-
 Default log-in credentials for latest [pre-built emonPi/emonBase ready-to-go SD card](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log).
-
-**Note: Any emonSD image pre emonSD-30Oct18 runs root file-system in read-only mode, the root file-system will need to be put into Read Write mode with command `$rpi-rw`. When finished put the file-system back to Read Only with `$rpi-ro`. emonSD-30-18 does not require this step**
 
 ## {% linkable_title SSH %}
 
@@ -64,19 +54,25 @@ Note: On newer versions of mysql root access is disabled.
 
 ## {% linkable_title MQTT %}
 
-Mosquitto MQTT server: port:1883 user,pass:`emonpi`,`emonpimqtt2016`
+Mosquitto MQTT server: 
+
+<div style="font-family:monospace; font-size:14px; background-color: #eee; padding: 20px; margin-bottom:10px">
+<b>port:</b> 1883<br>
+<b>username:</b> emonpi<br>
+<b>password:</b> emonpimqtt2016
+</div>
 
 Generate a new password using `sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>`. Then restart mosquitto `sudo service mosquitto restart`.
 
 If Mosquitto MQTT authentication details are changed they will also need to changed in:
 
-```bash
+<pre style="font-family:monospace; font-size:14px; background-color: #eee; padding: 20px;">
 ~/emonpi/lcd/emonPiLCD.py
 ~/data/emonhub.conf
 /var/www/emoncms/settings.php
 ~/oem_openHab/openHab.cfg (symlined to /etc/openhab/configurations/openhab.cfg)
 and node red using flows editor
-```
+</pre>
 
 **Caution changes to `emonPiLCD.py` and `settings.php` will be overwritten by emonPi update. Recommended to undertake manual *git pull(s)* to update instead.**
 

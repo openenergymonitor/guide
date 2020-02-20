@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "MQTT"
+title: MQTT
 description: "emonPi / emonBase MQTT technical guide"
 date: 2014-12-18 21:49
 sidebar: true
@@ -9,17 +9,11 @@ sharing: true
 footer: true
 ---
 
-<figure><a href="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png">
-<img src="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png" alt="emonPi Architecture Overview">
-<figcaption style="text-align:center;"><i>Fig.1 - emonPi Architecture Overview</i></figcaption>
-</a>
-</figure>
+We use MQTT (Message Queuing Telemetry Transport) as one way of passing data between different hardware devices and software components within the OpenEnergyMonitor ecosystem.
 
-***
+The emonPi and emonBase running our emonSD software stack includes a local [Mosquitto MQTT](http://mosquitto.org/) server. A device can connect to this server and publish data to a MQTT topic. A script on the emonPi/emonBase then subscribes and receives the data sent by the device.
 
-> [MQTT](http://mqtt.org/) is a machine-to-machine (M2M)/"Internet of Things" connectivity protocol. It was designed as an extremely lightweight publish/subscribe messaging transport.
-
-The emonPi with [emonSD pre-built SD card](/technical/#emonsd-features) by default runs a local [Mosquitto MQTT](http://mosquitto.org/) server. This server is accessible ([via authentication](/technical/credentials#mqtt) on port 1883. See [MQTT Service Credentials](/technical/credentials#mqtt).
+This Mosquitto server is accessible via authentication on port 1883.<br>See [MQTT Service Credentials](/technical/credentials#mqtt).
 
 ## {% linkable_title MQTT Publishers %}
 

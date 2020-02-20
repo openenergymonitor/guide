@@ -19,6 +19,8 @@ The emonTx is an low power RF remote sensor node. Data is transmitted to an emon
 
 ![emontx](/images/setup/emontx.jpg)
 
+<a class="btn pull-right" href="http://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/">View in Shop &rarr; </a>
+
 ### Key Features
 
 - 4 x single-phase current sensor (CT) channels
@@ -28,16 +30,12 @@ The emonTx is an low power RF remote sensor node. Data is transmitted to an emon
 - Can be powered by a single AC-AC adaptor (DC PSU not required)
 - Battery power option
 - RF Range is approximately similar to home WiFi (real world range depends on many factors e.g. thick stone walls)
-- Up to 2x emonTx can be connected to a single emonPi (up to 30x is possible with manual RF node ID setting*)
+- Up to 2x emonTx can be connected to a single emonPi or emonBase (up to 30x is possible with manual RF node ID setting*)
 - Approximate three-phase possible with firmware update
 - Wall-mount option
 
 
 **Note:** it is possible to use emonTx 'standalone' (without emonPi / emonBase) with the addition of an ESP8266 WiFi module running EmonESP to post directly to Emoncms. See [Using emonTx with the ESP8266 WiFi module](/setup/esp8266-adapter-emontx/)
-
-<a class="btn pull-right" href="http://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/">View in Shop &rarr; </a>
-
-![emontx](/images/setup/emontx.jpg)
 
 ### Hardware Setup
 

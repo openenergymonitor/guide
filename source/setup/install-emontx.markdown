@@ -45,75 +45,39 @@ The EmonTx transmits real power, cumulative watt-hours, mains voltage and temper
 **EmonTx**
 
 1. Mount emonTx in desired location, use wall mounts if required, attach antennae.
-2. Plug CT sensors into the EmonTx first and then clip around either the **Line** or **Neutral** cable of the AC circuits that you wish to measure.
-3. Attach temperature sensors or/and pulse sensor as required.
-3. Plug in and connect the AC-AC adapter to provide voltage measurement and power.
+2. Plug CT sensors into the EmonTx first and then clip around either the **Line** or **Neutral** cable of the AC circuits that you wish to measure. If the power reading is negative, reverse the CT sensor orientation. [Please read the CT installation guide before installing](https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/installation).
+3. Attach temperature sensors or/and pulse sensor as required. See guides: [+ Add Temperature Nodes](/setup/emonth) and [+ Add Optical Pulse Sensor](/setup/optical-pulse-sensor).
+    
+3. Plug in and connect the AC-AC adapter to provide voltage measurement and power. This may require installation of a new outlet or extending an existing one.
 
 **EmonBase**
 
 1. Connect Ethernet before powering up the emonBase if using Ethernet.
 2. Plug in USB power supply and connect micro-USB cable.
-3. Continue to guides: [Connect](/setup/connect) and [Log Locally](/setup/local) to setup the software.
 
-#### {% linkable_title 1. **Installing CT sensors** %}
+That's the hardware setup done! The next step is to configure the network connection and setup the emonBase log data locally or/and post data to a remote server such as emoncms.org. 
 
-<p class='note warning'>
-<a href="https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/installation">Please read the CT installation guide before installing.</a>
-Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated; i.e., switch off the power prior to installing your sensors and proceed slowly with care. If you have any doubts, seek professional assistance.
-</p>
+Continue to guides: [1. Connect](/setup/connect), [2. Log Locally](/setup/local) and [3. Log Remotely](/setup/remote) to setup the software.
 
+#### Advanced
 
-- Connect the CT jack plug to either CT1, CT2, CT3 or CT4 socket on the emonTx first
-- Clip the CT sensor around either the **Line** or **Neutral** cable of circuits that you wish to measure
-- If the power reading is negative, reverse the CT sensor orientation
-- CT sensor cable should not be extended to avoid induced noise
-- For Solar PV install see [Solar PV Application page](/applications/solar-pv/#sensor-installation)
-- [Learn more about how CT sensors work...](https://learn.openenergymonitor.org/electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter)
+**Configure RF Node ID**<br>
+Multiple emonTx unit's can operate on a single RF network posting to a single emonPi / emonBase web-connected base station (Raspberry Pi + RFM69Pi), each emonTx on the same network must have an unique node ID. The nodeID can be selected at time of purchase or set using the on-board DIP switch to toggle. If more than two emonTx's are required on the same network then further nodeID values can be set via RF node ID serial config.
 
-<p class='note'>
-The clip-on CT sensors must be clipped round either the Line or Neutral AC wire. <strong>NOT BOTH</strong>.
-</p>
+**Firmware**<br>
+The emonTx is Arduino compatible: updated/customised firmware sketches can be uploaded using Arduino IDE or PlatformIO and a USB to UART cable. The emonTx comes pre-loaded with the EmonTxV3CM Continuous Sampling firmware as standard for single phase operation. If you bought the EmonTx with the battery holder option it will come with the discreet sampling firmware.
 
-![CT sensor installation ](/images/applications/solar-pv/ctinstall.jpg)
+- [EmonTxV3CM Continuous Sampling firmware](https://github.com/openenergymonitor/EmonTxV3CM)
+- [EmonTx Discreet Sampling firmware](https://github.com/openenergymonitor/emontx3)
+- [3-phase firmware](https://github.com/openenergymonitor/emontx-3phase)
 
-#### {% linkable_title 2. **AC-AC Adapter** %}
-- Plug the AC-AC adapter into a power outlet
-- This may require installation of a new outlet or extending an existing one
-- AC-AC adapter cable can be extended if required
-- Plug power connector into the AC socket on the emonTx
-- Essential for [Solar PV monitoring](/applications/solar-pv/#sensor-installation)
-- Provides AC waveform reference for accurate Real Power measurements.
-- [Learn more about measuring voltage with AC-AC power adapator...](https://learn.openenergymonitor.org/electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter)
+**Serial Configuration**<br>
 
-#### {% linkable_title 3. *Optical Utility Meter LED Pulse Sensor (optional)* %}
-- See [Optical Pulse Sensor setup page](http://openenergymonitor.org/emon/opticalpulsesensor)
-- Connects to emonTx via RJ45 connector
-- Self-adhesive velcro attachment to utility meter
-- One optical pulse sensor per emonTx
-- Can be used in conjunction with temperature sensors using [RJ45 Breakout](http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/)
+**Power supply jumper modification**<br>
 
-#### {% linkable_title 4. *Temperature Sensors (optional)* %}
-- Connect to emonTx via RJ45 connector.
-- Up to 6x [RJ45 sensors](https://shop.openenergymonitor.com/rj45-encapsulated-ds18b20-temperature-sensor/) can be connected using the [RJ45 expander](http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/).
-- Up to 6x [wired sensors](https://shop.openenergymonitor.com/encapsulated-ds18b20-temperature-sensor/) can be connected using the [terminal block breakout board](https://shop.openenergymonitor.com/rj45-to-terminal-block-breakout-for-ds18b20/).
-- Sensor wire can be extended using RJ45 cable and the [RJ45 Extender](http://shop.openenergymonitor.com/rj45-extender/).
+**3 Phase**<br>
 
-#### {% linkable_title 5. *DC 5V USB Adapter (optional)* %}
-
-For use when using an EmonTx in conjunction with an [ESP8266 WiFi Adapter](https://shop.openenergymonitor.com/esp8266-wifi-adapter-for-emontx/).
-
-- Plug the DC 5V USB adapter into a power outlet
-- Plug the mini-B USB connector into the emonTx
-
----
-
-- Firmware
 - Data packet contents
-- Firmware modification
-- Connecting multiple emontx units
 - Serial configuration
-- Updating firmware
-- Power supply jumper modification
-- 3 phase
 - RFM69Pi adapter board on the pi
 - Hardware schematics and info 
