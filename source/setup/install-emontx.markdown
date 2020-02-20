@@ -55,23 +55,30 @@ The EmonTx transmits real power, cumulative watt-hours, mains voltage and temper
 1. Connect Ethernet before powering up the emonBase if using Ethernet.
 2. Plug in USB power supply and connect micro-USB cable.
 
-That's the hardware setup done! The next step is to configure the network connection and setup the emonBase log data locally or/and post data to a remote server such as emoncms.org. 
+That's the hardware setup done! The next step is to configure the network connection and setup the emonBase to log data locally or/and post data to a remote server such as emoncms.org. 
 
 Continue to guides: [1. Connect](/setup/connect), [2. Log Locally](/setup/local) and [3. Log Remotely](/setup/remote) to setup the software.
 
 #### Advanced
 
 **Configure RF Node ID**<br>
-Multiple emonTx unit's can operate on a single RF network posting to a single emonPi / emonBase web-connected base station (Raspberry Pi + RFM69Pi), each emonTx on the same network must have an unique node ID. The nodeID can be selected at time of purchase or set using the on-board DIP switch to toggle. If more than two emonTx's are required on the same network then further nodeID values can be set via RF node ID serial config.
+Multiple emonTx unit's can operate on a single network posting to a single emonBase web-connected base station, each emonTx on the same network group must have an unique node ID. The nodeID can be selected at time of purchase or set using the on-board DIP switch to toggle. If more than two emonTx's are required on the same network then further nodeID values can be set via RF node ID serial config.
+
+<img src="/images/setup/EmonTx_V3.4_DIP_Switch.jpg" style="max-width:400px; float:right; padding:0 0 10px 10px">
+
+The image on the right shows the DIP switch configuration looking at the emonTx with the CT sensor inputs at the top of the board. Move the top switch D9 to the left to select USA ACAC Voltage calibration. **Move the bottom switch D8 to the left to select RF node ID 16 rather than 15.**
+
+**Serial Configuration**<br>
+It's possible to set the emonTx radio settings, sensor calibration and other properties over serial. See [Github PDF: Configuration of RF Module & on-line calibration](https://github.com/openenergymonitor/EmonTxV3CM/blob/v1.6/Config.pdf) for full details.
 
 **Firmware**<br>
-The emonTx is Arduino compatible: updated/customised firmware sketches can be uploaded using Arduino IDE or PlatformIO and a USB to UART cable. The emonTx comes pre-loaded with the EmonTxV3CM Continuous Sampling firmware as standard for single phase operation. If you bought the EmonTx with the battery holder option it will come with the discreet sampling firmware.
+The emonTx firmware is based on Arduino. Alternative or customised firmware sketches can be uploaded using Arduino IDE or PlatformIO and a USB to UART cable. The emonTx comes pre-loaded with the EmonTxV3CM Continuous Sampling firmware as standard for single phase operation. If you bought the EmonTx with the battery holder option it will come with the Discreet Sampling firmware.
 
 - [EmonTxV3CM Continuous Sampling firmware](https://github.com/openenergymonitor/EmonTxV3CM)
 - [EmonTx Discreet Sampling firmware](https://github.com/openenergymonitor/emontx3)
 - [3-phase firmware](https://github.com/openenergymonitor/emontx-3phase)
 
-**Serial Configuration**<br>
+
 
 **Power supply jumper modification**<br>
 

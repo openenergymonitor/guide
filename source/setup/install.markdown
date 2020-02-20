@@ -10,6 +10,8 @@ footer: true
 published: true
 ---
 
+The following guide provides an quick overview of how to setup the hardware part of an emonPi energy monitoring system for monitoring up to two AC circuits.
+
 ![emonpi install digram](/images/setup/emonpilabel.png)
 
 ![emonpi install](/images/setup/emonPi_install_diagram.png)
@@ -90,11 +92,11 @@ a.) **Switch on DC & AC power**
 
 b.) **Check CT sensor(s) & AC Wave are detected:**
 
-{% img /images/setup/acwave_ct1.JPG %}
+![acwave_ct1.JPG](/images/setup/acwave_ct1.JPG)
 
 c.) **emonPi should remember WiFi network and re-connect**
 
-{% img /images/setup/wifi_connected.JPG %}
+![wifi_connected.JPG](/images/setup/wifi_connected.JPG)
 
 
 ### Video Guide
