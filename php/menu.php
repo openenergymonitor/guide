@@ -5,7 +5,7 @@
   <li style="padding-top: 10px;">
     <b>Hardware Setup</b>
     <ul>
-      <li><a  href='<?php echo $path; ?>setup/index'>System Overview </a></li>
+      <li><a  href='<?php echo $path; ?>setup'>System Overview </a></li>
       <li><a  href='<?php echo $path; ?>setup/install/'>Install EmonPi</a></li>
       <li><a  href='<?php echo $path; ?>setup/install-emontx/'>Install EmonTx & EmonBase</a></li>
       <li><a  href='<?php echo $path; ?>setup/esp8266-adapter-emontx/'>Install EmonTx & ESP8266</a></li>
@@ -68,7 +68,7 @@
   </li><li>
     <b>Technical</b>
     <ul>
-      <li><a  href='<?php echo $path; ?>technical/index'>EmonPi</a></li>
+      <li><a  href='<?php echo $path; ?>technical/emonpi'>EmonPi</a></li>
       <li><a  href='<?php echo $path; ?>technical/emontx'>EmonTx</a></li>
       <li><a  href='<?php echo $path; ?>technical/compiling/'>Firmware Modification </a></li>
       <li><a  href='<?php echo $path; ?>technical/resources/'>Resources </a></li>

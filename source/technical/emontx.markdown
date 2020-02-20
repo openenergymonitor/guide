@@ -30,3 +30,16 @@ The emonTx is an low power RF remote sensor node. Data is transmitted to an emon
 - Wall-mount option
 
 **Note:** it is possible to use emonTx 'standalone' (without emonPi / emonBase) with the addition of an ESP8266 WiFi module running EmonESP to post directly to Emoncms. See [Using emonTx with the ESP8266 WiFi module](/setup/esp8266-adapter-emontx/)
+
+## {% linkable_title Open Source %}
+
+**EmonTx Wiki:**<br> [https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4](https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4)
+
+**EmonTx Firmware**<br>
+
+- [EmonTxV3CM Continuous Monitoring firmware](https://github.com/openenergymonitor/EmonTxV3CM)
+- [Discrete Sampling Firmware](https://github.com/openenergymonitor/emontx3/tree/master/firmware)
+- [3-phase Firmware](https://github.com/openenergymonitor/emontx-3phase/)
+
+**EmonPi Schematic and Board files:**<br> [https://github.com/openenergymonitor/emontx3/tree/master/hardware/V3.4.4](https://github.com/openenergymonitor/emontx3/tree/master/hardware/V3.4.4)
+
