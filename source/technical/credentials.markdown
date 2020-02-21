@@ -10,17 +10,18 @@ footer: true
 published: true
 ---
 
-Default log-in credentials for latest [pre-built emonPi/emonBase ready-to-go SD card](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log).
+<style>.code {font-family:monospace; font-size:14px; background-color: #eee; padding: 20px; margin-bottom:20px}</style>
 
-## {% linkable_title SSH %}
+Default log-in credentials for emonPi/emonBase running latest [emonSD based SD card](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log).
+
+### {% linkable_title SSH %}
 
 To connect to emonPi / emonBase via ssh:
 
-
- - **If running emonSD-30Oct18 or newer SSH is disabled by default**
- - SSH can be enabled by either:
-    - Creating a file called `ssh` in the FAT `/boot` partion on the SD card. This can be done externally using a card reader + PC or using a USB keyboard + HDMI screen to login to the Pi and create the ssh file: `sudo touch /boot/ssh`. Then reboot `sudo reboot`
-    - Or selecting `SSH Enable` LCD menu item then pressing and holding the emonPi LCD push-button:
+- **If running emonSD-30Oct18 or newer SSH is disabled by default**
+- SSH can be enabled by either:
+  - Creating a file called `ssh` in the FAT `/boot` partion on the SD card. This can be done externally using a card reader + PC or using a USB keyboard + HDMI screen to login to the Pi and create the ssh file: `sudo touch /boot/ssh`. Then reboot `sudo reboot`
+  - Or selecting the `SSH Enable` LCD menu item then pressing and holding the emonPi LCD push-button:
 
 *Once enabled, SSH can be disabled in the same way:*
 
@@ -30,65 +31,87 @@ To connect to emonPi / emonBase via ssh:
 
  - Linux / Mac : open terminal window `$ ssh pi@emonpi` or `$ ssh pi@<IP ADDRESS>`
  - Windows: use [Putty application](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)
- - Google search ['Raspberry Pi SSH'](http://lmgtfy.com/?q=raspberry+pi+ssh) for many tutorials, [Adafruit has a good guide](https://learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-6-using-ssh.pdf)
+ - Google search ['Raspberry Pi SSH'](http://lmgtfy.com/?q=raspberry+pi+ssh) for many tutorials, [Adafruit has a good guide](https://learn.adafruit.com/downloads/pdf/adafruits-raspberry-pi-lesson-6-using-ssh.pdf).
 
-**SSH: port 22 user,pass:`pi`,`emonpi2016`**
 
-*On very old emonSD images (2015) ssh password is `raspberry`, see emonSD [repository & changelog](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log)*
+Credentials:
 
-Once logged in change password with: `$ passwd`
+<div class="code">
+<b>SSH Port:</b> 22<br>
+<b>Username:</b> pi<br>
+<b>Password:</b> emonpi2016<br><br>
+<b>Old image password:</b> raspberry
+</div>
 
-In case you're getting error _Authentication token manipulation error_ when changing password, first mount the filesystem as read-write using `$rpi-rw`.
+Once logged in change password with:
+
+<div class="code">
+$ passwd
+</div>
+
+If you see the error: _Authentication token manipulation error_ when changing password, first mount the filesystem as read-write using `$rpi-rw`.
 
 If you wish to disable SSH run:
 
-`$ sudo /home/pi/emonpi/lcd/./disablessh.sh`
-
+<div class="code">
+$ sudo /opt/openenergymonitor/emonpi/lcd/./disablessh.sh
+</div>
 
 ## {% linkable_title MYSQL %}
 
-MYSQL: `root` user password is `emonpimysql2016` and mysql `emoncms` user password is `emonpiemoncmsmysql2016`
-
-Note: On newer versions of mysql root access is disabled.
-
+<div class="code">
+<b>username:</b> emoncms<br>
+<b>password:</b> emonpiemoncmsmysql2016
+</div>
 
 ## {% linkable_title MQTT %}
 
 Mosquitto MQTT server: 
 
-<div style="font-family:monospace; font-size:14px; background-color: #eee; padding: 20px; margin-bottom:10px">
+<div class="code">
 <b>port:</b> 1883<br>
 <b>username:</b> emonpi<br>
 <b>password:</b> emonpimqtt2016
 </div>
 
-Generate a new password using `sudo mosquitto_passwd -c /etc/mosquitto/passwd <username>`. Then restart mosquitto `sudo service mosquitto restart`.
+Generate a new password using:
+
+<pre class="code">sudo mosquitto_passwd -c /etc/mosquitto/passwd emonpi</pre> 
+
+Then restart mosquitto:
+
+<pre class="code">sudo service mosquitto restart</pre>
 
 If Mosquitto MQTT authentication details are changed they will also need to changed in:
 
-<pre style="font-family:monospace; font-size:14px; background-color: #eee; padding: 20px;">
-~/emonpi/lcd/emonPiLCD.py
-~/data/emonhub.conf
+<pre class="code">
+/opt/openenergymonitor/emonpi/lcd/emonPiLCD.cfg
+/etc/emonhub/emonhub.conf
+/var/www/emoncms/settings.ini .. or:
 /var/www/emoncms/settings.php
-~/oem_openHab/openHab.cfg (symlined to /etc/openhab/configurations/openhab.cfg)
-and node red using flows editor
 </pre>
-
-**Caution changes to `emonPiLCD.py` and `settings.php` will be overwritten by emonPi update. Recommended to undertake manual *git pull(s)* to update instead.**
 
 ## {% linkable_title NodeRED %}
 
-*NodeRED is no longer installed on latest emonSD-30Oct18 it can be installed if required*
+*NodeRED is no longer installed as standard. It can be installed if required.*
 
-NodeRED: port:1880 user,pass:`emonpi`,`emonpi2016`
+<div class="code">
+<b>port:</b> 1880<br>
+<b>username:</b> emonpi<br>
+<b>password:</b> emonpi2016
+</div>
 
-change it here:  `~/data/node-red/settings.js`
+Change settings here:  `~/data/node-red/settings.js`
 
 
 ## {% linkable_title OpenHab %}
 
-*OpenHAB is no longer installed on latest emonSD-30Oct18, it can be installed if required*
+*OpenHab is no longer installed as standard. It can be installed if required.*
 
-OpenHab port:8080 user,pass:`pi`,`emonpi2016`
+<div class="code">
+<b>port:</b> 8080<br>
+<b>username:</b> emonpi<br>
+<b>password:</b> emonpi2016
+</div>
 
-change it here: `/etc/openhab/configurations/users.cfg`
+Change settings here: `/etc/openhab/configurations/users.cfg`

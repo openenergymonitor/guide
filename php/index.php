@@ -74,7 +74,7 @@ if (!$content_error) {
     $content = str_replace("(/emoncms","(".$path."emoncms",$content);
     $content = str_replace("(/applications","(".$path."applications",$content);
     $content = str_replace("(/integrations","(".$path."integrations",$content);
-    
+    $content = str_replace('href="/integrations','href="'.$path.'integrations',$content);  
     // Linkable titles
     $lines = explode("\n",$content);
     for ($i=0; $i<count($lines); $i++) {

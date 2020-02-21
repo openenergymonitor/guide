@@ -89,6 +89,14 @@ Add an optical pulse sensor to an emonTx or emonPi to count energy meter pulses.
 
 ---
 
+### {% linkable_title Example Applications %}
+
+- [Home Energy Monitor](/applications/home-energy/)
+- [Solar PV](/applications/solar-pv/)
+- [Home Energy Monitor](http://heatpumpmonitor.org)
+
+---
+
 ### {% linkable_title Choosing a system configuration %}
 
 **1. How many AC circuits do you wish to measure?**<br>

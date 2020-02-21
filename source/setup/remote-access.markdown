@@ -16,15 +16,11 @@ Sometimes for convenience or troubleshooting it's useful to be able to access th
 
 **This is the easiest and most secure method of obtaining remote access (SSH/HTTP) to the emonPi or emonBase**
 
-[Dataplicity](https://www.dataplicity.com) offers a easy to setup web-service service to enable secure remote access to RaspberryPi devices. The free tier allows free access to a single RaspberryPi device.
+[Dataplicity](https://www.dataplicity.com) offers a easy to setup web service to enable secure remote access to RaspberryPi devices. The free tier allows free access to a single RaspberryPi device.
 
 Follow these steps to setup Dataplicity on an emonPi
 
-1\. [Connect to emonPi via SSH](/technical/credentials/#ssh)
-
-Once logged in put the emonPi into read-write mode using (this is not required on emonSD-30Oct18 emonSD):
-
-    $rpi-rw
+1\. [Connect to emonPi or emonBase via SSH](/technical/credentials/#ssh)
 
 2\. Create an account with dataplicity.
 
@@ -34,11 +30,11 @@ Once logged in put the emonPi into read-write mode using (this is not required o
 
 Copy the Dataplicity installation command.
 
-3\. Paste and run the installation command on the emonPi:
+3\. Paste and run the installation command on the emonPi/emonBase:
 
 ![3-dataplicity](/images/setup/3-dataplicity.png)
 
-Once setup is complete (it will take several minutes) the emonPi will appear in the Dataplicity dashboard:
+Once setup is complete the emonPi/emonBase will appear in the Dataplicity dashboard:
 
 ![4-dataplicity](/images/setup/4-dataplicity.png)
 
@@ -46,23 +42,15 @@ Once setup is complete (it will take several minutes) the emonPi will appear in 
 
 ![5-dataplicity](/images/setup/5-dataplicity.png)
 
-Put the emonPi back into read-only mode using (this is not required on emonSD-30Oct18 emonSD).
-
-    $rpi-ro
-
 5\. Dataplicity 'wormhole' feature  can be enabled to enable https access to Emoncms running on the emonPi:
 
 ![6-dataplicity](/images/setup/6-dataplicity.png)
 
-Wormhole create a secure tunnel to the emonPi port 80 http over a https connection.
-
-**Tested on emonSD-26Oct17 and emonSD-30Oct18 on 11th Dec 2018**
+Wormhole creates a secure tunnel to the emonPi port 80 http over a https connection.
 
 If you encounter any issues using Dataplicity please post on the [Community Forum](httsp://community.openenergymonitor.org) using the `dataplicity` tag.
 
 ## Port Forwarding / Dynamic DNS
-
-**Not recommended, see below for a better option.**
 
 Network devices such as an emonPi connected to a local network are secured behind a firewall, often integrated into a router.
 

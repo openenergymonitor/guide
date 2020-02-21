@@ -40,9 +40,11 @@ After a system failure the SD card may become corrupted and will not mount when 
 2\. SSH into the emonPi/emonbase<br>
 3\. Run the following commands (without part in brackets) to attempt to fix the card:<br>
 
-    sudo fsck.ext4 /dev/sda2 (root OS partition)
-    sudo fsck.ext2 /dev/sda3 (data partition)
-    
+<pre style="font-family:monospace; font-size:14px; background-color: #eee; padding: 20px;">
+sudo fsck.ext4 /dev/sda2 (root OS partition)
+sudo fsck.ext2 /dev/sda3 (data partition)
+</pre>
+
 4\. Continue as above, Navigate to Setup > Backup and click `Import from USB drive` to start import process
 
 ***
