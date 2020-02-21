@@ -30,7 +30,7 @@
     <meta name="twitter:description" content="Connect to network & create account">
     <meta name="twitter:image" content="<?php echo $path; ?>source/images/favicon-192x192.png">
 
-    <link href="<?php echo $path; ?>screen.css" media="screen, projection" rel="stylesheet">
+    <link href="<?php echo $path; ?>css/screen.css" media="screen, projection" rel="stylesheet">
     <link href="/atom.xml" rel="alternate" title="Guide | OpenEnergyMonitor" type="application/atom+xml">
     <link rel='shortcut icon' href='<?php echo $path; ?>source/images/favicon.ico' />
     <link rel='icon' type='image/png' href='<?php echo $path; ?>source/images/favicon-192x192.png' sizes='192x192' />
@@ -72,7 +72,7 @@
 
 @font-face {
   font-family : "oemFont";
-  src         : url(<?php echo $path; ?>source/font/Ubuntu-OEM-Light.ttf);
+  src         : url(<?php echo $path; ?>font/Ubuntu-OEM-Light.ttf);
 }
 
 html, body {
@@ -757,7 +757,7 @@ highlight active link...
     });
   });
 </script>
-<script src="<?php echo $path; ?>source/javascripts/github.js"></script>
+<script src="<?php echo $path; ?>javascripts/github.js"></script>
 
 <script>
 
