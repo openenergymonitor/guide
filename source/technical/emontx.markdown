@@ -42,7 +42,7 @@ An emonTx can be powered by 3 x AA batteries; however, if possible, it is recomm
 **Configure RF Node ID and Voltage calibration**<br>
 Multiple emonTx unit's can operate on a single network posting to a single emonBase web-connected base station, each emonTx on the same network group must have an unique node ID. The nodeID can be selected at time of purchase or set using the on-board DIP switch to toggle. If more than two emonTx's are required on the same network then further nodeID values can be set via RF node ID serial config.
 
-<img src="/images/setup/EmonTx_V3.4_DIP_Switch.jpg" style="max-width:400px; float:right; padding:0 0 10px 10px">
+<img src="/images/setup/emontx_dipswitch.jpg" style="max-width:400px; float:right; padding:0 0 10px 10px">
 
 The image on the right shows the DIP switch configuration looking at the emonTx with the CT sensor inputs at the top of the board. Move the top switch D9 to the left to select USA ACAC Voltage calibration. **Move the bottom switch D8 to the left to select RF node ID 16 rather than 15.**
 
