@@ -75,9 +75,17 @@ if (!$content_error) {
     $content = str_replace("(/applications","(".$path."applications",$content);
     $content = str_replace("(/integrations","(".$path."integrations",$content);
     
-    // Filter out linkable title
-    $content = str_replace("{% linkable_title","",$content);
-    $content = str_replace("%}","",$content);
+    // Linkable titles
+    $lines = explode("\n",$content);
+    for ($i=0; $i<count($lines); $i++) {
+        $pos = strpos($lines[$i],"{% linkable_title");
+        if ($pos!==false) {
+            $link = substr($lines[$i],$pos+17,strlen($lines[$i]));
+            $link = trim(str_replace("%}","",$link));
+            $lines[$i] = '<h3 id="-'.$link.'"><a class="title-link" name="'.$link.'" href="#'.$link.'"></a>'.$link.'</h3>';
+        }
+    }
+    $content = implode("\n",$lines);
 
     // Parse markdown
     $content = $Parsedown->text($content);
