@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>1. Connect - Guide | OpenEnergyMonitor</title>
+    <title><?php echo $title; ?> - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
     <meta name="description" content="Connect to network & create account">
     
@@ -30,7 +30,7 @@
     <meta name="twitter:description" content="Connect to network & create account">
     <meta name="twitter:image" content="<?php echo $path; ?>source/images/favicon-192x192.png">
 
-    <link href="<?php echo $path; ?>php/screen.css" media="screen, projection" rel="stylesheet">
+    <link href="<?php echo $path; ?>screen.css" media="screen, projection" rel="stylesheet">
     <link href="/atom.xml" rel="alternate" title="Guide | OpenEnergyMonitor" type="application/atom+xml">
     <link rel='shortcut icon' href='<?php echo $path; ?>source/images/favicon.ico' />
     <link rel='icon' type='image/png' href='<?php echo $path; ?>source/images/favicon-192x192.png' sizes='192x192' />
@@ -641,7 +641,7 @@ highlight active link...
   
     <section class="aside-module grid__item one-whole lap-one-half">
     <div class='section'>
-    <?php echo view("php/menu.php",array()); ?>
+    <?php echo view("menu.php",array()); ?>
     </div>
 <gcse:search></gcse:search>
 </section>

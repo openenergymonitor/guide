@@ -10,13 +10,13 @@ footer: true
 published: true
 ---
 
-The following guide details how to setup an EmonTx + EmonBase system. Covering an example with 2x CT sensors to monitor two AC circuits in a house and an ACAC Voltage sensor to allow real power calculation as well as power for the EmonTx unit itself. The EmonTx supports up to 4x CT sensors so the steps below can easily be extended to monitor additional circuits. 
+The following guide details how to setup an [EmonTx energy monitoring node](/technical/emontx) + EmonBase system. Covering an example with 2x CT sensors to monitor two AC circuits in a house and an ACAC Voltage sensor to allow real power calculation as well as power for the EmonTx unit itself. The EmonTx supports up to 4x CT sensors so the steps below can easily be extended to monitor additional circuits. 
 
 In this example the EmonTx transmits AC power, voltage and temperature sensor measurements (if connected) every 10s via 433 Mhz radio to the emonBase basestation. 
 
 The emonBase basestation consists of a RaspberryPi and an RFM69Pi adapter board to recieve the 433Mhz radio packets from the EmonTx. The emonBase runs our emonSD software including emoncms for full local data logging and visualisation capability.
 
-*New 2019: The EmonTx firmware now supports higher accuracy continuous monitoring as standard - if powered from an ACAC adapter or USB power.*
+*New 2019: The EmonTx firmware now supports higher accuracy continuous monitoring as standard - if powered from an ACAC adapter or USB power. Alternative firmware options include: Discreet Sampling for battery operation and 3-phase firmware. See [EmonTx technical](/technical/emontx)*.
 
 ![emontx and emonbase](/images/setup/emontxemonbase.jpg)
 
@@ -57,34 +57,10 @@ The EmonTx transmits real power, cumulative watt-hours, mains voltage and temper
 
 That's the hardware setup done! The next step is to configure the network connection and setup the emonBase to log data locally or/and post data to a remote server such as emoncms.org. 
 
-Continue to guides: [1. Connect](/setup/connect), [2. Log Locally](/setup/local) and [3. Log Remotely](/setup/remote) to setup the software.
+To setup the software continue to guides: 
 
-#### Advanced
+- [1. Connect](/setup/connect)
+- [2. Log Locally](/setup/local)
+- [3. Log Remotely](/setup/remote)
 
-**Configure RF Node ID**<br>
-Multiple emonTx unit's can operate on a single network posting to a single emonBase web-connected base station, each emonTx on the same network group must have an unique node ID. The nodeID can be selected at time of purchase or set using the on-board DIP switch to toggle. If more than two emonTx's are required on the same network then further nodeID values can be set via RF node ID serial config.
-
-<img src="/images/setup/EmonTx_V3.4_DIP_Switch.jpg" style="max-width:400px; float:right; padding:0 0 10px 10px">
-
-The image on the right shows the DIP switch configuration looking at the emonTx with the CT sensor inputs at the top of the board. Move the top switch D9 to the left to select USA ACAC Voltage calibration. **Move the bottom switch D8 to the left to select RF node ID 16 rather than 15.**
-
-**Serial Configuration**<br>
-It's possible to set the emonTx radio settings, sensor calibration and other properties over serial. See [Github PDF: Configuration of RF Module & on-line calibration](https://github.com/openenergymonitor/EmonTxV3CM/blob/v1.6/Config.pdf) for full details.
-
-**Firmware**<br>
-The emonTx firmware is based on Arduino. Alternative or customised firmware sketches can be uploaded using Arduino IDE or PlatformIO and a USB to UART cable. The emonTx comes pre-loaded with the EmonTxV3CM Continuous Sampling firmware as standard for single phase operation. If you bought the EmonTx with the battery holder option it will come with the Discreet Sampling firmware.
-
-- [EmonTxV3CM Continuous Sampling firmware](https://github.com/openenergymonitor/EmonTxV3CM)
-- [EmonTx Discreet Sampling firmware](https://github.com/openenergymonitor/emontx3)
-- [3-phase firmware](https://github.com/openenergymonitor/emontx-3phase)
-
-
-
-**Power supply jumper modification**<br>
-
-**3 Phase**<br>
-
-- Data packet contents
-- Serial configuration
-- RFM69Pi adapter board on the pi
-- Hardware schematics and info 
+For advanced EmonTx configuration and alternative firmware options see:<br> [EmonTx technical guide](/technical/emontx).
