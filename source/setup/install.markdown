@@ -95,6 +95,15 @@ c.) **emonPi should remember WiFi network and re-connect**
 
 ![wifi_connected.JPG](/images/setup/wifi_connected.JPG)
 
+### {% linkable_title  7. Shutdown %}
+
+Optional: Shut down the emonPi, hold down the shutdown button for 5 seconds, then wait 30 seconds for unit to fully shut down.
+
+![emonPi_shutdown.png](/images/setup/emonPi_shutdown.png)
+
+<p class='note warning'>
+Unplugging power from the emonPi without following the correct shutdown procedure can result in a corrupted SD card.
+</p>
 
 ### Video Guide
 <div class='videoWrapper'>

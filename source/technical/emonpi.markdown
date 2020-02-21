@@ -99,7 +99,7 @@ EmonSD includes [emonHub](https://github.com/openenergymonitor/emonhub) which re
 ### EmonPi Specification
 
 | Attribute                          | Parameter  | Link |
-|---|---|---|---|---|
+|---|---|---|
 | Accuracy                           | >89% | [Further info](https://openenergymonitor.org/emon/buildingblocks/emontx-error-sources)
 | Measuring Current (CT)                  |50mA-96A | [Further info](https://openenergymonitor.org/emon/buildingblocks/ct-sensors-interface)
 | Measuring Voltage (AC-AC)                  | 1st: 110VAC-254VAC / 2nd: 9VAC-12VAC| [Further info](https://openenergymonitor.org/emon/buildingblocks/measuring-voltage-with-an-acac-power-adapter)

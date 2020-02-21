@@ -42,6 +42,8 @@ You should now see the emoncms user login page. Register a new account and then 
 
 If the hostname does not work, it is usually possible to find a list of devices and their IP address's on your internet router. Alternatively Network Discovery tools such as Fing work well. Download [Fing Android](https://play.google.com/store/apps/details?id=com.overlook.android.fing&hl=en_GB) or [Fing iOS](https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8).
 
+**UPDATE HIGHLY RECOMMENDED:** Now your emonPi/emonBase is connected to a network this would be a good time to pull in any new updates: `Setup > Admin > Update`
+
 ---
 
 ### {% linkable_title Option 2: Connecting via WiFi %}
@@ -83,6 +85,8 @@ If the hostname does not work, it is usually possible to find a list of devices 
 
 You should now see the emoncms user login page. Register a new account and then continue to the next step [Log Locally](/setup/local) to configure your system.
 
+**UPDATE HIGHLY RECOMMENDED:** Now your emonPi/emonBase is connected to a network this would be a good time to pull in any new updates: `Setup > Admin > Update`
+
 ---
 
 ### {% linkable_title  Option 3: Connect to Ethernet and then configure Wifi %}
@@ -99,7 +103,18 @@ After a few seconds 'Connection Info' should refresh automatically to report `St
 
 ---
 
-### {% linkable_title  Assign static IP (Optional & Advanced) %}
+### {% linkable_title Option 4: Connect via 3G GSM %}
+
+Huawei HiLink 3G USB GSM/3G dongle modems are supported. Connection should be automatic and LCD will display connection status. (*Tested with Huawei E3231 and E3131*).
+
+![3g.jpg](/images/setup/3g.jpg)
+
+
+[GSM Documentation](https://github.com/openenergymonitor/huawei-hilink-status) \| [WiFi Access -point setup (dev)](https://github.com/openenergymonitor/emonpi/tree/master/wifiAP)
+
+---
+
+### {% linkable_title Advanced: Assign static IP %}
 
 
 <button type="button" class="show_hide" href="#" rel="#slidingDiv">View</button>
@@ -136,31 +151,3 @@ After a few seconds 'Connection Info' should refresh automatically to report `St
 
 
 </div>
-
-<br>
-
-
-### {% linkable_title 5. Connect via 3G GSM (optional) %}
-
-Huawei HiLink 3G USB GSM/3G dongle modems are supported. Connection should be automatic and LCD will display connection status. (*Tested with Huawei E3231 and E3131*).
-
-![3g.jpg](/images/setup/3g.jpg)
-
-
-[GSM Documentation](https://github.com/openenergymonitor/huawei-hilink-status) \| [WiFi Access -point setup (dev)](https://github.com/openenergymonitor/emonpi/tree/master/wifiAP)
-
-### {% linkable_title 6. Update %}
-
-**UPDATE HIGHLY RECOMMENDED:** Now your emonPi is connected to a network this would be a good time to pull in any new updates: `Setup > Admin > Update`
-
-### {% linkable_title  6. Shutdown %}
-
-Shut down the emonPi by holding down the shutdown button for 5 seconds, then wait 30 seconds for unit to fully shut down.
-
-![emonPi_shutdown.png](/images/setup/emonPi_shutdown.png)
-
-<p class='note warning'>
-Unplugging power from the emonPi without following the correct shutdown procedure can result in a corrupted SD card.
-</p>
-
-The emonPi is now ready to be physically installed and the sensors connected.

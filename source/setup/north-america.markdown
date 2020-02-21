@@ -35,7 +35,7 @@ Use the [USA AC-AC voltage sensor adapter sold via the OpenEnergyMonitor Shop](h
 
 ### 3. Software Calibration
 
-#### a.) emonPi: Set EmonHub USA Calibration
+**a.) emonPi: Set EmonHub USA Calibration**
 
 In the `[[RFM2Pi]]` interfacer section of `emonhub.conf` set:
 
@@ -45,7 +45,7 @@ emonhub.conf can be edited directly in local Emoncms as described in [Setup > Lo
 
 See [[[RFM2Pi]] section of emonHub configuration guide](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md#a-rfm2pi) for advanced emonhub config info.
 
-#### b.) emonTx: Enable USA calibration using [on-board DIP switch](https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4#DIP_Switch_Config)
+**b.) emonTx: Enable USA calibration using [on-board DIP switch](https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4#DIP_Switch_Config)
 
 ### 4. Sum power values
 

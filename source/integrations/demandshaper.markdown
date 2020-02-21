@@ -27,15 +27,17 @@ The DemandShaper module is part of our work on demand side response and is a rel
 - [Forum post: OpenEnergyMonitor Demand Side Response Development](https://community.openenergymonitor.org/t/openenergymonitor-demand-side-response-development/9095)<br>
 - [Forum post: Demand Shaper module development](https://community.openenergymonitor.org/t/emoncms-demand-shaper-module/9097)
 
-## Smart Charge your Electric Vehicle
+### Smart Charge your Electric Vehicle
 
 The most useful and developed application for the DemandShaper module at present is smart charging and electric vehicle using the OpenEVSE charging station and an OVMS Open Vehicle Monitor.
 
 *Add in system overview picture here:*
 
+<pre style="font-family:monospace; font-size:14px; background-color: #eee; padding: 20px;">
           agile forecast
                |
     Laptop -> hub -> OpenEVSE -> car + OVMS
+</pre>
 
 **Note:** The automatic reading of EV state of charge is currently only supported when used in conjunction with the OVMS Open Vehicle Monitor, we would like to add support for other API's in future releases. The following has been tested and is in active use with the Nissan Leaf 24 kWh. It should work with other vehicles that are supported by OVMS but we have not tested this yet.
 
@@ -73,11 +75,11 @@ To enable automatic reading of EV state of charge with OVMS enter your OVMS Vehi
 
 Thats it, to schedule a charge enter the time that you wish the charge to complete by and select the battery % that you wish to reach.
 
-## Sonoff S20 WiFi Smart Plug scheduling
+### Sonoff S20 WiFi Smart Plug scheduling
 
 In addition to electric vehicle smart charging with the OpenEVSE the DemandShaper module can currently be used to schedule Sonoff S20 WiFi smart plugs. An overview guide is included on the DemandShaper module open source repository readme here [https://github.com/emoncms/demandshaper](https://github.com/emoncms/demandshaper), including how to upload our custom EmonESP firmware for the Sonoff S20 smart plugs.
 
-## Further Development
+### Further Development
 
 The DemandShaper modules is currently in an early beta stage of development for more information on features planned and for support using the module see the forum post: [Emoncms Demand Shaper module](https://community.openenergymonitor.org/t/emoncms-demand-shaper-module/9097).
 
