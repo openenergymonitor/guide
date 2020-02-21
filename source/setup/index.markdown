@@ -16,7 +16,7 @@ The system is made up of five main units. These can be assembled and configured 
 
 ![image](/images/setup/oemfpsystemdiagram.png)
 
-### Example configurations
+### {% linkable_title Example configurations %}
 
 ---
 
@@ -89,7 +89,7 @@ Add an optical pulse sensor to an emonTx or emonPi to count energy meter pulses.
 
 ---
 
-### Choosing a system configuration
+### {% linkable_title Choosing a system configuration %}
 
 **1. How many AC circuits do you wish to measure?**<br>
 The basic emonPi configuration supports 2x CT sensor inputs. A basic emonTx + emonBase configuration supports 4x CT sensor inputs. Both configurations can be extended to increase the number of CT inputs by adding additional emonTx units (4x CT sensor inputs per emonTx).

@@ -28,7 +28,7 @@ A typical EmonTx & EmonBase system consists of:
 - 1x [EmonBase (RaspberryPi + RFM69Pi adapter board + Enclosure + emonSD card)](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/)
 - 1x [USB Power supply](https://shop.openenergymonitor.com/5v-dc-usb-power-adapter-uk-plug/) and [micro-USB cable](https://shop.openenergymonitor.com/micro-usb-cable-20-awg-emonbase/)
 
-#### Example EmonTx sensor node installation
+### {% linkable_title Example EmonTx sensor node installation %}
 
 In this example installation the total house electricity consumption is measured using the CT sensor attached to the brown cable (main feed to the house). Another CT sensor is located inside the main consumer unit, in this case monitoring the electricity supply to a heat pump.
 
@@ -40,7 +40,7 @@ A RFM69 433 Mhz antennae is attached and also a DS18B20 temperature sensor conne
 
 The EmonTx transmits real power, cumulative watt-hours, mains voltage and temperature measurements every 10s over RFM69 radio to an emonBase connected via Ethernet to the internet router in the livingroom.
 
-#### Installation overview
+### {% linkable_title Installation overview %}
 
 **EmonTx**
 

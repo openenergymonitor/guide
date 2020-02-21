@@ -21,7 +21,7 @@ The following guide provides an quick overview of how to setup the hardware part
 Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated; i.e., switch off the power prior to installing your sensors and proceed slowly with care. If you have any doubts, seek professional assistance.
 </p>
 
-## {% linkable_title 1. **CT sensor** %}
+### {% linkable_title 1. CT sensor %}
 
 - Clip the CT sensor around either the **Line** or **Neutral** cable
 - Connect jack plug into either CT1 or CT2 socket on the emonPi
@@ -36,9 +36,8 @@ The clip-on CT sensors must be clipped round either the Line or Neutral AC wire.
 
 ![CT sensor installation ](/images/applications/solar-pv/ctinstall.jpg)
 
+### {% linkable_title 2. AC-AC Adapter %}
 
-
-## {% linkable_title 2. **AC-AC Adapter** %}
 - Plug the AC-AC adapter into a power outlet
 - This may require installation of a new outlet or extending an existing one
 - AC-AC adapter cable can be extended if required
@@ -47,30 +46,28 @@ The clip-on CT sensors must be clipped round either the Line or Neutral AC wire.
 - Provides AC waveform reference for accurate Real Power measurements.
 - [Learn more about measuring voltage with AC-AC power adapator...](https://learn.openenergymonitor.org/electricity-monitoring/voltage-sensing/measuring-voltage-with-an-acac-power-adapter)
 
+### {% linkable_title 3. DC 5V USB Adapter %}
 
-
-## {% linkable_title 3. **DC 5V USB Adapter** %}
 - Plug the DC 5V USB adapter into a power outlet
 - Plug the mini-B USB connector into the emonPi
 - High quality minimum [1.2A power supply recommended](https://shop.openenergymonitor.com/power-supplies/)
 
-<br>
+### {% linkable_title 4. Optical Utility Meter LED Pulse Sensor (optional) %}
 
-### {% linkable_title 4. *Optical Utility Meter LED Pulse Sensor (optional)* %}
 - See [Optical Pulse Sensor setup page](http://openenergymonitor.org/emon/opticalpulsesensor)
 - Connects to emonPi / emonTx via RJ45 connector
 - Self-adhesive velcro attachment to utility meter
 - One optical pulse sensor per emonPi/emonTx
 - Can be used in conjunction with temperature sensors using [RJ45 Breakout](http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/)
 
+### {% linkable_title 5. Temperature Sensors (optional) %}
 
-### {% linkable_title 5. *Temperature Sensors (optional)* %}
 - Connect to emonPi / emonTx via RJ45 connector.
 - Up to 6x [RJ45 sensors](https://shop.openenergymonitor.com/rj45-encapsulated-ds18b20-temperature-sensor/) can be connected using the [RJ45 expander](http://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/).
 - Up to 6x [wired sensors](https://shop.openenergymonitor.com/encapsulated-ds18b20-temperature-sensor/) can be connected using the [terminal block breakout board](https://shop.openenergymonitor.com/rj45-to-terminal-block-breakout-for-ds18b20/).
 - Sensor wire can be extended using RJ45 cable and the [RJ45 Extender](http://shop.openenergymonitor.com/rj45-extender/).
 
-## Installation Examples
+### Installation Examples
 
 ![home energy](/images/applications/home-energy/home-energy-emonpi-install.jpg)
 
@@ -80,7 +77,7 @@ The included [plastic clips](https://www.lincolnbinns.com/wp-content/uploads/201
 
 See [Solar PV Application Note](/applications/solar-pv/) for emonPi solar PV install guide & images.
 
-## {% linkable_title 6. Power Up %}
+### {% linkable_title 6. Power Up %}
 
 
 <p class='note'>
