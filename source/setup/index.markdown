@@ -20,7 +20,7 @@ The system is made up of five main units. These can be assembled and configured 
 
 ---
 
-**EmonPi (£170.59 exc VAT, £204.71 inc VAT)**<br>
+**EmonPi**<br>
 All in one, 2x CT inputs, 1x ACAC Voltage input, Temperature and pulse input, LCD Display, Integrated RaspberryPi with Emoncms for local data logging. Wifi or Ethernet connectivity. Designed for single phase home solar and consumption monitoring.
 
 ![image](/images/setup/emonpi.png)
@@ -29,7 +29,7 @@ All in one, 2x CT inputs, 1x ACAC Voltage input, Temperature and pulse input, LC
 
 ---
 
-**EmonTx + EmonBase (£138.04 exc VAT, £165.65 inc VAT)**<br>
+**EmonTx + EmonBase**<br>
 Seperate sensor node and base station linked by 433Mhz radio, 4x CT inputs, 1x ACAC Voltage input, Temperature and pulse input. RaspberryPi Base station with Emoncms for local data logging. Wifi or Ethernet connectivity. Applications: Home solar, consumption, multiple circuits, 3-phase.
 
 ![image](/images/setup/emontxandbase.png)
@@ -40,7 +40,7 @@ Seperate sensor node and base station linked by 433Mhz radio, 4x CT inputs, 1x A
 
 ---
 
-**EmonTx + ESP8266 (£105.29 exc VAT, £126.35 inc VAT)**<br>
+**EmonTx + ESP8266**<br>
 Using and ESP8266 Adapter the EmonTx can send data directly to a remote emoncms server such as emoncms.org. It is also possible to use an ESP8266 adapter with an EmonTx to send data to an emonPi or emonBase basestation to improve reliability where 433Mhz is not sufficient.
 
 ![image](/images/setup/emontx.png)
@@ -62,7 +62,7 @@ An EmonPi and emonBase can be extended with up to 30 wireless 433 MHz sensor nod
 
 ---
 
-**EmonTH (£31.30 exc VAT, £37.56 inc VAT)**<br>
+**EmonTH**<br>
 Add wireless temperature & humidity monitoring nodes to an emonPi or emonBase base station. Ideal for room based temperature & humidity sensing.
 
 ![image](/images/setup/emonth.png)
