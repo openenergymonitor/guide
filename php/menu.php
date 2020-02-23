@@ -6,9 +6,9 @@
     <b>Hardware Setup</b>
     <ul>
       <li><a  href='<?php echo $path; ?>setup'>System Overview </a></li>
-      <li><a  href='<?php echo $path; ?>setup/install/'>Install EmonPi</a></li>
-      <li><a  href='<?php echo $path; ?>setup/install-emontx/'>Install EmonTx & EmonBase</a></li>
-      <li><a  href='<?php echo $path; ?>setup/esp8266-adapter-emontx/'>Install EmonTx & ESP8266</a></li>
+      <li><a  href='<?php echo $path; ?>setup/install/'>Install emonPi</a></li>
+      <li><a  href='<?php echo $path; ?>setup/install-emontx/'>Install emonTx & emonBase</a></li>
+      <li><a  href='<?php echo $path; ?>setup/esp8266-adapter-emontx/'>Install emonTx & ESP8266</a></li>
       <li><a  href='<?php echo $path; ?>setup/emontx/'>+ Add Additional emonTx</a></li>
       <li><a  href='<?php echo $path; ?>setup/emonth/'>+ Add Temperature Nodes</a></li>
       <li><a  href='<?php echo $path; ?>setup/optical-pulse-sensor/'>+ Add Optical Pulse Sensor </a></li>
@@ -68,8 +68,8 @@
   </li><li>
     <b>Technical</b>
     <ul>
-      <li><a  href='<?php echo $path; ?>technical/emonpi'>EmonPi</a></li>
-      <li><a  href='<?php echo $path; ?>technical/emontx'>EmonTx</a></li>
+      <li><a  href='<?php echo $path; ?>technical/emonpi'>emonPi</a></li>
+      <li><a  href='<?php echo $path; ?>technical/emontx'>emonTx</a></li>
       <li><a  href='<?php echo $path; ?>technical/compiling/'>Firmware Modification </a></li>
       <li><a  href='<?php echo $path; ?>technical/resources/'>Resources </a></li>
     </ul>
