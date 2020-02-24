@@ -684,89 +684,83 @@ highlight active link...
     <h2 class="navigationTitle">Contents</h2>
     <ul class='divided sidebar-menu'>
       <li style="padding-top: 10px;">
-          <b>Setup</b>
+        <b>Hardware Setup</b>
         <ul>
-          <li><a  href='/setup/'>1. System Overview </a></li>
-          <li><a  href='/setup/connect/'>2. Connect </a></li>
-          <li><a  href='/setup/install/'>3. Install </a></li>
-          <li><a  href='/setup/local/'>4. Log Locally </a></li>
-          <li><a  href='/setup/remote/'>5. Log Remotely </a></li>
-          <li><a  href='/setup/dashboards/'>6. Dashboards </a></li>
-          <li><a  href='/setup/energy-node/'>7. Energy Sensing Node(s) </a></li>
-          <ul style="margin-bottom: 0px;;">
-            <li><a  href='/setup/emontx/'>emonTx </a></li>
-          </ul>
-          <li><a  href='/setup/emonth/'>8. Temperature Node(s) </a></li>
-          <li><a  href='/setup/optical-pulse-sensor/'>9. Add Optical Pulse Sensor </a></li>
-          <li><a  href='/setup/import/'>10. Import / Backup </a></li>
-          <li><a  href='/setup/north-america/'>11. Use in North America </a></li>
-          <li><a  href='/setup/troubleshooting/'>12. Troubleshooting </a></li>
-          <li><a  href='/setup/remote-access/'>13. Remote Access </a></li>
-          <li><a  href='/setup/update/'>14. Update & Upgrade </a></li>
-
+          <li><a  href='/setup/'>System Overview </a></li>
+          <li><a  href='/setup/install/'>Install emonPi </a></li>
+          <li><a  href='/setup/install-emontx/'>Install emonTx & emonBase </a></li>
+          <li><a  href='/setup/install-adapter-emontx/'>Install emonTx & ESP8266 </a></li>
+          <li><a  href='/setup/emontx/'>+ Add Additional emonTx </a></li>
+          <li><a  href='/setup/emonth/'>+ Add Temperature Nodes </a></li>
+          <li><a  href='/setup/optical-pulse-sensor/'>+ Add Optical Pulse Sensor </a></li>
+          <li><a  href='/setup/north-america/'>Use in North America </a></li>
         </ul>
-        <li>
-          <b>Emoncms</b>
-          <ul>
+      </li><li>
+        <b>EV Charging & Control</b>
+        <ul>
+          <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
+          <li><a  href='/integrations/evse-setup'>EVSE User Guide Setup </a></li>
+          <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
+          <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>          
+        </ul>
+      </li><li>
+        <b>Software Setup</b>
+        <ul>
+          <li><a  href='/setup/connect/'>1. Connect </a></li>
+          <li><a  href='/setup/local/'>2. Log Locally </a></li>
+          <li><a  href='/setup/remote/'>3. Log Remotely </a></li>
+          <li><a  href='/setup/import/'>4. Import / Backup </a></li>
+          <li><a  href='/setup/remote-access/'>5. Remote Access </a></li>
+          <li><a  href='/setup/update/'>6. Update & Upgrade </a></li>                
+          <li><a  href='/technical/credentials/'>7. Service Credentials </a></li>
+          <li><a  href='/technical/mqtt/'>8. MQTT </a></li>
+          <li><a  href='/setup/troubleshooting/'>9. Troubleshooting </a></li>
+        </ul>
+      </li><li>
+        <b>Emoncms</b>
+        <ul>
           <li><a  href='/emoncms/coreconcepts/'>Core Concepts </a></li>
           <li><a  href='/emoncms/postingdata/'>Posting Data </a></li>
           <li><a  href='/emoncms/graphs/'>View Graphs </a></li>
-          <li><a  href='/emoncms/daily-kwh/'>Daily kWh </a></li>
-          <li><a  href='/emoncms/daily-averages/'>Daily Averages </a></li>
+          <li><a  href='/emoncms/dashboards/'>Dashboard builder </a></li>
+          <li><a  href='/emoncms/apps/'>Application dashboards </a></li>
+          <li><a  href='/emoncms/daily-kwh/'>Calculating Daily kWh </a></li>
+          <li><a  href='/emoncms/daily-averages/'>Calculating Averages </a></li>
           <li><a  href='/emoncms/export-csv/'>Exporting CSV </a></li>
           <li><a  href='/emoncms/histograms/'>Histograms </a></li>
           <li><a  href='/emoncms/postprocess/'>Post Process </a></li>
-          <li><a  href='/technical/api/'>Emoncms API </a></li>
+          <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
-
-
-      </li>
-
-      <li>
-         <b>Applications</b>
+      </li><li>
+        <b>Applications</b>
         <ul>
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
-         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
-      </li>
-
-      <li>
-         <b>Integrations</b>
+      </li><li>
+        <b>Integrations</b>
         <ul>
-         <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
-         <ul style="margin-bottom: 0px;;">
-            <li><a  href='/integrations/evse-setup'>User Guide Setup </a></li>
-          </ul>
          <li><a  href='/integrations/nodered/'>Node-RED </a></li>
          <li><a  href='/integrations/openhab/'>OpenHAB </a></li>
-         <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
          <li><a  href='/integrations/lightwaverf/'>LightWave RF Control </a></li>
-         <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>
         </ul>
-
-      <li>
+      </li><li>
         <b>Technical</b>
-       <ul>
-        <li><a  href='/technical/'>Overview </a></li>
-        <li><a  href='/technical/specifications/'>Specifications </a></li>
-        <li><a  href='/technical/credentials/'>Service Credentials </a></li>
-        <li><a  href='/technical/mqtt/'>MQTT </a></li>
-        <li><a  href='/technical/compiling/'>Firmware Modification </a></li>
-        <li><a  href='/technical/resources/'>Resources </a></li>
-       </ul>
-      </li>
-
-      <li>
-     <b>Support</b>
+        <ul>
+          <li><a  href='/technical/emonpi/'>emonPi </a></li>
+          <li><a  href='/technical/emontx/'>emonTx </a></li>
+          <li><a  href='/technical/compiling/'>Firmware Modification </a></li>
+          <li><a  href='/technical/resources/'>Resources </a></li>
+        </ul>
+      </li><li>
+        <b>Support</b>
         <ul>
          <li><a  href='https://community.openenergymonitor.org/latest'>Community Forum <i class="icon-external-link"></i> </a>
          <li><a  href='/help/'>Contact </a></li>
         </ul>
       </li>
-
-
+    </ul>
     </div>
 <gcse:search></gcse:search>
 </section>

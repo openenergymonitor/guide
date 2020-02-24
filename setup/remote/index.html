@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>4. Log Remotely - Guide | OpenEnergyMonitor</title>
+    <title>3. Log Remotely - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
     <meta name="description" content="Log remotly to Emoncms.org">
     
@@ -15,7 +15,7 @@
     <link rel="canonical" href="http://guide.openenergymonitor.org/setup/remote/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="4. Log Remotely">
+    <meta property="og:title" content="3. Log Remotely">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
     <meta property="og:url" content="http://guide.openenergymonitor.org/setup/remote/">
     <meta property="og:type" content="website">
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="4. Log Remotely">
+    <meta name="twitter:title" content="3. Log Remotely">
     <meta name="twitter:description" content="Log remotly to Emoncms.org">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
@@ -609,51 +609,45 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      4. Log Remotely
+      3. Log Remotely
     </h1>
   </header>
   <hr class="divider">
   
 
-  <h3 id="-previous-step-log-locally"><a href="/setup/local/">« Previous step: Log Locally</a></h3>
-
-<h3 id="next-step-dashboards-"><a href="/setup/dashboards/">Next step: Dashboards »</a></h3>
-
-<hr />
-
-<p>In addition to <a href="/setup/local/">local logging</a>, we also offer an optional remote data logging and visualisation service called Emoncms.org running a slightly reduced feature set to that available locally for applications where remote logging is required. Emoncms.org is a pay-as-you-go service but all OpenEnergyMonitor shop hardware purchases come with 20% free emoncms.org credit which is designed to give 5-10 years of free use. See <a href="https://emoncms.org/site/pricing">Emoncms.org pricing</a> for more information.</p>
+  <p>In addition to <a href="/setup/local/">local logging</a>, we also offer an optional remote data logging and visualisation service called Emoncms.org running a slightly reduced feature set to that available locally for applications where remote logging is required. Emoncms.org is a pay-as-you-go service but all OpenEnergyMonitor shop hardware purchases come with 20% free emoncms.org credit which is designed to give 5-10 years of free use. See <a href="https://emoncms.org/site/pricing">Emoncms.org pricing</a> for more information.</p>
 
 <p>It is also possible to self-host our open source emoncms software on your own remote server, we have a nice installation script to help with this for use with Debian systems, see <a href="https://github.com/openenergymonitor/EmonScripts">EmonScripts</a>.</p>
 
 <p>Posting data to a remote server such as emoncms.org is particularly useful for applications that require public dashboards as there is usually more bandwidth for many users to access the same dashboard than available over a household or remote monitoring site connection. Remote data logging is also useful for applications that require aggregation or remote data analysis. The OpenEnergyMonitor system provides both local and remote options so that you can choose the right tool for your application.</p>
 
-<h2 id="1-create-an-emoncms-account">1. Create an emoncms account</h2>
+<h3 id="1-create-an-emoncms-account">1. Create an emoncms account</h3>
 
 <p><img src="/images/setup/remote-log0.png" alt="remote log1" /></p>
 
 <ul>
   <li>Browse to <a href="https://emoncms.org">Emoncms.org</a></li>
   <li>Create account or log-in with existing account</li>
-  <li>Select <code class="highlighter-rouge">Inputs &gt; Input API helper</code> <a href="https://emoncms.org/input/api">(https://emoncms.org/input/api)</a></li>
+  <li>Select <strong>Inputs &gt; Input API helper</strong></li>
   <li>Copy Read-Write API key</li>
 </ul>
 
 <p><img src="/images/setup/remote-log01.png" alt="remote log1" /></p>
 
-<h2 id="2-enter-api-key-into-local-emoncms">2. Enter API key into local Emoncms</h2>
+<h3 id="2-enter-api-key-into-local-emoncms">2. Enter API key into local Emoncms</h3>
 
 <p><img src="/images/setup/remote-log1.png" alt="remote log1" /></p>
 
 <ul>
   <li>Log-in to local Emoncms on your local network e.g. <a href="http://emonpi">http://emonpi</a> or http://192.168.X.X</li>
-  <li>Navigate to <code class="highlighter-rouge">Setup &gt; emonHub</code></li>
-  <li>Scroll down the emonHub config, in the <code class="highlighter-rouge">[[emoncmsorg]]</code> section pate in your Emoncms.org R/W API key overwriting the <code class="highlighter-rouge">xxxxxxxxxxxxxxx</code> value.</li>
-  <li>Hit <code class="highlighter-rouge">Save</code></li>
+  <li>Navigate to <strong>Setup &gt; emonHub</strong></li>
+  <li>Scroll down the emonHub config, in the <strong>[[emoncmsorg]]</strong> section pate in your Emoncms.org R/W API key overwriting the <strong>xxxxxxxxxxxxxxx</strong> value</li>
+  <li>Hit <strong>Save</strong></li>
 </ul>
 
 <p><a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md"><em>Advanced emonhub.conf configuration guide</em></a></p>
 
-<h2 id="3-setup-emoncmsorg-input-processing">3. Setup Emoncms.org Input Processing</h2>
+<h3 id="3-setup-emoncmsorg-input-processing">3. Setup Emoncms.org Input Processing</h3>
 
 <ul>
   <li>Log back into <a href="https://emoncms.org">Emoncms.org</a></li>
@@ -669,7 +663,8 @@ highlight active link...
 
 <p>The emonPi can post to other remote Emoncms accounts as well as or instead of emoncms.org. To post to another Emoncms account create another <code class="highlighter-rouge">EmonHubEmoncmsHTTPInterfacer</code> section in <code class="highlighter-rouge">emonhub.conf</code> e.g :</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[[my-emoncms-server]]
+<pre style="font-family:monospace; font-size:14px; background-color: #eee; padding: 20px;">
+[[my-emoncms-server]]
     Type = EmonHubEmoncmsHTTPInterfacer
     [[[init_settings]]]
     [[[runtimesettings]]]
@@ -678,9 +673,9 @@ highlight active link...
         url = https://my-awesome-emoncms-server-url
         apikey = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         senddata = 1                    # my-awesome-emoncms-server
-        sendstatus = 0                  # Enable sending WAN IP to Emoncms MyIP (requires My IP installed)
+        sendstatus = 0                  # Enable sending WAN IP to Emoncms MyIP
         sendinterval= 10                # Bulk send interval to post in seconds
-</code></pre></div></div>
+</pre>
 
 <hr />
 
@@ -732,89 +727,83 @@ highlight active link...
     <h2 class="navigationTitle">Contents</h2>
     <ul class='divided sidebar-menu'>
       <li style="padding-top: 10px;">
-          <b>Setup</b>
+        <b>Hardware Setup</b>
         <ul>
-          <li><a  href='/setup/'>1. System Overview </a></li>
-          <li><a  href='/setup/connect/'>2. Connect </a></li>
-          <li><a  href='/setup/install/'>3. Install </a></li>
-          <li><a  href='/setup/local/'>4. Log Locally </a></li>
-          <li><a class='active' href='/setup/remote/'>5. Log Remotely </a></li>
-          <li><a  href='/setup/dashboards/'>6. Dashboards </a></li>
-          <li><a  href='/setup/energy-node/'>7. Energy Sensing Node(s) </a></li>
-          <ul style="margin-bottom: 0px;;">
-            <li><a  href='/setup/emontx/'>emonTx </a></li>
-          </ul>
-          <li><a  href='/setup/emonth/'>8. Temperature Node(s) </a></li>
-          <li><a  href='/setup/optical-pulse-sensor/'>9. Add Optical Pulse Sensor </a></li>
-          <li><a  href='/setup/import/'>10. Import / Backup </a></li>
-          <li><a  href='/setup/north-america/'>11. Use in North America </a></li>
-          <li><a  href='/setup/troubleshooting/'>12. Troubleshooting </a></li>
-          <li><a  href='/setup/remote-access/'>13. Remote Access </a></li>
-          <li><a  href='/setup/update/'>14. Update & Upgrade </a></li>
-
+          <li><a  href='/setup/'>System Overview </a></li>
+          <li><a  href='/setup/install/'>Install emonPi </a></li>
+          <li><a  href='/setup/install-emontx/'>Install emonTx & emonBase </a></li>
+          <li><a  href='/setup/install-adapter-emontx/'>Install emonTx & ESP8266 </a></li>
+          <li><a  href='/setup/emontx/'>+ Add Additional emonTx </a></li>
+          <li><a  href='/setup/emonth/'>+ Add Temperature Nodes </a></li>
+          <li><a  href='/setup/optical-pulse-sensor/'>+ Add Optical Pulse Sensor </a></li>
+          <li><a  href='/setup/north-america/'>Use in North America </a></li>
         </ul>
-        <li>
-          <b>Emoncms</b>
-          <ul>
+      </li><li>
+        <b>EV Charging & Control</b>
+        <ul>
+          <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
+          <li><a  href='/integrations/evse-setup'>EVSE User Guide Setup </a></li>
+          <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
+          <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>          
+        </ul>
+      </li><li>
+        <b>Software Setup</b>
+        <ul>
+          <li><a  href='/setup/connect/'>1. Connect </a></li>
+          <li><a  href='/setup/local/'>2. Log Locally </a></li>
+          <li><a class='active' href='/setup/remote/'>3. Log Remotely </a></li>
+          <li><a  href='/setup/import/'>4. Import / Backup </a></li>
+          <li><a  href='/setup/remote-access/'>5. Remote Access </a></li>
+          <li><a  href='/setup/update/'>6. Update & Upgrade </a></li>                
+          <li><a  href='/technical/credentials/'>7. Service Credentials </a></li>
+          <li><a  href='/technical/mqtt/'>8. MQTT </a></li>
+          <li><a  href='/setup/troubleshooting/'>9. Troubleshooting </a></li>
+        </ul>
+      </li><li>
+        <b>Emoncms</b>
+        <ul>
           <li><a  href='/emoncms/coreconcepts/'>Core Concepts </a></li>
           <li><a  href='/emoncms/postingdata/'>Posting Data </a></li>
           <li><a  href='/emoncms/graphs/'>View Graphs </a></li>
-          <li><a  href='/emoncms/daily-kwh/'>Daily kWh </a></li>
-          <li><a  href='/emoncms/daily-averages/'>Daily Averages </a></li>
+          <li><a  href='/emoncms/dashboards/'>Dashboard builder </a></li>
+          <li><a  href='/emoncms/apps/'>Application dashboards </a></li>
+          <li><a  href='/emoncms/daily-kwh/'>Calculating Daily kWh </a></li>
+          <li><a  href='/emoncms/daily-averages/'>Calculating Averages </a></li>
           <li><a  href='/emoncms/export-csv/'>Exporting CSV </a></li>
           <li><a  href='/emoncms/histograms/'>Histograms </a></li>
           <li><a  href='/emoncms/postprocess/'>Post Process </a></li>
-          <li><a  href='/technical/api/'>Emoncms API </a></li>
+          <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
-
-
-      </li>
-
-      <li>
-         <b>Applications</b>
+      </li><li>
+        <b>Applications</b>
         <ul>
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
-         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
-      </li>
-
-      <li>
-         <b>Integrations</b>
+      </li><li>
+        <b>Integrations</b>
         <ul>
-         <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
-         <ul style="margin-bottom: 0px;;">
-            <li><a  href='/integrations/evse-setup'>User Guide Setup </a></li>
-          </ul>
          <li><a  href='/integrations/nodered/'>Node-RED </a></li>
          <li><a  href='/integrations/openhab/'>OpenHAB </a></li>
-         <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
          <li><a  href='/integrations/lightwaverf/'>LightWave RF Control </a></li>
-         <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>
         </ul>
-
-      <li>
+      </li><li>
         <b>Technical</b>
-       <ul>
-        <li><a  href='/technical/'>Overview </a></li>
-        <li><a  href='/technical/specifications/'>Specifications </a></li>
-        <li><a  href='/technical/credentials/'>Service Credentials </a></li>
-        <li><a  href='/technical/mqtt/'>MQTT </a></li>
-        <li><a  href='/technical/compiling/'>Firmware Modification </a></li>
-        <li><a  href='/technical/resources/'>Resources </a></li>
-       </ul>
-      </li>
-
-      <li>
-     <b>Support</b>
+        <ul>
+          <li><a  href='/technical/emonpi/'>emonPi </a></li>
+          <li><a  href='/technical/emontx/'>emonTx </a></li>
+          <li><a  href='/technical/compiling/'>Firmware Modification </a></li>
+          <li><a  href='/technical/resources/'>Resources </a></li>
+        </ul>
+      </li><li>
+        <b>Support</b>
         <ul>
          <li><a  href='https://community.openenergymonitor.org/latest'>Community Forum <i class="icon-external-link"></i> </a>
          <li><a  href='/help/'>Contact </a></li>
         </ul>
       </li>
-
-
+    </ul>
     </div>
 <gcse:search></gcse:search>
 </section>

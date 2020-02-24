@@ -8,6 +8,9 @@
 <loc>http://guide.openenergymonitor.org/technical/api/</loc>
 </url>
 <url>
+<loc>http://guide.openenergymonitor.org/emoncms/apps/</loc>
+</url>
+<url>
 <loc>http://guide.openenergymonitor.org/technical/compiling/</loc>
 </url>
 <url>
@@ -41,7 +44,13 @@
 <loc>http://guide.openenergymonitor.org/setup/emoncms-graphs/</loc>
 </url>
 <url>
+<loc>http://guide.openenergymonitor.org/technical/emonpi/</loc>
+</url>
+<url>
 <loc>http://guide.openenergymonitor.org/setup/emonth/</loc>
+</url>
+<url>
+<loc>http://guide.openenergymonitor.org/technical/emontx/</loc>
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/setup/emontx/</loc>
@@ -86,9 +95,6 @@
 <loc>http://guide.openenergymonitor.org/about/</loc>
 </url>
 <url>
-<loc>http://guide.openenergymonitor.org/technical/</loc>
-</url>
-<url>
 <loc>http://guide.openenergymonitor.org/applications/</loc>
 </url>
 <url>
@@ -99,6 +105,9 @@
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/integrations/</loc>
+</url>
+<url>
+<loc>http://guide.openenergymonitor.org/setup/install-emontx/</loc>
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/setup/install/</loc>
@@ -165,10 +174,10 @@
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/images/integrations/OpenEVSE_flowchart.pdf</loc>
-<lastmod>2020-02-12T11:34:28+00:00</lastmod>
+<lastmod>2020-02-24T22:20:55+00:00</lastmod>
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/static/mdi-demo.html</loc>
-<lastmod>2020-02-12T11:34:28+00:00</lastmod>
+<lastmod>2020-02-24T22:20:55+00:00</lastmod>
 </url>
 </urlset>

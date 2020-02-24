@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Technical Overview - Guide | OpenEnergyMonitor</title>
+    <title>EmonTx - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="emonPi Technical Overview">
+    <meta name="description" content="EmonTx Technical Overview">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/technical/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/technical/emontx/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Technical Overview">
+    <meta property="og:title" content="EmonTx">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/technical/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/technical/emontx/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="emonPi Technical Overview">
+    <meta property="og:description" content="EmonTx Technical Overview">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Technical Overview">
-    <meta name="twitter:description" content="emonPi Technical Overview">
+    <meta name="twitter:title" content="EmonTx">
+    <meta name="twitter:description" content="EmonTx Technical Overview">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -609,97 +609,85 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      Technical Overview
+      EmonTx
     </h1>
   </header>
   <hr class="divider">
   
 
-  <figure><a href="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png">
-<img src="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png" alt="emonPi Architecture Overview" />
-<figcaption style="text-align:center;"><i>Fig.1 - emonPi Architecture Overview</i></figcaption>
-</a>
-</figure>
-<p><br /></p>
+  <p>The emonTx is an low power RF remote sensor node. Data is transmitted to an emonPi or an emonBase via a low power 433MHz radio. This page provides a technical overview of the emonTx including configuration &amp; firmware. For installation instructions see Hardware Setup guides.</p>
 
-<p>The emonPi is based on a RaspberryPi + <a href="https://wiki.openenergymonitor.org/index.php/EmonPi">emonPi Shield PCB</a>. The emonPi features a ATmega328p 8-bit microcontroller which is Arduino compatible.</p>
+<p><img src="/images/setup/emontx.jpg" alt="emontx" /></p>
 
-<figure>
-<img src="https://github.com/openenergymonitor/emonpi/raw/master/hardware/emonpi/emonpi_V1_6/photo.png" alt="emonPi RaspberryPi Shield PCB" />
-<figcaption style="text-align:center;"><i>emonPi Raspberry Pi Shield PCB</i></figcaption>
-</figure>
-<p><br /></p>
+<p><a class="btn pull-right" href="http://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/">View in Shop → </a></p>
 
-<p>An <a href="http://shop.openenergymonitor.com/emonbase-web-connected-base-station/">emonBase</a> functions in much the same way as an emonPi but instead of an emonPi shield PCB it uses an <a href="http://shop.openenergymonitor.com/rfm69pi-433mhz-raspberry-pi-base-station-receiver-board/">RFM69Pi PCB</a> and has no local energy monitoring capability. The Raspberry Pi on the emonBase runs the same <a href="#emonsd-features">emonSD</a> software as the emonPi.</p>
-
-<figure>
-<img src="https://wiki.openenergymonitor.org/images/thumb/RFM69Pi_RasPi.JPG/1500px-RFM69Pi_RasPi.JPG" alt="emonBase: Raspberry Pi + RFM69Pi" />
-<figcaption style="text-align:center;"><i>emonBase: Raspberry Pi + RFM69Pi</i></figcaption>
-</figure>
-<p><br /></p>
-
-<hr />
-
-<h2 id="-hardware-overview"><a class="title-link" name="hardware-overview" href="#hardware-overview"></a> Hardware Overview</h2>
-
-<p>As the diagram (fig.1) shows the Atmega328 microprocessor communicates with the Raspberry Pi via the internal UART <code class="highlighter-rouge">(/dev/ttyAMA0</code> serial port. Data is transmitted over serial using the <a href="http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/">JeeLib packet format</a>. The ATmega328 on the emonPi / RFM69Pi run a modified version of <a href="http://jeelabs.net/projects/jeelib/wiki/RF12demo">JeeLabs RFM12Demo Sketch</a>.</p>
-
-<h3 id="inside-the-emonpi">Inside the emonPi</h3>
-
-<div class="videoWrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lc2LzCZnySo" frameborder="0" allowfullscreen=""></iframe>
-</div>
-
-<p><strong>More technical info See <a href="/technical/resources#emonpi">emonPi Resources</a></strong></p>
-
-<h3 id="-rf"><a class="title-link" name="rf" href="#rf"></a> RF</h3>
-
-<p>The emonPi / RFM69Pi uses the HopeRF RFM69CW RF module to receive data from other wireless nodes (emonTx, emonTH etc) using 433Mhz. Each RF node is required to be on the same network group (default 210) and have an unique node ID. Data is transmitted over serial using the <a href="http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/">JeeLib packet format</a>. EmonHub python service on the Raspberry Pi requires a corresponding node decoder entry in emonhub config for each RF node. See <a href="#emonhub">emonHub in section below</a>.</p>
-
-<p><strong>See <a href="/technical/resources/fundamentals">Fundamental Building block Resources</a></strong></p>
-
-<h3 id="-energy-monitoring"><a class="title-link" name="energy-monitoring" href="#energy-monitoring"></a> Energy Monitoring</h3>
-
-<p>Energy monitoring on the emonPi and emonTx is achieved using <a href="https://github.com/openenergymonitor/emonlib">emonLib</a> discrete sampling and the ATmega328’s 10-bit ADC. By default samples are taken once every 5 seconds.</p>
-
-<p><strong>See <a href="/technical/resources#fundamentals">Fundamental Building block Resources</a></strong></p>
-
-<h3 id="-pulse-counting"><a class="title-link" name="pulse-counting" href="#pulse-counting"></a> Pulse Counting</h3>
-
-<p>Pulse counting on the emonPi and emonTx uses ATmega328’s second hardware interrupt IRQ1. The first hardware interrupt IRQ0 is used by the RFM69CW. Only one pulse counter input is possible per emonTx/emonPi.</p>
-
-<p><strong>See <a href="/technical/resources#optical-pulse-counter">Optical Pulse Sensor Resources</a></strong></p>
-
-<h2 id="-software-overview"><a class="title-link" name="software-overview" href="#software-overview"></a> Software Overview</h2>
-
-<p>By default the Raspberry Pi runs a modified version of Debian <a href="https://www.raspberrypi.org/downloads/raspbian/">Raspbian Jessie Lite</a>. A pre-build SD card image (<strong>emonSD</strong>) is available to <a href="https://github.com/openenergymonitor/emonpi/Docs/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">purchase or download</a>) which has everything already set up.</p>
-
-<h3 id="-emonsd-features"><a class="title-link" name="emonsd-features" href="#emonsd-features"></a> emonSD features</h3>
+<p><strong>Features:</strong></p>
 
 <ul>
-  <li>Read-only root file-system for long SD card lifespan</li>
-  <li>emonPi LCD &amp; Update service</li>
-  <li>Emoncms with low-write optimisations</li>
-  <li>Mosquitto MQTT server</li>
-  <li>emonHub service</li>
-  <li>Node-RED</li>
-  <li>OpenHAB</li>
-  <li>LightWave RF MQTT OOK</li>
+  <li>4x CT Sensor inputs for single-phase AC electricity monitoring designed for use with the <a href="https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/">100A SCT-013-000 CT sensor</a></li>
+  <li>CT 1-3 are standard 100A / 24KW max CT inputs (@240V)</li>
+  <li>CT 4 is a special high sensitivity input for 19A / 4.6KW (@240V)</li>
+  <li>1x AC voltage measurement using plug-in AC-AC adapter for real power calculation alongside current measurement from CT sensors. Designed for use with a <a href="https://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-uk-plug/">9V AC output voltage adapter</a></li>
+  <li>Support for multiple wired one-wire DS18B20 temperature sensors via RJ45 socket or terminal block.</li>
+  <li>Support for pulse counting either wired or via Optical Pulse Sensor</li>
+  <li>Can be powered by a single AC-AC adaptor (DC PSU not required)</li>
+  <li>Battery power option via 3 x AA batteries</li>
+  <li>RF Range is approximately similar to home WiFi (real world range depends on many factors e.g. thick stone walls)</li>
+  <li>Up to 2x emonTx can be connected to a single emonPi or emonBase (up to 30x is possible with manual RF node ID setting*)</li>
+  <li>Wall-mount option</li>
+  <li>New 2019: The EmonTx firmware now supports higher accuracy continuous monitoring as standard - if powered from an ACAC adapter or USB power.</li>
+  <li>Alternative firmware options include: Discreet Sampling for battery operation and 3-phase firmware.</li>
 </ul>
 
-<p><strong>See <a href="/technical/resources#emonhub">emonSD Resources</a></strong></p>
+<p><strong>WiFi option:</strong> It is possible to use an emonTx with a ESP8266 WiFi adapter to provide WiFi connectivity. This can be useful in applications where the 433MHz radio range is not sufficient but there is good WiFi signal. The emonTx can post data to a local emonBase/emonPi over WiFi or work in ‘standalone mode’ to post directly to a remote emoncms server such as emoncms.org. See <a href="/setup/esp8266-adapter-emontx/">Using emonTx with the ESP8266 WiFi module</a></p>
 
-<h3 id="-emonhub"><a class="title-link" name="emonhub" href="#emonhub"></a> emonHub</h3>
+<p><strong>Battery vs AC adapter:</strong>
+An emonTx can be powered by 3 x AA batteries; however, if possible, it is recommended to power the unit with an AC-AC adapter to provide an AC voltage reference for more accurate real power calculation and continuous sampling support.</p>
 
-<p>emonHub (emonpi variant) is pre-installed on emonSD. EmonHub is a python service which receives the data from the emonPi via serial (in JeeLabs packet) format. emonHub decodes the data and publishes it to the emonPi’s localhost Mosquitto MQTT server and (<a href="/setup/remote">if configured</a>) remotely to <a href="https://emoncms.org">Emoncms.org</a>.</p>
+<h3 id="-configuration"><a class="title-link" name="configuration" href="#configuration"></a> Configuration</h3>
 
-<p>Corresponding EmonHub node-decoder entries must be present in emonhub config for each wireless RF node e.g. emonTx, emonTH. See configuring emonhub in the resources:</p>
+<p><strong>Configure RF Node ID and Voltage calibration</strong><br />
+Multiple emonTx unit’s can operate on a single network posting to a single emonBase web-connected base station, each emonTx on the same network group must have an unique node ID. The nodeID can be selected at time of purchase or set using the on-board DIP switch to toggle. If more than two emonTx’s are required on the same network then further nodeID values can be set via RF node ID serial config.</p>
 
-<p><strong>See <a href="/technical/resources#emonhub">emonHub Resources</a></strong></p>
+<p><img src="/images/setup/emontx_dipswitch.jpg" style="max-width:400px; float:right; padding:0 0 10px 10px" /></p>
 
-<hr />
+<p>The image on the right shows the DIP switch configuration looking at the emonTx with the CT sensor inputs at the top of the board. Move the top switch D9 to the left to select USA ACAC Voltage calibration. <strong>Move the bottom switch D8 to the left to select RF node ID 16 rather than 15.</strong></p>
 
-<h3 id="see-technical--resources-for-further-info-and-support-">See <a href="/technical/resources">Technical &gt; Resources</a> for further info and support &gt;</h3>
+<p><strong>Serial Configuration</strong><br />
+It’s possible to set the emonTx radio settings, sensor calibration and other properties over serial. See <a href="https://github.com/openenergymonitor/EmonTxV3CM/blob/v1.6/Config.pdf">Github PDF: Configuration of RF Module &amp; on-line calibration</a> for full details. If a custom node ID is set, a corresponding node decoder needs to be in place in emonhub.conf to decode the EmonTx radio packet data. See <a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md">emonhub.conf configuration guide</a>.</p>
+
+<p><strong>Powering via 5V USB</strong><br />
+If using the EmonTx with an ESP8266 WiFi adapter a 5V USB power supply is required in addition to the AC Voltage adapter used for voltage sensing. It is advisable to remove jumper JP2 to the left of the battery compartment if both are present (looking at the emonTx with the CT sensor inputs at the top of the board).</p>
+
+<h3 id="-firmware"><a class="title-link" name="firmware" href="#firmware"></a> Firmware</h3>
+
+<p>The emonTx firmware is based on Arduino. Alternative or customised firmware sketches can be uploaded using Arduino IDE or PlatformIO and a USB to UART cable. The emonTx comes pre-loaded with the EmonTxV3CM Continuous Sampling firmware as standard for single phase operation. If you bought the EmonTx with the battery holder option it will come with the Discreet Sampling firmware.</p>
+
+<h4 id="emontxv3cm-continuous-sampling-firmware"><a href="https://github.com/openenergymonitor/EmonTxV3CM">EmonTxV3CM Continuous Sampling firmware</a></h4>
+
+<p>New 2019: This firmware provides higher accuracy continuous monitoring and is now installed on EmonTx units as standard. Continuous monitoring means that the power readings are representative of the full 10s period that they represent rather than a short snapshot.</p>
+
+<h4 id="emontx-discreet-sampling-firmware"><a href="https://github.com/openenergymonitor/emontx3/tree/master/firmware">EmonTx Discreet Sampling firmware</a></h4>
+
+<p>The original EmonTx firmware, this performs power measurement in short discreet snapshots ~300ms long per CT channel at 50Hz per 10s period. This makes it possible for the EmonTx to go to sleep inbetween readings enabling battery powered operation but is less accurate.<br /></p>
+
+<p><strong>Indicator LED:</strong> Illuminates solid for a 10 seconds on first power up, then flashes multiple times to indicate an AC-AC waveform has been detected (if powering via AC-AC adapter). Flashes once every 10s to indicate sampling and RF transmission interval.</p>
+
+<h4 id="3-phase-firmware"><a href="https://github.com/openenergymonitor/emontx-3phase">3-phase firmware</a></h4>
+
+<p>This firmware is intended for use on a 3-phase, 4-wire system and implements continuous monitoring as above. Because the voltage of only one phase can be measured, the firmware must assume that the voltages of the other two phases are the same. This will, in most cases, not be true, therefore the powers calculated and recorded will be inaccurate. However, this error should normally be limited to a few percent.</p>
+
+<ul>
+  <li><a href="https://learn.openenergymonitor.org/electricity-monitoring/ac-power-theory/3-phase-power">Learn: Introduction to three-phase</a></li>
+  <li><a href="https://github.com/openenergymonitor/emontx-3phase">3-phase Firmware</a></li>
+  <li><a href="https://github.com/openenergymonitor/emontx-3phase/blob/master/emontx-3-phase-userguide.pdf">Full 3-phase Firmware User Guide</a></li>
+</ul>
+
+<h3 id="-schematic-and-board-files"><a class="title-link" name="schematic-and-board-files" href="#schematic-and-board-files"></a> Schematic and Board files</h3>
+
+<p><strong>EmonPi Schematic and Board files:</strong><br /> <a href="https://github.com/openenergymonitor/emontx3/tree/master/hardware">https://github.com/openenergymonitor/emontx3/tree/master/hardware</a></p>
+
+<p><strong>EmonTx Wiki:</strong><br /> <a href="https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4">https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4</a></p>
 
 
 </article>
@@ -731,89 +719,83 @@ highlight active link...
     <h2 class="navigationTitle">Contents</h2>
     <ul class='divided sidebar-menu'>
       <li style="padding-top: 10px;">
-          <b>Setup</b>
+        <b>Hardware Setup</b>
         <ul>
-          <li><a  href='/setup/'>1. System Overview </a></li>
-          <li><a  href='/setup/connect/'>2. Connect </a></li>
-          <li><a  href='/setup/install/'>3. Install </a></li>
-          <li><a  href='/setup/local/'>4. Log Locally </a></li>
-          <li><a  href='/setup/remote/'>5. Log Remotely </a></li>
-          <li><a  href='/setup/dashboards/'>6. Dashboards </a></li>
-          <li><a  href='/setup/energy-node/'>7. Energy Sensing Node(s) </a></li>
-          <ul style="margin-bottom: 0px;;">
-            <li><a  href='/setup/emontx/'>emonTx </a></li>
-          </ul>
-          <li><a  href='/setup/emonth/'>8. Temperature Node(s) </a></li>
-          <li><a  href='/setup/optical-pulse-sensor/'>9. Add Optical Pulse Sensor </a></li>
-          <li><a  href='/setup/import/'>10. Import / Backup </a></li>
-          <li><a  href='/setup/north-america/'>11. Use in North America </a></li>
-          <li><a  href='/setup/troubleshooting/'>12. Troubleshooting </a></li>
-          <li><a  href='/setup/remote-access/'>13. Remote Access </a></li>
-          <li><a  href='/setup/update/'>14. Update & Upgrade </a></li>
-
+          <li><a  href='/setup/'>System Overview </a></li>
+          <li><a  href='/setup/install/'>Install emonPi </a></li>
+          <li><a  href='/setup/install-emontx/'>Install emonTx & emonBase </a></li>
+          <li><a  href='/setup/install-adapter-emontx/'>Install emonTx & ESP8266 </a></li>
+          <li><a  href='/setup/emontx/'>+ Add Additional emonTx </a></li>
+          <li><a  href='/setup/emonth/'>+ Add Temperature Nodes </a></li>
+          <li><a  href='/setup/optical-pulse-sensor/'>+ Add Optical Pulse Sensor </a></li>
+          <li><a  href='/setup/north-america/'>Use in North America </a></li>
         </ul>
-        <li>
-          <b>Emoncms</b>
-          <ul>
+      </li><li>
+        <b>EV Charging & Control</b>
+        <ul>
+          <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
+          <li><a  href='/integrations/evse-setup'>EVSE User Guide Setup </a></li>
+          <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
+          <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>          
+        </ul>
+      </li><li>
+        <b>Software Setup</b>
+        <ul>
+          <li><a  href='/setup/connect/'>1. Connect </a></li>
+          <li><a  href='/setup/local/'>2. Log Locally </a></li>
+          <li><a  href='/setup/remote/'>3. Log Remotely </a></li>
+          <li><a  href='/setup/import/'>4. Import / Backup </a></li>
+          <li><a  href='/setup/remote-access/'>5. Remote Access </a></li>
+          <li><a  href='/setup/update/'>6. Update & Upgrade </a></li>                
+          <li><a  href='/technical/credentials/'>7. Service Credentials </a></li>
+          <li><a  href='/technical/mqtt/'>8. MQTT </a></li>
+          <li><a  href='/setup/troubleshooting/'>9. Troubleshooting </a></li>
+        </ul>
+      </li><li>
+        <b>Emoncms</b>
+        <ul>
           <li><a  href='/emoncms/coreconcepts/'>Core Concepts </a></li>
           <li><a  href='/emoncms/postingdata/'>Posting Data </a></li>
           <li><a  href='/emoncms/graphs/'>View Graphs </a></li>
-          <li><a  href='/emoncms/daily-kwh/'>Daily kWh </a></li>
-          <li><a  href='/emoncms/daily-averages/'>Daily Averages </a></li>
+          <li><a  href='/emoncms/dashboards/'>Dashboard builder </a></li>
+          <li><a  href='/emoncms/apps/'>Application dashboards </a></li>
+          <li><a  href='/emoncms/daily-kwh/'>Calculating Daily kWh </a></li>
+          <li><a  href='/emoncms/daily-averages/'>Calculating Averages </a></li>
           <li><a  href='/emoncms/export-csv/'>Exporting CSV </a></li>
           <li><a  href='/emoncms/histograms/'>Histograms </a></li>
           <li><a  href='/emoncms/postprocess/'>Post Process </a></li>
-          <li><a  href='/technical/api/'>Emoncms API </a></li>
+          <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
-
-
-      </li>
-
-      <li>
-         <b>Applications</b>
+      </li><li>
+        <b>Applications</b>
         <ul>
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
-         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
-      </li>
-
-      <li>
-         <b>Integrations</b>
+      </li><li>
+        <b>Integrations</b>
         <ul>
-         <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
-         <ul style="margin-bottom: 0px;;">
-            <li><a  href='/integrations/evse-setup'>User Guide Setup </a></li>
-          </ul>
          <li><a  href='/integrations/nodered/'>Node-RED </a></li>
          <li><a  href='/integrations/openhab/'>OpenHAB </a></li>
-         <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
          <li><a  href='/integrations/lightwaverf/'>LightWave RF Control </a></li>
-         <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>
         </ul>
-
-      <li>
+      </li><li>
         <b>Technical</b>
-       <ul>
-        <li><a class='active' href='/technical/'>Overview </a></li>
-        <li><a  href='/technical/specifications/'>Specifications </a></li>
-        <li><a  href='/technical/credentials/'>Service Credentials </a></li>
-        <li><a  href='/technical/mqtt/'>MQTT </a></li>
-        <li><a  href='/technical/compiling/'>Firmware Modification </a></li>
-        <li><a  href='/technical/resources/'>Resources </a></li>
-       </ul>
-      </li>
-
-      <li>
-     <b>Support</b>
+        <ul>
+          <li><a  href='/technical/emonpi/'>emonPi </a></li>
+          <li><a class='active' href='/technical/emontx/'>emonTx </a></li>
+          <li><a  href='/technical/compiling/'>Firmware Modification </a></li>
+          <li><a  href='/technical/resources/'>Resources </a></li>
+        </ul>
+      </li><li>
+        <b>Support</b>
         <ul>
          <li><a  href='https://community.openenergymonitor.org/latest'>Community Forum <i class="icon-external-link"></i> </a>
          <li><a  href='/help/'>Contact </a></li>
         </ul>
       </li>
-
-
+    </ul>
     </div>
 <gcse:search></gcse:search>
 </section>

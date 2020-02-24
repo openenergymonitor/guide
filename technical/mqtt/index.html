@@ -615,49 +615,43 @@ highlight active link...
   <hr class="divider">
   
 
-  <figure><a href="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png">
-<img src="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png" alt="emonPi Architecture Overview" />
-<figcaption style="text-align:center;"><i>Fig.1 - emonPi Architecture Overview</i></figcaption>
-</a>
-</figure>
+  <style>.code {font-family:monospace; font-size:14px; background-color: #eee; padding: 20px; margin-bottom:20px}</style>
 
-<hr />
+<p>We use MQTT (Message Queuing Telemetry Transport) as one way of passing data between different hardware devices and software components within the OpenEnergyMonitor ecosystem.</p>
 
-<blockquote>
-  <p><a href="http://mqtt.org/">MQTT</a> is a machine-to-machine (M2M)/”Internet of Things” connectivity protocol. It was designed as an extremely lightweight publish/subscribe messaging transport.</p>
-</blockquote>
+<p>The emonPi and emonBase running our emonSD software stack includes a local <a href="http://mosquitto.org/">Mosquitto MQTT</a> server. A device can connect to this server and publish data to a MQTT topic. A script on the emonPi/emonBase then subscribes and receives the data sent by the device.</p>
 
-<p>The emonPi with <a href="/technical/#emonsd-features">emonSD pre-built SD card</a> by default runs a local <a href="http://mosquitto.org/">Mosquitto MQTT</a> server. This server is accessible (<a href="/technical/credentials#mqtt">via authentication</a> on port 1883. See <a href="/technical/credentials#mqtt">MQTT Service Credentials</a>.</p>
+<p>This Mosquitto server is accessible via authentication on port 1883.<br />See <a href="/technical/credentials#mqtt">MQTT Service Credentials</a>.</p>
 
 <h2 id="-mqtt-publishers"><a class="title-link" name="mqtt-publishers" href="#mqtt-publishers"></a> MQTT Publishers</h2>
 
 <h3 id="-emonhub"><a class="title-link" name="emonhub" href="#emonhub"></a> emonHub</h3>
 
-<p><a href="/technical/#emonhub">EmonHub</a> python service decodes the data received from the emonPi + RF nodes and publishes to the emonPi’s Mosquitto MQTT server using the following two topic formats (both formats are published to parallel):</p>
+<p><a href="https://github.com/openenergymonitor/emonhub">EmonHub</a> python service decodes the data received from the emonPi/emonBase + RF nodes and publishes to the emonPi/emonBase’s Mosquitto MQTT server using the following two topic formats (both formats are published to parallel):</p>
 
 <h4 id="-1-new-mqtt-topic-format"><a class="title-link" name="1-new-mqtt-topic-format" href="#1-new-mqtt-topic-format"></a> 1. New MQTT Topic Format</h4>
 
 <p>Each data key (power) has its own MQTT topic as a sub-topic of the NodeID or NodeName. This MQTT topic structure makes it far easier to subscribe to a particular node key of interest e.g. <code class="highlighter-rouge">emontx/power1</code> using another service e.g. <a href="/integrations/openhab">openHAB</a>.</p>
 
-<p><code class="highlighter-rouge">[basetopic]/[node]/[keyname]</code></p>
+<div class="code">basetopic/node/keyname</div>
 
-<p><em>Note: the default base topic is <code class="highlighter-rouge">emon/</code> this is set in <code class="highlighter-rouge">~/data/emonhub.conf</code> and <code class="highlighter-rouge">/var/www/emoncms/settings.php</code>.</em></p>
+<p><em>Note: the default base topic is <code class="highlighter-rouge">emon/</code> this is set in <code class="highlighter-rouge">/etc/emonhub/emonhub.conf</code> and <code class="highlighter-rouge">/var/www/emoncms/settings.ini</code>.</em></p>
 
 <p>Example:</p>
 
-<p><code class="highlighter-rouge">emon/emonpi/power1</code></p>
+<div class="code">emon/emonpi/power1</div>
 
 <h4 id="-2-legacy-csv-mqtt-topic-format"><a class="title-link" name="2-legacy-csv-mqtt-topic-format" href="#2-legacy-csv-mqtt-topic-format"></a> 2. Legacy CSV MQTT Topic Format</h4>
 
 <p>Used by older version of emonPi and emonPiLCD service. All data from a single node is published in CSV format to a single topic. More compact but does not allow naming of keys and difficult to subscribe to a single key.</p>
 
-<p><code class="highlighter-rouge">emonhub/rx/[nodeID]/values format</code></p>
+<div class="code">emonhub/rx/[nodeID]/values format</div>
 
 <p>Example:</p>
 
-<p><code class="highlighter-rouge">emonhub/rx/10/values format</code></p>
+<div class="code">emonhub/rx/10/values format</div>
 
-<p>emonHub servie can be restarted with <code class="highlighter-rouge">$ sudo service emonhub restart</code>.
+<p>The emonHub service can be restarted with <code class="highlighter-rouge">$ sudo service emonhub restart</code>.
 Latest log file entries can be viewed via the Emoncms web interface admin or with: <code class="highlighter-rouge">$ tail /var/log/emonhub/emonhub.log</code>. All the data currently being published to MQTT topic can be viewed in real-time in the EmonHub log.</p>
 
 <h3 id="-emoncms-publisher"><a class="title-link" name="emoncms-publisher" href="#emoncms-publisher"></a> Emoncms Publisher</h3>
@@ -670,9 +664,9 @@ Latest log file entries can be viewed via the Emoncms web interface admin or wit
 
 <h3 id="-emoncms-mqtt-service"><a class="title-link" name="emoncms-mqtt-service" href="#emoncms-mqtt-service"></a> Emoncms MQTT Service</h3>
 
-<p>Emoncms MQTT Input service subscribes to the MQTT base topic (default <code class="highlighter-rouge">emon/#</code>) and posts any data on this topic to Emoncms Inputs with the NodeName and KeyName taken from the MQTT topic and sub-topic name.</p>
+<p>The Emoncms MQTT service subscribes to the MQTT base topic (default <code class="highlighter-rouge">emon/#</code>) and posts any data on this topic to Emoncms Inputs with the NodeName and KeyName taken from the MQTT topic and sub-topic name.</p>
 
-<p>Example:</p>
+<p><strong>Example:</strong></p>
 
 <p>A power value published to <code class="highlighter-rouge">emon/emonpi/power1</code> would result in an Emoncms Input from <code class="highlighter-rouge">Node: emonpi</code> with <code class="highlighter-rouge">power1=XX</code>.</p>
 
@@ -680,8 +674,8 @@ Latest log file entries can be viewed via the Emoncms web interface admin or wit
 
 <p><em>Emoncms MQTT Service is running by default on the emonSD software stack</em></p>
 
-<p>The MQTT input service can be restarted using <code class="highlighter-rouge">$ sudo service mqtt_input restart</code>.The MQTT input service runs a <a href="https://github.com/emoncms/emoncms/blob/master/scripts/phpmqtt_input.php"><code class="highlighter-rouge">phpmqtt_input.php</code> script</a>.
-Latest log file entries can be viewed via Emoncms web inerface admin or with: <code class="highlighter-rouge">$ tail /var/log/emoncms.log</code></p>
+<p>The MQTT input service can be restarted using <code class="highlighter-rouge">$ sudo service emoncms_mqtt restart</code>.The Emoncms MQTT service runs the <a href="https://github.com/emoncms/emoncms/tree/master/scripts/services/emoncms_mqtt"><code class="highlighter-rouge">emoncms_mqtt.php</code> script</a>.
+Latest log file entries can be viewed via Emoncms web interface admin or with: <code class="highlighter-rouge">$ tail /var/log/emoncms/emoncms.log</code></p>
 
 <h3 id="-emonpilcd-service"><a class="title-link" name="emonpilcd-service" href="#emonpilcd-service"></a> EmonPiLCD Service</h3>
 
@@ -696,11 +690,11 @@ Latest log file entries can be viewed with: <code class="highlighter-rouge">$ ta
 
 <p>To view all MQTT messages subscribe to  <code class="highlighter-rouge">emon/#</code> base topic :</p>
 
-<p><code class="highlighter-rouge">$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t 'emon/#'</code></p>
+<div class="code">$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t 'emon/#'</div>
 
 <p>To view all MQTT messages for a particular node subscribe to sub-topic:</p>
 
-<p><code class="highlighter-rouge">$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t 'emon/emonpi/#'</code></p>
+<div class="code">$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t 'emon/emonpi/#'</div>
 
 <p><em>Note: <code class="highlighter-rouge">#</code> denotes a wild-card</em></p>
 
@@ -708,36 +702,15 @@ Latest log file entries can be viewed with: <code class="highlighter-rouge">$ ta
 
 <p>Subscribe to test topic:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t 'test'`
-</code></pre></div></div>
+<div class="code">$ mosquitto_sub -v -u 'emonpi' -P 'emonpimqtt2016' -t 'test'</div>
 
 <p>Open <em>another shell window</em> to publish to the test topic :</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>`$mosquitto_pub -u 'emonpi' -P 'emonpimqtt2016' -t 'test' -m 'helloWorld'`
-</code></pre></div></div>
+<div class="code">$mosquitto_pub -u 'emonpi' -P 'emonpimqtt2016' -t 'test' -m 'helloWorld'</div>
 
 <p>If all is working we should see <code class="highlighter-rouge">helloWord</code> :-)</p>
 
 <p>To avoid connecting via SSH alternately you could use <a href="https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en">MQTTlens Chrome Extension</a> or any other MQTT client connected to the emonPi IP address on port 1883 with user name: <code class="highlighter-rouge">emonpi</code> and password: <code class="highlighter-rouge">emonpimqtt2016</code>.</p>
-
-<hr />
-
-<h1 id="-related-blog-posts"><a class="title-link" name="related-blog-posts" href="#related-blog-posts"></a> Related Blog Posts</h1>
-
-<ul>
-  <li><a href="https://blog.openenergymonitor.org/2015/10/emonpi-nodered-and-mqtt/">EmonPi, Node-RED and MQTT</a></li>
-  <li><a href="https://blog.openenergymonitor.org/2016/02/outdoor-temperature-data-from-weather/">Temperature data from Weather Underground</a></li>
-  <li><a href="https://blog.openenergymonitor.org/categories/mqtt/">MQTT blog category</a></li>
-</ul>
-
-<h1 id="-resources"><a class="title-link" name="resources" href="#resources"></a> Resources</h1>
-
-<ul>
-  <li><a href="/technical/credentials#mqtt">MQTT Service Credentials</a>.</li>
-  <li><a href="https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/MQTT.md">MQTT Installation Docs</a></li>
-  <li><a href="https://github.com/openenergymonitor/emonpi/blob/master/docs/SD-card-build.md">emonSD Buid Guide</a></li>
-  <li><a href="https://github.com/emoncms/emoncms/blob/master/scripts/phpmqtt_input.php">Emoncms PHP MQTT Input Script</a></li>
-</ul>
 
 
 </article>
@@ -769,89 +742,83 @@ Latest log file entries can be viewed with: <code class="highlighter-rouge">$ ta
     <h2 class="navigationTitle">Contents</h2>
     <ul class='divided sidebar-menu'>
       <li style="padding-top: 10px;">
-          <b>Setup</b>
+        <b>Hardware Setup</b>
         <ul>
-          <li><a  href='/setup/'>1. System Overview </a></li>
-          <li><a  href='/setup/connect/'>2. Connect </a></li>
-          <li><a  href='/setup/install/'>3. Install </a></li>
-          <li><a  href='/setup/local/'>4. Log Locally </a></li>
-          <li><a  href='/setup/remote/'>5. Log Remotely </a></li>
-          <li><a  href='/setup/dashboards/'>6. Dashboards </a></li>
-          <li><a  href='/setup/energy-node/'>7. Energy Sensing Node(s) </a></li>
-          <ul style="margin-bottom: 0px;;">
-            <li><a  href='/setup/emontx/'>emonTx </a></li>
-          </ul>
-          <li><a  href='/setup/emonth/'>8. Temperature Node(s) </a></li>
-          <li><a  href='/setup/optical-pulse-sensor/'>9. Add Optical Pulse Sensor </a></li>
-          <li><a  href='/setup/import/'>10. Import / Backup </a></li>
-          <li><a  href='/setup/north-america/'>11. Use in North America </a></li>
-          <li><a  href='/setup/troubleshooting/'>12. Troubleshooting </a></li>
-          <li><a  href='/setup/remote-access/'>13. Remote Access </a></li>
-          <li><a  href='/setup/update/'>14. Update & Upgrade </a></li>
-
+          <li><a  href='/setup/'>System Overview </a></li>
+          <li><a  href='/setup/install/'>Install emonPi </a></li>
+          <li><a  href='/setup/install-emontx/'>Install emonTx & emonBase </a></li>
+          <li><a  href='/setup/install-adapter-emontx/'>Install emonTx & ESP8266 </a></li>
+          <li><a  href='/setup/emontx/'>+ Add Additional emonTx </a></li>
+          <li><a  href='/setup/emonth/'>+ Add Temperature Nodes </a></li>
+          <li><a  href='/setup/optical-pulse-sensor/'>+ Add Optical Pulse Sensor </a></li>
+          <li><a  href='/setup/north-america/'>Use in North America </a></li>
         </ul>
-        <li>
-          <b>Emoncms</b>
-          <ul>
+      </li><li>
+        <b>EV Charging & Control</b>
+        <ul>
+          <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
+          <li><a  href='/integrations/evse-setup'>EVSE User Guide Setup </a></li>
+          <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
+          <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>          
+        </ul>
+      </li><li>
+        <b>Software Setup</b>
+        <ul>
+          <li><a  href='/setup/connect/'>1. Connect </a></li>
+          <li><a  href='/setup/local/'>2. Log Locally </a></li>
+          <li><a  href='/setup/remote/'>3. Log Remotely </a></li>
+          <li><a  href='/setup/import/'>4. Import / Backup </a></li>
+          <li><a  href='/setup/remote-access/'>5. Remote Access </a></li>
+          <li><a  href='/setup/update/'>6. Update & Upgrade </a></li>                
+          <li><a  href='/technical/credentials/'>7. Service Credentials </a></li>
+          <li><a class='active' href='/technical/mqtt/'>8. MQTT </a></li>
+          <li><a  href='/setup/troubleshooting/'>9. Troubleshooting </a></li>
+        </ul>
+      </li><li>
+        <b>Emoncms</b>
+        <ul>
           <li><a  href='/emoncms/coreconcepts/'>Core Concepts </a></li>
           <li><a  href='/emoncms/postingdata/'>Posting Data </a></li>
           <li><a  href='/emoncms/graphs/'>View Graphs </a></li>
-          <li><a  href='/emoncms/daily-kwh/'>Daily kWh </a></li>
-          <li><a  href='/emoncms/daily-averages/'>Daily Averages </a></li>
+          <li><a  href='/emoncms/dashboards/'>Dashboard builder </a></li>
+          <li><a  href='/emoncms/apps/'>Application dashboards </a></li>
+          <li><a  href='/emoncms/daily-kwh/'>Calculating Daily kWh </a></li>
+          <li><a  href='/emoncms/daily-averages/'>Calculating Averages </a></li>
           <li><a  href='/emoncms/export-csv/'>Exporting CSV </a></li>
           <li><a  href='/emoncms/histograms/'>Histograms </a></li>
           <li><a  href='/emoncms/postprocess/'>Post Process </a></li>
-          <li><a  href='/technical/api/'>Emoncms API </a></li>
+          <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
-
-
-      </li>
-
-      <li>
-         <b>Applications</b>
+      </li><li>
+        <b>Applications</b>
         <ul>
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
-         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
-      </li>
-
-      <li>
-         <b>Integrations</b>
+      </li><li>
+        <b>Integrations</b>
         <ul>
-         <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
-         <ul style="margin-bottom: 0px;;">
-            <li><a  href='/integrations/evse-setup'>User Guide Setup </a></li>
-          </ul>
          <li><a  href='/integrations/nodered/'>Node-RED </a></li>
          <li><a  href='/integrations/openhab/'>OpenHAB </a></li>
-         <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
          <li><a  href='/integrations/lightwaverf/'>LightWave RF Control </a></li>
-         <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>
         </ul>
-
-      <li>
+      </li><li>
         <b>Technical</b>
-       <ul>
-        <li><a  href='/technical/'>Overview </a></li>
-        <li><a  href='/technical/specifications/'>Specifications </a></li>
-        <li><a  href='/technical/credentials/'>Service Credentials </a></li>
-        <li><a class='active' href='/technical/mqtt/'>MQTT </a></li>
-        <li><a  href='/technical/compiling/'>Firmware Modification </a></li>
-        <li><a  href='/technical/resources/'>Resources </a></li>
-       </ul>
-      </li>
-
-      <li>
-     <b>Support</b>
+        <ul>
+          <li><a  href='/technical/emonpi/'>emonPi </a></li>
+          <li><a  href='/technical/emontx/'>emonTx </a></li>
+          <li><a  href='/technical/compiling/'>Firmware Modification </a></li>
+          <li><a  href='/technical/resources/'>Resources </a></li>
+        </ul>
+      </li><li>
+        <b>Support</b>
         <ul>
          <li><a  href='https://community.openenergymonitor.org/latest'>Community Forum <i class="icon-external-link"></i> </a>
          <li><a  href='/help/'>Contact </a></li>
         </ul>
       </li>
-
-
+    </ul>
     </div>
 <gcse:search></gcse:search>
 </section>

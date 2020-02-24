@@ -615,44 +615,51 @@ highlight active link...
   <hr class="divider">
   
 
-  <h3 id="-previous-step-required-hardware"><a href="/setup/">« Previous step: Required Hardware</a></h3>
+  <p>The software running on both the EmonPi and EmonBase SD card is the same. We have created a pre-built image which we call <em>emonSD</em> with everything in place to support both local and remote data logging with Emoncms.</p>
 
-<h3 id="next-step-install-"><a href="/setup/install/">Next step: Install »</a></h3>
+<p>This guide walks through connecting an EmonPi or EmonBase running the emonSD software to your local network or/and the wider internet with either WiFi, Ethernet or 3G GSM Dongle. If you do not wish to connect to a network it is also possible to access the emonPi and EmonBase user interface in stand-alone access point mode.</p>
+
+<p>If you are building your own RaspberryPi base station the emonSD image is available to download here: <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">Pre-build SD card download &amp; Change Log</a>. The SD card can also be <a href="http://shop.openenergymonitor.com/pre-loaded-emonsd-microsd-card-for-raspberry-pi/">purchased from the shop</a>.</p>
+
+<ol>
+  <li>Connecting via Ethernet</li>
+  <li>Connecting via Wifi</li>
+  <li>Connect to Ethernet and then configure Wifi</li>
+</ol>
 
 <hr />
 
-<h3 id="-first-boot"><a class="title-link" name="first-boot" href="#first-boot"></a> First Boot</h3>
+<h3 id="-option-1-connecting-via-ethernet"><a class="title-link" name="option-1-connecting-via-ethernet" href="#option-1-connecting-via-ethernet"></a> Option 1: Connecting via Ethernet</h3>
 
-<p class="note">
-<b>This guide assumes you are using an emonPi / emonBase pre-built SD card.</b>
-</p>
+<p>Where possible we recommend connecting via ethernet for best reliability and ease of setup. To ensure that your emonPi/emonbase does not start a WiFi access point on first boot, connect up the Ethernet cable between the emonPi/emonbase and internet router first and then power up the unit.</p>
 
-<p>This SD card can be <a href="http://shop.openenergymonitor.com/pre-loaded-emonsd-microsd-card-for-raspberry-pi/">purchased from the shop</a> or downloaded:</p>
+<p><img src="/images/setup/emonpi_ethernet_first_boot.png" alt="emonPi First Boot Ethernet" /></p>
 
-<ul>
-  <li><a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">Pre-build SD card download &amp; Change Log</a></li>
-  <li><a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md">Instructions to flash image to SD card (RaspberryPi)</a></li>
-</ul>
+<p><em>Note to self-build users: To ensure that the Pi has enough power a <a href="http://shop.openenergymonitor.com/power-supplies/">2.0A USB power adapter is recommended, 2.5A ideal</a>.</em></p>
 
-<p><em>The emonPi runs the Emoncms data logging web-app locally from emonPi’s internal web server. Using Emoncms data can be logged locally to the emonPi’s SD card and (optionally) posted remotely to the <a href="https://emoncms.org">Emoncms.org</a> cloud server.</em></p>
+<p><strong>EmonPi:</strong> The LCD display will display the firmware version then scan for connected sensors. Once the Raspberry Pi has booted up, the LCD will display the IP address of the emonPi on the local network:</p>
 
-<p><strong>Emoncms local:</strong> Emoncms instance running locally on the emonPi. <br />
-<strong>Emoncms remote:</strong> Emoncms.org cloud server.</p>
+<p><img src="/images/setup/Etherent_Connected.jpg" style="padding-left:45px; padding-bottom:10px" /></p>
 
-<p>emonPi can be connected to the internet via Ethernet or WiFi, or operate in stand-alone WiFi access point mode.</p>
+<p><em>Take care to connect the Ethernet to the socket on the same side as the USB sockets, not the RJ45 connector on the opposite side.</em></p>
 
-<h3 id="-1a-connect-to-wifi"><a class="title-link" name="1a-connect-to-wifi" href="#1a-connect-to-wifi"></a> 1a. Connect to WiFi</h3>
+<p><strong>EmonBase:</strong> Without the LCD Display we have to rely on either the hostname or network discovery tools to find the EmonBase on the network. Try browsing to the hostname: http://emonpi, http://emonpi.local or http://emonpi.lan.</p>
 
-<p class="note">
-<b>emonPi / emonBase purchased before July 2017 do not have the ability to broadcast a setup WiFi access point. For older units please follow '1b' instructions to connect temporary via Ethernet then connect to local WiFi if required.</b>
-<br />
-</p>
+<p>You should now see the emoncms user login page. Register a new account and then continue to the next step <a href="/setup/local">Log Locally</a> to configure your system.</p>
+
+<p>If the hostname does not work, it is usually possible to find a list of devices and their IP address’s on your internet router. Alternatively Network Discovery tools such as Fing work well. Download <a href="https://play.google.com/store/apps/details?id=com.overlook.android.fing&amp;hl=en_GB">Fing Android</a> or <a href="https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8">Fing iOS</a>.</p>
+
+<p><strong>UPDATE HIGHLY RECOMMENDED:</strong> Now your emonPi/emonBase is connected to a network this would be a good time to pull in any new updates: <code class="highlighter-rouge">Setup &gt; Admin &gt; Update</code></p>
+
+<hr />
+
+<h3 id="-option-2-connecting-via-wifi"><a class="title-link" name="option-2-connecting-via-wifi" href="#option-2-connecting-via-wifi"></a> Option 2: Connecting via WiFi</h3>
 
 <p><img src="/images/setup/emonpi_wifi.png" alt="emonPi WiFi" /></p>
 
 <ul>
-  <li>Connect 5V USB power <a href="http://shop.openenergymonitor.com/power-supplies/">(2A USB power adapter recommended (2.5A ideal))</a></li>
-  <li>After a couple of minutes the emonPi will broadcast a Wifi access point (AP) called <code class="highlighter-rouge">emonPi</code> with password <code class="highlighter-rouge">emonpi2016</code></li>
+  <li>Connect 5V USB power <a href="http://shop.openenergymonitor.com/power-supplies/">(2A USB power adapter recommended, 2.5A ideal)</a></li>
+  <li>After a couple of minutes the emonPi/emonBase will broadcast a Wifi access point (AP) called <code class="highlighter-rouge">emonPi</code> with password <code class="highlighter-rouge">emonpi2016</code></li>
 </ul>
 
 <p><em>Note: Please be patient, it can take a number of minutes to start broadcasting an a WiFi AP at startup. The LCD will display <code class="highlighter-rouge">WiFi: YES 0% 192.168.42.1</code> once the WiFi AP is active.</em></p>
@@ -686,61 +693,45 @@ highlight active link...
 
 <p><img src="/images/setup/emonpi-network-wizard4.png" alt="emonpi-network-wizard4" /></p>
 
-<h3 id="-1b-connect-to-ethernet"><a class="title-link" name="1b-connect-to-ethernet" href="#1b-connect-to-ethernet"></a> 1b. Connect to Ethernet</h3>
-
-<p><img src="/images/setup/emonpi_ethernet_first_boot.png" alt="emonPi First Boot Ethernet" /></p>
-
 <ul>
   <li>
-    <p><a href="http://shop.openenergymonitor.com/power-supplies/">1.2A USB power adapter recommended</a></p>
+    <p>After a couple of minutes attempt to connect to your emonPi/emonBase via it’s hostname: <a href="http://emonpi">http://emonpi</a>, <a href="http://emonpi.local">http://emonpi.local</a> or <a href="http://emonpi.lan">http://emonpi.lan</a>.</p>
   </li>
-  <li>
-    <p class="note"> Take care to connect the Ethernet to the socket on the same side as the USB sockets, not the RJ45 connector on the opposite side.</p>
-  </li>
-  <li>The emonPi LCD display will display firmware version then scan for connected sensors. Once the Raspberry Pi has booted up, the LCD will display the IP address of the emonPi on the local network.</li>
-  <li><img src="/images/setup/Etherent_Connected.jpg" alt="Ethernet Connected" /></li>
-</ul>
-
-<h3 id="-2-connect-to-emonpi-via-local-network"><a class="title-link" name="2-connect-to-emonpi-via-local-network" href="#2-connect-to-emonpi-via-local-network"></a> 2. Connect to emonPi via local network</h3>
-
-<ul>
-  <li>Browsing the hostname will work on some networks: <a href="http://emonpi">http://emonpi</a> or <a href="http://emonpi.local">http://emonpi.local</a></li>
-  <li>If hostname does not work on your network, enter the IP address shown on the emonPi LCD into your browsers address bar</li>
+  <li>emonPi: If hostname does not work on your network, enter the IP address shown on the LCD into your browsers address bar</li>
   <li><em>If using an emonBase and hostname does not work, look up its IP address from your router or use the Fing Network Discovery tool on <a href="https://play.google.com/store/apps/details?id=com.overlook.android.fing&amp;hl=en_GB">Android</a> and <a href="https://itunes.apple.com/gb/app/fing-network-scanner/id430921107?mt=8">iOS</a></em>.</li>
 </ul>
 
-<h3 id="-3-create-local-emoncms-user-account"><a class="title-link" name="3-create-local-emoncms-user-account" href="#3-create-local-emoncms-user-account"></a> 3. Create local Emoncms user account</h3>
+<p>You should now see the emoncms user login page. Register a new account and then continue to the next step <a href="/setup/local">Log Locally</a> to configure your system.</p>
 
-<p><img src="/images/setup/Emoncms_reg.png" width="250" /></p>
+<p><strong>UPDATE HIGHLY RECOMMENDED:</strong> Now your emonPi/emonBase is connected to a network this would be a good time to pull in any new updates: <code class="highlighter-rouge">Setup &gt; Admin &gt; Update</code></p>
 
-<ul>
-  <li>By default only a single (admin) account can be created on the local emonPi Emoncms. To enable multiple accounts edit Emoncms settings in <code class="highlighter-rouge">/var/www/emoncms/settings.php</code></li>
-</ul>
+<hr />
 
-<h3 id="-4-connect-to-wifi-optional"><a class="title-link" name="4-connect-to-wifi-optional" href="#4-connect-to-wifi-optional"></a> 4. Connect to WiFi (optional)</h3>
+<h3 id="-option-3-connect-to-ethernet-and-then-configure-wifi"><a class="title-link" name="option-3-connect-to-ethernet-and-then-configure-wifi" href="#option-3-connect-to-ethernet-and-then-configure-wifi"></a> Option 3: Connect to Ethernet and then configure Wifi</h3>
 
-<p>**Note: if emonPi has been already connect to local Wifi using network setup wizard (see above) then skip this section.</p>
+<p>An alternative approach to WiFi setup is to connect first using Ethernet and then use the Emoncms WiFi module to configure the WiFi connection. Start by following the Ethernet steps above. Create an emoncms account, login and navigate to <strong>Setup &gt; WiFi</strong>:</p>
+
+<p>Network scan should happen automatically and show the available WiFi networks:</p>
 
 <p><img src="/images/setup/wifi9_0.png" alt="Connect to Wifi" /></p>
 
-<ol>
-  <li><strong>Wifi config in <em>local Emoncms</em> : <code class="highlighter-rouge">Setup &gt; Wi-Fi</code></strong>
-    <ul>
-      <li>Network scan should happen automatically.</li>
-    </ul>
-  </li>
-  <li>
-    <p><strong>Check the box to select the network(s) you want to connect to</strong></p>
-  </li>
-  <li>
-    <p><strong>Enter PSK password</strong></p>
-  </li>
-  <li><strong>Hit <code class="highlighter-rouge">Save and Connect</code></strong></li>
-</ol>
+<p>Check the box to select the network(s) you want to connect to. Enter the PSK password and then click <code class="highlighter-rouge">Save and Connect</code>.</p>
 
-<p>After a few seconds information should refresh automatically to report <code class="highlighter-rouge">Status: Connected</code> and after a few more seconds the IP address should appear.</p>
+<p>After a few seconds ‘Connection Info’ should refresh automatically to report <code class="highlighter-rouge">Status: Connected</code> and after a few more seconds the IP address should appear.</p>
 
-<h3 id="-assign-static-ip-optional--advanced"><a class="title-link" name="assign-static-ip-optional--advanced" href="#assign-static-ip-optional--advanced"></a> Assign static IP (Optional &amp; Advanced)</h3>
+<hr />
+
+<h3 id="-option-4-connect-via-3g-gsm"><a class="title-link" name="option-4-connect-via-3g-gsm" href="#option-4-connect-via-3g-gsm"></a> Option 4: Connect via 3G GSM</h3>
+
+<p>Huawei HiLink 3G USB GSM/3G dongle modems are supported. Connection should be automatic and LCD will display connection status. (<em>Tested with Huawei E3231 and E3131</em>).</p>
+
+<p><img src="/images/setup/3g.jpg" alt="3g.jpg" /></p>
+
+<p><a href="https://github.com/openenergymonitor/huawei-hilink-status">GSM Documentation</a> | <a href="https://github.com/openenergymonitor/emonpi/tree/master/wifiAP">WiFi Access -point setup (dev)</a></p>
+
+<hr />
+
+<h3 id="-advanced-assign-static-ip"><a class="title-link" name="advanced-assign-static-ip" href="#advanced-assign-static-ip"></a> Advanced: Assign static IP</h3>
 
 <p><button type="button" class="show_hide" href="#" rel="#slidingDiv">View</button></p>
 
@@ -751,12 +742,13 @@ highlight active link...
     <pre>
     $ ssh pi@192.168.X.X
     User: "pi" | Password: "emonpi2016"
-    $ rpi-rw
     $ sudo cp /etc/dhcpcd.conf /etc/backup_dhcpcd.conf
     $ sudo nano /etc/dhcpcd.conf
-    <br />
-    &gt; Append to the end of dhcpcd.conf (change to suit your network and interface reqiuired static IP): <br />
+    </pre>
+    
+<p>Append to the end of dhcpcd.conf (change to suit your network and interface reqiuired static IP):</p>
 
+    <pre>
     interface eth0
     static ip_address=192.168.0.10/24
     static routers=192.168.0.1
@@ -775,43 +767,6 @@ highlight active link...
 
 
 </div>
-
-<p><br /></p>
-
-<h3 id="-5-connect-via-3g-gsm-optional"><a class="title-link" name="5-connect-via-3g-gsm-optional" href="#5-connect-via-3g-gsm-optional"></a> 5. Connect via 3G GSM (optional)</h3>
-
-<p>Huawei HiLink 3G USB GSM/3G dongle modems are supported. Connection should be automatic and LCD will display connection status. (<em>Tested with Huawei E3231 and E3131</em>).</p>
-
-<p><img src="/images/setup/3g.jpg" width="200" /></p>
-
-<p><a href="https://github.com/openenergymonitor/huawei-hilink-status">GSM Documentation</a> | <a href="https://github.com/openenergymonitor/emonpi/tree/master/wifiAP">WiFi Access -point setup (dev)</a></p>
-
-<h3 id="-6-update"><a class="title-link" name="6-update" href="#6-update"></a> 6. Update</h3>
-
-<p><strong>UPDATE HIGHLY RECOMMENDED:</strong> Now your emonPi is connected to a network this would be a good time to pull in any new updates: <code class="highlighter-rouge">Setup &gt; Admin &gt; Update</code></p>
-
-<h3 id="-6-shutdown"><a class="title-link" name="6-shutdown" href="#6-shutdown"></a> 6. Shutdown</h3>
-
-<p>Shut down the emonPi by holding down the shutdown button for 5 seconds, then wait 30 seconds for unit to fully shut down.</p>
-
-<p><img src="/images/setup/emonPi_shutdown.png" width="200" /></p>
-
-<p class="note warning">
-Unplugging power from the emonPi without following the correct shutdown procedure can result in a corrupted SD card.
-</p>
-
-<p>The emonPi is now ready to be physically installed and the sensors connected.</p>
-
-<p><br /></p>
-
-<h3 id="video-guide">Video Guide</h3>
-<div class="videoWrapper">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/77WEj9Q6JEE" frameborder="0" allowfullscreen=""></iframe>
-</div>
-
-<hr />
-
-<h3 id="next-step-install--1"><a href="/setup/install/">Next step: Install »</a></h3>
 
 
 </article>
@@ -843,89 +798,83 @@ Unplugging power from the emonPi without following the correct shutdown procedur
     <h2 class="navigationTitle">Contents</h2>
     <ul class='divided sidebar-menu'>
       <li style="padding-top: 10px;">
-          <b>Setup</b>
+        <b>Hardware Setup</b>
         <ul>
-          <li><a  href='/setup/'>1. System Overview </a></li>
-          <li><a class='active' href='/setup/connect/'>2. Connect </a></li>
-          <li><a  href='/setup/install/'>3. Install </a></li>
-          <li><a  href='/setup/local/'>4. Log Locally </a></li>
-          <li><a  href='/setup/remote/'>5. Log Remotely </a></li>
-          <li><a  href='/setup/dashboards/'>6. Dashboards </a></li>
-          <li><a  href='/setup/energy-node/'>7. Energy Sensing Node(s) </a></li>
-          <ul style="margin-bottom: 0px;;">
-            <li><a  href='/setup/emontx/'>emonTx </a></li>
-          </ul>
-          <li><a  href='/setup/emonth/'>8. Temperature Node(s) </a></li>
-          <li><a  href='/setup/optical-pulse-sensor/'>9. Add Optical Pulse Sensor </a></li>
-          <li><a  href='/setup/import/'>10. Import / Backup </a></li>
-          <li><a  href='/setup/north-america/'>11. Use in North America </a></li>
-          <li><a  href='/setup/troubleshooting/'>12. Troubleshooting </a></li>
-          <li><a  href='/setup/remote-access/'>13. Remote Access </a></li>
-          <li><a  href='/setup/update/'>14. Update & Upgrade </a></li>
-
+          <li><a  href='/setup/'>System Overview </a></li>
+          <li><a  href='/setup/install/'>Install emonPi </a></li>
+          <li><a  href='/setup/install-emontx/'>Install emonTx & emonBase </a></li>
+          <li><a  href='/setup/install-adapter-emontx/'>Install emonTx & ESP8266 </a></li>
+          <li><a  href='/setup/emontx/'>+ Add Additional emonTx </a></li>
+          <li><a  href='/setup/emonth/'>+ Add Temperature Nodes </a></li>
+          <li><a  href='/setup/optical-pulse-sensor/'>+ Add Optical Pulse Sensor </a></li>
+          <li><a  href='/setup/north-america/'>Use in North America </a></li>
         </ul>
-        <li>
-          <b>Emoncms</b>
-          <ul>
+      </li><li>
+        <b>EV Charging & Control</b>
+        <ul>
+          <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
+          <li><a  href='/integrations/evse-setup'>EVSE User Guide Setup </a></li>
+          <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
+          <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>          
+        </ul>
+      </li><li>
+        <b>Software Setup</b>
+        <ul>
+          <li><a class='active' href='/setup/connect/'>1. Connect </a></li>
+          <li><a  href='/setup/local/'>2. Log Locally </a></li>
+          <li><a  href='/setup/remote/'>3. Log Remotely </a></li>
+          <li><a  href='/setup/import/'>4. Import / Backup </a></li>
+          <li><a  href='/setup/remote-access/'>5. Remote Access </a></li>
+          <li><a  href='/setup/update/'>6. Update & Upgrade </a></li>                
+          <li><a  href='/technical/credentials/'>7. Service Credentials </a></li>
+          <li><a  href='/technical/mqtt/'>8. MQTT </a></li>
+          <li><a  href='/setup/troubleshooting/'>9. Troubleshooting </a></li>
+        </ul>
+      </li><li>
+        <b>Emoncms</b>
+        <ul>
           <li><a  href='/emoncms/coreconcepts/'>Core Concepts </a></li>
           <li><a  href='/emoncms/postingdata/'>Posting Data </a></li>
           <li><a  href='/emoncms/graphs/'>View Graphs </a></li>
-          <li><a  href='/emoncms/daily-kwh/'>Daily kWh </a></li>
-          <li><a  href='/emoncms/daily-averages/'>Daily Averages </a></li>
+          <li><a  href='/emoncms/dashboards/'>Dashboard builder </a></li>
+          <li><a  href='/emoncms/apps/'>Application dashboards </a></li>
+          <li><a  href='/emoncms/daily-kwh/'>Calculating Daily kWh </a></li>
+          <li><a  href='/emoncms/daily-averages/'>Calculating Averages </a></li>
           <li><a  href='/emoncms/export-csv/'>Exporting CSV </a></li>
           <li><a  href='/emoncms/histograms/'>Histograms </a></li>
           <li><a  href='/emoncms/postprocess/'>Post Process </a></li>
-          <li><a  href='/technical/api/'>Emoncms API </a></li>
+          <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
-
-
-      </li>
-
-      <li>
-         <b>Applications</b>
+      </li><li>
+        <b>Applications</b>
         <ul>
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
-         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
-      </li>
-
-      <li>
-         <b>Integrations</b>
+      </li><li>
+        <b>Integrations</b>
         <ul>
-         <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
-         <ul style="margin-bottom: 0px;;">
-            <li><a  href='/integrations/evse-setup'>User Guide Setup </a></li>
-          </ul>
          <li><a  href='/integrations/nodered/'>Node-RED </a></li>
          <li><a  href='/integrations/openhab/'>OpenHAB </a></li>
-         <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
          <li><a  href='/integrations/lightwaverf/'>LightWave RF Control </a></li>
-         <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>
         </ul>
-
-      <li>
+      </li><li>
         <b>Technical</b>
-       <ul>
-        <li><a  href='/technical/'>Overview </a></li>
-        <li><a  href='/technical/specifications/'>Specifications </a></li>
-        <li><a  href='/technical/credentials/'>Service Credentials </a></li>
-        <li><a  href='/technical/mqtt/'>MQTT </a></li>
-        <li><a  href='/technical/compiling/'>Firmware Modification </a></li>
-        <li><a  href='/technical/resources/'>Resources </a></li>
-       </ul>
-      </li>
-
-      <li>
-     <b>Support</b>
+        <ul>
+          <li><a  href='/technical/emonpi/'>emonPi </a></li>
+          <li><a  href='/technical/emontx/'>emonTx </a></li>
+          <li><a  href='/technical/compiling/'>Firmware Modification </a></li>
+          <li><a  href='/technical/resources/'>Resources </a></li>
+        </ul>
+      </li><li>
+        <b>Support</b>
         <ul>
          <li><a  href='https://community.openenergymonitor.org/latest'>Community Forum <i class="icon-external-link"></i> </a>
          <li><a  href='/help/'>Contact </a></li>
         </ul>
       </li>
-
-
+    </ul>
     </div>
 <gcse:search></gcse:search>
 </section>

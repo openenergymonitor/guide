@@ -615,7 +615,7 @@ highlight active link...
   <hr class="divider">
   
 
-  <p>This is a guide on how to use the Adafruit ESP8266 Huzzah WiFi module with an emonTx v3 to make a simple WiFi enabled energy monitor that can post directly to <a href="https://emoncms.org">emoncms.org</a> or any other Emoncms installation local or remote.</p>
+  <p>This is a guide on how to use the Adafruit ESP8266 Huzzah WiFi module with an <a href="/technical/emontx">emonTx v3</a> to make a simple WiFi enabled energy monitor that can post directly to <a href="https://emoncms.org">emoncms.org</a> or any other Emoncms installation local or remote.</p>
 
 <p>For applications that only require basic posting of data from one emonTx to a remote server such as Emoncms.org an emonTx with this WiFi module provides a lower cost route than an emonBase or emonPi base-station installation.</p>
 
@@ -631,18 +631,14 @@ highlight active link...
 
 <ul>
   <li>
-    <p><strong>emonTx V3:</strong> + CT, AC-AC adapter, temperature and pulse sensors as required by your application.</p>
-
-    <ul>
-      <li><strong>Note:</strong> <a href="https://github.com/openenergymonitor/emontx3/tree/master/firmware">emonTx V3 firmware V2.5+</a> is required to support EmonESP.</li>
-      <li><strong>Note:</strong> To use ESP8266 with emonTx three-phase firmware EmonESP baud rate for EmonESP needs to be set to 9600</li>
-    </ul>
+    <p><strong><a href="/technical/emontx">emonTx V3</a>:</strong> + CT, AC-AC adapter, temperature and pulse sensors as required by your application.<br />
+<em>To use ESP8266 with emonTx three-phase firmware, the EmonESP baud rate needs to be set to 9600</em></p>
   </li>
   <li>
-    <p><strong>5V USB DC Power supply for the emonTx:</strong> The AC-AC Voltage adapter that can power the emonTx in normal operation does not deliver enough power to run the ESP8266 Huzzah WiFi module and so an additional 5V USB Power supply is required Battery opperation is not possible when using ESP8266.</p>
+    <p><strong>5V USB DC Power supply for the emonTx:</strong> The AC-AC Voltage adapter that can power the emonTx in normal operation does not deliver enough power to run the ESP8266 Huzzah WiFi module and so an additional 5V USB Power supply is required. Battery opperation is not possible when using ESP8266.</p>
   </li>
   <li>
-    <p><strong>ESP8266 Huzzah WiFi module with a 6 way stackable header running <a href="https://github.com/openenergymonitor/emonesp">EmonESP</a>:</strong> we offer a pre-programmed ESP8266 Huzzah WiFi module in our <a href="https://shop.openenergymonitor.com/esp8266-wifi-adapter-for-emontx/">shop here</a>, ready to go out of the box with the header already installed and running our open source EmonESP firmware (Alternatively for a DIY approach see the original forum post <a href="https://community.openenergymonitor.org/t/using-the-emontx-v3-with-the-esp8266-huzzah-wifi-module/795">here</a>.</p>
+    <p><strong>ESP8266 Huzzah WiFi module with a 6 way stackable header running <a href="https://github.com/openenergymonitor/emonesp">EmonESP</a>:</strong> we offer a pre-programmed ESP8266 Huzzah WiFi module in our <a href="https://shop.openenergymonitor.com/esp8266-wifi-adapter-for-emontx/">shop</a>, ready to go out of the box with the header already installed and running our open source EmonESP firmware (Alternatively for a DIY approach see the original forum post <a href="https://community.openenergymonitor.org/t/using-the-emontx-v3-with-the-esp8266-huzzah-wifi-module/795">here</a>.</p>
   </li>
 </ul>
 
@@ -681,7 +677,7 @@ highlight active link...
 
 <p><img src="/images/setup/esp8266adapter/espinputs.png" alt="espinputs.png" /></p>
 
-<p>10) Configure Emoncms.org as normal, see section on “Using Emoncms” in the <a href="https://github.com/emoncms/emoncms/blob/master/readme.md">emoncms documentation</a>.</p>
+<p>10) Configure Emoncms.org as normal, see emoncms documentation section of guide.</p>
 
 <h3 id="emonesp">EmonESP</h3>
 
@@ -698,7 +694,7 @@ highlight active link...
 <strong>password:</strong> emonpimqtt2016<br />
 <strong>base topic:</strong> emon/emontx<br /></p>
 
-<p><em>Note: on some networks that don’t support hostname lookup you will need to use the IP address of the emonPi as the hostname. Also sone networks report local hostname with the .local extension e.g. http://emonpi.local</em></p>
+<p><em>Note: on some networks that don’t support hostname lookup you will need to use the IP address of the emonPi as the hostname. Also some networks report local hostname with the .local or .lan extension e.g. http://emonpi.local</em></p>
 
 <p>See <a href="/technical">emonPi technical overview</a> and <a href="/technical/mqtt">MQTT</a> User Guide pages for more info.</p>
 
@@ -732,89 +728,83 @@ highlight active link...
     <h2 class="navigationTitle">Contents</h2>
     <ul class='divided sidebar-menu'>
       <li style="padding-top: 10px;">
-          <b>Setup</b>
+        <b>Hardware Setup</b>
         <ul>
-          <li><a  href='/setup/'>1. System Overview </a></li>
-          <li><a  href='/setup/connect/'>2. Connect </a></li>
-          <li><a  href='/setup/install/'>3. Install </a></li>
-          <li><a  href='/setup/local/'>4. Log Locally </a></li>
-          <li><a  href='/setup/remote/'>5. Log Remotely </a></li>
-          <li><a  href='/setup/dashboards/'>6. Dashboards </a></li>
-          <li><a  href='/setup/energy-node/'>7. Energy Sensing Node(s) </a></li>
-          <ul style="margin-bottom: 0px;;">
-            <li><a  href='/setup/emontx/'>emonTx </a></li>
-          </ul>
-          <li><a  href='/setup/emonth/'>8. Temperature Node(s) </a></li>
-          <li><a  href='/setup/optical-pulse-sensor/'>9. Add Optical Pulse Sensor </a></li>
-          <li><a  href='/setup/import/'>10. Import / Backup </a></li>
-          <li><a  href='/setup/north-america/'>11. Use in North America </a></li>
-          <li><a  href='/setup/troubleshooting/'>12. Troubleshooting </a></li>
-          <li><a  href='/setup/remote-access/'>13. Remote Access </a></li>
-          <li><a  href='/setup/update/'>14. Update & Upgrade </a></li>
-
+          <li><a  href='/setup/'>System Overview </a></li>
+          <li><a  href='/setup/install/'>Install emonPi </a></li>
+          <li><a  href='/setup/install-emontx/'>Install emonTx & emonBase </a></li>
+          <li><a  href='/setup/install-adapter-emontx/'>Install emonTx & ESP8266 </a></li>
+          <li><a  href='/setup/emontx/'>+ Add Additional emonTx </a></li>
+          <li><a  href='/setup/emonth/'>+ Add Temperature Nodes </a></li>
+          <li><a  href='/setup/optical-pulse-sensor/'>+ Add Optical Pulse Sensor </a></li>
+          <li><a  href='/setup/north-america/'>Use in North America </a></li>
         </ul>
-        <li>
-          <b>Emoncms</b>
-          <ul>
+      </li><li>
+        <b>EV Charging & Control</b>
+        <ul>
+          <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
+          <li><a  href='/integrations/evse-setup'>EVSE User Guide Setup </a></li>
+          <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
+          <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>          
+        </ul>
+      </li><li>
+        <b>Software Setup</b>
+        <ul>
+          <li><a  href='/setup/connect/'>1. Connect </a></li>
+          <li><a  href='/setup/local/'>2. Log Locally </a></li>
+          <li><a  href='/setup/remote/'>3. Log Remotely </a></li>
+          <li><a  href='/setup/import/'>4. Import / Backup </a></li>
+          <li><a  href='/setup/remote-access/'>5. Remote Access </a></li>
+          <li><a  href='/setup/update/'>6. Update & Upgrade </a></li>                
+          <li><a  href='/technical/credentials/'>7. Service Credentials </a></li>
+          <li><a  href='/technical/mqtt/'>8. MQTT </a></li>
+          <li><a  href='/setup/troubleshooting/'>9. Troubleshooting </a></li>
+        </ul>
+      </li><li>
+        <b>Emoncms</b>
+        <ul>
           <li><a  href='/emoncms/coreconcepts/'>Core Concepts </a></li>
           <li><a  href='/emoncms/postingdata/'>Posting Data </a></li>
           <li><a  href='/emoncms/graphs/'>View Graphs </a></li>
-          <li><a  href='/emoncms/daily-kwh/'>Daily kWh </a></li>
-          <li><a  href='/emoncms/daily-averages/'>Daily Averages </a></li>
+          <li><a  href='/emoncms/dashboards/'>Dashboard builder </a></li>
+          <li><a  href='/emoncms/apps/'>Application dashboards </a></li>
+          <li><a  href='/emoncms/daily-kwh/'>Calculating Daily kWh </a></li>
+          <li><a  href='/emoncms/daily-averages/'>Calculating Averages </a></li>
           <li><a  href='/emoncms/export-csv/'>Exporting CSV </a></li>
           <li><a  href='/emoncms/histograms/'>Histograms </a></li>
           <li><a  href='/emoncms/postprocess/'>Post Process </a></li>
-          <li><a  href='/technical/api/'>Emoncms API </a></li>
+          <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
-
-
-      </li>
-
-      <li>
-         <b>Applications</b>
+      </li><li>
+        <b>Applications</b>
         <ul>
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
-         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
-      </li>
-
-      <li>
-         <b>Integrations</b>
+      </li><li>
+        <b>Integrations</b>
         <ul>
-         <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
-         <ul style="margin-bottom: 0px;;">
-            <li><a  href='/integrations/evse-setup'>User Guide Setup </a></li>
-          </ul>
          <li><a  href='/integrations/nodered/'>Node-RED </a></li>
          <li><a  href='/integrations/openhab/'>OpenHAB </a></li>
-         <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
          <li><a  href='/integrations/lightwaverf/'>LightWave RF Control </a></li>
-         <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>
         </ul>
-
-      <li>
+      </li><li>
         <b>Technical</b>
-       <ul>
-        <li><a  href='/technical/'>Overview </a></li>
-        <li><a  href='/technical/specifications/'>Specifications </a></li>
-        <li><a  href='/technical/credentials/'>Service Credentials </a></li>
-        <li><a  href='/technical/mqtt/'>MQTT </a></li>
-        <li><a  href='/technical/compiling/'>Firmware Modification </a></li>
-        <li><a  href='/technical/resources/'>Resources </a></li>
-       </ul>
-      </li>
-
-      <li>
-     <b>Support</b>
+        <ul>
+          <li><a  href='/technical/emonpi/'>emonPi </a></li>
+          <li><a  href='/technical/emontx/'>emonTx </a></li>
+          <li><a  href='/technical/compiling/'>Firmware Modification </a></li>
+          <li><a  href='/technical/resources/'>Resources </a></li>
+        </ul>
+      </li><li>
+        <b>Support</b>
         <ul>
          <li><a  href='https://community.openenergymonitor.org/latest'>Community Forum <i class="icon-external-link"></i> </a>
          <li><a  href='/help/'>Contact </a></li>
         </ul>
       </li>
-
-
+    </ul>
     </div>
 <gcse:search></gcse:search>
 </section>

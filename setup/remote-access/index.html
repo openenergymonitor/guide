@@ -617,30 +617,15 @@ highlight active link...
 
   <p>Sometimes for convenience or troubleshooting it’s useful to be able to access the emonPi / emonBase remotely e.g from outside the local network.</p>
 
-<h2 id="port-forwarding--dynamic-dns">Port Forwarding / Dynamic DNS</h2>
-
-<p><strong>Not recommended, see below for a better option.</strong></p>
-
-<p>Network devices such as an emonPi connected to a local network are secured behind a firewall, often integrated into a router.</p>
-
-<p>The conventional way for obtaining access remotely is to open a port in the firewall and ‘port-forward’ requests to this port to the local emonPi. This method works but is cumbersome and insecure. It’s cumbersome because most users connect to the internet via their ISP using a non-static IP. Therefore the WAN IP address often changes, a dynamic DNS service such as <a href="https://www.duckdns.org/">Duck DNS</a>, or <a href="https://www.noip.com">noIP</a> can be used to link a dynamic IP to a static domain name, however this is cumbersome to set up and often requires purchasing a domain name, dynamic DNS Subscription and handling the dynamic DNS IP address updates.</p>
-
-<p>The port forwarding method of remote access is also insecure since by default the emonPi uses an insecure http connections, this is not a problem on a secure local network but not recommend for use over the internet.</p>
-
 <h2 id="-dataplicity"><a class="title-link" name="dataplicity" href="#dataplicity"></a> Dataplicity</h2>
 
-<p><strong>This is the easiest and most secure method of obtaining remote access (SSH/HTTP) to the emonPi</strong></p>
+<p><strong>This is the easiest and most secure method of obtaining remote access (SSH/HTTP) to the emonPi or emonBase</strong></p>
 
-<p><a href="https://www.dataplicity.com">Dataplicity</a> offers a easy to setup web-service service to enable secure remote access to RaspberryPi devices. The free tier allows free access to a single RaspberryPi device.</p>
+<p><a href="https://www.dataplicity.com">Dataplicity</a> offers a easy to setup web service to enable secure remote access to RaspberryPi devices. The free tier allows free access to a single RaspberryPi device.</p>
 
 <p>Follow these steps to setup Dataplicity on an emonPi</p>
 
-<p>1. <a href="/technical/credentials/#ssh">Connect to emonPi via SSH</a></p>
-
-<p>Once logged in put the emonPi into read-write mode using (this is not required on emonSD-30Oct18 emonSD):</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$rpi-rw
-</code></pre></div></div>
+<p>1. <a href="/technical/credentials/#ssh">Connect to emonPi or emonBase via SSH</a></p>
 
 <p>2. Create an account with dataplicity.</p>
 
@@ -650,11 +635,11 @@ highlight active link...
 
 <p>Copy the Dataplicity installation command.</p>
 
-<p>3. Paste and run the installation command on the emonPi:</p>
+<p>3. Paste and run the installation command on the emonPi/emonBase:</p>
 
 <p><img src="/images/setup/3-dataplicity.png" alt="3-dataplicity" /></p>
 
-<p>Once setup is complete (it will take several minutes) the emonPi will appear in the Dataplicity dashboard:</p>
+<p>Once setup is complete the emonPi/emonBase will appear in the Dataplicity dashboard:</p>
 
 <p><img src="/images/setup/4-dataplicity.png" alt="4-dataplicity" /></p>
 
@@ -662,22 +647,21 @@ highlight active link...
 
 <p><img src="/images/setup/5-dataplicity.png" alt="5-dataplicity" /></p>
 
-<p>Put the emonPi back into read-only mode using (this is not required on emonSD-30Oct18 emonSD).</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$rpi-ro
-</code></pre></div></div>
-
 <p>5. Dataplicity ‘wormhole’ feature  can be enabled to enable https access to Emoncms running on the emonPi:</p>
 
 <p><img src="/images/setup/6-dataplicity.png" alt="6-dataplicity" /></p>
 
-<p>Wormhole create a secure tunnel to the emonPi port 80 http over a https connection.</p>
-
-<hr />
-
-<p><strong>Tested on emonSD-26Oct17 and emonSD-30Oct18 on 11th Dec 2018</strong></p>
+<p>Wormhole creates a secure tunnel to the emonPi port 80 http over a https connection.</p>
 
 <p>If you encounter any issues using Dataplicity please post on the <a href="httsp://community.openenergymonitor.org">Community Forum</a> using the <code class="highlighter-rouge">dataplicity</code> tag.</p>
+
+<h2 id="port-forwarding--dynamic-dns">Port Forwarding / Dynamic DNS</h2>
+
+<p>Network devices such as an emonPi connected to a local network are secured behind a firewall, often integrated into a router.</p>
+
+<p>The conventional way for obtaining access remotely is to open a port in the firewall and ‘port-forward’ requests to this port to the local emonPi. This method works but is cumbersome and insecure. It’s cumbersome because most users connect to the internet via their ISP using a non-static IP. Therefore the WAN IP address often changes, a dynamic DNS service such as <a href="https://www.duckdns.org/">Duck DNS</a>, or <a href="https://www.noip.com">noIP</a> can be used to link a dynamic IP to a static domain name, however this is cumbersome to set up and often requires purchasing a domain name, dynamic DNS Subscription and handling the dynamic DNS IP address updates.</p>
+
+<p>The port forwarding method of remote access is also insecure since by default the emonPi uses an insecure http connections, this is not a problem on a secure local network but not recommend for use over the internet.</p>
 
 
 </article>
@@ -709,89 +693,83 @@ highlight active link...
     <h2 class="navigationTitle">Contents</h2>
     <ul class='divided sidebar-menu'>
       <li style="padding-top: 10px;">
-          <b>Setup</b>
+        <b>Hardware Setup</b>
         <ul>
-          <li><a  href='/setup/'>1. System Overview </a></li>
-          <li><a  href='/setup/connect/'>2. Connect </a></li>
-          <li><a  href='/setup/install/'>3. Install </a></li>
-          <li><a  href='/setup/local/'>4. Log Locally </a></li>
-          <li><a  href='/setup/remote/'>5. Log Remotely </a></li>
-          <li><a  href='/setup/dashboards/'>6. Dashboards </a></li>
-          <li><a  href='/setup/energy-node/'>7. Energy Sensing Node(s) </a></li>
-          <ul style="margin-bottom: 0px;;">
-            <li><a  href='/setup/emontx/'>emonTx </a></li>
-          </ul>
-          <li><a  href='/setup/emonth/'>8. Temperature Node(s) </a></li>
-          <li><a  href='/setup/optical-pulse-sensor/'>9. Add Optical Pulse Sensor </a></li>
-          <li><a  href='/setup/import/'>10. Import / Backup </a></li>
-          <li><a  href='/setup/north-america/'>11. Use in North America </a></li>
-          <li><a  href='/setup/troubleshooting/'>12. Troubleshooting </a></li>
-          <li><a class='active' href='/setup/remote-access/'>13. Remote Access </a></li>
-          <li><a  href='/setup/update/'>14. Update & Upgrade </a></li>
-
+          <li><a  href='/setup/'>System Overview </a></li>
+          <li><a  href='/setup/install/'>Install emonPi </a></li>
+          <li><a  href='/setup/install-emontx/'>Install emonTx & emonBase </a></li>
+          <li><a  href='/setup/install-adapter-emontx/'>Install emonTx & ESP8266 </a></li>
+          <li><a  href='/setup/emontx/'>+ Add Additional emonTx </a></li>
+          <li><a  href='/setup/emonth/'>+ Add Temperature Nodes </a></li>
+          <li><a  href='/setup/optical-pulse-sensor/'>+ Add Optical Pulse Sensor </a></li>
+          <li><a  href='/setup/north-america/'>Use in North America </a></li>
         </ul>
-        <li>
-          <b>Emoncms</b>
-          <ul>
+      </li><li>
+        <b>EV Charging & Control</b>
+        <ul>
+          <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
+          <li><a  href='/integrations/evse-setup'>EVSE User Guide Setup </a></li>
+          <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
+          <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>          
+        </ul>
+      </li><li>
+        <b>Software Setup</b>
+        <ul>
+          <li><a  href='/setup/connect/'>1. Connect </a></li>
+          <li><a  href='/setup/local/'>2. Log Locally </a></li>
+          <li><a  href='/setup/remote/'>3. Log Remotely </a></li>
+          <li><a  href='/setup/import/'>4. Import / Backup </a></li>
+          <li><a class='active' href='/setup/remote-access/'>5. Remote Access </a></li>
+          <li><a  href='/setup/update/'>6. Update & Upgrade </a></li>                
+          <li><a  href='/technical/credentials/'>7. Service Credentials </a></li>
+          <li><a  href='/technical/mqtt/'>8. MQTT </a></li>
+          <li><a  href='/setup/troubleshooting/'>9. Troubleshooting </a></li>
+        </ul>
+      </li><li>
+        <b>Emoncms</b>
+        <ul>
           <li><a  href='/emoncms/coreconcepts/'>Core Concepts </a></li>
           <li><a  href='/emoncms/postingdata/'>Posting Data </a></li>
           <li><a  href='/emoncms/graphs/'>View Graphs </a></li>
-          <li><a  href='/emoncms/daily-kwh/'>Daily kWh </a></li>
-          <li><a  href='/emoncms/daily-averages/'>Daily Averages </a></li>
+          <li><a  href='/emoncms/dashboards/'>Dashboard builder </a></li>
+          <li><a  href='/emoncms/apps/'>Application dashboards </a></li>
+          <li><a  href='/emoncms/daily-kwh/'>Calculating Daily kWh </a></li>
+          <li><a  href='/emoncms/daily-averages/'>Calculating Averages </a></li>
           <li><a  href='/emoncms/export-csv/'>Exporting CSV </a></li>
           <li><a  href='/emoncms/histograms/'>Histograms </a></li>
           <li><a  href='/emoncms/postprocess/'>Post Process </a></li>
-          <li><a  href='/technical/api/'>Emoncms API </a></li>
+          <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
-
-
-      </li>
-
-      <li>
-         <b>Applications</b>
+      </li><li>
+        <b>Applications</b>
         <ul>
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
-         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
-      </li>
-
-      <li>
-         <b>Integrations</b>
+      </li><li>
+        <b>Integrations</b>
         <ul>
-         <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
-         <ul style="margin-bottom: 0px;;">
-            <li><a  href='/integrations/evse-setup'>User Guide Setup </a></li>
-          </ul>
          <li><a  href='/integrations/nodered/'>Node-RED </a></li>
          <li><a  href='/integrations/openhab/'>OpenHAB </a></li>
-         <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
          <li><a  href='/integrations/lightwaverf/'>LightWave RF Control </a></li>
-         <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>
         </ul>
-
-      <li>
+      </li><li>
         <b>Technical</b>
-       <ul>
-        <li><a  href='/technical/'>Overview </a></li>
-        <li><a  href='/technical/specifications/'>Specifications </a></li>
-        <li><a  href='/technical/credentials/'>Service Credentials </a></li>
-        <li><a  href='/technical/mqtt/'>MQTT </a></li>
-        <li><a  href='/technical/compiling/'>Firmware Modification </a></li>
-        <li><a  href='/technical/resources/'>Resources </a></li>
-       </ul>
-      </li>
-
-      <li>
-     <b>Support</b>
+        <ul>
+          <li><a  href='/technical/emonpi/'>emonPi </a></li>
+          <li><a  href='/technical/emontx/'>emonTx </a></li>
+          <li><a  href='/technical/compiling/'>Firmware Modification </a></li>
+          <li><a  href='/technical/resources/'>Resources </a></li>
+        </ul>
+      </li><li>
+        <b>Support</b>
         <ul>
          <li><a  href='https://community.openenergymonitor.org/latest'>Community Forum <i class="icon-external-link"></i> </a>
          <li><a  href='/help/'>Contact </a></li>
         </ul>
       </li>
-
-
+    </ul>
     </div>
 <gcse:search></gcse:search>
 </section>

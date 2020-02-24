@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>8. Add Optical Pulse Sensor - Guide | OpenEnergyMonitor</title>
+    <title>+ Add Optical Pulse Sensor - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
     <meta name="description" content="Add optical puse sensor">
     
@@ -15,7 +15,7 @@
     <link rel="canonical" href="http://guide.openenergymonitor.org/setup/optical-pulse-sensor/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="8. Add Optical Pulse Sensor">
+    <meta property="og:title" content="+ Add Optical Pulse Sensor">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
     <meta property="og:url" content="http://guide.openenergymonitor.org/setup/optical-pulse-sensor/">
     <meta property="og:type" content="website">
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="8. Add Optical Pulse Sensor">
+    <meta name="twitter:title" content="+ Add Optical Pulse Sensor">
     <meta name="twitter:description" content="Add optical puse sensor">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
@@ -609,27 +609,19 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      8. Add Optical Pulse Sensor
+      + Add Optical Pulse Sensor
     </h1>
   </header>
   <hr class="divider">
   
 
-  <h3 id="-previous-step-add-temperature-nodes"><a href="/setup/emonth/">« Previous step: Add Temperature Node(s)</a></h3>
+  <p><img src="/images/setup/optical_pulse.jpg" style="float:left; margin-right:15px;" /></p>
 
-<h3 id="next-step-import--backup-"><a href="/setup/import/">Next step: Import / Backup »</a></h3>
-
-<hr />
-
-<h2 id="optical-pulse-sensor">Optical Pulse Sensor</h2>
-
-<p><img src="/images/setup/optical_pulse.jpg" /></p>
+<p><a class="btn" href="https://openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">View in Shop → </a></p>
 
 <p>An Optical Pulse Sensor detects the LED / IR ‘pulse’ output from a utility meters. Each pulse corresponds to a certain amount of energy passing through the meter. The amount of energy each pulse corresponds to depends on the meter. By counting these pulses and measuring the time between each pulse the meters KWh value can be calculated.</p>
 
-<p><a class="btn pull-right" href="https://openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">View in Shop → </a></p>
-
-<p>Unlike clip-on CT based monitoring, pulse counting is measuring exactly what the utility meter is measuring i.e. what you get billed for. Pulse counting cannot provide an instantaneous power reading like clip on CT sensors can. <strong>Where possible, we recommend using pulse counting in conjunction with clip on CT sensors</strong>.</p>
+<p>Unlike clip-on CT based monitoring, pulse counting is measuring exactly what the utility meter is measuring i.e. what you get billed for. Pulse counting cannot provide an instantaneous power reading like clip on CT sensors can. It is often worthwhile using pulse counting in conjunction with clip on CT sensors to get the best of both techniques.</p>
 
 <p>The emonPi and emonTx can simultaneously perform pulse counting and CT based monitoring.</p>
 
@@ -680,7 +672,7 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
 
 <p><img src="/images/setup/emonpi-input-list.png" /></p>
 
-<p>Clicking the spanner icon brings up the feed input processor. It’s a good idea to log the raw pulse count to a feed for debugging. The pulse count needs to be multiplied by a scalar to convert the pulses to Wh. The scale factor will depend on your meter, see the table in Appendix A below. Once the scalar has been applied, log the result to a Wh Accumulator feed. This feed is an ever increasing number which won’t return to zero if the emonPi / emonTx is reset, which would result in the raw pulse count returning to zero.</p>
+<p>Clicking the spanner icon brings up the feed input processor. It’s a good idea to log the raw pulse count to a feed for debugging. The pulse count needs to be multiplied by a scale process to convert the pulses to Wh. The scale factor will depend on your meter, see the table in Appendix A below. Once the scale has been applied, log the result to a Wh Accumulator feed. This feed is an ever increasing number which won’t return to zero if the emonPi / emonTx is reset, which would result in the raw pulse count returning to zero.</p>
 
 <p><img src="/images/setup/emonpi-pulse-input-process.png" /></p>
 
@@ -707,14 +699,12 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
 			<td><strong>Pulses Per KWh</strong></td>
 			<td>
 			<p><strong>Multiplication factor for </strong></p>
-
 			<p><strong>Wh Accumulator feed</strong></p>
 			</td>
 		</tr>
 		<tr>
 			<td>
 			<p>Elster&nbsp;A100c</p>
-
 			<p>(single phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/a100c.png"><img alt="" src="/images/setup/meters/a100c.png" style="width: 100px; height: 78px;" /></a></td>
@@ -724,7 +714,6 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
 		<tr>
 			<td>
 			<p>Actaris ace9000</p>
-
 			<p>(single phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/Actaris_ace9000.jpg"><img alt="" src="/images/setup/meters/Actaris_ace9000.jpg" style="width: 100px; height: 118px;" /></a></td>
@@ -734,7 +723,6 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
 		<tr>
 			<td>
 			<p>Xil&nbsp;XLA12</p>
-
 			<p>(single phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/Xil_XLA12.jpg"><img alt="" src="/images/setup/meters/Xil_XLA12.jpg" style="width: 100px; height: 100px;" /></a></td>
@@ -744,7 +732,6 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
 		<tr>
 			<td>
 			<p>Elster A1100</p>
-
 			<p>(3-phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/ElsterA1100.jpg"><img alt="" src="/images/setup/meters/ElsterA1100.jpg" style="width: 100px; height: 69px;" /></a></td>
@@ -754,7 +741,6 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
 		<tr>
 			<td>
 			<p>Elster AS300P</p>
-			
 			<p>(single phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/ElsterAS300P.jpg"><img alt="" src="/images/setup/meters/ElsterAS300P.jpg" style="width: 100px; height: 100px;" /></a></td>
@@ -764,7 +750,6 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
 		<tr>
 			<td>
 			<p>Elster&nbsp;A1140</p>
-
 			<p>(3-phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/Elster_A1140.jpg"><img alt="" src="/images/setup/meters/Elster_A1140.jpg" style="width: 100px; height: 75px;" /></a></td>
@@ -774,7 +759,6 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
 		<tr>
 			<td>
 			<p>Landis &amp; Gyr 5254E</p>
-
 			<p>(single phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/LandisGyr5254E.png"><img alt="" src="/images/setup/meters/LandisGyr5254E.png" style="width: 100px; height: 100px;" /></a></td>
@@ -792,7 +776,6 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
 		<tr>
 			<td>
 			<p>EDMI&nbsp;MK7C&nbsp;</p>
-
 			<p>AMR Smart Meter</p>
 			</td>
 			<td><a href="/images/setup/meters/edmi_mk7c.jpg"><img alt="" src="/images/setup/meters/edmi_mk7c.jpg" style="width: 80px; height: 130px;" /></a></td>
@@ -802,7 +785,6 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
 		<tr>
 			<td>
 			<p>Landis &amp; Gyr E110</p>
-
 			<p>(Single Phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/Original-Landis_E110_1__1.jpg"><img alt="" src="/images/setup/meters/Original-Landis_E110_1__1.jpg" style="width: 100px; height: 66px;" /></a></td>
@@ -814,7 +796,6 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
 		<tr>
 			<td>
 			<p>Secure Liberty 100</p>
-
 			<p>(Single Phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/Secure_Liberty_100.png"><img alt="" src="/images/setup/meters/Secure_Liberty_100.png" style="width: 150px; height: 100px;" /></a></td>
@@ -827,12 +808,6 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
 </table>
 
 <p>Please help us expand this table by contributing details for your meter. Email photo and scale factor to <a href="mailto:support@openenergymonitor.zendesk.com?subject=pulse%20output%20utility%20meter">support@openenergymonitor.zendesk.com</a></p>
-
-<p><br /></p>
-
-<hr />
-
-<h3 id="next-step-import--backup--1"><a href="/setup/import/">Next step: Import / Backup »</a></h3>
 
 
 </article>
@@ -864,89 +839,83 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
     <h2 class="navigationTitle">Contents</h2>
     <ul class='divided sidebar-menu'>
       <li style="padding-top: 10px;">
-          <b>Setup</b>
+        <b>Hardware Setup</b>
         <ul>
-          <li><a  href='/setup/'>1. System Overview </a></li>
-          <li><a  href='/setup/connect/'>2. Connect </a></li>
-          <li><a  href='/setup/install/'>3. Install </a></li>
-          <li><a  href='/setup/local/'>4. Log Locally </a></li>
-          <li><a  href='/setup/remote/'>5. Log Remotely </a></li>
-          <li><a  href='/setup/dashboards/'>6. Dashboards </a></li>
-          <li><a  href='/setup/energy-node/'>7. Energy Sensing Node(s) </a></li>
-          <ul style="margin-bottom: 0px;;">
-            <li><a  href='/setup/emontx/'>emonTx </a></li>
-          </ul>
-          <li><a  href='/setup/emonth/'>8. Temperature Node(s) </a></li>
-          <li><a class='active' href='/setup/optical-pulse-sensor/'>9. Add Optical Pulse Sensor </a></li>
-          <li><a  href='/setup/import/'>10. Import / Backup </a></li>
-          <li><a  href='/setup/north-america/'>11. Use in North America </a></li>
-          <li><a  href='/setup/troubleshooting/'>12. Troubleshooting </a></li>
-          <li><a  href='/setup/remote-access/'>13. Remote Access </a></li>
-          <li><a  href='/setup/update/'>14. Update & Upgrade </a></li>
-
+          <li><a  href='/setup/'>System Overview </a></li>
+          <li><a  href='/setup/install/'>Install emonPi </a></li>
+          <li><a  href='/setup/install-emontx/'>Install emonTx & emonBase </a></li>
+          <li><a  href='/setup/install-adapter-emontx/'>Install emonTx & ESP8266 </a></li>
+          <li><a  href='/setup/emontx/'>+ Add Additional emonTx </a></li>
+          <li><a  href='/setup/emonth/'>+ Add Temperature Nodes </a></li>
+          <li><a class='active' href='/setup/optical-pulse-sensor/'>+ Add Optical Pulse Sensor </a></li>
+          <li><a  href='/setup/north-america/'>Use in North America </a></li>
         </ul>
-        <li>
-          <b>Emoncms</b>
-          <ul>
+      </li><li>
+        <b>EV Charging & Control</b>
+        <ul>
+          <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
+          <li><a  href='/integrations/evse-setup'>EVSE User Guide Setup </a></li>
+          <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
+          <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>          
+        </ul>
+      </li><li>
+        <b>Software Setup</b>
+        <ul>
+          <li><a  href='/setup/connect/'>1. Connect </a></li>
+          <li><a  href='/setup/local/'>2. Log Locally </a></li>
+          <li><a  href='/setup/remote/'>3. Log Remotely </a></li>
+          <li><a  href='/setup/import/'>4. Import / Backup </a></li>
+          <li><a  href='/setup/remote-access/'>5. Remote Access </a></li>
+          <li><a  href='/setup/update/'>6. Update & Upgrade </a></li>                
+          <li><a  href='/technical/credentials/'>7. Service Credentials </a></li>
+          <li><a  href='/technical/mqtt/'>8. MQTT </a></li>
+          <li><a  href='/setup/troubleshooting/'>9. Troubleshooting </a></li>
+        </ul>
+      </li><li>
+        <b>Emoncms</b>
+        <ul>
           <li><a  href='/emoncms/coreconcepts/'>Core Concepts </a></li>
           <li><a  href='/emoncms/postingdata/'>Posting Data </a></li>
           <li><a  href='/emoncms/graphs/'>View Graphs </a></li>
-          <li><a  href='/emoncms/daily-kwh/'>Daily kWh </a></li>
-          <li><a  href='/emoncms/daily-averages/'>Daily Averages </a></li>
+          <li><a  href='/emoncms/dashboards/'>Dashboard builder </a></li>
+          <li><a  href='/emoncms/apps/'>Application dashboards </a></li>
+          <li><a  href='/emoncms/daily-kwh/'>Calculating Daily kWh </a></li>
+          <li><a  href='/emoncms/daily-averages/'>Calculating Averages </a></li>
           <li><a  href='/emoncms/export-csv/'>Exporting CSV </a></li>
           <li><a  href='/emoncms/histograms/'>Histograms </a></li>
           <li><a  href='/emoncms/postprocess/'>Post Process </a></li>
-          <li><a  href='/technical/api/'>Emoncms API </a></li>
+          <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
-
-
-      </li>
-
-      <li>
-         <b>Applications</b>
+      </li><li>
+        <b>Applications</b>
         <ul>
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
          <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
-         <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
-      </li>
-
-      <li>
-         <b>Integrations</b>
+      </li><li>
+        <b>Integrations</b>
         <ul>
-         <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
-         <ul style="margin-bottom: 0px;;">
-            <li><a  href='/integrations/evse-setup'>User Guide Setup </a></li>
-          </ul>
          <li><a  href='/integrations/nodered/'>Node-RED </a></li>
          <li><a  href='/integrations/openhab/'>OpenHAB </a></li>
-         <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
          <li><a  href='/integrations/lightwaverf/'>LightWave RF Control </a></li>
-         <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>
         </ul>
-
-      <li>
+      </li><li>
         <b>Technical</b>
-       <ul>
-        <li><a  href='/technical/'>Overview </a></li>
-        <li><a  href='/technical/specifications/'>Specifications </a></li>
-        <li><a  href='/technical/credentials/'>Service Credentials </a></li>
-        <li><a  href='/technical/mqtt/'>MQTT </a></li>
-        <li><a  href='/technical/compiling/'>Firmware Modification </a></li>
-        <li><a  href='/technical/resources/'>Resources </a></li>
-       </ul>
-      </li>
-
-      <li>
-     <b>Support</b>
+        <ul>
+          <li><a  href='/technical/emonpi/'>emonPi </a></li>
+          <li><a  href='/technical/emontx/'>emonTx </a></li>
+          <li><a  href='/technical/compiling/'>Firmware Modification </a></li>
+          <li><a  href='/technical/resources/'>Resources </a></li>
+        </ul>
+      </li><li>
+        <b>Support</b>
         <ul>
          <li><a  href='https://community.openenergymonitor.org/latest'>Community Forum <i class="icon-external-link"></i> </a>
          <li><a  href='/help/'>Contact </a></li>
         </ul>
       </li>
-
-
+    </ul>
     </div>
 <gcse:search></gcse:search>
 </section>
