@@ -10,194 +10,228 @@ footer: true
 published: true
 ---
 
-<figure><a href="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png">
-<img src="https://github.com/openenergymonitor/emonpi/raw/master/docs/emonPi_System_Diagram.png" alt="emonPi Architecture Overview">
-<figcaption style="text-align:center;"><i>Fig.1 - emonPi Architecture Overview</i></figcaption>
-</a>
-</figure>
+<style>.code {font-family:monospace; font-size:14px; background-color: #eee; padding: 20px; margin-bottom:20px}</style>
 
-***
+### Content
 
-If you are experiencing issues please post on our community form, see [Help page](/help).
+- Community forum FAQ
+- Feeds / Inputs not Updating
+- Disk space
+- Incorrect system time
+- Emoncms Local Password Reset
+- Factory Reset
 
-Debugging issues often involves connecting via SSH to restart services and view log files see:
+### Community Forum FAQ
 
-### [Technical > Credentials > Connect Via SSH](/technical/credentials/#ssh)
+**Community Forum:** [Frequently asked Questions](https://community.openenergymonitor.org/t/frequently-asked-questions/3005)
 
-## {% linkable_title Feeds / Inputs not Updating %}
+### {% linkable_title Feeds / Inputs not Updating %}
 
-There are a number of things to check if feeds are not updating:
+There are a number of things to check if inputs or feeds are not updating. The first is to check the status of emoncms services on the `Emoncms > Admin` page:
 
-### {% linkable_title 1. emonHub %}
+![emoncms_services.png](/images/setup/emoncms_services.png)
 
-- Is emonhub running?
-   - `$ sudo service emonhub status`
-   - `$ sudo service emonhub restart`
+Services: `emonhub`, `emoncms_mqtt`, `feedwriter`, `redis-server` and `mosquitto` should all be '**Active** Running'.
 
-- Is emonHub posting to MQTT?
-  - Check log file
-  - Local Emoncms > emonHub > Emonhub logger
-  - `$ tail /var/log/emonhub/emonhub.log`
+Service status can also be checked via SSH command, e.g:
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
-<script src="/javascripts/showHide.js" type="text/javascript"></script>
-<script type="text/javascript">
+<pre class="code">sudo systemctl status emoncms_mqtt.service</pre>
 
-$(document).ready(function(){
-   $('.show_hide').showHide({
-		speed: 100,  // speed you want the toggle to happen
-		easing: '',  // the animation effect you want. Remove this line if you dont want an effect and if you haven't included jQuery UI
-		changeText: 0, // if you dont want the button text to change, set this to 0
-		showText: 'View',// the button text to show when a div is closed
-		hideText: 'Close' // the button text to show when a div is open
+Potential causes of services not running may be: 
 
-	});
-});
-</script>
+- Incorrect configuration
+- Incorrect installation
+- Full /tmp partition
+- Full /var/log partition
+- Unclean power cycle / power-cut related SD card corruption 
 
-<button type="button" class="show_hide" href="#" rel="#slidingDiv">View Example Log</button>
-<div id="slidingDiv" class="toggleDiv" style="display: none;">
-    <p>Example emonhub log file at startup </pre></p>
+`redis-server` is a dependency of `emoncms_mqtt` and `feedwriter`.<br>
+`mosquitto` is a dependency of `emonhub` and `emoncms_mqtt`
 
-<pre>
- INFO     MainThread EmonHub emonHub 'emon-pi' variant v1.1
- INFO     MainThread Opening hub...
- INFO     MainThread Logging level set to DEBUG
- <br>
- <b>Connecting to emonPi / RFM69Pi and setting frequency & network group:</b>
- INFO     MainThread Creating EmonHubJeeInterfacer 'RFM2Pi'
- DEBUG    MainThread Opening serial port: /dev/ttyAMA0 @ 38400 bits/s
- INFO     MainThread RFM2Pi device firmware version & configuration: not available
- INFO     MainThread Setting RFM2Pi frequency: 433 (4b)
- INFO     MainThread Setting RFM2Pi group: 210 (210g)
- INFO     MainThread Setting RFM2Pi quiet: 0 (0q)
- INFO     MainThread Setting RFM2Pi baseid: 5 (5i)
- INFO     MainThread Setting RFM2Pi calibration: 230V (1p)
- DEBUG    MainThread Setting RFM2Pi subchannels: ['ToRFM12']
- DEBUG    MainThread Interfacer: Subscribed to channel' : ToRFM12
- DEBUG    MainThread Setting RFM2Pi pubchannels: ['ToEmonCMS']
- DEBUG    MainThread Interfacer: Subscribed to channel' : ToRFM12
- <br>
- <b>Connecting to localhost Mosquitto MQTT server:</b>
- INFO     MainThread Creating EmonHubMqttInterfacer 'MQTT'
- INFO     MainThread MQTT Init mqtt_host=127.0.0.1 mqtt_port=1883 mqtt_user=emonpi
- DEBUG    MainThread MQTT Subscribed to channel' : ToEmonCMS
- INFO     MainThread Creating EmonHubEmoncmsHTTPInterfacer 'emoncmsorg'
- DEBUG    MainThread emoncmsorg Subscribed to channel' : ToEmonCMS
- DEBUG    RFM2Pi     device settings updated: E i5 g210 @ 433 MHz USA 0
- INFO     MQTT       Connecting to MQTT Server
- INFO     MQTT       connection status: Connection successful
- DEBUG    MQTT       CONACK => Return code: 0
- <br>
- <b>Example Receiving Data from emonPi (Node 5 Default) and posting to emon/ MQTT topics:</b>
- DEBUG    RFM2Pi     1 NEW FRAME : OK 5 39 0 0 0 39 0 139 90 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 (-0)
- DEBUG    RFM2Pi     1 Timestamp : 1463221555.59
- DEBUG    RFM2Pi     1 From Node : 5
- DEBUG    RFM2Pi     1    Values : [39, 0, 39, 231.79, 0, 0, 0, 0, 0, 0, 0]
- INFO     RFM2Pi     Publishing: emon/emonpi/power1 39
- INFO     RFM2Pi     Publishing: emon/emonpi/power2 0
- INFO     RFM2Pi     Publishing: emon/emonpi/power1pluspower2 39
- INFO     RFM2Pi     Publishing: emon/emonpi/vrms 231.79
- INFO     RFM2Pi     Publishing: emon/emonpi/t1 0
- INFO     RFM2Pi     Publishing: emon/emonpi/t2 0
- INFO     RFM2Pi     Publishing: emon/emonpi/t3 0
- INFO     RFM2Pi     Publishing: emon/emonpi/t4 0
- INFO     RFM2Pi     Publishing: emon/emonpi/t5 0
- INFO     RFM2Pi     Publishing: emon/emonpi/t6 0
- INFO     RFM2Pi     Publishing: emon/emonpi/pulsecount 0
- INFO     RFM2Pi     Publishing: emon/emonpi/rssi 0
- INFO     RFM2Pi     Publishing: emonhub/rx/5/values 39,0,39,231.79,0,0,0,0,0,0,0
- INFO     RFM2Pi     Publishing: emonhub/rx/5/rssi 0
- DEBUG    RFM2Pi     1 adding frame to buffer => [1463221555, 5, 39, 0, 39, 231.79, 0, 0, 0, 0, 0, 0, 0]
- DEBUG    RFM2Pi     1 Sent to channel' : ToEmonCMS
-<br>
-<b>Example Receiving Data from emonTH (Node 20) and posting to emon/ MQTT topics:</b>
- DEBUG    RFM2Pi     27138 NEW FRAME : OK 20 170 0 0 0 106 2 26 0 (-59)
- DEBUG    RFM2Pi     27138 Timestamp : 1463330495.4
- DEBUG    RFM2Pi     27138 From Node : 20
- DEBUG    RFM2Pi     27138    Values : [17, 0, 61.800000000000004, 2.6]
- DEBUG    RFM2Pi     27138      RSSI : -59
- INFO     RFM2Pi     Publishing: emon/emonth2/temperature 17
- INFO     RFM2Pi     Publishing: emon/emonth2/external temperature 0
- INFO     RFM2Pi     Publishing: emon/emonth2/humidity 61.8
- INFO     RFM2Pi     Publishing: emon/emonth2/battery 2.6
- INFO     RFM2Pi     Publishing: emon/emonth2/rssi -59
- INFO     RFM2Pi     Publishing: emonhub/rx/20/values 17,0,61.8,2.6
- INFO     RFM2Pi     Publishing: emonhub/rx/20/rssi -59
- DEBUG    RFM2Pi     27138 adding frame to buffer => [1463330495, 20, 17, 0, 61.800000000000004, 2.6, -59]
- DEBUG    RFM2Pi     27138 Sent to channel' : ToEmonCMS
+**All services are running but there are still no inputs on the emoncms inputs page**<br>
+This may be caused by incorrect emonhub configuration. Navigate to `Emoncms > Setup > Emonhub > View Log`. A valid log should look similar to the example log below. 
 
-<br>
-<b>Example posting data to remote https://emoncms.org:</b>
-INFO     emoncmsorg sending: https://emoncms.org/input/bulk.json?apikey=E-M-O-N-C-M-S-A-P-I-K-E-Y&data=[[1463330761,5,40,0,40,228.20000000000002,0,0,0,0,0,0,0],[1463330766,5,38,0,38,229,0,0,0,0,0,0,0],[1463330771,5,41,0,41,229.03,0,0,0,0,0,0,0],[1463330776,5,38,0,38,228.18,0,0,0,0,0,0,0],[1463330781,5,38,0,38,228.21,0,0,0,0,0,0,0],[1463330786,5,36,0,36,229.16,0,0,0,0,0,0,0]]&sentat=1463330789
- DEBUG    emoncmsorg acknowledged receipt with 'ok' from https://emoncms.org
- INFO     emoncmsorg sending: https://emoncms.org/myip/set.json?apikey=E-M-O-N-C-M-S-A-P-I-K-E-Y
+1\. If you do not see any `DEBUG    RFM2Pi     8 NEW FRAME : OK` lines, this suggests that the RaspberryPi is not receiving any data from the emonPi measurement board or RFM69Pi adapter board. Potential causes of missing 'NEW FRAME' lines:
+
+- Issue with emonPi measurement board itself
+- Issue with any wireless nodes sending data to the rfm69pi adapter on an emonBase
+- Invalid radio settings on the emonBase such as frequency or network group
+
+The emonPi and emonBase receiver radio module settings are set in emonhub.conf, see:<br> `Emoncms > Setup > Emonhub > Edit Config`. The default RFM2Pi emonhub interfacer on an unmodifed system should look like this: [emonhub.conf#L21](https://github.com/openenergymonitor/emonhub/blob/emon-pi/conf/emonpi.default.emonhub.conf#L21).
+
+2\. If you don not see any lines that look like: `DEBUG    MQTT       Publishing: emon/emontx1/power1 623` but do see `NEW FRAME : OK` this suggests an issue with the MQTT interfacer. Default configuration should look like this [emonhub.conf#L38](https://github.com/openenergymonitor/emonhub/blob/emon-pi/conf/emonpi.default.emonhub.conf#L38).
 
 
+**Example of valid emonhub.log posting via MQTT to local emoncms:**
+
+<pre class="code" style="white-space:pre; height:300px">
+2020-02-21 16:02:33,236 INFO     MainThread EmonHub emonHub emon-pi variant v3-beta
+2020-02-21 16:02:33,236 INFO     MainThread Opening hub...
+2020-02-21 16:02:33,237 INFO     MainThread Logging level set to DEBUG
+2020-02-21 16:02:33,237 INFO     MainThread Creating EmonHubJeeInterfacer 'RFM2Pi' 
+2020-02-21 16:02:33,238 DEBUG    MainThread Opening serial port: /dev/ttyAMA0 @ 38400 bits/s
+2020-02-21 16:02:35,243 INFO     MainThread RFM2Pi device firmware version: [RF12demo.14]
+2020-02-21 16:02:35,244 INFO     MainThread RFM2Pi device current settings:  E i5 g210 @ 433 MHz q1
+2020-02-21 16:02:35,245 INFO     MainThread Setting RFM2Pi calibration: 230V (1p)
+2020-02-21 16:02:36,247 DEBUG    MainThread Setting RFM2Pi interval: 60
+2020-02-21 16:02:36,247 DEBUG    MainThread Setting RFM2Pi pubchannels: ['ToEmonCMS']
+2020-02-21 16:02:36,248 DEBUG    MainThread Setting RFM2Pi subchannels: ['ToRFM12']
+2020-02-21 16:02:36,249 INFO     MainThread Creating EmonHubMqttInterfacer 'MQTT' 
+2020-02-21 16:02:36,251 DEBUG    RFM2Pi     acknowledged command: > 1p
+2020-02-21 16:02:36,253 DEBUG    MainThread Setting MQTT subchannels: ['ToEmonCMS']
+2020-02-21 16:02:36,254 INFO     MainThread Setting MQTT node_format_enable: 1
+2020-02-21 16:02:36,254 INFO     MainThread Setting MQTT nodevar_format_enable: 1
+2020-02-21 16:02:36,255 INFO     MainThread Setting MQTT nodevar_format_basetopic: emon/
+2020-02-21 16:02:36,256 INFO     MainThread Creating EmonHubEmoncmsHTTPInterfacer 'emoncmsorg' 
+2020-02-21 16:02:36,257 DEBUG    MainThread Setting emoncmsorg pubchannels: ['ToRFM12']
+2020-02-21 16:02:36,258 DEBUG    MainThread Setting emoncmsorg subchannels: ['ToEmonCMS']
+2020-02-21 16:02:36,258 WARNING  MainThread Setting emoncmsorg apikey: obscured
+2020-02-21 16:02:36,258 INFO     MainThread Setting emoncmsorg url: https://emoncms.org
+2020-02-21 16:02:36,259 INFO     MainThread Setting emoncmsorg senddata: 0
+2020-02-21 16:02:36,259 INFO     MainThread Setting emoncmsorg sendstatus: 1
+2020-02-21 16:02:36,352 DEBUG    RFM2Pi     RFM2Pi broadcasting time: 16:02
+2020-02-21 16:02:36,559 DEBUG    RFM2Pi     acknowledged command: <nn> i     - set node ID (standard node ids are 1..30)
+2020-02-21 16:02:36,663 DEBUG    RFM2Pi     acknowledged command: <n> b      - set MHz band (4 = 433, 8 = 868, 9 = 915)
+2020-02-21 16:02:36,768 DEBUG    RFM2Pi     acknowledged command: <nnnn> o   - change frequency offset within the band (default 1600)
+2020-02-21 16:02:36,976 DEBUG    RFM2Pi     acknowledged command: <nnn> g    - set network group (RFM12 only allows 212, 0 = any)
+2020-02-21 16:02:37,080 DEBUG    RFM2Pi     acknowledged command: <n> c      - set collect mode (advanced, normally 0)
+2020-02-21 16:02:37,313 DEBUG    RFM2Pi     acknowledged command: ...,<nn> a - send data packet to node <nn>, request ack
+2020-02-21 16:02:37,417 DEBUG    RFM2Pi     acknowledged command: ...,<nn> s - send data packet to node <nn>, no ack
+2020-02-21 16:02:37,521 DEBUG    RFM2Pi     acknowledged command: <n> q      - set quiet mode (1 = don't report bad packets)
+2020-02-21 16:02:37,626 DEBUG    RFM2Pi     acknowledged command: <n> x      - set reporting format (0: decimal, 1: hex, 2: hex+ascii)
+2020-02-21 16:02:37,732 DEBUG    RFM2Pi     acknowledged command: <nnn> y    - enable signal strength trace mode, default:0 (disabled)
+2020-02-21 16:02:37,837 DEBUG    RFM2Pi     acknowledged command: sample interval <nnn> secs/100 (0.01s-2.5s) eg 10y=0.1s
+2020-02-21 16:02:38,147 DEBUG    RFM2Pi     acknowledged command: <hchi>,<hclo>,<addr>,<cmd> f     - FS20 command (868 MHz)
+2020-02-21 16:02:38,252 DEBUG    RFM2Pi     acknowledged command: <addr>,<dev>,<on> k              - KAKU command (433 MHz)
+2020-02-21 16:02:38,456 DEBUG    RFM2Pi     device settings updated: E i5 g210 @ 433 MHz q1
+2020-02-21 16:02:38,559 DEBUG    RFM2Pi     7 NEW FRAME : OK 24 164 0 0 0 151 2 27 0 1 0 0 0 (-45)
+2020-02-21 16:02:38,561 DEBUG    RFM2Pi     7 Timestamp : 1582300958.5596843
+2020-02-21 16:02:38,561 DEBUG    RFM2Pi     7 From Node : 24
+2020-02-21 16:02:38,562 DEBUG    RFM2Pi     7    Values : [16.400000000000002, 0, 66.3, 2.7, 1]
+2020-02-21 16:02:38,562 DEBUG    RFM2Pi     7      RSSI : -45
+2020-02-21 16:02:38,563 DEBUG    RFM2Pi     7 Sent to channel(start)' : ToEmonCMS
+2020-02-21 16:02:38,563 DEBUG    RFM2Pi     7 Sent to channel(end)' : ToEmonCMS
+2020-02-21 16:02:38,665 DEBUG    RFM2Pi     acknowledged command: > 0,16,2,0,0s
+2020-02-21 16:02:38,763 INFO     MQTT       Connecting to MQTT Server
+2020-02-21 16:02:38,767 DEBUG    RFM2Pi     confirmed sent packet size: -> 4 b
+2020-02-21 16:02:38,866 INFO     MQTT       connection status: Connection successful
+2020-02-21 16:02:38,867 DEBUG    MQTT       CONACK => Return code: 0
+2020-02-21 16:02:38,871 DEBUG    RFM2Pi     8 NEW FRAME : OK 19 181 0 0 0 37 2 28 0 1 0 0 0 (-49)
+2020-02-21 16:02:38,872 DEBUG    RFM2Pi     8 Timestamp : 1582300958.87131
+2020-02-21 16:02:38,873 DEBUG    RFM2Pi     8 From Node : 19
+2020-02-21 16:02:38,873 DEBUG    RFM2Pi     8    Values : [18.1, 0, 54.900000000000006, 2.8000000000000003, 1]
+2020-02-21 16:02:38,874 DEBUG    RFM2Pi     8      RSSI : -49
+2020-02-21 16:02:38,874 DEBUG    RFM2Pi     8 Sent to channel(start)' : ToEmonCMS
+2020-02-21 16:02:38,874 DEBUG    RFM2Pi     8 Sent to channel(end)' : ToEmonCMS
+2020-02-21 16:02:38,881 DEBUG    emoncmsorg Buffer size: 1
+2020-02-21 16:02:38,969 INFO     MQTT       on_subscribe
+2020-02-21 16:02:38,970 DEBUG    MQTT       Publishing: emon/emonth1/temperature 18.1
+2020-02-21 16:02:38,977 DEBUG    MQTT       Publishing: emon/emonth1/external temperature 0
+2020-02-21 16:02:38,978 DEBUG    MQTT       Publishing: emon/emonth1/humidity 54.900000000000006
+2020-02-21 16:02:38,980 DEBUG    MQTT       Publishing: emon/emonth1/battery 2.8000000000000003
+2020-02-21 16:02:38,981 DEBUG    MQTT       Publishing: emon/emonth1/pulsecount 1
+2020-02-21 16:02:38,982 DEBUG    MQTT       Publishing: emon/emonth1/rssi -49
+2020-02-21 16:02:38,984 INFO     MQTT       Publishing: emonhub/rx/19/values 18.1,0,54.900000000000006,2.8000000000000003,1,-49
+2020-02-21 16:02:39,480 DEBUG    RFM2Pi     9 NEW FRAME : OK 22 175 0 0 0 47 2 28 0 1 0 0 0 (-44)
+2020-02-21 16:02:39,481 DEBUG    RFM2Pi     9 Timestamp : 1582300959.4804919
+2020-02-21 16:02:39,482 DEBUG    RFM2Pi     9 From Node : 22
+2020-02-21 16:02:39,482 DEBUG    RFM2Pi     9    Values : [17.5, 0, 55.900000000000006, 2.8000000000000003, 1]
+2020-02-21 16:02:39,483 DEBUG    RFM2Pi     9      RSSI : -44
+2020-02-21 16:02:39,483 DEBUG    RFM2Pi     9 Sent to channel(start)' : ToEmonCMS
+2020-02-21 16:02:39,484 DEBUG    RFM2Pi     9 Sent to channel(end)' : ToEmonCMS
+2020-02-21 16:02:39,594 DEBUG    MQTT       Publishing: emon/emonth4/temperature 17.5
+2020-02-21 16:02:39,595 DEBUG    MQTT       Publishing: emon/emonth4/external temperature 0
+2020-02-21 16:02:39,597 DEBUG    MQTT       Publishing: emon/emonth4/humidity 55.900000000000006
+2020-02-21 16:02:39,598 DEBUG    MQTT       Publishing: emon/emonth4/battery 2.8000000000000003
+2020-02-21 16:02:39,600 DEBUG    MQTT       Publishing: emon/emonth4/pulsecount 1
+2020-02-21 16:02:39,601 DEBUG    MQTT       Publishing: emon/emonth4/rssi -44
+2020-02-21 16:02:39,602 INFO     MQTT       Publishing: emonhub/rx/22/values 17.5,0,55.900000000000006,2.8000000000000003,1,-44
+2020-02-21 16:02:41,904 DEBUG    RFM2Pi     10 NEW FRAME : OK 10 111 2 226 1 0 0 0 0 220 90 84 220 1 0 155 5 1 0 0 0 0 0 0 0 0 0 (-53)
+2020-02-21 16:02:41,905 DEBUG    RFM2Pi     10 Timestamp : 1582300961.904312
+2020-02-21 16:02:41,906 DEBUG    RFM2Pi     10 From Node : 10
+2020-02-21 16:02:41,906 DEBUG    RFM2Pi     10    Values : [623, 482, 0, 0, 232.6, 121940, 66971, 0, 0]
+2020-02-21 16:02:41,907 DEBUG    RFM2Pi     10      RSSI : -53
+2020-02-21 16:02:41,907 DEBUG    RFM2Pi     10 Sent to channel(start)' : ToEmonCMS
+2020-02-21 16:02:41,908 DEBUG    RFM2Pi     10 Sent to channel(end)' : ToEmonCMS
+2020-02-21 16:02:42,019 DEBUG    MQTT       Publishing: emon/emontx1/power1 623
+2020-02-21 16:02:42,020 DEBUG    MQTT       Publishing: emon/emontx1/power2 482
+2020-02-21 16:02:42,021 DEBUG    MQTT       Publishing: emon/emontx1/power3 0
+2020-02-21 16:02:42,022 DEBUG    MQTT       Publishing: emon/emontx1/power4 0
+2020-02-21 16:02:42,023 DEBUG    MQTT       Publishing: emon/emontx1/vrms 232.6
+2020-02-21 16:02:42,023 DEBUG    MQTT       Publishing: emon/emontx1/e1 121940
+2020-02-21 16:02:42,024 DEBUG    MQTT       Publishing: emon/emontx1/e2 66971
+2020-02-21 16:02:42,025 DEBUG    MQTT       Publishing: emon/emontx1/e3 0
+2020-02-21 16:02:42,026 DEBUG    MQTT       Publishing: emon/emontx1/e4 0
+2020-02-21 16:02:42,028 DEBUG    MQTT       Publishing: emon/emontx1/rssi -53
+2020-02-21 16:02:42,029 INFO     MQTT       Publishing: emonhub/rx/10/values 623,482,0,0,232.6,121940,66971,0,0,-53
 </pre>
-</div>
 
-### {% linkable_title 2. Emoncms MQTT Input Service %}
+**emonHub is not running**<br>
+Check the result of `Emoncms > Setup > Emonhub > View Log`, make sure that the log level is set to ERROR in `Edit Config`. 
 
-- Is Emoncms MQTT Input Service running?
-  - `$ sudo service mqtt_input status`
-  - `$ sudo service mqtt_input restart`
-- Check Emoncms logfile
-  - Local Emoncms > Setup > Administration > Emoncms log
-  - `$ tail /var/log/emoncms.log`
+A potential causes of errors could be invalid emonhub.conf configuration: double check emonhub.conf and consider restoring from default config [emonhub.conf](https://github.com/openenergymonitor/emonhub/blob/emon-pi/conf/emonpi.default.emonhub.conf).
 
-### {% linkable_title 3. Incorrect system time %}
+**Emoncms MQTT Service is not running**<br>
+Check the emoncms logfile for any errors: `Emoncms > Setup > Admin > Emoncms log` or via SSH:
 
-It's important that the emonPi has the correct time. If required timezone should be set in Emoncms Account page and on the Raspberry Pi (see below). The emonPi requires an active Internet connection at bootup to obtain current time from NTP. After correct time has been obtained the soft-ntp function *should* be able to keep valid time even if Internet connection is lost. See [NTP Time Fix](https://github.com/emoncms/emoncms/blob/master/docs/RaspberryPi/read-only.md#ntp-time-fix) for more info. If using an emonPi for a long period with no web connection it's recommended to [add a hardware Real-Time-Clock (RTC)](https://wiki.openenergymonitor.org/index.php/EmonPi#Adding_a_Real_Time_Clock_.28RTC.29).
+<pre class="code">tail /var/log/emoncms/emoncms.log</pre>
+
+A potential cause could be an issue with required services such as mysql, redis or mosquitto. Try rebooting.
+
+Make a note of any error's shown in the logs, create a post on our [community forums](https://community.openenergymonitor.org/) to ask for further assistance, make sure to include in your post any errors seen in the logs and the content of the 'Server Information' section on the Admin page (click on copy as markdown or copy to clipboard and paste the result in your post).
 
 
-- Check time on emonPi LCD display, press LCD push-button until `uptime` page is displayed
-  - `$ date`
+
+---
+
+### {% linkable_title Disk space %}
+
+Check available disk space in the data partition by looking at the table at the bottom of: **Emoncms > Setup > Admin**.
+
+![emoncms_diskuse.png](/images/setup/emoncms_diskuse.png)
+
+Make a note of any full partitions, create a post on our [community forums](https://community.openenergymonitor.org/) to ask for further assistance, make sure to include in your post the 'Server Information' section on the Admin page (click on copy as markdown or copy to clipboard and paste the result in your post).
+
+---
+
+### {% linkable_title Incorrect system time %}
+
+It's important that the emonPi/emonBase has the correct time (The time should reflect the UTC time). The emonPi requires an active Internet connection at boot to obtain the time from a NTP server. If using an emonPi for a long period with no web connection it's recommended to [add a hardware Real-Time-Clock (RTC)](https://wiki.openenergymonitor.org/index.php/EmonPi#Adding_a_Real_Time_Clock_.28RTC.29).
+
+
+To check the time on the emonPi LCD display, press LCD push-button until `uptime` page is displayed.
+
+To check the time via SSH type: `$ date`
 
 #### To Force NTP time update:
 
-   - Check emonPi has a connection to the internet
+   - Check that the emonPi/emonBase has a connection to the internet
    - Try a reboot
-   - If time is still incorrect, then force manual NTP update:
-   - [Connect Via SSH](/technical/credentials/#ssh)
-   - Make file-system RW: `$rpi-rw`
-   - `$ sudo service ntp stop`
-   - `$ sudo service ntp start`
-   - `$ rpi-ro`
+   - If time is still incorrect, force a manual NTP update:
+   - [Connect Via SSH](/technical/credentials/#ssh) and restart ntp:
+   
+<pre class="code">
+sudo service ntp stop
+sudo service ntp start
+</pre>
+
    -  Check time by typing: `$ date`
 
-#### To set timezone:
+#### Setting the Emoncms Timezone:
 
-- In Emoncms: `Local Emoncms > Setup > My Account > Timezone`
+The emonPi/emonBase time shown via SSH is intended to be UTC time. Timezone's are taken into account seperately in Emoncms and via the internet browser. To set a user account timezone in emoncms; navigate to: `Emoncms > Setup > My Account > Timezone` and adjust as required.
 
-- On Raspberry Pi (Linux system time):
+---
 
-   - Run `$ rpi-rw`, then run `$ sudo raspi-config`, select `Localisation Options` and set local timezone.  Then run `$ rpi-ro`.
-
-   - Check time is correct by running `$ date`
-   - If time is STILL not correct try:
-   - Check emonpi has an active Internet connection `$ wget google.com` should connect successfully
-   - `$ sudo service ntp restart`
-   - Check time with `$ date`
-
-### {% linkable_title 4. Disk space %}
-
-Check available disk space in the data partition (`/home/pi/data`) by looking at the graph at the bottom of:
-`Local Emoncms > Setup > Administration`
-
-<br>
-
-***
-
-## {% linkable_title Emoncms Local Password Reset %}
+### {% linkable_title Emoncms Local Password Reset %}
 
 If the password for the local Emoncms account has been forgotten this can be reset by [connecting in via ssh](/technical/credentials/#ssh) then running:
 
-`$ php ~/usefulscripts/resetpassword.php`
+<pre class="code">$ php /opt/emoncms/modules/usefulscripts/resetpassword.php</pre>
 
 It then asks for the userid (default:1) and for a new password or option to auto generate. Example:
 
-```
+<pre class="code">
 =======================================
 EMONCMS PASSWORD RESET
 =======================================
@@ -205,24 +239,25 @@ Select userid, or press enter for default:
 Using default user 1
 Enter new password, or press enter to auto generate:
 Auto generated password: 9f7599c8da
-```
+</pre>
 
 If the account username has also been forgotten this can be retrieved by connecting via ssh and looking at the MYSQL database entry :
 
 When prompted enter the [emonPi default MYSQL root password.](https://guide.openenergymonitor.org/technical/credentials/#mysql)
 
-```
-$ mysql -uroot -p
-USE emoncms;
+<pre class="code">
+$ mysql -u root -p emoncms
 SELECT * FROM users;
 exit
-```
+</pre>
 
-## {% linkable_title Factory Reset %}
+---
+
+### {% linkable_title Factory Reset %}
 
 **Caution: this will delete ALL Emoncms data**
 
-```shell
+<pre class="code">
 $ sudo su
-$ /home/pi/emonpi/factoryreset
-```
+$ /opt/openenergymonitor/emonpi/factoryreset
+</pre>

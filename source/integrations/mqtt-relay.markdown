@@ -10,7 +10,7 @@ footer: true
 published: true
 ---
 
-> **Multi-purpose Wifi connected relay control board. Applications include: remote heating an A/C systems control via nodeRED, openHAB and Android Tasker etc. **
+Multi-purpose Wifi connected relay control board. Applications include: remote heating an A/C systems control via nodeRED, openHAB and Android Tasker etc.
 
 
 <a class="btn pull-right" href="https://shop.openenergymonitor.com/wifi-mqtt-relay-thermostat">View in Shop &rarr; </a>

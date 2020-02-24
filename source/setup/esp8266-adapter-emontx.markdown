@@ -10,7 +10,7 @@ footer: true
 published: true
 ---
 
-This is a guide on how to use the Adafruit ESP8266 Huzzah WiFi module with an emonTx v3 to make a simple WiFi enabled energy monitor that can post directly to [emoncms.org](https://emoncms.org) or any other Emoncms installation local or remote.
+This is a guide on how to use the Adafruit ESP8266 Huzzah WiFi module with an [emonTx v3](/technical/emontx) to make a simple WiFi enabled energy monitor that can post directly to [emoncms.org](https://emoncms.org) or any other Emoncms installation local or remote.
 
 For applications that only require basic posting of data from one emonTx to a remote server such as Emoncms.org an emonTx with this WiFi module provides a lower cost route than an emonBase or emonPi base-station installation.
 
@@ -24,14 +24,12 @@ An emonBase or emonPi is recommended for more complex applications where local s
 
 ### To set up an emonTx v3 + ESP8266 Wifi energy monitor you will need:
 
-- **emonTx V3:** + CT, AC-AC adapter, temperature and pulse sensors as required by your application.
+- **[emonTx V3](/technical/emontx):** + CT, AC-AC adapter, temperature and pulse sensors as required by your application.<br>
+*To use ESP8266 with emonTx three-phase firmware, the EmonESP baud rate needs to be set to 9600*
 
-  - **Note:** [emonTx V3 firmware V2.5+](https://github.com/openenergymonitor/emontx3/tree/master/firmware) is required to support EmonESP.
-  - **Note:** To use ESP8266 with emonTx three-phase firmware EmonESP baud rate for EmonESP needs to be set to 9600 
+- **5V USB DC Power supply for the emonTx:** The AC-AC Voltage adapter that can power the emonTx in normal operation does not deliver enough power to run the ESP8266 Huzzah WiFi module and so an additional 5V USB Power supply is required. Battery opperation is not possible when using ESP8266.
 
-- **5V USB DC Power supply for the emonTx:** The AC-AC Voltage adapter that can power the emonTx in normal operation does not deliver enough power to run the ESP8266 Huzzah WiFi module and so an additional 5V USB Power supply is required Battery opperation is not possible when using ESP8266.
-
-- **ESP8266 Huzzah WiFi module with a 6 way stackable header running [EmonESP](https://github.com/openenergymonitor/emonesp):** we offer a pre-programmed ESP8266 Huzzah WiFi module in our [shop here](https://shop.openenergymonitor.com/esp8266-wifi-adapter-for-emontx/), ready to go out of the box with the header already installed and running our open source EmonESP firmware (Alternatively for a DIY approach see the original forum post [here](https://community.openenergymonitor.org/t/using-the-emontx-v3-with-the-esp8266-huzzah-wifi-module/795).
+- **ESP8266 Huzzah WiFi module with a 6 way stackable header running [EmonESP](https://github.com/openenergymonitor/emonesp):** we offer a pre-programmed ESP8266 Huzzah WiFi module in our [shop](https://shop.openenergymonitor.com/esp8266-wifi-adapter-for-emontx/), ready to go out of the box with the header already installed and running our open source EmonESP firmware (Alternatively for a DIY approach see the original forum post [here](https://community.openenergymonitor.org/t/using-the-emontx-v3-with-the-esp8266-huzzah-wifi-module/795).
 
 ### ESP8266 Huzzah WIFI module with a 6 way stackable header:
 
@@ -67,7 +65,7 @@ An emonBase or emonPi is recommended for more complex applications where local s
 
 ![espinputs.png](/images/setup/esp8266adapter/espinputs.png)
 
-10) Configure Emoncms.org as normal, see section on “Using Emoncms” in the [emoncms documentation](https://github.com/emoncms/emoncms/blob/master/readme.md).
+10) Configure Emoncms.org as normal, see emoncms documentation section of guide.
 
 ### EmonESP
 
@@ -84,6 +82,6 @@ If you have an emonBase or emonPi on your local network the default settings are
 **password:** emonpimqtt2016<br>
 **base topic:** emon/emontx<br>
 
-*Note: on some networks that don't support hostname lookup you will need to use the IP address of the emonPi as the hostname. Also sone networks report local hostname with the .local extension e.g. http://emonpi.local*
+*Note: on some networks that don't support hostname lookup you will need to use the IP address of the emonPi as the hostname. Also some networks report local hostname with the .local or .lan extension e.g. http://emonpi.local*
 
 See [emonPi technical overview](/technical) and [MQTT](/technical/mqtt) User Guide pages for more info.

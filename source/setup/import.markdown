@@ -10,10 +10,6 @@ footer: true
 published: true
 ---
 
-### [&laquo; Previous step: Add Temperature Nodes](/setup/emonth/)
-
-***
-
 The [Emoncms backup module](https://github.com/emoncms/backup) is used to backup and restore an emoncms installation and migrate from an older emonPi / emonBase image to the latest image.
 
 There are two methods available to do this:
@@ -44,9 +40,11 @@ After a system failure the SD card may become corrupted and will not mount when 
 2\. SSH into the emonPi/emonbase<br>
 3\. Run the following commands (without part in brackets) to attempt to fix the card:<br>
 
-    sudo fsck.ext4 /dev/sda2 (root OS partition)
-    sudo fsck.ext2 /dev/sda3 (data partition)
-    
+<pre style="font-family:monospace; font-size:14px; background-color: #eee; padding: 20px;">
+sudo fsck.ext4 /dev/sda2 (root OS partition)
+sudo fsck.ext2 /dev/sda3 (data partition)
+</pre>
+
 4\. Continue as above, Navigate to Setup > Backup and click `Import from USB drive` to start import process
 
 ***
@@ -356,14 +354,3 @@ If the Backup module is not visible in the Local Emoncms menu then the emonPi / 
 <p class="note">
 To check what software stack (emonSD pre-built SD card) version an emonPi is running see instructions on emonPi <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log">emonSD download repository and changelog</a>
 </p>
-
-***
-
-### Next step: Applications:
-
-
-- #### [Home Energy Monitor](/applications/home-energy/)
-
-- #### [Solar PV Monitor](/applications/solar-pv/)
-
-- #### [Integrations](/integrations) e.g openHAB, nodeRED etc

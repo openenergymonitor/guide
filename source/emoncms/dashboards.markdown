@@ -1,8 +1,8 @@
 ---
 layout: page
-title: 5. Dashboards
-description: Setup Emoncms dashboards
-date: '2015-03-08 21:36'
+title: Dashboard Builder
+description: Dashboard Builder
+date: '2020-02-22 08:14'
 sidebar: true
 comments: false
 sharing: true
@@ -10,55 +10,18 @@ footer: true
 published: true
 ---
 
-1. Application specific dashboard Apps
-2. Emoncms Android App
-3. Custom using dashboard Builder drag'n-drop editor
+The Emoncms dashboard module can be used to build custom dashboards using a drag-and-drop approach to assembling different widgets, graphs, containers and text.
 
-## 1. Application Specific Dashboards
-
-
-#### [My Electric](/applications/home-energy)
-
-![My Electric](/images/applications/home-energy/myelectric_webapp.png)
-
-
-#### [My Solar PV](/applications/solar-pv)
-
-![My solar PV](/images/applications/solar-pv//my-solarpv1.png)
-
-### Application Specific Dashboards Video Guide
-
-
-<div class='videoWrapper'>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aYt7-vK0JsI" frameborder="0" allowfullscreen></iframe>
-</div>
-
-
-### [2. Emoncms Android App](https://play.google.com/store/apps/details?id=org.emoncms.myapps)
-
-{% img https://github.com/emoncms/AndroidApp/raw/master/app.png 250 %}
-
-<a href="https://play.google.com/store/apps/details?id=org.emoncms.myapps&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" rel="Get it on Google Play">![Get it on Google Play](https://emoncms.org/Modules/site/en-play-badge.png)</a>
-
-### [3. Emoncms iOS App](https://itunes.apple.com/gb/app/emoncms/id1169483587?mt=8)
-
-![ios](https://github.com/emoncms/emoncms-ios/raw/master/images/screen2.png)
-
-<a href="https://itunes.apple.com/gb/app/emoncms/id1169483587?mt=8" rel="ios">![Get it on Google Play](https://emoncms.org/Modules/site/appstore.png)</a>
-
-
-## 4. Dashboard Editor
-
-Custom dashboards can be created by drag and dropping widgets and graphs onto a canvas. See [Emoncms Showcase forum](https://community.openenergymonitor.org/c/emoncms/showcase) for an example of what's possible.
-
-### Dashboard Editor Video Guide
+Dashboard Editor Video Guide:
 
 <div class='videoWrapper'>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/eqN9rc9VnqI" frameborder="0" allowfullscreen></iframe>
 </div>
 
-Community created video tutorial for creating a Emoncms dashboard with a custom background (advanced):
+Community created video tutorial for creating a Emoncms dashboard with a custom background:
 
 <div class='videoWrapper'>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/N4xHyiE6mc0" frameborder="0" allowfullscreen></iframe>
 </div>
+
+See [Emoncms Showcase forum](https://community.openenergymonitor.org/c/emoncms/showcase) for further examples of what is possible.

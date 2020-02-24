@@ -12,7 +12,7 @@ published: true
 
 Emoncms is an open-source web application developed as part of this project, for processing, logging and visualising energy, temperature and other environmental data. 
 
-Emoncms receives data from OpenEnergyMonitor monitoring hardware is installed locally on the emonPi/emonBase. A similar (but not identical) version is also publicly available on emoncms.org. Either one may be used, or both may be used in parallel.
+Emoncms receives data from OpenEnergyMonitor monitoring hardware and is installed locally on the emonPi/emonBase. A similar (but not identical) version is also publicly available on emoncms.org. Either one may be used, or both may be used in parallel.
 
 The following guide introduces the core concepts behind emoncms and provides links to guides to learn more.
 
