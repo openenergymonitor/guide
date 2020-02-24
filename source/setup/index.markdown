@@ -12,11 +12,11 @@ published: true
 
 The OpenEnergyMonitor system  has the capability to monitor electrical energy use / generation, temperature and humidity.
 
-The system is made up of five main units. These can be assembled and configured to work for a variety of [applications](/applications). The system is fully open-source, both hardware and software. All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms:
+The system is made up of five main units. These can be assembled and configured to work for a variety of [applications](/applications). The system is fully open-source, both hardware and software. All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms.
 
 ![image](/images/setup/oemfpsystemdiagram.png)
 
-<img src="/images/setup/emonpi-min.png" style="float:left; width:50px; margin-right:10px"><div style="min-height:50px"><b><a href="/technical/emonpi">emonPi:</a></b> All in one 2 circuit energy monitor and base-station which collects data, hosts the emonCMS software and can also receive data from other sensor nodes.</div><br>
+<img src="/images/setup/emonpi-min.png" style="float:left; width:50px; margin-right:10px"><div style="min-height:50px"><b><a href="/technical/emonpi">emonPi:</a></b> An all in one 2 circuit energy monitor and base-station which collects data, hosts the emonCMS software and can also receive data from other sensor nodes.</div><br>
 
 <img src="/images/setup/emontx-min.png" style="float:left; width:50px; margin-right:10px"><div style="min-height:50px"><b><a href="/technical/emontx">emonTx:</a></b> A 4 circuit energy monitoring node. Transmits data via 433Mhz radio to an emonBase or emonPi base-station.
 </div><br>
@@ -27,7 +27,7 @@ The system is made up of five main units. These can be assembled and configured 
 <img src="/images/setup/emonbase-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/setup/install-emontx">emonBase:</a></b> A simple base-station that receives data sent from wireless sensor nodes. Hosts the emonCMS software for full local data logging and visualisation capability.
 <br><br>
 
-<img src="/images/setup/emoncms-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/emoncms/coreconcepts">Emoncms:</a></b> An open-source web application, for processing, logging and visualising energy, temperature and other data. Run's locally on the emonPi and emonBase or also available remotely via emoncms.org.
+<img src="/images/setup/emoncms-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/emoncms/coreconcepts">Emoncms:</a></b> An open-source web application, for processing, logging and visualising energy, temperature and other data. Runs locally on the emonPi and emonBase, also available remotely via emoncms.org.
 <br><br>
 
 <div style="height:1px; background-color:#eee; margin-bottom:20px"></div>
@@ -35,7 +35,7 @@ The system is made up of five main units. These can be assembled and configured 
 <img src="/images/setup/ctsensor.png" style="float:left; width:50px; margin-right:10px"><b>CT sensor:</b> Current transformer. Used for measuring AC current. We use a non-invasive clip-on sensor for ease of installation and safety.
 <br><br>
 
-<img src="/images/setup/voltagesensor.png" style="float:left; width:50px; margin-right:10px"><b>ACAC Voltage sensor:</b> An AC-AC Voltage adapter, used for measuring AC Voltage safely, used in conjunction with the AC current measurement to calculate power consumption accurately.
+<img src="/images/setup/voltagesensor.png" style="float:left; width:50px; margin-right:10px"><b>ACAC Voltage sensor:</b> An AC-AC Voltage adapter, used for measuring AC Voltage safely. Used in conjunction with the AC current measurement to calculate power consumption accurately.
 <br><br>
 <br>
 
@@ -45,7 +45,7 @@ The system is made up of five main units. These can be assembled and configured 
 ---
 
 **emonPi**<br>
-All in one energy monitor. 2x CT sensor inputs, 1x ACAC Voltage sensor input, Temperature and pulse input, LCD Display, Integrated RaspberryPi with emonCMS for local data logging. Wifi or Ethernet connectivity. Designed for single phase home solar and consumption monitoring.
+All in one energy monitor. 2x CT sensor inputs, 1x ACAC Voltage sensor input, temperature and pulse input, LCD Display. Integrated RaspberryPi with emonCMS for local data logging. Wifi or Ethernet connectivity. Designed for single phase home solar and monitoring energy consumption.
 
 ![image](/images/setup/emonpi.png)
 
@@ -54,7 +54,7 @@ All in one energy monitor. 2x CT sensor inputs, 1x ACAC Voltage sensor input, Te
 ---
 
 **emonTx + emonBase**<br>
-Seperate sensor node and base station linked by 433Mhz radio, 4x CT sensor inputs, 1x ACAC Voltage sensor input, Temperature and pulse input. RaspberryPi Base station with emonCMS for local data logging. Wifi or Ethernet connectivity. Applications: Home solar, consumption, multiple circuits, 3-phase.
+Separate sensor node and base station linked by 433Mhz radio, 4x CT sensor inputs, 1x ACAC Voltage sensor input, temperature and pulse input. RaspberryPi Base station with emonCMS for local data logging. Wifi or Ethernet connectivity. Applications: Home solar, consumption, multiple circuits, 3-phase.
 
 ![image](/images/setup/emontxandbase.png)
 
@@ -65,7 +65,7 @@ Seperate sensor node and base station linked by 433Mhz radio, 4x CT sensor input
 ---
 
 **emonTx + ESP8266**<br>
-Using and ESP8266 Adapter the emonTx can send data directly to a remote emonCMS server such as emoncms.org. It is also possible to use an ESP8266 adapter with an emonTx to send data to an emonPi or emonBase basestation to improve reliability where 433Mhz is not sufficient.
+Using and ESP8266 Adapter the emonTx can send data directly to a remote emonCMS server such as emoncms.org. It is also possible to use an ESP8266 adapter with an emonTx to send data to an emonPi or emonBase base station to improve reliability where 433Mhz is not sufficient.
 
 ![image](/images/setup/emontx.png)
 
