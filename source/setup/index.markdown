@@ -16,15 +16,24 @@ The system is made up of five main units. These can be assembled and configured 
 
 ![image](/images/setup/oemfpsystemdiagram.png)
 
+<img src="/images/setup/ctsensor.png" style="float:left; width:50px; margin-right:10px"><b>CT sensor:</b> Current transformer. Used for measuring AC current. We use a non-invasive clip-on sensor for ease of installation and safety.
+<br><br>
+
+<img src="/images/setup/voltagesensor.png" style="float:left; width:50px; margin-right:10px"><b>ACAC Voltage sensor:</b> An AC-AC Voltage adapter, used for measuring AC Voltage safely, used in conjunction with the AC current measurement to calculate power consumption accurately.
+<br><br>
+
 ### {% linkable_title Example configurations %}
 
-**Common terms**
+<!--
+<img src="/images/setup/ctsensor.png" style="float:left; width:50px; margin-right:10px"><b>CT sensor:</b> Current transformer. Used for measuring AC current. We use a non-invasive clip-on sensor for ease of installation and safety.
+<br><br>
 
-- **CT sensor:** Current transformer. Used for measuring AC current. We use a non-invasive clip-on sensor for ease of installation and safety.
-- **ACAC Voltage sensor:** An AC-AC Voltage adapter, used for measuring AC Voltage safely, used in conjunction with the AC current measurement to calculate power consumption accurately.
+<img src="/images/setup/voltagesensor.png" style="float:left; width:50px; margin-right:10px"><b>ACAC Voltage sensor:</b> An AC-AC Voltage adapter, used for measuring AC Voltage safely, used in conjunction with the AC current measurement to calculate power consumption accurately.
+<br><br>
+
 - **RaspberryPi:** A small but powerful single-board computer running Linux used for local data logging and visualisation via a web interface.
 - **Emoncms:** An open-source web application, for processing, logging and visualising energy, temperature and other data.
-
+-->
 ---
 
 **emonPi**<br>
