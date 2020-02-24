@@ -3,89 +3,83 @@
     <h2 class="navigationTitle">Contents</h2>
     <ul class='divided sidebar-menu'>
       <li style="padding-top: 10px;">
-          <b>Setup</b>
+        <b>Hardware Setup</b>
         <ul>
-          <li>{% active_link /setup/ 1. System Overview %}</li>
-          <li>{% active_link /setup/connect/ 2. Connect %}</li>
-          <li>{% active_link /setup/install/ 3. Install %}</li>
-          <li>{% active_link /setup/local/ 4. Log Locally %}</li>
-          <li>{% active_link /setup/remote/ 5. Log Remotely %}</li>
-          <li>{% active_link /setup/dashboards/ 6. Dashboards %}</li>
-          <li>{% active_link /setup/energy-node/ 7. Energy Sensing Node(s) %}</li>
-          <ul style="margin-bottom: 0px;;">
-            <li>{% active_link /setup/emontx/ emonTx %}</li>
-          </ul>
-          <li>{% active_link /setup/emonth/ 8. Temperature Node(s) %}</li>
-          <li>{% active_link /setup/optical-pulse-sensor/ 9. Add Optical Pulse Sensor %}</li>
-          <li>{% active_link /setup/import/ 10. Import / Backup %}</li>
-          <li>{% active_link /setup/north-america/ 11. Use in North America %}</li>
-          <li>{% active_link /setup/troubleshooting/ 12. Troubleshooting %}</li>
-          <li>{% active_link /setup/remote-access/ 13. Remote Access %}</li>
-          <li>{% active_link /setup/update/ 14. Update & Upgrade %}</li>
-
+          <li>{% active_link /setup/ System Overview %}</li>
+          <li>{% active_link /setup/install/ Install emonPi %}</li>
+          <li>{% active_link /setup/install-emontx/ Install emonTx & emonBase %}</li>
+          <li>{% active_link /setup/install-adapter-emontx/ Install emonTx & ESP8266 %}</li>
+          <li>{% active_link /setup/emontx/ + Add Additional emonTx %}</li>
+          <li>{% active_link /setup/emonth/ + Add Temperature Nodes %}</li>
+          <li>{% active_link /setup/optical-pulse-sensor/ + Add Optical Pulse Sensor %}</li>
+          <li>{% active_link /setup/north-america/ Use in North America %}</li>
         </ul>
-        <li>
-          <b>Emoncms</b>
-          <ul>
+      </li><li>
+        <b>EV Charging & Control</b>
+        <ul>
+          <li>{% active_link /integrations/ev-charging/ Electric Vehicle Charging %}</li>
+          <li>{% active_link /integrations/evse-setup EVSE User Guide Setup %}</li>
+          <li>{% active_link /integrations/mqtt-relay/ Control Relay %}</li>
+          <li>{% active_link /integrations/demandshaper/ Emoncms DemandShaper %}</li>          
+        </ul>
+      </li><li>
+        <b>Software Setup</b>
+        <ul>
+          <li>{% active_link /setup/connect/ 1. Connect %}</li>
+          <li>{% active_link /setup/local/ 2. Log Locally %}</li>
+          <li>{% active_link /setup/remote/ 3. Log Remotely %}</li>
+          <li>{% active_link /setup/import/ 4. Import / Backup %}</li>
+          <li>{% active_link /setup/remote-access/ 5. Remote Access %}</li>
+          <li>{% active_link /setup/update/ 6. Update & Upgrade %}</li>                
+          <li>{% active_link /technical/credentials/ 7. Service Credentials %}</li>
+          <li>{% active_link /technical/mqtt/ 8. MQTT %}</li>
+          <li>{% active_link /setup/troubleshooting/ 9. Troubleshooting %}</li>
+        </ul>
+      </li><li>
+        <b>Emoncms</b>
+        <ul>
           <li>{% active_link /emoncms/coreconcepts/ Core Concepts %}</li>
           <li>{% active_link /emoncms/postingdata/ Posting Data %}</li>
           <li>{% active_link /emoncms/graphs/ View Graphs %}</li>
-          <li>{% active_link /emoncms/daily-kwh/ Daily kWh %}</li>
-          <li>{% active_link /emoncms/daily-averages/ Daily Averages %}</li>
+          <li>{% active_link /emoncms/dashboards/ Dashboard builder %}</li>
+          <li>{% active_link /emoncms/apps/ Application dashboards %}</li>
+          <li>{% active_link /emoncms/daily-kwh/ Calculating Daily kWh %}</li>
+          <li>{% active_link /emoncms/daily-averages/ Calculating Averages %}</li>
           <li>{% active_link /emoncms/export-csv/ Exporting CSV %}</li>
           <li>{% active_link /emoncms/histograms/ Histograms %}</li>
           <li>{% active_link /emoncms/postprocess/ Post Process %}</li>
-          <li>{% active_link /technical/api/ Emoncms API %}</li>
+          <li>{% active_link /applications/octopusagile/ Octopus Agile %}</li>
         </ul>
-
-
-      </li>
-
-      <li>
-         <b>Applications</b>
+      </li><li>
+        <b>Applications</b>
         <ul>
          <li>{% active_link /applications/home-energy/ Home Energy %}</li>
          <li>{% active_link /applications/solar-pv/ Solar PV %}</li>
          <li>{% active_link http://heatpumpmonitor.org/ Heatpump <i class="icon-external-link"></i> %}</li>
-         <li>{% active_link /applications/octopusagile/ Octopus Agile %}</li>
         </ul>
-      </li>
-
-      <li>
-         <b>Integrations</b>
+      </li><li>
+        <b>Integrations</b>
         <ul>
-         <li>{% active_link /integrations/ev-charging/ Electric Vehicle Charging %}</li>
-         <ul style="margin-bottom: 0px;;">
-            <li>{% active_link /integrations/evse-setup User Guide Setup %}</li>
-          </ul>
          <li>{% active_link /integrations/nodered/ Node-RED %}</li>
          <li>{% active_link /integrations/openhab/ OpenHAB %}</li>
-         <li>{% active_link /integrations/mqtt-relay/ Control Relay %}</li>
          <li>{% active_link /integrations/lightwaverf/ LightWave RF Control %}</li>
-         <li>{% active_link /integrations/demandshaper/ Emoncms DemandShaper %}</li>
         </ul>
-
-      <li>
+      </li><li>
         <b>Technical</b>
-       <ul>
-        <li>{% active_link /technical/ Overview %}</li>
-        <li>{% active_link /technical/specifications/ Specifications %}</li>
-        <li>{% active_link /technical/credentials/ Service Credentials %}</li>
-        <li>{% active_link /technical/mqtt/ MQTT %}</li>
-        <li>{% active_link /technical/compiling/ Firmware Modification %}</li>
-        <li>{% active_link /technical/resources/ Resources %}</li>
-       </ul>
-      </li>
-
-      <li>
-     <b>Support</b>
+        <ul>
+          <li>{% active_link /technical/emonpi/ emonPi %}</li>
+          <li>{% active_link /technical/emontx/ emonTx %}</li>
+          <li>{% active_link /technical/compiling/ Firmware Modification %}</li>
+          <li>{% active_link /technical/resources/ Resources %}</li>
+        </ul>
+      </li><li>
+        <b>Support</b>
         <ul>
          <li>{% active_link https://community.openenergymonitor.org/latest Community Forum <i class="icon-external-link"></i> %}
          <li>{% active_link /help/ Contact %}</li>
         </ul>
       </li>
-
-
+    </ul>
     </div>
 <gcse:search></gcse:search>
 </section>
