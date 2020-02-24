@@ -24,8 +24,13 @@ The system is made up of five main units. These can be assembled and configured 
 <img src="/images/setup/emonth-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/setup/emonth">emonTh:</a></b> A wireless room based temperature & humidity monitoring node. Transmits data via 433Mhz radio to an emonBase or emonPi base-station.
 <br><br>
 
-<img src="/images/setup/emonbase-min.png" style="float:left; width:50px; margin-right:10px"><b>emonBase:</b> A simple base-station that receives data sent from wireless sensor nodes. Hosts the emonCMS software for full local data logging and visualisation capability.
+<img src="/images/setup/emonbase-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/setup/install-emontx">emonBase:</a></b> A simple base-station that receives data sent from wireless sensor nodes. Hosts the emonCMS software for full local data logging and visualisation capability.
 <br><br>
+
+<img src="/images/setup/emoncms-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/emoncms/coreconcepts">Emoncms:</a></b> An open-source web application, for processing, logging and visualising energy, temperature and other data. Run's locally on the emonPi and emonBase or also available remotely via emoncms.org.
+<br><br>
+
+<div style="height:1px; background-color:#eee; margin-bottom:20px"></div>
 
 <img src="/images/setup/ctsensor.png" style="float:left; width:50px; margin-right:10px"><b>CT sensor:</b> Current transformer. Used for measuring AC current. We use a non-invasive clip-on sensor for ease of installation and safety.
 <br><br>
@@ -33,8 +38,7 @@ The system is made up of five main units. These can be assembled and configured 
 <img src="/images/setup/voltagesensor.png" style="float:left; width:50px; margin-right:10px"><b>ACAC Voltage sensor:</b> An AC-AC Voltage adapter, used for measuring AC Voltage safely, used in conjunction with the AC current measurement to calculate power consumption accurately.
 <br><br>
 
-<img src="/images/setup/emoncms-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/emoncms/coreconcepts">Emoncms:</a></b> An open-source web application, for processing, logging and visualising energy, temperature and other data. Run's locally on the emonPi and emonBase or also available remotely via emoncms.org.
-<br><br>
+
 
 ### {% linkable_title Example configurations %}
 
