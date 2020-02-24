@@ -37,7 +37,7 @@ The system is made up of five main units. These can be assembled and configured 
 
 <img src="/images/setup/voltagesensor.png" style="float:left; width:50px; margin-right:10px"><b>ACAC Voltage sensor:</b> An AC-AC Voltage adapter, used for measuring AC Voltage safely, used in conjunction with the AC current measurement to calculate power consumption accurately.
 <br><br>
-
+<br>
 
 
 ### {% linkable_title Example configurations %}
