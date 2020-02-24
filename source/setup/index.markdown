@@ -16,10 +16,9 @@ The system is made up of five main units. These can be assembled and configured 
 
 ![image](/images/setup/oemfpsystemdiagram.png)
 
-<img src="/images/setup/emonpi-min.png" style="float:left; width:50px; margin-right:10px"><div style="min-height:50px"><b><a href="/technical/emonpi">emonPi:</a></b> An all in one 2 circuit energy monitor and base-station which collects data, hosts the emonCMS software and can also receive data from other sensor nodes.</div><br>
+<img src="/images/setup/emonpi-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/technical/emonpi">emonPi:</a></b> An all in one 2 circuit energy monitor and base-station which collects data, hosts the emonCMS software and can also receive data from other sensor nodes.<br><br>
 
-<img src="/images/setup/emontx-min.png" style="float:left; width:50px; margin-right:10px"><div style="min-height:50px"><b><a href="/technical/emontx">emonTx:</a></b> A 4 circuit energy monitoring node. Transmits data via 433Mhz radio to an emonBase or emonPi base-station.
-</div><br>
+<img src="/images/setup/emontx-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/technical/emontx">emonTx:</a></b> A 4 circuit energy monitoring node. Transmits data via 433Mhz radio to an emonBase or emonPi base-station.<br><br>
 
 <img src="/images/setup/emonth-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/setup/emonth">emonTh:</a></b> A wireless room based temperature & humidity monitoring node. Transmits data via 433Mhz radio to an emonBase or emonPi base-station.
 <br><br>
@@ -49,7 +48,7 @@ All in one energy monitor. 2x CT sensor inputs, 1x ACAC Voltage sensor input, te
 
 ![image](/images/setup/emonpi.png)
 
-**[Installation Guide](/setup/install)** | **[emonPi Technical](/technical/emonpi)** | **[View in Shop](https://shop.openenergymonitor.com/emonpi-3/)**
+**[Installation Guide](/setup/install)** \| **[emonPi Technical](/technical/emonpi)** \| **[View in Shop](https://shop.openenergymonitor.com/emonpi-3/)**
 
 ---
 
@@ -60,7 +59,7 @@ Separate sensor node and base station linked by 433Mhz radio, 4x CT sensor input
 
 *New 2019: emonTx firmware supports higher accuracy continuous monitoring.*
 
-**[Installation Guide](/setup/install-emontx)** | **[emonTx Technical](/technical/emontx)**<br> **View in Shop: [emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter/) & [emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/)**
+**[Installation Guide](/setup/install-emontx)** \| **[emonTx Technical](/technical/emontx)**<br> **View in Shop: [emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter/) & [emonBase](https://shop.openenergymonitor.com/emonbase-web-connected-base-station/)**
 
 ---
 
@@ -71,7 +70,7 @@ Using and ESP8266 Adapter the emonTx can send data directly to a remote emonCMS 
 
 *Note: Without local data logging this approach can incur additional service costs via the remote server.*
 
-**[Installation Guide](/setup/esp8266-adapter-emontx/)** | **[emonTx Technical](/technical/emontx)**<br>**View in Shop: [emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter/) & [ESP8266 WiFi Adapter](https://shop.openenergymonitor.com/esp8266-wifi-adapter-for-emontx/)**
+**[Installation Guide](/setup/esp8266-adapter-emontx/)** \| **[emonTx Technical](/technical/emontx)**<br>**View in Shop: [emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter/) & [ESP8266 WiFi Adapter](https://shop.openenergymonitor.com/esp8266-wifi-adapter-for-emontx/)**
 
 ---
 
@@ -82,7 +81,7 @@ It also possible to add one or more emonTx units to an emonPi to gain additional
 
 *Note: sensor node transmit timing is not synchronised and so packet collisions increase with the number of nodes. In practice we recommend not more than 10 nodes per base station.*
 
-**[emonPi Installation Guide](/setup/install) [+ Add Additional emonTx](/setup/emontx/)** | **[emonPi Technical](/technical/emonpi)** | **[View in Shop](https://shop.openenergymonitor.com/emonpi-3/)**
+**[emonPi Installation Guide](/setup/install) [+ Add Additional emonTx](/setup/emontx/)** \| **[emonPi Technical](/technical/emonpi)** \| **[View in Shop](https://shop.openenergymonitor.com/emonpi-3/)**
 
 ---
 
