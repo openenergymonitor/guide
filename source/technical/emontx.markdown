@@ -1,7 +1,7 @@
 ---
 layout: page
-title: EmonTx
-description: EmonTx Technical Overview
+title: emonTx
+description: emonTx Technical Overview
 date: "2015-05-11 12:00"
 sidebar: true
 comments: false
@@ -10,9 +10,9 @@ footer: true
 published: true
 ---
 
-The emonTx is an low power RF remote sensor node. Data is transmitted to an emonPi or an emonBase via a low power 433MHz radio. This page provides a technical overview of the emonTx including configuration & firmware. For installation instructions see Hardware Setup guides.
+The emonTx is an low power RF remote sensor node. Data is transmitted to an emonPi or an emonBase via a low power 433 MHz radio. This page provides a technical overview of the emonTx including configuration & firmware. For installation instructions see Hardware Setup guides.
 
-![emontx](/images/setup/emontx.jpg)
+![emonTx](/images/setup/emontx.jpg)
 
 <a class="btn pull-right" href="http://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/">View in Shop &rarr; </a>
 
@@ -29,10 +29,10 @@ The emonTx is an low power RF remote sensor node. Data is transmitted to an emon
 - RF Range is approximately similar to home WiFi (real world range depends on many factors e.g. thick stone walls)
 - Up to 2x emonTx can be connected to a single emonPi or emonBase (up to 30x is possible with manual RF node ID setting*)
 - Wall-mount option
-- New 2019: The EmonTx firmware now supports higher accuracy continuous monitoring as standard - if powered from an ACAC adapter or USB power. 
+- New 2019: The emonTx firmware now supports higher accuracy continuous monitoring as standard - if powered from an ACAC adapter or USB power. 
 - Alternative firmware options include: Discreet Sampling for battery operation and 3-phase firmware.
 
-**WiFi option:** It is possible to use an emonTx with a ESP8266 WiFi adapter to provide WiFi connectivity. This can be useful in applications where the 433MHz radio range is not sufficient but there is good WiFi signal. The emonTx can post data to a local emonBase/emonPi over WiFi or work in 'standalone mode' to post directly to a remote emoncms server such as emoncms.org. See [Using emonTx with the ESP8266 WiFi module](/setup/esp8266-adapter-emontx/)
+**WiFi option:** It is possible to use an emonTx with a ESP8266 WiFi adapter to provide WiFi connectivity. This can be useful in applications where the 433 MHz radio range is not sufficient but there is good WiFi signal. The emonTx can post data to a local emonBase/emonPi over WiFi or work in 'standalone mode' to post directly to a remote emoncms server such as emoncms.org. See [Using emonTx with the ESP8266 WiFi module](/setup/esp8266-adapter-emontx/)
 
 **Battery vs AC adapter:**
 An emonTx can be powered by 3 x AA batteries; however, if possible, it is recommended to power the unit with an AC-AC adapter to provide an AC voltage reference for more accurate real power calculation and continuous sampling support.
@@ -50,19 +50,19 @@ The image on the right shows the DIP switch configuration looking at the emonTx 
 It's possible to set the emonTx radio settings, sensor calibration and other properties over serial. See [Github PDF: Configuration of RF Module & on-line calibration](https://github.com/openenergymonitor/EmonTxV3CM/blob/v1.6/Config.pdf) for full details. If a custom node ID is set, a corresponding node decoder needs to be in place in emonhub.conf to decode the EmonTx radio packet data. See [emonhub.conf configuration guide](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md).
 
 **Powering via 5V USB**<br>
-If using the EmonTx with an ESP8266 WiFi adapter a 5V USB power supply is required in addition to the AC Voltage adapter used for voltage sensing. It is advisable to remove jumper JP2 to the left of the battery compartment if both are present (looking at the emonTx with the CT sensor inputs at the top of the board).
+If using the emonTx with an ESP8266 WiFi adapter a 5V USB power supply is required in addition to the AC Voltage adapter used for voltage sensing. It is advisable to remove jumper JP2 to the left of the battery compartment if both are present (looking at the emonTx with the CT sensor inputs at the top of the board).
 
 ### {% linkable_title Firmware %}
 
-The emonTx firmware is based on Arduino. Alternative or customised firmware sketches can be uploaded using Arduino IDE or PlatformIO and a USB to UART cable. The emonTx comes pre-loaded with the EmonTxV3CM Continuous Sampling firmware as standard for single phase operation. If you bought the EmonTx with the battery holder option it will come with the Discreet Sampling firmware.
+The emonTx firmware is based on Arduino. Alternative or customised firmware sketches can be uploaded using Arduino IDE or PlatformIO and a USB to UART cable. The emonTx comes pre-loaded with the emonTxV3CM Continuous Sampling firmware as standard for single phase operation. If you bought the emonTx with the battery holder option it will come with the Discreet Sampling firmware.
 
-#### [EmonTxV3CM Continuous Sampling firmware](https://github.com/openenergymonitor/EmonTxV3CM)
+#### [emonTxV3CM Continuous Sampling firmware](https://github.com/openenergymonitor/EmonTxV3CM)
 
-New 2019: This firmware provides higher accuracy continuous monitoring and is now installed on EmonTx units as standard. Continuous monitoring means that the power readings are representative of the full 10s period that they represent rather than a short snapshot.
+New 2019: This firmware provides higher accuracy continuous monitoring and is now installed on emonTx units as standard. Continuous monitoring means that the power readings are representative of the full 10s period that they represent rather than a short snapshot.
 
-#### [EmonTx Discreet Sampling firmware](https://github.com/openenergymonitor/emontx3/tree/master/firmware)
+#### [emonTx Discreet Sampling firmware](https://github.com/openenergymonitor/emontx3/tree/master/firmware)
 
-The original EmonTx firmware, this performs power measurement in short discreet snapshots ~300ms long per CT channel at 50Hz per 10s period. This makes it possible for the EmonTx to go to sleep inbetween readings enabling battery powered operation but is less accurate.<br>
+The original emonTx firmware, this performs power measurement in short discreet snapshots ~300ms long per CT channel at 50Hz per 10s period. This makes it possible for the emonTx to go to sleep inbetween readings enabling battery powered operation but is less accurate.<br>
 
 **Indicator LED:** Illuminates solid for a 10 seconds on first power up, then flashes multiple times to indicate an AC-AC waveform has been detected (if powering via AC-AC adapter). Flashes once every 10s to indicate sampling and RF transmission interval.
 
@@ -76,6 +76,6 @@ This firmware is intended for use on a 3-phase, 4-wire system and implements con
 
 ### {% linkable_title Schematic and Board files %}
 
-**EmonPi Schematic and Board files:**<br> [https://github.com/openenergymonitor/emontx3/tree/master/hardware](https://github.com/openenergymonitor/emontx3/tree/master/hardware)
+**emonTx Schematic and Board files:**<br> [https://github.com/openenergymonitor/emontx3/tree/master/hardware](https://github.com/openenergymonitor/emontx3/tree/master/hardware)
 
-**EmonTx Wiki:**<br> [https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4](https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4)
+**emonTx Wiki:**<br> [https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4](https://wiki.openenergymonitor.org/index.php/EmonTx_V3.4)

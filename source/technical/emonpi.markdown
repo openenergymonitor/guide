@@ -1,6 +1,6 @@
 ---
 layout: page
-title: EmonPi
+title: emonPi
 description: emonPi Technical Overview
 date: "2015-05-11 12:00"
 sidebar: true
@@ -22,14 +22,14 @@ The emonPi can monitor two single-phase AC circuits using clip-on CT sensors. Th
 - 1x AC voltage measurement using plug-in AC-AC adapter for real power calculation alongside current measurement from CT sensors. Designed for use with a [9V AC output voltage adapter](https://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-uk-plug/)
 - Support for multiple wired one-wire DS18B20 temperature sensors via RJ45 socket
 - Support for pulse counting either wired or via Optical Pulse Sensor
-- 433 Mhz RFM69 radio transceiver for receiving data from additional energy monitoring or temperature and humidity nodes.
+- 433 MHz RFM69 radio transceiver for receiving data from additional energy monitoring or temperature and humidity nodes.
 - The emonPi measurement board is based on Arduino (Atmega328). This talks to an integrated Raspberry Pi running our emonSD software stack on it's SD card.
 - Full local data logging and visualisation capability using the emonSD Emoncms software stack. Data can also be sent to a remote emoncms server such as emoncms.org.
 - Network connectivity via either Ethernet or WiFi.
 - **LCD Display:** for easier setup, displays network IP address and sensor status.
 - **Push button:** for shutdown and enabling/disabling SSH access.
 
-## {% linkable_title EmonPi Internals %}
+## {% linkable_title emonPi Internals %}
 
 The emonPi is based on a RaspberryPi + emonPi measurement board. The emonPi measurement board is based on an ATmega328p 8-bit microcontroller running Arduino based firmware. The following video gives a good overview of what is inside an emonPi. Note that we currently ship RaspberryPi version 3b+ which has WiFi onboard rather than the older version featured in this video.
 
@@ -37,11 +37,11 @@ The emonPi is based on a RaspberryPi + emonPi measurement board. The emonPi meas
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lc2LzCZnySo" frameborder="0" allowfullscreen></iframe>
 </div>
 
-**EmonPi Wiki:** [https://wiki.openenergymonitor.org/index.php/EmonPi](https://wiki.openenergymonitor.org/index.php/EmonPi)
+**emonPi Wiki:** [https://wiki.openenergymonitor.org/index.php/EmonPi](https://wiki.openenergymonitor.org/index.php/EmonPi)
 
 ## {% linkable_title System Overview %}
 
-The following system diagram shows the main hardware and software components that make up the emonPi. On the left we have the emonPi measurement board based on the ATmega328 microcontroller with inputs from the different sensors, RFM69 433Mhz transceiver, button and I2C connection to the LCD. 
+The following system diagram shows the main hardware and software components that make up the emonPi. On the left we have the emonPi measurement board based on the ATmega328 microcontroller with inputs from the different sensors, RFM69 433 MHz transceiver, button and I2C connection to the LCD. 
 
 The Atmega328 microprocessor communicates with the Raspberry Pi via the internal UART serial port (/dev/ttyAMA0).
 
@@ -51,7 +51,7 @@ The Atmega328 microprocessor communicates with the Raspberry Pi via the internal
 
 ### {% linkable_title RF %}
 
-The emonPi uses the HopeRF RFM69CW RF module to receive data from other wireless nodes (emonTx, emonTH etc) using 433Mhz. We use the [JeeLib packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/). Each RF node has a unique node ID but common network group (default 210). The ATmega328 runs a modified version of [JeeLabs RFM12Demo Sketch](http://jeelabs.net/projects/jeelib/wiki/RF12demo) to receive the data from radio nodes. Received radio packets are forwarded over serial and decoded on the RaspberryPi using EmonHub.
+The emonPi uses the HopeRF RFM69CW RF module to receive data from other wireless nodes (emonTx, emonTH etc) using 433 MHz. We use the [JeeLib packet format](http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/). Each RF node has a unique node ID but common network group (default 210). The ATmega328 runs a modified version of [JeeLabs RFM12Demo Sketch](http://jeelabs.net/projects/jeelib/wiki/RF12demo) to receive the data from radio nodes. Received radio packets are forwarded over serial and decoded on the RaspberryPi using EmonHub.
 
 ### {% linkable_title Energy Monitoring %}
 
@@ -86,17 +86,17 @@ EmonSD includes [emonHub](https://github.com/openenergymonitor/emonhub) which re
 
 ## {% linkable_title Open Source %}
 
-**EmonPi Wiki:**<br> [https://wiki.openenergymonitor.org/index.php/EmonPi](https://wiki.openenergymonitor.org/index.php/EmonPi)
+**emonPi Wiki:**<br> [https://wiki.openenergymonitor.org/index.php/EmonPi](https://wiki.openenergymonitor.org/index.php/EmonPi)
 
-**EmonPi Firmware** (see [Firmware Modification](/technical/compiling)<br>
+**emonPi Firmware** (see [Firmware Modification](/technical/compiling)<br>
 [emonPi Discrete Sampling Firmware](https://github.com/openenergymonitor/emonpi/tree/master/firmware)
 
-**EmonPi Schematic and Board files:**<br> [https://github.com/openenergymonitor/emonpi/tree/master/hardware/emonpi/emonpi_V1_6](https://github.com/openenergymonitor/emonpi/tree/master/hardware/emonpi/emonpi_V1_6)
+**emonPi Schematic and Board files:**<br> [https://github.com/openenergymonitor/emonpi/tree/master/hardware/emonpi/emonpi_V1_6](https://github.com/openenergymonitor/emonpi/tree/master/hardware/emonpi/emonpi_V1_6)
 
 
 ---
 
-### EmonPi Specification
+### emonPi Specification
 
 | Attribute                          | Parameter  | Link |
 |---|---|---|
