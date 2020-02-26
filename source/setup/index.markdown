@@ -23,7 +23,7 @@ The system is made up of five main units. These can be configured to work for a 
 
 <img src="/images/setup/emontx-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/technical/emontx">emonTx:</a></b> A 4 circuit energy monitoring node. Transmits data via an inbuilt 433MHz radio to an emonBase or emonPi. It can also send data via an ESP8266 WiFi adapter or directly by a serial connection.<br><br>
 
-<img src="/images/setup/emonth-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/setup/emonth">emonTh:</a></b> A wireless room based temperature & humidity monitoring node. Transmits data via 433MHz radio to an emonBase or emonPi.
+<img src="/images/setup/emonth-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/setup/emonth">emonTh:</a></b> A battery powered, wireless, room based temperature & humidity monitoring node. Transmits data via 433MHz radio to an emonBase or emonPi.
 <br><br>
 
 <img src="/images/setup/emoncms-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/emoncms/coreconcepts">emonCMS:</a></b> An open-source web application, for processing, logging and visualising energy, temperature and other data. Runs locally on the emonPi and emonBase, also available remotely via emoncms.org.
