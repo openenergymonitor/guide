@@ -1,7 +1,7 @@
 ---
 layout: page
 title: 3. Log Remotely
-description: Log remotly to Emoncms.org
+description: Log remotely to Emoncms.org
 date: '2015-03-08 21:36'
 sidebar: true
 comments: false
@@ -73,17 +73,17 @@ The emonPi can post to other remote Emoncms accounts as well as or instead of em
 
 ## {% linkable_title Multiple emonPi's posting to a single Emoncms.org account %}
 
-It's possible to setup multiple emonPi's posting to a single Emoncms.org account, this is useful if you want to monitor several installations with a single login. By defaut data from sensors connected direclty to the emonPi are tagged in Emoncms with **node ID 5**. If multiple emonPi's are posting to the same account we need to set a different node ID to each emonPi.
+It's possible to setup multiple emonPi's posting to a single Emoncms.org account, this is useful if you want to monitor several installations with a single login. By defaut data from sensors connected directly to the emonPi are tagged in Emoncms with **node ID 5**. If multiple emonPi's are posting to the same account we need to set a different node ID to each emonPi.
 
 ### 1. Change emonPi node ID
 
-The emonPi's node ID can be changed in the *EmonHub Config Editor*. Login to **local Emoncms* then browser to `Setup > EmonHub`, in the `[interfacers]` section change `baseid = 5` to a different number: 4, 3, and 2 are recomended since these node ID's are not already allocated:
+The emonPi's node ID can be changed in the *EmonHub Config Editor*. Login to **local Emoncms* then browser to `Setup > EmonHub`, in the `[interfacers]` section change `baseid = 5` to a different number: 4, 3, and 2 are recommended since these node ID's are not already allocated:
 
 ![remote log1](/images/setup/emonpi-nodeid-decoder.png)
 
 ### 2. Update emonPi Node Decoder
 
-After changing the emonPi node ID we also needto update the EmonHub node decoder to enablelocal Emoncms to decode the data from the emonPi with the updated node ID. To do this scroll further down the emonhub config page to the `[Nodes]` section and change `[[5]]` to the new emonPi node ID e.g. 5, 3, or 2. Then click `Save` to save changes.
+After changing the emonPi node ID we also need to update the EmonHub node decoder to enable local Emoncms to decode the data from the emonPi with the updated node ID. To do this scroll further down the emonhub config page to the `[Nodes]` section and change `[[5]]` to the new emonPi node ID e.g. 5, 3, or 2. Then click `Save` to save changes.
 
 [See here for detailed emonhub config documentation.](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md)
 

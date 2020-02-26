@@ -10,9 +10,9 @@ footer: true
 published: true
 ---
 
-The software running on both the EmonPi and EmonBase SD card is the same. We have created a pre-built image which we call *emonSD* with everything in place to support both local and remote data logging with Emoncms.
+The software running on both the emonPi and emonBase SD card is the same. We have created a pre-built image which we call *emonSD* with everything in place to support both local and remote data logging with Emoncms.
 
-This guide walks through connecting an EmonPi or EmonBase running the emonSD software to your local network or/and the wider internet with either WiFi, Ethernet or 3G GSM Dongle. If you do not wish to connect to a network it is also possible to access the emonPi and EmonBase user interface in stand-alone access point mode.
+This guide walks through connecting an emonPi or emonBase running the emonSD software to your local network or/and the wider internet with either WiFi, Ethernet or 3G GSM Dongle. If you do not wish to connect to a network it is also possible to access the emonPi and emonBase user interface in stand-alone access point mode.
 
 If you are building your own RaspberryPi base station the emonSD image is available to download here: [Pre-build SD card download & Change Log](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log). The SD card can also be [purchased from the shop](http://shop.openenergymonitor.com/pre-loaded-emonsd-microsd-card-for-raspberry-pi/).
 
@@ -24,19 +24,19 @@ If you are building your own RaspberryPi base station the emonSD image is availa
 
 ### {% linkable_title Option 1: Connecting via Ethernet %}
 
-Where possible we recommend connecting via ethernet for best reliability and ease of setup. To ensure that your emonPi/emonbase does not start a WiFi access point on first boot, connect up the Ethernet cable between the emonPi/emonbase and internet router first and then power up the unit.
+Where possible we recommend connecting via Ethernet for best reliability and ease of setup. To ensure that your emonPi/emonBase does not start a WiFi access point on first boot, connect up the Ethernet cable between the emonPi/emonBase and internet router first and then power up the unit.
 
 ![emonPi First Boot Ethernet](/images/setup/emonpi_ethernet_first_boot.png)
 
 *Note to self-build users: To ensure that the Pi has enough power a [2.0A USB power adapter is recommended, 2.5A ideal](http://shop.openenergymonitor.com/power-supplies/).*
 
-**EmonPi:** The LCD display will display the firmware version then scan for connected sensors. Once the Raspberry Pi has booted up, the LCD will display the IP address of the emonPi on the local network:
+**emonPi:** The LCD display will display the firmware version then scan for connected sensors. Once the Raspberry Pi has booted up, the LCD will display the IP address of the emonPi on the local network:
 
 <img src="/images/setup/Etherent_Connected.jpg" style="padding-left:45px; padding-bottom:10px">
 
 *Take care to connect the Ethernet to the socket on the same side as the USB sockets, not the RJ45 connector on the opposite side.*
 
-**EmonBase:** Without the LCD Display we have to rely on either the hostname or network discovery tools to find the EmonBase on the network. Try browsing to the hostname: http://emonpi, http://emonpi.local or http://emonpi.lan. 
+**emonBase:** Without the LCD Display we have to rely on either the hostname or network discovery tools to find the EmonBase on the network. Try browsing to the hostname: http://emonpi, http://emonpi.local or http://emonpi.lan. 
 
 You should now see the emoncms user login page. Register a new account and then continue to the next step [Log Locally](/setup/local) to configure your system.
 
@@ -130,7 +130,7 @@ Huawei HiLink 3G USB GSM/3G dongle modems are supported. Connection should be au
     $ sudo nano /etc/dhcpcd.conf
     </pre>
     
-<p>Append to the end of dhcpcd.conf (change to suit your network and interface reqiuired static IP):</p>
+<p>Append to the end of dhcpcd.conf (change to suit your network and interface required static IP):</p>
 
     <pre>
     interface eth0

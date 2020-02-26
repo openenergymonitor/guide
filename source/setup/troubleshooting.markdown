@@ -64,7 +64,7 @@ The emonPi and emonBase receiver radio module settings are set in emonhub.conf, 
 
 **Example of valid emonhub.log posting via MQTT to local emoncms:**
 
-<pre class="code" style="white-space:pre; height:300px">
+<pre class="code" style="height:300px">
 2020-02-21 16:02:33,236 INFO     MainThread EmonHub emonHub emon-pi variant v3-beta
 2020-02-21 16:02:33,236 INFO     MainThread Opening hub...
 2020-02-21 16:02:33,237 INFO     MainThread Logging level set to DEBUG

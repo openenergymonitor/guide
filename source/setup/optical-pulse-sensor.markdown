@@ -1,7 +1,7 @@
 ---
 layout: page
 title: + Add Optical Pulse Sensor
-description: Add optical puse sensor
+description: Add optical pulse sensor
 date: '2017-01-06 21:36'
 sidebar: true
 comments: false
@@ -14,7 +14,7 @@ published: true
 
 <a class="btn" href="https://openenergymonitor.com/optical-utility-meter-led-pulse-sensor/">View in Shop &rarr; </a>
 
-An Optical Pulse Sensor detects the LED / IR 'pulse' output from a utility meters. Each pulse corresponds to a certain amount of energy passing through the meter. The amount of energy each pulse corresponds to depends on the meter. By counting these pulses and measuring the time between each pulse the meters KWh value can be calculated.
+An Optical Pulse Sensor detects the LED / IR 'pulse' output from a utility meters. Each pulse corresponds to a certain amount of energy passing through the meter. The amount of energy each pulse corresponds to depends on the meter. By counting these pulses and measuring the time between each pulse the meters kWh value can be calculated.
 
 Unlike clip-on CT based monitoring, pulse counting is measuring exactly what the utility meter is measuring i.e. what you get billed for. Pulse counting cannot provide an instantaneous power reading like clip on CT sensors can. It is often worthwhile using pulse counting in conjunction with clip on CT sensors to get the best of both techniques.
 
@@ -49,7 +49,7 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
 
 If installed correctly when the emonPi / emonTx is powered up the pulse sensor LED should flash in sync with the utility meter LED. See video clip:
 
-*You may need to swich on a large electrical load e.g. kettle to generate some pulses*
+*You may need to switch on a large electrical load e.g. kettle to generate some pulses*
 
 <div class='videoWrapper'>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vq5EmMRrOY0" frameborder="0" allowfullscreen></iframe>
@@ -69,7 +69,7 @@ Viewing the Wh accumulator feed:
 
 <img src="/images/setup/wh-accumulator.png" />
 
-To convert the wh accumulator feed to daily KWh bargraph using the graph tool select Window `type-daily` feed `type=Bars` and `delta = 1` then click `reload`
+To convert the Wh accumulator feed to daily kWh bargraph using the graph tool select Window `type-daily` feed `type=Bars` and `delta = 1` then click `reload`
 
 <img src="/images/setup/wh-accumulator-bargraph.png" />
 

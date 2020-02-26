@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Using the EmonTx v3 with the ESP8266 Huzzah WIFI module
-description: Using the EmonTx v3 with the ESP8266 Huzzah WIFI module
+title: Using the emonTx v3 with the ESP8266 Huzzah WIFI module
+description: Using the emonTx v3 with the ESP8266 Huzzah WIFI module
 date: '2017-03-31 14:51'
 sidebar: true
 comments: false
@@ -27,7 +27,7 @@ An emonBase or emonPi is recommended for more complex applications where local s
 - **[emonTx V3](/technical/emontx):** + CT, AC-AC adapter, temperature and pulse sensors as required by your application.<br>
 *To use ESP8266 with emonTx three-phase firmware, the EmonESP baud rate needs to be set to 9600*
 
-- **5V USB DC Power supply for the emonTx:** The AC-AC Voltage adapter that can power the emonTx in normal operation does not deliver enough power to run the ESP8266 Huzzah WiFi module and so an additional 5V USB Power supply is required. Battery opperation is not possible when using ESP8266.
+- **5V USB DC Power supply for the emonTx:** The AC-AC Voltage adapter that can power the emonTx in normal operation does not deliver enough power to run the ESP8266 Huzzah WiFi module and so an additional 5V USB Power supply is required. Battery operation is not possible when using ESP8266.
 
 - **ESP8266 Huzzah WiFi module with a 6 way stackable header running [EmonESP](https://github.com/openenergymonitor/emonesp):** we offer a pre-programmed ESP8266 Huzzah WiFi module in our [shop](https://shop.openenergymonitor.com/esp8266-wifi-adapter-for-emontx/), ready to go out of the box with the header already installed and running our open source EmonESP firmware (Alternatively for a DIY approach see the original forum post [here](https://community.openenergymonitor.org/t/using-the-emontx-v3-with-the-esp8266-huzzah-wifi-module/795).
 

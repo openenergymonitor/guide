@@ -35,7 +35,7 @@ The following describes a generic example of configuring an emoncms input, e.g a
 
 You should now see an updating input list of connected nodes (e.g emonPi, emonTx, emonTH) and they keys (e.g. power1, power2 etc.) together with the last received value. If you do not, see [Setup > Troubleshooting](/setup/troubleshooting).
 
-Input data is not saved to disk. To save an input Emoncms Input Processing is used to log an input to a Feed. Feed data is then logged persistantly to disk. To log an Input to a Feed:
+Input data is not saved to disk. To save an input Emoncms Input Processing is used to log an input to a Feed. Feed data is then logged persistently to disk. To log an Input to a Feed:
 
 - Click on the `Input Config Spanner` next to the input you wish to log to a Feed:
 
@@ -50,7 +50,7 @@ Input data is not saved to disk. To save an input Emoncms Input Processing is us
 
 ![Input Processing Power](/images/setup/local-log2.png)
 
-If logging a `Power` value input you will also want to create a corresponding KWh Feed. This is done by adding another input process:
+If logging a `Power` value input you will also want to create a corresponding kWh Feed. This is done by adding another input process:
 
 - Choose `Power to KWh` Input Process
 - Create a new KWh feed e.g. `use_kwh` *
