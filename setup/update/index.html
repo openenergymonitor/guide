@@ -615,20 +615,20 @@ highlight active link...
   <hr class="divider">
   
 
-  <p>For most updates it’s possible to use the emoncms update mechanism available in the emoncms Admin section. This downloads the latest version of emoncms and all installed modules.</p>
+  <p>For most updates it’s possible to use the emonCMS update mechanism available in the emonCMS Admin section. This downloads the latest version of emonCMS and all installed modules.</p>
 
-<p>We also periodically release a <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">new emonSD image</a> along with a fully updated version of the base OS and emoncms software, new images sometimes include more substantial changes to partition and directory structure that are harder to update via the standard update method. We recommend upgrading to new images when they become available to ensure your system is fully up-to-date.</p>
+<p>We also periodically release a <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">new emonSD image</a> along with a fully updated version of the base OS and emonCMS software, new images sometimes include more substantial changes to partition and directory structure that are harder to update via the standard update method. We recommend upgrading to new images when they become available to ensure your system is fully up-to-date.</p>
 
 <h3 id="-emonpiemonbase-update"><a class="title-link" name="emonpiemonbase-update" href="#emonpiemonbase-update"></a> emonPi/emonbase Update</h3>
 
 <ol>
-  <li>Login to emoncms and navigate to Setup &gt; Admin</li>
+  <li>Login to emonCMS and navigate to Setup &gt; Admin</li>
   <li>Click on dropdown selector next to ‘Full Update’ button to expand all update options.</li>
   <li>To update all components click on ‘Full Update’</li>
-  <li>To update specific parts, select as required (The database update is included as part of the full update and emoncms update).</li>
+  <li>To update specific parts, select as required (The database update is included as part of the full update and emonCMS update).</li>
 </ol>
 
-<p><img src="/images/setup/emoncms_update.png" alt="Emoncms Update" /></p>
+<p><img src="/images/setup/emonCMS_update.png" alt="emonCMS Update" /></p>
 
 <p><strong>Troubleshooting</strong></p>
 
@@ -642,12 +642,12 @@ highlight active link...
 
 <h4 id="1-prepare-a-new-card">1. Prepare a new card</h4>
 
-<p>It is a good idea to start with a new SD Card to minimise risk of disk errors from previous use, though reuse should also be fine if lightly used. A 16Gb card should suffice; EmonCMS is very efficient in the way it stores it’s data.</p>
+<p>It is a good idea to start with a new SD Card to minimise risk of disk errors from previous use, though reuse should also be fine if lightly used. A 16Gb card should suffice; emonCMS is very efficient in the way it stores it’s data.</p>
 
 <p>There are 2 options for a new card:</p>
 
 <ol>
-  <li>Purchase a new card with the image preinstalled, from the <a href="https://shop.openenergymonitor.com/emonsd-pre-loaded-raspberry-pi-sd-card/">OEM Store</a>.</li>
+  <li>Purchase a new card with the image pre-installed, from the <a href="https://shop.openenergymonitor.com/emonsd-pre-loaded-raspberry-pi-sd-card/">OEM Store</a>.</li>
   <li>Burn/flash a new image to an SD Card. To do this:
     <ol>
       <li>Download image from the <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log#download-11-gb">Release Page</a>.</li>
@@ -659,10 +659,10 @@ highlight active link...
 <h4 id="2-initial-boot">2. Initial boot</h4>
 
 <ol>
-  <li>Shutdown your existing system by clicking on Shutdown on the emoncms Admin page, after 30s remove the USB power cable to fully power down.</li>
+  <li>Shutdown your existing system by clicking on Shutdown on the emonCMS Admin page, after 30s remove the USB power cable to fully power down.</li>
   <li>Remove your existing SD card (you will need this SD card again in a moment).</li>
   <li>Insert the new SD card &amp; power up the device. Then wait, wait, wait, make a cup of coffee, wait, wait, wait… (lots of updates etc) - really do not rush this part it does take a while.</li>
-  <li>If you do not have a wired ethernet connection you will need to <a href="https://guide.openenergymonitor.org/setup/connect/#1a-connect-to-wifi">setup your WiFi</a>. <strong>Note</strong> the updates will not happen until after you have connected the Pi to the Internet.</li>
+  <li>If you do not have a wired Ethernet connection you will need to <a href="https://guide.openenergymonitor.org/setup/connect/#1a-connect-to-wifi">setup your WiFi</a>. <strong>Note</strong> the updates will not happen until after you have connected the Pi to the Internet.</li>
 </ol>
 
 <p>Once the initial update and setup is complete, you can proceed to import your data.</p>
@@ -671,10 +671,10 @@ highlight active link...
 
 <ol>
   <li>Place the old SD card in an SD card reader and plug into any of the USB ports on the emonPi/emonBase running the new image.</li>
-  <li>From the EmonCMS login page, click register and create a temporary user. Once the import is complete the original user details will be used.</li>
+  <li>From the emonCMS login page, click register and create a temporary user. Once the import is complete the original user details will be used.</li>
   <li>Navigate to Setup &gt; Backup</li>
   <li>Click <code class="highlighter-rouge">Import from USB drive</code> to start import process</li>
-  <li>Once the import is complete, log out and back into the EmonCMS page with the original user details</li>
+  <li>Once the import is complete, log out and back into the emonCMS page with the original user details</li>
 </ol>
 
 <p><img src="/images/setup/usb_import.png" alt="USB Import" /></p>

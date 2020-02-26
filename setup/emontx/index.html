@@ -626,17 +626,17 @@ highlight active link...
   <li>Monitor 3-phase power (with 3-phase emonTx firmware, see <a href="/technical/emontx">EmonTx Technical</a>)</li>
 </ul>
 
-<p>Data is transmitted to the emonPi or emonBase via low power 433MHz radio as standard, or alternatively using the <a href="/setup/esp8266-adapter-emontx/">ESP8266 WiFi adapter</a> via WiFi for applications where the 433Mhz radio range is insufficient.</p>
+<p>Data is transmitted to the emonPi or emonBase via low power 433MHz radio as standard, or alternatively using the <a href="/setup/esp8266-adapter-emontx/">ESP8266 WiFi adapter</a> via WiFi for applications where the 433 MHz radio range is insufficient.</p>
 
 <p><img src="/images/setup/emontx.jpg" alt="emontx" /></p>
 
-<h4 id="a-adding-one-emontx-to-an-emonpi-system">A) Adding one EmonTx to an EmonPi system</h4>
+<h4 id="a-adding-one-emontx-to-an-emonpi-system">A) Adding one emonTx to an emonPi system</h4>
 
-<p>If you have already setup an EmonPi following the <a href="/setup/install">EmonPi installation guide</a>. The steps for installing an EmonTx are covered in the <a href="/setup/install-emontx">EmonTx and EmonBase installation guide</a>. The EmonPi in this instance works in much the same way as the emonBase.</p>
+<p>If you have already setup an emonPi following the <a href="/setup/install">emonPi installation guide</a>. The steps for installing an emonTx are covered in the <a href="/setup/install-emontx">emonTx and emonBase installation guide</a>. The emonPi in this instance works in much the same way as the emonBase.</p>
 
-<h4 id="b-adding-more-than-one-emontx-to-an-emonpi-or-emonbase-system">B) Adding more than one EmonTx to an EmonPi or EmonBase system</h4>
+<h4 id="b-adding-more-than-one-emontx-to-an-emonpi-or-emonbase-system">B) Adding more than one emonTx to an emonPi or emonBase system</h4>
 
-<p>In addition to standard EmonTx installation as covered in the <a href="/setup/install-emontx">EmonTx and EmonBase installation guide</a>: when using 2 or more emonTx units with the same base-station <strong>the node ID on each unit needs to be unique</strong>.</p>
+<p>In addition to standard emonTx installation as covered in the <a href="/setup/install-emontx">emonTx and emonBase installation guide</a>: when using 2 or more emonTx units with the same base-station <strong>the node ID on each unit needs to be unique</strong>.</p>
 
 <p>The nodeID can be selected at time of purchase or set using the on-board DIP switch to toggle. If more than two emonTx’s are required on the same network then further nodeID values can be set via RF node ID serial config.</p>
 
@@ -645,7 +645,7 @@ highlight active link...
 <p>The image on the right shows the DIP switch configuration looking at the emonTx with the CT sensor inputs at the top of the board. Move the top switch D9 to the left to select USA ACAC Voltage calibration. <strong>Move the bottom switch D8 to the left to select RF node ID 16 rather than 15.</strong></p>
 
 <p><strong>Serial Configuration</strong><br />
-It’s possible to set the emonTx radio settings, sensor calibration and other properties over serial. See <a href="https://github.com/openenergymonitor/EmonTxV3CM/blob/v1.6/Config.pdf">Github PDF: Configuration of RF Module &amp; on-line calibration</a> for full details. If a custom node ID is set, a corresponding node decoder needs to be in place in emonhub.conf to decode the EmonTx radio packet data. See <a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md">emonhub.conf configuration guide</a>.</p>
+It’s possible to set the emonTx radio settings, sensor calibration and other properties over serial. See <a href="https://github.com/openenergymonitor/EmonTxV3CM/blob/v1.6/Config.pdf">Github PDF: Configuration of RF Module &amp; on-line calibration</a> for full details. If a custom node ID is set, a corresponding node decoder needs to be in place in emonhub.conf to decode the emonTx radio packet data. See <a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md">emonhub.conf configuration guide</a>.</p>
 
 
 </article>

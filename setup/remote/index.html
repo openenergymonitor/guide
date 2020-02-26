@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>3. Log Remotely - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="Log remotly to Emoncms.org">
+    <meta name="description" content="Log remotely to Emoncms.org">
     
     <meta name="viewport" content="width=device-width">
     <link rel="canonical" href="http://guide.openenergymonitor.org/setup/remote/">
@@ -19,14 +19,14 @@
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
     <meta property="og:url" content="http://guide.openenergymonitor.org/setup/remote/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Log remotly to Emoncms.org">
+    <meta property="og:description" content="Log remotely to Emoncms.org">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
     <meta name="twitter:title" content="3. Log Remotely">
-    <meta name="twitter:description" content="Log remotly to Emoncms.org">
+    <meta name="twitter:description" content="Log remotely to Emoncms.org">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -681,17 +681,17 @@ highlight active link...
 
 <h2 id="-multiple-emonpis-posting-to-a-single-emoncmsorg-account"><a class="title-link" name="multiple-emonpis-posting-to-a-single-emoncmsorg-account" href="#multiple-emonpis-posting-to-a-single-emoncmsorg-account"></a> Multiple emonPi’s posting to a single Emoncms.org account</h2>
 
-<p>It’s possible to setup multiple emonPi’s posting to a single Emoncms.org account, this is useful if you want to monitor several installations with a single login. By defaut data from sensors connected direclty to the emonPi are tagged in Emoncms with <strong>node ID 5</strong>. If multiple emonPi’s are posting to the same account we need to set a different node ID to each emonPi.</p>
+<p>It’s possible to setup multiple emonPi’s posting to a single Emoncms.org account, this is useful if you want to monitor several installations with a single login. By defaut data from sensors connected directly to the emonPi are tagged in Emoncms with <strong>node ID 5</strong>. If multiple emonPi’s are posting to the same account we need to set a different node ID to each emonPi.</p>
 
 <h3 id="1-change-emonpi-node-id">1. Change emonPi node ID</h3>
 
-<p>The emonPi’s node ID can be changed in the <em>EmonHub Config Editor</em>. Login to <em>*local Emoncms</em> then browser to <code class="highlighter-rouge">Setup &gt; EmonHub</code>, in the <code class="highlighter-rouge">[interfacers]</code> section change <code class="highlighter-rouge">baseid = 5</code> to a different number: 4, 3, and 2 are recomended since these node ID’s are not already allocated:</p>
+<p>The emonPi’s node ID can be changed in the <em>EmonHub Config Editor</em>. Login to <em>*local Emoncms</em> then browser to <code class="highlighter-rouge">Setup &gt; EmonHub</code>, in the <code class="highlighter-rouge">[interfacers]</code> section change <code class="highlighter-rouge">baseid = 5</code> to a different number: 4, 3, and 2 are recommended since these node ID’s are not already allocated:</p>
 
 <p><img src="/images/setup/emonpi-nodeid-decoder.png" alt="remote log1" /></p>
 
 <h3 id="2-update-emonpi-node-decoder">2. Update emonPi Node Decoder</h3>
 
-<p>After changing the emonPi node ID we also needto update the EmonHub node decoder to enablelocal Emoncms to decode the data from the emonPi with the updated node ID. To do this scroll further down the emonhub config page to the <code class="highlighter-rouge">[Nodes]</code> section and change <code class="highlighter-rouge">[[5]]</code> to the new emonPi node ID e.g. 5, 3, or 2. Then click <code class="highlighter-rouge">Save</code> to save changes.</p>
+<p>After changing the emonPi node ID we also need to update the EmonHub node decoder to enable local Emoncms to decode the data from the emonPi with the updated node ID. To do this scroll further down the emonhub config page to the <code class="highlighter-rouge">[Nodes]</code> section and change <code class="highlighter-rouge">[[5]]</code> to the new emonPi node ID e.g. 5, 3, or 2. Then click <code class="highlighter-rouge">Save</code> to save changes.</p>
 
 <p><a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md">See here for detailed emonhub config documentation.</a></p>
 

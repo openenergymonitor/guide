@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Install EmonTx & emonBase - Guide | OpenEnergyMonitor</title>
+    <title>Install emonTx & emonBase - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
     <meta name="description" content="Physically install emonTx & emonBase">
     
@@ -15,7 +15,7 @@
     <link rel="canonical" href="http://guide.openenergymonitor.org/setup/install-emontx/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Install EmonTx & emonBase">
+    <meta property="og:title" content="Install emonTx & emonBase">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
     <meta property="og:url" content="http://guide.openenergymonitor.org/setup/install-emontx/">
     <meta property="og:type" content="website">
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Install EmonTx & emonBase">
+    <meta name="twitter:title" content="Install emonTx & emonBase">
     <meta name="twitter:description" content="Physically install emonTx & emonBase">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
@@ -609,58 +609,58 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      Install EmonTx & emonBase
+      Install emonTx & emonBase
     </h1>
   </header>
   <hr class="divider">
   
 
-  <p>The following guide details how to setup an <a href="/technical/emontx">EmonTx energy monitoring node</a> + EmonBase system. Covering an example with 2x CT sensors to monitor two AC circuits in a house and an ACAC Voltage sensor to allow real power calculation as well as power for the EmonTx unit itself. The EmonTx supports up to 4x CT sensors so the steps below can easily be extended to monitor additional circuits.</p>
+  <p>The following guide details how to setup an <a href="/technical/emontx">emonTx energy monitoring node</a> + emonBase system. Covering an example with 2x CT sensors to monitor two AC circuits in a house and an ACAC Voltage sensor to allow real power calculation as well as power for the emonTx unit itself. The emonTx supports up to 4x CT sensors so the steps below can easily be extended to monitor additional circuits.</p>
 
-<p>In this example the EmonTx transmits AC power, voltage and temperature sensor measurements (if connected) every 10s via 433 Mhz radio to the emonBase basestation.</p>
+<p>In this example the emonTx transmits AC power, voltage and temperature sensor measurements (if connected) every 10s via 433 MHz radio to the emonBase base-station.</p>
 
-<p>The emonBase basestation consists of a RaspberryPi and an RFM69Pi adapter board to recieve the 433Mhz radio packets from the EmonTx. The emonBase runs our emonSD software including emoncms for full local data logging and visualisation capability.</p>
+<p>The emonBase base-station consists of a RaspberryPi and an RFM69Pi adapter board to receive the 433 MHz radio packets from the emonTx. The emonBase runs our emonSD software including emonCMS for full local data logging and visualisation capability.</p>
 
-<p><em>New 2019: The EmonTx firmware now supports higher accuracy continuous monitoring as standard - if powered from an ACAC adapter or USB power. Alternative firmware options include: Discreet Sampling for battery operation and 3-phase firmware. See <a href="/technical/emontx">EmonTx technical</a></em>.</p>
+<p><em>New 2019: The emonTx firmware now supports higher accuracy continuous monitoring as standard - if powered from an ACAC adapter or USB power. Alternative firmware options include: Discreet Sampling for battery operation and 3-phase firmware. See <a href="/technical/emontx">emonTx technical</a></em>.</p>
 
 <p><img src="/images/setup/emontxemonbase.jpg" alt="emontx and emonbase" /></p>
 
-<p>A typical EmonTx &amp; EmonBase system consists of:</p>
+<p>A typical emonTx &amp; emonBase system consists of:</p>
 
 <ul>
-  <li>1x <a href="https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter/">EmonTx (includes antennae and wall mounts)</a></li>
+  <li>1x <a href="https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter/">emonTx (includes antennae and wall mounts)</a></li>
   <li>1-4x <a href="https://shop.openenergymonitor.com/100a-max-clip-on-current-sensor-ct/">100A CT sensors</a></li>
   <li>1x <a href="https://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-uk-plug/">ACAC Voltage sensor</a></li>
-  <li>1x <a href="https://shop.openenergymonitor.com/emonbase-web-connected-base-station/">EmonBase (RaspberryPi + RFM69Pi adapter board + Enclosure + emonSD card)</a></li>
+  <li>1x <a href="https://shop.openenergymonitor.com/emonbase-web-connected-base-station/">emonBase (RaspberryPi + RFM69Pi adapter board + Enclosure + emonSD card)</a></li>
   <li>1x <a href="https://shop.openenergymonitor.com/5v-dc-usb-power-adapter-uk-plug/">USB Power supply</a> and <a href="https://shop.openenergymonitor.com/micro-usb-cable-20-awg-emonbase/">micro-USB cable</a></li>
 </ul>
 
-<h3 id="-example-emontx-sensor-node-installation"><a class="title-link" name="example-emontx-sensor-node-installation" href="#example-emontx-sensor-node-installation"></a> Example EmonTx sensor node installation</h3>
+<h3 id="-example-emontx-sensor-node-installation"><a class="title-link" name="example-emontx-sensor-node-installation" href="#example-emontx-sensor-node-installation"></a> Example emonTx sensor node installation</h3>
 
 <p>In this example installation the total house electricity consumption is measured using the CT sensor attached to the brown cable (main feed to the house). Another CT sensor is located inside the main consumer unit, in this case monitoring the electricity supply to a heat pump.</p>
 
 <p>A dedicated socket was installed for the AC-AC Voltage sensor and combined power supply.</p>
 
-<p>A RFM69 433 Mhz antennae is attached and also a DS18B20 temperature sensor connected to the EmonTx RJ45 Temperature and Pulse input socket.</p>
+<p>A RFM69 433 MHz antennae is attached and also a DS18B20 temperature sensor connected to the emonTx RJ45 Temperature and Pulse input socket.</p>
 
 <p><img src="/images/setup/emontx_install.JPG" alt="emontx install" /></p>
 
-<p>The EmonTx transmits real power, cumulative watt-hours, mains voltage and temperature measurements every 10s over RFM69 radio to an emonBase connected via Ethernet to the internet router in the livingroom.</p>
+<p>The emonTx transmits real power, cumulative watt-hours, mains voltage and temperature measurements every 10s over RFM69 radio to an emonBase connected via Ethernet to the internet router in the living room.</p>
 
 <h3 id="-installation-overview"><a class="title-link" name="installation-overview" href="#installation-overview"></a> Installation overview</h3>
 
-<p><strong>EmonTx</strong></p>
+<p><strong>emonTx</strong></p>
 
 <ol>
   <li>Mount emonTx in desired location, use wall mounts if required, attach antennae.</li>
-  <li>Plug CT sensors into the EmonTx first and then clip around either the <strong>Line</strong> or <strong>Neutral</strong> cable of the AC circuits that you wish to measure. If the power reading is negative, reverse the CT sensor orientation. <a href="https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/installation">Please read the CT installation guide before installing</a>.</li>
+  <li>Plug CT sensors into the emonTx first and then clip around either the <strong>Line</strong> or <strong>Neutral</strong> cable of the AC circuits that you wish to measure. If the power reading is negative, reverse the CT sensor orientation. <a href="https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/installation">Please read the CT installation guide before installing</a>.</li>
   <li>
     <p>Attach temperature sensors or/and pulse sensor as required. See guides: <a href="/setup/emonth">+ Add Temperature Nodes</a> and <a href="/setup/optical-pulse-sensor">+ Add Optical Pulse Sensor</a>.</p>
   </li>
   <li>Plug in and connect the AC-AC adapter to provide voltage measurement and power. This may require installation of a new outlet or extending an existing one.</li>
 </ol>
 
-<p><strong>EmonBase</strong></p>
+<p><strong>emonBase</strong></p>
 
 <ol>
   <li>Connect Ethernet before powering up the emonBase if using Ethernet.</li>
@@ -677,7 +677,7 @@ highlight active link...
   <li><a href="/setup/remote">3. Log Remotely</a></li>
 </ul>
 
-<p>For advanced EmonTx configuration and alternative firmware options see:<br /> <a href="/technical/emontx">EmonTx technical guide</a>.</p>
+<p>For advanced emonTx configuration and alternative firmware options see:<br /> <a href="/technical/emontx">emonTx technical guide</a>.</p>
 
 
 </article>
