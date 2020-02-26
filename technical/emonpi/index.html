@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>EmonPi - Guide | OpenEnergyMonitor</title>
+    <title>emonPi - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
     <meta name="description" content="emonPi Technical Overview">
     
@@ -15,7 +15,7 @@
     <link rel="canonical" href="http://guide.openenergymonitor.org/technical/emonpi/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="EmonPi">
+    <meta property="og:title" content="emonPi">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
     <meta property="og:url" content="http://guide.openenergymonitor.org/technical/emonpi/">
     <meta property="og:type" content="website">
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="EmonPi">
+    <meta name="twitter:title" content="emonPi">
     <meta name="twitter:description" content="emonPi Technical Overview">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
@@ -609,7 +609,7 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      EmonPi
+      emonPi
     </h1>
   </header>
   <hr class="divider">
@@ -628,7 +628,7 @@ highlight active link...
   <li>1x AC voltage measurement using plug-in AC-AC adapter for real power calculation alongside current measurement from CT sensors. Designed for use with a <a href="https://shop.openenergymonitor.com/ac-ac-power-supply-adapter-ac-voltage-sensor-uk-plug/">9V AC output voltage adapter</a></li>
   <li>Support for multiple wired one-wire DS18B20 temperature sensors via RJ45 socket</li>
   <li>Support for pulse counting either wired or via Optical Pulse Sensor</li>
-  <li>433 Mhz RFM69 radio transceiver for receiving data from additional energy monitoring or temperature and humidity nodes.</li>
+  <li>433 MHz RFM69 radio transceiver for receiving data from additional energy monitoring or temperature and humidity nodes.</li>
   <li>The emonPi measurement board is based on Arduino (Atmega328). This talks to an integrated Raspberry Pi running our emonSD software stack on it’s SD card.</li>
   <li>Full local data logging and visualisation capability using the emonSD Emoncms software stack. Data can also be sent to a remote emoncms server such as emoncms.org.</li>
   <li>Network connectivity via either Ethernet or WiFi.</li>
@@ -636,7 +636,7 @@ highlight active link...
   <li><strong>Push button:</strong> for shutdown and enabling/disabling SSH access.</li>
 </ul>
 
-<h2 id="-emonpi-internals"><a class="title-link" name="emonpi-internals" href="#emonpi-internals"></a> EmonPi Internals</h2>
+<h2 id="-emonpi-internals"><a class="title-link" name="emonpi-internals" href="#emonpi-internals"></a> emonPi Internals</h2>
 
 <p>The emonPi is based on a RaspberryPi + emonPi measurement board. The emonPi measurement board is based on an ATmega328p 8-bit microcontroller running Arduino based firmware. The following video gives a good overview of what is inside an emonPi. Note that we currently ship RaspberryPi version 3b+ which has WiFi onboard rather than the older version featured in this video.</p>
 
@@ -644,11 +644,11 @@ highlight active link...
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lc2LzCZnySo" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
-<p><strong>EmonPi Wiki:</strong> <a href="https://wiki.openenergymonitor.org/index.php/EmonPi">https://wiki.openenergymonitor.org/index.php/EmonPi</a></p>
+<p><strong>emonPi Wiki:</strong> <a href="https://wiki.openenergymonitor.org/index.php/EmonPi">https://wiki.openenergymonitor.org/index.php/EmonPi</a></p>
 
 <h2 id="-system-overview"><a class="title-link" name="system-overview" href="#system-overview"></a> System Overview</h2>
 
-<p>The following system diagram shows the main hardware and software components that make up the emonPi. On the left we have the emonPi measurement board based on the ATmega328 microcontroller with inputs from the different sensors, RFM69 433Mhz transceiver, button and I2C connection to the LCD.</p>
+<p>The following system diagram shows the main hardware and software components that make up the emonPi. On the left we have the emonPi measurement board based on the ATmega328 microcontroller with inputs from the different sensors, RFM69 433 MHz transceiver, button and I2C connection to the LCD.</p>
 
 <p>The Atmega328 microprocessor communicates with the Raspberry Pi via the internal UART serial port (/dev/ttyAMA0).</p>
 
@@ -656,7 +656,7 @@ highlight active link...
 
 <h3 id="-rf"><a class="title-link" name="rf" href="#rf"></a> RF</h3>
 
-<p>The emonPi uses the HopeRF RFM69CW RF module to receive data from other wireless nodes (emonTx, emonTH etc) using 433Mhz. We use the <a href="http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/">JeeLib packet format</a>. Each RF node has a unique node ID but common network group (default 210). The ATmega328 runs a modified version of <a href="http://jeelabs.net/projects/jeelib/wiki/RF12demo">JeeLabs RFM12Demo Sketch</a> to receive the data from radio nodes. Received radio packets are forwarded over serial and decoded on the RaspberryPi using EmonHub.</p>
+<p>The emonPi uses the HopeRF RFM69CW RF module to receive data from other wireless nodes (emonTx, emonTH etc) using 433 MHz. We use the <a href="http://jeelabs.org/2011/06/09/rf12-packet-format-and-design/">JeeLib packet format</a>. Each RF node has a unique node ID but common network group (default 210). The ATmega328 runs a modified version of <a href="http://jeelabs.net/projects/jeelib/wiki/RF12demo">JeeLabs RFM12Demo Sketch</a> to receive the data from radio nodes. Received radio packets are forwarded over serial and decoded on the RaspberryPi using EmonHub.</p>
 
 <h3 id="-energy-monitoring"><a class="title-link" name="energy-monitoring" href="#energy-monitoring"></a> Energy Monitoring</h3>
 
@@ -695,16 +695,16 @@ highlight active link...
 
 <h2 id="-open-source"><a class="title-link" name="open-source" href="#open-source"></a> Open Source</h2>
 
-<p><strong>EmonPi Wiki:</strong><br /> <a href="https://wiki.openenergymonitor.org/index.php/EmonPi">https://wiki.openenergymonitor.org/index.php/EmonPi</a></p>
+<p><strong>emonPi Wiki:</strong><br /> <a href="https://wiki.openenergymonitor.org/index.php/EmonPi">https://wiki.openenergymonitor.org/index.php/EmonPi</a></p>
 
-<p><strong>EmonPi Firmware</strong> (see <a href="/technical/compiling">Firmware Modification</a><br />
+<p><strong>emonPi Firmware</strong> (see <a href="/technical/compiling">Firmware Modification</a><br />
 <a href="https://github.com/openenergymonitor/emonpi/tree/master/firmware">emonPi Discrete Sampling Firmware</a></p>
 
-<p><strong>EmonPi Schematic and Board files:</strong><br /> <a href="https://github.com/openenergymonitor/emonpi/tree/master/hardware/emonpi/emonpi_V1_6">https://github.com/openenergymonitor/emonpi/tree/master/hardware/emonpi/emonpi_V1_6</a></p>
+<p><strong>emonPi Schematic and Board files:</strong><br /> <a href="https://github.com/openenergymonitor/emonpi/tree/master/hardware/emonpi/emonpi_V1_6">https://github.com/openenergymonitor/emonpi/tree/master/hardware/emonpi/emonpi_V1_6</a></p>
 
 <hr />
 
-<h3 id="emonpi-specification">EmonPi Specification</h3>
+<h3 id="emonpi-specification">emonPi Specification</h3>
 
 <table>
   <thead>
