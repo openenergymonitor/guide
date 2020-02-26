@@ -12,21 +12,21 @@ published: true
 
 The OpenEnergyMonitor system  has the capability to monitor electrical energy use / generation, temperature and humidity.
 
-The system is made up of five main units. These can be assembled and configured to work for a variety of [applications](/applications). The system is fully open-source, both hardware and software. All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms.
+The system is made up of five main units. These can be configured to work for a variety of [applications](/applications). The system is fully open-source, both hardware and software. All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms.
 
 ![image](/images/setup/oemfpsystemdiagram.png)
 
 <img src="/images/setup/emonpi-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/technical/emonpi">emonPi:</a></b> An all in one 2 circuit energy monitor and base-station which collects data, hosts the emonCMS software and can also receive data from other sensor nodes.<br><br>
 
-<img src="/images/setup/emontx-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/technical/emontx">emonTx:</a></b> A 4 circuit energy monitoring node. Transmits data via 433Mhz radio to an emonBase or emonPi base-station.<br><br>
-
-<img src="/images/setup/emonth-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/setup/emonth">emonTh:</a></b> A wireless room based temperature & humidity monitoring node. Transmits data via 433Mhz radio to an emonBase or emonPi base-station.
-<br><br>
-
 <img src="/images/setup/emonbase-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/setup/install-emontx">emonBase:</a></b> A simple base-station that receives data sent from wireless sensor nodes. Hosts the emonCMS software for full local data logging and visualisation capability.
 <br><br>
 
-<img src="/images/setup/emoncms-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/emoncms/coreconcepts">Emoncms:</a></b> An open-source web application, for processing, logging and visualising energy, temperature and other data. Runs locally on the emonPi and emonBase, also available remotely via emoncms.org.
+<img src="/images/setup/emontx-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/technical/emontx">emonTx:</a></b> A 4 circuit energy monitoring node. Transmits data via an inbuilt 433MHz radio to an emonBase or emonPi. It can also send data via an ESP8266 WiFi adapter or directly by a serial connection.<br><br>
+
+<img src="/images/setup/emonth-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/setup/emonth">emonTh:</a></b> A wireless room based temperature & humidity monitoring node. Transmits data via 433MHz radio to an emonBase or emonPi.
+<br><br>
+
+<img src="/images/setup/emoncms-min.png" style="float:left; width:50px; margin-right:10px"><b><a href="/emoncms/coreconcepts">emonCMS:</a></b> An open-source web application, for processing, logging and visualising energy, temperature and other data. Runs locally on the emonPi and emonBase, also available remotely via emoncms.org.
 <br><br>
 
 <div style="height:1px; background-color:#eee; margin-bottom:20px"></div>
@@ -53,7 +53,7 @@ All in one energy monitor. 2x CT sensor inputs, 1x ACAC Voltage sensor input, te
 ---
 
 **emonTx + emonBase**<br>
-Separate sensor node and base station linked by 433Mhz radio, 4x CT sensor inputs, 1x ACAC Voltage sensor input, temperature and pulse input. RaspberryPi Base station with emonCMS for local data logging. Wifi or Ethernet connectivity. Applications: Home solar, consumption, multiple circuits, 3-phase.
+Separate sensor node and base station linked by 433MHz radio, 4x CT sensor inputs, 1x ACAC Voltage sensor input, temperature and pulse input. RaspberryPi Base station with emonCMS for local data logging. Wifi or Ethernet connectivity. Applications: Home solar, consumption, multiple circuits, 3-phase.
 
 ![image](/images/setup/emontxandbase.png)
 
@@ -63,8 +63,8 @@ Separate sensor node and base station linked by 433Mhz radio, 4x CT sensor input
 
 ---
 
-**emonTx + ESP8266**<br>
-Using and ESP8266 Adapter the emonTx can send data directly to a remote emonCMS server such as emoncms.org. It is also possible to use an ESP8266 adapter with an emonTx to send data to an emonPi or emonBase base station to improve reliability where 433Mhz is not sufficient.
+**emonTx + ESP8266 WiFi**<br>
+Using and ESP8266 WiFi Adapter the emonTx can send data directly to a remote emonCMS server such as emoncms.org. It is also possible to use an ESP8266 WiFi adapter with an emonTx to send data to an emonPi or emonBase to improve reliability where 433MHz is not sufficient.
 
 ![image](/images/setup/emontx.png)
 
@@ -111,7 +111,7 @@ Both the emonPi and emonTx + emonBase systems support WiFi and Ethernet provided
 Both the emonPi and emonBase based systems support receiving data from up to 30 wireless 433MHz radio nodes, including multiple emontx units and emonTH temperature and humidity nodes.
 
 **6. Wired temperature sensing with RJ45 DS18B20 sensors**<br>
-Both the emonPi and emonTx support wired temperature sensing using the RJ45 socket. The emonTx includes a terminal block for DS18B20 sensors without the RJ45 socket.
+Both the emonPi and emonTx support wired temperature sensing using the RJ45 socket. The emonTx includes a terminal block for DS18B20 sensors without the RJ45 plug. The terminal block can also be used for the pulse input.
 
 **7. Pulse counting?**<br>
 Both the emonPi and emonTx support a single pulse counting input using the RJ45 socket.
