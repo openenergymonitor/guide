@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Exporting CSV - Guide | OpenEnergyMonitor</title>
+    <title>Sonoff WiFi Smart Plug scheduling - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="Exporting CSV">
+    <meta name="description" content="Sonoff WiFi Smart Plug scheduling">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/emoncms/export-csv/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/integrations/demandshaper-sonoff/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Exporting CSV">
+    <meta property="og:title" content="Sonoff WiFi Smart Plug scheduling">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/emoncms/export-csv/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/integrations/demandshaper-sonoff/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Exporting CSV">
+    <meta property="og:description" content="Sonoff WiFi Smart Plug scheduling">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Exporting CSV">
-    <meta name="twitter:description" content="Exporting CSV">
+    <meta name="twitter:title" content="Sonoff WiFi Smart Plug scheduling">
+    <meta name="twitter:description" content="Sonoff WiFi Smart Plug scheduling">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -609,51 +609,97 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      Exporting CSV
+      Sonoff WiFi Smart Plug Scheduling
     </h1>
   </header>
   <hr class="divider">
   
 
-  <p>Its possible to easily export data selected using the emoncms data viewer by clicking on the <strong>Show CSV Output</strong> button at the bottom of the page. Multiple feeds can be selected with datapoints aligned to the same timestamps.</p>
+  <p>The following guide covers setup of the Sonoff S20 WiFi Smart Plug and <a href="/integrations/demandshaper/">Emoncms DemandShaper module</a> for smart scheduling based on day-ahead forecasts for the best time to use power.</p>
 
-<p>The data viewer CSV export tool is limited to 8928 datapoints. For larger exports the export tool that is part of the feed interface can be used, see below.</p>
+<p><strong>Potential applications:</strong> De-humidifiers, Ebike battery charging. Note that Sonoff S20 smart plugs have a 10A maximum current capacity and a standby power draw of ~1W.</p>
 
-<h3 id="data-viewer-csv-export-tool">Data viewer CSV export tool</h3>
+<p><img src="/images/integrations/demandshaper/sonoffs20/sonoffs20_hub.png" alt="emonevse_hub.png" /></p>
 
-<p>There are 3 timestamp formats available:</p>
+<p><strong>You will need:</strong></p>
+
+<ul>
+  <li>Sonoff S20 WiFi Smart plug running latest <a href="https://github.com/openenergymonitor/EmonESP">EmonESP firmware</a>.</li>
+  <li>emonBase or emonPi base-station running <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log#emonsd-17oct19-stable">emonSD-17Oct19 or newer</a>.</li>
+  <li>USB Power supply and micro-USB cable for base-station.</li>
+</ul>
+
+<h4 id="setting-up-your-emonbase-or-emonpi-base-station">Setting up your emonBase or emonPi base-station</h4>
+
+<p>Start by setting up your emonBase or emonPi following the <a href="/setup/connect/">Software Setup &gt; Connect</a> guide. Create an local emoncms account on your emonBase/emonPi and run the software updater from the Admin page to make sure that you have the latest software.</p>
+
+<h4 id="setting-up-your-wifi-smart-plug">Setting up your WiFi Smart Plug</h4>
+
+<p>1. Plug your smart plug into an electrical socket. The light on the plug will show green for 3 seconds followed by a short off period and then a couple of very short flashes. This indicates that the plug is working and has created a WIFI Access Point.</p>
+
+<p>2. The WIFI Access Point should appear in your laptop or phones available WIFI networks, the SSID will contain the name smartplug followed by a number e.g: ‘smartplug1’.</p>
+
+<p>3. Connect to this network, open an internet browser and enter the following address:</p>
+
+<p><strong><a href="http://192.168.4.1">http://192.168.4.1</a></strong></p>
+
+<p><img src="/images/integrations/demandshaper/sonoffs20/EmonESP1.png" alt="EmonESP1.png" /></p>
+
+<p>4. Select the WIFI network you wish to connect to, enter the passkey and click connect.</p>
+
+<p>The green light on the smartplug will now turn on again. If the connection is successful you will see 10 very fast consecutive flashes.</p>
+
+<p>5. The web interface will also show that the module has connected and its IP address:</p>
+
+<p><img src="/images/integrations/demandshaper/sonoffs20/EmonESP2.png" alt="EmonESP2.png" /></p>
+
+<p><strong>Failed Connection</strong><br />
+If the smartplug fails to connect to the selected WIFI network the green LED will stay on with a slight pulsing rythym for 30 seconds before the plug automatically resets and tries again. To re-enter setup mode hold the button on the front of the smartplug down while the green LED is on.</p>
+
+<hr />
+
+<h4 id="pairing-the-smart-plug-with-your-emonbaseemonpi">Pairing the Smart Plug with your emonBase/emonPi</h4>
+
+<p>With the smartplug WIFI settings configured connect back to you home network, login to the local emoncms on your emonBase/emonPi and navigate to the DemandShaper module:</p>
+
+<p><img src="/images/integrations/demandshaper/sonoffs20/demandshaper1.png" alt="demandshaper1" /></p>
+
+<p>After a couple of minutes a notice will appear asking whether to allow device at the given ip address to connect:</p>
+
+<p><img src="/images/integrations/demandshaper/sonoffs20/demandshaper2.png" alt="demandshaper2" /></p>
+
+<p>Click allow and wait a couple of minutes for the device to appear. If it does not appear, try refreshing the page.</p>
+
+<p><img src="/images/integrations/demandshaper/sonoffs20/demandshaper3.png" alt="demandshaper3" /></p>
+
+<p><em>What happened here?:</em></p>
 
 <ol>
-  <li>Unix timestamp</li>
-  <li>Seconds since the start of the export</li>
-  <li>Date time string “2016-04-06 00:00:00”</li>
+  <li><em>The smart plug discovers the emonbase/emonpi automatically by listening out for the periodic UDP packet published by the emonbase/emonpi, enabled by the UDP broadcast script and triggered by keeping the demandshaper page open</em></li>
+  <li><em>Clicking on Allow provides the smart plug with the MQTT authentication details from the emonbase/emonpi automatically as part of a pairing process.</em></li>
+  <li><em>After connecting to MQTT the smartplug sent a descriptor message that automatically created and configured an emoncms device based on the smartplug device template in the emoncms device module</em></li>
 </ol>
 
-<p><strong>Unix timestamp</strong></p>
+<hr />
 
-<p><img src="/images/emoncms/csvexport_timestamp.png" alt="csv_export_1.png" /></p>
+<h4 id="using-the-demandshaper">Using the DemandShaper</h4>
 
-<p><strong>Date time string (i.e: 2019-11-01 00:00:00)</strong></p>
+<p><strong>Option 1: Turn On/Off directly</strong><br />
+The most basic mode of operation, turn on/off device from the interface:</p>
 
-<p><img src="/images/emoncms/csvexport_datetime.png" alt="csv_export_2.png" /></p>
+<p><img src="/images/integrations/demandshaper/sonoffs20/demandshaper4.png" alt="demandshaper3.png" /></p>
 
-<p><strong>Seconds since the start of the export</strong></p>
+<p><strong>Tip:</strong> The smartplug can be turned on and off at the plug as well by clicking the push button on the front of the smartplug. Refresh the page to see changes in the dashboard.</p>
 
-<p><img src="/images/emoncms/csvexport_secondsstart.png" alt="csv_export_3.png" /></p>
+<p><strong>Option 2: Use the smart scheduler</strong><br />
+Enter the period and end time of the schedule you wish to set and the demand shaper module will do the rest, automatically optimising the schedule for the lowest cost or lowest carbon time.</p>
 
-<p><strong>Example of exporting multiple feeds</strong></p>
+<p><img src="/images/integrations/demandshaper/sonoffs20/demandshaper3.png" alt="demandshaper3.png" /></p>
 
-<p>Multiple feeds can be exported for the same timestamps by selecting multiple feeds from the left hand feed selection menu.</p>
+<p><strong>Option 3: Set a manual timer:</strong><br />
+Set a manual timer for specific run times:</p>
 
-<p>Make sure that null values are shown to ensure that datapoints line up correctly.</p>
-
-<p><img src="/images/emoncms/csvexport_multiple.png" alt="csv_export_4.png" /></p>
-
-<h3 id="full-export-via-feed-interface">Full Export via Feed interface</h3>
-
-<p>Full feed exports can be obtained via the export tool that can be accessed from the feed list interface. The start time, end time interval and timezone offset can be selected and am estimate is given of the download size. Select a feed using the tick box selector and then click on the down-arrow icon in the feed list toolbar to open the feed export tool.</p>
-
-<p><img src="/images/emoncms/csvexport_feedlist.png" alt="csvexportfromfeeds.png" /></p>
+<p><img src="/images/integrations/demandshaper/sonoffs20/demandshaper5.png" alt="demandshaper4.png" /></p>
 
 
 </article>
@@ -717,7 +763,7 @@ highlight active link...
           <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
           <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>   
           <li><a  href='/integrations/demandshaper-openevse/'>+ Smart EV Charging </a></li>          
-          <li><a  href='/integrations/demandshaper-sonoff/'>+ Sonoff WiFi Smart Plug </a></li>                 
+          <li><a class='active' href='/integrations/demandshaper-sonoff/'>+ Sonoff WiFi Smart Plug </a></li>                 
         </ul>
       </li><li>
         <b>Emoncms</b>
@@ -729,7 +775,7 @@ highlight active link...
           <li><a  href='/emoncms/apps/'>Application dashboards </a></li>
           <li><a  href='/emoncms/daily-kwh/'>Calculating Daily kWh </a></li>
           <li><a  href='/emoncms/daily-averages/'>Calculating Averages </a></li>
-          <li><a class='active' href='/emoncms/export-csv/'>Exporting CSV </a></li>
+          <li><a  href='/emoncms/export-csv/'>Exporting CSV </a></li>
           <li><a  href='/emoncms/histograms/'>Histograms </a></li>
           <li><a  href='/emoncms/postprocess/'>Post Process </a></li>
           <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>

@@ -636,61 +636,15 @@ highlight active link...
   <li><a href="https://community.openenergymonitor.org/t/emoncms-demand-shaper-module/9097">Forum post: Demand Shaper module development</a></li>
 </ul>
 
-<h3 id="smart-charge-your-electric-vehicle">Smart Charge your Electric Vehicle</h3>
+<h3 id="guides">Guides</h3>
 
-<p>The most useful and developed application for the DemandShaper module at present is smart charging and electric vehicle using the OpenEVSE charging station and an OVMS Open Vehicle Monitor.</p>
+<h4 id="-smart-ev-charging"><a href="/integrations/demandshaper-openevse">+ Smart EV Charging</a></h4>
 
-<p><em>Add in system overview picture here:</em></p>
+<h4 id="-sonoff-wifi-smart-plug"><a href="/integrations/demandshaper-sonoff">+ Sonoff WiFi Smart Plug</a></h4>
 
-<pre style="font-family:monospace; font-size:14px; background-color: #eee; padding: 20px;">
-          agile forecast
-               |
-    Laptop -&gt; hub -&gt; OpenEVSE -&gt; car + OVMS
-</pre>
+<p><br /></p>
 
-<p><strong>Note:</strong> The automatic reading of EV state of charge is currently only supported when used in conjunction with the OVMS Open Vehicle Monitor, we would like to add support for other API’s in future releases. The following has been tested and is in active use with the Nissan Leaf 24 kWh. It should work with other vehicles that are supported by OVMS but we have not tested this yet.</p>
-
-<p><strong>Requirements</strong></p>
-
-<ul>
-  <li>emonPi/emonbase (raspberrypi running emonSD software stack).</li>
-  <li>OpenEVSE or EmonEVSE open source charging station</li>
-  <li>OVMS Open Vehicle Monitoring System plugged into OBD2 port of EV.</li>
-</ul>
-
-<p><strong>Setup</strong></p>
-
-<p>1. Start by connecting your OpenEVSE to your home WiFi network and configuring the MQTT settings following the <a href="https://guide.openenergymonitor.org/integrations/evse-setup/">OpenEVSE setup guide</a>.</p>
-
-<p>2. Navigate to the emoncms inputs page where a set of OpenEVSE inputs will appear including charge current, energy used and charger state.</p>
-
-<p><img src="/images/integrations/demandshaper/openevse_inputs.png" alt="openevse_inputs.png" /></p>
-
-<p>3. Click on the Cog to the top-right of the inputs to bring up the ‘Configure Device’ window. Select the EVSE &gt; OpenEVSE &gt; Default device template.</p>
-
-<p><img src="/images/integrations/demandshaper/openevse_deviceconfig1.png" alt="openevse_deviceconfig1.png" /></p>
-
-<p>4. Optional: To create a set of feeds from the OpenEVSE charger so that you can monitor it’s use over time: click Save and then Initialize to confirm.</p>
-
-<p><img src="/images/integrations/demandshaper/openevse_deviceconfig2.png" alt="openevse_deviceconfig2.png" /></p>
-
-<p>5. Navigate to the DemandShaper module in the top bar, the OpenEVSE device should now appear in the left hand menu. If it is not present try refreshing the page. Click on the OpenEVSE menu item to bring up the scheduler interface.</p>
-
-<p>Select the demand shaper signal you wish to use. If you are using the Octopus Agile tariff, select the relevant region from the drop down menu.</p>
-
-<p><img src="/images/integrations/demandshaper/demandshaper2.png" alt="demandshaper2.png" /></p>
-
-<p>To enable automatic reading of EV state of charge with OVMS enter your OVMS Vehicle ID and car password at the bottom of the page. Wait 5s for the settings to save and then refresh the page. You should now see the current SOC on the battery bar widget:</p>
-
-<p><img src="/images/integrations/demandshaper/demandshaper_ovms.png" alt="demandshaper_ovms.png" /></p>
-
-<p>Thats it, to schedule a charge enter the time that you wish the charge to complete by and select the battery % that you wish to reach.</p>
-
-<h3 id="sonoff-s20-wifi-smart-plug-scheduling">Sonoff S20 WiFi Smart Plug scheduling</h3>
-
-<p>In addition to electric vehicle smart charging with the OpenEVSE the DemandShaper module can currently be used to schedule Sonoff S20 WiFi smart plugs. An overview guide is included on the DemandShaper module open source repository readme here <a href="https://github.com/emoncms/demandshaper">https://github.com/emoncms/demandshaper</a>, including how to upload our custom EmonESP firmware for the Sonoff S20 smart plugs.</p>
-
-<h3 id="further-development">Further Development</h3>
+<h3 id="further-development"><a id="development" name="development"></a>Further Development</h3>
 
 <p>The DemandShaper modules is currently in an early beta stage of development for more information on features planned and for support using the module see the forum post: <a href="https://community.openenergymonitor.org/t/emoncms-demand-shaper-module/9097">Emoncms Demand Shaper module</a>.</p>
 
@@ -738,14 +692,6 @@ highlight active link...
           <li><a  href='/setup/north-america/'>Use in North America </a></li>
         </ul>
       </li><li>
-        <b>EV Charging & Control</b>
-        <ul>
-          <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
-          <li><a  href='/integrations/evse-setup'>EVSE User Guide Setup </a></li>
-          <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
-          <li><a class='active' href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>          
-        </ul>
-      </li><li>
         <b>Software Setup</b>
         <ul>
           <li><a  href='/setup/connect/'>1. Connect </a></li>
@@ -757,6 +703,16 @@ highlight active link...
           <li><a  href='/technical/credentials/'>7. Service Credentials </a></li>
           <li><a  href='/technical/mqtt/'>8. MQTT </a></li>
           <li><a  href='/setup/troubleshooting/'>9. Troubleshooting </a></li>
+        </ul>
+      </li><li>
+        <b>EV Charging & Control</b>
+        <ul>
+          <li><a  href='/integrations/ev-charging/'>Electric Vehicle Charging </a></li>
+          <li><a  href='/integrations/evse-setup'>EVSE User Guide Setup </a></li>
+          <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
+          <li><a class='active' href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>   
+          <li><a  href='/integrations/demandshaper-openevse/'>+ Smart EV Charging </a></li>          
+          <li><a  href='/integrations/demandshaper-sonoff/'>+ Sonoff WiFi Smart Plug </a></li>                 
         </ul>
       </li><li>
         <b>Emoncms</b>

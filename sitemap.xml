@@ -38,6 +38,12 @@
 <loc>http://guide.openenergymonitor.org/emoncms/dashboards/</loc>
 </url>
 <url>
+<loc>http://guide.openenergymonitor.org/integrations/demandshaper-openevse/</loc>
+</url>
+<url>
+<loc>http://guide.openenergymonitor.org/integrations/demandshaper-sonoff/</loc>
+</url>
+<url>
 <loc>http://guide.openenergymonitor.org/integrations/demandshaper/</loc>
 </url>
 <url>
@@ -174,10 +180,10 @@
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/images/integrations/OpenEVSE_flowchart.pdf</loc>
-<lastmod>2020-02-26T21:58:29+00:00</lastmod>
+<lastmod>2020-02-28T23:40:01+00:00</lastmod>
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/static/mdi-demo.html</loc>
-<lastmod>2020-02-26T21:58:29+00:00</lastmod>
+<lastmod>2020-02-28T23:40:01+00:00</lastmod>
 </url>
 </urlset>

@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Exporting CSV - Guide | OpenEnergyMonitor</title>
+    <title>Smart Charge your Electric Vehicle - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="Exporting CSV">
+    <meta name="description" content="Smart Charge your Electric Vehicle">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/emoncms/export-csv/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/integrations/demandshaper-openevse/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Exporting CSV">
+    <meta property="og:title" content="Smart Charge your Electric Vehicle">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/emoncms/export-csv/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/integrations/demandshaper-openevse/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Exporting CSV">
+    <meta property="og:description" content="Smart Charge your Electric Vehicle">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Exporting CSV">
-    <meta name="twitter:description" content="Exporting CSV">
+    <meta name="twitter:title" content="Smart Charge your Electric Vehicle">
+    <meta name="twitter:description" content="Smart Charge your Electric Vehicle">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -609,51 +609,55 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      Exporting CSV
+      Smart Charge Your Electric Vehicle
     </h1>
   </header>
   <hr class="divider">
   
 
-  <p>Its possible to easily export data selected using the emoncms data viewer by clicking on the <strong>Show CSV Output</strong> button at the bottom of the page. Multiple feeds can be selected with datapoints aligned to the same timestamps.</p>
+  <p>The following guide covers how to setup the Emon/OpenEVSE charging station and <a href="/integrations/demandshaper/">Emoncms DemandShaper module</a> to smart charge an electric vehicle based on day-ahead forecasts for the best time to use power.</p>
 
-<p>The data viewer CSV export tool is limited to 8928 datapoints. For larger exports the export tool that is part of the feed interface can be used, see below.</p>
+<p><img src="/images/integrations/demandshaper/emonevse/emonevse_hub.png" alt="emonevse_hub.png" /></p>
 
-<h3 id="data-viewer-csv-export-tool">Data viewer CSV export tool</h3>
+<p><strong>You will need:</strong></p>
 
-<p>There are 3 timestamp formats available:</p>
+<ul>
+  <li><a href="http://localhost/guide/integrations/ev-charging/">OpenEVSE or EmonEVSE open source EV charging station</a>.</li>
+  <li>emonBase or emonPi base-station running <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log#emonsd-17oct19-stable">emonSD-17Oct19 or newer</a>.</li>
+  <li>Optional: <a href="https://shop.openenergymonitor.com/open-vehicle-monitor-ovms-wifi-3g-europe">OVMS Open Vehicle Monitoring System</a> for automatic reading of EV battery state of charge.</li>
+</ul>
 
-<ol>
-  <li>Unix timestamp</li>
-  <li>Seconds since the start of the export</li>
-  <li>Date time string “2016-04-06 00:00:00”</li>
-</ol>
+<p><strong>OVMS:</strong> The <a href="https://shop.openenergymonitor.com/open-vehicle-monitor-ovms-wifi-3g-europe/">OVMS Open Vehicle Monitor</a> is a module that plugs into the OBD2 port of an EV. It can access a lot of detailed information about the vehicle and battery status for a wide variety of EV models. The DemandShaper module integrates with OVMS in order to access the state-of-charge to calculate how long a charge session needs to be.</p>
 
-<p><strong>Unix timestamp</strong></p>
+<p><strong>Custom SOC integration:</strong> It is also possible to provide the DemandShaper module with a state-of-charge value using an emoncms input e.g <code class="highlighter-rouge">openevse/soc</code>. If you have a script that reads the state-of-charge you can pass it on to the DemandShaper module using this approach.</p>
 
-<p><img src="/images/emoncms/csvexport_timestamp.png" alt="csv_export_1.png" /></p>
+<h4 id="setup">Setup</h4>
 
-<p><strong>Date time string (i.e: 2019-11-01 00:00:00)</strong></p>
+<p>1. Start by connecting your OpenEVSE to your home WiFi network and configuring the MQTT settings following the <a href="https://guide.openenergymonitor.org/integrations/evse-setup/">OpenEVSE setup guide</a>.</p>
 
-<p><img src="/images/emoncms/csvexport_datetime.png" alt="csv_export_2.png" /></p>
+<p>2. Navigate to the emoncms inputs page where a set of OpenEVSE inputs will appear including charge current, energy used and charger state.</p>
 
-<p><strong>Seconds since the start of the export</strong></p>
+<p><img src="/images/integrations/demandshaper/emonevse/openevse_inputs.png" alt="openevse_inputs.png" /></p>
 
-<p><img src="/images/emoncms/csvexport_secondsstart.png" alt="csv_export_3.png" /></p>
+<p>3. Click on the Cog to the top-right of the inputs to bring up the ‘Configure Device’ window. Select the EVSE &gt; OpenEVSE &gt; Default device template.</p>
 
-<p><strong>Example of exporting multiple feeds</strong></p>
+<p><img src="/images/integrations/demandshaper/emonevse/openevse_deviceconfig1.png" alt="openevse_deviceconfig1.png" /></p>
 
-<p>Multiple feeds can be exported for the same timestamps by selecting multiple feeds from the left hand feed selection menu.</p>
+<p>4. Optional: To create a set of feeds from the OpenEVSE charger so that you can monitor it’s use over time: click Save and then Initialize to confirm.</p>
 
-<p>Make sure that null values are shown to ensure that datapoints line up correctly.</p>
+<p><img src="/images/integrations/demandshaper/emonevse/openevse_deviceconfig2.png" alt="openevse_deviceconfig2.png" /></p>
 
-<p><img src="/images/emoncms/csvexport_multiple.png" alt="csv_export_4.png" /></p>
+<p>5. Navigate to the DemandShaper module in the top bar, the OpenEVSE device should now appear in the left hand menu. If it is not present try refreshing the page. Click on the OpenEVSE menu item to bring up the scheduler interface.</p>
 
-<h3 id="full-export-via-feed-interface">Full Export via Feed interface</h3>
+<p>Select the demand shaper signal you wish to use. If you are using the Octopus Agile tariff, select the relevant region from the drop down menu.</p>
 
-<p>Full feed exports can be obtained via the export tool that can be accessed from the feed list interface. The start time, end time interval and timezone offset can be selected and am estimate is given of the download size. Select a feed using the tick box selector and then click on the down-arrow icon in the feed list toolbar to open the feed export tool.</p>
+<p><img src="/images/integrations/demandshaper/emonevse/demandshaper2.png" alt="demandshaper2.png" /></p>
 
-<p><img src="/images/emoncms/csvexport_feedlist.png" alt="csvexportfromfeeds.png" /></p>
+<p>To enable automatic reading of EV state of charge with OVMS enter your OVMS Vehicle ID and car password at the bottom of the page. Wait 5s for the settings to save and then refresh the page. You should now see the current SOC on the battery bar widget:</p>
+
+<p><img src="/images/integrations/demandshaper/emonevse/demandshaper_ovms.png" alt="demandshaper_ovms.png" /></p>
+
+<p>Thats it, to schedule a charge enter the time that you wish the charge to complete by and select the battery % that you wish to reach.</p>
 
 
 </article>
@@ -716,7 +720,7 @@ highlight active link...
           <li><a  href='/integrations/evse-setup'>EVSE User Guide Setup </a></li>
           <li><a  href='/integrations/mqtt-relay/'>Control Relay </a></li>
           <li><a  href='/integrations/demandshaper/'>Emoncms DemandShaper </a></li>   
-          <li><a  href='/integrations/demandshaper-openevse/'>+ Smart EV Charging </a></li>          
+          <li><a class='active' href='/integrations/demandshaper-openevse/'>+ Smart EV Charging </a></li>          
           <li><a  href='/integrations/demandshaper-sonoff/'>+ Sonoff WiFi Smart Plug </a></li>                 
         </ul>
       </li><li>
@@ -729,7 +733,7 @@ highlight active link...
           <li><a  href='/emoncms/apps/'>Application dashboards </a></li>
           <li><a  href='/emoncms/daily-kwh/'>Calculating Daily kWh </a></li>
           <li><a  href='/emoncms/daily-averages/'>Calculating Averages </a></li>
-          <li><a class='active' href='/emoncms/export-csv/'>Exporting CSV </a></li>
+          <li><a  href='/emoncms/export-csv/'>Exporting CSV </a></li>
           <li><a  href='/emoncms/histograms/'>Histograms </a></li>
           <li><a  href='/emoncms/postprocess/'>Post Process </a></li>
           <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
