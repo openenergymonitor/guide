@@ -16,13 +16,6 @@
 
     </ul>
   </li><li>
-    <b>EV Charging & Control</b>
-    <ul>
-      <li><a  href='<?php echo $path; ?>integrations/ev-charging/'>Electric Vehicle Charging </a></li>
-      <li><a  href='<?php echo $path; ?>integrations/mqtt-relay/'>Control Relay </a></li>
-      <li><a  href='<?php echo $path; ?>integrations/demandshaper/'>Emoncms DemandShaper </a></li>
-    </ul>
-  </li><li>
     <b>Software Setup</b>
     <ul>
       <li><a  href='<?php echo $path; ?>setup/connect/'>1. Connect </a></li>
@@ -34,6 +27,16 @@
       <li><a  href='<?php echo $path; ?>technical/credentials/'>7. Service Credentials </a></li>
       <li><a  href='<?php echo $path; ?>technical/mqtt/'>8. MQTT </a></li>
       <li><a  href='<?php echo $path; ?>setup/troubleshooting/'>9. Troubleshooting </a></li>
+    </ul>
+  </li><li>
+    <b>EV Charging & Control</b>
+    <ul>
+      <li><a  href='<?php echo $path; ?>integrations/ev-charging/'>Electric Vehicle Charging</a></li>
+      <li><a  href='<?php echo $path; ?>integrations/ev-setup/'>EVSE User Guide Setup</a></li>
+      <li><a  href='<?php echo $path; ?>integrations/mqtt-relay/'>Control Relay</a></li>
+      <li><a  href='<?php echo $path; ?>integrations/demandshaper/'>Emoncms DemandShaper</a></li>
+      <li><a  href='<?php echo $path; ?>integrations/demandshaper-openevse/'>+ Smart EV Charging</a></li>
+      <li><a  href='<?php echo $path; ?>integrations/demandshaper-sonoff/'>+ Sonoff WiFi Smart Plug</a></li>
     </ul>
   </li><li>
     <b>Emoncms</b>
