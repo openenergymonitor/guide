@@ -16,13 +16,13 @@ The following guide covers how to setup the Emon/OpenEVSE charging station and [
 
 **You will need:**
  
-- [OpenEVSE or EmonEVSE open source EV charging station](http://localhost/guide/integrations/ev-charging/).
+- [OpenEVSE or EmonEVSE open source EV charging station](/integrations/ev-charging/)
 - emonBase or emonPi base-station running [emonSD-17Oct19 or newer](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log#emonsd-17oct19-stable).
 - Optional: [OVMS Open Vehicle Monitoring System](https://shop.openenergymonitor.com/open-vehicle-monitor-ovms-wifi-3g-europe) for automatic reading of EV battery state of charge.
 
 **OVMS:** The [OVMS Open Vehicle Monitor](https://shop.openenergymonitor.com/open-vehicle-monitor-ovms-wifi-3g-europe/) is a module that plugs into the OBD2 port of an EV. It can access a lot of detailed information about the vehicle and battery status for a wide variety of EV models. The DemandShaper module integrates with OVMS in order to access the state-of-charge to calculate how long a charge session needs to be.
 
-**Custom SOC integration:** It is also possible to provide the DemandShaper module with a state-of-charge value using an emoncms input e.g `openevse/soc`. If you have a script that reads the state-of-charge you can pass it on to the DemandShaper module using this approach.
+**Custom SOC integration:** It is also possible to provide the DemandShaper module with a state-of-charge value using an emoncms input e.g `openevse/soc`. If you have a script that reads the state-of-charge you can pass it on to the DemandShaper module using this approach. You can create an emoncms input `openevse/soc` by posting the SOC to MQTT topic `emon/openevse/soc`
  
 #### Setup
  
