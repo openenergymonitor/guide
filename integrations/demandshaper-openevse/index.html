@@ -622,14 +622,14 @@ highlight active link...
 <p><strong>You will need:</strong></p>
 
 <ul>
-  <li><a href="http://localhost/guide/integrations/ev-charging/">OpenEVSE or EmonEVSE open source EV charging station</a>.</li>
+  <li><a href="/integrations/ev-charging/">OpenEVSE or EmonEVSE open source EV charging station</a></li>
   <li>emonBase or emonPi base-station running <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log#emonsd-17oct19-stable">emonSD-17Oct19 or newer</a>.</li>
   <li>Optional: <a href="https://shop.openenergymonitor.com/open-vehicle-monitor-ovms-wifi-3g-europe">OVMS Open Vehicle Monitoring System</a> for automatic reading of EV battery state of charge.</li>
 </ul>
 
 <p><strong>OVMS:</strong> The <a href="https://shop.openenergymonitor.com/open-vehicle-monitor-ovms-wifi-3g-europe/">OVMS Open Vehicle Monitor</a> is a module that plugs into the OBD2 port of an EV. It can access a lot of detailed information about the vehicle and battery status for a wide variety of EV models. The DemandShaper module integrates with OVMS in order to access the state-of-charge to calculate how long a charge session needs to be.</p>
 
-<p><strong>Custom SOC integration:</strong> It is also possible to provide the DemandShaper module with a state-of-charge value using an emoncms input e.g <code class="highlighter-rouge">openevse/soc</code>. If you have a script that reads the state-of-charge you can pass it on to the DemandShaper module using this approach.</p>
+<p><strong>Custom SOC integration:</strong> It is also possible to provide the DemandShaper module with a state-of-charge value using an emoncms input e.g <code class="highlighter-rouge">openevse/soc</code>. If you have a script that reads the state-of-charge you can pass it on to the DemandShaper module using this approach. You can create an emoncms input <code class="highlighter-rouge">openevse/soc</code> by posting the SOC to MQTT topic <code class="highlighter-rouge">emon/openevse/soc</code></p>
 
 <h4 id="setup">Setup</h4>
 
