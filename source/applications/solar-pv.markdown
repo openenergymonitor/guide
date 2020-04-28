@@ -41,7 +41,9 @@ Emoncms is pre-installed on the emonPi and can run locally and or data can be po
 
 ### Required Hardware
 
-See Solar PV tab of [Setup > Required Hardware](/setup/)
+[emonPi Solar PV Bundle](https://shop.openenergymonitor.com/emonpi-solar-pv-bundle/)
+
+<p><a class="btn pull-right" href="http://shop.openenergymonitor.com/emonpi-solar-pv-bundle/">View in Shop →</a></p>
 
 The Emoncms setup instructions below are applicable to both the emonPi and the emonTx where CT1 is either site-consumption (Type 1 system) or import/export (Type 2 system) and CT2 is solar generation. If using an emonTx to monitor generation or site-consumption substitute the 'log to feed' instructions to use an input from the emonTx instead of emonPi (CT4 on the emontx a 0-4kW channel providing higher accuracy for this range and may be suitable for the solar CT if system capacity is less than 4kW).
 
@@ -156,7 +158,7 @@ The Emoncms setup instructions below are applicable to both the emonPi and the e
 -- // Lightbox ------------------------------------------------------
 -------------------------------------------------------------------->
 
-It is important that an  AC-AC adapter is used for both type 1 and type 2 solar PV systems. Without an AC-AC adapter the power reading can be significantly wrong - especially at night - due to the low power factor from some solar PV inverters. Further, at times an inverter might be consuming a small amount of grid power; without using an AC-AC adapter there would be no way to distinguish this consumption from generation and establish the true power flow direction.
+It is important that an  AC-AC adapter (included as default in the [emonPi solar PV bundle](https://shop.openenergymonitor.com/emonpi-solar-pv-bundle/)is used for both type 1 and type 2 solar PV systems. Without an AC-AC adapter the power reading can be significantly wrong - especially at night - due to the low power factor from some solar PV inverters. Further, at times an inverter might be consuming a small amount of grid power; without using an AC-AC adapter there would be no way to distinguish this consumption from generation and establish the true power flow direction.
 
 <p class='note warning'>
 <a href="https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/installation">Please read the CT installation guide before installing.</a>
