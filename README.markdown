@@ -48,8 +48,8 @@ source ~/.bashrc
 4. Install the latest stable version of Ruby and set it as a default version with:
 
 ```
-rbenv install 2.7.1
-rbenv global 2.7.1
+rbenv install 2.7.0
+rbenv global 2.7.0
 ```
 
 To list all available Ruby versions you can use: `rbenv install -l`
