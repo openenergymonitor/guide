@@ -25,20 +25,44 @@ Using all the shiny new toys: powered by Jekyll and the Oscalite theme. Hosted b
 
 #### Install Ruby
 
-Jekyll requires Ruby 2.x and bundler installed. Ubuntu 14.04 only includes 1.9.3 in it's packages. Solution use RVM (Ruby version manager), install with:
+Jekyll requires Ruby 2.x and bundler installed
 
-```
-$ gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-$ \curl -sSL https://get.rvm.io | bash -s stable
-```
+To install Ruby:
 
-Perform any further tasks recomended by rvm installer then restart shell session to re-load bash profile.
-
+1. First, update the packages index and install the packages required for the ruby-build tool to build Ruby from source:
 ```
-$ rvm install 2.3
+sudo apt update
+sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
 ```
 
-#### Install required Ruby Gems
+2. Add $HOME/.rbenv/bin to the system PATH.
+```
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+source ~/.bashrc
+```
+3. Next, run the following curl command to install both rbenv and ruby-build:
+
+`curl -sL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash -`
+
+4. Install the latest stable version of Ruby and set it as a default version with:
+
+```
+rbenv install 2.7.1
+rbenv global 2.7.1
+```
+
+To list all available Ruby versions you can use: `rbenv install -l`
+
+5. Verify that Ruby was properly installed by printing out the version number:
+
+`ruby -v`
+
+6. Install rubygems
+
+`sudo apt-get install rubygems`
+
+#### Install bundler and required gems
 
 ```
 $ gem install bundler
