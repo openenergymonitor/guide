@@ -246,5 +246,5 @@ exit
 
 <pre class="code">
 $ sudo su
-$ /opt/openenergymonitor/emonpi/factoryreset
+$ /opt/openenergymonitor/EmonScripts/other/factoryreset
 </pre>
