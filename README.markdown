@@ -32,7 +32,7 @@ To install Ruby:
 1. First, update the packages index and install the packages required for the ruby-build tool to build Ruby from source:
 ```
 sudo apt update
-sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev
+sudo apt install git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev rbenv
 ```
 
 2. Add $HOME/.rbenv/bin to the system PATH.
