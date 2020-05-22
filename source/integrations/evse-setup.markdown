@@ -191,10 +191,6 @@ OpenEVSE can be setup to log data directly to Emoncms for datalogging and visual
 
 ### Input Processing
 
-First enable Device Module view (currently beta)
-
-![](/images/integrations/1-evse-sw.png)
-
 On the Emoncms Inputs page click the ‘cog’ icon on the OpenEVSE device to log OpenEVSE Inputs to Feeds using Device Module template:
 
 *Note: If OpenEVSE Inputs are not present see section 1 to check OpenEVSE WiFi Emoncms service setup settings.*
