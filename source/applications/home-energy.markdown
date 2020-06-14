@@ -9,7 +9,7 @@ sharing: true
 footer: true
 ---
 
-<p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emonPi-3">View in Shop →</a></p>
+<p><a class="btn pull-right" href="https://shop.openenergymonitor.com/emonpi/">View in Shop →</a></p>
 
 The OpenEnergyMonitor system can be used as a simple home energy monitoring system for understanding energy consumption.
 
