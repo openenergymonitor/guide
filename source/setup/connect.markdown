@@ -103,17 +103,6 @@ After a few seconds 'Connection Info' should refresh automatically to report `St
 
 ---
 
-### {% linkable_title Option 4: Connect via 3G GSM %}
-
-Huawei HiLink 3G USB GSM/3G dongle modems are supported. Connection should be automatic and LCD will display connection status. (*Tested with Huawei E3231 and E3131*).
-
-![3g.jpg](/images/setup/3g.jpg)
-
-
-[GSM Documentation](https://github.com/openenergymonitor/huawei-hilink-status) \| [WiFi Access -point setup (dev)](https://github.com/openenergymonitor/emonpi/tree/master/wifiAP)
-
----
-
 ### {% linkable_title Advanced: Assign static IP %}
 
 
