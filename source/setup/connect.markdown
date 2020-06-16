@@ -85,8 +85,6 @@ If the hostname does not work, it is usually possible to find a list of devices 
 
 You should now see the emoncms user login page. Register a new account and then continue to the next step [Log Locally](/setup/local) to configure your system.
 
-**UPDATE HIGHLY RECOMMENDED:** Now your emonPi/emonBase is connected to a network this would be a good time to pull in any new updates: `Setup > Admin > Update`
-
 ---
 
 ### {% linkable_title  Option 3: Connect to Ethernet and then configure Wifi %}
