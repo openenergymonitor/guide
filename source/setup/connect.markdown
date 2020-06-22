@@ -85,8 +85,6 @@ If the hostname does not work, it is usually possible to find a list of devices 
 
 You should now see the emoncms user login page. Register a new account and then continue to the next step [Log Locally](/setup/local) to configure your system.
 
-**UPDATE HIGHLY RECOMMENDED:** Now your emonPi/emonBase is connected to a network this would be a good time to pull in any new updates: `Setup > Admin > Update`
-
 ---
 
 ### {% linkable_title  Option 3: Connect to Ethernet and then configure Wifi %}
@@ -100,17 +98,6 @@ Network scan should happen automatically and show the available WiFi networks:
 Check the box to select the network(s) you want to connect to. Enter the PSK password and then click `Save and Connect`.
 
 After a few seconds 'Connection Info' should refresh automatically to report `Status: Connected` and after a few more seconds the IP address should appear.
-
----
-
-### {% linkable_title Option 4: Connect via 3G GSM %}
-
-Huawei HiLink 3G USB GSM/3G dongle modems are supported. Connection should be automatic and LCD will display connection status. (*Tested with Huawei E3231 and E3131*).
-
-![3g.jpg](/images/setup/3g.jpg)
-
-
-[GSM Documentation](https://github.com/openenergymonitor/huawei-hilink-status) \| [WiFi Access -point setup (dev)](https://github.com/openenergymonitor/emonpi/tree/master/wifiAP)
 
 ---
 
