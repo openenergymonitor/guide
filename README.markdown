@@ -74,8 +74,7 @@ $ bundle
 ### Preview site locally
 
 ```
-$ rake generate
-$ rake generate preview
+$ bundle exec rake generate preview
 ```
 
 [https://localhost:4001](https://localhost:4001)
