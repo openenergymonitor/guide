@@ -617,13 +617,11 @@ highlight active link...
 
   <p><a class="btn pull-right" href="http://shop.openenergymonitor.com/emonpi-solar-pv-bundle/">View in Shop →</a></p>
 
-<p>The OpenEnergyMonitor Solar PV monitor is a tool to help you make the most of your solar generation.</p>
+<p>The OpenEnergyMonitor Solar PV monitor provides real-time and historic information on solar generation on on-site consumption.</p>
 
-<p>Providing real-time and historic information on your solar generation and demand matching, it will help you make better use of available solar power.</p>
+<p>MySolarPV is a dashboard app which runs on Emoncms.</p>
 
-<p>MySolar PV is a dashboard app which runs on Emoncms.</p>
-
-<p>Emoncms is pre-installed on the emonPi and can run locally and or data can be posted to our remote emoncms server <a href="https://emoncms.org">Emoncms.org</a></p>
+<p>Emoncms and MySolarPV are pre-installed on the emonPi and can run locally and or data can be posted to our remote emoncms server <a href="https://emoncms.org">Emoncms.org</a></p>
 
 <p><img src="/images/applications/solar-pv/my-solar-pv.jpg" alt="SolarPV" /></p>
 
@@ -653,7 +651,7 @@ highlight active link...
 
 <p><a class="btn pull-right" href="http://shop.openenergymonitor.com/emonpi-solar-pv-bundle/">View in Shop →</a></p>
 
-<p>The Emoncms setup instructions below are applicable to both the emonPi and the emonTx where CT1 is either site-consumption (Type 1 system) or import/export (Type 2 system) and CT2 is solar generation. If using an emonTx to monitor generation or site-consumption substitute the ‘log to feed’ instructions to use an input from the emonTx instead of emonPi (CT4 on the emontx a 0-4kW channel providing higher accuracy for this range and may be suitable for the solar CT if system capacity is less than 4kW).</p>
+<p>The Emoncms setup instructions below are applicable to both the emonPi and the emonTx.</p>
 
 <h3 id="-sensor-installation"><a class="title-link" name="sensor-installation" href="#sensor-installation"></a> Sensor Installation</h3>
 
@@ -766,7 +764,9 @@ highlight active link...
 -- // Lightbox ------------------------------------------------------
 -------------------------------------------------------------------->
 
-<p>It is important that an  AC-AC adapter (included as default in the <a href="https://shop.openenergymonitor.com/emonpi-solar-pv-bundle/">emonPi solar PV bundle</a>is used for both type 1 and type 2 solar PV systems. Without an AC-AC adapter the power reading can be significantly wrong - especially at night - due to the low power factor from some solar PV inverters. Further, at times an inverter might be consuming a small amount of grid power; without using an AC-AC adapter there would be no way to distinguish this consumption from generation and establish the true power flow direction.</p>
+<p>It is important that an  AC-AC adapter (included as default in the <a href="https://shop.openenergymonitor.com/emonpi-solar-pv-bundle/">emonPi solar PV bundle</a>is used for solar PV monitoring. Without an AC-AC adapter the power reading can be significantly incorrect - especially at night - due to the low power factor from some solar PV inverters. Further, at times an inverter might be consuming a small amount of grid power; without using an AC-AC adapter there would be no way to distinguish this consumption from generation and establish the true power flow direction.</p>
+
+<p><strong>All sensors should be connected to the emonPi before powering up</strong></p>
 
 <p class="note warning">
 <a href="https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/installation">Please read the CT installation guide before installing.</a>
@@ -774,140 +774,60 @@ Your safety is your responsibility. Clip-on current sensors are non-invasive and
 </p>
 
 <p class="note">
-The clip-on CT sensors must be clipped round either the live or Neutral AC wire. <strong>Not both</strong>.
+The clip-on CT sensors must be clipped round either the Line or Neutral AC wire. <strong>Not both</strong>.
 </p>
 
 <p><img src="/images/applications/solar-pv/ctinstall.jpg" alt="CT sensor installation " /></p>
 
 <p><img src="/images/applications/solar-pv/emonpi-type1-solarpv.png" alt="emonPi Type 1 Solar PV" /></p>
 
-<p><strong>Type 1 solar PV System:</strong> When the generation and site-consumption <strong>can</strong> be monitored separately. The amount exported/imported to or from the grid is the difference between generation and site-consumption.</p>
+<p><strong>Type 1 solar PV System:</strong> The generation and site-consumption <strong>can</strong> be monitored separately. The amount exported/imported to or from the grid is the difference between generation and site-consumption.</p>
 
 <blockquote>
   <p><em>Type 1 system:  Grid (import/export) = site-consumption – Generation</em></p>
 </blockquote>
 
-<p><strong>Type 2 solar PV System:</strong> When the generation and import can be monitored separately, but site-consumption <strong>cannot</strong>, for example where:</p>
-
-<ul>
-  <li>the PV inverter output is fed into the fuse box (consumer unit) and the household loads are connected to other circuits in the same fuse box, or</li>
-  <li>it’s physically difficult to attach a CT sensor to anywhere after the import and generation supplies meet (e.g. to the meter tails from the junction point to the fuse box).</li>
-</ul>
-
-<p>If this is the case, the output from the PV inverter and the grid import/export connection will need to be monitored and site-consumption calculated by subtracting.</p>
-
-<blockquote>
-  <p><em>Type 2 system:  Site-consumption = Generation + Grid import (negative when exporting)</em></p>
-</blockquote>
-
-<p class="note">
-The polarity of the power readings depends on the orientation of the clip-on CT sensor. Orientate the CTs so that generation and site-consumption is positive and grid import/export is <b>positive when importing and negative when exporting</b>. The correct orientation can be determined by trial and error. But for CT sensors from our shop, the writing on the side should normally be on the downstream/consumer side, so try that first.
-</p>
-
-<h4 id="-device-setup-shortcut"><a class="title-link" name="device-setup-shortcut" href="#device-setup-shortcut"></a> Device Setup shortcut</h4>
-
-<p>For new installations, if you have connected:</p>
-
-<ul>
-  <li>CT1 (power 1) = grid import (positive) / export (negative), and</li>
-  <li>CT2 (power 2) = solar generation,</li>
-</ul>
-
-<p>then you can use the shortcut menu <em>Setup &gt; Device Setup</em> to configure your inputs automatically.</p>
-
-<p>Click on the spanner icon next to your emonPi, and then from the left-hand menu choose <em>OpenEnergyMonitor &gt; EmonPi &gt; Solar PV Type 1/2</em> (as appropriate). Click <em>Save</em> and it will create or reset your Input configurations to the recommended values.</p>
-
-<h4 id="-type-1-system-setup"><a class="title-link" name="type-1-system-setup" href="#type-1-system-setup"></a> Type 1 System Setup</h4>
-
-<p class="note">
-For automatic MySolarPV App setup use the suggested feed names mentioned below in <b>bold</b>. These names are case sensitive.
-</p>
-
-<p>The following assumes:</p>
+<p>Connect CT’s are follows:</p>
 
 <ul>
   <li>CT1 (power 1) = site consumption.</li>
   <li>CT2 (power 2) = solar generation.</li>
 </ul>
 
-<p><strong>1. Setup site-consumption Feed</strong></p>
-
-<ol>
-  <li>Click on spanner icon to configure <code class="highlighter-rouge">emonPi/power1</code>.</li>
-  <li>Add the following process steps under <strong>Add process</strong>:
-    <ol>
-      <li><strong>Log to feed</strong>, called <strong>use</strong>, with feed engine <strong>PHPFINA</strong>, at <strong>10s</strong> interval.</li>
-      <li><strong>Power to kWh</strong>, called <strong>use_kwh</strong>, with feed engine <strong>PHPFINA</strong>, at <strong>10s</strong> interval.</li>
-      <li><strong>- input</strong>, choosing <strong>power2:</strong>. This will subtract the solar generation from the current value, giving us what’s being imported.</li>
-      <li><strong>Allow positive</strong>. This will allow only positive values to pass, since import is only if this number is positive.</li>
-      <li><strong>Log to feed</strong>, called <strong>import</strong>, with feed engine <strong>PHPFINA</strong>, at <strong>10s</strong> interval.</li>
-      <li><strong>Power to kWh</strong>, called <strong>import_kwh</strong>, with feed engine <strong>PHPFINA</strong>, at <strong>10s</strong> interval.</li>
-    </ol>
-  </li>
-</ol>
-
-<p><strong>2. Setup Solar PV Generation Feed</strong></p>
-
-<ol>
-  <li>Click on spanner icon to configure <code class="highlighter-rouge">emonPi/power2</code>.</li>
-  <li>Add the following process steps under <strong>Add process</strong>:
-    <ol>
-      <li><strong>Log to feed</strong>, called <strong>solar</strong>, with feed engine <strong>PHPFINA</strong>, at <strong>10s</strong> interval.</li>
-      <li><strong>Power to kWh</strong>, called <strong>solar_kwh</strong>, with feed engine <strong>PHPFINA</strong>, at <strong>10s</strong> interval.</li>
-    </ol>
-  </li>
-</ol>
-
-<p>Once complete click on <code class="highlighter-rouge">Apps &gt; MySolarPV</code> in order to launch the MySolarPV Emoncms app, If you decide to use custom feed names the app will give you the option to select your solar, use and import feeds.</p>
-
-<h4 id="-type-2-system-setup"><a class="title-link" name="type-2-system-setup" href="#type-2-system-setup"></a> Type 2 System Setup</h4>
-
-<p class="note">
-For automatic MySolarPV App setup use the suggested feed names mendtioned below in <b>bold</b>. These names are case sensitive.
-</p>
-
-<p>The following assumes:</p>
+<p><strong>Type 2 solar PV System:</strong> When the generation and import can be monitored separately, but site-consumption <strong>cannot</strong>, for example where:</p>
 
 <ul>
-  <li>CT1 (power 1) = grid import (positive) / export (negative).</li>
-  <li>CT2 (power 2) = solar generation.</li>
+  <li>the PV inverter output is fed into the fuse box (consumer unit) and the household loads are connected to other circuits in the same fuse box, or</li>
+  <li>It’s physically difficult to attach a CT sensor to anywhere after the import and generation supplies meet (e.g. to the meter tails from the junction point to the fuse box).</li>
 </ul>
 
-<p><strong>1. Setup Grid Import Feed</strong></p>
+<p>Connect CT’s as follows:</p>
+<ul>
+  <li>CT1 (power 1) = grid import (positive) / export (negative), and</li>
+  <li>CT2 (power 2) = solar generation,</li>
+</ul>
 
-<ol>
-  <li>Click on spanner icon to configure <code class="highlighter-rouge">emonPi/power1</code></li>
-  <li>Add the following process steps under <strong>Add process</strong>:
-    <ol>
-      <li><strong>Allow positive</strong>. This will isolate only import.</li>
-      <li><strong>Log to feed</strong>, called <strong>import</strong>, with feed engine <strong>PHPFINA</strong>, at <strong>10s</strong> interval.</li>
-      <li><strong>Power to kWh</strong>, called <strong>import_kwh</strong>, with feed engine <strong>PHPFINA</strong>, at <strong>10s</strong> interval.</li>
-    </ol>
-  </li>
-</ol>
+<blockquote>
+  <p><em>Type 2 system:  Site-consumption = Generation + Grid import (negative when exporting)</em></p>
+</blockquote>
 
-<p><strong>2. Setup Solar Generation Feed</strong></p>
+<p><strong>All solar PV systems can be monitored using the Type-2 method</strong></p>
 
-<ol>
-  <li>Click on spanner icon to configure <code class="highlighter-rouge">emonPi/power2</code></li>
-  <li>Add the following process steps under <strong>Add process</strong>:
-    <ol>
-      <li><strong>Log to feed</strong>, called <strong>solar</strong>, with feed engine <strong>PHPFINA</strong>, at <strong>10s</strong> interval.</li>
-      <li><strong>Power to kWh</strong>, called <strong>solar_kwh</strong>, with feed engine <strong>PHPFINA</strong>, at <strong>10s</strong> interval.</li>
-      <li><strong>+ input</strong>, choosing <strong>power1:</strong>. This adds grid import/export to the solar generation, to calculate site consumption.</li>
-      <li><strong>Log to feed</strong>, called <strong>use</strong>, with feed engine <strong>PHPFINA</strong>, at <strong>10s</strong> interval.</li>
-      <li><strong>Power to kWh</strong>, called <strong>use_kwh</strong>, with feed engine <strong>PHPFINA</strong>, at <strong>10s</strong> interval.</li>
-    </ol>
-  </li>
-</ol>
+<p class="note">
+The polarity of the power readings depends on the orientation of the clip-on CT sensor. Orientate the CTs so that generation and site-consumption is positive and grid import/export is <b>positive when importing and negative when exporting</b>. The correct orientation can be determined by trial and error. But for CT sensors from our shop, the writing on the side should normally be on the downstream/consumer side, so try that first.
+</p>
 
-<h3 id="-configure-mysolarpv-app"><a class="title-link" name="configure-mysolarpv-app" href="#configure-mysolarpv-app"></a> Configure MySolarPV App</h3>
+<h3 id="-device-setup"><a class="title-link" name="device-setup" href="#device-setup"></a> Device Setup</h3>
 
-<p>With your emonPi or emonTx inputs configured as above and with use of the suggested feed names the MySolarPV app will launch with no further configuration required.</p>
+<p>Click on the spanner icon next to your emonPi, and then from the left-hand menu choose <em>OpenEnergyMonitor &gt; EmonPi &gt; Solar PV Type 1/2</em> (as appropriate). Click <em>Save</em> and it will create or reset your Input configurations to the recommended values.</p>
 
-<p>Alternatively the MySolar app will automatically show the configuration screen if it can’t detect the expected feeds. It’s then possible to select feeds from the drop down feed selector menus:</p>
+<p>Here’s a video guide to setting up a solar feeds using Device Manager:</p>
 
-<p>Once the required feeds are selected, the Launch App button will appear.</p>
+<div class="videoWrapper">
+<iframe width="560" height="315" src="https://youtu.be/Nc6YSWqqxkA" frameborder="0" allowfullscreen=""></iframe>
+</div>
+
+<p>Once setup is complete click on <code class="highlighter-rouge">Apps &gt; MySolarPV</code> in order to launch the MySolarPV Emoncms app. The MySolarPV app should automatically detect the solar PV feeds.</p>
 
 <p><img src="/images/applications/solar-pv/my-solarpv-config.png" alt="my-solarpv-config" /></p>
 
