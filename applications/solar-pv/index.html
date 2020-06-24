@@ -764,13 +764,13 @@ highlight active link...
 -- // Lightbox ------------------------------------------------------
 -------------------------------------------------------------------->
 
-<p>It is important that an  AC-AC adapter (included as default in the <a href="https://shop.openenergymonitor.com/emonpi-solar-pv-bundle/">emonPi solar PV bundle</a>is used for solar PV monitoring. Without an AC-AC adapter the power reading can be significantly incorrect - especially at night - due to the low power factor from some solar PV inverters. Further, at times an inverter might be consuming a small amount of grid power; without using an AC-AC adapter there would be no way to distinguish this consumption from generation and establish the true power flow direction.</p>
+<p>It is important that an  AC-AC adapter (included as default in the <a href="https://shop.openenergymonitor.com/emonpi-solar-pv-bundle/">emonPi solar PV bundle</a> is used for solar PV monitoring.</p>
 
 <p><strong>All sensors should be connected to the emonPi before powering up</strong></p>
 
 <p class="note warning">
 <a href="https://learn.openenergymonitor.org/electricity-monitoring/ct-sensors/installation">Please read the CT installation guide before installing.</a>
-Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated, i.e. power is switched off, prior to installing your sensors, and proceeding slowly with care. If you have any doubts, seek professional assistance.
+Your safety is your responsibility. Clip-on current sensors are non-invasive and should not have direct contact with the AC mains. However, installing the sensors will require working in close proximity to cables carrying high voltage. As a precaution, we recommend ensuring the cables are fully isolated prior to installing your sensors, and proceeding slowly with care. If in doubt, seek professional assistance.
 </p>
 
 <p class="note">
@@ -779,7 +779,7 @@ The clip-on CT sensors must be clipped round either the Line   or Neutral AC wir
 
 <p><img src="/images/applications/solar-pv/ctinstall.jpg" alt="CT sensor installation " /></p>
 
-<p><img src="/images/applications/solar-pv/emonpi-type1-solarpv.png" alt="emonPi Type 1 Solar PV" /></p>
+<!-- ![emonPi Type 1 Solar PV](/images/applications/solar-pv/emonpi-type1-solarpv.png) -->
 
 <p><strong>Type 1 solar PV System:</strong> The generation and site-consumption <strong>can</strong> be monitored separately. The amount exported/imported to or from the grid is the difference between generation and site-consumption.</p>
 
@@ -811,7 +811,7 @@ The clip-on CT sensors must be clipped round either the Line   or Neutral AC wir
   <p><em>Type 2 system:  Site-consumption = Generation + Grid import (negative when exporting)</em></p>
 </blockquote>
 
-<p><strong>All solar PV systems can be monitored using the Type-2 method</strong></p>
+<p><strong>All solar PV systems can be monitored using the Type-2 method; it’s highly recommended to use this method.</strong></p>
 
 <p class="note">
 The polarity of the power readings depends on the orientation of the clip-on CT sensor. Orientate the CTs so that generation and site-consumption is positive and grid import/export is <b>positive when importing and negative when exporting</b>. The correct orientation can be determined by trial and error. But for CT sensors from our shop, the writing on the side should normally be on the downstream/consumer side, so try that first.
@@ -819,27 +819,34 @@ The polarity of the power readings depends on the orientation of the clip-on CT 
 
 <h3 id="-configure-feeds"><a class="title-link" name="configure-feeds" href="#configure-feeds"></a> Configure Feeds</h3>
 
-<p>On the Emoncms Inputs page click on the spanner icon next to your emonPi Inputs, and then from the left-hand menu choose <em>OpenEnergyMonitor &gt; EmonPi &gt; Solar PV Type 1/2</em> (as appropriate). Click <em>Save</em> and it will create or reset your Input configurations to the recommended values.</p>
+<p>On the Emoncms Inputs page click on the spanner icon next to your emonPi Inputs, and then from the left-hand menu choose <em>OpenEnergyMonitor &gt; EmonPi &gt; Solar PV Type 1/2</em> (as appropriate). Click <em>Save</em> and the Input Processing and solar PV feeds will be automatically created:</p>
 
-<p>Feed setup video guide:</p>
+<p><img src="/images/applications/solar-pv/v10-emonpi-solar-inputs.png" alt="" />
+<img src="/images/applications/solar-pv/v10-device-module.png" alt="" />
+<img src="/images/applications/solar-pv/v10-solar-inputs.png" alt="" /></p>
+
+<p><img src="/images/applications/solar-pv/v10-power1-inputprocess.png" alt="" /></p>
+
+<p><img src="/images/applications/solar-pv/v10-power2-inputprocess.png" alt="" />
+<img src="/images/applications/solar-pv/v10-solar-feeds.png" alt="" /></p>
+
+<p>Video guide for solar PV Feed &amp; MySolarPV App Setup:</p>
 
 <div class="videoWrapper">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Nc6YSWqqxkA" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
-<p>Once setup is complete click on <code class="highlighter-rouge">Apps &gt; MySolarPV</code> in order to launch the MySolarPV Emoncms app. The MySolarPV app should automatically detect the solar PV feeds.</p>
+<h3 id="-mysolarpv-emoncms-app"><a class="title-link" name="mysolarpv-emoncms-app" href="#mysolarpv-emoncms-app"></a> MySolarPV Emoncms App</h3>
 
-<h3 id="-mysolarpv-emoncms-app-setup"><a class="title-link" name="mysolarpv-emoncms-app-setup" href="#mysolarpv-emoncms-app-setup"></a> MySolarPV Emoncms App Setup</h3>
+<p>Once setup is complete click on <code class="highlighter-rouge">Apps &gt; MySolarPV</code> in order to launch the MySolarPV Emoncms app. The MySolarPV app should automatically detect the solar PV feeds.</p>
 
 <p><img src="/images/applications/solar-pv/my-solarpv-config.png" alt="my-solarpv-config" /></p>
 
 <h3 id="-configure-my-solar-app-power-view"><a class="title-link" name="configure-my-solar-app-power-view" href="#configure-my-solar-app-power-view"></a> Configure My Solar App power view</h3>
 
-<p>The main view shows a moving window power view of solar generation Vs site-consumption which, can be used to explore matching at any given moment of the day. Site-consumption is shown in blue and solar generation in yellow. The totals at the bottom of the page relate to the current window selected and show at a glance how much of site-consumption was supplied directly from solar and how much of the solar generation was exported to the grid.</p>
+<p>TSite-consumption is shown in blue and solar generation in yellow. The totals at the bottom of the page relate to the current window selected and show at a glance how much of site-consumption was supplied directly from solar and how much of the solar generation was exported to the grid.</p>
 
 <p><img src="/images/applications/solar-pv//my-solarpv1.png" alt="my-solarpv-config2" /></p>
-
-<h3 id="-my-solar-history-view"><a class="title-link" name="my-solar-history-view" href="#my-solar-history-view"></a> My Solar history view</h3>
 
 <p>Clicking on view history brings up a bar graph showing solar generation and site-consumption on a daily basis. Including how much of the solar generation is used directly on site and how much is exported.</p>
 
