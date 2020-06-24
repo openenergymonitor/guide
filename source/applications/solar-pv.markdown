@@ -165,7 +165,7 @@ Your safety is your responsibility. Clip-on current sensors are non-invasive and
 </p>
 
 <p class='note'>
-The clip-on CT sensors must be clipped round either the Line or Neutral AC wire. <strong>Not both</strong>.
+The clip-on CT sensors must be clipped round either the Line   or Neutral AC wire. <strong>Not both</strong>.
 </p>
 
 ![CT sensor installation ](/images/applications/solar-pv/ctinstall.jpg)
@@ -200,17 +200,20 @@ The polarity of the power readings depends on the orientation of the clip-on CT 
 
 
 
-### {% linkable_title Device Setup %}
+### {% linkable_title Configure Feeds %}
 
-Click on the spanner icon next to your emonPi, and then from the left-hand menu choose _OpenEnergyMonitor > EmonPi > Solar PV Type 1/2_ (as appropriate). Click _Save_ and it will create or reset your Input configurations to the recommended values.
+On the Emoncms Inputs page click on the spanner icon next to your emonPi Inputs, and then from the left-hand menu choose _OpenEnergyMonitor > EmonPi > Solar PV Type 1/2_ (as appropriate). Click _Save_ and it will create or reset your Input configurations to the recommended values.
 
-Here's a video guide to setting up a solar feeds using Device Manager:
+Feed setup video guide:
 
 <div class='videoWrapper'>
-<iframe width="560" height="315" src="https://youtu.be/Nc6YSWqqxkA" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Nc6YSWqqxkA" frameborder="0" allowfullscreen></iframe>
 </div>
 
 Once setup is complete click on `Apps > MySolarPV` in order to launch the MySolarPV Emoncms app. The MySolarPV app should automatically detect the solar PV feeds. 
+
+
+### {% linkable_title MySolarPV Emoncms App Setup %}
 
 ![my-solarpv-config](/images/applications/solar-pv/my-solarpv-config.png)
 
