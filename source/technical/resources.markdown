@@ -86,7 +86,7 @@ Either [PlatformIO](https://guide.openenergymonitor.org/technical/compiling/) (r
 <br/>
 
 - ### {% linkable_title emonGLCD %}
-  - [Build Guide](https://github.com/openenergymonitor/EmonGLCD/tree/master/buildguide)
+  - [Build Guide](https://github.com/openenergymonitor/EmonGLCD/tree/master/buildguide)
   - [emonGLCD Firmware](https://github.com/openenergymonitor/emonglcd)
   - [emonGLCD Hardware CAD Design](https://github.com/openenergymonitor/emonglcd)
   - [Display Forum Category](https://community.openenergymonitor.org/c/hardware/display)
