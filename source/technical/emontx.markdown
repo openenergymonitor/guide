@@ -29,8 +29,8 @@ The emonTx is an low power RF remote sensor node. Data is transmitted to an emon
 - RF Range is approximately similar to home WiFi (real world range depends on many factors e.g. thick stone walls)
 - Up to 2x emonTx can be connected to a single emonPi or emonBase (up to 30x is possible with manual RF node ID setting*)
 - Wall-mount option
-- New 2019: The emonTx firmware now supports higher accuracy continuous monitoring as standard - if powered from an ACAC adapter or USB power. 
-- Alternative firmware options include: Discreet Sampling for battery operation and 3-phase firmware.
+- New 2019: The emonTx firmware now supports higher accuracy continuous monitoring as standard, power from an ACAC adapter or USB power is assumed.
+- Alternative firmware options include: Discrete Sampling firmware - useful when only battery power is available; and 3-phase firmware.
 
 **WiFi option:** It is possible to use an emonTx with a ESP8266 WiFi adapter to provide WiFi connectivity. This can be useful in applications where the 433 MHz radio range is not sufficient but there is good WiFi signal. The emonTx can post data to a local emonBase/emonPi over WiFi or work in 'standalone mode' to post directly to a remote emoncms server such as emoncms.org. See [Using emonTx with the ESP8266 WiFi module](/setup/esp8266-adapter-emontx/)
 
