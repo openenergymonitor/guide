@@ -70,7 +70,7 @@ Using and ESP8266 WiFi Adapter the emonTx can send data directly to a remote emo
 
 *Note: Without local data logging this approach can incur additional service costs via the remote server.*
 
-**[Installation Guide](/setup/esp8266-adapter-emontx/)** \| **[emonTx Technical](/technical/emontx)**<br>**View in Shop: [emonTx](https://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter/) & [ESP8266 WiFi Adapter](https://shop.openenergymonitor.com/esp8266-wifi-adapter-for-emontx/)**
+**[Installation Guide](/setup/esp8266-adapter-emontx/)** \| **[emonTx Technical](/technical/emontx)**<br>**View in Shop: [emonTx + WiFi Adapter](https://shop.openenergymonitor.com/emontx-wifi-adapter-1/)**
 
 ---
 
