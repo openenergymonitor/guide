@@ -64,7 +64,7 @@ All functions of the EVSE can be controlled via the web interface, see [https://
 
 #### Emoncms Server Setup
 
-OpenEVSE can post data directly to an Emoncms server, enter the following:
+OpenEVSE can post data directly to an Emoncms server via HTTP(S), enter the following:
 
 - Emoncms server url e.g [emoncms.org](https://emoncms.org)
 - Node-name is the name given to the OpenEVSE data in Emoncms Inputs
@@ -74,7 +74,11 @@ OpenEVSE can post data directly to an Emoncms server, enter the following:
 
 #### MQTT Setup
 
-The OpenEVSE supports [MQTT connection](/technical/mqtt). MQTT is used to communicate with an emonPi for Solar PV Divert (EcoMode) feature.
+The OpenEVSE supports [MQTT connection](/technical/mqtt). 
+
+MQTT can used to communicate with an emonPi for Solar PV Divert (EcoMode) feature.
+
+**Note: MQTT will also send the same status updates as Emoncms HTTP (see above). MQTT and Emoncms HTTP should not be both enabled to post to the same Emoncms server e.g emonPi since this will result in duplicate inputs.**
 
 <p class='note'>
 For Solar PV Divert (EcoMode) to work emonPi and OpenEVSE need be on the same local network or at least access to emonPi MQTT server (port 1883)
