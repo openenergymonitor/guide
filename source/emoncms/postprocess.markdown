@@ -62,8 +62,8 @@ Here the feed id is the number appended to the 'f' identifier. f1 = feed id 1.
 
 - **powertokwh:** calculate a cumulative kwh feed from a power feed
 - **accumulator:** calculate a cumulative sum of the source feed
-- **importcalc:** calculate grid import from house consumption and solar generation
-- **exportcalc:** calculate grid export from house consumption and solar generation
+- **importcalc:** calculate grid import from house consumption and solar generation (ignores any export values)
+- **exportcalc:** calculate grid export from house consumption and solar generation (ignores any import values)
 - **addfeeds:** add multiple feeds together (see basic_formula to add more than 2 feeds)
 - **scalefeed:** scale a feed by the value given
 - **offsetfeed:** add an offset to a feed
