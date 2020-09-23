@@ -234,8 +234,10 @@ Click on ‘Apps’ on the Emoncms top bar then select new OpenEVSE App
 
 Clicking on a Feed on the feeds page will open the Emoncms Graph display to show the raw feed data. Various Feeds van be displayed at once, e.g. looking at the effect of the internal temperature of the OpenEVSE unit during a charge:
 
-*Note: The OpenEVSE has integrated temperature monitoring and will automatically throttle charging current and eventually stop a charging session if the temperature gets too hot.*
-
-
 ![](/images/integrations/10-evse-sw.png)
+
+The OpenEVSE has integrated temperature monitoring and will automatically throttle charging current and eventually stop a charging session if the temperature gets too hot.
+
+
+
 
