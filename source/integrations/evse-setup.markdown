@@ -9,7 +9,6 @@ sharing: true
 footer: true
 published: true
 ---
-
 <p>&larr; <a href="/integrations/ev-charging/">EV-Charging</a></p>
 
 <div class='videoWrapper'>
@@ -28,10 +27,11 @@ OpenEVSE and EmonEVSE share the same software platform, both these units are con
     + [Emoncms Server Setup](#emoncms-server-setup)
     + [MQTT Setup](#mqtt-setup)
     + [Developer API](#developer-api)
-  * [Solar PV Divert](#solar-pv-divert)
+  * [Eco Mode: Solar PV Divert](#eco-mode-solar-pv-divert)
     + [Solar PV Divert Setup](#solar-pv-divert-setup)
     + [Advanced Solar PV Divert Setup](#advanced-solar-pv-divert-setup)
     + [Solar PV Divert Operation](#solar-pv-divert-operation)
+  * [Smart Mode: Dynamic Tariff scheduling e.g Octopus Energy](#smart-mode-dynamic-tariff-scheduling-eg-octopus-energy)
 - [Emoncms Setup](#emoncms-setup)
   * [Input Processing](#input-processing)
   * [Emoncms ‘Apps’ Dashboard](#emoncms-apps-dashboard)
@@ -64,6 +64,10 @@ All functions of the EVSE can be controlled via the web interface, see [https://
 
 #### Emoncms Server Setup
 
+<p class='note'>
+Emoncms server (HTTP) and MQTT both post the same status updates. Emoncms server and MQTT should not be connected to the <i>same emonPi</i>, since this will result in duplicate data. However, it is possible to use MQTT to post data to a local emonPi and Emoncms to post to a remote server e.g emoncms.org.  
+</p>
+
 OpenEVSE can post data directly to an Emoncms server, enter the following:
 
 - Emoncms server url e.g [emoncms.org](https://emoncms.org)
@@ -80,7 +84,7 @@ The OpenEVSE supports [MQTT connection](/technical/mqtt). MQTT is used to commun
 For Solar PV Divert (EcoMode) to work emonPi and OpenEVSE need be on the same local network or at least access to emonPi MQTT server (port 1883)
 </p>
 
-- Check your local emonPi hostname, this should bt [emonpi/](http://emonpi) or [emonpi.local/](http://emonpi.local). On some networks local hostname lookup doesn't work. In this case use emonPi local IP address, highly recommend assigning emonPi a reserved local IP address to avoid it chaging via DHCP.
+- Check your local emonPi hostname, this should bt [emonpi/](http://emonpi) or [emonpi.local/](http://emonpi.local). On some networks local hostname lookup doesn't work. In this case use emonPi local IP address, highly recommend assigning emonPi a reserved local IP address to avoid it changing via DHCP.
 - Enter emonPi local network
 - To connect to an emonPi MQTT server on local network use pre-populated username and password
 - Base-topic is the base topic used by the OpenEVSE to publish data. If posting data to local emonPi via MQTT is required change base-topic to `emon/openevse`. EVSE data should will now appaar in local emonPi Emoncms Inputs
@@ -89,32 +93,32 @@ For Solar PV Divert (EcoMode) to work emonPi and OpenEVSE need be on the same lo
 
 #### Developer API
 
-The OpenEVSE can be controlled remotely via web interface or via  MQTT, HTTP or direct serial using RAPI API.See full OpenEVSE WiFi gateway documentation in the [OpenEVSE ESP8266 WiFi GitHub Repo](https://github.com/openevse/ESP8266_WiFi_v2.x/).
+The OpenEVSE can be controlled remotely via web interface or via  MQTT, HTTP. See full OpenEVSE WiFi gateway documentation in the [OpenEVSE WiFi GitHub Repo](http://github.com/openevse/ESP32_WiFi_V3.x/).
 
-Developer mode can be enabled on the `System` tab of the OpenEVSE web interface
+Developer mode can be enabled on the `System` tab of the OpenEVSE web interface.
 
-### Solar PV Divert
+### Eco Mode: Solar PV Divert
 
+Eco Mode feature allows the OpenEVSE to adjust the charge rate based on the amount of available solar PV production or excess power (grid export).
 
-The OpenEVSE WifI gateway includes a solar PV diversion feature. This feature allows the OpenEVSE to adjust the charge rate based on the amount of available solar PV production or excess power.
+An [OpenEnergyMonitor solar PV energy monitor](https://guide.openenergymonitor.org/applications/solar-pv/) with an AC-AC voltage sensor adaptor is required to monitor solar PV generation and grid excess.
+
+When Eco Mode is enabled the EVSE will begin charging when Solar PV Generation or Grid Excess > 1.4kW (6A the minimum EV charge rate). Charging will pause if Generation or Excess drops below this threshold for a period of time. 
 
 <figure>
-  <img src="/images/integrations/openevse-divert.png">
-  <figcaption><i>OpenEVSE solar PV diversion example. Yellow: solar PV, blue: OpenEVSE.</i></figcaption>
+  <img src="/images/integrations/ev-charging/ecomode-example.png">
+  <figcaption><i>Eco Mode solar PV diversion example</i></figcaption>
 </figure>
 
-The graph above is explained as follows:
+<figure>
+  <img src="/images/integrations/ev-charging/ecomode-waiting.png">
+  <figcaption><i>Eco Mode Enabled, waiting for sufficient solar PV</i></figcaption>
+</figure>
 
-- OpenEVSE is initially sleeping with an EV connected
-- Once solar PV generation (yellow) reaches 6A (1.5kW @ 240V) the OpenEVSE initiates charging
-- Charging current is dynamically adjusted based on available solar PV generation
-- Once charging has begun, even if generation drops below 6A, the EV will continue to charge*
-
-**The decision was made not to pause charging if generation current drops below 6A since repeatedly starting / stopping a charge causes excess wear to the OpenEVSE relay contactor.**
-
-If a Grid +I/-E (positive import / negative export) feed was used (instead of solar PV generation feed) the OpenEVSE would adjust its charging rate based on *excess* power that would be exported to the grid; for example, if solar PV was producing 4kW and 1kW was being used on-site, the OpenEVSE would charge at 3kW and the amount exported to the grid would be 0kW. If on-site consumption increases to 2kW the OpenEVSE would reduce its charging rate to 2kW.
-
-An [OpenEnergyMonitor solar PV energy monitor](https://guide.openenergymonitor.org/applications/solar-pv/) with an AC-AC voltage sensor adaptor is required to monitor direction of current flow.
+<figure>
+  <img src="/images/integrations/ev-charging/ecomode-charging.png">
+  <figcaption><i>Eco Mode Enabled, charging from solar PV</i></figcaption>
+</figure>
 
 #### Solar PV Divert Setup
 
@@ -122,8 +126,12 @@ An [OpenEnergyMonitor solar PV energy monitor](https://guide.openenergymonitor.o
 - Integration with an OpenEnergyMonitor emonPi is straightforward:
   - *Note: This guide assumes an OpenEnergyMonitor emonPi system is already setup monitoring solar PV, see not [emonPi Solar PV Setup Guide](/applications/solar-pv)*
   - Connect to emonPi MQTT server, [emonPi MQTT credentials](technical/credentials/#mqtt) should be pre-populated
-  - [MQTT lens Chrome extension](https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en) can be used to view MQTT data e.g. subscribe to `emon/#` to see all OpenEnergyMonitor MQTT data. To lean more about MQTT see [MQTT section of OpenEnergyMonitor user guide](https://guide.openenergymonitor.org/technical/mqtt/)
+  - [MQTT Explorer](http://mqtt-explorer.com/) can be used to view MQTT data e.g. subscribe to `emon/#` to see all OpenEnergyMonitor MQTT data. To lean more about MQTT see [MQTT section of OpenEnergyMonitor user guide](https://guide.openenergymonitor.org/technical/mqtt/)
 
+<figure>
+  <img src="/images/integrations/ev-charging/ecomode-setup.png">
+  <figcaption><i>Eco Mode Setup</i></figcaption>
+</figure>
 
 **Divert Total PV Generation:**
 
@@ -149,33 +157,22 @@ For more advance solar PV divert config it's possible to modify the MQTT feed va
 
 ![mqtt2](/images/integrations/ev-charging/publish-mqtt2.png)
 
-
-#### Solar PV Divert Operation
-
-![eco](/images/integrations/eco.png)
-
-To enable 'Eco' mode (solar PV divert) charging:
-
-- Connect EV and ensure EV's internal charging timer is switched off
-- Pause charge; OpenEVSE should display 'sleeping'
-- Enable 'Eco' mode using web interface or via MQTT
-- EV will not begin charging when generation / excess current reaches 6A (1.4kW @ 240V)
-
-- During 'Eco' charging changes to charging current are temporary (not saved to EEPROM)
-- After an 'Eco mode' charge the OpenEVSE will revert to 'Normal' when EV is disconnected and previous 'Normal' charging current will be reinstated.
-- Current is adjusted in 1A increments between 6A* (1.5kW @ 240V) > max charging current (as set in OpenEVSE setup)
-- 6A is the lowest supported charging current that SAE J1772 EV charging protocol supports
-- The OpenEVSE does not adjust the current itself but rather request that the EV adjusts its charging current by varying the duty cycle of the pilot signal, see [theory of operation](https://openev.freshdesk.com/support/solutions/articles/6000052070-theory-of-operation) and [Basics of SAE J1772](https://openev.freshdesk.com/support/solutions/articles/6000052074-basics-of-sae-j1772).
-- Charging mode can be viewed and set via MQTT: `{base-topic}/divertmode/set` (1 = normal, 2 = eco).
-
-\* *OpenEVSE controller firmware [V4.8.0](https://github.com/OpenEVSE/open_evse/releases/tag/v4.8.0) has a bug which restricts the lowest charging current to 10A. The J1772 protocol can go down to 6A. This ~~will~~ has be fixed with a firmware update. See [OpenEnergyMonitor OpenEVSE FW releases](https://github.com/openenergymonitor/open_evse/releases/). A ISP programmer is required to update openevse controler FW.*
+- Eco Mode can be viewed and set via MQTT: `{base-topic}/divertmode/set` (1 = normal, 2 = eco).
 
 *Note: Solar PV divert under 10A may not work reliably with 'Q' models of Renault Zoe *
 
-***
 
-See full OpenEVSE WiFi gateway documentation in the [OpenEVSE ESP8266 WiFi GitHub Repo](https://github.com/openevse/ESP8266_WiFi_v2.x/).
+### Smart Mode: Dynamic Tariff scheduling e.g Octopus Energy 
 
+The EVSE can automatically schedule a charge at the lowest cost / carbon period based on a dynamic tariff signal e.g Octopus Energy. See our [Smart Charging Setup Guide](/integrations/demandshaper-openevse/).
+
+An [OpenEnergyMonitor emonPi or emonBase](https://guide.openenergymonitor.org/applications/solar-pv/) is required for smart charging function to run the Demand Shaper software. 
+
+![demandshaper2.png](/images/integrations/demandshaper/emonevse/demandshaper2.png)
+
+![demandshaper_ovms.png](/images/integrations/demandshaper/emonevse/demandshaper_ovms.png)
+
+See full OpenEVSE WiFi gateway documentation in the [OpenEVSE WiFi GitHub Repo](http://github.com/openevse/ESP32_WiFi_V3.x/).
 
 ***
 
@@ -237,3 +234,4 @@ Clicking on a Feed on the feeds page will open the Emoncms Graph display to show
 
 
 ![](/images/integrations/10-evse-sw.png)
+
