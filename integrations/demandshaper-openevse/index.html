@@ -627,9 +627,9 @@ highlight active link...
   <li>Optional: <a href="https://shop.openenergymonitor.com/open-vehicle-monitor-ovms-wifi-3g-europe">OVMS Open Vehicle Monitoring System</a> for automatic reading of EV battery state of charge.</li>
 </ul>
 
-<p><strong>OVMS:</strong> The <a href="https://shop.openenergymonitor.com/open-vehicle-monitor-ovms-wifi-3g-europe/">OVMS Open Vehicle Monitor</a> is a module that plugs into the OBD2 port of an EV. It can access a lot of detailed information about the vehicle and battery status for a wide variety of EV models. The DemandShaper module integrates with OVMS in order to access the state-of-charge to calculate how long a charge session needs to be.</p>
+<p><strong>OVMS:</strong> The <a href="https://shop.openenergymonitor.com/open-vehicle-monitor-ovms-wifi-3g-europe/">OVMS Open Vehicle Monitor</a> is a module that plugs into the ODB2 port of an EV. It can access a lot of detailed information about the vehicle and battery status for a wide variety of EV models. The DemandShaper module integrates with OVMS <a href="https://dexters-web.de/">European Server (dexters-web)</a>in order to access the state-of-charge (SoC) to calculate how long a charge session needs to be.</p>
 
-<p><strong>Custom SOC integration:</strong> It is also possible to provide the DemandShaper module with a state-of-charge value using an emoncms input e.g <code class="highlighter-rouge">openevse/soc</code>. If you have a script that reads the state-of-charge you can pass it on to the DemandShaper module using this approach. You can create an emoncms input <code class="highlighter-rouge">openevse/soc</code> by posting the SOC to MQTT topic <code class="highlighter-rouge">emon/openevse/soc</code></p>
+<p><strong>Custom SoC integration:</strong> It is also possible to provide the DemandShaper module with a state-of-charge value using an emoncms input e.g <code class="highlighter-rouge">openevse-xxxx/soc</code>. If you have a script that reads the state-of-charge you can pass it on to the DemandShaper module using this approach. You can create an Emoncms input <code class="highlighter-rouge">openevse-xxxx/soc</code> by posting the SoC to MQTT topic <code class="highlighter-rouge">emon/openevse-xxx/soc</code></p>
 
 <h4 id="setup">Setup</h4>
 
@@ -658,6 +658,12 @@ highlight active link...
 <p><img src="/images/integrations/demandshaper/emonevse/demandshaper_ovms.png" alt="demandshaper_ovms.png" /></p>
 
 <p>Thats it, to schedule a charge enter the time that you wish the charge to complete by and select the battery % that you wish to reach.</p>
+
+<p>If the Demand Shaper is operating correctly the timer should now be set on the OpenEVSE for the scheduled charging time, you can check this on the OpenEVSE WiF interface page.</p>
+
+<p class="note">
+The DemandShaper Interface and the OpenEVSE interface should not be used at the same time since this can cause conflicts.Switch the Demand Shaper to "Off" if you wish to use the OpenEVSE WiFi interface to control the EVSE..
+</p>
 
 
 </article>
