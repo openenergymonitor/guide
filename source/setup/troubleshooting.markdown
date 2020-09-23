@@ -211,7 +211,7 @@ The emonPi/emonBase time shown via SSH is intended to be UTC time. Timezone's ar
 
 ---
 
-### {% Vrms reporting as twice what it should be %}
+### {% linkable_title Vrms reporting as twice what it should be %}
 
 For users in North America, please read through our ['Use in North America' setup guide](https://guide.openenergymonitor.org/setup/north-america/). Software calibration is discussed [in step 3](https://guide.openenergymonitor.org/setup/north-america/#3-software-calibration).
 
