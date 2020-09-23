@@ -16,7 +16,8 @@ In this example the emonTx transmits AC power, voltage and temperature sensor me
 
 The emonBase base-station consists of a RaspberryPi and an RFM69Pi adapter board to receive the 433 MHz radio packets from the emonTx. The emonBase runs our emonSD software including emonCMS for full local data logging and visualisation capability.
 
-*New 2019: The emonTx firmware now supports higher accuracy continuous monitoring as standard - if powered from an ACAC adapter or USB power. Alternative firmware options include: Discreet Sampling for battery operation and 3-phase firmware. See [emonTx technical](/technical/emontx)*.
+- New 2019: The emonTx firmware now supports higher accuracy continuous monitoring as standard, power from an ACAC adapter or USB power is assumed.
+- Alternative firmware options include: Discrete Sampling firmware - useful when only battery power is available; and 3-phase firmware.
 
 ![emontx and emonbase](/images/setup/emontxemonbase.jpg)
 

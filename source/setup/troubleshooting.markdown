@@ -18,6 +18,7 @@ published: true
 - Feeds / Inputs not Updating
 - Disk space
 - Incorrect system time
+- Vrms reporting as twice what it should be
 - Emoncms Local Password Reset
 - Factory Reset
 
@@ -207,6 +208,12 @@ sudo service ntp start
 #### Setting the Emoncms Timezone:
 
 The emonPi/emonBase time shown via SSH is intended to be UTC time. Timezone's are taken into account seperately in Emoncms and via the internet browser. To set a user account timezone in emoncms; navigate to: `Emoncms > Setup > My Account > Timezone` and adjust as required.
+
+---
+
+### {% Vrms reporting as twice what it should be %}
+
+For users in North America, please read through our ['Use in North America' setup guide](https://guide.openenergymonitor.org/setup/north-america/). Software calibration is discussed [in step 3](https://guide.openenergymonitor.org/setup/north-america/#3-software-calibration).
 
 ---
 

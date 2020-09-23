@@ -18,18 +18,22 @@ An emonBase or emonPi is recommended for more complex applications where local s
 
 ![emontxesp.jpg](/images/setup/esp8266adapter/emontxesp.jpg)
 
-<a class="btn pull-right" href="https://shop.openenergymonitor.com/esp8266-wifi-adapter-for-emontx/">View in Shop &rarr; </a>
+<a class="btn pull-right" href="https://shop.openenergymonitor.com/emontx-wifi-adapter-1/">View in Shop &rarr; </a>
 
 <br><br>
 
 ### To set up an emonTx v3 + ESP8266 Wifi energy monitor you will need:
+
+- **[An emonTx + WiFi adapter bundle is now available to buy in the shop.](https://shop.openenergymonitor.com/emontx-wifi-adapter-1/)** 
+
+Alternatively, you will need:
 
 - **[emonTx V3](/technical/emontx):** + CT, AC-AC adapter, temperature and pulse sensors as required by your application.<br>
 *To use ESP8266 with emonTx three-phase firmware, the EmonESP baud rate needs to be set to 9600*
 
 - **5V USB DC Power supply for the emonTx:** The AC-AC Voltage adapter that can power the emonTx in normal operation does not deliver enough power to run the ESP8266 Huzzah WiFi module and so an additional 5V USB Power supply is required. Battery operation is not possible when using ESP8266.
 
-- **ESP8266 Huzzah WiFi module with a 6 way stackable header running [EmonESP](https://github.com/openenergymonitor/emonesp):** we offer a pre-programmed ESP8266 Huzzah WiFi module in our [shop](https://shop.openenergymonitor.com/esp8266-wifi-adapter-for-emontx/), ready to go out of the box with the header already installed and running our open source EmonESP firmware (Alternatively for a DIY approach see the original forum post [here](https://community.openenergymonitor.org/t/using-the-emontx-v3-with-the-esp8266-huzzah-wifi-module/795).
+- **ESP8266 Huzzah WiFi module with a 6 way stackable header running [EmonESP](https://github.com/openenergymonitor/emonesp):** For a DIY approach see the original forum post [here](https://community.openenergymonitor.org/t/using-the-emontx-v3-with-the-esp8266-huzzah-wifi-module/795).
 
 ### ESP8266 Huzzah WIFI module with a 6 way stackable header:
 

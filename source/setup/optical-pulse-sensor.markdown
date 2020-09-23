@@ -37,11 +37,9 @@ One possibility is to use the sign (positive or negative) of the output of a CT 
 It is advisable to shield the sensor and the meter from bright light as this can adversely affect readings.
 </p>
 
-1. Identify your utility meter's pulse output, usually a red flashing LED marked 'KWh'. Stick the supplied self adhesive base-pad over the LED, carefully aligning the hole in the center of the circle so the flashing LED shines through clearly. Be sure to clean any dust from the meter face before attaching the sensor.
+1. Identify your utility meter's pulse output, usually a red flashing LED marked 'KWh'. Stick the sensor over the LED, carefully aligning the hole so the flashing LED shines through clearly. Be sure to clean any dust from the meter face before attaching the sensor.
 
-2. Attach the sensor to the circular base sticker by pressing the sensor head firmly in place. Take care to ensure sensor is centered over the pad.
-
-3. Plug sensors RJ45 connector into emonPi / emonTx RJ45 socket.
+2. Plug sensors RJ45 connector into emonPi / emonTx RJ45 socket.
 
 <p class='note warning'>
 Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side as the CT connection jack-plug sockets NOT the Etherent socket.
