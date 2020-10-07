@@ -42,7 +42,7 @@ There are 2 options for a new card:
 1. Purchase a new card with the image pre-installed, from the [OEM Store](https://shop.openenergymonitor.com/emonsd-pre-loaded-raspberry-pi-sd-card/).
 2. Burn/flash a new image to an SD Card. To do this:
     1. Download image from the [Release Page](https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&-Change-Log#download-11-gb).
-    1. Follow the guide on the Raspbian docs to [flash the image](https://www.raspberrypi.org/documentation/installation/installing-images/README.md). This covers a method for most OSs.
+    2. The easiest method of flashing the new image to an SD card is to use a cross-platform tool called Etcher, see: [https://www.etcher.io/](https://www.etcher.io/)
 
 #### 2. Initial boot
 
