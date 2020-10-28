@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>openHAB - Guide | OpenEnergyMonitor</title>
+    <title>+ Add Temperature Sensors - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="openHAB Integration">
+    <meta name="description" content="Add Temperature Sensors">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/integrations/openhab/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/temperature-sensors/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="openHAB">
+    <meta property="og:title" content="+ Add Temperature Sensors">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/integrations/openhab/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/temperature-sensors/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="openHAB Integration">
+    <meta property="og:description" content="Add Temperature Sensors">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="openHAB">
-    <meta name="twitter:description" content="openHAB Integration">
+    <meta name="twitter:title" content="+ Add Temperature Sensors">
+    <meta name="twitter:description" content="Add Temperature Sensors">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -609,100 +609,55 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      openHAB
+      + Add Temperature Sensors
     </h1>
   </header>
   <hr class="divider">
   
 
-  <p>Open Home Automation Bus (openHAB) is <em>“a vendor and technology agnostic open source automation software for your home”</em>. openHAB can run on an emonPi (Raspberry Pi) and is very flexible and can be configured for just about any home automation task. This high level of configurability can also make it seem quite hard to understand to start with.</p>
+  <p>Both the emonPi and emonTx support temperature sensing using DS18B20 one-wire digital temperature sensors. The standard firmware on the emonPi supports up to 6x temperature sensors and the emonTx up to 3x temperature sensors.</p>
 
-<p><strong><a href="http://www.openhab.org">http://www.openhab.org</a></strong></p>
+<p>Both the emonPi and the emonTx have a special RJ45 socket to which either a single RJ45 DS18B20 temperature sensor can be connected directly or multiple sensors can be connected via either a RJ45 breakout board or terminal block breakout board. Alternatively the terminal block on the emonTx can be used for wired connection.</p>
 
-<p><strong>OpenHAB is NOT pre-installed on emonSD-30Oct18, see <a href="https://www.openhab.org/docs/installation/linux.html#installation">OpenHAB Install Guide</a> to install the latest version</strong></p>
+<p><strong>Example 1: emonPi with 4x temperature sensors and a RJ45 breakout</strong></p>
 
-<hr />
-
-<p><strong>openHAB is pre-installed and setup on emondSD pre 2018, see <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">emonSD repository and change log</a>. If your running an emonSD image that includes openHAB browse to:</strong></p>
-
-<h2 id="httpemonpi8080"><a href="http://emonpi:8080">http://emonpi:8080</a></h2>
-
-<p><em>Substitite <code class="highlighter-rouge">emonpi</code> for your local emonpi’s IP address if hostname lookup does not work</em></p>
-
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">Username</span><span class="pi">:</span> <span class="s2">"</span><span class="s">pi"</span>
-<span class="na">Password</span><span class="pi">:</span> <span class="s2">"</span><span class="s">emonpi2016"</span>
-</code></pre></div></div>
-
-<p><img src="/images/integrations/openhab-demo.png" alt="openhab-demo.png" /></p>
-
-<p>Pre installed on the emonPi is a skeleton config setup openHAB with to subscribe to data from the emonPi’s MQTT server (see <a href="/technical/mqtt/">MQTT docs</a>). For a full openHAB demo see the <a href="http://demo.openhab.org:8080/">openHAB Demo House</a>.</p>
-
-<h3 id="configuring-openhab">Configuring OpenHAB</h3>
-
-<p>openHAB is configured from three main files:</p>
+<p><img src="/images/setup/800px-Emonpi_ds18b20_rj45.JPG" alt="800px-Emonpi_ds18b20_rj45.JPG" /></p>
 
 <ul>
-  <li><strong><code class="highlighter-rouge">openhab.cfg</code></strong></li>
-  <li><strong><code class="highlighter-rouge">&lt;sitemap-name&gt;.items</code></strong></li>
-  <li><strong><code class="highlighter-rouge">&lt;sitemap-name&gt;.sitemap</code></strong></li>
+  <li><a href="http://shop.openenergymonitor.com/rj45-encapsulated-ds18b20-temperature-sensor/">Shop: RJ45 Encapsulated DS18B20 temperature sensor</a></li>
+  <li><a href="https://shop.openenergymonitor.com/rj45-expander-for-ds18b20-pulse-sensors/">Shop: emonPi / emonTx RJ45 Expander for DS18B20 &amp; Pulse Sensors</a></li>
+  <li><a href="http://www.sheepwalkelectronics.co.uk/product_info.php?cPath=26&amp;products_id=36">An RJ45 coupler can be used to extend RJ45 sensor cables.</a></li>
 </ul>
 
-<p><em>In the openHAB emonPi install instructions (see docs link below) we recommend cloning the oem_openHAB to the /home directory then soft linking the <code class="highlighter-rouge">items</code> and <code class="highlighter-rouge">sitemap</code> files to the relevant config locations in <code class="highlighter-rouge">/etc/openhab/configurations/</code>. This makes the files easier to edit</em></p>
+<p><strong>Example 2: emonTx with 4x temperature sensors and a terminal block breakout</strong></p>
 
-<p>It’s possible to have multiple user interfaces defined by multiple sitemaps e.g oem.sitemap, kids.sitemap or admin.sitemap etc. The default sitemap is default e.g. <code class="highlighter-rouge">default.items</code> and <code class="highlighter-rouge">default.sitemap</code>.</p>
+<p><img src="/images/setup/EmonTx_RJ45_DS18B20.jpg" alt="EmonTx_RJ45_DS18B20.jpg" /></p>
 
-<h4 id="openhabcfg">openhab.cfg</h4>
+<ul>
+  <li><a href="http://shop.openenergymonitor.com/encapsulated-ds18b20-temperature-sensor/">Shop: Encapsulated DS18B20 temperature sensor</a></li>
+  <li><a href="https://shop.openenergymonitor.com/rj45-to-terminal-block-breakout-for-ds18b20/">Shop: emonPi / emonTx RJ45 to Terminal Block Breakout for DS18B20</a></li>
+</ul>
 
-<p>This is the overall config file located in <code class="highlighter-rouge">/etc/openhab/configurations/</code>. In this file global config is set such as security authentication and MQTT server setting. E.g. to connect to emonPi local MQTT server the following is added:</p>
+<p><strong>EmonTx Power Supply</strong><br />
+When using multiple temperature sensors and or an optical pulse sensor with the emonTx it is recommended to power the emonTx via a 5V USB rather than AC-AC adapter due to increased power requirement. An AC-AC adapter can still be used to provide an AC voltage reference.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mqtt:mosquitto.url=tcp://localhost:1883
-mqtt:mosquitto.user=emonpi
-mqtt:mosquitto.pwd=emonpimqtt2016
-mqtt:mosquitto.qos=2
-mqtt:mosquitto.retain=true
-</code></pre></div></div>
+<p><strong>EmonTx Low power battery mode</strong><br />
+In order to save power when running on batteries, the emonTx V3 supports switching off of the DS18B20 in-between readings and performing the temperature conversion while the ATmega328 is sleeping. To do this, power (3.3 V) is supplied to the DS18B20’s power pin from Dig19 (ADC5), this digital pin is switched off between readings. (This facility is available only if the temperature sensors are connected via the terminal block.) The data connection from the DS18B20 is connected to Dig5, this I/O pin has a 4K7 pull-up resistor on-board as required by the DS18B20.</p>
 
-<p>See the full openhab.cfg file used for this example on the open_openhab GitHub repo (see docs link below).</p>
+<p><strong>RJ45 Pinout</strong><br />
+The RJ45 implements a standard pinout used by other manufacturers of DS18B20 temperate sensing hardware such as Sheep Walker Electronics.</p>
 
-<h4 id="items">Items</h4>
+<p><img src="/images/setup/RJ45-Pin-out.png" alt="RJ45-Pin-out.png" /></p>
 
-<p>The items file defines all the ‘things’ you might want to view or control in openHAB. Items can be bound to ‘bindings’ which are optional packages that used to extend functionality of openHAB. This example makes use of the MQTT and HTTP bindings. The items file is located in <code class="highlighter-rouge">/etc/openhab/configurations/items</code>.</p>
+<p><em>Note: The RJ45 socket does not support power supply switching via Dig19 (ADC5) as described above.</em></p>
 
-<p>For example the line in the items file to subscribe to <em>emonPi Power 1</em> from emonhub MQTT is as follows:</p>
+<p><strong>Terminal Block Connection (EmonTx only)</strong><br />
+To connect an external DS18B20 to the emonTx V3 screw terminal block, connect the <strong>black</strong> wire to GND, <strong>red</strong> to ‘ADC5 / Dig19 / DS18B20 PWR’ and <strong>white</strong> to ‘Dig 5 / DS18B20 Data / PWM’:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Number emonpi_ct1 "Power 1 [%d W]" { mqtt="&lt;[mosquitto:emon/emonpi/power1:state:default]" }
-</code></pre></div></div>
+<p><img src="/images/setup/emontx_ds18b20_terminal_block.jpg" alt="emontx_ds18b20_terminal_block.jpg" /></p>
 
-<p>The items file entry to <a href="/integrations/lightwaverf/">control LightWaveRF plug</a> (publish “1 1” to /lwrf mqtt topic) is as follows:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Switch lwrf1 "LWRF Socket 1" {mqtt="&gt;[mosquitto:lwrf:command:ON:1 1],&gt;[mosquitto:lwrf:command:OFF:1 0]"}
-</code></pre></div></div>
-
-<p>See the full items file used for this example on the open_openhab GitHub repo (see docs link below).</p>
-
-<h4 id="sitemap">Sitemap</h4>
-
-<p>The second openHAB config file of interest is ‘sitemap’. Sitemaps are used to create elements of a user interface for making openHAB items accessible to the front-end interface.</p>
-
-<p>For example the sitemap config line to produce the emonPi Power1 in the interface is as follows:</p>
-
-<p><code class="highlighter-rouge">Text item=emonpi_ct1 icon="firstfloor"</code></p>
-
-<p>And to produce the LightWaveRF control swithches:</p>
-
-<p><code class="highlighter-rouge">Switch item=lwrf1 label="LWRF Plug 1"</code></p>
-
-<p>See the full sitemap file used for this example on the open_openhab GitHub repo (see docs link below).</p>
-
-<p>I have intentionally kept this ‘skeleton’ example as simple as possible. To view the full capabilities of openHAB including using groups checkout the openHAB demo and corresponding demo items and sitemap files.</p>
-
-<h3 id="documentation--source-code">Documentation &amp; Source Code</h3>
-
-<p><strong><a href="https://github.com/openenergymonitor/oem_openhab">emonPi openHAB</a></strong></p>
-
-<h3 id="related-blog-posts">Related Blog Posts</h3>
-
-<p><a href="https://blog.openenergymonitor.org/2015/12/openenergymonitor-emonpi-and-openhab/">OpenEnergyMonitor, emonPi and openHAB</a></p>
+<p><strong>Further reading</strong><br />
+If you are using temperature sensors with heating systems such as heat pumps the following blog post by John Cantor provides a number of useful mounting suggestions: <a href="http://johncantorheatpumps.blogspot.co.uk/2015/06/temperature-sensing-with.html">John Cantor’s Blog: Temperature sensors for monitoring heat pumps</a></p>
 
 
 </article>
@@ -743,7 +698,7 @@ mqtt:mosquitto.retain=true
           <li><a  href='/setup/emontx/'>+ Add Additional emonTx </a></li>
           <li><a  href='/setup/emonth/'>+ Add Temperature Nodes </a></li>
           <li><a  href='/setup/optical-pulse-sensor/'>+ Add Optical Pulse Sensor </a></li>
-          <li><a  href='/setup/temperature-sensors/'>+ Add Temperature Sensors </a></li>
+          <li><a class='active' href='/setup/temperature-sensors/'>+ Add Temperature Sensors </a></li>
           <li><a  href='/setup/north-america/'>Use in North America </a></li>
         </ul>
       </li><li>
@@ -795,7 +750,7 @@ mqtt:mosquitto.retain=true
         <b>Integrations</b>
         <ul>
          <li><a  href='/integrations/nodered/'>Node-RED </a></li>
-         <li><a class='active' href='/integrations/openhab/'>OpenHAB </a></li>
+         <li><a  href='/integrations/openhab/'>OpenHAB </a></li>
          <li><a  href='/integrations/lightwaverf/'>LightWave RF Control </a></li>
         </ul>
       </li><li>
