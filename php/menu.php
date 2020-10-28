@@ -12,6 +12,7 @@
       <li><a  href='<?php echo $path; ?>setup/emontx/'>+ Add Additional emonTx</a></li>
       <li><a  href='<?php echo $path; ?>setup/emonth/'>+ Add Temperature Nodes</a></li>
       <li><a  href='<?php echo $path; ?>setup/optical-pulse-sensor/'>+ Add Optical Pulse Sensor </a></li>
+      <li><a  href='<?php echo $path; ?>setup/temperature-sensors/'>+ Add Temperature Sensors </a></li>
       <li><a  href='<?php echo $path; ?>setup/north-america/'>Use in North America </a></li>
 
     </ul>
@@ -59,7 +60,7 @@
     <ul>
       <li><a  href='<?php echo $path; ?>applications/home-energy/'>Home Energy </a></li>
       <li><a  href='<?php echo $path; ?>applications/solar-pv/'>Solar PV </a></li>
-      <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
+      <li><a  href='<?php echo $path; ?>applications/heatpump/'>Heat pump </a></li>
     </ul>
   </li><li>
     <b>Integrations</b>
