@@ -654,7 +654,7 @@ Multiple emonTx unit’s can operate on a single network posting to a single emo
 <p>The image on the right shows the DIP switch configuration looking at the emonTx with the CT sensor inputs at the top of the board. Move the top switch D9 to the left to select USA ACAC Voltage calibration. <strong>Move the bottom switch D8 to the left to select RF node ID 16 rather than 15.</strong></p>
 
 <p><strong>Serial Configuration</strong><br />
-It’s possible to set the emonTx radio settings, sensor calibration and other properties over serial. See <a href="https://github.com/openenergymonitor/EmonTxV3CM/blob/v1.6/Config.pdf">Github PDF: Configuration of RF Module &amp; on-line calibration</a> for full details. If a custom node ID is set, a corresponding node decoder needs to be in place in emonhub.conf to decode the EmonTx radio packet data. See <a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md">emonhub.conf configuration guide</a>.</p>
+It’s possible to set the emonTx radio settings, sensor calibration and other properties over serial. See <a href="https://github.com/openenergymonitor/EmonTxV3CM/blob/master/Config.pdf">Github PDF: Configuration of RF Module &amp; on-line calibration</a> for full details. If a custom node ID is set, a corresponding node decoder needs to be in place in emonhub.conf to decode the EmonTx radio packet data. See <a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md">emonhub.conf configuration guide</a>.</p>
 
 <p><strong>Powering via 5V USB</strong><br />
 If using the emonTx with an ESP8266 WiFi adapter a 5V USB power supply is required in addition to the AC Voltage adapter used for voltage sensing. It is advisable to remove jumper JP2 to the left of the battery compartment if both are present (looking at the emonTx with the CT sensor inputs at the top of the board).</p>
@@ -727,7 +727,7 @@ If using the emonTx with an ESP8266 WiFi adapter a 5V USB power supply is requir
           <li><a  href='/setup/esp8266-adapter-emontx/'>Install emonTx & ESP8266 </a></li>
           <li><a  href='/setup/emontx/'>+ Add Additional emonTx </a></li>
           <li><a  href='/setup/emonth/'>+ Add Temperature Nodes </a></li>
-          <li><a  href='/setup/optical-pulse-sensor/'>+ Add Optical Pulse Sensor </a></li>
+          <li><a  href='/setup/pulse-counting/'>+ Add Pulse Counting </a></li>
           <li><a  href='/setup/temperature-sensors/'>+ Add Temperature Sensors </a></li>
           <li><a  href='/setup/north-america/'>Use in North America </a></li>
         </ul>
@@ -764,6 +764,7 @@ If using the emonTx with an ESP8266 WiFi adapter a 5V USB power supply is requir
           <li><a  href='/emoncms/apps/'>Application dashboards </a></li>
           <li><a  href='/emoncms/daily-kwh/'>Calculating Daily kWh </a></li>
           <li><a  href='/emoncms/daily-averages/'>Calculating Averages </a></li>
+          <li><a  href='/emoncms/pulse-counting/'>Pulse Counting </a></li>
           <li><a  href='/emoncms/export-csv/'>Exporting CSV </a></li>
           <li><a  href='/emoncms/histograms/'>Histograms </a></li>
           <li><a  href='/emoncms/postprocess/'>Post Process </a></li>
@@ -773,7 +774,7 @@ If using the emonTx with an ESP8266 WiFi adapter a 5V USB power supply is requir
         <ul>
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
-         <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
+         <li><a  href='/applications/heatpump'>Heat pump </a></li>
          <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
       </li><li>
@@ -782,6 +783,7 @@ If using the emonTx with an ESP8266 WiFi adapter a 5V USB power supply is requir
          <li><a  href='/integrations/nodered/'>Node-RED </a></li>
          <li><a  href='/integrations/openhab/'>OpenHAB </a></li>
          <li><a  href='/integrations/lightwaverf/'>LightWave RF Control </a></li>
+         <li><a  href='/integrations/emonhub-interfacers/'>EmonHub Interfacers </a></li>  
         </ul>
       </li><li>
         <b>Technical</b>

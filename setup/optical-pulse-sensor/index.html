@@ -663,26 +663,6 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vq5EmMRrOY0" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
-<h2 id="-configure-emoncms"><a class="title-link" name="configure-emoncms" href="#configure-emoncms"></a> Configure Emoncms</h2>
-
-<p>View the Input list:</p>
-
-<p><img src="/images/setup/emonpi-input-list.png" /></p>
-
-<p>Clicking the spanner icon brings up the feed input processor. It’s a good idea to log the raw pulse count to a feed for debugging. The pulse count needs to be multiplied by a scale process to convert the pulses to Wh. The scale factor will depend on your meter, see the table in Appendix A below. Once the scale has been applied, log the result to a Wh Accumulator feed. This feed is an ever increasing number which won’t return to zero if the emonPi / emonTx is reset, which would result in the raw pulse count returning to zero.</p>
-
-<p><img src="/images/setup/emonpi-pulse-input-process.png" /></p>
-
-<p>Viewing the Wh accumulator feed:</p>
-
-<p><img src="/images/setup/wh-accumulator.png" /></p>
-
-<p>To convert the Wh accumulator feed to daily kWh bargraph using the graph tool select Window <code class="highlighter-rouge">type-daily</code> feed <code class="highlighter-rouge">type=Bars</code> and <code class="highlighter-rouge">delta = 1</code> then click <code class="highlighter-rouge">reload</code></p>
-
-<p><img src="/images/setup/wh-accumulator-bargraph.png" /></p>
-
-<p>See Emoncms <a href="/emoncms/daily-kwh">daily kWh guide</a> for mor info.</p>
-
 <h2 id="-appendix-a"><a class="title-link" name="appendix-a" href="#appendix-a"></a> Appendix A:</h2>
 
 <p>The optical pulse sensor should work with all utility meters that have an LED or IR optical pulse output. The sensor has been tested to work with the following meters. The ‘pulses per kwh’ calibration can be used to configure the input process for the pulse data, see above:</p>
@@ -844,7 +824,7 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
           <li><a  href='/setup/esp8266-adapter-emontx/'>Install emonTx & ESP8266 </a></li>
           <li><a  href='/setup/emontx/'>+ Add Additional emonTx </a></li>
           <li><a  href='/setup/emonth/'>+ Add Temperature Nodes </a></li>
-          <li><a class='active' href='/setup/optical-pulse-sensor/'>+ Add Optical Pulse Sensor </a></li>
+          <li><a  href='/setup/pulse-counting/'>+ Add Pulse Counting </a></li>
           <li><a  href='/setup/temperature-sensors/'>+ Add Temperature Sensors </a></li>
           <li><a  href='/setup/north-america/'>Use in North America </a></li>
         </ul>
@@ -881,6 +861,7 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
           <li><a  href='/emoncms/apps/'>Application dashboards </a></li>
           <li><a  href='/emoncms/daily-kwh/'>Calculating Daily kWh </a></li>
           <li><a  href='/emoncms/daily-averages/'>Calculating Averages </a></li>
+          <li><a  href='/emoncms/pulse-counting/'>Pulse Counting </a></li>
           <li><a  href='/emoncms/export-csv/'>Exporting CSV </a></li>
           <li><a  href='/emoncms/histograms/'>Histograms </a></li>
           <li><a  href='/emoncms/postprocess/'>Post Process </a></li>
@@ -890,7 +871,7 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
         <ul>
          <li><a  href='/applications/home-energy/'>Home Energy </a></li>
          <li><a  href='/applications/solar-pv/'>Solar PV </a></li>
-         <li><a  href='http://heatpumpmonitor.org/'>Heatpump <i class="icon-external-link"></i> </a></li>
+         <li><a  href='/applications/heatpump'>Heat pump </a></li>
          <li><a  href='/applications/octopusagile/'>Octopus Agile </a></li>
         </ul>
       </li><li>
@@ -899,6 +880,7 @@ Ensure the sensor is plugged into the RJ45 socket on the emonPi on the same side
          <li><a  href='/integrations/nodered/'>Node-RED </a></li>
          <li><a  href='/integrations/openhab/'>OpenHAB </a></li>
          <li><a  href='/integrations/lightwaverf/'>LightWave RF Control </a></li>
+         <li><a  href='/integrations/emonhub-interfacers/'>EmonHub Interfacers </a></li>  
         </ul>
       </li><li>
         <b>Technical</b>
