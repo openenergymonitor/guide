@@ -623,19 +623,19 @@ highlight active link...
 <p>EmonHub is a piece of software running on the emonPi and emonBase that can read/subscribe or send/publish data to and from a multitude of services. It is primarily used as the bridge between the OpenEnergyMonitor monitoring hardware and the Emoncms software but it can also be used to read in data from a number of other sources, providing an easy way to interface with a wider range of sensors.</p>
 
 <ul>
-  <li><a href="/test/test">SDS011 Air-Quality sensor</a></li>
-  <li><a href="/test/test">SDM120 Modbus single-phase meter</a></li>
-  <li><a href="/test/test">MBUS Reader for electric and heat meters</a></li>
-  <li><a href="/test/test">Direct DS18B20 temperature sensing</a></li>
-  <li><a href="/test/test">Direct Pulse counting</a></li>
-  <li><a href="/test/test">Read State of charge of a Tesla Power Wall</a></li>
-  <li><a href="/test/test">Modbus: Renogy</a></li>
-  <li><a href="/test/test">SMA Solar</a></li>
-  <li><a href="/test/test">Victron VE.Direct Protocol</a></li>
-  <li><a href="/test/test">Modbus TCP</a></li>
+  <li><a href="/integrations/emonhub-interfacers#SDS011-Air-Quality-sensor">SDS011 Air-Quality sensor</a></li>
+  <li><a href="/integrations/emonhub-interfacers#Reading-from-a-SDM120-single-phase-meter">SDM120 Modbus single-phase meter</a></li>
+  <li><a href="/integrations/emonhub-interfacers#MBUS-Reader-for-Electric-and-Heat-meters">MBUS Reader for electric and heat meters</a></li>
+  <li><a href="/integrations/emonhub-interfacers#Direct-DS18B20-temperature-sensing">Direct DS18B20 temperature sensing</a></li>
+  <li><a href="/integrations/emonhub-interfacers#Direct-Pulse-counting">Direct Pulse counting</a></li>
+  <li><a href="/integrations/emonhub-interfacers#Read-State-of-charge-of-a-Tesla-Power-Wall">Read State of charge of a Tesla Power Wall</a></li>
+  <li><a href="/integrations/emonhub-interfacers#Modbus-Renogy">Modbus: Renogy</a></li>
+  <li><a href="/integrations/emonhub-interfacers#SMA-Solar">SMA Solar</a></li>
+  <li><a href="/integrations/emonhub-interfacers#Victron-VE.Direct-Protocol">Victron VE.Direct Protocol</a></li>
+  <li><a href="/integrations/emonhub-interfacers#Modbus-TCP">Modbus TCP</a></li>
 </ul>
 
-<h3 id="sds011-air-quality-sensor">SDS011 Air-Quality sensor</h3>
+<h3 id="-sds011-air-quality-sensor"><a class="title-link" name="sds011-air-quality-sensor" href="#sds011-air-quality-sensor"></a> SDS011 Air-Quality sensor</h3>
 
 <p>1. Plug the SDS011 sensor into a USB port on either the emonPi or emonBase.</p>
 
@@ -666,7 +666,7 @@ highlight active link...
 
 <div style="height:20px"></div>
 
-<h3 id="reading-from-a-sdm120-single-phase-meter">Reading from a SDM120 single-phase meter</h3>
+<h3 id="-reading-from-a-sdm120-single-phase-meter"><a class="title-link" name="reading-from-a-sdm120-single-phase-meter" href="#reading-from-a-sdm120-single-phase-meter"></a> Reading from a SDM120 single-phase meter</h3>
 
 <p>The SDM120-Modbus single phase electricity meter provides MID certified electricity monitoring up to 45A, ideal for monitoring the electricity supply of heat pumps and EV chargers. A USB to RS485 converter is needed to read from the modbus output of the meter such as: <a href="https://www.amazon.co.uk/gp/product/B07SD65BVF">https://www.amazon.co.uk/gp/product/B07SD65BVF</a>. The SDM120 meter comes in a number of different variants, be sure to order the version with a modbus output.</p>
 
@@ -700,7 +700,7 @@ highlight active link...
 
 <div style="height:20px"></div>
 
-<h3 id="mbus-reader-for-electric-and-heat-meters-coming-soon">MBUS Reader for Electric and Heat meters (Coming soon)</h3>
+<h3 id="-mbus-reader-for-electric-and-heat-meters"><a class="title-link" name="mbus-reader-for-electric-and-heat-meters" href="#mbus-reader-for-electric-and-heat-meters"></a> MBUS Reader for Electric and Heat meters</h3>
 
 <p>Many electricity and heat meters are available with meter bus (MBUS) outputs. Using an MBUS to USB converter (coming soon), these can be read from an emonPi or emonBase.  For heat pumps, this provides a convenient way of monitoring the heat output, flow temperature, return temperature, flow rate and cumulative heat energy provided by the system.</p>
 
@@ -741,7 +741,7 @@ highlight active link...
 
 <div style="height:20px"></div>
 
-<h3 id="direct-ds18b20-temperature-sensing">Direct DS18B20 temperature sensing</h3>
+<h3 id="-direct-ds18b20-temperature-sensing"><a class="title-link" name="direct-ds18b20-temperature-sensing" href="#direct-ds18b20-temperature-sensing"></a> Direct DS18B20 temperature sensing</h3>
 
 <p>This EmonHub interfacer can be used to read directly from DS18B20 temperature sensors connected to the GPIO pins on the RaspberryPi. At present a couple of manual setup steps are required to enable DS18B20 temperature sensing before using this EmonHub interfacer.</p>
 
@@ -792,7 +792,7 @@ sudo modprobe w1-therm
 
 <div style="height:20px"></div>
 
-<h3 id="direct-pulse-counting">Direct Pulse counting</h3>
+<h3 id="-direct-pulse-counting"><a class="title-link" name="direct-pulse-counting" href="#direct-pulse-counting"></a> Direct Pulse counting</h3>
 
 <p>This EmonHub interfacer can be used to read directly from pulse counter connected to a GPIO pin on the RaspberryPi.</p>
 
@@ -818,11 +818,11 @@ sudo modprobe w1-therm
 
 <div style="height:20px"></div>
 
-<h3 id="read-state-of-charge-of-a-tesla-power-wall">Read State of charge of a Tesla Power Wall</h3>
+<h3 id="-read-state-of-charge-of-a-tesla-power-wall"><a class="title-link" name="read-state-of-charge-of-a-tesla-power-wall" href="#read-state-of-charge-of-a-tesla-power-wall"></a> Read State of charge of a Tesla Power Wall</h3>
 
 <p>This interfacer fetches the state of charge of a Tesla Power Wall on the local network. Enter your PowerWall IP-address or hostname in the URL section of the following emonhub.conf configuration:</p>
 
-<pre style="font-family:monospace; font-size:14px; background-color: #eee; padding: 20px;">
+<pre class="code_20px">
 [[PowerWall]]
     Type = EmonHubTeslaPowerWallInterfacer
     [[[init_settings]]]
@@ -835,19 +835,19 @@ sudo modprobe w1-therm
 
 <div style="height:40px"></div>
 
-<h3 id="modbus-renogy">Modbus: Renogy</h3>
+<h3 id="-modbus-renogy"><a class="title-link" name="modbus-renogy" href="#modbus-renogy"></a> Modbus Renogy</h3>
 
 <p>See example config:<br /><a href="https://github.com/openenergymonitor/emonhub/blob/master/conf/interfacer_examples/Renogy/Renogy.emonhub.conf">EmonHub Github: Renogy.emonhub.conf</a></p>
 
-<h3 id="sma-solar">SMA Solar</h3>
+<h3 id="-sma-solar"><a class="title-link" name="sma-solar" href="#sma-solar"></a> SMA Solar</h3>
 
 <p>See example config and documentation:<br /><a href="https://github.com/openenergymonitor/emonhub/tree/master/conf/interfacer_examples/smasolar">EmonHub Github: SMA Solar</a></p>
 
-<h3 id="victron-vedirect-protocol">Victron VE.Direct Protocol</h3>
+<h3 id="-victron-vedirect-protocol"><a class="title-link" name="victron-vedirect-protocol" href="#victron-vedirect-protocol"></a> Victron VE.Direct Protocol</h3>
 
 <p>See example config and documentation:<br /><a href="https://github.com/openenergymonitor/emonhub/tree/master/conf/interfacer_examples/vedirect">EmonHub Github: Victron VE.Direct Protocol</a></p>
 
-<h3 id="modbus-tcp">Modbus TCP</h3>
+<h3 id="-modbus-tcp"><a class="title-link" name="modbus-tcp" href="#modbus-tcp"></a> Modbus TCP</h3>
 
 <p>See example config and documentation:<br /><a href="https://github.com/openenergymonitor/emonhub/tree/master/conf/interfacer_examples/modbus">EmonHub Github: modbus TCP configuration</a></p>
 
