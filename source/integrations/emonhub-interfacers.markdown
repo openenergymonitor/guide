@@ -17,16 +17,16 @@ footer: true
 
 EmonHub is a piece of software running on the emonPi and emonBase that can read/subscribe or send/publish data to and from a multitude of services. It is primarily used as the bridge between the OpenEnergyMonitor monitoring hardware and the Emoncms software but it can also be used to read in data from a number of other sources, providing an easy way to interface with a wider range of sensors.
 
-- [SDS011 Air-Quality sensor](/integrations/emonhub-interfacers#SDS011-Air-Quality-sensor)
-- [SDM120 Modbus single-phase meter](/integrations/emonhub-interfacers#Reading-from-a-SDM120-single-phase-meter)
-- [MBUS Reader for electric and heat meters](/integrations/emonhub-interfacers#MBUS-Reader-for-Electric-and-Heat-meters)
-- [Direct DS18B20 temperature sensing](/integrations/emonhub-interfacers#Direct-DS18B20-temperature-sensing)
-- [Direct Pulse counting](/integrations/emonhub-interfacers#Direct-Pulse-counting)
-- [Read State of charge of a Tesla Power Wall](/integrations/emonhub-interfacers#Read-State-of-charge-of-a-Tesla-Power-Wall)
-- [Modbus: Renogy](/integrations/emonhub-interfacers#Modbus-Renogy)
-- [SMA Solar](/integrations/emonhub-interfacers#SMA-Solar)
-- [Victron VE.Direct Protocol](/integrations/emonhub-interfacers#Victron-VE.Direct-Protocol)
-- [Modbus TCP](/integrations/emonhub-interfacers#Modbus-TCP)
+- [SDS011 Air-Quality sensor](/integrations/emonhub-interfacers#sds011-air-quality-sensor)
+- [SDM120 Modbus single-phase meter](/integrations/emonhub-interfacers#reading-from-a-sdm120-single-phase-meter)
+- [MBUS Reader for electric and heat meters](/integrations/emonhub-interfacers#mbus-reader-for-electric-and-heat-meters)
+- [Direct DS18B20 temperature sensing](/integrations/emonhub-interfacers#direct-ds18b20-temperature-sensing)
+- [Direct Pulse counting](/integrations/emonhub-interfacers#direct-pulse-counting)
+- [Read State of charge of a Tesla Power Wall](/integrations/emonhub-interfacers#read-state-of-charge-of-a-tesla-power-wall)
+- [Modbus: Renogy](/integrations/emonhub-interfacers#modbus-renogy)
+- [SMA Solar](/integrations/emonhub-interfacers#sma-solar)
+- [Victron VE.Direct Protocol](/integrations/emonhub-interfacers#victron-ve.direct-protocol)
+- [Modbus TCP](/integrations/emonhub-interfacers#modbus-tcp)
 
 ### {% linkable_title SDS011 Air-Quality sensor %}
 
