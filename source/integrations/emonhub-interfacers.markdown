@@ -17,18 +17,18 @@ footer: true
 
 EmonHub is a piece of software running on the emonPi and emonBase that can read/subscribe or send/publish data to and from a multitude of services. It is primarily used as the bridge between the OpenEnergyMonitor monitoring hardware and the Emoncms software but it can also be used to read in data from a number of other sources, providing an easy way to interface with a wider range of sensors.
 
-- [SDS011 Air-Quality sensor](/test/test)
-- [SDM120 Modbus single-phase meter](/test/test)
-- [MBUS Reader for electric and heat meters](/test/test)
-- [Direct DS18B20 temperature sensing](/test/test)
-- [Direct Pulse counting](/test/test)
-- [Read State of charge of a Tesla Power Wall](/test/test)
-- [Modbus: Renogy](/test/test)
-- [SMA Solar](/test/test)
-- [Victron VE.Direct Protocol](/test/test)
-- [Modbus TCP](/test/test)
+- [SDS011 Air-Quality sensor](/integrations/emonhub-interfacers#SDS011-Air-Quality-sensor)
+- [SDM120 Modbus single-phase meter](/integrations/emonhub-interfacers#Reading-from-a-SDM120-single-phase-meter)
+- [MBUS Reader for electric and heat meters](/integrations/emonhub-interfacers#MBUS-Reader-for-Electric-and-Heat-meters)
+- [Direct DS18B20 temperature sensing](/integrations/emonhub-interfacers)
+- [Direct Pulse counting](/integrations/emonhub-interfacers)
+- [Read State of charge of a Tesla Power Wall](/integrations/emonhub-interfacers)
+- [Modbus: Renogy](/integrations/emonhub-interfacers)
+- [SMA Solar](/integrations/emonhub-interfacers)
+- [Victron VE.Direct Protocol](/integrations/emonhub-interfacers)
+- [Modbus TCP](/integrations/emonhub-interfacers)
 
-### SDS011 Air-Quality sensor
+### {% linkable_title SDS011 Air-Quality sensor %}
 
 1\. Plug the SDS011 sensor into a USB port on either the emonPi or emonBase.
 
@@ -60,7 +60,7 @@ Example SDS011 EmonHub configuration:
 
 <div style="height:20px"></div>
 
-### Reading from a SDM120 single-phase meter
+### {% linkable_title Reading from a SDM120 single-phase meter %}
 
 The SDM120-Modbus single phase electricity meter provides MID certified electricity monitoring up to 45A, ideal for monitoring the electricity supply of heat pumps and EV chargers. A USB to RS485 converter is needed to read from the modbus output of the meter such as: [https://www.amazon.co.uk/gp/product/B07SD65BVF](https://www.amazon.co.uk/gp/product/B07SD65BVF). The SDM120 meter comes in a number of different variants, be sure to order the version with a modbus output.
 
@@ -94,7 +94,7 @@ Example SDM120 EmonHub configuration:
 
 <div style="height:20px"></div>
 
-### MBUS Reader for Electric and Heat meters (Coming soon)
+### {% linkable_title MBUS Reader for Electric and Heat meters %}
 
 Many electricity and heat meters are available with meter bus (MBUS) outputs. Using an MBUS to USB converter (coming soon), these can be read from an emonPi or emonBase.  For heat pumps, this provides a convenient way of monitoring the heat output, flow temperature, return temperature, flow rate and cumulative heat energy provided by the system.
 
@@ -133,7 +133,7 @@ Example MBUS EmonHub configuration:
 
 <div style="height:20px"></div>
 
-### Direct DS18B20 temperature sensing
+### {% linkable_title Direct DS18B20 temperature sensing %}
 
 This EmonHub interfacer can be used to read directly from DS18B20 temperature sensors connected to the GPIO pins on the RaspberryPi. At present a couple of manual setup steps are required to enable DS18B20 temperature sensing before using this EmonHub interfacer.
 
@@ -183,7 +183,7 @@ Example DS18B20 EmonHub configuration:
 
 <div style="height:20px"></div>
 
-### Direct Pulse counting
+### {% linkable_title Direct Pulse counting %}
 
 This EmonHub interfacer can be used to read directly from pulse counter connected to a GPIO pin on the RaspberryPi.
 
@@ -207,11 +207,11 @@ Example Pulse counting EmonHub configuration:
 
 <div style="height:20px"></div>
 
-### Read State of charge of a Tesla Power Wall
+### {% linkable_title Read State of charge of a Tesla Power Wall %}
 
 This interfacer fetches the state of charge of a Tesla Power Wall on the local network. Enter your PowerWall IP-address or hostname in the URL section of the following emonhub.conf configuration:
 
-<pre style="font-family:monospace; font-size:14px; background-color: #eee; padding: 20px;">
+<pre class="code_20px">
 [[PowerWall]]
     Type = EmonHubTeslaPowerWallInterfacer
     [[[init_settings]]]
@@ -224,18 +224,18 @@ This interfacer fetches the state of charge of a Tesla Power Wall on the local n
 
 <div style="height:40px"></div>
 
-### Modbus: Renogy
+### {% linkable_title Modbus: Renogy %}
 
 See example config:<br>[EmonHub Github: Renogy.emonhub.conf](https://github.com/openenergymonitor/emonhub/blob/master/conf/interfacer_examples/Renogy/Renogy.emonhub.conf)
 
-### SMA Solar
+### {% linkable_title SMA Solar %}
 
 See example config and documentation:<br>[EmonHub Github: SMA Solar](https://github.com/openenergymonitor/emonhub/tree/master/conf/interfacer_examples/smasolar)
 
-### Victron VE.Direct Protocol
+### {% linkable_title Victron VE.Direct Protocol %}
 
 See example config and documentation:<br>[EmonHub Github: Victron VE.Direct Protocol](https://github.com/openenergymonitor/emonhub/tree/master/conf/interfacer_examples/vedirect)
 
-### Modbus TCP
+### {% linkable_title Modbus TCP %}
 
 See example config and documentation:<br>[EmonHub Github: modbus TCP configuration](https://github.com/openenergymonitor/emonhub/tree/master/conf/interfacer_examples/modbus)
