@@ -48,4 +48,4 @@ To connect an external DS18B20 to the emonTx V3 screw terminal block, connect th
 ![emontx_ds18b20_terminal_block.jpg](/images/setup/emontx_ds18b20_terminal_block.jpg)
 
 **Further reading**<br>
-If you are using temperature sensors with heating systems such as heat pumps the following blog post by John Cantor provides a number of useful mounting suggestions: [John Cantor's Blog: Temperature sensors for monitoring heat pumps](http://johncantorheatpumps.blogspot.co.uk/2015/06/temperature-sensing-with.html)
+If you are using temperature sensors with heating systems such as heat pumps the following blog post by John Cantor provides a number of useful mounting suggestions: [John Cantor's Blog: Temperature sensors for monitoring heat pumps](https://heatpumps.co.uk/2015/06/08/temperature-sensing-with-openenergymonitor)

@@ -85,7 +85,8 @@ if (!$content_error) {
         if ($pos!==false) {
             $link = substr($lines[$i],$pos+17,strlen($lines[$i]));
             $link = trim(str_replace("%}","",$link));
-            $lines[$i] = '<h3 id="-'.$link.'"><a class="title-link" name="'.$link.'" href="#'.$link.'"></a>'.$link.'</h3>';
+            $link_h = str_replace(" ","-",$link);
+            $lines[$i] = '<h3 id="-'.$link.'"><a class="title-link" name="'.$link_h.'" href="#'.$link_h.'"></a>'.$link.'</h3>';
         }
     }
     $content = implode("\n",$lines);
