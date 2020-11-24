@@ -20,13 +20,13 @@ EmonHub is a piece of software running on the emonPi and emonBase that can read/
 - [SDS011 Air-Quality sensor](/integrations/emonhub-interfacers#SDS011-Air-Quality-sensor)
 - [SDM120 Modbus single-phase meter](/integrations/emonhub-interfacers#Reading-from-a-SDM120-single-phase-meter)
 - [MBUS Reader for electric and heat meters](/integrations/emonhub-interfacers#MBUS-Reader-for-Electric-and-Heat-meters)
-- [Direct DS18B20 temperature sensing](/integrations/emonhub-interfacers)
-- [Direct Pulse counting](/integrations/emonhub-interfacers)
-- [Read State of charge of a Tesla Power Wall](/integrations/emonhub-interfacers)
-- [Modbus: Renogy](/integrations/emonhub-interfacers)
-- [SMA Solar](/integrations/emonhub-interfacers)
-- [Victron VE.Direct Protocol](/integrations/emonhub-interfacers)
-- [Modbus TCP](/integrations/emonhub-interfacers)
+- [Direct DS18B20 temperature sensing](/integrations/emonhub-interfacers#Direct-DS18B20-temperature-sensing)
+- [Direct Pulse counting](/integrations/emonhub-interfacers#Direct-Pulse-counting)
+- [Read State of charge of a Tesla Power Wall](/integrations/emonhub-interfacers#Read-State-of-charge-of-a-Tesla-Power-Wall)
+- [Modbus: Renogy](/integrations/emonhub-interfacers#Modbus-Renogy)
+- [SMA Solar](/integrations/emonhub-interfacers#SMA-Solar)
+- [Victron VE.Direct Protocol](/integrations/emonhub-interfacers#Victron-VE.Direct-Protocol)
+- [Modbus TCP](/integrations/emonhub-interfacers#Modbus-TCP)
 
 ### {% linkable_title SDS011 Air-Quality sensor %}
 
@@ -224,7 +224,7 @@ This interfacer fetches the state of charge of a Tesla Power Wall on the local n
 
 <div style="height:40px"></div>
 
-### {% linkable_title Modbus: Renogy %}
+### {% linkable_title Modbus Renogy %}
 
 See example config:<br>[EmonHub Github: Renogy.emonhub.conf](https://github.com/openenergymonitor/emonhub/blob/master/conf/interfacer_examples/Renogy/Renogy.emonhub.conf)
 
