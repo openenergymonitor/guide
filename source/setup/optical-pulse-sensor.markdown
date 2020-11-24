@@ -53,26 +53,6 @@ If installed correctly when the emonPi / emonTx is powered up the pulse sensor L
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vq5EmMRrOY0" frameborder="0" allowfullscreen></iframe>
 </div>
 
-## {% linkable_title Configure Emoncms %}
-
-View the Input list:
-
-<img src="/images/setup/emonpi-input-list.png" />
-
-Clicking the spanner icon brings up the feed input processor. It's a good idea to log the raw pulse count to a feed for debugging. The pulse count needs to be multiplied by a scale process to convert the pulses to Wh. The scale factor will depend on your meter, see the table in Appendix A below. Once the scale has been applied, log the result to a Wh Accumulator feed. This feed is an ever increasing number which won't return to zero if the emonPi / emonTx is reset, which would result in the raw pulse count returning to zero.
-
-<img src="/images/setup/emonpi-pulse-input-process.png" />
-
-Viewing the Wh accumulator feed:
-
-<img src="/images/setup/wh-accumulator.png" />
-
-To convert the Wh accumulator feed to daily kWh bargraph using the graph tool select Window `type-daily` feed `type=Bars` and `delta = 1` then click `reload`
-
-<img src="/images/setup/wh-accumulator-bargraph.png" />
-
-See Emoncms [daily kWh guide](/emoncms/daily-kwh) for mor info.
-
 ## {% linkable_title Appendix A: %}
 
 The optical pulse sensor should work with all utility meters that have an LED or IR optical pulse output. The sensor has been tested to work with the following meters. The 'pulses per kwh' calibration can be used to configure the input process for the pulse data, see above:

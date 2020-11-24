@@ -11,7 +11,7 @@
       <li><a  href='<?php echo $path; ?>setup/esp8266-adapter-emontx/'>Install emonTx & ESP8266</a></li>
       <li><a  href='<?php echo $path; ?>setup/emontx/'>+ Add Additional emonTx</a></li>
       <li><a  href='<?php echo $path; ?>setup/emonth/'>+ Add Temperature Nodes</a></li>
-      <li><a  href='<?php echo $path; ?>setup/optical-pulse-sensor/'>+ Add Optical Pulse Sensor </a></li>
+      <li><a  href='<?php echo $path; ?>setup/pulse-counting/'>+ Add Pulse Counting</a></li>
       <li><a  href='<?php echo $path; ?>setup/temperature-sensors/'>+ Add Temperature Sensors </a></li>
       <li><a  href='<?php echo $path; ?>setup/north-america/'>Use in North America </a></li>
 
@@ -49,6 +49,7 @@
       <li><a  href='<?php echo $path; ?>emoncms/apps/'>Application dashboards </a></li>
       <li><a  href='<?php echo $path; ?>emoncms/daily-kwh/'>Calculating Daily kWh </a></li>
       <li><a  href='<?php echo $path; ?>emoncms/daily-averages/'>Calculating Averages </a></li>
+      <li><a  href='<?php echo $path; ?>emoncms/pulse-counting/'>Pulse Counting </a></li>
       <li><a  href='<?php echo $path; ?>emoncms/export-csv/'>Exporting CSV </a></li>
       <li><a  href='<?php echo $path; ?>emoncms/histograms/'>Histograms </a></li>
       <li><a  href='<?php echo $path; ?>emoncms/postprocess/'>Post Process </a></li>
@@ -68,6 +69,7 @@
       <li><a  href='<?php echo $path; ?>integrations/nodered/'>Node-RED </a></li>
       <li><a  href='<?php echo $path; ?>integrations/openhab/'>OpenHAB </a></li>
       <li><a  href='<?php echo $path; ?>integrations/lightwaverf/'>LightWave RF Control </a></li>
+      <li><a  href='<?php echo $path; ?>integrations/emonhub-interfacers/'>EmonHub Interfacers</a></li>
     </ul>
   </li><li>
     <b>Technical</b>
