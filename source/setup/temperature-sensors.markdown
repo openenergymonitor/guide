@@ -36,7 +36,7 @@ When using multiple temperature sensors and or an optical pulse sensor with the 
 In order to save power when running on batteries, the emonTx V3 supports switching off of the DS18B20 in-between readings and performing the temperature conversion while the ATmega328 is sleeping. To do this, power (3.3 V) is supplied to the DS18B20's power pin from Dig19 (ADC5), this digital pin is switched off between readings. (This facility is available only if the temperature sensors are connected via the terminal block.) The data connection from the DS18B20 is connected to Dig5, this I/O pin has a 4K7 pull-up resistor on-board as required by the DS18B20. 
 
 **RJ45 Pinout**<br>
-The RJ45 implements a standard pinout used by other manufacturers of DS18B20 temperate sensing hardware such as Sheep Walker Electronics.
+The RJ45 implements a standard pinout used by other manufacturers of DS18B20 temperate sensing hardware such as Sheepwalk Electronics.
 
 ![RJ45-Pin-out.png](/images/setup/RJ45-Pin-out.png)
 

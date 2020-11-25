@@ -44,7 +44,7 @@ Some meters are configured to pulse on both import and export. If your meter is,
 It is advisable to shield the sensor and the meter from bright light as this can adversely affect readings.
 </p>
 
-1. Identify your utility meter's pulse output, usually a red flashing LED marked 'KWh'. Stick the sensor over the LED, carefully aligning the hole so the flashing LED shines through clearly. Be sure to clean any dust from the meter face before attaching the sensor.
+1. Identify your utility meter's pulse output, usually a red flashing LED marked 'kWh'. Stick the sensor over the LED, carefully aligning the hole so the flashing LED shines through clearly. Be sure to clean any dust from the meter face before attaching the sensor.
 
 2. Plug sensors RJ45 connector into emonPi / emonTx RJ45 socket.
 
@@ -60,12 +60,14 @@ If installed correctly when the emonPi / emonTx is powered up the pulse sensor L
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vq5EmMRrOY0" frameborder="0" allowfullscreen></iframe>
 </div>
 
+*Note: If the pulsecount value in emoncms does not increase in line with LED flashes, it maybe that there is light from another source interfering with the pulse detection. Some meters have a plastic cover that makes it quite hard to keep external light away from the pulse sensor. See forum thread [here](https://community.openenergymonitor.org/t/first-try-with-emonpi-pulsecount-stuck-at-1/7375) for more details.*
+
 #### Option 2: Wired pulse counting
 
 To connect to a meter with a wired pulse output it's possible to either wire the pulse output cable directly to a RJ45 passthrough connector or to a RJ45 to terminal block adapter. The screenshot below shows an example with a simple RJ45 passthrough connector.
 
 **RJ45 Pinout**<br>
-The RJ45 implements a standard pinout used by other manufacturers of DS18B20 temperate sensing hardware such as Sheep Walker Electronics.
+The RJ45 implements a standard pinout used by other manufacturers of DS18B20 temperate sensing hardware such as Sheepwalk Electronics.
 
 ![RJ45-Pin-out.png](/images/setup/RJ45-Pin-out.png)
 
@@ -84,6 +86,8 @@ Alternatively the terminal block can be used for wired pulse counting. Connect t
 If you are using an optical counter attached to the terminal block, connect the power pin to the 3.3V terminal or 5V if the emonTx is powered via USB (2nd or 1st from the left) and connect ground to GND (3rd from the left).
 
 For isolated volt-free / switch output (SO) pulse output devices, connect across IRQ1 Dig3 and GND. There is an internal pull-up resistor on the pulse input that is enabled in the standard firmware that will pull the signal up when the switched output is open.
+
+In the face of long leads and/or moderate interference, it is advisable to “stiffen” the relatively weak internal pull-up with a parallel 10 kΩ (or possibly less if necessary) resistor wired between the pulse input and the 3.3 V supply.
 
 Alternatively a volt-free / switch output (SO) pulse output device can be connected across 3.3V (or 5V) and IRQ1 Dig3. A pull-down resistor of resistance low enough to overcome the internal pull-up resistor needs to be added in this case, or a higher-value resistor with the firmware modified to disable the internal pull-up.
 
