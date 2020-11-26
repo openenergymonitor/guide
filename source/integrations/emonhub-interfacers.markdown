@@ -96,7 +96,7 @@ Example SDM120 EmonHub configuration:
 
 ### {% linkable_title MBUS Reader for Electric and Heat meters %}
 
-Many electricity and heat meters are available with meter bus (MBUS) outputs. Using an MBUS to USB converter (coming soon), these can be read from an emonPi or emonBase.  For heat pumps, this provides a convenient way of monitoring the heat output, flow temperature, return temperature, flow rate and cumulative heat energy provided by the system.
+Many electricity and heat meters are available with meter bus (MBUS) outputs. Using an [MBUS to UART converter](https://shop.openenergymonitor.com/mbus-to-uart), these can be read from an emonPi or emonBase. For heat pumps, this provides a convenient way of monitoring the heat output, flow temperature, return temperature, flow rate and cumulative heat energy provided by the system.
 
 1\. Connect up the USB to MBUS converter to the MBUS output of the meter and plug the converter into a USB port on either the emonPi or emonBase.
 
