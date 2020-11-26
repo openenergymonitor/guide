@@ -118,6 +118,11 @@ Optical pulse sensor RJ45 pinout
 
 -->
 
+### {% linkable_title Direct pulse counting with a RaspberryPi %}
+
+Another option for pulse counting is to use a spare GPIO pin on a RaspberryPi directly. 
+See [EmonHub Interfacers: Direct pulse counting guide for details](/integrations/emonhub-interfacers/#direct-pulse-counting)
+
 ### {% linkable_title Elster A100C IrDa %}
 
 If you have an [Elster meter](http://4.bp.blogspot.com/-O6Rbpza8DRI/UDtMZHQNG7I/AAAAAAAACeo/i6Xx0PCuLdo/s1600/IMAG0876.jpg) (tested with Elster 100C) the emonTx V3 with an [IR TSL261R](http://shop.openenergymonitor.com/tsl261r-ir-sensor-kit/) sensor can be used to interface directly with the meter protocol to read off the exact accumulated watt hours that you have generated or used. This reading can be used on its own or to cross-check and calibrate CT based measurement. See here for [original blog post](http://openenergymonitor.blogspot.com/2012/08/reading-watt-hour-data-from-elster.html)
