@@ -39,6 +39,10 @@ Alternatively, you will need:
 
 ![esp8266adapter.jpg](/images/setup/esp8266adapter/esp8266adapter.jpg)
 
+Alternatively, 6 way ribbon cable with the RX/TX line swapped could be used, and may be a bit easier to put together.
+
+N.B. You should connect ONLY the RX pins, and leave the Tx pins not connected, as the pictures above show.
+
 ### Setup procedure
 
 1) Plug the ESP8266 Huzzah WIFI module into the emonTx as shown in the first picture above.
