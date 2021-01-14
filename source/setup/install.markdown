@@ -54,7 +54,7 @@ The clip-on CT sensors must be clipped round either the Line or Neutral AC wire.
 
 ### {% linkable_title 4. Optical Utility Meter LED Pulse Sensor (optional) %}
 
-- See [Optical Pulse Sensor setup page](http://openenergymonitor.org/emon/opticalpulsesensor)
+- See [Optical Pulse Sensor setup page](https://guide.openenergymonitor.org/setup/pulse-counting/)
 - Connects to emonPi / emonTx via RJ45 connector
 - Self-adhesive velcro attachment to utility meter
 - One optical pulse sensor per emonPi/emonTx
@@ -73,7 +73,7 @@ The clip-on CT sensors must be clipped round either the Line or Neutral AC wire.
 
 ![home energy2](/images/applications/home-energy/emonpi-install2.jpg)
 
-The included [plastic clips](https://www.lincolnbinns.com/wp-content/uploads/2013/12/Plastic-Linc-Lug.png) and plastic locking nut can be used to mount the emonPi / emonTx on a wall. 
+The included clips can be used to mount the emonPi / emonTx on a wall. 
 
 See [Solar PV Application Note](/applications/solar-pv/) for emonPi solar PV install guide & images.
 
