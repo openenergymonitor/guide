@@ -17,7 +17,7 @@ The OpenEnergyMonitor system can be applied to a number of applications, see app
 
 - ## [EV Charging](/integrations/ev-charging)
 
-- ## [Heatpump Monitor <i class="icon-external-link"></i>](http://heatpumpmonitor.org)
+- ## [Heatpump Monitor](/applications/heatpump)
 
 - ## [Octopus Agile](/applications/octopusagile)
 
