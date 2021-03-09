@@ -159,7 +159,7 @@ The optical pulse sensor should work with all utility meters that have an LED or
 		<tr>
 			<td>
 			<p>Elster&nbsp;A100c</p>
-			<p>(single phase)</p>
+			<p>(Single phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/a100c.png"><img alt="" src="/images/setup/meters/a100c.png" style="width: 100px; height: 78px;" /></a></td>
 			<td>1000</td>
@@ -168,7 +168,7 @@ The optical pulse sensor should work with all utility meters that have an LED or
 		<tr>
 			<td>
 			<p>Actaris ace9000</p>
-			<p>(single phase)</p>
+			<p>(Single phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/Actaris_ace9000.jpg"><img alt="" src="/images/setup/meters/Actaris_ace9000.jpg" style="width: 100px; height: 118px;" /></a></td>
 			<td>800</td>
@@ -177,7 +177,7 @@ The optical pulse sensor should work with all utility meters that have an LED or
 		<tr>
 			<td>
 			<p>Xil&nbsp;XLA12</p>
-			<p>(single phase)</p>
+			<p>(Single phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/Xil_XLA12.jpg"><img alt="" src="/images/setup/meters/Xil_XLA12.jpg" style="width: 100px; height: 100px;" /></a></td>
 			<td>800</td>
@@ -195,7 +195,7 @@ The optical pulse sensor should work with all utility meters that have an LED or
 		<tr>
 			<td>
 			<p>Elster AS300P</p>
-			<p>(single phase)</p>
+			<p>(Single phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/ElsterAS300P.jpg"><img alt="" src="/images/setup/meters/ElsterAS300P.jpg" style="width: 100px; height: 100px;" /></a></td>
 			<td>4000</td>
@@ -213,7 +213,7 @@ The optical pulse sensor should work with all utility meters that have an LED or
 		<tr>
 			<td>
 			<p>Landis &amp; Gyr 5254E</p>
-			<p>(single phase)</p>
+			<p>(Single phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/LandisGyr5254E.png"><img alt="" src="/images/setup/meters/LandisGyr5254E.png" style="width: 100px; height: 100px;" /></a></td>
 			<td>1000</td>
@@ -258,6 +258,17 @@ The optical pulse sensor should work with all utility meters that have an LED or
 			<p>1000 / 3200 =&nbsp;<strong>0.3125</strong></p>
 			</td>
 		</tr>
+		<tr>
+			<td>
+			<p>EDMI ATLAS Mk10D</p>
+			<p>(Single Phase)</p>
+			</td>
+			<td><a href="/images/setup/meters/EDMI_ATLAS_Mk10D.png"><img alt="" src="/images/setup/meters/EDMI_ATLAS_Mk10D.png" style="width: 150px; height: 100px;" /></a></td>
+			<td>10</td>
+			<td>
+			<p>11000/10 =&nbsp;<strong>100</strong></p>
+			</td>
+		</tr>		
 	</tbody>
 </table>
 
