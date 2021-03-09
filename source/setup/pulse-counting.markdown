@@ -266,7 +266,7 @@ The optical pulse sensor should work with all utility meters that have an LED or
 			<td><a href="/images/setup/meters/EDMI_ATLAS_Mk10D.png"><img alt="" src="/images/setup/meters/EDMI_ATLAS_Mk10D.png" style="width: 150px; height: 100px;" /></a></td>
 			<td>10</td>
 			<td>
-			<p>11000/10 =&nbsp;<strong>100</strong></p>
+			<p>1000/10 =&nbsp;<strong>100</strong></p>
 			</td>
 		</tr>		
 	</tbody>
