@@ -261,7 +261,7 @@ The optical pulse sensor should work with all utility meters that have an LED or
 		<tr>
 			<td>
 			<p>EDMI ATLAS Mk10D</p>
-			<p>(Single Phase)</p>
+	3.              <p>(3-phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/EDMI_ATLAS_Mk10D.png"><img alt="" src="/images/setup/meters/EDMI_ATLAS_Mk10D.png" style="width: 150px; height: 100px;" /></a></td>
 			<td>10</td>
