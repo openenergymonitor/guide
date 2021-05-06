@@ -141,3 +141,5 @@ Add `CNAME` file with custom domain and point CNAME DNS to `openenergymonitor.gi
 ## Credits
 
 Thanks to @balloob from [home-assistant.io](http://home-assistant.io) for providing Octopress example. Home-assistant is an awesome open-sopurce Python3 home automation platform. See [blog post](http://openenergymonitor.blogspot.co.uk/2016/04/home-assistant-and-emonpi.html) for how to integrate with OpenEnergyMonitor emonPi
+
+build
