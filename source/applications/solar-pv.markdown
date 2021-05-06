@@ -124,7 +124,7 @@ The Emoncms setup instructions below are applicable to both the emonPi and the e
 
 </style>
 
-<img id="openImg" src="/images/applications/solar-pv/solar-pv-install.png" alt="Solar PV installation">
+<img id="openImg" src="/images/applications/solar-pv/solar-pv-install.webp" alt="Solar PV installation">
 
 <div id="lightBox" class="lightBox">
   <span class="lightBox-close">&times;</span>
