@@ -16,20 +16,14 @@ OpenEVSE is a fully open-source EVSE (Electric Vehicle Supply Equipment) chargin
 
 ![Nissan LEAF OpenEVSE](/images/integrations/openevse-banner.png)
 
+OpenEnergyMonitor has collaborated with OpenEVSE to improve energy monitoring integration and control as well as tailoring the setup for use in Europe and the UK. This page provides **European specific** build, ans setup instructions.
 
-<p class='note'>
-OpenEnergyMonitor has collaborated with OpenEVSE to improve energy monitoring integration and control as well as tailoring the setup for use in Europe and the UK. This page provides European specific build, ans setup instructions.
-</p>
 
 ***
 
 ## {% linkable_title Assembly %}
 
-<p class='note'>
-For European OpenEVSE kits purchased via the OpenEnergyMonitor Store please follow this build guide. The build guides on the OpenEVSE website are for USA kits. 
-</p>
-
-**For OpenEVSE kits purchased via the [OpenEnergyMonitor Store ](https://shop.openenergymonitor.com/evse/) please follow this build guide:**
+**This build guide is for OpenEVSE kits purchased via the [OpenEnergyMonitor Store ](https://shop.openenergymonitor.com/evse/).**
 
 [![](/images/integrations/ev-charging/evse-build/evse-build-0-thumb.png.jpg)](/images/integrations/ev-charging/evse-build/evse-build-0.png.jpg)
 
@@ -39,7 +33,7 @@ For European OpenEVSE kits purchased via the OpenEnergyMonitor Store please foll
 
 | Step 2   |  |
 | -------- | ----------- |
-|[![](/images/integrations/ev-charging/evse-build/evse-build-2-thumb.png.jpg)](/images/integrations/ev-charging/evse-build/evse-build-2.png.jpg) | -Check screws and fastners<br>- There may be spare screws included |
+|[![](/images/integrations/ev-charging/evse-build/evse-build-2-thumb.png.jpg)](/images/integrations/ev-charging/evse-build/evse-build-2.png.jpg) | -Check screws and fastners<br>- Note: there may be spare screws included |
 
 
 
@@ -122,7 +116,3 @@ OpenEVSE units have been designed to exceed the safety requirements for EV Charg
 
 - [OpenEVSE Safety Features](https://openev.freshdesk.com/support/solutions/articles/6000113537-openevse-safety-features)
 - [OpenEVSE Safety Features Flow Diagram (.pdf)](/images/integrations/OpenEVSE_flowchart.pdf)
-
-<p class='note warning'>
-Supply connection should only be undertaken by a qualified electrician.
-</p>
