@@ -240,7 +240,7 @@ If the account username has also been forgotten this can be retrieved by connect
 When prompted enter the [emonPi default MYSQL root password.](https://guide.openenergymonitor.org/technical/credentials/#mysql)
 
 <pre class="code">
-$ mysql -u root -p emoncms
+$ mysql -u emoncms -p emoncms
 SELECT * FROM users;
 exit
 </pre>
