@@ -155,7 +155,7 @@ In some installations it may be not possible measure the correct metric required
 
 To publish a value to a new MQTT topic feed use the Emoncms `Publish to MQTT` Input Process then enter a new unique MQTT topic e.g `grid` or `import` then use this new MQTT topic in the EVSE config.
 
-For more advance solar PV divert config it's possible to modify the MQTT feed value and republish to a new topic using Emoncms Input processing or something like NodeRED. This may be desirable to increase the s  
+For more advance solar PV divert config it's possible to modify the MQTT feed value and republish to a new topic using Emoncms Input processing or something like NodeRED. 
 
 ![mqtt1](/images/integrations/ev-charging/publish-mqtt.png)
 
