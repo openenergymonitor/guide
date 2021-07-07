@@ -69,7 +69,7 @@ The optical pulse sensor should work with all utility meters that have an LED or
 			<p><strong>Multiplication factor for </strong></p>
 			<p><strong>Wh Accumulator feed</strong></p>
 			</td>
-			<td<strong>>Notes</strong>
+			<td<strong>Notes</strong>
 			</td>	
 		</tr>
 		<tr>
