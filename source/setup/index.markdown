@@ -89,7 +89,7 @@ It also possible to add one or more emonTx units to an emonPi to gain additional
 
 - [Home Energy Monitor](/applications/home-energy/)
 - [Solar PV](/applications/solar-pv/)
-- [Heatpump Monitoring](http://heatpumpmonitor.org)
+- [Heatpump Monitoring](/applications/heatpump/)
 
 ---
 
