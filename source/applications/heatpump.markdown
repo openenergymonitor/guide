@@ -23,7 +23,7 @@ To install an EmonPi or EmonTx follow the general setup guides here, clip the CT
 - [Install emonTx & emonBase](/setup/install-emontx/)
 - [Install emonTx & ESP8266](/setup/esp8266-adapter-emontx/)
 
-It is also possible to measure the electricity consumption with higher accuracy using a pulse output from an electricity meter, modbus output from an SDM120 DIN rail mounted meter or IrDA interface from an Elster A100C.
+It is also possible to measure the electricity consumption with higher accuracy using a pulse output from an electricity meter, modbus or mbus output from an SDM120 DIN rail mounted meter or IrDA interface from an Elster A100C.
 
 - [+ Add Pulse Counting](/setup/pulse-counting/)
 - [Reading from an SDM120-MOD using emonPi/emonBase](/integrations/emonhub-interfacers)
@@ -57,7 +57,13 @@ The COP of a heat pump can be measured more accurately by measuring the heat out
 
 #### New: RaspberryPi & MBUS based heat pump monitor
 
-[Forum post: Reading from multiple MBUS meters with the EmonHub MBUS interfacer (including the SDM120-MBUS electricity meter)](https://community.openenergymonitor.org/t/reading-from-multiple-mbus-meters-with-the-emonhub-mbus-interfacer/18159)
+<img src="/images/applications/heatpump/pimbusreader.jpeg" style="max-width:300px; float:right; margin-left:20px">
+
+This is a new heat pump monitor board designed specifically for interfacing with MID standard electricity and heat meters via MBUS. It has a RaspberryPi at it's core running our emonSD image enabling local or/and remote logging and data visualisation.
+
+[**Forum post:** Reading from multiple MBUS meters with the EmonHub MBUS interfacer (including the SDM120-MBUS electricity meter)](https://community.openenergymonitor.org/t/reading-from-multiple-mbus-meters-with-the-emonhub-mbus-interfacer/18159)
+
+<div style="clear:both"></div><br><br>
 
 #### Through-hole heat pump monitor kit
 
