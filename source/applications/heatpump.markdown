@@ -27,6 +27,7 @@ It is also possible to measure the electricity consumption with higher accuracy 
 
 - [+ Add Pulse Counting](/setup/pulse-counting/)
 - [Reading from an SDM120-MOD using emonPi/emonBase](/integrations/emonhub-interfacers)
+- [Forum post: Reading from multiple MBUS meters with the EmonHub MBUS interfacer (including the SDM120-MBUS electricity meter)](https://community.openenergymonitor.org/t/reading-from-multiple-mbus-meters-with-the-emonhub-mbus-interfacer/18159)
 <!--- Reading from an Elster A100C IrDa interface with an Arduino Nano (Coming soon)-->
 
 ### Level 2: System temperatures:
@@ -50,9 +51,15 @@ The COP of a heat pump can be measured more accurately by measuring the heat out
 
 - A heat meter with a pulse output can be connected to either the EmonTx or the EmonPi, see: [+ Add Pulse Counting](/setup/pulse-counting)
 <!--- Using the analog input on a EmonTx or EmonPi to interface with an analog voltage output from a Grundfos or Sika Vortex Flow Meter-->
-- Using our [MBUS to UART](https://shop.openenergymonitor.com/mbus-to-uart) reader development board that plugs into a EmonPi or EmonBase. Setup and emonhub interfacer configuration documentation is available here: [MBUS Reader for Electric and Heat meters](/integrations/emonhub-interfacers). We also have a ESP8266 WiFi version of this board in development see: [GitHub: WiFi_MBUS_Reader](https://github.com/openenergymonitor/HeatpumpMonitor/tree/master/Hardware/WiFi_MBUS_Reader).
+- Using our [MBUS to UART](https://shop.openenergymonitor.com/m-bus-to-uart-converter/) reader development board that plugs into a EmonPi or EmonBase. Setup and emonhub interfacer configuration documentation is available here: [MBUS Reader for Electric and Heat meters](/integrations/emonhub-interfacers). We also have a ESP8266 WiFi version of this board in development see: [GitHub: WiFi_MBUS_Reader](https://github.com/openenergymonitor/HeatpumpMonitor/tree/master/Hardware/WiFi_MBUS_Reader).
 
-#### Heatpump Monitor Development board
+#### Heatpump Monitor Development boards
+
+#### New: RaspberryPi & MBUS based heat pump monitor
+
+[Forum post: Reading from multiple MBUS meters with the EmonHub MBUS interfacer (including the SDM120-MBUS electricity meter)](https://community.openenergymonitor.org/t/reading-from-multiple-mbus-meters-with-the-emonhub-mbus-interfacer/18159)
+
+#### Through-hole heat pump monitor kit
 
 <img src="/images/applications/heatpump/hpmon.jpg" style="max-width:300px; float:right">
 
