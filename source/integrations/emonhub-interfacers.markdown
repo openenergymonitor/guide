@@ -105,9 +105,12 @@ Many electricity and heat meters are available with meter bus (MBUS) outputs. Us
 2\. Login to the local copy of Emoncms running on the emonPi/emonBase and navigate to Setup > EmonHub. Click on 'Edit Config' and add the following config in the interfacers section to enable reading from the MBUS meter:
 
 - **baud:** The MBUS baud rate is typically 2400 or 4800. It is usually possible to check the baud rate of the meter using the meter configuration interface.
-- **address:** The address of the meter is also usually possible to find via the meter configuration interface. If in doubt try 0 or 254.
-- **pages:** Some meters such as the Sontex 531 have infomation on multiple MBUS pages (These are 3,1 on the Sontex 531). For other meters just set to 0. 
 - **read_interval:** Interval between readings in seconds.
+
+List attached meters as shown in the example below.
+
+- **address:** The address of the meter is also usually possible to find via the meter configuration interface. If in doubt try 0 or 254.
+- **type:** Available options include: standard, qalcosonic_e3, sontex531, sdm120
 
 Example MBUS EmonHub configuration:
 
@@ -115,14 +118,20 @@ Example MBUS EmonHub configuration:
 [[MBUS]]
     Type = EmonHubMBUSInterfacer
     [[[init_settings]]]
-        device = /dev/ttyUSB0
-        baud = 4800
+        device = /dev/ttyAMA0
+        baud = 2400
     [[[runtimesettings]]]
         pubchannels = ToEmonCMS,
-        address = 100
-        pages = 3,1
         read_interval = 10
+        validate_checksum = False
         nodename = MBUS
+        [[[[meters]]]]
+            [[[[[sdm120]]]]]
+                address = 1
+                type = sdm120
+            [[[[[qalcosonic]]]]]
+                address = 2
+                type = qalcosonic_e3
 </pre>
 
 3\. The MBUS readings will appear on the Emoncms Inputs page within a few seconds and for the Sontex 531 should look like this:
