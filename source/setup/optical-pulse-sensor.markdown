@@ -179,13 +179,15 @@ The optical pulse sensor should work with all utility meters that have an LED or
 			<p>Kaifa MA120</p>
 			<p>(Single Phase)</p>
 			</td>
-			<td><a href="/images/setup/meters/kaifa_ma120.jpg" style="width: 150px; height: 100px;" /></a></td>
+			<td>
+		         <a href="/images/setup/meters/kaifa_ma120.jpg"><img alt="" src="/images/setup/meters/kaifa_ma120.jpg" style="width: 150px; height: 100px;" /></a>	
+			</td>
 			<td>2000</td>
 			<td>
 			<p>1000 / 2000 =&nbsp;<strong>0.5</strong></p>
 			</td>
 			<td>
-			<p><i><a href="https://community.openenergymonitor.org/t/pv-and-night-tariff-ev-and-immersion-heater/16010/29">'Energy Bucket': Even though the meter shows 2000imp/kWh, it only registers usage at 1000 imp/kWh.</a><i/></p>
+			<p><i><a href="https://community.openenergymonitor.org/t/pv-and-night-tariff-ev-and-immersion-heater/16010/29">'Energy Bucket': Even though the meter shows 2000imp/kWh, it only registers usage at 1000 imp/kWh.</i></a></p>
 	                </td>
 		</tr>		
 	</tbody>
