@@ -64,7 +64,7 @@ The optical pulse sensor should work with all utility meters that have an LED or
 		<tr>
 			<td><strong>Meter</strong></td>
 			<td><strong>Image</strong></td>
-			<td><strong>Pulses Per KWh</strong></td>
+			<td><strong>Pulses Per kWh</strong></td>
 			<td>
 			<p><strong>Multiplication factor for </strong></p>
 			<p><strong>Wh Accumulator feed</strong></p>
