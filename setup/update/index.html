@@ -638,46 +638,9 @@ highlight active link...
 
 <p>The most straightforward method of upgrading to a new emonSD image is to start with a new SD card, keep your existing emonPi/emonBase SD card as a backup to which you can revert if needed and then plug the old SD card into the emonPi/emonBase using a USB SD card reader and import the data directly.</p>
 
-<p>For an alternative single SD card upgrade method see the export/import archive method covered here: <a href="https://guide.openenergymonitor.org/setup/import/">Guide: Backup</a>.</p>
+<p>This process is documented in the import guide here:</p>
 
-<h4 id="1-prepare-a-new-card">1. Prepare a new card</h4>
-
-<p>It is a good idea to start with a new SD Card to minimise risk of disk errors from previous use, though reuse should also be fine if lightly used. A 16Gb card should suffice; emonCMS is very efficient in the way it stores it’s data.</p>
-
-<p>There are 2 options for a new card:</p>
-
-<ol>
-  <li>Purchase a new card with the image pre-installed, from the <a href="https://shop.openenergymonitor.com/emonsd-pre-loaded-raspberry-pi-sd-card/">OEM Store</a>.</li>
-  <li>Burn/flash a new image to an SD Card. To do this:
-    <ol>
-      <li>Download image from the <a href="https://github.com/openenergymonitor/emonpi/wiki/emonSD-pre-built-SD-card-Download-&amp;-Change-Log">Release Page</a>.</li>
-      <li>The easiest method of flashing the new image to an SD card is to use a cross-platform tool called Etcher, see: <a href="https://www.etcher.io/">https://www.etcher.io/</a></li>
-    </ol>
-  </li>
-</ol>
-
-<h4 id="2-initial-boot">2. Initial boot</h4>
-
-<ol>
-  <li>Shutdown your existing system by clicking on Shutdown on the emonCMS Admin page, after 30s remove the USB power cable to fully power down.</li>
-  <li>Remove your existing SD card (you will need this SD card again in a moment).</li>
-  <li>Insert the new SD card &amp; power up the device. Then wait, wait, wait, make a cup of coffee, wait, wait, wait… (lots of updates etc) - really do not rush this part it does take a while.</li>
-  <li>If you do not have a wired Ethernet connection you will need to <a href="https://guide.openenergymonitor.org/setup/connect/#1a-connect-to-wifi">setup your WiFi</a>. <strong>Note</strong> the updates will not happen until after you have connected the Pi to the Internet.</li>
-</ol>
-
-<p>Once the initial update and setup is complete, you can proceed to import your data.</p>
-
-<h4 id="3-restoring-your-system">3. Restoring your system</h4>
-
-<ol>
-  <li>Place the old SD card in an SD card reader and plug into any of the USB ports on the emonPi/emonBase running the new image.</li>
-  <li>From the emonCMS login page, click register and create a temporary user. Once the import is complete the original user details will be used.</li>
-  <li>Navigate to Setup &gt; Backup</li>
-  <li>Click <code class="highlighter-rouge">Import from USB drive</code> to start import process</li>
-  <li>Once the import is complete, log out and back into the emonCMS page with the original user details</li>
-</ol>
-
-<p><img src="/images/setup/usb_import.png" alt="USB Import" /></p>
+<p><a href="https://guide.openenergymonitor.org/setup/import/">Guide: Import</a>.</p>
 
 
 </article>
