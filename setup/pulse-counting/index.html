@@ -732,7 +732,7 @@ Optical pulse sensor RJ45 pinout
 
 <h3 id="-direct-pulse-counting-with-a-raspberrypi"><a class="title-link" name="direct-pulse-counting-with-a-raspberrypi" href="#direct-pulse-counting-with-a-raspberrypi"></a> Direct pulse counting with a RaspberryPi</h3>
 
-<p>Another option for pulse counting is to use a spare GPIO pin on a RaspberryPi directly. 
+<p>Another option for pulse counting is to use a spare GPIO pin on a RaspberryPi directly.
 See <a href="/integrations/emonhub-interfacers/#direct-pulse-counting">EmonHub Interfacers: Direct pulse counting guide for details</a></p>
 
 <h3 id="-elster-a100c-irda"><a class="title-link" name="elster-a100c-irda" href="#elster-a100c-irda"></a> Elster A100C IrDa</h3>
@@ -757,22 +757,24 @@ See <a href="/integrations/emonhub-interfacers/#direct-pulse-counting">EmonHub I
 
 <p>The optical pulse sensor should work with all utility meters that have an LED or IR optical pulse output. The sensor has been tested to work with the following meters. The ‘pulses per kwh’ calibration can be used to configure the input process for the pulse data, see above:</p>
 
-<table border="1" cellpadding="1" cellspacing="1" style="width: 500px;">
+<table border="1" cellpadding="1" cellspacing="1" style="width: 100%;">
 	<caption>&nbsp;</caption>
 	<tbody>
 		<tr>
 			<td><strong>Meter</strong></td>
 			<td><strong>Image</strong></td>
-			<td><strong>Pulses Per KWh</strong></td>
+			<td><strong>Pulses Per kWh</strong></td>
 			<td>
 			<p><strong>Multiplication factor for </strong></p>
 			<p><strong>Wh Accumulator feed</strong></p>
+			</td>
+			<td><p><strong>Notes</strong></p>
 			</td>
 		</tr>
 		<tr>
 			<td>
 			<p>Elster&nbsp;A100c</p>
-			<p>(Single phase)</p>
+			<p>(single phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/a100c.png"><img alt="" src="/images/setup/meters/a100c.png" style="width: 100px; height: 78px;" /></a></td>
 			<td>1000</td>
@@ -781,7 +783,7 @@ See <a href="/integrations/emonhub-interfacers/#direct-pulse-counting">EmonHub I
 		<tr>
 			<td>
 			<p>Actaris ace9000</p>
-			<p>(Single phase)</p>
+			<p>(single phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/Actaris_ace9000.jpg"><img alt="" src="/images/setup/meters/Actaris_ace9000.jpg" style="width: 100px; height: 118px;" /></a></td>
 			<td>800</td>
@@ -790,7 +792,7 @@ See <a href="/integrations/emonhub-interfacers/#direct-pulse-counting">EmonHub I
 		<tr>
 			<td>
 			<p>Xil&nbsp;XLA12</p>
-			<p>(Single phase)</p>
+			<p>(single phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/Xil_XLA12.jpg"><img alt="" src="/images/setup/meters/Xil_XLA12.jpg" style="width: 100px; height: 100px;" /></a></td>
 			<td>800</td>
@@ -808,7 +810,7 @@ See <a href="/integrations/emonhub-interfacers/#direct-pulse-counting">EmonHub I
 		<tr>
 			<td>
 			<p>Elster AS300P</p>
-			<p>(Single phase)</p>
+			<p>(single phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/ElsterAS300P.jpg"><img alt="" src="/images/setup/meters/ElsterAS300P.jpg" style="width: 100px; height: 100px;" /></a></td>
 			<td>4000</td>
@@ -826,7 +828,7 @@ See <a href="/integrations/emonhub-interfacers/#direct-pulse-counting">EmonHub I
 		<tr>
 			<td>
 			<p>Landis &amp; Gyr 5254E</p>
-			<p>(Single phase)</p>
+			<p>(single phase)</p>
 			</td>
 			<td><a href="/images/setup/meters/LandisGyr5254E.png"><img alt="" src="/images/setup/meters/LandisGyr5254E.png" style="width: 100px; height: 100px;" /></a></td>
 			<td>1000</td>
@@ -873,19 +875,55 @@ See <a href="/integrations/emonhub-interfacers/#direct-pulse-counting">EmonHub I
 		</tr>
 		<tr>
 			<td>
-			<p>EDMI ATLAS Mk10D</p>
-	                <p>(3-phase)</p>
+			<p>Kaifa MA120</p>
+			<p>(Single Phase)</p>
 			</td>
-			<td><a href="/images/setup/meters/EDMI_ATLAS_Mk10D.png"><img alt="" src="/images/setup/meters/EDMI_ATLAS_Mk10D.png" style="width: 150px; height: 100px;" /></a></td>
-			<td>10</td>
 			<td>
-			<p>1000/10 =&nbsp;<strong>100</strong></p>
+		    <a href="/images/setup/meters/kaifa_ma120.jpg"><img alt="" src="/images/setup/meters/kaifa_ma120.jpg" style="width: 150px; height: 100px;" /></a>
 			</td>
-		</tr>		
+			<td>2000</td>
+			<td>
+			<p>1000 / 2000 =&nbsp;<strong>0.5</strong></p>
+			</td>
+			<td>
+			  <p>
+			    'Energy Bucket': Even though the meter shows 2000imp/kWh, it only registers usage at 1000 imp/kWh.
+			  </p>
+			  <br />
+			  <p>
+			    See forum discussion here:
+			    <a href="https://community.openenergymonitor.org/t/pv-and-night-tariff-ev-and-immersion-heater/16010/29">
+			    	<span style="width:200px; word-wrap:break-word; display:inline-block;">
+              https://community.openenergymonitor.org/t/pv-and-night-tariff-ev-and-immersion-heater/16010/29
+			      </span>
+			    </a>
+			  </p>
+	    </td>
+		</tr>
+			<tr>
+			  <td>
+			    <p>
+			      EDMI ATLAS Mk10D
+			    </p>
+	        <p>
+	          (3-phase)
+	        </p>
+			  </td>
+			  <td>
+			    <a href="/images/setup/meters/EDMI_ATLAS_Mk10D.png"><img alt="" src="/images/setup/meters/EDMI_ATLAS_Mk10D.png" style="width: 150px; height: 100px;" />
+			    </a>
+			  </td>
+			  <td>
+			    <p>10</p>
+			  </td>
+			  <td>
+			    <p>1000/10 =&nbsp;<strong>100</strong></p>
+			  </td>
+		  </tr>
 	</tbody>
 </table>
 
-<p>Please help us expand this table by contributing details for your meter. Email photo and scale factor to <a href="mailto:support@openenergymonitor.zendesk.com?subject=pulse%20output%20utility%20meter">support@openenergymonitor.zendesk.com</a></p>
+<p>Please help us expand this table by contributing details for your meter. Email photo and scale factor to <a href="mailto:support@openenergymonitor.zendesk.com?subject=pulse%20output%20utility%20meter">support@openenergymonitor.zendesk.com</a>.</p>
 
 
 </article>
