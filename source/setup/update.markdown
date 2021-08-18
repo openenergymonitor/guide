@@ -16,12 +16,10 @@ We also periodically release a [new emonSD image](https://github.com/openenergym
 
 ### {% linkable_title emonPi/emonbase Update %}
 
-1. Login to emonCMS and navigate to Setup > Admin
-2. Click on dropdown selector next to 'Full Update' button to expand all update options.
-3. To update all components click on 'Full Update'
-4. To update specific parts, select as required (The database update is included as part of the full update and emonCMS update).
+1. Login to emonCMS and navigate to Setup > Admin > Update
+2. To update all components click on 'Full Update'
 
-![emonCMS Update](/images/setup/emonCMS_update.png)
+![emoncms update](/images/setup/emoncms_update.png)
 
 **Troubleshooting**
 
@@ -31,6 +29,4 @@ If the update fails the first time, make a record of the update log and try agai
 
 The most straightforward method of upgrading to a new emonSD image is to start with a new SD card, keep your existing emonPi/emonBase SD card as a backup to which you can revert if needed and then plug the old SD card into the emonPi/emonBase using a USB SD card reader and import the data directly. 
 
-This process is documented in the import guide here:
-
-[Guide: Import](https://guide.openenergymonitor.org/setup/import/).
+This process is documented in the import guide here: [Guide: Import](https://guide.openenergymonitor.org/setup/import/#import-using-a-usb-sd-card-reader)
