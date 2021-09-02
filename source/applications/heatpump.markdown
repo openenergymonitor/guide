@@ -55,13 +55,14 @@ The COP of a heat pump can be measured more accurately by measuring the heat out
 
 #### Heatpump Monitor Development boards
 
+In addition to configurations using our standard emonPi and emonTx monitoring hardware. We have also developed dedicated hardware designs with heat pump monitoring in mind. This started with a through-hole heat pump monitoring kit that tried to incorporate all options on a single board and has since moved on to a more specific MBUS and temperature data collection approach with the new RaspberryPi based monitor. 
+
 #### New: RaspberryPi & MBUS based heat pump monitor
 
 <img src="/images/applications/heatpump/pimbusreader.jpeg" style="max-width:300px; float:right; margin-left:20px">
 
-This is a new heat pump monitor board designed specifically for interfacing with MID standard electricity and heat meters via MBUS. It has a RaspberryPi at it's core running our emonSD image enabling local or/and remote logging and data visualisation.
-
-[**Forum post:** Reading from multiple MBUS meters with the EmonHub MBUS interfacer (including the SDM120-MBUS electricity meter)](https://community.openenergymonitor.org/t/reading-from-multiple-mbus-meters-with-the-emonhub-mbus-interfacer/18159)
+This is a new heat pump monitor board designed specifically for interfacing with MID standard electricity and heat meters via MBUS. It has a RaspberryPi at it's core running our emonSD image enabling local or/and remote logging and data visualisation.<br>
+[Github: RaspberryPi & MBUS based heat pump monitor](https://github.com/openenergymonitor/HeatpumpMonitor/tree/master/HeatpumpMonitorPi)
 
 <div style="clear:both"></div><br><br>
 
@@ -69,5 +70,15 @@ This is a new heat pump monitor board designed specifically for interfacing with
 
 <img src="/images/applications/heatpump/hpmon.jpg" style="max-width:300px; float:right">
 
-An alternative option to a EmonTx or EmonPi based heat pump monitor is our heat pump monitor development kit, which combines CT based energy monitoring with an MBUS reader, Elster A100C IrDa input, DS18B20 temperature sensing inputs and ESP8266 WiFi connectivity. The board is currently only available as a through-hole kit that requires assembly and soldering. For more information, assembly and installation guides see: <br>
-[https://github.com/openenergymonitor/HeatpumpMonitor](https://github.com/openenergymonitor/HeatpumpMonitor)
+The original through-hole heat pump monitoring kit. Combines CT based energy monitoring with an MBUS reader, Elster A100C IrDa input, DS18B20 temperature sensing inputs and ESP8266 WiFi connectivity. The board is currently only available as a through-hole kit that requires assembly and soldering. For more information, assembly and installation guides see: <br>
+[Github: Original Through-hole heat pump monitor kit](https://github.com/openenergymonitor/HeatpumpMonitor/tree/master/HeatpumpMonitorTH)
+
+### Heat pump monitoring dashboard
+
+Emoncms includes an application specific heat pump dashboard available in the Apps module. The following video gives a good overview of what this dashboard can do, how to access daily electricity consumption and heat output data as well as detailed system temperature and power data.
+
+There's also a little feature shown briefly at the end that simulates the heat output and COP of the heat pump based on the Carnot COP equation.
+
+<div class='videoWrapper'>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=jBY1Sx3LR2o" frameborder="0" allowfullscreen></iframe>
+</div>

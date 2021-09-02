@@ -93,9 +93,9 @@ If this is the first time we publishing this site we neeed to create the `gh-pag
 
 Once Octopress and rake Jekyll as been setup as described to generate the html and deploy site to `gh-pages` run
 
-`$ rake generate`
+`$ bundle exec rake generate`
 
-`$ rake deploy`
+`$ bundle exec rake deploy`
 
 In a few moments site will be live:
 
