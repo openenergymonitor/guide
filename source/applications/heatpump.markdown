@@ -73,6 +73,8 @@ This is a new heat pump monitor board designed specifically for interfacing with
 The original through-hole heat pump monitoring kit. Combines CT based energy monitoring with an MBUS reader, Elster A100C IrDa input, DS18B20 temperature sensing inputs and ESP8266 WiFi connectivity. The board is currently only available as a through-hole kit that requires assembly and soldering. For more information, assembly and installation guides see: <br>
 [Github: Original Through-hole heat pump monitor kit](https://github.com/openenergymonitor/HeatpumpMonitor/tree/master/HeatpumpMonitorTH)
 
+<div style="clear:both"></div><br><br>
+
 ### Heat pump monitoring dashboard
 
 Emoncms includes an application specific heat pump dashboard available in the Apps module. The following video gives a good overview of what this dashboard can do, how to access daily electricity consumption and heat output data as well as detailed system temperature and power data.
