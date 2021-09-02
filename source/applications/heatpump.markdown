@@ -64,16 +64,16 @@ In addition to configurations using our standard emonPi and emonTx monitoring ha
 This is a new heat pump monitor board designed specifically for interfacing with MID standard electricity and heat meters via MBUS. It has a RaspberryPi at it's core running our emonSD image enabling local or/and remote logging and data visualisation.<br>
 [Github: RaspberryPi & MBUS based heat pump monitor](https://github.com/openenergymonitor/HeatpumpMonitor/tree/master/HeatpumpMonitorPi)
 
-<div style="clear:both"></div><br><br>
-
-#### Through-hole heat pump monitor kit
+<div style="clear:both"></div><br>
 
 <img src="/images/applications/heatpump/hpmon.jpg" style="max-width:300px; float:right">
+
+#### Through-hole heat pump monitor kit
 
 The original through-hole heat pump monitoring kit. Combines CT based energy monitoring with an MBUS reader, Elster A100C IrDa input, DS18B20 temperature sensing inputs and ESP8266 WiFi connectivity. The board is currently only available as a through-hole kit that requires assembly and soldering. For more information, assembly and installation guides see: <br>
 [Github: Original Through-hole heat pump monitor kit](https://github.com/openenergymonitor/HeatpumpMonitor/tree/master/HeatpumpMonitorTH)
 
-<div style="clear:both"></div><br><br>
+<div style="clear:both"></div><br>
 
 ### Heat pump monitoring dashboard
 
