@@ -62,7 +62,7 @@ Example SDS011 EmonHub configuration:
 
 ### {% linkable_title Reading from a SDM120 single-phase meter %}
 
-The SDM120-Modbus single phase electricity meter provides MID certified electricity monitoring up to 45A, ideal for monitoring the electricity supply of heat pumps and EV chargers. A USB to RS485 converter is needed to read from the modbus output of the meter such as: [https://www.amazon.co.uk/gp/product/B07SD65BVF](https://www.amazon.co.uk/gp/product/B07SD65BVF). The SDM120 meter comes in a number of different variants, be sure to order the version with a modbus output.
+The SDM120-Modbus single phase electricity meter provides MID certified electricity monitoring up to 45A, ideal for monitoring the electricity supply of heat pumps and EV chargers. A USB to RS485 converter is needed to read from the modbus output of the meter such as: [https://www.amazon.co.uk/gp/product/B07SD65BVF](https://www.amazon.co.uk/gp/product/B07SD65BVF). The SDM120 meter comes in a number of different variants, be sure to order the version with a modbus output (SDM120-MBUS-MID).
 
 1\. Connect up the USB to RS485 converter to the modbus output of the SDM120 meter and plug the converter into a USB port on either the emonPi or emonBase.
 
