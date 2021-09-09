@@ -705,6 +705,127 @@ highlight active link...
 
 <p>It’s also worth checking out David Bowen (@MyForest on the forum’s) heat pump app, see forum post: <a href="https://community.openenergymonitor.org/t/heat-pump-experimentation-app-release-news/13423">Heat Pump Experimentation App - Release News</a>.</p>
 
+<h3 id="heat-pump-monitoring-hardware-configurations">Heat pump monitoring hardware configurations</h3>
+
+<p>There are a number of different hardware configurations that can be used for heat pump monitoring. The following gives a quick overview of the main options.</p>
+
+<style>
+table { border-collapse: collapse; }
+table, th, td {
+  border: 1px solid #888;
+}
+ul {
+margin-left:15px;
+font-size:14px;
+}
+</style>
+
+<table>
+  <tr>
+    <td>
+      <div style="margin-bottom:5px"><b>EmonPi: Electric &amp; Temperature</b></div>
+      <img src="/images/applications/heatpump/config/hpmon_config_emonpi_ct_temps.png" style="max-width:350px" />
+    </td>
+    <td>
+      <ul>
+      <li>Easy installation on existing system.</li>
+      <li>Monitor electricity consumption and system temperatures.</li>
+      <li>Estimate COP using flow and outside temperature.</li>
+      <li>Wifi or Ethernet connectivity.</li>
+      <li>EmonPi LCD makes setup easier.</li>
+      <li>Option to store and access data locally.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div style="margin-bottom:5px"><b>EmonTx WiFi: Electric &amp; Temperature</b></div>
+      <img src="/images/applications/heatpump/config/hpmon_config_emontx_wifi_ct_temps.png" style="max-width:350px" />
+    </td>
+    <td>
+      <ul>
+      <li>Easy installation on existing system.</li>
+      <li>Monitor electricity consumption and system temperatures.</li>
+      <li>Estimate COP using flow and outside temperature.</li>
+      <li>Wifi connectivity.</li>
+      <li>Requires cloud / remote server data storage.</li>
+      <li>Lowest cost of hardware.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div style="margin-bottom:5px"><b>EmonTx + EmonBase: Electric &amp; Temperature</b></div>
+      <img src="/images/applications/heatpump/config/hpmon_config_emontx_emonbase_ct_temps.png" style="max-width:350px" />
+    </td>
+    <td>
+      <ul>
+      <li>Easy installation on existing system.</li>
+      <li>Monitor electricity consumption and system temperatures.</li>
+      <li>Estimate COP using flow and outside temperature.</li>
+      <li>Wifi or Ethernet connectivity.</li>
+      <li>Option to store and access data locally on the emonBase.</li>
+      <li>433 MHz radio link between EmonTx and EmonBase</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div style="margin-bottom:5px"><b>EmonPi with MBUS Reader for heat meter</b></div>
+      <img src="/images/applications/heatpump/config/hpmon_config_emonpi_ct_mbus.png" style="max-width:350px" />
+    </td>
+    <td>
+      <ul>
+      <li>Requires in-line installation of heat meter.</li>
+      <li>Monitor electricity consumption, system temperatures and heat output.</li>
+      <li>Calculate COP using heat and electricity measurements.</li>     
+      <li>Wifi or Ethernet connectivity.</li>
+      <li>EmonPi LCD makes setup easier.</li>
+      <li>Option to store and access data locally on the emonBase.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div style="margin-bottom:5px"><b>EmonPi with MBUS Reader</b></div>
+      <img src="/images/applications/heatpump/config/hpmon_config_emonpi_mbus.png" style="max-width:350px" />
+    </td>
+    <td>
+      <ul>
+      <li>High accuracy electricity and heat monitoring.</li>
+      <li>Requires in-line installation of electric and heat meter.</li>
+      <li>Monitor electricity consumption, system temperatures and heat output.</li>
+      <li>Accurate COP using heat and electricity measurements.</li>
+      <li>Wifi or Ethernet connectivity.</li>
+      <li>EmonPi LCD makes setup easier.</li>
+      <li>Option to store and access data locally on the emonBase.</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div style="margin-bottom:5px"><b>RaspberryPi &amp; MBUS based heat pump monitor</b></div>
+      <img src="/images/applications/heatpump/config/hpmon_config_hpmonpi.png" style="max-width:350px" />
+      <br /><br />
+     <i>Please get in contact via email for availability.</i>
+    </td>
+    <td>
+      <ul>
+      <li>High accuracy electricity and heat monitoring.</li>
+      <li>Requires in-line installation of electric and heat meter.</li>
+      <li>Monitor electricity consumption, system temperatures and heat output.</li>
+      <li>Accurate COP using heat and electricity measurements.</li>
+      <li>Wifi connectivity.</li>
+      <li>Option to store and access data locally on the emonBase.</li>
+      <li>Slightly lower cost than EmonPi with external MBUS reader option.</li> 
+      </ul>
+
+    </td>
+  </tr>
+
+</table>
+
+
 
 </article>
 
