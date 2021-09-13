@@ -621,6 +621,8 @@ highlight active link...
 
 <h3 id="level-1-electricity-consumption">Level 1: Electricity Consumption:</h3>
 
+<p><img src="/images/applications/heatpump/config/hpmon_config_emonpi_ct_only.png" style="max-width:300px; float:right; margin-left:20px" /></p>
+
 <p>At a basic level it is possible to use either the EmonTx or the EmonPi to monitor the electrical consumption of a heat pump by clipping a CT sensor around the supply to the unit. This provides detailed 10s resolution power consumption graphs as well as cumulative energy consumption in kWh on a daily/monthly/annual basis. It’s possible to use the power graphs to gain a basic insight into potential issues such as excessive cycling.</p>
 
 <p>To install an EmonPi or EmonTx follow the general setup guides here, clip the CT sensor around either the insulated line or neutral cable for the heat pump rather than the whole house cable.</p>
@@ -631,14 +633,15 @@ highlight active link...
   <li><a href="/setup/esp8266-adapter-emontx/">Install emonTx &amp; ESP8266</a></li>
 </ul>
 
-<p>It is also possible to measure the electricity consumption with higher accuracy using a pulse output from an electricity meter, modbus or mbus output from an SDM120 DIN rail mounted meter or IrDA interface from an Elster A100C.</p>
+<p>It is also possible to measure the electricity consumption with higher accuracy using a pulse output from an electricity meter, mbus or modbus output from an SDM120 DIN rail mounted meter.</p>
 
 <ul>
   <li><a href="/setup/pulse-counting/">+ Add Pulse Counting</a></li>
-  <li><a href="/integrations/emonhub-interfacers">Reading from an SDM120-MOD using emonPi/emonBase</a></li>
-  <li><a href="https://community.openenergymonitor.org/t/reading-from-multiple-mbus-meters-with-the-emonhub-mbus-interfacer/18159">Forum post: Reading from multiple MBUS meters with the EmonHub MBUS interfacer (including the SDM120-MBUS electricity meter)</a>
-<!--- Reading from an Elster A100C IrDa interface with an Arduino Nano (Coming soon)--></li>
+  <li><a href="/integrations/emonhub-interfacers#mbus-reader-for-electric-and-heat-meters">Reading from electricity meters that support MBUS (e.g MBUS version of the SDM120)</a></li>
+  <li><a href="/integrations/emonhub-interfacers#reading-from-a-sdm120-single-phase-meter">Reading from a Modbus SDM120 electricity meter using emonPi/emonBase</a></li>
 </ul>
+
+<p><img src="/images/applications/heatpump/config/hpmon_config_emonpi_ct_temps.png" style="max-width:300px; float:right; margin-left:20px;" /></p>
 
 <h3 id="level-2-system-temperatures">Level 2: System temperatures:</h3>
 
@@ -657,16 +660,19 @@ highlight active link...
   <li><a href="/setup/temperature-sensors/">Reading from multiple DS18B20 temperature sensors using an EmonTx or EmonPI</a></li>
 </ul>
 
-<p><em>The theoretical performance of a heat pump is given by the Carnot COP equation, see <a href="https://learn.openenergymonitor.org/sustainable-energy/building-energy-model/heatpumpmodel">Learn: A very simple heat pump model</a>. For an air-source heatpump measuring the water flow temperature and the outside air temperature can be used to estimate the expected COP. Many heat pumps provide an indication of expected COP at different ambient air and water temperatures in their datasheets.</em></p>
+<p><em>The theoretical performance of a heat pump is given by the Carnot COP equation, see <a href="https://learn.openenergymonitor.org/sustainable-energy/building-energy-model/heatpumpmodel">Learn: A very simple heat pump model</a>. For an air-source heatpump measuring the water flow temperature and the outside air temperature can be used to estimate the expected COP. Many heat pumps provide an indication of expected COP at different ambient air and water temperatures in their datasheets. The Emoncms heat pump app includes a tool to estimate COP using this equation.</em></p>
 
 <h3 id="level-3-flow-rate--heat-metering">Level 3: Flow rate &amp; Heat metering:</h3>
 
-<p>The COP of a heat pump can be measured more accurately by measuring the heat output in addition to the electrical input. This can be done by either interfacing with a heat meter using MBUS (e.g: Sontex 531 or Kamstrup 402) or a pulse counter, or a flow meter with an analog voltage output (Grundfos or Sika Vortex Flow Meter).</p>
+<p><img src="/images/applications/heatpump/config/hpmon_config_emonpi_ct_mbus.png" style="max-width:300px; float:right; margin-left:20px" /></p>
+
+<p>The COP of a heat pump can be measured more accurately by measuring the heat output in addition to the electrical input. This can be done by either interfacing with a heat meter using MBUS (e.g: Sharky 775, Sontex superstatic 440, Kamstrup 403 or Qalcosonic E3) or a pulse counter, or a flow meter with an analog voltage output (Grundfos or Sika Vortex Flow Meter).</p>
 
 <ul>
-  <li>A heat meter with a pulse output can be connected to either the EmonTx or the EmonPi, see: <a href="/setup/pulse-counting">+ Add Pulse Counting</a>
+  <li>A heat meter with a pulse output can be connected to either the EmonTx or the EmonPi, see:<br /> <a href="/setup/pulse-counting">+ Add Pulse Counting</a>
 <!--- Using the analog input on a EmonTx or EmonPi to interface with an analog voltage output from a Grundfos or Sika Vortex Flow Meter--></li>
-  <li>Using our <a href="https://shop.openenergymonitor.com/m-bus-to-uart-converter/">MBUS to UART</a> reader development board that plugs into a EmonPi or EmonBase. Setup and emonhub interfacer configuration documentation is available here: <a href="/integrations/emonhub-interfacers">MBUS Reader for Electric and Heat meters</a>. We also have a ESP8266 WiFi version of this board in development see: <a href="https://github.com/openenergymonitor/HeatpumpMonitor/tree/master/WiFi_MBUS_Reader">GitHub: WiFi_MBUS_Reader</a>.</li>
+  <li>Using our <a href="https://shop.openenergymonitor.com/m-bus-to-uart-converter/">MBUS to UART</a> reader that plugs into a EmonPi or EmonBase. Setup and emonhub interfacer configuration documentation is available here: <a href="/integrations/emonhub-interfacers">MBUS Reader for Electric and Heat meters</a>.</li>
+  <li>Please read our guide on selecting the right heat meter, available in our heat pump monitor github repository here: <a href="https://github.com/openenergymonitor/HeatpumpMonitor/blob/master/selectingheatmeter.md">Github: Guide to selecting the right heat meter</a></li>
 </ul>
 
 <h4 id="heatpump-monitor-development-boards">Heatpump Monitor Development boards</h4>
@@ -707,7 +713,7 @@ highlight active link...
 
 <h3 id="heat-pump-monitoring-hardware-configurations">Heat pump monitoring hardware configurations</h3>
 
-<p>There are a number of different hardware configurations that can be used for heat pump monitoring. The following gives a quick overview of the main options.</p>
+<p>As discussed above, there are a number of different hardware configurations that can be used for heat pump monitoring. The following gives a quick overview of the main options.</p>
 
 <style>
 table { border-collapse: collapse; }
