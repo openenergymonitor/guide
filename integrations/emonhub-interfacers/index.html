@@ -668,7 +668,7 @@ highlight active link...
 
 <h3 id="-reading-from-a-sdm120-single-phase-meter"><a class="title-link" name="reading-from-a-sdm120-single-phase-meter" href="#reading-from-a-sdm120-single-phase-meter"></a> Reading from a SDM120 single-phase meter</h3>
 
-<p>The SDM120-Modbus single phase electricity meter provides MID certified electricity monitoring up to 45A, ideal for monitoring the electricity supply of heat pumps and EV chargers. A USB to RS485 converter is needed to read from the modbus output of the meter such as: <a href="https://www.amazon.co.uk/gp/product/B07SD65BVF">https://www.amazon.co.uk/gp/product/B07SD65BVF</a>. The SDM120 meter comes in a number of different variants, be sure to order the version with a modbus output (SDM120-MBUS-MID).</p>
+<p>The SDM120-Modbus single phase electricity meter provides MID certified electricity monitoring up to 45A, ideal for monitoring the electricity supply of heat pumps and EV chargers. A USB to RS485 converter is needed to read from the modbus output of the meter such as: <a href="https://www.amazon.co.uk/s?k=usb+rs485">https://www.amazon.co.uk/s?k=usb+rs485</a>. The SDM120 meter comes in a number of different variants, be sure to order the version with a modbus output (SDM120-MBUS-MID).</p>
 
 <p>1. Connect up the USB to RS485 converter to the modbus output of the SDM120 meter and plug the converter into a USB port on either the emonPi or emonBase.</p>
 
@@ -702,7 +702,7 @@ highlight active link...
 
 <h3 id="-mbus-reader-for-electric-and-heat-meters"><a class="title-link" name="mbus-reader-for-electric-and-heat-meters" href="#mbus-reader-for-electric-and-heat-meters"></a> MBUS Reader for Electric and Heat meters</h3>
 
-<p>Many electricity and heat meters are available with meter bus (MBUS) outputs. Using an <a href="https://shop.openenergymonitor.com/mbus-to-uart">MBUS to UART converter</a>, these can be read from an emonPi or emonBase. For heat pumps, this provides a convenient way of monitoring the heat output, flow temperature, return temperature, flow rate and cumulative heat energy provided by the system.</p>
+<p>Many electricity and heat meters are available with meter bus (MBUS) outputs. Using an <a href="https://shop.openenergymonitor.com/m-bus-to-uart-converter">MBUS to UART converter</a>, these can be read from an emonPi or emonBase. For heat pumps, this provides a convenient way of monitoring the heat output, flow temperature, return temperature, flow rate and cumulative heat energy provided by the system.</p>
 
 <p>1. Connect up the USB to MBUS converter to the MBUS output of the meter and plug the converter into a USB port on either the emonPi or emonBase.</p>
 
@@ -742,6 +742,16 @@ highlight active link...
             [[[[[qalcosonic]]]]]
                 address = 2
                 type = qalcosonic_e3
+                
+
+Alternative heat meter examples:
+
+            [[[[[sharky775]]]]]
+                address = 3
+                type = standard
+            [[[[[sontex]]]]]
+                address = 4
+                type = sontex531
 </pre>
 
 <p>3. The MBUS readings will appear on the Emoncms Inputs page within a few seconds and for the Sontex 531 should look like this:</p>
