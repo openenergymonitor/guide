@@ -56,7 +56,7 @@ The COP of a heat pump can be measured more accurately by measuring the heat out
 
 - A heat meter with a pulse output can be connected to either the EmonTx or the EmonPi, see:<br> [+ Add Pulse Counting](/setup/pulse-counting)
 <!--- Using the analog input on a EmonTx or EmonPi to interface with an analog voltage output from a Grundfos or Sika Vortex Flow Meter-->
-- Using our [MBUS to UART](https://shop.openenergymonitor.com/m-bus-to-uart-converter/) reader that plugs into a EmonPi or EmonBase. Setup and emonhub interfacer configuration documentation is available here: [MBUS Reader for Electric and Heat meters](/integrations/emonhub-interfacers).
+- Using our [MBUS to UART](https://shop.openenergymonitor.com/m-bus-to-uart-converter/) reader that plugs into a EmonPi or EmonBase. Setup and emonhub interfacer configuration documentation is available here: [MBUS Reader for Electric and Heat meters](/integrations/emonhub-interfacers#mbus-reader-for-electric-and-heat-meters).
 - Please read our guide on selecting the right heat meter, available in our heat pump monitor github repository here: [Github: Guide to selecting the right heat meter](https://github.com/openenergymonitor/HeatpumpMonitor/blob/master/selectingheatmeter.md)
 
 #### Heatpump Monitor Development boards
