@@ -94,12 +94,11 @@ For Solar PV Divert (EcoMode) to work emonPi and OpenEVSE need be on the same lo
 - Base-topic is the base topic used by the OpenEVSE to publish data. If posting data to local emonPi via MQTT is required change base-topic to `emon/openevse`. EVSE data should will now appaar in local emonPi Emoncms Inputs
 - If Solar PV Divert feature is required see [Solar PV Divert](#solar-pv-divert) section below for more info
 
+<figure>
+  <img src="/images/integrations/ev-charging/mqtt-setup.png">
+  <figcaption><i>Default MQTT credentials</i></figcaption>
+</figure>
 
-#### Developer API
-
-The OpenEVSE can be controlled remotely via web interface or via  MQTT, HTTP. See full OpenEVSE WiFi gateway documentation in the [OpenEVSE WiFi GitHub Repo](http://github.com/openevse/ESP32_WiFi_V3.x/).
-
-Developer mode can be enabled on the `System` tab of the OpenEVSE web interface.
 
 ### Eco Mode: Solar PV Divert
 
@@ -166,17 +165,11 @@ For more advance solar PV divert config it's possible to modify the MQTT feed va
 *Note: Solar PV divert under 10A may not work reliably with 'Q' models of Renault Zoe *
 
 
-### Smart Mode: Dynamic Tariff scheduling e.g Octopus Energy 
+#### Developer API
 
-The EVSE can automatically schedule a charge at the lowest cost / carbon period based on a dynamic tariff signal e.g Octopus Energy. See our [Smart Charging Setup Guide](/integrations/demandshaper-openevse/).
+The OpenEVSE can be controlled remotely via web interface or via  MQTT, HTTP. See full OpenEVSE WiFi gateway documentation in the [OpenEVSE WiFi GitHub Repo](http://github.com/openevse/ESP32_WiFi_V4.x/).
 
-An [OpenEnergyMonitor emonPi or emonBase](https://guide.openenergymonitor.org/applications/solar-pv/) is required for smart charging function to run the Demand Shaper software. 
-
-![demandshaper2.png](/images/integrations/demandshaper/emonevse/demandshaper2.png)
-
-![demandshaper_ovms.png](/images/integrations/demandshaper/emonevse/demandshaper_ovms.png)
-
-See full OpenEVSE WiFi gateway documentation in the [OpenEVSE WiFi GitHub Repo](http://github.com/openevse/ESP32_WiFi_V3.x/).
+Developer mode can be enabled on the `System` tab of the OpenEVSE web interface.
 
 ***
 
