@@ -187,7 +187,7 @@ The optical pulse sensor should work with all utility meters that have an LED or
 			<p>1000 / 2000 =&nbsp;<strong>0.5</strong></p>
 			</td>
 			<td>
-			<p><i><a href="https://community.openenergymonitor.org/t/pv-and-night-tariff-ev-and-immersion-heater/16010/29">'Energy Bucket': Even though the meter shows 2000imp/kWh, it only registers usage at 1000 imp/kWh.</i></a></p>
+			<p><i><a href="https://community.openenergymonitor.org/t/pv-and-night-tariff-ev-and-immersion-heater/16010/29">'Energy Bucket': Even though the meter shows 2000imp/kWh, it only registers usage at 1000 imp/kWh.</a></i></p>
 	                </td>
 		</tr>		
 	</tbody>
