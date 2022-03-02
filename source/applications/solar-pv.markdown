@@ -14,9 +14,9 @@ published: true
 
 The OpenEnergyMonitor Solar PV monitor provides real-time and historic information on solar generation on on-site consumption.
 
-MySolarPV is a dashboard app which runs on Emoncms.
+My Solar is a dashboard app which runs on Emoncms.
 
-Emoncms and MySolarPV are pre-installed on the emonPi and can run locally and or data can be posted to our remote emoncms server [Emoncms.org](https://emoncms.org)
+Emoncms and My Solar are pre-installed on the emonPi and can run locally and or data can be posted to our remote emoncms server [Emoncms.org](https://emoncms.org)
 
 ![SolarPV](/images/applications/solar-pv/my-solar-pv.jpg)
 
@@ -34,7 +34,7 @@ Emoncms and MySolarPV are pre-installed on the emonPi and can run locally and or
  1. Required Hardware
  2. Sensor Installation
  3. Emoncms Feed Setup
- 4. Emoncms MySolarPV App
+ 4. Emoncms My Solar App
 
 ### Required Hardware
 
@@ -220,16 +220,16 @@ On the Emoncms Inputs page click on the spanner icon next to your emonPi Inputs,
 
 
 
-Video guide for solar PV Feed & MySolarPV App Setup:
+Video guide for solar PV Feed & My Solar App Setup:
 
 <div class='videoWrapper'>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Nc6YSWqqxkA" frameborder="0" allowfullscreen></iframe>
 </div>
 
 
-### {% linkable_title MySolarPV Emoncms App %}
+### {% linkable_title My Solar Emoncms App %}
 
-Once setup is complete click on `Apps > MySolarPV` in order to launch the MySolarPV Emoncms app. The MySolarPV app should automatically detect the solar PV feeds. 
+Once setup is complete click on `Apps > My Solar` in order to launch the My Solar Emoncms app. The My Solar app should automatically detect the solar PV feeds. 
 
 
 
