@@ -104,9 +104,6 @@
 <loc>http://guide.openenergymonitor.org/</loc>
 </url>
 <url>
-<loc>http://guide.openenergymonitor.org/applications/</loc>
-</url>
-<url>
 <loc>http://guide.openenergymonitor.org/integrations/</loc>
 </url>
 <url>
@@ -117,6 +114,9 @@
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/about/</loc>
+</url>
+<url>
+<loc>http://guide.openenergymonitor.org/applications/</loc>
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/setup/install-emontx/</loc>
@@ -195,10 +195,10 @@
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/images/integrations/OpenEVSE_flowchart.pdf</loc>
-<lastmod>2020-05-14T13:45:02+00:00</lastmod>
+<lastmod>2022-03-02T17:04:01+00:00</lastmod>
 </url>
 <url>
 <loc>http://guide.openenergymonitor.org/static/mdi-demo.html</loc>
-<lastmod>2020-05-14T13:45:02+00:00</lastmod>
+<lastmod>2022-03-02T17:04:02+00:00</lastmod>
 </url>
 </urlset>
