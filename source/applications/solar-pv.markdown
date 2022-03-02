@@ -238,7 +238,7 @@ Once setup is complete click on `Apps > MySolarPV` in order to launch the MySola
 
 ### {% linkable_title Configure My Solar App power view %}
 
-TSite-consumption is shown in blue and solar generation in yellow. The totals at the bottom of the page relate to the current window selected and show at a glance how much of site-consumption was supplied directly from solar and how much of the solar generation was exported to the grid.
+Site-consumption is shown in blue and solar generation in yellow. The totals at the bottom of the page relate to the current window selected and show at a glance how much of site-consumption was supplied directly from solar and how much of the solar generation was exported to the grid.
 
 ![my-solarpv-config2](/images/applications/solar-pv//my-solarpv1.png)
 
