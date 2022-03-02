@@ -254,4 +254,5 @@ exit
 <pre class="code">
 $ sudo su
 $ /opt/openenergymonitor/EmonScripts/other/factoryreset
+$ reboot 
 </pre>
