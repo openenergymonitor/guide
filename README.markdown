@@ -43,7 +43,7 @@ source ~/.bashrc
 ```
 3. Next, run the following curl command to install both rbenv and ruby-build:
 
-`curl -sL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-installer | bash -`
+`curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash`
 
 4. Install the latest stable version of Ruby and set it as a default version with:
 
