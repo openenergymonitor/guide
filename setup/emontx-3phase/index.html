@@ -7,26 +7,26 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Histograms - Guide | OpenEnergyMonitor</title>
+    <title>+ Add Additional emonTx-3phase - Guide | OpenEnergyMonitor</title>
     <meta name="author" content="Glyn Hudson">
-    <meta name="description" content="Histograms">
+    <meta name="description" content="+ Add Additional emonTx-3phase">
     
     <meta name="viewport" content="width=device-width">
-    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/histograms/">
+    <link rel="canonical" href="http://guide.openenergymonitor.org/setup/emontx-3phase/">
 
     <meta property="fb:app_id" content="xxxxxxxxxxxxxxx">
-    <meta property="og:title" content="Histograms">
+    <meta property="og:title" content="+ Add Additional emonTx-3phase">
     <meta property="og:site_name" content="Guide | OpenEnergyMonitor">
-    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/histograms/">
+    <meta property="og:url" content="http://guide.openenergymonitor.org/setup/emontx-3phase/">
     <meta property="og:type" content="website">
-    <meta property="og:description" content="Histograms">
+    <meta property="og:description" content="+ Add Additional emonTx-3phase">
     <meta property="og:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@openenergymon">
     
-    <meta name="twitter:title" content="Histograms">
-    <meta name="twitter:description" content="Histograms">
+    <meta name="twitter:title" content="+ Add Additional emonTx-3phase">
+    <meta name="twitter:description" content="+ Add Additional emonTx-3phase">
     <meta name="twitter:image" content="https://guide.openenergymonitor.org/images/favicon-192x192.png">
 
     <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet">
@@ -609,13 +609,66 @@ highlight active link...
   
   <header>
     <h1 class="title indent">
-      Histograms
+      + Add Additional emonTx-3phase
     </h1>
   </header>
   <hr class="divider">
   
 
-  <p>This page has moved to: <a href="/emoncms/histograms/">Emoncms: Histograms</a></p>
+  <p><a class="btn pull-right" href="http://shop.openenergymonitor.com/emontx-v3-electricity-monitoring-transmitter-unit-433mhz/" style="margin-left:10px">View in Shop → </a></p>
+
+<p>Additional EmonTx energy monitoring nodes running <a href="https://github.com/openenergymonitor/emontx-3phase">three-phase firmware</a> can be added to both an emonPi or a emonBase system to:</p>
+
+<ul>
+  <li>Monitor 3-phase power (with 3-phase emonTx firmware, see <a href="/technical/emontx">EmonTx Technical</a>)</li>
+</ul>
+
+<p>Data is transmitted to the emonPi or emonBase via low power 433MHz radio as standard, or alternatively using the <a href="/setup/esp8266-adapter-emontx/">ESP8266 WiFi adapter</a> via WiFi for applications where the 433 MHz radio range is insufficient.</p>
+
+<p>The emonTx with three-phase firmware is designed for use on a 3-phase, 4-wire system.</p>
+
+<h3 id="a-adding-one-emontx-three-phase-to-an-emonpi-system">A) Adding one emonTx three-phase to an emonPi system</h3>
+
+<h4 id="installtion">Installtion</h4>
+
+<p><strong>Before starting installation it’s important to identify the phases.</strong></p>
+
+<ul>
+  <li>
+    <p>Ideally plug the AC voltage adapter into L1 this will allow straightforward connection of CTs as follows CT1=L1, CT2=L2 and CT3=L3.</p>
+  </li>
+  <li>
+    <p>If it’s not possible to plug the AC voltage adapter into L1 e.g all the accessible plug sockets are on a different phase then the connection of CTs must be adjusted e.g If AC voltage adapter is plugged into L2 then the CTs must be connected as follows CT1=L2, CT2=L3 and CT3=L1</p>
+  </li>
+</ul>
+
+<p>For a detailed and technical explanation of the 3-phase firmware, see the <a href="https://github.com/openenergymonitor/emontx-3phase/blob/master/emontx-3-phase-userguide.pdf">emonTx three-phase technical user guide</a> and the [3-phase emonTx firmware repository}(https://github.com/openenergymonitor/emontx-3phase).</p>
+
+<h4 id="emoncms-input-processing">Emoncms Input processing</h4>
+
+<p>Setup the input processing as follows,</p>
+
+<p><img src="/images/setup/3-phase-emontx.png" alt="emontx three-phase input processing" /></p>
+
+<p>Use the <code class="highlighter-rouge">+ Input</code> input process to add the phase power inputs together to create a feed for the total power e.g</p>
+
+<p><img src="/images/setup/3-phase-emontx-sum.png" alt="emontx three-phase sum" /></p>
+
+<h4 id="b-adding-more-than-one-emontx-three-phase-to-an-emonpi-or-emonbase-system">B) Adding more than one emonTx three-phase to an emonPi or emonBase system</h4>
+
+<p>In addition to standard emonTx installation as covered in the <a href="/setup/install-emontx">emonTx and emonBase installation guide</a>: when using 2 or more emonTx units with the same base-station <strong>the node ID on each unit needs to be unique</strong>.</p>
+
+<p>The nodeID can be selected at time of purchase or set using the on-board DIP switch to toggle. If more than two emonTx’s are required on the same network then further nodeID values can be set via RF node ID serial config.</p>
+
+<p><img src="/images/setup/emontx_dipswitch.jpg" style="max-width:400px; float:right; padding:0 0 10px 10px" /></p>
+
+<p>The image on the right shows the DIP switch configuration looking at the emonTx with the CT sensor inputs at the top of the board. Move the top switch D9 to the left to select USA ACAC Voltage calibration. <strong>Move the bottom switch D8 to the left to select RF node ID 12 rather than 11.</strong></p>
+
+<p><strong>Serial Configuration</strong><br /></p>
+
+<p>It’s possible to set the emonTx radio settings, sensor calibration and other properties over serial. See <a href="https://github.com/openenergymonitor/EmonTxV3CM/blob/master/Config.pdf">Github PDF: Configuration of RF Module &amp; on-line calibration</a> for full details. If a custom node ID is set, a corresponding node decoder needs to be in place in emonhub.conf to decode the emonTx radio packet data. See <a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md">emonhub.conf configuration guide</a>.</p>
+
+<p>Note: If using the Arduino IDE serial terminal to set properties of the firmware via serial, ensure the serial monitor is set to <code class="highlighter-rouge">NL/CR</code> and the baud rate is set to <code class="highlighter-rouge">115200</code>. The serial monitor may need to be restarted after changing the line ending selection.</p>
 
 
 </article>
@@ -654,7 +707,7 @@ highlight active link...
           <li><a  href='/setup/install-emontx/'>Install emonTx & emonBase </a></li>
           <li><a  href='/setup/esp8266-adapter-emontx/'>Install emonTx Wifi </a></li>
           <li><a  href='/setup/emontx/'>+ Add Additional emonTx </a></li>
-          <li><a  href='/setup/emontx-3phase/'>+ Add Additional emonTx 3-phase </a></li>
+          <li><a class='active' href='/setup/emontx-3phase/'>+ Add Additional emonTx 3-phase </a></li>
           <li><a  href='/setup/emonth/'>+ Add Temperature Nodes </a></li>
           <li><a  href='/setup/pulse-counting/'>+ Add Pulse Counting </a></li>
           <li><a  href='/setup/temperature-sensors/'>+ Add Temperature Sensors </a></li>
