@@ -16,14 +16,14 @@ It is also possible to self-host our open source emoncms software on your own re
 
 Posting data to a remote server such as emoncms.org is particularly useful for applications that require public dashboards as there is usually more bandwidth for many users to access the same dashboard than available over a household or remote monitoring site connection. Remote data logging is also useful for applications that require aggregation or remote data analysis. The OpenEnergyMonitor system provides both local and remote options so that you can choose the right tool for your application.
 
-### 1. Create an emoncms account
+### 1. Create an emoncms.org account
 
 ![remote log1](/images/setup/remote-log0.png)
 
 - Browse to [Emoncms.org](https://emoncms.org)
 - Create account or log-in with existing account
-- Select **Inputs > Input API helper**
-- Copy Read-Write API key
+- Select **Account**
+- Copy Read-Write API key to clipboard 
 
 
 ![remote log1](/images/setup/remote-log01.png)
@@ -32,12 +32,15 @@ Posting data to a remote server such as emoncms.org is particularly useful for a
 
 ![remote log1](/images/setup/remote-log1.png)
 
-- Log-in to local Emoncms on your local network e.g. [http://emonpi](http://emonpi) or http://192.168.X.X
-- Navigate to **Setup > emonHub**
-- Scroll down the emonHub config, in the **[[emoncmsorg]]** section pate in your Emoncms.org R/W API key overwriting the **xxxxxxxxxxxxxxx** value
-- Hit **Save**
+- Log-in to local Emoncms on your local network e.g. [http://emonpi](http://emonpi) or http://192.168.X.X*
+- Navigate to **emonHub > Edit Config tab**
+- Scroll down the emonHub config, in the **[[emoncmsorg]]** section pate in your Emoncms.org Read/Write API key overwriting the **xxxxxxxxxxxxxxx** value
+- Click **Save**
+
+\* *IP address is shown on emonPi LCD*
 
 [*Advanced emonhub.conf configuration guide*](https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md)
+
 
 ### 3. Setup Emoncms.org Input Processing
 
@@ -45,7 +48,6 @@ Posting data to a remote server such as emoncms.org is particularly useful for a
 - Inputs from emonPi should be visible on the Inputs page
 - Log Inputs to Feeds in the same way as [Local Emoncms Logging](/setup/local)
 
-*If no appear in Emoncms.org emonHub.log on `emonHub` page of Local Emoncms for debugging*
 
 ***
 
