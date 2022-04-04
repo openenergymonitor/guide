@@ -621,15 +621,15 @@ highlight active link...
 
 <p>Posting data to a remote server such as emoncms.org is particularly useful for applications that require public dashboards as there is usually more bandwidth for many users to access the same dashboard than available over a household or remote monitoring site connection. Remote data logging is also useful for applications that require aggregation or remote data analysis. The OpenEnergyMonitor system provides both local and remote options so that you can choose the right tool for your application.</p>
 
-<h3 id="1-create-an-emoncms-account">1. Create an emoncms account</h3>
+<h3 id="1-create-an-emoncmsorg-account">1. Create an emoncms.org account</h3>
 
 <p><img src="/images/setup/remote-log0.png" alt="remote log1" /></p>
 
 <ul>
   <li>Browse to <a href="https://emoncms.org">Emoncms.org</a></li>
   <li>Create account or log-in with existing account</li>
-  <li>Select <strong>Inputs &gt; Input API helper</strong></li>
-  <li>Copy Read-Write API key</li>
+  <li>Select <strong>Account</strong></li>
+  <li>Copy Read-Write API key to clipboard</li>
 </ul>
 
 <p><img src="/images/setup/remote-log01.png" alt="remote log1" /></p>
@@ -639,11 +639,13 @@ highlight active link...
 <p><img src="/images/setup/remote-log1.png" alt="remote log1" /></p>
 
 <ul>
-  <li>Log-in to local Emoncms on your local network e.g. <a href="http://emonpi">http://emonpi</a> or http://192.168.X.X</li>
-  <li>Navigate to <strong>Setup &gt; emonHub</strong></li>
-  <li>Scroll down the emonHub config, in the <strong>[[emoncmsorg]]</strong> section pate in your Emoncms.org R/W API key overwriting the <strong>xxxxxxxxxxxxxxx</strong> value</li>
-  <li>Hit <strong>Save</strong></li>
+  <li>Log-in to local Emoncms on your local network e.g. <a href="http://emonpi">http://emonpi</a> or http://192.168.X.X*</li>
+  <li>Navigate to <strong>emonHub &gt; Edit Config tab</strong></li>
+  <li>Scroll down the emonHub config, in the <strong>[[emoncmsorg]]</strong> section pate in your Emoncms.org Read/Write API key overwriting the <strong>xxxxxxxxxxxxxxx</strong> value</li>
+  <li>Click <strong>Save</strong></li>
 </ul>
+
+<p>* <em>IP address is shown on emonPi LCD</em></p>
 
 <p><a href="https://github.com/openenergymonitor/emonhub/blob/emon-pi/configuration.md"><em>Advanced emonhub.conf configuration guide</em></a></p>
 
@@ -654,8 +656,6 @@ highlight active link...
   <li>Inputs from emonPi should be visible on the Inputs page</li>
   <li>Log Inputs to Feeds in the same way as <a href="/setup/local">Local Emoncms Logging</a></li>
 </ul>
-
-<p><em>If no appear in Emoncms.org emonHub.log on <code class="highlighter-rouge">emonHub</code> page of Local Emoncms for debugging</em></p>
 
 <hr />
 
