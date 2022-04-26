@@ -33,7 +33,7 @@ OpenEnergyMonitor has collaborated with OpenEVSE to improve energy monitoring in
 
 | Step 2   |  |
 | -------- | ----------- |
-|[![](/images/integrations/ev-charging/evse-build/evse-build-2-thumb.png.jpg)](/images/integrations/ev-charging/evse-build/evse-build-2.png.jpg) | -Check screws and fastners<br>- Note: there may be spare screws included |
+|[![](/images/integrations/ev-charging/evse-build/evse-build-2-thumb.png.jpg)](/images/integrations/ev-charging/evse-build/evse-build-2.png.jpg) | -Check screws and fastners<br>- *Note: there may be spare screws included* |
 
 
 
@@ -61,7 +61,7 @@ OpenEnergyMonitor has collaborated with OpenEVSE to improve energy monitoring in
 
 | Step 7   |  |
 | -------- | ----------- |
-|[![](/images/integrations/ev-charging/evse-build/evse-build-7-thumb.png.jpg)](/images/integrations/ev-charging/evse-build/evse-build-7.png.jpg) |- Screw the LCD to the enclosure lid using self tapping screws<br>- Stick the touch button and WiFi module to the enclosure lid using double sided sticky tape  |
+|[![](/images/integrations/ev-charging/evse-build/evse-build-7-thumb.png.jpg)](/images/integrations/ev-charging/evse-build/evse-build-7.png.jpg) |- Screw the LCD to the enclosure lid using self tapping screws<br>- Stick the touch button\* and WiFi module to the enclosure lid using double sided sticky tape  |
 
 | Step 8   |  |
 | -------- | ----------- |
@@ -71,7 +71,7 @@ OpenEnergyMonitor has collaborated with OpenEVSE to improve energy monitoring in
 | -------- | ----------- |
 |[![](/images/integrations/ev-charging/evse-build/evse-build-9-thumb.png.jpg)](/images/integrations/ev-charging/evse-build/evse-build-9.png.jpg) |- Once the EVSE has been assembled it can be tested<br>- See [Testing OpenEVSE](https://openevse.dozuki.com/Guide/Testing+Basic+and+Advanced/12)<br>-An [EV Simulator Kit](https://shop.openenergymonitor.com/ev-simulator-kit/) useful for testing  |
 
-
+\* Note: On current models the touch button has been substituted for a physical push button
 
 
 ## {% linkable_title Supply Connection %}
@@ -82,7 +82,7 @@ Mains supply connection should only be undertaken by a qualified electrician.
 
 *The following is recommendation for a typical domestic installation in the UK:*
 
-The EVSE should be installed by a competent electrician in accordance with BS7671:2018+A1:2020 (18th edition) and IET code of practice.
+The EVSE should be installed by a competent electrician in accordance with BS7671:2018+A2:2022 (18th edition) and IET code of practice.
 
 The EVSE requires:
  
@@ -90,17 +90,17 @@ The EVSE requires:
 - RCD: duel-pole **Type-B RCD with 6mA DC leakage protection** e.g [Chint NL210](https://shop.openenergymonitor.com/type-b-rcd-1p-n-chint-nl210-63-263-30/
 ), Proteus 63/2/30B 
       
-- MCB: **32A Curve C or 40A Curve B MCB** overcurrent protection
+- MCB: **32A Curve B MCB** overcurrent protection (40A MCB can be used providing disconnecting time requirements are met) 
   
 - EVSE should be earthed in accordance with BS7671:2018+A1:2020. 
 - Earth rod* or CPC disconnection / O-PEN detection device e.g Matt-e unit should be used when applicable**. 
-- **PME earth facility shall not be used as means of earthing if EVSE is connected to an EV located outdoors**. See BS7671:2018+A1:2020 Section 722.411.4.1
+- **PME earth facility shall not be used as means of earthing if EVSE is connected to an EV located outdoors**. See BS7671:2018+A2:2022 Section 722.411.4.1
   
 - All terminals should be checked for correct tightness upon final installation
 
 *Earth-rod impedance must be <150Ω for reliable charging of all vehicle types (this exceeds the 200 Ω requirement of BS7671).
 
-**It’s possible to get a single unit which combines RCD, MCB and O-PEN protection in a single unit e.g Matt:e SP-EVCP-B or Garo G8EV40PMEB
+**It’s possible to obtain RCD, MCB and O-PEN protection in a single unit e.g Matt:e SP-EVCP-B or Garo G8EV40PMEB
 
 ***
 
