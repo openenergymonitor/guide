@@ -109,7 +109,7 @@ Many electricity and heat meters are available with meter bus (MBUS) outputs. Us
 
 List attached meters as shown in the example below.
 
-- **address:** The address of the meter is also usually possible to find via the meter configuration interface. If in doubt try 0 or 254.
+- **address:** The address of the meter is also usually possible to find via the meter configuration interface. If in doubt try 0 or 254. [Here is a script](https://github.com/emoncms/usefulscripts/tree/master/mbus) to check and set the address for a Sontex heatmeter. 
 - **type:** Available options include: standard, qalcosonic_e3, sontex531, sdm120
 
 Example MBUS EmonHub configuration:
