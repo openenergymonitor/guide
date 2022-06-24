@@ -48,7 +48,7 @@ OpenEnergyMonitor has collaborated with OpenEVSE to improve energy monitoring in
 | -------- | ----------- |
 |[![](/images/integrations/oem-ev-cable-wire.jpg)](/images/integrations/oem-ev-cable-wire.jpg)| EV cable wiring |
 |[![](/images/integrations/crimped-evse-wire.png)](/images/integrations/crimped-evse-wire.png)| **Bootlace ferrules crimped terminals should be used for EV cable connections.** This fine stranded wire is susceptible to creeping out of a terminal due to thermal cycling resulting in possible overheating |
-|[![](/images/integrations/ev-charging/evse-build/evse-build-4-thumb.png.jpg)](/images/integrations/ev-charging/evse-build/evse-build-4.png.jpg) |- Install the TWO cable glands<br>- Insert EV Cable through the Cable Gland on the right and tighten<br>- Connect the ground wire to the ground block<br>- Thread both Line and Neutral wires through the 4 wire GFCI coil with the orange self test loop (do NOT thread the Earth wire through)<br>- Thread EITHER Line OR Neutral through the Current Measurement Coil |
+|[![](/images/integrations/ev-charging/evse-build/evse-build-4-thumb.png.jpg)](/images/integrations/ev-charging/evse-build/evse-build-4.png.jpg) |- Install the TWO cable glands<br>- Insert EV Cable through the Cable Gland on the right and tighten<br>- Connect the ground wire to the ground block<br>- Thread **BOTH** Line and Neutral wires through the 4 wire GFCI coil with the orange self test loop (do NOT thread the Earth wire through)<br>- Thread **EITHER** Line OR Neutral through the Current Measurement Coil |
 
 
 | Step 5   |  |
