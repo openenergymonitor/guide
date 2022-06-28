@@ -633,12 +633,12 @@ highlight active link...
   <li><a href="/setup/esp8266-adapter-emontx/">Install emonTx &amp; ESP8266</a></li>
 </ul>
 
-<p>It is also possible to measure the electricity consumption with higher accuracy using a pulse output from an electricity meter, mbus or modbus output from an SDM120 DIN rail mounted meter.</p>
+<p>It is also possible to measure the electricity consumption with higher accuracy using a pulse output from an electricity meter or modbus output from an SDM120 DIN rail mounted meter.</p>
 
 <ul>
   <li><a href="/setup/pulse-counting/">+ Add Pulse Counting</a></li>
-  <li><a href="/integrations/emonhub-interfacers#mbus-reader-for-electric-and-heat-meters">Reading from electricity meters that support MBUS (e.g MBUS version of the SDM120)</a></li>
   <li><a href="/integrations/emonhub-interfacers#reading-from-a-sdm120-single-phase-meter">Reading from a Modbus SDM120 electricity meter using emonPi/emonBase</a></li>
+  <li><a href="/integrations/emonhub-interfacers#mbus-reader-for-electric-and-heat-meters">Reading from electricity meters that support MBUS</a></li>
 </ul>
 
 <p><img src="/images/applications/heatpump/config/hpmon_config_emonpi_ct_temps.png" style="max-width:300px; float:right; margin-left:20px;" /></p>
@@ -672,6 +672,7 @@ highlight active link...
   <li>A heat meter with a pulse output can be connected to either the EmonTx or the EmonPi, see:<br /> <a href="/setup/pulse-counting">+ Add Pulse Counting</a>
 <!--- Using the analog input on a EmonTx or EmonPi to interface with an analog voltage output from a Grundfos or Sika Vortex Flow Meter--></li>
   <li>Using our <a href="https://shop.openenergymonitor.com/m-bus-to-usb-converter/">MBUS to USB</a> reader that plugs into a EmonPi or EmonBase. Setup and emonhub interfacer configuration documentation is available here: <a href="/integrations/emonhub-interfacers#mbus-reader-for-electric-and-heat-meters">MBUS Reader for Electric and Heat meters</a>.</li>
+  <li><a href="/integrations/emonhub-interfacers#reading-from-a-sdm120-single-phase-meter">Reading from a Modbus SDM120 electricity meter using emonPi/emonBase</a></li>
   <li>Please read our guide on selecting the right heat meter, available in our heat pump monitor github repository here: <a href="https://github.com/openenergymonitor/HeatpumpMonitor/blob/master/selectingheatmeter.md">Github: Guide to selecting the right heat meter</a></li>
 </ul>
 
@@ -805,6 +806,7 @@ font-size:14px;
       <li>Wifi or Ethernet connectivity.</li>
       <li>EmonPi LCD makes setup easier.</li>
       <li>Option to store and access data locally on the emonBase.</li>
+      <li>Note: Modbus recommended for reading from SDM120 electric meters (Seperate Modbus reader required).</li>
       </ul>
     </td>
   </tr>
@@ -824,6 +826,7 @@ font-size:14px;
       <li>Wifi connectivity.</li>
       <li>Option to store and access data locally on the emonBase.</li>
       <li>Slightly lower cost than EmonPi with external MBUS reader option.</li> 
+      <li>Note: Modbus recommended for reading from SDM120 electric meters (Seperate Modbus reader required).</li>
       </ul>
 
     </td>

@@ -718,9 +718,11 @@ highlight active link...
 <p>List attached meters as shown in the example below.</p>
 
 <ul>
-  <li><strong>address:</strong> The address of the meter is also usually possible to find via the meter configuration interface. If in doubt try 0 or 254.</li>
+  <li><strong>address:</strong> The address of the meter is also usually possible to find via the meter configuration interface. If in doubt try 0 or 254. <a href="https://github.com/emoncms/usefulscripts/tree/master/mbus">Here is a script</a> to check and set the address for a Sontex heatmeter.</li>
   <li><strong>type:</strong> Available options include: standard, qalcosonic_e3, sontex531, sdm120</li>
 </ul>
+
+<p><strong>Note:</strong> We’ve experienced reliability issues reading from the MBUS version of the SDM120 electric meters. We recommend using the Modbus version with a seperate Modbus reader for more reliable results. For more information please see <a href="https://community.openenergymonitor.org/t/sdm120-mbus-meter-freezing-drop-out/20765/2">https://community.openenergymonitor.org/t/sdm120-mbus-meter-freezing-drop-out/20765/2</a>.</p>
 
 <p>Example MBUS EmonHub configuration:</p>
 
@@ -736,9 +738,6 @@ highlight active link...
         validate_checksum = False
         nodename = MBUS
         [[[[meters]]]]
-            [[[[[sdm120]]]]]
-                address = 1
-                type = sdm120
             [[[[[qalcosonic]]]]]
                 address = 2
                 type = qalcosonic_e3
