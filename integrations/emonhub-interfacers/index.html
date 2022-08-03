@@ -666,7 +666,7 @@ highlight active link...
 
 <div style="height:20px"></div>
 
-<h3 id="-reading-from-a-sdm120-modbus-single-phase-meter"><a class="title-link" name="reading-from-a-sdm120-modbus-single-phase-meter" href="#reading-from-a-sdm120-modbus-single-phase-meter"></a> Reading from a SDM120 Modbus single-phase meter</h3>
+<h3 id="-reading-from-a-sdm120-single-phase-meter"><a class="title-link" name="reading-from-a-sdm120-single-phase-meter" href="#reading-from-a-sdm120-single-phase-meter"></a> Reading from a SDM120 single-phase meter</h3>
 
 <p>The SDM120-Modbus single phase electricity meter provides MID certified electricity monitoring up to 45A, ideal for monitoring the electricity supply of heat pumps and EV chargers. A USB to RS485 converter is needed to read from the modbus output of the meter such as: <a href="https://www.amazon.co.uk/s?k=usb+rs485">https://www.amazon.co.uk/s?k=usb+rs485</a>. The SDM120 meter comes in a number of different variants, be sure to order the version with a modbus output (SDM120-MBUS-MID).</p>
 
@@ -698,16 +698,18 @@ highlight active link...
 
 <p>It’s also possible to read data from multiple SDM120 modbus meters, each meter will need an unique modbus ID, this ID can be set using the push button menu on the SDM120. Currently reading from multiple meters requires using the <code class="highlighter-rouge">minimalmodbus_multiple_meters</code> emonhub branch. In the future this branch will be merged into the default <code class="highlighter-rouge">stable</code> emonhub branch. To change branch connect via SSH then execute:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service emonhub stop
+<pre class="code_20px">
+sudo service emonhub stop
 cd /opt/openenergymonitor/emonhub
 git fetch
 git checout minimalmodbus_multiple_meters
 sudo service emonhub start
-</code></pre></div></div>
+</pre>
 
 <p>Multiple SDM120 EmonHub config example:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[[SDM120]]
+<pre class="code_20px">
+[[SDM120]]
     Type = EmonHubMinimalModbusInterfacer
     [[[init_settings]]]
         device = /dev/ttyUSB1
@@ -728,7 +730,7 @@ sudo service emonhub start
                 registers = 0,6,12,18,30,70,72,74,76
                 names = V,I,P,VA,PF,FR,EI,EE,RI
                 precision = 2,3,1,1,3,3,3,3,3
-</code></pre></div></div>
+</pre>
 
 <p><strong>Tip:</strong> When logging the SDM120 cumulative energy output (sdm_E) to a feed, use the ‘log to feed (join)’ input processor to create a feed that can work with the delta mode in graphs. This removes any data gaps and makes it possible for the graph to generate daily kWh data on the fly.</p>
 
