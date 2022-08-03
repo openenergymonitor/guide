@@ -60,7 +60,7 @@ Example SDS011 EmonHub configuration:
 
 <div style="height:20px"></div>
 
-### {% linkable_title Reading from a SDM120 single-phase meter %}
+### {% linkable_title Reading from a SDM120 Modbus single-phase meter %}
 
 The SDM120-Modbus single phase electricity meter provides MID certified electricity monitoring up to 45A, ideal for monitoring the electricity supply of heat pumps and EV chargers. A USB to RS485 converter is needed to read from the modbus output of the meter such as: [https://www.amazon.co.uk/s?k=usb+rs485](https://www.amazon.co.uk/s?k=usb+rs485). The SDM120 meter comes in a number of different variants, be sure to order the version with a modbus output (SDM120-MBUS-MID).
 
@@ -89,6 +89,41 @@ Example SDM120 EmonHub configuration:
 3\. The SDM120 readings will appear on the Emoncms Inputs page within a few seconds and should look like this:
 
 <img src="/images/integrations/emonhub/sdm120_emoncms.png" style="max-width:500px;">
+
+It's also possible to read data from multiple SDM120 modbus meters, each meter will need an unique modbus ID, this ID can be set using the push button menu on the SDM120. Currently reading from multiple meters requires using the `minimalmodbus_multiple_meters` emonhub branch. In the future this branch will be merged into the default `stable` emonhub branch. To change branch connect via SSH then execute:
+
+```
+cd /opt/openenergymonitor/emonhub
+git fetch
+git checout minimalmodbus_multiple_meters
+sudo service emonhub restart
+```
+
+Multiple SDM120 EmonHub config example:
+
+```
+[[SDM120]]
+    Type = EmonHubMinimalModbusInterfacer
+    [[[init_settings]]]
+        device = /dev/ttyUSB1
+        baud = 2400
+    [[[runtimesettings]]]
+        pubchannels = ToEmonCMS,
+        read_interval = 10
+        nodename = sdm120
+        # prefix = sdm_
+        [[[[meters]]]]
+            [[[[[sdm120a]]]]]
+                address = 1
+                registers = 0,6,12,18,30,70,72,74,76
+                names = V,I,P,VA,PF,FR,EI,EE,RI
+                precision = 2,3,1,1,3,3,3,3,3
+            [[[[[sdm120b]]]]]
+                address = 2
+                registers = 0,6,12,18,30,70,72,74,76
+                names = V,I,P,VA,PF,FR,EI,EE,RI
+                precision = 2,3,1,1,3,3,3,3,3
+```
 
 **Tip:** When logging the SDM120 cumulative energy output (sdm_E) to a feed, use the 'log to feed (join)' input processor to create a feed that can work with the delta mode in graphs. This removes any data gaps and makes it possible for the graph to generate daily kWh data on the fly.
 
