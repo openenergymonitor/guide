@@ -60,7 +60,8 @@ Example SDS011 EmonHub configuration:
 
 <div style="height:20px"></div>
 
-### {% linkable_title Reading from a SDM120 Modbus single-phase meter %}
+### {% linkable_title Reading from a SDM120 single-phase meter %}
+
 
 The SDM120-Modbus single phase electricity meter provides MID certified electricity monitoring up to 45A, ideal for monitoring the electricity supply of heat pumps and EV chargers. A USB to RS485 converter is needed to read from the modbus output of the meter such as: [https://www.amazon.co.uk/s?k=usb+rs485](https://www.amazon.co.uk/s?k=usb+rs485). The SDM120 meter comes in a number of different variants, be sure to order the version with a modbus output (SDM120-MBUS-MID).
 
@@ -92,17 +93,17 @@ Example SDM120 EmonHub configuration:
 
 It's also possible to read data from multiple SDM120 modbus meters, each meter will need an unique modbus ID, this ID can be set using the push button menu on the SDM120. Currently reading from multiple meters requires using the `minimalmodbus_multiple_meters` emonhub branch. In the future this branch will be merged into the default `stable` emonhub branch. To change branch connect via SSH then execute:
 
-```
+<pre class="code_20px">
 sudo service emonhub stop
 cd /opt/openenergymonitor/emonhub
 git fetch
 git checout minimalmodbus_multiple_meters
 sudo service emonhub start
-```
+</pre>
 
 Multiple SDM120 EmonHub config example:
 
-```
+<pre class="code_20px">
 [[SDM120]]
     Type = EmonHubMinimalModbusInterfacer
     [[[init_settings]]]
@@ -124,7 +125,7 @@ Multiple SDM120 EmonHub config example:
                 registers = 0,6,12,18,30,70,72,74,76
                 names = V,I,P,VA,PF,FR,EI,EE,RI
                 precision = 2,3,1,1,3,3,3,3,3
-```
+</pre>
 
 **Tip:** When logging the SDM120 cumulative energy output (sdm_E) to a feed, use the 'log to feed (join)' input processor to create a feed that can work with the delta mode in graphs. This removes any data gaps and makes it possible for the graph to generate daily kWh data on the fly.
 
