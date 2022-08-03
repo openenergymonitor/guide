@@ -2,7 +2,7 @@
 layout: page
 title: "EmonHub Interfacers"
 description: "EmonHub Interfacers"
-date: 2020-11-21 14:32
+date: 2022-07-03 14:32
 sidebar: true
 comments: false
 sharing: true
@@ -93,10 +93,11 @@ Example SDM120 EmonHub configuration:
 It's also possible to read data from multiple SDM120 modbus meters, each meter will need an unique modbus ID, this ID can be set using the push button menu on the SDM120. Currently reading from multiple meters requires using the `minimalmodbus_multiple_meters` emonhub branch. In the future this branch will be merged into the default `stable` emonhub branch. To change branch connect via SSH then execute:
 
 ```
+sudo service emonhub stop
 cd /opt/openenergymonitor/emonhub
 git fetch
 git checout minimalmodbus_multiple_meters
-sudo service emonhub restart
+sudo service emonhub start
 ```
 
 Multiple SDM120 EmonHub config example:
