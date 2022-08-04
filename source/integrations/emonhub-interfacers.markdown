@@ -97,7 +97,7 @@ It's also possible to read data from multiple SDM120 modbus meters, each meter w
 sudo service emonhub stop
 cd /opt/openenergymonitor/emonhub
 git fetch
-git checout minimalmodbus_multiple_meters
+git checkout minimalmodbus_multiple_meters
 sudo service emonhub start
 </pre>
 
