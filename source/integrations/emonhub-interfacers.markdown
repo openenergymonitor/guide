@@ -27,6 +27,7 @@ EmonHub is a piece of software running on the emonPi and emonBase that can read/
 - [SMA Solar](/integrations/emonhub-interfacers#sma-solar)
 - [Victron VE.Direct Protocol](/integrations/emonhub-interfacers#victron-ve.direct-protocol)
 - [Modbus TCP](/integrations/emonhub-interfacers#modbus-tcp)
+- [Samsung ASHP](/integrations/emonhub-interfacers#samsung-ashp)
 
 ### {% linkable_title SDS011 Air-Quality sensor %}
 
@@ -73,41 +74,34 @@ The SDM120-Modbus single phase electricity meter provides MID certified electric
 
 **read_interval:** Interval between readings in seconds
 
-Example SDM120 EmonHub configuration:
+Example single SDM120 EmonHub (V2.3.4) configuration:
 
 <pre class="code_20px">
 [[SDM120]]
-    Type = EmonHubSDM120Interfacer
+    Type = EmonHubMinimalModbusInterfacer
     [[[init_settings]]]
         device = /dev/ttyUSB0
         baud = 2400
     [[[runtimesettings]]]
         pubchannels = ToEmonCMS,
         read_interval = 10
-        nodename = SDM120
+        nodename = sdm120
+        # prefix = sdm_
+        [[[[meters]]]]
+            [[[[[sdm120]]]]]
+                address = 1
+                registers = 0,6,12,18,30,70,72,74,76
+                names = V,I,P,VA,PF,FR,EI,EE,RI
+                precision = 2,3,1,1,3,3,3,3,3
 </pre>
 
-3\. The SDM120 readings will appear on the Emoncms Inputs page within a few seconds and should look like this:
-
-<img src="/images/integrations/emonhub/sdm120_emoncms.png" style="max-width:500px;">
-
-It's also possible to read data from multiple SDM120 modbus meters, each meter will need an unique modbus ID, this ID can be set using the push button menu on the SDM120. Currently reading from multiple meters requires using the `minimalmodbus_multiple_meters` emonhub branch. In the future this branch will be merged into the default `stable` emonhub branch. To change branch connect via SSH then execute:
-
-<pre class="code_20px">
-sudo service emonhub stop
-cd /opt/openenergymonitor/emonhub
-git fetch
-git checkout minimalmodbus_multiple_meters
-sudo service emonhub start
-</pre>
-
-Multiple SDM120 EmonHub config example:
+EmonHub (V2.3.4) can also possible to read data from multiple SDM120 modbus meters, each meter will need an unique modbus ID, this ID can be set using the push button menu on the SDM120. Example emonhub config multiple  SDM120 EmonHub configuration:
 
 <pre class="code_20px">
 [[SDM120]]
     Type = EmonHubMinimalModbusInterfacer
     [[[init_settings]]]
-        device = /dev/ttyUSB1
+        device = /dev/ttyUSB0
         baud = 2400
     [[[runtimesettings]]]
         pubchannels = ToEmonCMS,
@@ -126,6 +120,10 @@ Multiple SDM120 EmonHub config example:
                 names = V,I,P,VA,PF,FR,EI,EE,RI
                 precision = 2,3,1,1,3,3,3,3,3
 </pre>
+
+3\. The SDM120 readings will appear on the Emoncms Inputs page within a few seconds and should look like this:
+
+<img src="/images/integrations/emonhub/sdm120_emoncms.png" style="max-width:500px;">
 
 **Tip:** When logging the SDM120 cumulative energy output (sdm_E) to a feed, use the 'log to feed (join)' input processor to create a feed that can work with the delta mode in graphs. This removes any data gaps and makes it possible for the graph to generate daily kWh data on the fly.
 
@@ -296,3 +294,36 @@ See example config and documentation:<br>[EmonHub Github: Victron VE.Direct Prot
 ### {% linkable_title Modbus TCP %}
 
 See example config and documentation:<br>[EmonHub Github: modbus TCP configuration](https://github.com/openenergymonitor/emonhub/tree/master/conf/interfacer_examples/modbus)
+
+### {% linkable_title Samsung ASHP %}
+
+<img src="/images/integrations/emonhub/samsung-ashp.jpg" style="max-width:600px;">
+
+EmonHub (V2.3.4) can read data directly from a Samsung Air Souce Heat Pump (ASHP) or HVAC unit equipped with the [Samsung Modbus Interface MIM-B19](https://midsummerwholesale.co.uk/buy/samsung-heat-pumps/Samsung-modbus-MIM-B19).
+
+Example emonhub config:
+
+<pre class="code_20px">
+[[SAMSUNGASHP]]
+    Type = EmonHubMinimalModbusInterfacer
+    [[[init_settings]]]
+        device = /dev/ttyUSB0
+        baud = 9600
+    [[[runtimesettings]]]
+        pubchannels = ToEmonCMS,
+        read_interval = 10
+        nodename = samsung-ashp
+        # prefix = sdm_
+        [[[[meters]]]]
+            [[[[[ashp]]]]]
+                address = 1
+                registers = 75,74,72,65,66,68,52,59,58,2,79
+                names = dhw_temp,dhw_target,dhw_status,return_temp,flow_temp,flow_target,heating_status,indoor_temp,indoor_target, defrost_status, away_status
+                scales = 0.1,0.1,1,0.1,0.1,0.1,1,0.1,0,1,1
+</pre>
+
+Example Samsung ASHP data in Emoncms:
+
+<img src="/images/integrations/emonhub/samsung-ashp-emoncms.png" style="max-width:600px;">
+
+EmonHub also makes this data available via MQTT `emon/samsung-ashp`
