@@ -113,7 +113,6 @@ font-size:14px;
       <ul>
       <li>Easy installation on existing system.</li>
       <li>Monitor electricity consumption and system temperatures.</li>
-      <li>Estimate COP using flow and outside temperature.</li>
       <li>Wifi or Ethernet connectivity.</li>
       <li>EmonPi LCD makes setup easier.</li>
       <li>Option to store and access data locally.</li>
@@ -130,7 +129,6 @@ font-size:14px;
       <ul>
       <li>Easy installation on existing system.</li>
       <li>Monitor electricity consumption and system temperatures.</li>
-      <li>Estimate COP using flow and outside temperature.</li>
       <li>Wifi connectivity.</li>
       <li>Requires cloud / remote server data storage.</li>
       <li>Lowest cost of hardware.</li>
@@ -147,7 +145,6 @@ font-size:14px;
       <ul>
       <li>Easy installation on existing system.</li>
       <li>Monitor electricity consumption and system temperatures.</li>
-      <li>Estimate COP using flow and outside temperature.</li>
       <li>Wifi or Ethernet connectivity.</li>
       <li>Option to store and access data locally on the emonBase.</li>
       <li>433 MHz radio link between EmonTx and EmonBase</li>
@@ -164,10 +161,10 @@ font-size:14px;
       <ul>
       <li>Requires in-line installation of heat meter.</li>
       <li>Monitor electricity consumption, system temperatures and heat output.</li>
-      <li>Calculate COP using heat and electricity measurements.</li>     
+      <li>Accurate COP using heat and electricity measurements.</li>     
       <li>Wifi or Ethernet connectivity.</li>
       <li>EmonPi LCD makes setup easier.</li>
-      <li>Option to store and access data locally on the emonBase.</li>
+      <li>Option to store and access data locally or remote.</li>
       </ul>
     </td>
   </tr>
@@ -182,10 +179,10 @@ font-size:14px;
       <li>High accuracy electricity and heat monitoring.</li>
       <li>Requires in-line installation of electric and heat meter.</li>
       <li>Monitor electricity consumption, system temperatures and heat output.</li>
-      <li>Accurate COP using heat and electricity measurements.</li>
+      <li>Accurate COP using heat and electricity measurements.</li>   
       <li>Wifi or Ethernet connectivity.</li>
       <li>EmonPi LCD makes setup easier.</li>
-      <li>Option to store and access data locally on the emonBase.</li>
+      <li>Option to store and access data locally or remote.</li>
       <li>Note: Modbus recommended for reading from SDM120 electric meters (Seperate Modbus reader required).</li>
       </ul>
     </td>
@@ -202,9 +199,8 @@ font-size:14px;
       <li>High accuracy electricity and heat monitoring.</li>
       <li>Requires in-line installation of electric and heat meter.</li>
       <li>Monitor electricity consumption, system temperatures and heat output.</li>
-      <li>Accurate COP using heat and electricity measurements.</li>
-      <li>Wifi connectivity.</li>
-      <li>Option to store and access data locally on the emonBase.</li>
+      <li>Accurate COP using heat and electricity measurements.</li>  
+      <li>Option to store and access data locally or remote.</li>
       <li>Slightly lower cost than EmonPi with external MBUS reader option.</li> 
       <li>Note: Modbus recommended for reading from SDM120 electric meters (Seperate Modbus reader required).</li>
       </ul>
