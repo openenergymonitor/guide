@@ -617,9 +617,13 @@ highlight active link...
 
   <p>The OpenEnergyMonitor system can be used to monitor the performance of heat pumps. The following covers a number of different configurations of the system from basic to more advanced monitoring.</p>
 
+<ul>
+  <li><a href="https://shop.openenergymonitor.com/level-3-heat-pump-monitoring-bundle/"><strong>Purchase Level 3 Heat Pump Monitoring Bundle</strong></a></li>
+</ul>
+
 <p><img src="/images/applications/heatpump/hpdata.png" alt="HeatpumpMonitoring" /></p>
 
-<h3 id="level-1-electricity-consumption">Level 1: Electricity Consumption:</h3>
+<h3 id="level-1-no-cop-electricity-consumption">Level 1 (no COP): Electricity Consumption:</h3>
 
 <p><img src="/images/applications/heatpump/config/hpmon_config_emonpi_ct_only.png" style="max-width:300px; float:right; margin-left:20px" /></p>
 
@@ -643,7 +647,7 @@ highlight active link...
 
 <p><img src="/images/applications/heatpump/config/hpmon_config_emonpi_ct_temps.png" style="max-width:300px; float:right; margin-left:20px;" /></p>
 
-<h3 id="level-2-system-temperatures">Level 2: System temperatures:</h3>
+<h3 id="level-2-no-cop-system-temperatures">Level 2 (no COP): System temperatures:</h3>
 
 <p>Since the performance of a heat pump is greatly affected by the working temperatures, it is very useful to monitor the following system temperatures:</p>
 
@@ -662,11 +666,15 @@ highlight active link...
 
 <p><em>The theoretical performance of a heat pump is given by the Carnot COP equation, see <a href="https://learn.openenergymonitor.org/sustainable-energy/building-energy-model/heatpumpmodel">Learn: A very simple heat pump model</a>. For an air-source heatpump measuring the water flow temperature and the outside air temperature can be used to estimate the expected COP. Many heat pumps provide an indication of expected COP at different ambient air and water temperatures in their datasheets. The Emoncms heat pump app includes a tool to estimate COP using this equation.</em></p>
 
-<h3 id="level-3-flow-rate--heat-metering">Level 3: Flow rate &amp; Heat metering:</h3>
+<h3 id="level-3-cop-flow-rate--heat-metering">Level 3 (COP): Flow rate &amp; Heat metering:</h3>
+
+<ul>
+  <li><a href="https://shop.openenergymonitor.com/level-3-heat-pump-monitoring-bundle/"><strong>Purchase Level 3 Heat Pump Monitoring Bundle</strong></a></li>
+</ul>
 
 <p><img src="/images/applications/heatpump/config/hpmon_config_emonpi_ct_mbus.png" style="max-width:300px; float:right; margin-left:20px" /></p>
 
-<p>The COP of a heat pump can be measured more accurately by measuring the heat output in addition to the electrical input. This can be done by either interfacing with a heat meter using MBUS (e.g: Sharky 775, Sontex superstatic 440, Kamstrup 403 or Qalcosonic E3) or a pulse counter, or a flow meter with an analog voltage output (Grundfos or Sika Vortex Flow Meter).</p>
+<p>The COP of a heat pump can be measured by measuring the heat output in addition to the electrical input. This can be done by either interfacing with a heat meter using MBUS (e.g: Sharky 775, Sontex superstatic 440, Kamstrup 403 or Qalcosonic E3) or a pulse counter, or a flow meter with an analog voltage output (Grundfos or Sika Vortex Flow Meter).</p>
 
 <ul>
   <li>A heat meter with a pulse output can be connected to either the EmonTx or the EmonPi, see:<br /> <a href="/setup/pulse-counting">+ Add Pulse Counting</a>
@@ -676,29 +684,17 @@ highlight active link...
   <li>Please read our guide on selecting the right heat meter, available in our heat pump monitor github repository here: <a href="https://github.com/openenergymonitor/HeatpumpMonitor/blob/master/selectingheatmeter.md">Github: Guide to selecting the right heat meter</a></li>
 </ul>
 
-<h4 id="heatpump-monitor-development-boards">Heatpump Monitor Development boards</h4>
+<h4 id="heatpump-monitor-development-board">Heatpump Monitor Development board</h4>
 
-<p>In addition to configurations using our standard emonPi and emonTx monitoring hardware. We have also developed dedicated hardware designs with heat pump monitoring in mind. This started with a through-hole heat pump monitoring kit that tried to incorporate all options on a single board and has since moved on to a more specific MBUS and temperature data collection approach with the new RaspberryPi based monitor.</p>
-
-<h4 id="new-raspberrypi--mbus-based-heat-pump-monitor">New: RaspberryPi &amp; MBUS based heat pump monitor</h4>
+<p>In addition to configurations using our standard emonPi and emonTx monitoring hardware. We have also developed dedicated hardware designs with heat pump monitoring in mind.</p>
 
 <p><img src="/images/applications/heatpump/pimbusreader.jpeg" style="max-width:300px; float:right; margin-left:20px" /></p>
 
-<p>This is a new heat pump monitor board designed specifically for interfacing with MID standard electricity and heat meters via MBUS. It has a RaspberryPi at it’s core running our emonSD image enabling local or/and remote logging and data visualisation.<br />
-<a href="https://github.com/openenergymonitor/HeatpumpMonitor/tree/master/HeatpumpMonitorPi">Github: RaspberryPi &amp; MBUS based heat pump monitor</a></p>
-
-<div style="clear:both"></div>
-<p><br /></p>
-
-<p><img src="/images/applications/heatpump/hpmon.jpg" style="max-width:300px; float:right" /></p>
-
-<h4 id="through-hole-heat-pump-monitor-kit">Through-hole heat pump monitor kit</h4>
-
-<p>The original through-hole heat pump monitoring kit. Combines CT based energy monitoring with an MBUS reader, Elster A100C IrDa input, DS18B20 temperature sensing inputs and ESP8266 WiFi connectivity. The board is currently only available as a through-hole kit that requires assembly and soldering. For more information, assembly and installation guides see: <br />
-<a href="https://github.com/openenergymonitor/HeatpumpMonitor/tree/master/HeatpumpMonitorTH">Github: Original Through-hole heat pump monitor kit</a></p>
-
-<div style="clear:both"></div>
-<p><br /></p>
+<p>This is a RaspberryPi HAT designed with heat pump monitoring in mind. It can interface with heat meters via MBUS and Modbus support for reading from SDM120 electricity meters can be added via a <a href="https://shop.openenergymonitor.com/modbus-rs485-to-usb-adaptor/">Modbus USB adaptor</a>. It has a RaspberryPi at it’s core running our <a href="https://shop.openenergymonitor.com/emonsd-industrial-pre-loaded-sd-card/">emonSD image</a> enabling local or/and remote logging and data visualisation.<br /></p>
+<ul>
+  <li><a href="https://github.com/openenergymonitor/HeatpumpMonitor/tree/master/HeatpumpMonitorPi">Github Documentation &amp; Hardware Design</a></li>
+  <li><a href="https://shop.openenergymonitor.com/mbus-temperature-raspberrypi-hat-heatpump-monitoring/">Purchase kit from OpenEnergyMonitor shop</a></li>
+</ul>
 
 <h3 id="heat-pump-monitoring-dashboard">Heat pump monitoring dashboard</h3>
 
@@ -710,7 +706,7 @@ highlight active link...
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jBY1Sx3LR2o" frameborder="0" allowfullscreen=""></iframe>
 </div>
 
-<p>It’s also worth checking out David Bowen (@MyForest on the forum’s) heat pump app, see forum post: <a href="https://community.openenergymonitor.org/t/heat-pump-experimentation-app-release-news/13423">Heat Pump Experimentation App - Release News</a>.</p>
+<p>It’s also worth checking out David Bowen (@MyForest) heat pump app, see community forum post: <a href="https://community.openenergymonitor.org/t/heat-pump-experimentation-app-release-news/13423">Heat Pump Experimentation App - Release News</a>.</p>
 
 <h3 id="heat-pump-monitoring-hardware-configurations">Heat pump monitoring hardware configurations</h3>
 
@@ -730,6 +726,7 @@ font-size:14px;
 <table>
   <tr>
     <td>
+      <div style="margin-bottom:5px"><b>Level 2 (no COP)</b></div>
       <div style="margin-bottom:5px"><b>EmonPi: Electric &amp; Temperature</b></div>
       <img src="/images/applications/heatpump/config/hpmon_config_emonpi_ct_temps.png" style="max-width:350px" />
     </td>
@@ -746,6 +743,7 @@ font-size:14px;
   </tr>
   <tr>
     <td>
+      <div style="margin-bottom:5px"><b>Level 2 (no COP)</b></div>
       <div style="margin-bottom:5px"><b>EmonTx WiFi: Electric &amp; Temperature</b></div>
       <img src="/images/applications/heatpump/config/hpmon_config_emontx_wifi_ct_temps.png" style="max-width:350px" />
     </td>
@@ -762,6 +760,7 @@ font-size:14px;
   </tr>
   <tr>
     <td>
+      <div style="margin-bottom:5px"><b>Level 2 (no COP)</b></div>
       <div style="margin-bottom:5px"><b>EmonTx + EmonBase: Electric &amp; Temperature</b></div>
       <img src="/images/applications/heatpump/config/hpmon_config_emontx_emonbase_ct_temps.png" style="max-width:350px" />
     </td>
@@ -778,6 +777,7 @@ font-size:14px;
   </tr>
   <tr>
     <td>
+      <div style="margin-bottom:5px"><b>Level 3 (COP)</b></div>
       <div style="margin-bottom:5px"><b>EmonPi with MBUS Reader for heat meter</b></div>
       <img src="/images/applications/heatpump/config/hpmon_config_emonpi_ct_mbus.png" style="max-width:350px" />
     </td>
@@ -794,6 +794,7 @@ font-size:14px;
   </tr>
   <tr>
     <td>
+      <div style="margin-bottom:5px"><b>Level 3 (COP)</b></div>
       <div style="margin-bottom:5px"><b>EmonPi with MBUS Reader</b></div>
       <img src="/images/applications/heatpump/config/hpmon_config_emonpi_mbus.png" style="max-width:350px" />
     </td>
@@ -812,10 +813,10 @@ font-size:14px;
   </tr>
   <tr>
     <td>
+      <div style="margin-bottom:5px"><b>Level 3 (COP)</b></div>
       <div style="margin-bottom:5px"><b>RaspberryPi &amp; MBUS based heat pump monitor</b></div>
       <img src="/images/applications/heatpump/config/hpmon_config_hpmonpi.png" style="max-width:350px" />
       <br /><br />
-     <i>Please get in contact via email for availability.</i>
     </td>
     <td>
       <ul>
@@ -833,6 +834,10 @@ font-size:14px;
   </tr>
 
 </table>
+
+<ul>
+  <li><a href="https://shop.openenergymonitor.com/level-3-heat-pump-monitoring-bundle/"><strong>Purchase Level 3 Heat Pump Monitoring Bundle</strong></a></li>
+</ul>
 
 
 
