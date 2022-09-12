@@ -8,7 +8,7 @@ comments: false
 sharing: false
 footer: true
 published: true
-is_homepage: true
+is_homepage: false
 ---
 
 The OpenEnergyMonitor system  has the capability to monitor electrical energy use / generation, temperature and humidity.
