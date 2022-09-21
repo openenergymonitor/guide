@@ -860,36 +860,15 @@ highlight active link...
 
 <p><strong>Further development</strong>: It is our intention to further develop this open source version of the firmware, if your interested in helping please get in touch.</p>
 
-<h6 id="bootloaderre-load"><strong>Bootloader re-load </strong></h6>
+<h6 id="bootloaderand-firmware-re-load"><strong>Bootloader and firmware re-load </strong></h6>
 
-<p>You can re-flash the bootloader (<a href="https://github.com/openenergymonitor/ESP8266_Relay_Board/blob/master/bootloader.zip">download.zip</a>) like this:</p>
+<p>Erase flash:</p>
 
-<p><code class="highlighter-rouge">esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_freq 80m --flash_mode qio --flash_size 16m-c1 0x00000 "boot_v1.5.bin" </code></p>
+<p><code class="highlighter-rouge">esptool.py --port /dev/ttyUSB0 --baud 230400 write_flash --flash_freq 40m --flash_mode qio --flash_size 16m-c1 0x00000 blank.bin 0x01000 blank.bin 0x7C000 esp_init_data_default.bin 0x7D000 blank.bin 0x7E000 blank.bin 0x7F000 blank.bin 0x80000 blank.bin 0xFE000 blank.bin 0xFC000 blank.bin 0x100000 blank.bin 0x101000 blank.bin 0x1FC000 esp_init_data_default.bin 0x1FD000 blank.bin 0x1FE000 blank.bin 0x1FF000 blank.bin</code></p>
 
-<p>flashing the firmware itself:</p>
+<p>You can re-flash the bootloader and firmware like this:</p>
 
-<p><code class="highlighter-rouge">esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_freq 80m --flash_mode qio --flash_size 16m-c1 0x1000 oem.v2088.bin </code></p>
-
-<p>If you have modified other system areas of the flash, this may also cause trouble.. try resetting them and then re-eating the bootloader-firmware update again:</p>
-
-<p><code class="highlighter-rouge">esptool.py  --port /dev/ttyUSB0 --baud 460800 write_flash --flash_freq 80m --flash_mode qio --flash_size 16m-c1 \
-    0x00000 blank.bin  \
-    0x01000 blank.bin  \
-    0x7C000 esp_init_data_default.bin \
-    0x7D000 blank.bin  \
-    0x7E000 blank.bin  \
-    0x7F000 blank.bin  \
-    0x80000 blank.bin  \
-    0xFE000 blank.bin  \
-    0x100000 blank.bin \
-    0x101000 blank.bin \
-    0x1FC000 esp_init_data_default.bin \
-    0x1FD000 blank.bin \
-    0x1FE000 blank.bin \
-    0x1FF000 blank.bin \
-    0x3FC000 esp_init_data_default.bin \
-    0x3FD000 blank.bin \
-    0x3FE000 blank.bin \</code></p>
+<p><code class="highlighter-rouge">esptool.py --port /dev/ttyUSB0 --baud 230400 write_flash --flash_freq 40m --flash_mode qio --flash_size 16m-c1 0x000000 "boot_v1.7.bin" 0x001000 oem.v3361.bin</code></p>
 
 <p>Note: flash address  0xFC000 contains board identification information. do not erase or modify it. Check debug serial output.</p>
 
