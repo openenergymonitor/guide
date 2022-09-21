@@ -264,36 +264,16 @@ Hold down the push button for the duration of the upload, note there are 4 stage
 
 **Further development**: It is our intention to further develop this open source version of the firmware, if your interested in helping please get in touch.
 
-###### **Bootloader re-load **
+###### **Bootloader and firmware re-load **
 
-You can re-flash the bootloader ([download.zip](https://github.com/openenergymonitor/ESP8266_Relay_Board/blob/master/bootloader.zip)) like this:
+Erase flash:
 
-`esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_freq 80m --flash_mode qio --flash_size 16m-c1 0x00000 "boot_v1.5.bin" `
+`esptool.py --port /dev/ttyUSB0 --baud 230400 write_flash --flash_freq 40m --flash_mode qio --flash_size 16m-c1 0x00000 blank.bin 0x01000 blank.bin 0x7C000 esp_init_data_default.bin 0x7D000 blank.bin 0x7E000 blank.bin 0x7F000 blank.bin 0x80000 blank.bin 0xFE000 blank.bin 0xFC000 blank.bin 0x100000 blank.bin 0x101000 blank.bin 0x1FC000 esp_init_data_default.bin 0x1FD000 blank.bin 0x1FE000 blank.bin 0x1FF000 blank.bin`
 
-flashing the firmware itself:
+You can re-flash the bootloader and firmware like this:
 
-`esptool.py --port /dev/ttyUSB0 --baud 460800 write_flash --flash_freq 80m --flash_mode qio --flash_size 16m-c1 0x1000 oem.v2088.bin `
+`esptool.py --port /dev/ttyUSB0 --baud 230400 write_flash --flash_freq 40m --flash_mode qio --flash_size 16m-c1 0x000000 "boot_v1.7.bin" 0x001000 oem.v3361.bin`
 
-If you have modified other system areas of the flash, this may also cause trouble.. try resetting them and then re-eating the bootloader-firmware update again:
-
-`esptool.py  --port /dev/ttyUSB0 --baud 460800 write_flash --flash_freq 80m --flash_mode qio --flash_size 16m-c1 \
-    0x00000 blank.bin  \
-    0x01000 blank.bin  \
-    0x7C000 esp_init_data_default.bin \
-    0x7D000 blank.bin  \
-    0x7E000 blank.bin  \
-    0x7F000 blank.bin  \
-    0x80000 blank.bin  \
-    0xFE000 blank.bin  \
-    0x100000 blank.bin \
-    0x101000 blank.bin \
-    0x1FC000 esp_init_data_default.bin \
-    0x1FD000 blank.bin \
-    0x1FE000 blank.bin \
-    0x1FF000 blank.bin \
-    0x3FC000 esp_init_data_default.bin \
-    0x3FD000 blank.bin \
-    0x3FE000 blank.bin \`
 
 Note: flash address  0xFC000 contains board identification information. do not erase or modify it. Check debug serial output.
 
