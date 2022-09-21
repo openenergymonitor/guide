@@ -155,7 +155,7 @@ The Emoncms setup instructions below are applicable to both the emonPi and the e
 -- // Lightbox ------------------------------------------------------
 -------------------------------------------------------------------->
 
-It is important that an  AC-AC adapter (included as default in the [emonPi solar PV bundle](https://shop.openenergymonitor.com/emonpi-solar-pv-bundle/) is used for solar PV monitoring. 
+It is important that an  AC-AC adapter (included as default in the [emonPi solar PV bundle](https://shop.openenergymonitor.com/emonpi-solar-pv-bundle/)) is used for solar PV monitoring. 
 
 **All sensors should be connected to the emonPi before powering up**
 
