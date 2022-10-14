@@ -144,12 +144,12 @@ Many electricity and heat meters are available with meter bus (MBUS) outputs. Us
 
 List attached meters as shown in the example below.
 
-- **address:** The address of the meter is also usually possible to find via the meter configuration interface. If in doubt try 0 or 254. [Here is a script](https://github.com/emoncms/usefulscripts/tree/master/mbus) to check and set the address for a Sontex heatmeter. 
+- **address:** The address of the meter is also usually possible to find and or set via the meter LCD configuration interface. If in doubt try 0 or 254. It's also usually possible to set the ID by MBUS interface [Here is a script](https://github.com/emoncms/usefulscripts/tree/master/mbus) to check and set the address which has been tested to work on Kamstrup Multical 403 and Sontex 531.
 - **type:** Available options include: standard, qalcosonic_e3, sontex531, sdm120
 
 **Note:** We've experienced reliability issues reading from the MBUS version of the SDM120 electric meters. We recommend using the Modbus version with a seperate Modbus reader for more reliable results. For more information please see [https://community.openenergymonitor.org/t/sdm120-mbus-meter-freezing-drop-out/20765/2](https://community.openenergymonitor.org/t/sdm120-mbus-meter-freezing-drop-out/20765/2).
 
-Example MBUS EmonHub configuration:
+Example MBUS EmonHub configuration for Sontex 789* and Kamstrup Multical 403:
 
 <pre class="code_20px">
 [[MBUS]]
@@ -163,22 +163,67 @@ Example MBUS EmonHub configuration:
         validate_checksum = False
         nodename = MBUS
         [[[[meters]]]]
-            [[[[[qalcosonic]]]]]
-                address = 2
-                type = qalcosonic_e3
-                
-
-Alternative heat meter examples:
-
-            [[[[[sharky775]]]]]
-                address = 3
+            [[[[[heatmeter]]]]]
+                address = 1
                 type = standard
-            [[[[[sontex]]]]]
-                address = 4
+</pre>
+
+Example MBUS EmonHub configuration for Sontex 531 heat meters:
+
+<pre class="code_20px">
+[[MBUS]]
+    Type = EmonHubMBUSInterfacer
+    [[[init_settings]]]
+        device = /dev/ttyAMA0
+        baud = 2400
+    [[[runtimesettings]]]
+        pubchannels = ToEmonCMS,
+        read_interval = 10
+        validate_checksum = False
+        nodename = MBUS
+        [[[[meters]]]]
+            [[[[[heatmeter]]]]]
+                address = 1
                 type = sontex531
 </pre>
 
-3\. The MBUS readings will appear on the Emoncms Inputs page within a few seconds and for the Sontex 531 should look like this:
+Example MBUS EmonHub configuration for qalcosonic E3
+
+<pre class="code_20px">
+[[MBUS]]
+    Type = EmonHubMBUSInterfacer
+    [[[init_settings]]]
+        device = /dev/ttyAMA0
+        baud = 2400
+    [[[runtimesettings]]]
+        pubchannels = ToEmonCMS,
+        read_interval = 10
+        validate_checksum = False
+        nodename = MBUS
+        [[[[meters]]]]
+            [[[[[heatmeter]]]]]
+                address = 1
+                type = qalcosonic_e3
+</pre>
+
+**\*Extra Config for Sontex 789**
+
+Note Sontex 789 requires an additional step, sontex 531 works fine without this extra config:
+
+Sontex 789 and 749 have 3 pages of Mbus info. We're interested in the 3rd page of info. To scroll through the pages
+
+Edit `/opt/openenergymonitor/emonhub/src/interfacers/EmonHubMBUSInterfacer.py`
+
+1. change L402 `self.mbus_short_frame(address, 0x5b)` to `self.mbus_short_frame(address, 0x7b)`
+2. restart emonhub
+3. change L402 `self.mbus_short_frame(address, 0x7b)` to `self.mbus_short_frame(address, 0x5b)`
+4. restart emonhub
+
+Each change moves the meter on to the next page. Each time after restarting emonHub check the data from the heat meter in the emonHub logs or Emoncms Inputs. Look for data which includes Energy, Power, FlowT and ReturnT.
+
+The battery powered Sontex 789 receives power via the MBUS reader, thefore battery will last indefinitely. 
+
+Example heat meter data:
 
 <img src="/images/integrations/emonhub/mbus_emoncms.png" style="max-width:600px;">
 
