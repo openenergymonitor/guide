@@ -149,7 +149,7 @@ List attached meters as shown in the example below.
 
 **Note:** We've experienced reliability issues reading from the MBUS version of the SDM120 electric meters. We recommend using the Modbus version with a seperate Modbus reader for more reliable results. For more information please see [https://community.openenergymonitor.org/t/sdm120-mbus-meter-freezing-drop-out/20765/2](https://community.openenergymonitor.org/t/sdm120-mbus-meter-freezing-drop-out/20765/2).
 
-Example MBUS EmonHub configuration for Sontex 789* and Kamstrup Multical 403:
+#### Kamstrup Multical 403
 
 <pre class="code_20px">
 [[MBUS]]
@@ -165,10 +165,10 @@ Example MBUS EmonHub configuration for Sontex 789* and Kamstrup Multical 403:
         [[[[meters]]]]
             [[[[[heatmeter]]]]]
                 address = 1
-                type = standard
+                type = kamstrup403
 </pre>
 
-Example MBUS EmonHub configuration for Sontex 531 heat meters:
+#### Sontex 531
 
 <pre class="code_20px">
 [[MBUS]]
@@ -187,7 +187,44 @@ Example MBUS EmonHub configuration for Sontex 531 heat meters:
                 type = sontex531
 </pre>
 
-Example MBUS EmonHub configuration for qalcosonic E3
+#### Sontex 789*
+
+<pre class="code_20px">
+[[MBUS]]
+    Type = EmonHubMBUSInterfacer
+    [[[init_settings]]]
+        device = /dev/ttyAMA0
+        baud = 2400
+    [[[runtimesettings]]]
+        pubchannels = ToEmonCMS,
+        read_interval = 10
+        validate_checksum = False
+        nodename = MBUS
+        [[[[meters]]]]
+            [[[[[heatmeter]]]]]
+                address = 0
+                type = standard
+</pre>
+
+
+**\*Extra Config for Sontex 789**
+
+Note: Sontex 789 requires an additional step, sontex 531 works fine without this extra config:
+
+Sontex 789 and 749 have 3 pages of Mbus info. We're interested in the 3rd page of info. To scroll through the pages
+
+Edit `/opt/openenergymonitor/emonhub/src/interfacers/EmonHubMBUSInterfacer.py`
+
+1. change L402 `self.mbus_short_frame(address, 0x5b)` to `self.mbus_short_frame(address, 0x7b)`
+2. restart emonhub
+3. change L402 `self.mbus_short_frame(address, 0x7b)` to `self.mbus_short_frame(address, 0x5b)`
+4. restart emonhub
+
+Each change moves the meter on to the next page. Each time after restarting emonHub check the data from the heat meter in the emonHub logs or Emoncms Inputs. Look for data which includes Energy, Power, FlowT and ReturnT.
+
+*The battery powered Sontex 789 receives power via the MBUS reader, thefore battery will last indefinitely.*
+
+#### qalcosonic E3
 
 <pre class="code_20px">
 [[MBUS]]
@@ -206,22 +243,24 @@ Example MBUS EmonHub configuration for qalcosonic E3
                 type = qalcosonic_e3
 </pre>
 
-**\*Extra Config for Sontex 789**
+#### Sharky 775
 
-Note Sontex 789 requires an additional step, sontex 531 works fine without this extra config:
-
-Sontex 789 and 749 have 3 pages of Mbus info. We're interested in the 3rd page of info. To scroll through the pages
-
-Edit `/opt/openenergymonitor/emonhub/src/interfacers/EmonHubMBUSInterfacer.py`
-
-1. change L402 `self.mbus_short_frame(address, 0x5b)` to `self.mbus_short_frame(address, 0x7b)`
-2. restart emonhub
-3. change L402 `self.mbus_short_frame(address, 0x7b)` to `self.mbus_short_frame(address, 0x5b)`
-4. restart emonhub
-
-Each change moves the meter on to the next page. Each time after restarting emonHub check the data from the heat meter in the emonHub logs or Emoncms Inputs. Look for data which includes Energy, Power, FlowT and ReturnT.
-
-The battery powered Sontex 789 receives power via the MBUS reader, thefore battery will last indefinitely. 
+<pre class="code_20px">
+[[MBUS]]
+    Type = EmonHubMBUSInterfacer
+    [[[init_settings]]]
+        device = /dev/ttyAMA0
+        baud = 2400
+    [[[runtimesettings]]]
+        pubchannels = ToEmonCMS,
+        read_interval = 10
+        validate_checksum = False
+        nodename = mbus
+        [[[[meters]]]]
+            [[[[[heatmeter]]]]]
+                address = 25
+                type = standard
+</pre>
 
 Example heat meter data:
 
