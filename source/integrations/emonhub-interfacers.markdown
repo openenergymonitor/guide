@@ -216,8 +216,11 @@ Sontex 789 and 749 have 3 pages of Mbus info. We're interested in the 3rd page o
 Edit `/opt/openenergymonitor/emonhub/src/interfacers/EmonHubMBUSInterfacer.py`
 
 1. change L402 `self.mbus_short_frame(address, 0x5b)` to `self.mbus_short_frame(address, 0x7b)`
+
+`nano +402 /opt/openenergymonitor/emonhub/src/interfacers/EmonHubMBUSInterfacer.py`
+
 2. restart emonhub
-3. change L402 `self.mbus_short_frame(address, 0x7b)` to `self.mbus_short_frame(address, 0x5b)`
+3. change L402 `self.mbus_short_frame(address, 0x7b)` back to `self.mbus_short_frame(address, 0x5b)`
 4. restart emonhub
 
 Each change moves the meter on to the next page. Each time after restarting emonHub check the data from the heat meter in the emonHub logs or Emoncms Inputs. Look for data which includes Energy, Power, FlowT and ReturnT.
