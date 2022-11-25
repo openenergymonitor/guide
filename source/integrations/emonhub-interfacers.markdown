@@ -223,7 +223,7 @@ Edit `/opt/openenergymonitor/emonhub/src/interfacers/EmonHubMBUSInterfacer.py`
 3. change L402 `self.mbus_short_frame(address, 0x7b)` back to `self.mbus_short_frame(address, 0x5b)`
 4. restart emonhub
 
-Each change moves the meter on to the next page. Each time after restarting emonHub check the data from the heat meter in the emonHub logs or Emoncms Inputs. Look for data which includes Energy, Power, FlowT and ReturnT.
+Each change moves the meter on to the next page. **Repate this process twice*** to reach the page we're interested in. Each time after restarting emonHub check the data from the heat meter in the emonHub logs or Emoncms Inputs. Look for data which includes Energy, Power, FlowT and ReturnT.
 
 *The battery powered Sontex 789 receives power via the MBUS reader, thefore battery will last indefinitely.*
 
