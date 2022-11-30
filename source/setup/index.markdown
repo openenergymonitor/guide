@@ -11,6 +11,9 @@ published: true
 is_homepage: false
 ---
 
+<p class='note'>
+The new emonTx4 documentation can be found here: [https://docs.openenergymonitor.org/emontx4/overview.html](https://docs.openenergymonitor.org/emontx4/overview.html)</p>
+
 The OpenEnergyMonitor system  has the capability to monitor electrical energy use / generation, temperature and humidity.
 
 The system is made up of five main units. These can be configured to work for a variety of [applications](/applications). The system is fully open-source, both hardware and software. All hardware is based on the [Arduino](http://www.arduino.cc/) and [Raspberry Pi](http://raspberrypi.org) platforms.
